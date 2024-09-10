@@ -1,0 +1,1264 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Select repository - spec2repo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#select-repository" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="spec2repo" class="md-header__button md-logo" aria-label="spec2repo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            spec2repo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Select repository
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="spec2repo" class="md-nav__button md-logo" aria-label="spec2repo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    spec2repo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extending
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leaderboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submission Pytests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submission Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytest-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed Pytest Tests
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="select-repository">Select repository</h1>
+<p><a class="md-button" href="/pytests_sphinx_reports_9_5">sphinx_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_parsel_reports_9_5">parsel_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_tinydb_reports_9_5">tinydb_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_more-itertools_reports_9_5">more-itertools_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_marshmallow_reports_9_5">marshmallow_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_sqlparse_reports_9_5">sqlparse_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_cachetools_reports_9_5">cachetools_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_mimesis_reports_9_5">mimesis_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_moviepy_reports_9_5">moviepy_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_scrapy_reports_9_5">scrapy_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_filesystem_spec_reports_9_5">filesystem_spec_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_python-progressbar_reports_9_5">python-progressbar_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_pytest_reports_9_5">pytest_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_web3.py_reports_9_5">web3.py_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_xarray_reports_9_5">xarray_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_deprecated_reports_9_5">deprecated_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_graphene_reports_9_5">graphene_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_flask_reports_9_5">flask_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_wcwidth_reports_9_5">wcwidth_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_dulwich_reports_9_5">dulwich_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_chardet_reports_9_5">chardet_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_seaborn_reports_9_5">seaborn_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_loguru_reports_9_5">loguru_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_statsmodels_reports_9_5">statsmodels_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_jinja_reports_9_5">jinja_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_virtualenv_reports_9_5">virtualenv_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_pylint_reports_9_5">pylint_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_python-rsa_reports_9_5">python-rsa_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_cookiecutter_reports_9_5">cookiecutter_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_tornado_reports_9_5">tornado_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_fastapi_reports_9_5">fastapi_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_dnspython_reports_9_5">dnspython_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_fabric_reports_9_5">fabric_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_geopandas_reports_9_5">geopandas_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_bitstring_reports_9_5">bitstring_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_requests_reports_9_5">requests_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_imapclient_reports_9_5">imapclient_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_minitorch_reports_9_5">minitorch_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_pydantic_reports_9_5">pydantic_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_jedi_reports_9_5">jedi_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_simpy_reports_9_5">simpy_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_tlslite-ng_reports_9_5">tlslite-ng_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_attrs_reports_9_5">attrs_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_click_reports_9_5">click_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_paramiko_reports_9_5">paramiko_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_voluptuous_reports_9_5">voluptuous_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_networkx_reports_9_5">networkx_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_PyBoy_reports_9_5">PyBoy_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_joblib_reports_9_5">joblib_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_pexpect_reports_9_5">pexpect_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_babel_reports_9_5">babel_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_portalocker_reports_9_5">portalocker_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_pypdf_reports_9_5">pypdf_reports_9_5</a></p>
+<p><a class="md-button" href="/pytests_python-prompt-toolkit_reports_9_5">python-prompt-toolkit_reports_9_5</a></p>
+<h2 id="pytest-summary">Pytest Summary</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">category</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">353</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">41</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">401</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">401</td>
+</tr>
+<tr>
+<td style="text-align: left;">duration</td>
+<td style="text-align: center;">4.50s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytest-tests">Failed Pytest Tests</h2>
+<details><summary> <pre>tests/config.py::Config_::from_v1::must_be_given_explicit_env_arg</pre></summary><pre>
+self = <config.Config_.from_v1 object at 0x77f746aa0610>
+
+    def must_be_given_explicit_env_arg(self):
+        config = Config.from_v1(
+>           env=Lexicon(self.env, sudo_password="sikrit")
+        )
+E       AttributeError: 'from_v1' object has no attribute 'env'
+
+tests/config.py:77: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::additional_kwargs::forwards_arbitrary_kwargs_to_init</pre></summary><pre>
+self = <config.Config_.from_v1.additional_kwargs object at 0x77f746aa29b0>
+
+    def forwards_arbitrary_kwargs_to_init(self):
+        config = Config.from_v1(
+>           self.env,
+            # Vanilla Invoke
+            overrides={"some": "value"},
+            # Fabric
+            system_ssh_path="/what/ever",
+        )
+E       AttributeError: 'additional_kwargs' object has no attribute 'env'
+
+tests/config.py:84: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::additional_kwargs::subservient_to_runtime_overrides</pre></summary><pre>
+self = <config.Config_.from_v1.additional_kwargs object at 0x77f746aa3cd0>
+
+    def subservient_to_runtime_overrides(self):
+>       env = self.env
+E       AttributeError: 'additional_kwargs' object has no attribute 'env'
+
+tests/config.py:94: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::additional_kwargs::connect_kwargs_also_merged_with_imported_values</pre></summary><pre>
+self = <config.Config_.from_v1.additional_kwargs object at 0x77f746aa1840>
+
+    def connect_kwargs_also_merged_with_imported_values(self):
+>       self.env["key_filename"] = "whatever"
+E       AttributeError: 'additional_kwargs' object has no attribute 'env'
+
+tests/config.py:102: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::always_use_pty</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa11e0>
+
+    def always_use_pty(self):
+        # Testing both due to v1-didn't-use-None-default issues
+>       config = self._conf(always_use_pty=True)
+
+tests/config.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa11e0>
+kwargs = {'always_use_pty': True}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::forward_agent</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa0520>
+
+    def forward_agent(self):
+>       config = self._conf(forward_agent=True)
+
+tests/config.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa0520>
+kwargs = {'forward_agent': True}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::gateway</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa2530>
+
+    def gateway(self):
+>       config = self._conf(gateway="bastion.host")
+
+tests/config.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa2530>
+kwargs = {'gateway': 'bastion.host'}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::key_filename::base</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings.key_filename object at 0x77f746aa1ab0>
+
+    def base(self):
+>       config = self._conf(key_filename="/some/path")
+
+tests/config.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings.key_filename object at 0x77f746aa1ab0>
+kwargs = {'key_filename': '/some/path'}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'key_filename' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::key_filename::is_not_set_if_None</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings.key_filename object at 0x77f746aa04f0>
+
+    def is_not_set_if_None(self):
+>       config = self._conf(key_filename=None)
+
+tests/config.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings.key_filename object at 0x77f746aa04f0>
+kwargs = {'key_filename': None}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'key_filename' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::no_agent</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa2980>
+
+    def no_agent(self):
+>       config = self._conf()
+
+tests/config.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa2980>
+kwargs = {}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::password::set_just_to_connect_kwargs_if_sudo_password_set</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings.password object at 0x77f746aa3490>
+
+    def set_just_to_connect_kwargs_if_sudo_password_set(self):
+        # NOTE: default faux env has sudo_password set already...
+>       config = self._conf(password="screaming-firehawks")
+
+tests/config.py:145: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings.password object at 0x77f746aa3490>
+kwargs = {'password': 'screaming-firehawks'}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'password' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::password::set_to_both_password_fields_if_necessary</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings.password object at 0x77f746aa2410>
+
+    def set_to_both_password_fields_if_necessary(self):
+>       config = self._conf(password="sikrit", sudo_password=None)
+
+tests/config.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings.password object at 0x77f746aa2410>
+kwargs = {'password': 'sikrit', 'sudo_password': None}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'password' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::ssh_config_path</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa1c00>
+
+    def ssh_config_path(self):
+>       self.env.ssh_config_path = "/where/ever"
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:155: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::sudo_password</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa23e0>
+
+    def sudo_password(self):
+>       config = self._conf(sudo_password="sikrit")
+
+tests/config.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa23e0>
+kwargs = {'sudo_password': 'sikrit'}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::sudo_prompt</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa3b50>
+
+    def sudo_prompt(self):
+>       config = self._conf(sudo_prompt="password???")
+
+tests/config.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa3b50>
+kwargs = {'sudo_prompt': 'password???'}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::timeout</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa1a50>
+
+    def timeout(self):
+>       config = self._conf(timeout=15)
+
+tests/config.py:168: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa1a50>
+kwargs = {'timeout': 15}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::use_ssh_config</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa1de0>
+
+    def use_ssh_config(self):
+        # Testing both due to v1-didn't-use-None-default issues
+>       config = self._conf(use_ssh_config=True)
+
+tests/config.py:173: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa1de0>
+kwargs = {'use_ssh_config': True}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/config.py::Config_::from_v1::var_mappings::warn_only</pre></summary><pre>
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa3f10>
+
+    def warn_only(self):
+        # Testing both due to v1-didn't-use-None-default issues
+>       config = self._conf(warn_only=True)
+
+tests/config.py:180: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <config.Config_.from_v1.var_mappings object at 0x77f746aa3f10>
+kwargs = {'warn_only': True}
+
+    def _conf(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/config.py:72: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::init::ssh_config::proxy_jump::wins_over_default</pre></summary><pre>
+self = <connection.Connection_.init.ssh_config.proxy_jump object at 0x77f746d35fc0>
+
+    def wins_over_default(self):
+        cxn = self._runtime_cxn(basename="proxyjump")
+>       assert cxn.gateway == self._expected_gw
+E       AttributeError: 'proxy_jump' object has no attribute '_expected_gw'
+
+tests/connection.py:388: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::init::ssh_config::proxy_jump::wins_over_configuration</pre></summary><pre>
+self = <connection.Connection_.init.ssh_config.proxy_jump object at 0x77f746d344c0>
+
+    def wins_over_configuration(self):
+        cxn = self._runtime_cxn(
+            basename="proxyjump", overrides={"gateway": "meh gw"}
+        )
+>       assert cxn.gateway == self._expected_gw
+E       AttributeError: 'proxy_jump' object has no attribute '_expected_gw'
+
+tests/connection.py:394: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::init::ssh_config::proxy_jump::gateway_Connections_get_parent_connection_configs</pre></summary><pre>
+self = <connection.Connection_.init.ssh_config.proxy_jump object at 0x77f746de7760>
+
+    def gateway_Connections_get_parent_connection_configs(self):
+        conf = self._runtime_config(
+            basename="proxyjump",
+            overrides={"some_random_option": "a-value"},
+        )
+        cxn = Connection("runtime", config=conf)
+        # Safety
+        assert cxn.config is conf
+>       assert cxn.gateway == self._expected_gw
+E       AttributeError: 'proxy_jump' object has no attribute '_expected_gw'
+
+tests/connection.py:449: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::must_be_given_explicit_env_arg</pre></summary><pre>
+self = <connection.Connection_.from_v1 object at 0x77f746d37160>
+
+    def must_be_given_explicit_env_arg(self):
+>       cxn = Connection.from_v1(self.env)
+E       AttributeError: 'from_v1' object has no attribute 'env'
+
+tests/connection.py:526: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::obtaining_config::defaults_to_calling_Config_from_v1</pre></summary><pre>
+self = <connection.Connection_.from_v1.obtaining_config object at 0x77f746d34070>
+Config_from_v1 = <MagicMock name='from_v1' id='131903907519248'>
+
+    @patch("fabric.connection.Config.from_v1")
+    def defaults_to_calling_Config_from_v1(self, Config_from_v1):
+>       Connection.from_v1(self.env)
+E       AttributeError: 'obtaining_config' object has no attribute 'env'
+
+tests/connection.py:532: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::obtaining_config::may_be_given_config_explicitly</pre></summary><pre>
+self = <connection.Connection_.from_v1.obtaining_config object at 0x77f746d36ce0>
+Config_from_v1 = <MagicMock name='from_v1' id='131903932458432'>
+
+    @patch("fabric.connection.Config.from_v1")
+    def may_be_given_config_explicitly(self, Config_from_v1):
+        # Arguably a dupe of regular Connection constructor behavior,
+        # but whatever.
+>       Connection.from_v1(env=self.env, config=Config())
+E       AttributeError: 'obtaining_config' object has no attribute 'env'
+
+tests/connection.py:539: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::additional_kwargs::forwards_arbitrary_kwargs_to_init</pre></summary><pre>
+self = <connection.Connection_.from_v1.additional_kwargs object at 0x77f746d36fb0>
+
+    def forwards_arbitrary_kwargs_to_init(self):
+        cxn = Connection.from_v1(
+>           self.env,
+            connect_kwargs={"foo": "bar"},
+            inline_ssh_env=False,
+            connect_timeout=15,
+        )
+E       AttributeError: 'additional_kwargs' object has no attribute 'env'
+
+tests/connection.py:546: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::additional_kwargs::conflicting_kwargs_win_over_v1_env_values</pre></summary><pre>
+self = <connection.Connection_.from_v1.additional_kwargs object at 0x77f746d35cf0>
+
+    def conflicting_kwargs_win_over_v1_env_values(self):
+>       env = Lexicon(self.env)
+E       AttributeError: 'additional_kwargs' object has no attribute 'env'
+
+tests/connection.py:556: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::var_mappings::host_string</pre></summary><pre>
+self = <connection.Connection_.from_v1.var_mappings object at 0x77f746d35d80>
+
+    def host_string(self):
+>       cxn = self._cxn()  # default is 'localghost'
+
+tests/connection.py:566: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <connection.Connection_.from_v1.var_mappings object at 0x77f746d35d80>
+kwargs = {}
+
+    def _cxn(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/connection.py:522: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::var_mappings::None_host_string_errors_usefully</pre></summary><pre>
+self = <connection.Connection_.from_v1.var_mappings object at 0x77f746d34310>
+
+    @raises(InvalidV1Env)
+    def None_host_string_errors_usefully(self):
+>       self._cxn(host_string=None)
+
+tests/connection.py:571: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <connection.Connection_.from_v1.var_mappings object at 0x77f746d34310>
+kwargs = {'host_string': None}
+
+    def _cxn(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/connection.py:522: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::var_mappings::user</pre></summary><pre>
+self = <connection.Connection_.from_v1.var_mappings object at 0x77f746d35240>
+
+    def user(self):
+>       cxn = self._cxn(user="space")
+
+tests/connection.py:574: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <connection.Connection_.from_v1.var_mappings object at 0x77f746d35240>
+kwargs = {'user': 'space'}
+
+    def _cxn(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'var_mappings' object has no attribute 'env'
+
+tests/connection.py:522: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::var_mappings::port::basic</pre></summary><pre>
+self = <connection.Connection_.from_v1.var_mappings.port object at 0x77f746d375e0>
+
+    def basic(self):
+>       cxn = self._cxn(port=2222)
+
+tests/connection.py:579: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <connection.Connection_.from_v1.var_mappings.port object at 0x77f746d375e0>
+kwargs = {'port': 2222}
+
+    def _cxn(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'port' object has no attribute 'env'
+
+tests/connection.py:522: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::var_mappings::port::casted_to_int</pre></summary><pre>
+self = <connection.Connection_.from_v1.var_mappings.port object at 0x77f746d35ba0>
+
+    def casted_to_int(self):
+>       cxn = self._cxn(port="2222")
+
+tests/connection.py:583: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <connection.Connection_.from_v1.var_mappings.port object at 0x77f746d35ba0>
+kwargs = {'port': '2222'}
+
+    def _cxn(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'port' object has no attribute 'env'
+
+tests/connection.py:522: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::from_v1::var_mappings::port::not_supplied_if_given_in_host_string</pre></summary><pre>
+self = <connection.Connection_.from_v1.var_mappings.port object at 0x77f746f834c0>
+
+    def not_supplied_if_given_in_host_string(self):
+>       cxn = self._cxn(host_string="localghost:3737", port=2222)
+
+tests/connection.py:587: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <connection.Connection_.from_v1.var_mappings.port object at 0x77f746f834c0>
+kwargs = {'host_string': 'localghost:3737', 'port': 2222}
+
+    def _cxn(self, **kwargs):
+>       self.env.update(kwargs)
+E       AttributeError: 'port' object has no attribute 'env'
+
+tests/connection.py:522: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::shell::calls_RemoteShell_run_with_all_kwargs_and_returns_its_result</pre></summary><pre>
+self = <connection.Connection_.shell object at 0x77f746e6b5e0>
+RemoteShell = <MagicMock name='RemoteShell' id='131903908768128'>
+client = <MagicMock name='SSHClient()' id='131903931631072'>
+
+    @patch(remote_shell_path)
+    def calls_RemoteShell_run_with_all_kwargs_and_returns_its_result(
+        self, RemoteShell, client
+    ):
+        remote = RemoteShell.return_value
+        cxn = Connection("host")
+        kwargs = dict(
+            env={"foo": "bar"},
+            replace_env=True,
+            encoding="utf-16",
+            in_stream=StringIO("meh"),
+            watchers=["meh"],
+        )
+        result = cxn.shell(**kwargs)
+        RemoteShell.assert_any_call(context=cxn)
+        assert remote.run.call_count == 1
+        # Expect explicit use of default values for all kwarg-settings
+        # besides what shell() itself tweaks
+>       expected = dict(self.defaults, pty=True, command=None, **kwargs)
+E       AttributeError: 'shell' object has no attribute 'defaults'
+
+tests/connection.py:1079: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::shell::raises_TypeError_for_disallowed_kwargs</pre></summary><pre>
+self = <connection.Connection_.shell object at 0x77f746e68640>
+client = <MagicMock name='SSHClient()' id='131903908951328'>
+
+    def raises_TypeError_for_disallowed_kwargs(self, client):
+>       for key in self.defaults.keys():
+E       AttributeError: 'shell' object has no attribute 'defaults'
+
+tests/connection.py:1084: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/connection.py::Connection_::shell::honors_config_system_for_allowed_kwargs</pre></summary><pre>
+self = <connection.Connection_.shell object at 0x77f746e6bdf0>
+RemoteShell = <MagicMock name='RemoteShell' id='131903908406096'>
+client = <MagicMock name='SSHClient()' id='131903908251440'>
+
+    @patch(remote_shell_path)
+    def honors_config_system_for_allowed_kwargs(self, RemoteShell, client):
+        remote = RemoteShell.return_value
+        allowed = dict(
+            env={"foo": "bar"},
+            replace_env=True,
+            encoding="utf-16",
+            in_stream="sentinel",
+            watchers=["sentinel"],
+        )
+        ignored = dict(echo=True, hide="foo")  # Spot check
+        config = Config({"run": dict(allowed, **ignored)})
+        cxn = Connection("host", config=config)
+        cxn.shell()
+        kwargs = remote.run.call_args[1]
+        for key, value in allowed.items():
+            assert kwargs[key] == value
+        for key, value in ignored.items():
+>           assert kwargs[key] == self.defaults[key]
+E           AttributeError: 'shell' object has no attribute 'defaults'
+
+tests/connection.py:1119: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/group.py::ThreadingGroup_::executes_arguments_on_contents_run_via_threading[run]</pre></summary><pre>
+self = <group.ThreadingGroup_ object at 0x77f746abba90>
+Thread = <MagicMock name='ExceptionHandlingThread' id='131903813248976'>
+Queue = <MagicMock name='Queue' id='131903882658816'>, method = 'run'
+
+    @mark.parametrize("method", ALL_METHODS)
+    @patch("fabric.group.Queue")
+    @patch("fabric.group.ExceptionHandlingThread")
+    def executes_arguments_on_contents_run_via_threading(
+        self, Thread, Queue, method
+    ):
+        queue = Queue.return_value
+>       g = ThreadingGroup.from_connections(self.cxns)
+E       AttributeError: 'ThreadingGroup_' object has no attribute 'cxns'
+
+tests/group.py:193: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/group.py::ThreadingGroup_::executes_arguments_on_contents_run_via_threading[sudo]</pre></summary><pre>
+self = <group.ThreadingGroup_ object at 0x77f746ab9480>
+Thread = <MagicMock name='ExceptionHandlingThread' id='131903882984464'>
+Queue = <MagicMock name='Queue' id='131903882976448'>, method = 'sudo'
+
+    @mark.parametrize("method", ALL_METHODS)
+    @patch("fabric.group.Queue")
+    @patch("fabric.group.ExceptionHandlingThread")
+    def executes_arguments_on_contents_run_via_threading(
+        self, Thread, Queue, method
+    ):
+        queue = Queue.return_value
+>       g = ThreadingGroup.from_connections(self.cxns)
+E       AttributeError: 'ThreadingGroup_' object has no attribute 'cxns'
+
+tests/group.py:193: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/group.py::ThreadingGroup_::executes_arguments_on_contents_run_via_threading[put]</pre></summary><pre>
+self = <group.ThreadingGroup_ object at 0x77f746ab9390>
+Thread = <MagicMock name='ExceptionHandlingThread' id='131903883115536'>
+Queue = <MagicMock name='Queue' id='131903883108432'>, method = 'put'
+
+    @mark.parametrize("method", ALL_METHODS)
+    @patch("fabric.group.Queue")
+    @patch("fabric.group.ExceptionHandlingThread")
+    def executes_arguments_on_contents_run_via_threading(
+        self, Thread, Queue, method
+    ):
+        queue = Queue.return_value
+>       g = ThreadingGroup.from_connections(self.cxns)
+E       AttributeError: 'ThreadingGroup_' object has no attribute 'cxns'
+
+tests/group.py:193: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/group.py::ThreadingGroup_::executes_arguments_on_contents_run_via_threading[get]</pre></summary><pre>
+self = <group.ThreadingGroup_ object at 0x77f746ab97b0>
+Thread = <MagicMock name='ExceptionHandlingThread' id='131903882972992'>
+Queue = <MagicMock name='Queue' id='131903882976016'>, method = 'get'
+
+    @mark.parametrize("method", ALL_METHODS)
+    @patch("fabric.group.Queue")
+    @patch("fabric.group.ExceptionHandlingThread")
+    def executes_arguments_on_contents_run_via_threading(
+        self, Thread, Queue, method
+    ):
+        queue = Queue.return_value
+>       g = ThreadingGroup.from_connections(self.cxns)
+E       AttributeError: 'ThreadingGroup_' object has no attribute 'cxns'
+
+tests/group.py:193: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/transfer.py::Transfer_::get::mode_concerns::preserves_remote_mode_by_default</pre></summary><pre>
+self = <transfer.Transfer_.get.mode_concerns object at 0x77f7480d0250>
+sftp = (<fabric.transfer.Transfer object at 0x77f74444e1d0>, <MagicMock name='SSHClient().open_sftp()' id='131903885783776'>, <MagicMock name='os' id='131903885728240'>)
+
+    def preserves_remote_mode_by_default(self, sftp):
+        transfer, client, mock_os = sftp
+        # Attributes obj reflecting a realistic 'extended' octal mode
+>       client.stat.return_value = self.attrs
+E       AttributeError: 'mode_concerns' object has no attribute 'attrs'
+
+tests/transfer.py:139: AttributeError
+</pre>
+</details>
+
+<details><summary> <pre>tests/transfer.py::Transfer_::get::mode_concerns::allows_disabling_remote_mode_preservation</pre></summary><pre>
+self = <transfer.Transfer_.get.mode_concerns object at 0x77f7480d0f40>
+sftp = (<fabric.transfer.Transfer object at 0x77f7444a3730>, <MagicMock name='SSHClient().open_sftp()' id='131903886133376'>, <MagicMock name='os' id='131903885998160'>)
+
+    def allows_disabling_remote_mode_preservation(self, sftp):
+        transfer, client, mock_os = sftp
+>       client.stat.return_value = self.attrs
+E       AttributeError: 'mode_concerns' object has no attribute 'attrs'
+
+tests/transfer.py:147: AttributeError
+</pre>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+        <script src="../javascripts/button_select.js"></script>
+      
+    
+  </body>
+</html>
