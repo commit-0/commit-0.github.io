@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reference-cachetools-pytest-summary" class="md-skip">
+        <a href="#submission-name-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -300,23 +300,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#failed-pytest-outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Failed pytest outputs:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -330,8 +313,10 @@
                   
 
 
-<p><a href="/analysis_reference">back</a></p>
-<h1 id="reference-cachetools-pytest-summary">reference &gt; cachetools## Pytest Summary:</h1>
+<p><a href="/analysis_reference">back to reference summary</a></p>
+<h1 id="submission-name-reference">Submission Name: reference</h1>
+<h1 id="repository-cachetools">Repository: cachetools</h1>
+<h2 id="pytest-summary-tests">Pytest Summary: tests</h2>
 <table>
 <thead>
 <tr>
@@ -354,7 +339,202 @@
 </tr>
 </tbody>
 </table>
-<h2 id="failed-pytest-outputs">Failed pytest outputs:</h2>
+<h2 id="failed-pytest-outputs-tests">Failed pytest outputs: tests</h2>
+<h3 id="patch-diff">Patch diff</h3>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/cachetools/func.py b/src/cachetools/func.py</span>
+<span class="gh">index 338ef94..3eafddf 100644</span>
+<span class="gd">--- a/src/cachetools/func.py</span>
+<span class="gi">+++ b/src/cachetools/func.py</span>
+<span class="gu">@@ -1,23 +1,39 @@</span>
+<span class="w"> </span>&quot;&quot;&quot;`functools.lru_cache` compatible memoizing function decorators.&quot;&quot;&quot;
+<span class="gd">-__all__ = (&#39;fifo_cache&#39;, &#39;lfu_cache&#39;, &#39;lru_cache&#39;, &#39;mru_cache&#39;, &#39;rr_cache&#39;,</span>
+<span class="gd">-    &#39;ttl_cache&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = (&quot;fifo_cache&quot;, &quot;lfu_cache&quot;, &quot;lru_cache&quot;, &quot;mru_cache&quot;, &quot;rr_cache&quot;, &quot;ttl_cache&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>import math
+<span class="w"> </span>import random
+<span class="w"> </span>import time
+<span class="gi">+</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    from threading import RLock
+<span class="gd">-except ImportError:</span>
+<span class="gi">+except ImportError:  # pragma: no cover</span>
+<span class="w"> </span>    from dummy_threading import RLock
+<span class="gi">+</span>
+<span class="w"> </span>from . import FIFOCache, LFUCache, LRUCache, MRUCache, RRCache, TTLCache
+<span class="w"> </span>from . import cached
+<span class="w"> </span>from . import keys
+
+
+<span class="w"> </span>class _UnboundTTLCache(TTLCache):
+<span class="gd">-</span>
+<span class="w"> </span>    def __init__(self, ttl, timer):
+<span class="w"> </span>        TTLCache.__init__(self, math.inf, ttl, timer)
+
+<span class="gi">+    @property</span>
+<span class="gi">+    def maxsize(self):</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def _cache(cache, maxsize, typed):</span>
+<span class="gi">+    def decorator(func):</span>
+<span class="gi">+        key = keys.typedkey if typed else keys.hashkey</span>
+<span class="gi">+        wrapper = cached(cache=cache, key=key, lock=RLock(), info=True)(func)</span>
+<span class="gi">+        wrapper.cache_parameters = lambda: {&quot;maxsize&quot;: maxsize, &quot;typed&quot;: typed}</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+</span>
+<span class="gi">+    return decorator</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>def fifo_cache(maxsize=128, typed=False):
+<span class="w"> </span>    &quot;&quot;&quot;Decorator to wrap a function with a memoizing callable that saves
+<span class="gu">@@ -25,7 +41,12 @@ def fifo_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if maxsize is None:</span>
+<span class="gi">+        return _cache({}, None, typed)</span>
+<span class="gi">+    elif callable(maxsize):</span>
+<span class="gi">+        return _cache(FIFOCache(128), 128, typed)(maxsize)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _cache(FIFOCache(maxsize), maxsize, typed)</span>
+
+
+<span class="w"> </span>def lfu_cache(maxsize=128, typed=False):
+<span class="gu">@@ -34,7 +55,12 @@ def lfu_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if maxsize is None:</span>
+<span class="gi">+        return _cache({}, None, typed)</span>
+<span class="gi">+    elif callable(maxsize):</span>
+<span class="gi">+        return _cache(LFUCache(128), 128, typed)(maxsize)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _cache(LFUCache(maxsize), maxsize, typed)</span>
+
+
+<span class="w"> </span>def lru_cache(maxsize=128, typed=False):
+<span class="gu">@@ -43,7 +69,12 @@ def lru_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if maxsize is None:</span>
+<span class="gi">+        return _cache({}, None, typed)</span>
+<span class="gi">+    elif callable(maxsize):</span>
+<span class="gi">+        return _cache(LRUCache(128), 128, typed)(maxsize)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _cache(LRUCache(maxsize), maxsize, typed)</span>
+
+
+<span class="w"> </span>def mru_cache(maxsize=128, typed=False):
+<span class="gu">@@ -51,7 +82,16 @@ def mru_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    up to `maxsize` results based on a Most Recently Used (MRU)
+<span class="w"> </span>    algorithm.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from warnings import warn</span>
+<span class="gi">+</span>
+<span class="gi">+    warn(&quot;@mru_cache is deprecated&quot;, DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+</span>
+<span class="gi">+    if maxsize is None:</span>
+<span class="gi">+        return _cache({}, None, typed)</span>
+<span class="gi">+    elif callable(maxsize):</span>
+<span class="gi">+        return _cache(MRUCache(128), 128, typed)(maxsize)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _cache(MRUCache(maxsize), maxsize, typed)</span>
+
+
+<span class="w"> </span>def rr_cache(maxsize=128, choice=random.choice, typed=False):
+<span class="gu">@@ -60,7 +100,12 @@ def rr_cache(maxsize=128, choice=random.choice, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if maxsize is None:</span>
+<span class="gi">+        return _cache({}, None, typed)</span>
+<span class="gi">+    elif callable(maxsize):</span>
+<span class="gi">+        return _cache(RRCache(128, choice), 128, typed)(maxsize)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _cache(RRCache(maxsize, choice), maxsize, typed)</span>
+
+
+<span class="w"> </span>def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):
+<span class="gu">@@ -68,4 +113,9 @@ def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):</span>
+<span class="w"> </span>    up to `maxsize` results based on a Least Recently Used (LRU)
+<span class="w"> </span>    algorithm with a per-item time-to-live (TTL) value.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if maxsize is None:</span>
+<span class="gi">+        return _cache(_UnboundTTLCache(ttl, timer), None, typed)</span>
+<span class="gi">+    elif callable(maxsize):</span>
+<span class="gi">+        return _cache(TTLCache(128, ttl, timer), 128, typed)(maxsize)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _cache(TTLCache(maxsize, ttl, timer), maxsize, typed)</span>
+<span class="gh">diff --git a/src/cachetools/keys.py b/src/cachetools/keys.py</span>
+<span class="gh">index ed97ffd..8689b17 100644</span>
+<span class="gd">--- a/src/cachetools/keys.py</span>
+<span class="gi">+++ b/src/cachetools/keys.py</span>
+<span class="gu">@@ -1,5 +1,6 @@</span>
+<span class="w"> </span>&quot;&quot;&quot;Key functions for memoizing decorators.&quot;&quot;&quot;
+<span class="gd">-__all__ = &#39;hashkey&#39;, &#39;methodkey&#39;, &#39;typedkey&#39;, &#39;typedmethodkey&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = (&quot;hashkey&quot;, &quot;methodkey&quot;, &quot;typedkey&quot;, &quot;typedmethodkey&quot;)</span>
+
+
+<span class="w"> </span>class _HashedTuple(tuple):
+<span class="gu">@@ -9,6 +10,7 @@ class _HashedTuple(tuple):</span>
+<span class="w"> </span>    library functools implementation.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    __hashvalue = None
+
+<span class="w"> </span>    def __hash__(self, hash=tuple.__hash__):
+<span class="gu">@@ -27,24 +29,34 @@ class _HashedTuple(tuple):</span>
+<span class="w"> </span>        return {}
+
+
+<span class="gd">-_kwmark = _HashedTuple,</span>
+<span class="gi">+# used for separating keyword arguments; we do not use an object</span>
+<span class="gi">+# instance here so identity is preserved when pickling/unpickling</span>
+<span class="gi">+_kwmark = (_HashedTuple,)</span>
+
+
+<span class="w"> </span>def hashkey(*args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a cache key for the specified hashable arguments.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    if kwargs:</span>
+<span class="gi">+        return _HashedTuple(args + sum(sorted(kwargs.items()), _kwmark))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _HashedTuple(args)</span>
+
+
+<span class="w"> </span>def methodkey(self, *args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a cache key for use with cached methods.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return hashkey(*args, **kwargs)</span>
+
+
+<span class="w"> </span>def typedkey(*args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a typed cache key for the specified hashable arguments.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    key = hashkey(*args, **kwargs)</span>
+<span class="gi">+    key += tuple(type(v) for v in args)</span>
+<span class="gi">+    key += tuple(type(v) for _, v in sorted(kwargs.items()))</span>
+<span class="gi">+    return key</span>
+
+
+<span class="w"> </span>def typedmethodkey(self, *args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a typed cache key for use with cached methods.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return typedkey(*args, **kwargs)</span>
+</code></pre></div>
 
 
 

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reference-deprecated-pytest-summary" class="md-skip">
+        <a href="#submission-name-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -300,23 +300,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#failed-pytest-outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Failed pytest outputs:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -330,8 +313,10 @@
                   
 
 
-<p><a href="/analysis_reference">back</a></p>
-<h1 id="reference-deprecated-pytest-summary">reference &gt; deprecated## Pytest Summary:</h1>
+<p><a href="/analysis_reference">back to reference summary</a></p>
+<h1 id="submission-name-reference">Submission Name: reference</h1>
+<h1 id="repository-deprecated">Repository: deprecated</h1>
+<h2 id="pytest-summary-tests">Pytest Summary: tests</h2>
 <table>
 <thead>
 <tr>
@@ -354,7 +339,333 @@
 </tr>
 </tbody>
 </table>
-<h2 id="failed-pytest-outputs">Failed pytest outputs:</h2>
+<h2 id="failed-pytest-outputs-tests">Failed pytest outputs: tests</h2>
+<h3 id="patch-diff">Patch diff</h3>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/deprecated/classic.py b/deprecated/classic.py</span>
+<span class="gh">index fc9af25..6ca3f27 100644</span>
+<span class="gd">--- a/deprecated/classic.py</span>
+<span class="gi">+++ b/deprecated/classic.py</span>
+<span class="gu">@@ -1,3 +1,4 @@</span>
+<span class="gi">+# -*- coding: utf-8 -*-</span>
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="w"> </span>Classic deprecation warning
+<span class="w"> </span>===========================
+<span class="gu">@@ -10,18 +11,25 @@ import functools</span>
+<span class="w"> </span>import inspect
+<span class="w"> </span>import platform
+<span class="w"> </span>import warnings
+<span class="gi">+</span>
+<span class="w"> </span>import wrapt
+<span class="gi">+</span>
+<span class="w"> </span>try:
+<span class="gi">+    # If the C extension for wrapt was compiled and wrapt/_wrappers.pyd exists, then the</span>
+<span class="gi">+    # stack level that should be passed to warnings.warn should be 2. However, if using</span>
+<span class="gi">+    # a pure python wrapt, a extra stacklevel is required.</span>
+<span class="w"> </span>    import wrapt._wrappers
+<span class="gi">+</span>
+<span class="w"> </span>    _routine_stacklevel = 2
+<span class="w"> </span>    _class_stacklevel = 2
+<span class="w"> </span>except ImportError:
+<span class="w"> </span>    _routine_stacklevel = 3
+<span class="gd">-    if platform.python_implementation() == &#39;PyPy&#39;:</span>
+<span class="gi">+    if platform.python_implementation() == &quot;PyPy&quot;:</span>
+<span class="w"> </span>        _class_stacklevel = 2
+<span class="w"> </span>    else:
+<span class="w"> </span>        _class_stacklevel = 3
+<span class="gd">-string_types = type(b&#39;&#39;), type(u&#39;&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+string_types = (type(b&#39;&#39;), type(u&#39;&#39;))</span>
+
+
+<span class="w"> </span>class ClassicAdapter(wrapt.AdapterFactory):
+<span class="gu">@@ -75,8 +83,7 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+<span class="w"> </span>           return x + y
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, reason=&#39;&#39;, version=&#39;&#39;, action=None, category=</span>
+<span class="gd">-        DeprecationWarning):</span>
+<span class="gi">+    def __init__(self, reason=&quot;&quot;, version=&quot;&quot;, action=None, category=DeprecationWarning):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Construct a wrapper adapter.
+
+<span class="gu">@@ -103,8 +110,8 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+<span class="w"> </span>            By default, the category class is :class:`~DeprecationWarning`,
+<span class="w"> </span>            you can inherit this class to define your own deprecation warning category.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        self.reason = reason or &#39;&#39;</span>
+<span class="gd">-        self.version = version or &#39;&#39;</span>
+<span class="gi">+        self.reason = reason or &quot;&quot;</span>
+<span class="gi">+        self.version = version or &quot;&quot;</span>
+<span class="w"> </span>        self.action = action
+<span class="w"> </span>        self.category = category
+<span class="w"> </span>        super(ClassicAdapter, self).__init__()
+<span class="gu">@@ -119,7 +126,21 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+
+<span class="w"> </span>        :return: The warning message.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if instance is None:</span>
+<span class="gi">+            if inspect.isclass(wrapped):</span>
+<span class="gi">+                fmt = &quot;Call to deprecated class {name}.&quot;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                fmt = &quot;Call to deprecated function (or staticmethod) {name}.&quot;</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if inspect.isclass(instance):</span>
+<span class="gi">+                fmt = &quot;Call to deprecated class method {name}.&quot;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                fmt = &quot;Call to deprecated method {name}.&quot;</span>
+<span class="gi">+        if self.reason:</span>
+<span class="gi">+            fmt += &quot; ({reason})&quot;</span>
+<span class="gi">+        if self.version:</span>
+<span class="gi">+            fmt += &quot; -- Deprecated since version {version}.&quot;</span>
+<span class="gi">+        return fmt.format(name=wrapped.__name__, reason=self.reason or &quot;&quot;, version=self.version or &quot;&quot;)</span>
+
+<span class="w"> </span>    def __call__(self, wrapped):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -143,15 +164,16 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+<span class="w"> </span>                if self.action:
+<span class="w"> </span>                    with warnings.catch_warnings():
+<span class="w"> </span>                        warnings.simplefilter(self.action, self.category)
+<span class="gd">-                        warnings.warn(msg, category=self.category,</span>
+<span class="gd">-                            stacklevel=_class_stacklevel)</span>
+<span class="gi">+                        warnings.warn(msg, category=self.category, stacklevel=_class_stacklevel)</span>
+<span class="w"> </span>                else:
+<span class="gd">-                    warnings.warn(msg, category=self.category, stacklevel=</span>
+<span class="gd">-                        _class_stacklevel)</span>
+<span class="gi">+                    warnings.warn(msg, category=self.category, stacklevel=_class_stacklevel)</span>
+<span class="w"> </span>                if old_new1 is object.__new__:
+<span class="w"> </span>                    return old_new1(cls)
+<span class="gi">+                # actually, we don&#39;t know the real signature of *old_new1*</span>
+<span class="w"> </span>                return old_new1(cls, *args, **kwargs)
+<span class="gi">+</span>
+<span class="w"> </span>            wrapped.__new__ = staticmethod(wrapped_cls)
+<span class="gi">+</span>
+<span class="w"> </span>        return wrapped
+
+
+<span class="gu">@@ -231,4 +253,40 @@ def deprecated(*args, **kwargs):</span>
+<span class="w"> </span>           return x + y
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if args and isinstance(args[0], string_types):</span>
+<span class="gi">+        kwargs[&#39;reason&#39;] = args[0]</span>
+<span class="gi">+        args = args[1:]</span>
+<span class="gi">+</span>
+<span class="gi">+    if args and not callable(args[0]):</span>
+<span class="gi">+        raise TypeError(repr(type(args[0])))</span>
+<span class="gi">+</span>
+<span class="gi">+    if args:</span>
+<span class="gi">+        action = kwargs.get(&#39;action&#39;)</span>
+<span class="gi">+        category = kwargs.get(&#39;category&#39;, DeprecationWarning)</span>
+<span class="gi">+        adapter_cls = kwargs.pop(&#39;adapter_cls&#39;, ClassicAdapter)</span>
+<span class="gi">+        adapter = adapter_cls(**kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        wrapped = args[0]</span>
+<span class="gi">+        if inspect.isclass(wrapped):</span>
+<span class="gi">+            wrapped = adapter(wrapped)</span>
+<span class="gi">+            return wrapped</span>
+<span class="gi">+</span>
+<span class="gi">+        elif inspect.isroutine(wrapped):</span>
+<span class="gi">+</span>
+<span class="gi">+            @wrapt.decorator(adapter=adapter)</span>
+<span class="gi">+            def wrapper_function(wrapped_, instance_, args_, kwargs_):</span>
+<span class="gi">+                msg = adapter.get_deprecated_msg(wrapped_, instance_)</span>
+<span class="gi">+                if action:</span>
+<span class="gi">+                    with warnings.catch_warnings():</span>
+<span class="gi">+                        warnings.simplefilter(action, category)</span>
+<span class="gi">+                        warnings.warn(msg, category=category, stacklevel=_routine_stacklevel)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    warnings.warn(msg, category=category, stacklevel=_routine_stacklevel)</span>
+<span class="gi">+                return wrapped_(*args_, **kwargs_)</span>
+<span class="gi">+</span>
+<span class="gi">+            return wrapper_function(wrapped)</span>
+<span class="gi">+</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise TypeError(repr(type(wrapped)))</span>
+<span class="gi">+</span>
+<span class="gi">+    return functools.partial(deprecated, **kwargs)</span>
+<span class="gh">diff --git a/deprecated/sphinx.py b/deprecated/sphinx.py</span>
+<span class="gh">index 6daf81f..7e717fb 100644</span>
+<span class="gd">--- a/deprecated/sphinx.py</span>
+<span class="gi">+++ b/deprecated/sphinx.py</span>
+<span class="gu">@@ -1,3 +1,4 @@</span>
+<span class="gi">+# coding: utf-8</span>
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="w"> </span>Sphinx directive integration
+<span class="w"> </span>============================
+<span class="gu">@@ -20,7 +21,9 @@ when the function/method is called or the class is constructed.</span>
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="w"> </span>import re
+<span class="w"> </span>import textwrap
+<span class="gi">+</span>
+<span class="w"> </span>import wrapt
+<span class="gi">+</span>
+<span class="w"> </span>from deprecated.classic import ClassicAdapter
+<span class="w"> </span>from deprecated.classic import deprecated as _classic_deprecated
+
+<span class="gu">@@ -38,8 +41,15 @@ class SphinxAdapter(ClassicAdapter):</span>
+<span class="w"> </span>    - The reason message is obviously added in the directive block if not empty.
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, directive, reason=&#39;&#39;, version=&#39;&#39;, action=None,</span>
+<span class="gd">-        category=DeprecationWarning, line_length=70):</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        directive,</span>
+<span class="gi">+        reason=&quot;&quot;,</span>
+<span class="gi">+        version=&quot;&quot;,</span>
+<span class="gi">+        action=None,</span>
+<span class="gi">+        category=DeprecationWarning,</span>
+<span class="gi">+        line_length=70,</span>
+<span class="gi">+    ):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Construct a wrapper adapter.
+
+<span class="gu">@@ -75,12 +85,11 @@ class SphinxAdapter(ClassicAdapter):</span>
+<span class="w"> </span>            Max line length of the directive text. If non nul, a long text is wrapped in several lines.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        if not version:
+<span class="gd">-            raise ValueError(</span>
+<span class="gd">-                &quot;&#39;version&#39; argument is required in Sphinx directives&quot;)</span>
+<span class="gi">+            # https://github.com/tantale/deprecated/issues/40</span>
+<span class="gi">+            raise ValueError(&quot;&#39;version&#39; argument is required in Sphinx directives&quot;)</span>
+<span class="w"> </span>        self.directive = directive
+<span class="w"> </span>        self.line_length = line_length
+<span class="gd">-        super(SphinxAdapter, self).__init__(reason=reason, version=version,</span>
+<span class="gd">-            action=action, category=category)</span>
+<span class="gi">+        super(SphinxAdapter, self).__init__(reason=reason, version=version, action=action, category=category)</span>
+
+<span class="w"> </span>    def __call__(self, wrapped):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -90,32 +99,42 @@ class SphinxAdapter(ClassicAdapter):</span>
+
+<span class="w"> </span>        :return: the decorated class or function.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        fmt = (&#39;.. {directive}:: {version}&#39; if self.version else</span>
+<span class="gd">-            &#39;.. {directive}::&#39;)</span>
+<span class="gd">-        div_lines = [fmt.format(directive=self.directive, version=self.version)</span>
+<span class="gd">-            ]</span>
+<span class="gi">+        # -- build the directive division</span>
+<span class="gi">+        fmt = &quot;.. {directive}:: {version}&quot; if self.version else &quot;.. {directive}::&quot;</span>
+<span class="gi">+        div_lines = [fmt.format(directive=self.directive, version=self.version)]</span>
+<span class="w"> </span>        width = self.line_length - 3 if self.line_length &gt; 3 else 2 ** 16
+<span class="w"> </span>        reason = textwrap.dedent(self.reason).strip()
+<span class="w"> </span>        for paragraph in reason.splitlines():
+<span class="w"> </span>            if paragraph:
+<span class="gd">-                div_lines.extend(textwrap.fill(paragraph, width=width,</span>
+<span class="gd">-                    initial_indent=&#39;   &#39;, subsequent_indent=&#39;   &#39;).splitlines()</span>
+<span class="gd">-                    )</span>
+<span class="gi">+                div_lines.extend(</span>
+<span class="gi">+                    textwrap.fill(</span>
+<span class="gi">+                        paragraph,</span>
+<span class="gi">+                        width=width,</span>
+<span class="gi">+                        initial_indent=&quot;   &quot;,</span>
+<span class="gi">+                        subsequent_indent=&quot;   &quot;,</span>
+<span class="gi">+                    ).splitlines()</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>            else:
+<span class="gd">-                div_lines.append(&#39;&#39;)</span>
+<span class="gd">-        docstring = wrapped.__doc__ or &#39;&#39;</span>
+<span class="gd">-        lines = docstring.splitlines(keepends=True) or [&#39;&#39;]</span>
+<span class="gd">-        docstring = textwrap.dedent(&#39;&#39;.join(lines[1:])) if len(lines</span>
+<span class="gd">-            ) &gt; 1 else &#39;&#39;</span>
+<span class="gi">+                div_lines.append(&quot;&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        # -- get the docstring, normalize the trailing newlines</span>
+<span class="gi">+        # keep a consistent behaviour if the docstring starts with newline or directly on the first one</span>
+<span class="gi">+        docstring = wrapped.__doc__ or &quot;&quot;</span>
+<span class="gi">+        lines = docstring.splitlines(keepends=True) or [&quot;&quot;]</span>
+<span class="gi">+        docstring = textwrap.dedent(&quot;&quot;.join(lines[1:])) if len(lines) &gt; 1 else &quot;&quot;</span>
+<span class="w"> </span>        docstring = lines[0] + docstring
+<span class="w"> </span>        if docstring:
+<span class="gd">-            docstring = re.sub(&#39;\\n+$&#39;, &#39;&#39;, docstring, flags=re.DOTALL</span>
+<span class="gd">-                ) + &#39;\n\n&#39;</span>
+<span class="gi">+            # An empty line must separate the original docstring and the directive.</span>
+<span class="gi">+            docstring = re.sub(r&quot;\n+$&quot;, &quot;&quot;, docstring, flags=re.DOTALL) + &quot;\n\n&quot;</span>
+<span class="w"> </span>        else:
+<span class="gd">-            docstring = &#39;\n&#39;</span>
+<span class="gd">-        docstring += &#39;&#39;.join(&#39;{}\n&#39;.format(line) for line in div_lines)</span>
+<span class="gi">+            # Avoid &quot;Explicit markup ends without a blank line&quot; when the decorated function has no docstring</span>
+<span class="gi">+            docstring = &quot;\n&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+        # -- append the directive division to the docstring</span>
+<span class="gi">+        docstring += &quot;&quot;.join(&quot;{}\n&quot;.format(line) for line in div_lines)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        wrapped.__doc__ = docstring
+<span class="gd">-        if self.directive in {&#39;versionadded&#39;, &#39;versionchanged&#39;}:</span>
+<span class="gi">+        if self.directive in {&quot;versionadded&quot;, &quot;versionchanged&quot;}:</span>
+<span class="w"> </span>            return wrapped
+<span class="w"> </span>        return super(SphinxAdapter, self).__call__(wrapped)
+
+<span class="gu">@@ -133,10 +152,15 @@ class SphinxAdapter(ClassicAdapter):</span>
+<span class="w"> </span>           Strip Sphinx cross-referencing syntax from warning message.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        msg = super(SphinxAdapter, self).get_deprecated_msg(wrapped, instance)</span>
+<span class="gi">+        # Strip Sphinx cross reference syntax (like &quot;:function:&quot;, &quot;:py:func:&quot; and &quot;:py:meth:&quot;)</span>
+<span class="gi">+        # Possible values are &quot;:role:`foo`&quot;, &quot;:domain:role:`foo`&quot;</span>
+<span class="gi">+        # where ``role`` and ``domain`` should match &quot;[a-zA-Z]+&quot;</span>
+<span class="gi">+        msg = re.sub(r&quot;(?: : [a-zA-Z]+ )? : [a-zA-Z]+ : (`[^`]*`)&quot;, r&quot;\1&quot;, msg, flags=re.X)</span>
+<span class="gi">+        return msg</span>
+
+
+<span class="gd">-def versionadded(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):</span>
+<span class="gi">+def versionadded(reason=&quot;&quot;, version=&quot;&quot;, line_length=70):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    This decorator can be used to insert a &quot;versionadded&quot; directive
+<span class="w"> </span>    in your function/class docstring in order to documents the
+<span class="gu">@@ -157,10 +181,16 @@ def versionadded(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):</span>
+
+<span class="w"> </span>    :return: the decorated function.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    adapter = SphinxAdapter(</span>
+<span class="gi">+        &#39;versionadded&#39;,</span>
+<span class="gi">+        reason=reason,</span>
+<span class="gi">+        version=version,</span>
+<span class="gi">+        line_length=line_length,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    return adapter</span>
+
+
+<span class="gd">-def versionchanged(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):</span>
+<span class="gi">+def versionchanged(reason=&quot;&quot;, version=&quot;&quot;, line_length=70):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    This decorator can be used to insert a &quot;versionchanged&quot; directive
+<span class="w"> </span>    in your function/class docstring in order to documents the
+<span class="gu">@@ -180,10 +210,16 @@ def versionchanged(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):</span>
+
+<span class="w"> </span>    :return: the decorated function.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    adapter = SphinxAdapter(</span>
+<span class="gi">+        &#39;versionchanged&#39;,</span>
+<span class="gi">+        reason=reason,</span>
+<span class="gi">+        version=version,</span>
+<span class="gi">+        line_length=line_length,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    return adapter</span>
+
+
+<span class="gd">-def deprecated(reason=&#39;&#39;, version=&#39;&#39;, line_length=70, **kwargs):</span>
+<span class="gi">+def deprecated(reason=&quot;&quot;, version=&quot;&quot;, line_length=70, **kwargs):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    This decorator can be used to insert a &quot;deprecated&quot; directive
+<span class="w"> </span>    in your function/class docstring in order to documents the
+<span class="gu">@@ -218,4 +254,9 @@ def deprecated(reason=&#39;&#39;, version=&#39;&#39;, line_length=70, **kwargs):</span>
+<span class="w"> </span>    .. versionchanged:: 1.2.13
+<span class="w"> </span>       Change the signature of the decorator to reflect the valid use cases.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    directive = kwargs.pop(&#39;directive&#39;, &#39;deprecated&#39;)</span>
+<span class="gi">+    adapter_cls = kwargs.pop(&#39;adapter_cls&#39;, SphinxAdapter)</span>
+<span class="gi">+    kwargs[&quot;reason&quot;] = reason</span>
+<span class="gi">+    kwargs[&quot;version&quot;] = version</span>
+<span class="gi">+    kwargs[&quot;line_length&quot;] = line_length</span>
+<span class="gi">+    return _classic_deprecated(directive=directive, adapter_cls=adapter_cls, **kwargs)</span>
+</code></pre></div>
 
 
 

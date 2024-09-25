@@ -32,14 +32,30 @@ def get_pytest_info(path_to_logs, repo_name, branch_name):
         eval_script = open(os.path.join(path_to_logs, pytest_hash, "eval.sh")).read()
         testname = re.search(r'([\S]+) > test_output', eval_script).group(1)
         patch_diff = open(os.path.join(path_to_logs, pytest_hash, "patch.diff")).read()
-        pytest_info[testname] = {'hash': pytest_hash, 'patch_diff': patch_diff, 'summary': pytest_report['summary'], 'failures': {}}
+        pytest_summary = pytest_report['summary']
+        if 'passed' not in pytest_summary: pytest_summary['passed'] = 0
+        pytest_info[testname] = {'hash': pytest_hash, 'patch_diff': patch_diff, 'summary': pytest_summary, 'failures': {}, 'duration': pytest_report['duration']}
         for test in pytest_report["tests"]:
             if test['outcome'] == "passed": continue
-            if 'setup' in test and 'longrepr' in test['setup']:
+            if 'longrepr' in test: 
+                failure_string = test['longrepr']
+            elif '???' in test:
+                failure_string = test['???']['longrepr']
+            elif test['outcome'] == 'error':
                 failure_string = test['setup']['longrepr']
+            elif 'setup' in test and 'longrepr' in test['setup']:
+                failure_string = test['setup']['longrepr']
+            elif 'call' in test and 'longrepr' in test['call']:
+                failure_string = test_dict['call']['longrepr']
+                # could use test['call']['traceback'] information and test['call']['crash'] for more info
+                import pdb; pdb.set_trace()
             else:
                 import pdb; pdb.set_trace()
-            pytest_info[testname]['failures'][test['nodeid']] = failure_string
+            duration = 0.
+            for action_key in ["setup", "call", "teardown"]:
+                if action_key not in test: continue
+                if "duration" in test: duration += test["duration"]
+            pytest_info[testname]['failures'][test['nodeid']] = {"failure_string": failure_string, "duration": duration}
     return pytest_info
 
 def get_coverage_info(path_to_logs, repo_name, branch_name):
@@ -117,12 +133,11 @@ def render_mds(subfolder="docs"):
     method_repo_pytests = {}
     for branch_name in glob.glob(os.path.join(analysis_files_path, '*')):
         branch_name = os.path.basename(branch_name)
-        if branch_name == "repos": continue
+        if branch_name in {"blank", "repos"}: continue
         all_submissions[branch_name] = {}
         for repo_file in glob.glob(os.path.join(analysis_files_path, branch_name, '*.json')):
             
             repo_metrics_output_file = os.path.join(analysis_files_path, branch_name, repo_file)
-            print(repo_metrics_output_file)
             repo_metrics = json.load(open(repo_metrics_output_file))
             repo_name = os.path.basename(repo_file[:-len(".json")])
             
@@ -130,10 +145,10 @@ def render_mds(subfolder="docs"):
 
             method_repo_pytests[f"{branch_name}_{repo_name}"] = f"# Submission Name: {branch_name}\n# Repository: {repo_name}"
             if 'pytest_results' in repo_metrics: repo_metrics = repo_metrics['pytest_results']
-            for testname, pytest_info in repo_metrics.items():
-                testname = os.path.basename(testname)
-                all_submissions[branch_name][repo_name][testname] = pytest_info['summary']
-                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""\n## Pytest Summary: {testname}
+            for pytest_group, pytest_info in repo_metrics.items():
+                pytest_group = os.path.basename(pytest_group.strip("/"))
+                all_submissions[branch_name][repo_name][pytest_group] = {"summary": pytest_info['summary'], "duration": pytest_info["duration"]}
+                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""\n## Pytest Summary: {pytest_group}
 | status   | count |
 |:---------|:-----:|
 """
@@ -143,39 +158,16 @@ def render_mds(subfolder="docs"):
                     else: 
                         method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""| {category} | {float(count):.2f}s |\n"""
 
-                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"\n## Failed pytest outputs: {testname}\n\n"
+                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"\n## Failed pytest outputs: {pytest_group}\n\n"
                 for testname, failure in pytest_info['failures'].items():
                     shortened_testname = os.path.basename(testname)
                     method_repo_pytests[f"{branch_name}_{repo_name}"] += f"### {shortened_testname}\n\n<details><summary> <pre>{shortened_testname}</pre></summary><pre>\n{failure}\n</pre>\n</details>\n"
 
+                patch_diff = f"""\n\n### Patch diff\n```diff\n{pytest_info['patch_diff']}```"""
+
             back_button = f"[back to {branch_name} summary]({os.path.join('/', f'analysis_{branch_name}')})\n\n"
             with open(os.path.join(subfolder, f"analysis_{branch_name}_{repo_name}.md"), 'w') as wf: 
-                wf.write(back_button + method_repo_pytests[f"{branch_name}_{repo_name}"])    
-            #     diff_info = """## Diff to gold\n"""
-            #     diff_info += """<table>
-            #     <thead> <th> function </th> <th data-sort-method='none'> impl </th> <th data-sort-method='none'> gold </th> <th data-sort-method='none'> diff </th> </thead>
-            #     """
-            #     gold_filename = f"analysis/output_metrics/{module}_gold.json"
-            #     gold_experiment_metrics = json.load(open(gold_filename))
-            #     import difflib
-            #     d = difflib.Differ()
-            #     for funcname, impl in submission_info["functions_edited"].items():
-            #         if impl is None: continue
-            #         impl = impl.strip("\n")
-            #         gold_impl = gold_experiment_metrics["functions_edited"][funcname].strip("\n")
-            #         if impl == gold_impl: continue
-            #         diff = list(d.compare(impl.splitlines(), gold_impl.splitlines()))
-            #         diff_info += f"""<td> <pre>{funcname}</pre> </td> 
-            # <td> <pre>
-            # {impl}
-            # </pre> </td> 
-            # <td> <pre>
-            # {gold_impl}
-            # </pre> </td>
-            # <td> <pre>
-            # {'<br>'.join(diff)}
-            # </pre> </td> </tr>"""
-            #     diff_info += "</table>"
+                wf.write(back_button + method_repo_pytests[f"{branch_name}_{repo_name}"] + patch_diff)    
 
 
     # Render general page. Has buttons to all methods
@@ -186,18 +178,26 @@ def render_mds(subfolder="docs"):
     method_to_repos = {}
     # Render method & repo page. Has "back" button.
     for branch_name, branch_info in all_submissions.items():
-        cum_pytests = {}
+        cum_pytests = {'passed': 0}
         method_to_repos[branch_name] = """
 | | Repository | Summary | |
 |-|------------|---------|-|"""
-        for repo_name, test_info in branch_info.items():
-            method_to_repos[branch_name] += f"\n||[{repo_name}]({os.path.join('/', f'analysis_{branch_name}_{repo_name}')})|{str(test_info)}||"
-            for category, count in test_info.items():
-                if category not in cum_pytests:
-                    cum_pytests[category] = 0
-                if count.isdigit(): cum_pytests[category] += int(count)
-                elif count.isfloat(): cum_pytests[category] += float(count)
-        leaderboard += f"\n||[{branch_name}]({os.path.join('/', f'analysis_{branch_name}')})|{str(cum_pytests)}||"
+        total_tests = 0 # better info is probably broken down by split lol TODO
+        total_duration = 0.
+        for repo_name, repo_test_info in branch_info.items():
+            for testname, test_info in repo_test_info.items():
+                total_duration += test_info['duration']
+                summary_pytests_string = f"{testname}: {test_info['summary']['passed']} / {test_info['summary']['collected']} ; duration: { test_info['duration']:.2f}s"
+                method_to_repos[branch_name] += f"\n||[{repo_name}]({os.path.join('/', f'analysis_{branch_name}_{repo_name}')})|{summary_pytests_string}||"
+                for category, count in test_info["summary"].items():
+                    if category not in cum_pytests:
+                        cum_pytests[category] = 0
+                    if isinstance(count, int): cum_pytests[category] += int(count)
+                    elif isinstance(count, float): cum_pytests[category] += float(count)
+                    total_tests += 1
+                break # assume we ran all tests. will add functionality for checking diff tests later, as we need it.
+        summary_pytests_string = f"{cum_pytests['passed']} / {total_tests} ; duration: {total_duration:.2f}s"
+        leaderboard += f"\n||[{branch_name}]({os.path.join('/', f'analysis_{branch_name}')})|{summary_pytests_string}||"
         with open(os.path.join(subfolder, f"analysis_{branch_name}.md"), 'w') as wf: 
             wf.write( method_to_repos[branch_name])    
     with open(os.path.join(subfolder, "analysis.md"), 'w') as wf: 
