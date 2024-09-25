@@ -61,7 +61,7 @@ def get_pytest_info(path_to_logs, repo_name, branch_name):
                 failure_string = test["call"]["longrepr"]
                 # could use test['call']['traceback'] information and test['call']['crash'] for more info
             else:
-                breakpoint()
+                failure_string = ""
             duration = 0.0
             for action_key in ["setup", "call", "teardown"]:
                 if action_key not in test:
@@ -231,7 +231,7 @@ def render_mds(subfolder="docs"):
                             f"</pre></summary><pre>\n{failure['failure_string']}\n</pre>\n</details>\n"
                         )
 
-            back_button = f"[back to {branch_name} summary]({os.path.join('/', f'analysis_{branch_name}')})\n\n"
+            back_button = f"[back to {branch_name} summary]({f'analysis_{branch_name}'})\n\n"
             with open(
                 os.path.join(subfolder, f"analysis_{branch_name}_{repo_name}.md"), "w"
             ) as wf:
@@ -253,7 +253,6 @@ def render_mds(subfolder="docs"):
         method_to_repos[branch_name] = """
 | | Repository | Summary | |
 |-|------------|---------|-|"""
-        total_tests = 0  # better info is probably broken down by split lol TODO
         total_duration = 0.0
         for repo_name, repo_test_info in branch_info.items():
             for testname, test_info in repo_test_info.items():
@@ -262,8 +261,8 @@ def render_mds(subfolder="docs"):
                 else:
                     total_duration += test_info["duration"]
                     summary_pytests_string = (
-                        f"{testname}: {test_info['summary']['passed']} / "
-                        f"{test_info['summary']['collected']} ; duration: { test_info['duration']:.2f}s"
+                        f"`{testname}`: {test_info['summary']['passed']} / "
+                        f"{test_info['summary']['collected']} ; duration: {test_info['duration']:.2f}s"
                     )
                     for category, count in test_info["summary"].items():
                         if category not in cum_pytests:
@@ -272,18 +271,18 @@ def render_mds(subfolder="docs"):
                             cum_pytests[category] += int(count)
                         elif isinstance(count, float):
                             cum_pytests[category] += float(count)
-                        total_tests += 1
                 method_to_repos[branch_name] += (
-                    f"\n||[{repo_name}]({os.path.join('/', f'analysis_{branch_name}_{repo_name}')})|"
+                    f"\n||[{repo_name}]({f'analysis_{branch_name}_{repo_name}'})|"
                     f"{summary_pytests_string}||"
                 )
                 break  # assume we ran all tests. will add functionality for checking diff tests later, as we need it.
         summary_pytests_string = (
-            f"{cum_pytests['passed']} / {total_tests} ; duration: {total_duration:.2f}s"
+            f"{cum_pytests['passed']} / {cum_pytests['collected']} ; duration: {total_duration:.2f}s"
         )
-        leaderboard += f"\n||[{branch_name}]({os.path.join('/', f'analysis_{branch_name}')})|{summary_pytests_string}||"
+        leaderboard += f"\n||[{branch_name}]({f'analysis_{branch_name}'})|{summary_pytests_string}||"
+        back_button = f"[back to all submissions]({f'analysis'})\n\n"
         with open(os.path.join(subfolder, f"analysis_{branch_name}.md"), "w") as wf:
-            wf.write(method_to_repos[branch_name])
+            wf.write(back_button + "\n" + method_to_repos[branch_name])
     with open(os.path.join(subfolder, "analysis.md"), "w") as wf:
         wf.write(leaderboard)
 
@@ -387,9 +386,10 @@ def main(args):
         )
         if not args.keep_previous_eval:
             for subfolder in glob.glob(os.path.join(analysis_files_path, "*")):
-                if os.path.basename(subfolder) not in {"blank", "reference", "repos", "submission_repos"}:
+                if os.path.basename(subfolder.rstrip("/")) not in {"blank", "reference", "repos", "submission_repos"}:
                     try:
-                        shutil.rmtree(analysis_files_path, subfolder)
+                        print(f"Clearing {subfolder}")
+                        shutil.rmtree(subfolder)
                     except Exception as e:
                         print(f"{e}: when removing {subfolder}")
 
