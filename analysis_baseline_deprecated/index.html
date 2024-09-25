@@ -317,4205 +317,490 @@
 <h1 id="submission-name-baseline">Submission Name: baseline</h1>
 <h1 id="repository-deprecated">Repository: deprecated</h1>
 <h2 id="pytest-summary-tests">Pytest Summary: tests</h2>
-<div class="highlight"><pre><span></span><code>| status   | count |
-|:---------|:-----:|
-| passed | 80 |
-</code></pre></div>
-<p>| error | 10 |
-| failed | 81 |
-| total | 171 |
-| collected | 171 |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">80</td>
+</tr>
+<tr>
+<td style="text-align: left;">error</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">81</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">171</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">171</td>
+</tr>
+</tbody>
+</table>
 <h2 id="failed-pytest-outputs-tests">Failed pytest outputs: tests</h2>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsnone">test_deprecated.py::test_classic_deprecated_function__warns[None]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[None]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[None]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_function(request):
-        if request.param is None:
-
-            @deprecated.classic.deprecated
->           def foo1():
-
-tests/test_deprecated.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<function classic_deprecated_function.<locals>.foo1 at 0x7f5f72167400>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsclassic_deprecated_function1">test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function1]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function1]</pre></summary><pre>
-classic_deprecated_function = <function classic_deprecated_function.<locals>.foo1 at 0x7f5f71ef96c0>
-
-    def test_classic_deprecated_function__warns(classic_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:135: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsclassic_deprecated_function2">test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function2]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function2]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function2]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_function(request):
-        if request.param is None:
-
-            @deprecated.classic.deprecated
-            def foo1():
-                pass
-
-            return foo1
-        else:
-            args, kwargs = request.param
-
->           @deprecated.classic.deprecated(*args, **kwargs)
-
-tests/test_deprecated.py:37: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = ('Good reason',), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsclassic_deprecated_function3">test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function3]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function3]</pre></summary><pre>
-classic_deprecated_function = <function classic_deprecated_function.<locals>.foo1 at 0x7f5f71ef9cf0>
-
-    def test_classic_deprecated_function__warns(classic_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:135: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsclassic_deprecated_function4">test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function4]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function4]</pre></summary><pre>
-classic_deprecated_function = <function classic_deprecated_function.<locals>.foo1 at 0x7f5f71ef9ea0>
-
-    def test_classic_deprecated_function__warns(classic_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:135: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsclassic_deprecated_function5">test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function5]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function5]</pre></summary><pre>
-classic_deprecated_function = <function classic_deprecated_function.<locals>.foo1 at 0x7f5f71ef8a60>
-
-    def test_classic_deprecated_function__warns(classic_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:135: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_function__warnsclassic_deprecated_function6">test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function6]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function6]</pre></summary><pre>
-classic_deprecated_function = <function classic_deprecated_function.<locals>.foo1 at 0x7f5f71efa050>
-
-    def test_classic_deprecated_function__warns(classic_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:135: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class__warnsnone">test_deprecated.py::test_classic_deprecated_class__warns[None]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[None]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[None]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_class(request):
-        if request.param is None:
-
-            @deprecated.classic.deprecated
->           class Foo2(object):
-
-tests/test_deprecated.py:49: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated.classic_deprecated_class.<locals>.Foo2'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class2">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class2]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_class(request):
-        if request.param is None:
-
-            @deprecated.classic.deprecated
-            class Foo2(object):
-                pass
-
-            return Foo2
-        else:
-            args, kwargs = request.param
-
->           @deprecated.classic.deprecated(*args, **kwargs)
-
-tests/test_deprecated.py:56: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = ('Good reason',), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsnone">test_deprecated.py::test_classic_deprecated_method__warns[None]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[None]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[None]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_method(request):
-        if request.param is None:
-
->           class Foo3(object):
-
-tests/test_deprecated.py:67: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-tests/test_deprecated.py:69: in Foo3
-    def foo3(self):
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<function classic_deprecated_method.<locals>.Foo3.foo3 at 0x7f5f71ef9750>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsclassic_deprecated_method1">test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method1]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method1]</pre></summary><pre>
-classic_deprecated_method = <class 'tests.test_deprecated.classic_deprecated_method.<locals>.Foo3'>
-
-    def test_classic_deprecated_method__warns(classic_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = classic_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:160: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsclassic_deprecated_method2">test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method2]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method2]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method2]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_method(request):
-        if request.param is None:
-
-            class Foo3(object):
-                @deprecated.classic.deprecated
-                def foo3(self):
-                    pass
-
-            return Foo3
-        else:
-            args, kwargs = request.param
-
->           class Foo3(object):
-
-tests/test_deprecated.py:76: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-tests/test_deprecated.py:77: in Foo3
-    @deprecated.classic.deprecated(*args, **kwargs)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = ('Good reason',), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsclassic_deprecated_method3">test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method3]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method3]</pre></summary><pre>
-classic_deprecated_method = <class 'tests.test_deprecated.classic_deprecated_method.<locals>.Foo3'>
-
-    def test_classic_deprecated_method__warns(classic_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = classic_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:160: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsclassic_deprecated_method4">test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method4]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method4]</pre></summary><pre>
-classic_deprecated_method = <class 'tests.test_deprecated.classic_deprecated_method.<locals>.Foo3'>
-
-    def test_classic_deprecated_method__warns(classic_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = classic_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:160: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsclassic_deprecated_method5">test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method5]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method5]</pre></summary><pre>
-classic_deprecated_method = <class 'tests.test_deprecated.classic_deprecated_method.<locals>.Foo3'>
-
-    def test_classic_deprecated_method__warns(classic_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = classic_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:160: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_method__warnsclassic_deprecated_method6">test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method6]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method6]</pre></summary><pre>
-classic_deprecated_method = <class 'tests.test_deprecated.classic_deprecated_method.<locals>.Foo3'>
-
-    def test_classic_deprecated_method__warns(classic_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = classic_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:160: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsnone">test_deprecated.py::test_classic_deprecated_static_method__warns[None]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[None]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[None]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_static_method(request):
-        if request.param is None:
-
->           class Foo4(object):
-
-tests/test_deprecated.py:88: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-tests/test_deprecated.py:91: in Foo4
-    def foo4():
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<function classic_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71ef9d80>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsclassic_deprecated_static_method1">test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method1]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method1]</pre></summary><pre>
-classic_deprecated_static_method = <function classic_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71efb640>
-
-    def test_classic_deprecated_static_method__warns(classic_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:172: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsclassic_deprecated_static_method2">test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method2]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method2]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method2]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_static_method(request):
-        if request.param is None:
-
-            class Foo4(object):
-                @staticmethod
-                @deprecated.classic.deprecated
-                def foo4():
-                    pass
-
-            return Foo4.foo4
-        else:
-            args, kwargs = request.param
-
->           class Foo4(object):
-
-tests/test_deprecated.py:98: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-tests/test_deprecated.py:100: in Foo4
-    @deprecated.classic.deprecated(*args, **kwargs)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = ('Good reason',), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsclassic_deprecated_static_method3">test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method3]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method3]</pre></summary><pre>
-classic_deprecated_static_method = <function classic_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71efbf40>
-
-    def test_classic_deprecated_static_method__warns(classic_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:172: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsclassic_deprecated_static_method4">test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method4]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method4]</pre></summary><pre>
-classic_deprecated_static_method = <function classic_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71efb910>
-
-    def test_classic_deprecated_static_method__warns(classic_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:172: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsclassic_deprecated_static_method5">test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method5]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method5]</pre></summary><pre>
-classic_deprecated_static_method = <function classic_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71efae60>
-
-    def test_classic_deprecated_static_method__warns(classic_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:172: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_static_method__warnsclassic_deprecated_static_method6">test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method6]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method6]</pre></summary><pre>
-classic_deprecated_static_method = <function classic_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71efb0a0>
-
-    def test_classic_deprecated_static_method__warns(classic_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            classic_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:172: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsnone">test_deprecated.py::test_classic_deprecated_class_method__warns[None]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[None]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[None]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_class_method(request):
-        if request.param is None:
-
->           class Foo5(object):
-
-tests/test_deprecated.py:111: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-tests/test_deprecated.py:114: in Foo5
-    def foo5(cls):
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<function classic_deprecated_class_method.<locals>.Foo5.foo5 at 0x7f5f71efb010>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsclassic_deprecated_class_method1">test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method1]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method1]</pre></summary><pre>
-classic_deprecated_class_method = <class 'tests.test_deprecated.classic_deprecated_class_method.<locals>.Foo5'>
-
-    def test_classic_deprecated_class_method__warns(classic_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = classic_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:185: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsclassic_deprecated_class_method2">test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method2]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method2]</pre></summary><pre>
-request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method2]>>
-
-    @pytest.fixture(scope="module", params=_PARAMS)
-    def classic_deprecated_class_method(request):
-        if request.param is None:
-
-            class Foo5(object):
-                @classmethod
-                @deprecated.classic.deprecated
-                def foo5(cls):
-                    pass
-
-            return Foo5
-        else:
-            args, kwargs = request.param
-
->           class Foo5(object):
-
-tests/test_deprecated.py:121: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-tests/test_deprecated.py:123: in Foo5
-    @deprecated.classic.deprecated(*args, **kwargs)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = ('Good reason',), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsclassic_deprecated_class_method3">test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method3]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method3]</pre></summary><pre>
-classic_deprecated_class_method = <class 'tests.test_deprecated.classic_deprecated_class_method.<locals>.Foo5'>
-
-    def test_classic_deprecated_class_method__warns(classic_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = classic_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:185: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsclassic_deprecated_class_method4">test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method4]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method4]</pre></summary><pre>
-classic_deprecated_class_method = <class 'tests.test_deprecated.classic_deprecated_class_method.<locals>.Foo5'>
-
-    def test_classic_deprecated_class_method__warns(classic_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = classic_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:185: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsclassic_deprecated_class_method5">test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method5]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method5]</pre></summary><pre>
-classic_deprecated_class_method = <class 'tests.test_deprecated.classic_deprecated_class_method.<locals>.Foo5'>
-
-    def test_classic_deprecated_class_method__warns(classic_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = classic_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:185: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_classic_deprecated_class_method__warnsclassic_deprecated_class_method6">test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method6]</h3>
 <details><summary> <pre>test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method6]</pre></summary><pre>
-classic_deprecated_class_method = <class 'tests.test_deprecated.classic_deprecated_class_method.<locals>.Foo5'>
-
-    def test_classic_deprecated_class_method__warns(classic_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = classic_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:185: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_should_raise_type_error">test_deprecated.py::test_should_raise_type_error</h3>
 <details><summary> <pre>test_deprecated.py::test_should_raise_type_error</pre></summary><pre>
-def test_should_raise_type_error():
-        try:
->           deprecated.classic.deprecated(5)
-
-tests/test_deprecated.py:197: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (5,), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_warning_msg_has_reason">test_deprecated.py::test_warning_msg_has_reason</h3>
 <details><summary> <pre>test_deprecated.py::test_warning_msg_has_reason</pre></summary><pre>
-def test_warning_msg_has_reason():
-        reason = "Good reason"
-
-        @deprecated.classic.deprecated(reason=reason)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_deprecated.py:212: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_warning_msg_has_version">test_deprecated.py::test_warning_msg_has_version</h3>
 <details><summary> <pre>test_deprecated.py::test_warning_msg_has_version</pre></summary><pre>
-def test_warning_msg_has_version():
-        version = "1.2.3"
-
-        @deprecated.classic.deprecated(version=version)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_deprecated.py:225: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_specific_warning_cls_is_used">test_deprecated.py::test_specific_warning_cls_is_used</h3>
 <details><summary> <pre>test_deprecated.py::test_specific_warning_cls_is_used</pre></summary><pre>
-def test_specific_warning_cls_is_used():
-        @deprecated.classic.deprecated(category=MyDeprecationWarning)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_deprecated.py:246: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecatedpytest_respect_global_filter">test_deprecated.py::test_respect_global_filter</h3>
 <details><summary> <pre>test_deprecated.py::test_respect_global_filter</pre></summary><pre>
-def test_respect_global_filter():
-        @deprecated.classic.deprecated(version='1.2.1', reason="deprecated function")
-        def fun():
-            print("fun")
-
-        warnings.simplefilter("once", category=DeprecationWarning)
-
-        with warnings.catch_warnings(record=True) as warns:
-            fun()
-            fun()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_deprecated.py:260: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_classpytest_class_deprecation_using_deprecated_decorator">test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator</h3>
 <details><summary> <pre>test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator</pre></summary><pre>
-def test_class_deprecation_using_deprecated_decorator():
-        @deprecated.classic.deprecated
->       class MyBaseClass(object):
-
-tests/test_deprecated_class.py:93: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_class.test_class_deprecation_using_deprecated_decorator.<locals>.MyBaseClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_classpytest_class_respect_global_filter">test_deprecated_class.py::test_class_respect_global_filter</h3>
 <details><summary> <pre>test_deprecated_class.py::test_class_respect_global_filter</pre></summary><pre>
-def test_class_respect_global_filter():
-        @deprecated.classic.deprecated
->       class MyBaseClass(object):
-
-tests/test_deprecated_class.py:111: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_class.test_class_respect_global_filter.<locals>.MyBaseClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_classpytest_subclass_deprecation_using_deprecated_decorator">test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator</h3>
 <details><summary> <pre>test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator</pre></summary><pre>
-def test_subclass_deprecation_using_deprecated_decorator():
-        @deprecated.classic.deprecated
->       class MyBaseClass(object):
-
-tests/test_deprecated_class.py:124: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_class.test_subclass_deprecation_using_deprecated_decorator.<locals>.MyBaseClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_classpytest_simple_class_deprecation_with_args">test_deprecated_class.py::test_simple_class_deprecation_with_args</h3>
 <details><summary> <pre>test_deprecated_class.py::test_simple_class_deprecation_with_args</pre></summary><pre>
-def test_simple_class_deprecation_with_args():
->       @deprecated.classic.deprecated('kwargs class')
-
-tests/test_deprecated_class.py:142: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = ('kwargs class',), kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_metaclasspytest_with_init">test_deprecated_metaclass.py::test_with_init</h3>
 <details><summary> <pre>test_deprecated_metaclass.py::test_with_init</pre></summary><pre>
-def test_with_init():
-        @deprecated.classic.deprecated
->       class MyClass(object):
-
-tests/test_deprecated_metaclass.py:26: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_metaclass.test_with_init.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_metaclasspytest_with_new">test_deprecated_metaclass.py::test_with_new</h3>
 <details><summary> <pre>test_deprecated_metaclass.py::test_with_new</pre></summary><pre>
-def test_with_new():
-        @deprecated.classic.deprecated
->       class MyClass(object):
-
-tests/test_deprecated_metaclass.py:43: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_metaclass.test_with_new.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_metaclasspytest_with_metaclass">test_deprecated_metaclass.py::test_with_metaclass</h3>
 <details><summary> <pre>test_deprecated_metaclass.py::test_with_metaclass</pre></summary><pre>
-def test_with_metaclass():
-        class Meta(type):
-            def __call__(cls, *args, **kwargs):
-                obj = super(Meta, cls).__call__(*args, **kwargs)
-                obj.c = 3.14
-                return obj
-
-        @deprecated.classic.deprecated
->       class MyClass(with_metaclass(Meta)):
-
-tests/test_deprecated_metaclass.py:72: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_metaclass.test_with_metaclass.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_deprecated_metaclasspytest_with_singleton_metaclass">test_deprecated_metaclass.py::test_with_singleton_metaclass</h3>
 <details><summary> <pre>test_deprecated_metaclass.py::test_with_singleton_metaclass</pre></summary><pre>
-def test_with_singleton_metaclass():
-        class Singleton(type):
-            _instances = {}
-
-            def __call__(cls, *args, **kwargs):
-                if cls not in cls._instances:
-                    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
-                return cls._instances[cls]
-
-        @deprecated.classic.deprecated
->       class MyClass(with_metaclass(Singleton)):
-
-tests/test_deprecated_metaclass.py:98: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_deprecated_metaclass.test_with_singleton_metaclass.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringshort_docstring-deprecated-reasonversion">test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-reason&amp;version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-reason&version]</pre></summary><pre>
-docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
-reason = 'A good reason', version = '1.2.0'
-expected = '.. deprecated:: 1.2.0\n   A good reason\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringshort_docstring-deprecated-version">test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-version]</pre></summary><pre>
-docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
-reason = None, version = '1.2.0', expected = '.. deprecated:: 1.2.0\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringno_docstring-deprecated-reasonversion">test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-reason&amp;version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-reason&version]</pre></summary><pre>
-docstring = None, directive = 'deprecated', reason = 'A good reason'
-version = '1.2.0', expected = '.. deprecated:: 1.2.0\n   A good reason\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringno_docstring-deprecated-version">test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-version]</pre></summary><pre>
-docstring = None, directive = 'deprecated', reason = None, version = '1.2.0'
-expected = '.. deprecated:: 1.2.0\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringd213_long_docstring-deprecated-reasonversion">test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-deprecated-reason&amp;version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-deprecated-reason&version]</pre></summary><pre>
-docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
-directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
-expected = '.. deprecated:: 1.2.0\n   A good reason\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringd213_long_docstring-deprecated-version">test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-deprecated-version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-deprecated-version]</pre></summary><pre>
-docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
-directive = 'deprecated', reason = None, version = '1.2.0'
-expected = '.. deprecated:: 1.2.0\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringd212_long_docstring-deprecated-reasonversion">test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-deprecated-reason&amp;version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-deprecated-reason&version]</pre></summary><pre>
-docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
-directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
-expected = '.. deprecated:: 1.2.0\n   A good reason\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_has_sphinx_docstringd212_long_docstring-deprecated-version">test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-deprecated-version]</h3>
 <details><summary> <pre>test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-deprecated-version]</pre></summary><pre>
-docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
-directive = 'deprecated', reason = None, version = '1.2.0'
-expected = '.. deprecated:: 1.2.0\n'
-
-    @pytest.mark.parametrize(
-        "reason, version, expected",
-        [
-            (
-                'A good reason',
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                       {reason}
-                    """
-                ),
-            ),
-            (
-                None,
-                '1.2.0',
-                textwrap.dedent(
-                    """\
-                    .. {directive}:: {version}
-                    """
-                ),
-            ),
-        ],
-        ids=["reason&version", "version"],
-    )
-    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
-        # The function:
-        def foo(x, y):
-            return x + y
-
-        # with docstring:
-        foo.__doc__ = docstring
-
-        # is decorated with:
-        decorator_factory = getattr(deprecated.sphinx, directive)
-        decorator = decorator_factory(reason=reason, version=version)
-        foo = decorator(foo)
-
-        # The function must contains this Sphinx docstring:
-        expected = expected.format(directive=directive, version=version, reason=reason)
-
-        current = textwrap.dedent(foo.__doc__)
-        assert current.endswith(expected)
-
-        current = current.replace(expected, '')
-        if docstring:
-            # An empty line must separate the original docstring and the directive.
-            assert re.search("\n[ ]*\n$", current, flags=re.DOTALL)
-        else:
-            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
-            assert current == "\n"
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo(1, 2)
-
-        if directive in {'versionadded', 'versionchanged'}:
-            # don't emit DeprecationWarning
-            assert len(warns) == 0
-        else:
-            # emit DeprecationWarning
->           assert len(warns) == 1
-E           assert 0 == 1
-E            +  where 0 = len([])
-
-tests/test_sphinx.py:105: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_function__warnssphinx_deprecated_function0">test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function0]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function0]</pre></summary><pre>
-sphinx_deprecated_function = <function sphinx_deprecated_function.<locals>.foo1 at 0x7f5f71f849d0>
-
-    def test_sphinx_deprecated_function__warns(sphinx_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:252: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_function__warnssphinx_deprecated_function1">test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function1]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function1]</pre></summary><pre>
-sphinx_deprecated_function = <function sphinx_deprecated_function.<locals>.foo1 at 0x7f5f71f84310>
-
-    def test_sphinx_deprecated_function__warns(sphinx_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:252: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_function__warnssphinx_deprecated_function2">test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function2]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function2]</pre></summary><pre>
-sphinx_deprecated_function = <function sphinx_deprecated_function.<locals>.foo1 at 0x7f5f71f844c0>
-
-    def test_sphinx_deprecated_function__warns(sphinx_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:252: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_function__warnssphinx_deprecated_function3">test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function3]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function3]</pre></summary><pre>
-sphinx_deprecated_function = <function sphinx_deprecated_function.<locals>.foo1 at 0x7f5f71f84940>
-
-    def test_sphinx_deprecated_function__warns(sphinx_deprecated_function):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_function()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:252: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_method__warnssphinx_deprecated_method0">test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method0]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method0]</pre></summary><pre>
-sphinx_deprecated_method = <class 'tests.test_sphinx.sphinx_deprecated_method.<locals>.Foo3'>
-
-    def test_sphinx_deprecated_method__warns(sphinx_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = sphinx_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:278: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_method__warnssphinx_deprecated_method1">test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method1]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method1]</pre></summary><pre>
-sphinx_deprecated_method = <class 'tests.test_sphinx.sphinx_deprecated_method.<locals>.Foo3'>
-
-    def test_sphinx_deprecated_method__warns(sphinx_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = sphinx_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:278: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_method__warnssphinx_deprecated_method2">test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method2]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method2]</pre></summary><pre>
-sphinx_deprecated_method = <class 'tests.test_sphinx.sphinx_deprecated_method.<locals>.Foo3'>
-
-    def test_sphinx_deprecated_method__warns(sphinx_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = sphinx_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:278: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_method__warnssphinx_deprecated_method3">test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method3]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method3]</pre></summary><pre>
-sphinx_deprecated_method = <class 'tests.test_sphinx.sphinx_deprecated_method.<locals>.Foo3'>
-
-    def test_sphinx_deprecated_method__warns(sphinx_deprecated_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            obj = sphinx_deprecated_method()
-            obj.foo3()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:278: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_static_method__warnssphinx_deprecated_static_method0">test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0]</pre></summary><pre>
-sphinx_deprecated_static_method = <function sphinx_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71f84d30>
-
-    def test_sphinx_deprecated_static_method__warns(sphinx_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:289: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_static_method__warnssphinx_deprecated_static_method1">test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1]</pre></summary><pre>
-sphinx_deprecated_static_method = <function sphinx_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71f85090>
-
-    def test_sphinx_deprecated_static_method__warns(sphinx_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:289: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_static_method__warnssphinx_deprecated_static_method2">test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2]</pre></summary><pre>
-sphinx_deprecated_static_method = <function sphinx_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71f85240>
-
-    def test_sphinx_deprecated_static_method__warns(sphinx_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:289: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_static_method__warnssphinx_deprecated_static_method3">test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3]</pre></summary><pre>
-sphinx_deprecated_static_method = <function sphinx_deprecated_static_method.<locals>.Foo4.foo4 at 0x7f5f71f853f0>
-
-    def test_sphinx_deprecated_static_method__warns(sphinx_deprecated_static_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            sphinx_deprecated_static_method()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:289: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_class_method__warnssphinx_deprecated_class_method0">test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0]</pre></summary><pre>
-sphinx_deprecated_class_method = <class 'tests.test_sphinx.sphinx_deprecated_class_method.<locals>.Foo5'>
-
-    def test_sphinx_deprecated_class_method__warns(sphinx_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = sphinx_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:301: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_class_method__warnssphinx_deprecated_class_method1">test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1]</pre></summary><pre>
-sphinx_deprecated_class_method = <class 'tests.test_sphinx.sphinx_deprecated_class_method.<locals>.Foo5'>
-
-    def test_sphinx_deprecated_class_method__warns(sphinx_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = sphinx_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:301: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_class_method__warnssphinx_deprecated_class_method2">test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2]</pre></summary><pre>
-sphinx_deprecated_class_method = <class 'tests.test_sphinx.sphinx_deprecated_class_method.<locals>.Foo5'>
-
-    def test_sphinx_deprecated_class_method__warns(sphinx_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = sphinx_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:301: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_deprecated_class_method__warnssphinx_deprecated_class_method3">test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3]</pre></summary><pre>
-sphinx_deprecated_class_method = <class 'tests.test_sphinx.sphinx_deprecated_class_method.<locals>.Foo5'>
-
-    def test_sphinx_deprecated_class_method__warns(sphinx_deprecated_class_method):
-        with warnings.catch_warnings(record=True) as warns:
-            warnings.simplefilter("always")
-            cls = sphinx_deprecated_class_method()
-            cls.foo5()
->       assert len(warns) == 1
-E       assert 0 == 1
-E        +  where 0 = len([])
-
-tests/test_sphinx.py:301: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_warning_msg_has_reason">test_sphinx.py::test_warning_msg_has_reason</h3>
 <details><summary> <pre>test_sphinx.py::test_warning_msg_has_reason</pre></summary><pre>
-def test_warning_msg_has_reason():
-        reason = "Good reason"
-
-        @deprecated.sphinx.deprecated(version="4.5.6", reason=reason)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_sphinx.py:330: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_warning_msg_has_version">test_sphinx.py::test_warning_msg_has_version</h3>
 <details><summary> <pre>test_sphinx.py::test_warning_msg_has_version</pre></summary><pre>
-def test_warning_msg_has_version():
-        version = "1.2.3"
-
-        @deprecated.sphinx.deprecated(version=version)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_sphinx.py:343: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_specific_warning_cls_is_used">test_sphinx.py::test_specific_warning_cls_is_used</h3>
 <details><summary> <pre>test_sphinx.py::test_specific_warning_cls_is_used</pre></summary><pre>
-def test_specific_warning_cls_is_used():
-        @deprecated.sphinx.deprecated(version="4.5.6", category=MyDeprecationWarning)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_sphinx.py:364: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_syntax_trimminguse-functionbar-instead-use-bar-instead">test_sphinx.py::test_sphinx_syntax_trimming[Use :function:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_syntax_trimming[Use :function:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :function:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        ["reason", "expected"],
-        [
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-        ],
-    )
-    def test_sphinx_syntax_trimming(reason, expected):
-        @deprecated.sphinx.deprecated(version="4.5.6", reason=reason)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_sphinx.py:389: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_sphinx_syntax_trimminguse-pyfuncbar-instead-use-bar-instead">test_sphinx.py::test_sphinx_syntax_trimming[Use :py:func:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_sphinx_syntax_trimming[Use :py:func:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :py:func:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        ["reason", "expected"],
-        [
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-        ],
-    )
-    def test_sphinx_syntax_trimming(reason, expected):
-        @deprecated.sphinx.deprecated(version="4.5.6", reason=reason)
-        def foo():
-            pass
-
-        with warnings.catch_warnings(record=True) as warns:
-            foo()
->       warn = warns[0]
-E       IndexError: list index out of range
-
-tests/test_sphinx.py:389: IndexError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-funcbar-instead-use-bar-instead">test_sphinx.py::test_get_deprecated_msg[Use :func:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :func:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :func:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `bar` instead' in 'Call to deprecated function <lambda>. (Use bar instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-functionbar-instead-use-bar-instead">test_sphinx.py::test_get_deprecated_msg[Use :function:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :function:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :function:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `bar` instead' in 'Call to deprecated function <lambda>. (Use :function:`bar` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-classbaz-instead-use-baz-instead">test_sphinx.py::test_get_deprecated_msg[Use :class:<code>Baz</code> instead-Use <code>Baz</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :class:`Baz` instead-Use `Baz` instead]</pre></summary><pre>
-reason = 'Use :class:`Baz` instead', expected = 'Use `Baz` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `Baz` instead' in 'Call to deprecated function <lambda>. (Use Baz instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-excbaz-instead-use-baz-instead">test_sphinx.py::test_get_deprecated_msg[Use :exc:<code>Baz</code> instead-Use <code>Baz</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :exc:`Baz` instead-Use `Baz` instead]</pre></summary><pre>
-reason = 'Use :exc:`Baz` instead', expected = 'Use `Baz` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `Baz` instead' in 'Call to deprecated function <lambda>. (Use Baz instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-exceptionbaz-instead-use-baz-instead">test_sphinx.py::test_get_deprecated_msg[Use :exception:<code>Baz</code> instead-Use <code>Baz</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :exception:`Baz` instead-Use `Baz` instead]</pre></summary><pre>
-reason = 'Use :exception:`Baz` instead', expected = 'Use `Baz` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `Baz` instead' in 'Call to deprecated function <lambda>. (Use :exception:`Baz` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-methbazbar-instead-use-bazbar-instead">test_sphinx.py::test_get_deprecated_msg[Use :meth:<code>Baz.bar</code> instead-Use <code>Baz.bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :meth:`Baz.bar` instead-Use `Baz.bar` instead]</pre></summary><pre>
-reason = 'Use :meth:`Baz.bar` instead', expected = 'Use `Baz.bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `Baz.bar` instead' in 'Call to deprecated function <lambda>. (Use Baz.bar instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-methodbazbar-instead-use-bazbar-instead">test_sphinx.py::test_get_deprecated_msg[Use :method:<code>Baz.bar</code> instead-Use <code>Baz.bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :method:`Baz.bar` instead-Use `Baz.bar` instead]</pre></summary><pre>
-reason = 'Use :method:`Baz.bar` instead', expected = 'Use `Baz.bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `Baz.bar` instead' in 'Call to deprecated function <lambda>. (Use :method:`Baz.bar` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-pyfuncbar-instead-use-bar-instead">test_sphinx.py::test_get_deprecated_msg[Use :py:func:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :py:func:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :py:func:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `bar` instead' in 'Call to deprecated function <lambda>. (Use :pybar instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-cppfuncbar-instead-use-bar-instead">test_sphinx.py::test_get_deprecated_msg[Use :cpp:func:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :cpp:func:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :cpp:func:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `bar` instead' in 'Call to deprecated function <lambda>. (Use :cppbar instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-jsfuncbar-instead-use-bar-instead">test_sphinx.py::test_get_deprecated_msg[Use :js:func:<code>bar</code> instead-Use <code>bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :js:func:`bar` instead-Use `bar` instead]</pre></summary><pre>
-reason = 'Use :js:func:`bar` instead', expected = 'Use `bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `bar` instead' in 'Call to deprecated function <lambda>. (Use :jsbar instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-funcpkgmodbar-instead-use-pkgmodbar-instead">test_sphinx.py::test_get_deprecated_msg[Use :func:<code>~pkg.mod.bar</code> instead-Use <code>~pkg.mod.bar</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :func:`~pkg.mod.bar` instead-Use `~pkg.mod.bar` instead]</pre></summary><pre>
-reason = 'Use :func:`~pkg.mod.bar` instead'
-expected = 'Use `~pkg.mod.bar` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `~pkg.mod.bar` instead' in 'Call to deprecated function <lambda>. (Use pkg.mod.bar instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-rinstead-use-instead">test_sphinx.py::test_get_deprecated_msg[Use :r:<code>instead-Use</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :r:`` instead-Use `` instead]</pre></summary><pre>
-reason = 'Use :r:`` instead', expected = 'Use `` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `` instead' in 'Call to deprecated function <lambda>. (Use :r:`` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-drinstead-use-instead">test_sphinx.py::test_get_deprecated_msg[Use :d:r:<code>instead-Use</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :d:r:`` instead-Use `` instead]</pre></summary><pre>
-reason = 'Use :d:r:`` instead', expected = 'Use `` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `` instead' in 'Call to deprecated function <lambda>. (Use :d:r:`` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-rfoo-instead-use-foo-instead">test_sphinx.py::test_get_deprecated_msg[Use :r:<code>foo</code> instead-Use <code>foo</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :r:`foo` instead-Use `foo` instead]</pre></summary><pre>
-reason = 'Use :r:`foo` instead', expected = 'Use `foo` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `foo` instead' in 'Call to deprecated function <lambda>. (Use :r:`foo` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinxpytest_get_deprecated_msguse-drfoo-instead-use-foo-instead">test_sphinx.py::test_get_deprecated_msg[Use :d:r:<code>foo</code> instead-Use <code>foo</code> instead]</h3>
 <details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :d:r:`foo` instead-Use `foo` instead]</pre></summary><pre>
-reason = 'Use :d:r:`foo` instead', expected = 'Use `foo` instead'
-
-    @pytest.mark.parametrize(
-        "reason, expected",
-        [
-            # classic examples using the default domain (Python)
-            ("Use :func:`bar` instead", "Use `bar` instead"),
-            ("Use :function:`bar` instead", "Use `bar` instead"),
-            ("Use :class:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
-            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
-            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
-            # other examples using a domain :
-            ("Use :py:func:`bar` instead", "Use `bar` instead"),
-            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
-            ("Use :js:func:`bar` instead", "Use `bar` instead"),
-            # the reference can have special characters:
-            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
-            # edge cases:
-            ("Use :r:`` instead", "Use `` instead"),
-            ("Use :d:r:`` instead", "Use `` instead"),
-            ("Use :r:`foo` instead", "Use `foo` instead"),
-            ("Use :d:r:`foo` instead", "Use `foo` instead"),
-            ("Use r:`bad` instead", "Use r:`bad` instead"),
-            ("Use ::`bad` instead", "Use ::`bad` instead"),
-            ("Use :::`bad` instead", "Use :::`bad` instead"),
-        ],
-    )
-    def test_get_deprecated_msg(reason, expected):
-        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
-        actual = adapter.get_deprecated_msg(lambda: None, None)
->       assert expected in actual
-E       AssertionError: assert 'Use `foo` instead' in 'Call to deprecated function <lambda>. (Use :d:r:`foo` instead) -- Deprecated since version 1.'
-
-tests/test_sphinx.py:424: AssertionError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinx_metaclasspytest_with_init">test_sphinx_metaclass.py::test_with_init</h3>
 <details><summary> <pre>test_sphinx_metaclass.py::test_with_init</pre></summary><pre>
-def test_with_init():
-        @deprecated.classic.deprecated
->       class MyClass(object):
-
-tests/test_sphinx_metaclass.py:26: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_sphinx_metaclass.test_with_init.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinx_metaclasspytest_with_new">test_sphinx_metaclass.py::test_with_new</h3>
 <details><summary> <pre>test_sphinx_metaclass.py::test_with_new</pre></summary><pre>
-def test_with_new():
-        @deprecated.classic.deprecated
->       class MyClass(object):
-
-tests/test_sphinx_metaclass.py:43: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_sphinx_metaclass.test_with_new.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinx_metaclasspytest_with_metaclass">test_sphinx_metaclass.py::test_with_metaclass</h3>
 <details><summary> <pre>test_sphinx_metaclass.py::test_with_metaclass</pre></summary><pre>
-def test_with_metaclass():
-        class Meta(type):
-            def __call__(cls, *args, **kwargs):
-                obj = super(Meta, cls).__call__(*args, **kwargs)
-                obj.c = 3.14
-                return obj
-
-        @deprecated.classic.deprecated
->       class MyClass(with_metaclass(Meta)):
-
-tests/test_sphinx_metaclass.py:72: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_sphinx_metaclass.test_with_metaclass.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 <h3 id="test_sphinx_metaclasspytest_with_singleton_metaclass">test_sphinx_metaclass.py::test_with_singleton_metaclass</h3>
 <details><summary> <pre>test_sphinx_metaclass.py::test_with_singleton_metaclass</pre></summary><pre>
-def test_with_singleton_metaclass():
-        class Singleton(type):
-            _instances = {}
-
-            def __call__(cls, *args, **kwargs):
-                if cls not in cls._instances:
-                    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
-                return cls._instances[cls]
-
-        @deprecated.classic.deprecated
->       class MyClass(with_metaclass(Singleton)):
-
-tests/test_sphinx_metaclass.py:98: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-args = (<class 'tests.test_sphinx_metaclass.test_with_singleton_metaclass.<locals>.MyClass'>,)
-kwargs = {}
-
-    def deprecated(*args, **kwargs):
-        """
-        This is a decorator which can be used to mark functions
-        as deprecated. It will result in a warning being emitted
-        when the function is used.
-
-        **Classic usage:**
-
-        To use this, decorate your deprecated function with **@deprecated** decorator:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated
-           def some_old_function(x, y):
-               return x + y
-
-        You can also decorate a class or a method:
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           class SomeClass(object):
-               @deprecated
-               def some_old_method(self, x, y):
-                   return x + y
-
-
-           @deprecated
-           class SomeOldClass(object):
-               pass
-
-        You can give a *reason* message to help the developer to choose another function/class,
-        and a *version* number to specify the starting version number of the deprecation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(reason="use another function", version='1.2.0')
-           def some_old_function(x, y):
-               return x + y
-
-        The *category* keyword argument allow you to specify the deprecation warning class of your choice.
-        By default, :exc:`DeprecationWarning` is used but you can choose :exc:`FutureWarning`,
-        :exc:`PendingDeprecationWarning` or a custom subclass.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(category=PendingDeprecationWarning)
-           def some_old_function(x, y):
-               return x + y
-
-        The *action* keyword argument allow you to locally change the warning filtering.
-        *action* can be one of "error", "ignore", "always", "default", "module", or "once".
-        If ``None``, empty or missing, the the global filtering mechanism is used.
-        See: `The Warnings Filter`_ in the Python documentation.
-
-        .. code-block:: python
-
-           from deprecated import deprecated
-
-
-           @deprecated(action="error")
-           def some_old_function(x, y):
-               return x + y
-
-        """
->       if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):
-E       NameError: name 'types' is not defined
-
-deprecated/classic.py:248: NameError
+{failure['failure_string']}
 </pre>
 </details>
 

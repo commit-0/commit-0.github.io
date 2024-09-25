@@ -316,662 +316,797 @@
 <p><a href="/analysis_baseline">back to baseline summary</a></p>
 <h1 id="submission-name-baseline">Submission Name: baseline</h1>
 <h1 id="repository-tinydb">Repository: tinydb</h1>
+<h2 id="failed-to-run-pytests">Failed to run pytests</h2>
+<p>ImportError while loading conftest '/testbed/tests/conftest.py'.
+tests/conftest.py:7: in <module>
+    from tinydb.middlewares import CachingMiddleware
+tinydb/<strong>init</strong>.py:27: in <module>
+    from .queries import Query, where
+tinydb/queries.py:21: in <module>
+    from .utils import freeze
+tinydb/utils.py:84: in <module>
+    class FrozenDict(dict):
+tinydb/utils.py:95: in FrozenDict
+    <strong>setitem</strong> = _immutable
+E   NameError: name '_immutable' is not defined</p>
 <h3 id="patch-diff">Patch diff</h3>
-<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/simpy/core.py b/src/simpy/core.py</span>
-<span class="gh">index 10c88fb..b39ddef 100644</span>
-<span class="gd">--- a/src/simpy/core.py</span>
-<span class="gi">+++ b/src/simpy/core.py</span>
-<span class="gu">@@ -34,7 +34,10 @@ class BoundClass(Generic[T]):</span>
-<span class="w"> </span>    def bind_early(instance: object) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Bind all :class:`BoundClass` attributes of the *instance&#39;s* class
-<span class="w"> </span>        to the instance itself to increase performance.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        cls = type(instance)</span>
-<span class="gi">+        for name, obj in cls.__dict__.items():</span>
-<span class="gi">+            if isinstance(obj, BoundClass):</span>
-<span class="gi">+                setattr(instance, name, obj.__get__(instance, cls))</span>
-
-
-<span class="w"> </span>class EmptySchedule(Exception):
-<span class="gu">@@ -49,7 +52,7 @@ class StopSimulation(Exception):</span>
-<span class="w"> </span>    def callback(cls, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Used as callback in :meth:`Environment.run()` to stop the simulation
-<span class="w"> </span>        when the *until* event occurred.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        raise cls()</span>
-
-
-<span class="w"> </span>SimTime = Union[int, float]
-<span class="gu">@@ -77,12 +80,12 @@ class Environment:</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def now(self) -&gt;SimTime:
-<span class="w"> </span>        &quot;&quot;&quot;The current simulation time.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._now</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def active_process(self) -&gt;Optional[Process]:
-<span class="w"> </span>        &quot;&quot;&quot;The currently active process of the environment.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._active_proc</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def process(self, generator: ProcessGenerator) -&gt;Process:
-<span class="gu">@@ -121,12 +124,15 @@ class Environment:</span>
-<span class="w"> </span>    def schedule(self, event: Event, priority: EventPriority=NORMAL, delay:
-<span class="w"> </span>        SimTime=0) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Schedule an *event* with a given *priority* and a *delay*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        heappush(self._queue, (self._now + delay, priority, next(self._eid), event))</span>
-
-<span class="w"> </span>    def peek(self) -&gt;SimTime:
-<span class="w"> </span>        &quot;&quot;&quot;Get the time of the next scheduled event. Return
-<span class="w"> </span>        :data:`~simpy.core.Infinity` if there is no further event.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        try:</span>
-<span class="gi">+            return self._queue[0][0]</span>
-<span class="gi">+        except IndexError:</span>
-<span class="gi">+            return Infinity</span>
-
-<span class="w"> </span>    def step(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Process the next event.
-<span class="gu">@@ -134,7 +140,20 @@ class Environment:</span>
-<span class="w"> </span>        Raise an :exc:`EmptySchedule` if no further events are available.
-
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/tinydb/database.py b/tinydb/database.py</span>
+<span class="gh">index a4ce0e1..f05a307 100644</span>
+<span class="gd">--- a/tinydb/database.py</span>
+<span class="gi">+++ b/tinydb/database.py</span>
+<span class="gu">@@ -99,7 +99,9 @@ class TinyDB(TableBase):</span>
+<span class="w"> </span>        :param name: The name of the table.
+<span class="w"> </span>        :param kwargs: Keyword arguments to pass to the table class constructor
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        try:</span>
-<span class="gi">+            self._now, _, _, event = heappop(self._queue)</span>
-<span class="gi">+        except IndexError:</span>
-<span class="gi">+            raise EmptySchedule()</span>
-<span class="gi">+</span>
-<span class="gi">+        # Process the event</span>
-<span class="gi">+        event._ok = True</span>
-<span class="gi">+        event._value = event._callback(event)</span>
-<span class="gi">+        event._processed = True</span>
-<span class="gi">+</span>
-<span class="gi">+        if isinstance(event, Process):</span>
-<span class="gi">+            self._active_proc = event</span>
-<span class="gi">+        else:</span>
-<span class="gi">+            self._active_proc = None</span>
+<span class="gi">+        if name not in self._tables:</span>
+<span class="gi">+            self._tables[name] = self.table_class(self._storage, name, **kwargs)</span>
+<span class="gi">+        return self._tables[name]</span>
 
-<span class="w"> </span>    def run(self, until: Optional[Union[SimTime, Event]]=None) -&gt;Optional[Any]:
-<span class="w"> </span>        &quot;&quot;&quot;Executes :meth:`step()` until the given criterion *until* is met.
-<span class="gu">@@ -151,4 +170,27 @@ class Environment:</span>
-<span class="w"> </span>          until the environment&#39;s time reaches *until*.
+<span class="w"> </span>    def tables(self) -&gt;Set[str]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -107,13 +109,14 @@ class TinyDB(TableBase):</span>
 
+<span class="w"> </span>        :returns: a set of table names
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        if until is None:</span>
-<span class="gi">+            while True:</span>
-<span class="gi">+                try:</span>
-<span class="gi">+                    self.step()</span>
-<span class="gi">+                except EmptySchedule:</span>
-<span class="gi">+                    return None</span>
-<span class="gi">+        elif isinstance(until, Event):</span>
-<span class="gi">+            until.callbacks.append(StopSimulation.callback)</span>
-<span class="gi">+            try:</span>
-<span class="gi">+                while not until.triggered:</span>
-<span class="gi">+                    self.step()</span>
-<span class="gi">+            except StopSimulation:</span>
-<span class="gi">+                return until.value</span>
-<span class="gi">+            except EmptySchedule:</span>
-<span class="gi">+                if not until.triggered:</span>
-<span class="gi">+                    raise RuntimeError(&#39;No scheduled events left but &quot;until&quot; event was not triggered&#39;)</span>
-<span class="gi">+        elif isinstance(until, (int, float)):</span>
-<span class="gi">+            try:</span>
-<span class="gi">+                while self._now &lt; until:</span>
-<span class="gi">+                    self.step()</span>
-<span class="gi">+            except EmptySchedule:</span>
-<span class="gi">+                return None</span>
-<span class="gi">+        else:</span>
-<span class="gi">+            raise ValueError(&#39;Invalid until parameter type&#39;)</span>
-<span class="gh">diff --git a/src/simpy/events.py b/src/simpy/events.py</span>
-<span class="gh">index 128ed75..2781b3f 100644</span>
-<span class="gd">--- a/src/simpy/events.py</span>
-<span class="gi">+++ b/src/simpy/events.py</span>
-<span class="gu">@@ -75,19 +75,19 @@ class Event:</span>
+<span class="gi">+        return set(self._storage.read().keys())</span>
 
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Event()*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return &#39;Event()&#39;</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def triggered(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;Becomes ``True`` if the event has been triggered and its callbacks
-<span class="w"> </span>        are about to be invoked.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._value is not PENDING</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def processed(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;Becomes ``True`` if the event has been processed (e.g., its
-<span class="w"> </span>        callbacks have been invoked).&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self.callbacks is None</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def ok(self) -&gt;bool:
-<span class="gu">@@ -98,7 +98,9 @@ class Event:</span>
-<span class="w"> </span>        :raises AttributeError: if accessed before the event is triggered.
-
+<span class="w"> </span>    def drop_tables(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Drop all tables from the database. **CANNOT BE REVERSED!**
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        if self._value is PENDING:</span>
-<span class="gi">+            raise AttributeError(&#39;Event has not yet been triggered&#39;)</span>
-<span class="gi">+        return self._ok</span>
+<span class="gi">+        self._storage.write({})</span>
+<span class="gi">+        self._tables.clear()</span>
 
-<span class="w"> </span>    @property
-<span class="w"> </span>    def defused(self) -&gt;bool:
-<span class="gu">@@ -115,7 +117,7 @@ class Event:</span>
-<span class="w"> </span>        processed by the :class:`~simpy.core.Environment`.
+<span class="w"> </span>    def drop_table(self, name: str) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -121,7 +124,13 @@ class TinyDB(TableBase):</span>
 
+<span class="w"> </span>        :param name: The name of the table to drop.
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        return self._defused</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def value(self) -&gt;Optional[Any]:
-<span class="gu">@@ -126,7 +128,9 @@ class Event:</span>
-<span class="w"> </span>        Raises :exc:`AttributeError` if the value is not yet available.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self._value is PENDING:</span>
-<span class="gi">+            raise AttributeError(&#39;Value not yet available&#39;)</span>
-<span class="gi">+        return self._value</span>
-
-<span class="w"> </span>    def trigger(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Trigger the event with the state and value of the provided *event*.
-<span class="gu">@@ -136,7 +140,10 @@ class Event:</span>
-<span class="w"> </span>        chain reactions.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        self._ok = event._ok</span>
-<span class="gi">+        self._value = event._value</span>
-<span class="gi">+        self._defused = event._defused</span>
-<span class="gi">+        self.env.schedule(self)</span>
-
-<span class="w"> </span>    def succeed(self, value: Optional[Any]=None) -&gt;Event:
-<span class="w"> </span>        &quot;&quot;&quot;Set the event&#39;s value, mark it as successful and schedule it for
-<span class="gu">@@ -145,7 +152,12 @@ class Event:</span>
-<span class="w"> </span>        Raises :exc:`RuntimeError` if this event has already been triggerd.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self._value is not PENDING:</span>
-<span class="gi">+            raise RuntimeError(&#39;Event has already been triggered&#39;)</span>
-<span class="gi">+        self._ok = True</span>
-<span class="gi">+        self._value = value</span>
-<span class="gi">+        self.env.schedule(self)</span>
-<span class="gi">+        return self</span>
-
-<span class="w"> </span>    def fail(self, exception: Exception) -&gt;Event:
-<span class="w"> </span>        &quot;&quot;&quot;Set *exception* as the events value, mark it as failed and schedule
-<span class="gu">@@ -156,7 +168,15 @@ class Event:</span>
-<span class="w"> </span>        Raises :exc:`RuntimeError` if this event has already been triggered.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not isinstance(exception, Exception):</span>
-<span class="gi">+            raise TypeError(&#39;exception must be an Exception instance&#39;)</span>
-<span class="gi">+        if self._value is not PENDING:</span>
-<span class="gi">+            raise RuntimeError(&#39;Event has already been triggered&#39;)</span>
-<span class="gi">+        self._ok = False</span>
-<span class="gi">+        self._value = exception</span>
-<span class="gi">+        self._defused = False</span>
-<span class="gi">+        self.env.schedule(self)</span>
-<span class="gi">+        return self</span>
-
-<span class="w"> </span>    def __and__(self, other: Event) -&gt;Condition:
-<span class="w"> </span>        &quot;&quot;&quot;Return a :class:`~simpy.events.Condition` that will be triggered if
-<span class="gu">@@ -197,7 +217,8 @@ class Timeout(Event):</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Timeout(delay[, value=value])*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        value_str = f&#39;, value={self._value!r}&#39; if self._value is not None else &#39;&#39;</span>
-<span class="gi">+        return f&#39;Timeout({self._delay}{value_str})&#39;</span>
-
-
-<span class="w"> </span>class Initialize(Event):
-<span class="gu">@@ -267,7 +288,7 @@ class Process(Event):</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Process(process_func_name)*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return f&#39;Process({self._generator.__name__})&#39;</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def target(self) -&gt;Event:
-<span class="gu">@@ -277,17 +298,17 @@ class Process(Event):</span>
-<span class="w"> </span>        interrupted.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._target</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def name(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Name of the function used to start the process.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._generator.__name__</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def is_alive(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;``True`` until the process generator exits.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._value is PENDING</span>
-
-<span class="w"> </span>    def interrupt(self, cause: Optional[Any]=None) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Interrupt this process optionally providing a *cause*.
-<span class="gu">@@ -297,7 +318,12 @@ class Process(Event):</span>
-<span class="w"> </span>        cases.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self.is_alive:</span>
-<span class="gi">+            raise RuntimeError(f&#39;{self} has terminated and cannot be interrupted.&#39;)</span>
-<span class="gi">+        if self is self.env.active_process:</span>
-<span class="gi">+            raise RuntimeError(&#39;A process is not allowed to interrupt itself.&#39;)</span>
+<span class="gi">+        if name in self._tables:</span>
+<span class="gi">+            del self._tables[name]</span>
 <span class="gi">+        </span>
-<span class="gi">+        Interruption(self, cause)</span>
+<span class="gi">+        data = self._storage.read()</span>
+<span class="gi">+        if name in data:</span>
+<span class="gi">+            del data[name]</span>
+<span class="gi">+            self._storage.write(data)</span>
 
-<span class="w"> </span>    def _resume(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Resumes the execution of the process with the value of *event*. If
-<span class="gu">@@ -383,16 +409,24 @@ class Condition(Event):</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Condition(evaluate, [events])*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return f&#39;Condition({self._evaluate.__name__}, {self._events})&#39;</span>
-
-<span class="w"> </span>    def _populate_value(self, value: ConditionValue) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Populate the *value* by recursively visiting all nested
-<span class="w"> </span>        conditions.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        for event in self._events:</span>
-<span class="gi">+            if isinstance(event, Condition):</span>
-<span class="gi">+                event._populate_value(value)</span>
-<span class="gi">+            elif event.callbacks is None:</span>
-<span class="gi">+                value.events.append(event)</span>
-
-<span class="w"> </span>    def _build_value(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Build the value of this condition.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self._ok:</span>
-<span class="gi">+            return</span>
-<span class="gi">+        value = ConditionValue()</span>
-<span class="gi">+        self._populate_value(value)</span>
-<span class="gi">+        self._value = value</span>
-
-<span class="w"> </span>    def _remove_check_callbacks(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Remove _check() callbacks from events recursively.
-<span class="gu">@@ -403,24 +437,36 @@ class Condition(Event):</span>
-<span class="w"> </span>        untriggered events.
-
+<span class="w"> </span>    @property
+<span class="w"> </span>    def storage(self) -&gt;Storage:
+<span class="gu">@@ -131,7 +140,7 @@ class TinyDB(TableBase):</span>
+<span class="w"> </span>        :return: This instance&#39;s storage
+<span class="w"> </span>        :rtype: Storage
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        for event in self._events:</span>
-<span class="gi">+            if event.callbacks and self._check in event.callbacks:</span>
-<span class="gi">+                event.callbacks.remove(self._check)</span>
-<span class="gi">+            if isinstance(event, Condition):</span>
-<span class="gi">+                event._remove_check_callbacks()</span>
+<span class="gi">+        return self._storage</span>
 
-<span class="w"> </span>    def _check(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Check if the condition was already met and schedule the *event* if
-<span class="w"> </span>        so.&quot;&quot;&quot;
+<span class="w"> </span>    def close(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -148,7 +157,8 @@ class TinyDB(TableBase):</span>
+
+<span class="w"> </span>        Upon leaving this context, the ``close`` method will be called.
+<span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        if self._value is not PENDING:</span>
+<span class="gi">+        self._storage.close()</span>
+<span class="gi">+        self._opened = False</span>
+
+<span class="w"> </span>    def __enter__(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gh">diff --git a/tinydb/middlewares.py b/tinydb/middlewares.py</span>
+<span class="gh">index 50c2af2..c978b1c 100644</span>
+<span class="gd">--- a/tinydb/middlewares.py</span>
+<span class="gi">+++ b/tinydb/middlewares.py</span>
+<span class="gu">@@ -84,8 +84,36 @@ class CachingMiddleware(Middleware):</span>
+<span class="w"> </span>        self.cache = None
+<span class="w"> </span>        self._cache_modified_count = 0
+
+<span class="gi">+    def read(self):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Read data from cache if available, otherwise read from storage.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if self.cache is None:</span>
+<span class="gi">+            self.cache = self.storage.read()</span>
+<span class="gi">+        return self.cache</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, data):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Write data to cache and increment the modified count.</span>
+<span class="gi">+        Flush to storage if the write cache size is reached.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self.cache = data</span>
+<span class="gi">+        self._cache_modified_count += 1</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self._cache_modified_count &gt;= self.WRITE_CACHE_SIZE:</span>
+<span class="gi">+            self.flush()</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def flush(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Flush all unwritten data to disk.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.cache is not None:</span>
+<span class="gi">+            self.storage.write(self.cache)</span>
+<span class="gi">+            self._cache_modified_count = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Flush the cache and close the storage.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self.flush()</span>
+<span class="gi">+        self.storage.close()</span>
+<span class="gh">diff --git a/tinydb/mypy_plugin.py b/tinydb/mypy_plugin.py</span>
+<span class="gh">index 5a0191a..08b3f83 100644</span>
+<span class="gd">--- a/tinydb/mypy_plugin.py</span>
+<span class="gi">+++ b/tinydb/mypy_plugin.py</span>
+<span class="gu">@@ -12,3 +12,28 @@ class TinyDBPlugin(Plugin):</span>
+<span class="w"> </span>    def __init__(self, options: Options):
+<span class="w"> </span>        super().__init__(options)
+<span class="w"> </span>        self.named_placeholders: Dict[str, str] = {}
+<span class="gi">+</span>
+<span class="gi">+    def get_dynamic_class_hook(self, fullname: str) -&gt; CB[DynamicClassDef]:</span>
+<span class="gi">+        if fullname == &#39;tinydb.utils.with_typehint&#39;:</span>
+<span class="gi">+            return self.with_typehint_callback</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    def with_typehint_callback(self, ctx: DynamicClassDef) -&gt; None:</span>
+<span class="gi">+        if len(ctx.call.args) != 1:</span>
+<span class="gi">+            ctx.api.fail(&quot;with_typehint() requires exactly one argument&quot;, ctx.call)</span>
 <span class="gi">+            return</span>
 <span class="gi">+</span>
-<span class="gi">+        self._count += 1</span>
+<span class="gi">+        arg = ctx.call.args[0]</span>
+<span class="gi">+        if not isinstance(arg, NameExpr):</span>
+<span class="gi">+            ctx.api.fail(&quot;with_typehint() argument must be a type&quot;, ctx.call)</span>
+<span class="gi">+            return</span>
 <span class="gi">+</span>
-<span class="gi">+        if self._evaluate(self._events, self._count):</span>
-<span class="gi">+            self._ok = True</span>
-<span class="gi">+            self.env.schedule(self)</span>
-<span class="gi">+            self._remove_check_callbacks()</span>
-
-<span class="w"> </span>    @staticmethod
-<span class="w"> </span>    def all_events(events: Tuple[Event, ...], count: int) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;An evaluation function that returns ``True`` if all *events* have
-<span class="w"> </span>        been triggered.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return len(events) == count</span>
-
-<span class="w"> </span>    @staticmethod
-<span class="w"> </span>    def any_events(events: Tuple[Event, ...], count: int) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;An evaluation function that returns ``True`` if at least one of
-<span class="w"> </span>        *events* has been triggered.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return count &gt; 0</span>
-
-
-<span class="w"> </span>class AllOf(Condition):
-<span class="gu">@@ -447,4 +493,7 @@ class AnyOf(Condition):</span>
-
-<span class="w"> </span>def _describe_frame(frame: FrameType) -&gt;str:
-<span class="w"> </span>    &quot;&quot;&quot;Print filename, line number and function name of a stack frame.&quot;&quot;&quot;
+<span class="gi">+        base_type = ctx.api.lookup_qualified(arg.fullname)</span>
+<span class="gi">+        if base_type is None:</span>
+<span class="gi">+            ctx.api.fail(f&quot;Cannot find type &#39;{arg.fullname}&#39;&quot;, ctx.call)</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        ctx.cls.info.bases = [base_type]</span>
+<span class="gi">+</span>
+<span class="gi">+def plugin(version: str):</span>
+<span class="gi">+    return TinyDBPlugin</span>
+<span class="gh">diff --git a/tinydb/operations.py b/tinydb/operations.py</span>
+<span class="gh">index fdfa678..833860e 100644</span>
+<span class="gd">--- a/tinydb/operations.py</span>
+<span class="gi">+++ b/tinydb/operations.py</span>
+<span class="gu">@@ -13,39 +13,62 @@ def delete(field):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Delete a given field from the document.
+<span class="w"> </span>    &quot;&quot;&quot;
 <span class="gd">-    pass</span>
-<span class="gi">+    filename = frame.f_code.co_filename</span>
-<span class="gi">+    lineno = frame.f_lineno</span>
-<span class="gi">+    funcname = frame.f_code.co_name</span>
-<span class="gi">+    return f&#39;{filename}:{lineno}, in {funcname}&#39;</span>
-<span class="gh">diff --git a/src/simpy/exceptions.py b/src/simpy/exceptions.py</span>
-<span class="gh">index d45300e..beef1b2 100644</span>
-<span class="gd">--- a/src/simpy/exceptions.py</span>
-<span class="gi">+++ b/src/simpy/exceptions.py</span>
-<span class="gu">@@ -31,4 +31,4 @@ class Interrupt(SimPyException):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def cause(self) -&gt;Optional[Any]:
-<span class="w"> </span>        &quot;&quot;&quot;The cause of the interrupt or ``None`` if no cause was provided.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self.args[0] if self.args else None</span>
-<span class="gh">diff --git a/src/simpy/resources/base.py b/src/simpy/resources/base.py</span>
-<span class="gh">index a7d0b96..ccedb56 100644</span>
-<span class="gd">--- a/src/simpy/resources/base.py</span>
-<span class="gi">+++ b/src/simpy/resources/base.py</span>
-<span class="gu">@@ -58,7 +58,8 @@ class Put(Event, ContextManager[&#39;Put&#39;], Generic[ResourceType]):</span>
-<span class="w"> </span>        method is called automatically.
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            del doc[field]</span>
+<span class="gi">+        return doc</span>
+<span class="gi">+    return transform</span>
 
+
+<span class="w"> </span>def add(field, n):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Add ``n`` to a given field in the document.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] += n</span>
+<span class="gi">+        return doc</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def subtract(field, n):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Subtract ``n`` to a given field in the document.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] -= n</span>
+<span class="gi">+        return doc</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def set(field, val):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Set a given field to ``val``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        doc[field] = val</span>
+<span class="gi">+        return doc</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def increment(field):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Increment a given field in the document by 1.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] += 1</span>
+<span class="gi">+        return doc</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def decrement(field):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Decrement a given field in the document by 1.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] -= 1</span>
+<span class="gi">+        return doc</span>
+<span class="gi">+    return transform</span>
+<span class="gh">diff --git a/tinydb/queries.py b/tinydb/queries.py</span>
+<span class="gh">index 0ad5c7e..9ec0435 100644</span>
+<span class="gd">--- a/tinydb/queries.py</span>
+<span class="gi">+++ b/tinydb/queries.py</span>
+<span class="gu">@@ -181,7 +181,21 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param hashval: The hash of the query.
+<span class="w"> </span>        :return: A :class:`~tinydb.queries.QueryInstance` object
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        if not self.triggered:</span>
-<span class="gi">+            self.resource.put_queue.remove(self)</span>
-
-
-<span class="w"> </span>class Get(Event, ContextManager[&#39;Get&#39;], Generic[ResourceType]):
-<span class="gu">@@ -104,7 +105,8 @@ class Get(Event, ContextManager[&#39;Get&#39;], Generic[ResourceType]):</span>
-<span class="w"> </span>        method is called automatically.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self.triggered:</span>
-<span class="gi">+            self.resource.get_queue.remove(self)</span>
-
-
-<span class="w"> </span>PutType = TypeVar(&#39;PutType&#39;, bound=Put)
-<span class="gu">@@ -152,7 +154,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def capacity(self) -&gt;Union[float, int]:
-<span class="w"> </span>        &quot;&quot;&quot;Maximum capacity of the resource.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._capacity</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def put(self) -&gt;Put:
-<span class="gu">@@ -181,7 +183,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        :attr:`put_queue`, as long as the return value does not evaluate
-<span class="w"> </span>        ``False``.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        raise NotImplementedError(&quot;The _do_put() method has to be implemented by subclasses.&quot;)</span>
-
-<span class="w"> </span>    def _trigger_put(self, get_event: Optional[GetType]) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;This method is called once a new put event has been created or a get
-<span class="gu">@@ -191,7 +193,12 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        calls :meth:`_do_put` to check if the conditions for the event are met.
-<span class="w"> </span>        If :meth:`_do_put` returns ``False``, the iteration is stopped early.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        idx = 0</span>
-<span class="gi">+        while idx &lt; len(self.put_queue):</span>
-<span class="gi">+            put_event = self.put_queue[idx]</span>
-<span class="gi">+            if not self._do_put(put_event):</span>
-<span class="gi">+                break</span>
-<span class="gi">+            idx += 1</span>
-
-<span class="w"> </span>    def _do_get(self, event: GetType) -&gt;Optional[bool]:
-<span class="w"> </span>        &quot;&quot;&quot;Perform the *get* operation.
-<span class="gu">@@ -204,7 +211,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        :attr:`get_queue`, as long as the return value does not evaluate
-<span class="w"> </span>        ``False``.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        raise NotImplementedError(&quot;The _do_get() method has to be implemented by subclasses.&quot;)</span>
-
-<span class="w"> </span>    def _trigger_get(self, put_event: Optional[PutType]) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Trigger get events.
-<span class="gu">@@ -216,4 +223,9 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        calls :meth:`_do_get` to check if the conditions for the event are met.
-<span class="w"> </span>        If :meth:`_do_get` returns ``False``, the iteration is stopped early.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        idx = 0</span>
-<span class="gi">+        while idx &lt; len(self.get_queue):</span>
-<span class="gi">+            get_event = self.get_queue[idx]</span>
-<span class="gi">+            if not self._do_get(get_event):</span>
-<span class="gi">+                break</span>
-<span class="gi">+            idx += 1</span>
-<span class="gh">diff --git a/src/simpy/resources/container.py b/src/simpy/resources/container.py</span>
-<span class="gh">index 00aa6de..fe7bce5 100644</span>
-<span class="gd">--- a/src/simpy/resources/container.py</span>
-<span class="gi">+++ b/src/simpy/resources/container.py</span>
-<span class="gu">@@ -77,16 +77,16 @@ class Container(base.BaseResource):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def level(self) -&gt;ContainerAmount:
-<span class="w"> </span>        &quot;&quot;&quot;The current amount of the matter in the container.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._level</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def put(self, amount: ContainerAmount) -&gt;ContainerPut:
-<span class="w"> </span>            &quot;&quot;&quot;Request to put *amount* of matter into the container.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return ContainerPut(self, amount)</span>
-
-<span class="w"> </span>        def get(self, amount: ContainerAmount) -&gt;ContainerGet:
-<span class="w"> </span>            &quot;&quot;&quot;Request to get *amount* of matter out of the container.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return ContainerGet(self, amount)</span>
-<span class="w"> </span>    else:
-<span class="w"> </span>        put = BoundClass(ContainerPut)
-<span class="w"> </span>        get = BoundClass(ContainerGet)
-<span class="gh">diff --git a/src/simpy/resources/resource.py b/src/simpy/resources/resource.py</span>
-<span class="gh">index 2c4f6dd..fa35618 100644</span>
-<span class="gd">--- a/src/simpy/resources/resource.py</span>
-<span class="gi">+++ b/src/simpy/resources/resource.py</span>
-<span class="gu">@@ -70,6 +70,15 @@ class Request(base.Put):</span>
-<span class="w"> </span>    resource: Resource
-<span class="w"> </span>    usage_since: Optional[SimTime] = None
-
-<span class="gi">+    def __init__(self, resource: Resource):</span>
-<span class="gi">+        super().__init__(resource)</span>
-<span class="gi">+        self.resource = resource</span>
-<span class="gi">+        self.usage_since = None</span>
+<span class="gi">+        if not self._path and not allow_empty_path:</span>
+<span class="gi">+            raise RuntimeError(&#39;Query has no path&#39;)</span>
 <span class="gi">+</span>
-<span class="gi">+    def __enter__(self):</span>
-<span class="gi">+        self.usage_since = self.env.now</span>
-<span class="gi">+        return self</span>
+<span class="gi">+        def runner(value):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                for part in self._path:</span>
+<span class="gi">+                    if isinstance(part, Callable):</span>
+<span class="gi">+                        value = part(value)</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        value = value[part]</span>
+<span class="gi">+                return test(value)</span>
+<span class="gi">+            except (KeyError, TypeError, ValueError):</span>
+<span class="gi">+                return False</span>
 <span class="gi">+</span>
-<span class="w"> </span>    def __exit__(self, exc_type: Optional[Type[BaseException]], exc_value:
-<span class="w"> </span>        Optional[BaseException], traceback: Optional[TracebackType]
-<span class="w"> </span>        ) -&gt;Optional[bool]:
-<span class="gu">@@ -90,6 +99,13 @@ class Release(base.Get):</span>
-<span class="w"> </span>        &quot;&quot;&quot;The request (:class:`Request`) that is to be released.&quot;&quot;&quot;
-<span class="w"> </span>        super().__init__(resource)
+<span class="gi">+        return QueryInstance(runner, hashval)</span>
 
-<span class="gi">+    def __call__(self):</span>
-<span class="gi">+        if self.request in self.resource.users:</span>
-<span class="gi">+            self.resource.users.remove(self.request)</span>
-<span class="gi">+            self.succeed()</span>
+<span class="w"> </span>    def __eq__(self, rhs: Any):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -255,7 +269,7 @@ class Query(QueryInstance):</span>
+
+<span class="w"> </span>        &gt;&gt;&gt; Query().f1.exists()
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(lambda _: True, (&#39;exists&#39;, self._path))</span>
+
+<span class="w"> </span>    def matches(self, regex: str, flags: int=0) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -266,7 +280,10 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param regex: The regular expression to use for matching
+<span class="w"> </span>        :param flags: regex flags to pass to ``re.match``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(</span>
+<span class="gi">+            lambda value: re.match(regex, value, flags) is not None,</span>
+<span class="gi">+            (&#39;matches&#39;, self._path, regex, flags)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def search(self, regex: str, flags: int=0) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -278,7 +295,10 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param regex: The regular expression to use for matching
+<span class="w"> </span>        :param flags: regex flags to pass to ``re.match``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(</span>
+<span class="gi">+            lambda value: re.search(regex, value, flags) is not None,</span>
+<span class="gi">+            (&#39;search&#39;, self._path, regex, flags)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def test(self, func: Callable[[Mapping], bool], *args) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -300,7 +320,10 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>                     argument
+<span class="w"> </span>        :param args: Additional arguments to pass to the test function
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(</span>
+<span class="gi">+            lambda value: func(value, *args),</span>
+<span class="gi">+            (&#39;test&#39;, self._path, func, args)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def any(self, cond: Union[QueryInstance, List[Any]]) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -324,7 +347,14 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>                     a list of which at least one document has to be contained
+<span class="w"> </span>                     in the tested document.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(cond, QueryInstance):</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return any(cond(item) for item in value)</span>
 <span class="gi">+        else:</span>
-<span class="gi">+            self.fail(ValueError(&quot;This request is not in the resource&#39;s users.&quot;))</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return any(item in cond for item in value)</span>
 <span class="gi">+</span>
+<span class="gi">+        return self._generate_test(test, (&#39;any&#39;, self._path, freeze(cond)))</span>
 
-<span class="w"> </span>class PriorityRequest(Request):
-<span class="w"> </span>    &quot;&quot;&quot;Request the usage of *resource* with a given *priority*. If the
-<span class="gu">@@ -138,7 +154,10 @@ class SortedQueue(list):</span>
-<span class="w"> </span>        Raise a :exc:`RuntimeError` if the queue is full.
-
+<span class="w"> </span>    def all(self, cond: Union[&#39;QueryInstance&#39;, List[Any]]) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -346,7 +376,14 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param cond: Either a query that all documents have to match or a list
+<span class="w"> </span>                     which has to be contained in the tested document.
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        if self.maxlen is not None and len(self) &gt;= self.maxlen:</span>
-<span class="gi">+            raise RuntimeError(&quot;Queue is full&quot;)</span>
-<span class="gi">+        super().append(item)</span>
-<span class="gi">+        self.sort(key=lambda x: x.key)</span>
+<span class="gi">+        if isinstance(cond, QueryInstance):</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return all(cond(item) for item in value)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return all(item in value for item in cond)</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._generate_test(test, (&#39;all&#39;, self._path, freeze(cond)))</span>
 
+<span class="w"> </span>    def one_of(self, items: List[Any]) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -356,7 +393,8 @@ class Query(QueryInstance):</span>
 
-<span class="w"> </span>class Resource(base.BaseResource):
-<span class="gu">@@ -168,7 +187,7 @@ class Resource(base.BaseResource):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def count(self) -&gt;int:
-<span class="w"> </span>        &quot;&quot;&quot;Number of users currently using the resource.&quot;&quot;&quot;
+<span class="w"> </span>        :param items: The list of items to check with
+<span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        return len(self.users)</span>
-<span class="w"> </span>    if TYPE_CHECKING:
+<span class="gi">+        return self._generate_test(lambda value: value in items,</span>
+<span class="gi">+                                   (&#39;one_of&#39;, self._path, freeze(items)))</span>
 
-<span class="w"> </span>        def request(self) -&gt;Request:
-<span class="gh">diff --git a/src/simpy/resources/store.py b/src/simpy/resources/store.py</span>
-<span class="gh">index 5875e6d..379e325 100644</span>
-<span class="gd">--- a/src/simpy/resources/store.py</span>
-<span class="gi">+++ b/src/simpy/resources/store.py</span>
-<span class="gu">@@ -73,11 +73,11 @@ class Store(base.BaseResource):</span>
+<span class="w"> </span>    def noop(self) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -364,18 +402,21 @@ class Query(QueryInstance):</span>
 
-<span class="w"> </span>        def put(self, item: Any) -&gt;StorePut:
-<span class="w"> </span>            &quot;&quot;&quot;Request to put *item* into the store.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return StorePut(self, item)</span>
+<span class="w"> </span>        Useful for having a base value when composing queries dynamically.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(lambda _: True, (&#39;noop&#39;,), allow_empty_path=True)</span>
 
-<span class="w"> </span>        def get(self) -&gt;StoreGet:
-<span class="w"> </span>            &quot;&quot;&quot;Request to get an *item* out of the store.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return StoreGet(self)</span>
-<span class="w"> </span>    else:
-<span class="w"> </span>        put = BoundClass(StorePut)
-<span class="w"> </span>        get = BoundClass(StoreGet)
-<span class="gu">@@ -111,6 +111,31 @@ class PriorityStore(Store):</span>
+<span class="w"> </span>    def map(self, fn: Callable[[Any], Any]) -&gt;&#39;Query&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Add a function to the query path. Similar to __getattr__ but for
+<span class="w"> </span>        arbitrary functions.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        query = type(self)()</span>
+<span class="gi">+        query._path = self._path + (fn,)</span>
+<span class="gi">+        query._hash = (&#39;path&#39;, query._path) if self.is_cacheable() else None</span>
+<span class="gi">+        return query</span>
 
+
+<span class="w"> </span>def where(key: str) -&gt;Query:
 <span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    A shorthand for ``Query()[key]``
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return Query()[key]</span>
+<span class="gh">diff --git a/tinydb/storages.py b/tinydb/storages.py</span>
+<span class="gh">index 0ddc223..16bfa7a 100644</span>
+<span class="gd">--- a/tinydb/storages.py</span>
+<span class="gi">+++ b/tinydb/storages.py</span>
+<span class="gu">@@ -18,7 +18,12 @@ def touch(path: str, create_dirs: bool):</span>
+<span class="w"> </span>    :param path: The file to create.
+<span class="w"> </span>    :param create_dirs: Whether to create all missing parent directories.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if create_dirs:</span>
+<span class="gi">+        os.makedirs(os.path.dirname(path), exist_ok=True)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if not os.path.exists(path):</span>
+<span class="gi">+        with open(path, &#39;a&#39;):</span>
+<span class="gi">+            os.utime(path, None)</span>
 
-<span class="gi">+    def __init__(self, env: Environment, capacity: Union[float, int]=float(&#39;inf&#39;)):</span>
-<span class="gi">+        super().__init__(env, capacity)</span>
-<span class="gi">+        self.items = []  # Use a list as a heap</span>
-<span class="gi">+</span>
-<span class="gi">+    if TYPE_CHECKING:</span>
-<span class="gi">+        def put(self, item: Any) -&gt; StorePut:</span>
-<span class="gi">+            &quot;&quot;&quot;Request to put *item* into the store.&quot;&quot;&quot;</span>
-<span class="gi">+            return StorePut(self, item)</span>
-<span class="gi">+</span>
-<span class="gi">+        def get(self) -&gt; StoreGet:</span>
-<span class="gi">+            &quot;&quot;&quot;Request to get the highest priority *item* from the store.&quot;&quot;&quot;</span>
-<span class="gi">+            return StoreGet(self)</span>
-<span class="gi">+    else:</span>
-<span class="gi">+        put = BoundClass(StorePut)</span>
-<span class="gi">+        get = BoundClass(StoreGet)</span>
-<span class="gi">+</span>
-<span class="gi">+    def _do_put(self, event: StorePut) -&gt; None:</span>
-<span class="gi">+        if len(self.items) &lt; self.capacity:</span>
-<span class="gi">+            heappush(self.items, event.item)</span>
-<span class="gi">+            event.succeed()</span>
-<span class="gi">+</span>
-<span class="gi">+    def _do_get(self, event: StoreGet) -&gt; None:</span>
-<span class="gi">+        if self.items:</span>
-<span class="gi">+            event.succeed(heappop(self.items))</span>
-<span class="gi">+</span>
 
-<span class="w"> </span>class FilterStore(Store):
-<span class="w"> </span>    &quot;&quot;&quot;Resource with *capacity* slots for storing arbitrary objects supporting
-<span class="gu">@@ -139,6 +164,13 @@ class FilterStore(Store):</span>
-<span class="w"> </span>            ) -&gt;FilterStoreGet:
-<span class="w"> </span>            &quot;&quot;&quot;Request to get an *item*, for which *filter* returns ``True``,
-<span class="w"> </span>            out of the store.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return FilterStoreGet(self, filter)</span>
-<span class="w"> </span>    else:
-<span class="w"> </span>        get = BoundClass(FilterStoreGet)
-<span class="gi">+</span>
-<span class="gi">+    def _do_get(self, event: FilterStoreGet) -&gt; None:</span>
-<span class="gi">+        for item in self.items:</span>
-<span class="gi">+            if event.filter(item):</span>
-<span class="gi">+                self.items.remove(item)</span>
-<span class="gi">+                event.succeed(item)</span>
-<span class="gi">+                break</span>
-<span class="gh">diff --git a/src/simpy/rt.py b/src/simpy/rt.py</span>
-<span class="gh">index 9d99392..e3c068c 100644</span>
-<span class="gd">--- a/src/simpy/rt.py</span>
-<span class="gi">+++ b/src/simpy/rt.py</span>
-<span class="gu">@@ -31,14 +31,14 @@ class RealtimeEnvironment(Environment):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def factor(self) -&gt;float:
-<span class="w"> </span>        &quot;&quot;&quot;Scaling factor of the real-time.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._factor</span>
+<span class="w"> </span>class Storage(ABC):
+<span class="gu">@@ -38,7 +43,7 @@ class Storage(ABC):</span>
 
-<span class="w"> </span>    @property
-<span class="w"> </span>    def strict(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;Running mode of the environment. :meth:`step()` will raise a
-<span class="w"> </span>        :exc:`RuntimeError` if this is set to ``True`` and the processing of
-<span class="w"> </span>        events takes too long.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._strict</span>
-
-<span class="w"> </span>    def sync(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Synchronize the internal time with the current wall-clock time.
-<span class="gu">@@ -48,7 +48,8 @@ class RealtimeEnvironment(Environment):</span>
-<span class="w"> </span>        calling :meth:`run()` or :meth:`step()`.
-
+<span class="w"> </span>        Return ``None`` here to indicate that the storage is empty.
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        self.real_start = monotonic()</span>
-<span class="gi">+        self.env_start = self._now</span>
+<span class="gi">+        raise NotImplementedError</span>
 
-<span class="w"> </span>    def step(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Process the next event after enough real-time has passed for the
-<span class="gu">@@ -59,4 +60,17 @@ class RealtimeEnvironment(Environment):</span>
-<span class="w"> </span>        the event is processed too slowly.
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def write(self, data: Dict[str, Dict[str, Any]]) -&gt;None:
+<span class="gu">@@ -49,7 +54,7 @@ class Storage(ABC):</span>
 
+<span class="w"> </span>        :param data: The current state of the database.
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    def close(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -88,6 +93,40 @@ class JSONStorage(Storage):</span>
+<span class="w"> </span>        if any([(character in self._mode) for character in (&#39;+&#39;, &#39;w&#39;, &#39;a&#39;)]):
+<span class="w"> </span>            touch(path, create_dirs=create_dirs)
+<span class="w"> </span>        self._handle = open(path, mode=self._mode, encoding=encoding)
+<span class="gi">+        self.path = path</span>
+<span class="gi">+        self.encoding = encoding</span>
+<span class="gi">+</span>
+<span class="gi">+    def read(self) -&gt;Optional[Dict[str, Dict[str, Any]]]:</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Read the current state.</span>
+<span class="gi">+</span>
+<span class="gi">+        Any kind of deserialization should go here.</span>
+<span class="gi">+</span>
+<span class="gi">+        Return ``None`` here to indicate that the storage is empty.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self._handle.seek(0)</span>
 <span class="gi">+        try:</span>
-<span class="gi">+            evt_time = self.peek()</span>
-<span class="gi">+        except EmptySchedule:</span>
-<span class="gi">+            return</span>
+<span class="gi">+            return json.load(self._handle)</span>
+<span class="gi">+        except json.JSONDecodeError:</span>
+<span class="gi">+            return None</span>
 <span class="gi">+</span>
-<span class="gi">+        real_time = monotonic()</span>
-<span class="gi">+        expected_real_time = self.real_start + (evt_time - self.env_start) / self._factor</span>
+<span class="gi">+    def write(self, data: Dict[str, Dict[str, Any]]) -&gt;None:</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Write the current state of the database to the storage.</span>
 <span class="gi">+</span>
-<span class="gi">+        if real_time &lt; expected_real_time:</span>
-<span class="gi">+            sleep(expected_real_time - real_time)</span>
-<span class="gi">+        elif self._strict and real_time &gt; expected_real_time:</span>
-<span class="gi">+            raise RuntimeError(f&#39;Simulation too slow: {real_time - expected_real_time:.3f} seconds late&#39;)</span>
+<span class="gi">+        Any kind of serialization should go here.</span>
 <span class="gi">+</span>
-<span class="gi">+        super().step()</span>
-<span class="gh">diff --git a/src/simpy/util.py b/src/simpy/util.py</span>
-<span class="gh">index 5e3a81a..bb287ec 100644</span>
-<span class="gd">--- a/src/simpy/util.py</span>
-<span class="gi">+++ b/src/simpy/util.py</span>
-<span class="gu">@@ -33,7 +33,14 @@ def start_delayed(env: Environment, generator: ProcessGenerator, delay: SimTime</span>
-<span class="w"> </span>    Raise a :exc:`ValueError` if ``delay &lt;= 0``.
+<span class="gi">+        :param data: The current state of the database.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self._handle.seek(0)</span>
+<span class="gi">+        json.dump(data, self._handle, **self.kwargs)</span>
+<span class="gi">+        self._handle.truncate()</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self) -&gt;None:</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Close open file handles.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self._handle.close()</span>
 
+
+<span class="w"> </span>class MemoryStorage(Storage):
+<span class="gu">@@ -101,3 +140,25 @@ class MemoryStorage(Storage):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        super().__init__()
+<span class="w"> </span>        self.memory = None
+<span class="gi">+</span>
+<span class="gi">+    def read(self) -&gt;Optional[Dict[str, Dict[str, Any]]]:</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Read the current state from memory.</span>
+<span class="gi">+</span>
+<span class="gi">+        Return ``None`` here to indicate that the storage is empty.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        return self.memory</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, data: Dict[str, Dict[str, Any]]) -&gt;None:</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Write the current state of the database to memory.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param data: The current state of the database.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self.memory = data</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self) -&gt;None:</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Clear the memory.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self.memory = None</span>
+<span class="gh">diff --git a/tinydb/table.py b/tinydb/table.py</span>
+<span class="gh">index 48eea63..1e85fff 100644</span>
+<span class="gd">--- a/tinydb/table.py</span>
+<span class="gi">+++ b/tinydb/table.py</span>
+<span class="gu">@@ -85,14 +85,14 @@ class Table:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Get the table name.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._name</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def storage(self) -&gt;Storage:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Get the table storage instance.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._storage</span>
+
+<span class="w"> </span>    def insert(self, document: Mapping) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -101,7 +101,10 @@ class Table:</span>
+<span class="w"> </span>        :param document: the document to insert
+<span class="w"> </span>        :returns: the inserted document&#39;s ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        doc_id = self._get_next_id()</span>
+<span class="gi">+        self._update_table(lambda table: table.update({doc_id: document}))</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return doc_id</span>
+
+<span class="w"> </span>    def insert_multiple(self, documents: Iterable[Mapping]) -&gt;List[int]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -110,7 +113,15 @@ class Table:</span>
+<span class="w"> </span>        :param documents: an Iterable of documents to insert
+<span class="w"> </span>        :returns: a list containing the inserted documents&#39; IDs
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        doc_ids = []</span>
+<span class="gi">+        def updater(table):</span>
+<span class="gi">+            for document in documents:</span>
+<span class="gi">+                doc_id = self._get_next_id()</span>
+<span class="gi">+                table[doc_id] = document</span>
+<span class="gi">+                doc_ids.append(doc_id)</span>
+<span class="gi">+        self._update_table(updater)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return doc_ids</span>
+
+<span class="w"> </span>    def all(self) -&gt;List[Document]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -118,7 +129,8 @@ class Table:</span>
+
+<span class="w"> </span>        :returns: a list with all documents.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return [self.document_class(doc, self.document_id_class(doc_id))</span>
+<span class="gi">+                for doc_id, doc in self._read_table().items()]</span>
+
+<span class="w"> </span>    def search(self, cond: QueryLike) -&gt;List[Document]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -127,7 +139,12 @@ class Table:</span>
+<span class="w"> </span>        :param cond: the condition to check against
+<span class="w"> </span>        :returns: list of matching documents
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if cond in self._query_cache:</span>
+<span class="gi">+            return self._query_cache[cond]</span>
+<span class="gi">+</span>
+<span class="gi">+        docs = [doc for doc in self.all() if cond(doc)]</span>
+<span class="gi">+        self._query_cache[cond] = docs</span>
+<span class="gi">+        return docs</span>
+
+<span class="w"> </span>    def get(self, cond: Optional[QueryLike]=None, doc_id: Optional[int]=
+<span class="w"> </span>        None, doc_ids: Optional[List]=None) -&gt;Optional[Union[Document, List
+<span class="gu">@@ -145,7 +162,25 @@ class Table:</span>
+
+<span class="w"> </span>        :returns: the document(s) or ``None``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if doc_id is not None:</span>
+<span class="gi">+            table = self._read_table()</span>
+<span class="gi">+            if doc_id in table:</span>
+<span class="gi">+                return self.document_class(table[doc_id], self.document_id_class(doc_id))</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        </span>
+<span class="gi">+        if doc_ids is not None:</span>
+<span class="gi">+            docs = []</span>
+<span class="gi">+            table = self._read_table()</span>
+<span class="gi">+            for id in doc_ids:</span>
+<span class="gi">+                if id in table:</span>
+<span class="gi">+                    docs.append(self.document_class(table[id], self.document_id_class(id)))</span>
+<span class="gi">+            return docs if docs else None</span>
+<span class="gi">+        </span>
+<span class="gi">+        if cond is not None:</span>
+<span class="gi">+            docs = self.search(cond)</span>
+<span class="gi">+            return docs[0] if docs else None</span>
+<span class="gi">+        </span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def contains(self, cond: Optional[QueryLike]=None, doc_id: Optional[int
+<span class="w"> </span>        ]=None) -&gt;bool:
+<span class="gu">@@ -158,7 +193,10 @@ class Table:</span>
+<span class="w"> </span>        :param cond: the condition use
+<span class="w"> </span>        :param doc_id: the document ID to look for
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if doc_id is not None:</span>
+<span class="gi">+            return doc_id in self._read_table()</span>
+<span class="gi">+        </span>
+<span class="gi">+        return bool(self.search(cond)) if cond is not None else False</span>
+
+<span class="w"> </span>    def update(self, fields: Union[Mapping, Callable[[Mapping], None]],
+<span class="w"> </span>        cond: Optional[QueryLike]=None, doc_ids: Optional[Iterable[int]]=None
+<span class="gu">@@ -172,7 +210,21 @@ class Table:</span>
+<span class="w"> </span>        :param doc_ids: a list of document IDs
+<span class="w"> </span>        :returns: a list containing the updated document&#39;s ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        updated_ids = []</span>
+<span class="gi">+</span>
+<span class="gi">+        def updater(table):</span>
+<span class="gi">+            nonlocal updated_ids</span>
+<span class="gi">+            for doc_id, doc in table.items():</span>
+<span class="gi">+                if (doc_ids is None or doc_id in doc_ids) and (cond is None or cond(doc)):</span>
+<span class="gi">+                    if callable(fields):</span>
+<span class="gi">+                        fields(doc)</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        doc.update(fields)</span>
+<span class="gi">+                    updated_ids.append(doc_id)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._update_table(updater)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return updated_ids</span>
+
+<span class="w"> </span>    def update_multiple(self, updates: Iterable[Tuple[Union[Mapping,
+<span class="w"> </span>        Callable[[Mapping], None]], QueryLike]]) -&gt;List[int]:
+<span class="gu">@@ -181,7 +233,10 @@ class Table:</span>
+
+<span class="w"> </span>        :returns: a list containing the updated document&#39;s ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        updated_ids = []</span>
+<span class="gi">+        for fields, cond in updates:</span>
+<span class="gi">+            updated_ids.extend(self.update(fields, cond))</span>
+<span class="gi">+        return updated_ids</span>
+
+<span class="w"> </span>    def upsert(self, document: Mapping, cond: Optional[QueryLike]=None) -&gt;List[
+<span class="w"> </span>        int]:
+<span class="gu">@@ -197,7 +252,19 @@ class Table:</span>
+<span class="w"> </span>        Document with a doc_id
+<span class="w"> </span>        :returns: a list containing the updated documents&#39; IDs
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(document, Document):</span>
+<span class="gi">+            doc_id = document.doc_id</span>
+<span class="gi">+            document = dict(document)</span>
+<span class="gi">+            del document[&#39;doc_id&#39;]</span>
+<span class="gi">+            cond = Query().doc_id == doc_id</span>
+<span class="gi">+</span>
+<span class="gi">+        if cond is None:</span>
+<span class="gi">+            return [self.insert(document)]</span>
+<span class="gi">+        </span>
+<span class="gi">+        updated = self.update(document, cond)</span>
+<span class="gi">+        if not updated:</span>
+<span class="gi">+            return [self.insert(document)]</span>
+<span class="gi">+        return updated</span>
+
+<span class="w"> </span>    def remove(self, cond: Optional[QueryLike]=None, doc_ids: Optional[
+<span class="w"> </span>        Iterable[int]]=None) -&gt;List[int]:
+<span class="gu">@@ -208,13 +275,31 @@ class Table:</span>
+<span class="w"> </span>        :param doc_ids: a list of document IDs
+<span class="w"> </span>        :returns: a list containing the removed documents&#39; ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        removed = []</span>
+<span class="gi">+</span>
+<span class="gi">+        def remover(table):</span>
+<span class="gi">+            nonlocal removed</span>
+<span class="gi">+            if doc_ids is not None:</span>
+<span class="gi">+                for doc_id in doc_ids:</span>
+<span class="gi">+                    if doc_id in table:</span>
+<span class="gi">+                        del table[doc_id]</span>
+<span class="gi">+                        removed.append(doc_id)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                for doc_id, doc in list(table.items()):</span>
+<span class="gi">+                    if cond is None or cond(doc):</span>
+<span class="gi">+                        del table[doc_id]</span>
+<span class="gi">+                        removed.append(doc_id)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._update_table(remover)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return removed</span>
+
+<span class="w"> </span>    def truncate(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Truncate the table by removing all documents.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._update_table(lambda table: table.clear())</span>
+<span class="gi">+        self.clear_cache()</span>
+
+<span class="w"> </span>    def count(self, cond: QueryLike) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -222,13 +307,13 @@ class Table:</span>
+
+<span class="w"> </span>        :param cond: the condition use
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return len(self.search(cond))</span>
+
+<span class="w"> </span>    def clear_cache(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Clear the query cache.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._query_cache.clear()</span>
+
+<span class="w"> </span>    def __len__(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -249,7 +334,11 @@ class Table:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Return the ID for a newly inserted document.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._next_id is None:</span>
+<span class="gi">+            self._next_id = max(self._read_table().keys() or [0]) + 1</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._next_id += 1</span>
+<span class="gi">+        return self._next_id</span>
+
+<span class="w"> </span>    def _read_table(self) -&gt;Dict[str, Mapping]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -259,7 +348,7 @@ class Table:</span>
+<span class="w"> </span>        we may not want to convert *all* documents when returning
+<span class="w"> </span>        only one document for example.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._storage.read() or {}</span>
+
+<span class="w"> </span>    def _update_table(self, updater: Callable[[Dict[int, Mapping]], None]):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -274,4 +363,6 @@ class Table:</span>
+<span class="w"> </span>        As a further optimization, we don&#39;t convert the documents into the
+<span class="w"> </span>        document class, as the table data will *not* be returned to the user.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        data = self._read_table()</span>
+<span class="gi">+        updater(data)</span>
+<span class="gi">+        self._storage.write(data)</span>
+<span class="gh">diff --git a/tinydb/utils.py b/tinydb/utils.py</span>
+<span class="gh">index 0721622..9957b9e 100644</span>
+<span class="gd">--- a/tinydb/utils.py</span>
+<span class="gi">+++ b/tinydb/utils.py</span>
+<span class="gu">@@ -23,7 +23,8 @@ def with_typehint(baseclass: Type[T]):</span>
+<span class="w"> </span>    MyPy does not. For that reason TinyDB has a MyPy plugin in
+<span class="w"> </span>    ``mypy_plugin.py`` that adds support for this pattern.
 <span class="w"> </span>    &quot;&quot;&quot;
 <span class="gd">-    pass</span>
-<span class="gi">+    if delay &lt;= 0:</span>
-<span class="gi">+        raise ValueError(&quot;delay must be &gt; 0&quot;)</span>
-<span class="gi">+    </span>
-<span class="gi">+    def delayed_process():</span>
-<span class="gi">+        yield env.timeout(delay)</span>
-<span class="gi">+        yield from generator</span>
+<span class="gi">+    # The actual implementation is handled by the MyPy plugin in mypy_plugin.py</span>
+<span class="gi">+    return baseclass</span>
+
+
+<span class="w"> </span>class LRUCache(abc.MutableMapping, Generic[K, V]):
+<span class="gu">@@ -45,26 +46,40 @@ class LRUCache(abc.MutableMapping, Generic[K, V]):</span>
+<span class="w"> </span>        self.cache: OrderedDict[K, V] = OrderedDict()
+
+<span class="w"> </span>    def __len__(self) -&gt;int:
+<span class="gd">-        return self.length</span>
+<span class="gi">+        return len(self.cache)</span>
+
+<span class="w"> </span>    def __contains__(self, key: object) -&gt;bool:
+<span class="w"> </span>        return key in self.cache
+
+<span class="w"> </span>    def __setitem__(self, key: K, value: V) -&gt;None:
+<span class="gd">-        self.set(key, value)</span>
+<span class="gi">+        if key in self.cache:</span>
+<span class="gi">+            del self.cache[key]</span>
+<span class="gi">+        elif len(self.cache) &gt;= self.capacity:</span>
+<span class="gi">+            self.cache.popitem(last=False)</span>
+<span class="gi">+        self.cache[key] = value</span>
+
+<span class="w"> </span>    def __delitem__(self, key: K) -&gt;None:
+<span class="w"> </span>        del self.cache[key]
+
+<span class="gd">-    def __getitem__(self, key) -&gt;V:</span>
+<span class="gd">-        value = self.get(key)</span>
+<span class="gd">-        if value is None:</span>
+<span class="gi">+    def __getitem__(self, key: K) -&gt;V:</span>
+<span class="gi">+        if key not in self.cache:</span>
+<span class="w"> </span>            raise KeyError(key)
+<span class="gi">+        value = self.cache.pop(key)</span>
+<span class="gi">+        self.cache[key] = value</span>
+<span class="w"> </span>        return value
+
+<span class="w"> </span>    def __iter__(self) -&gt;Iterator[K]:
+<span class="w"> </span>        return iter(self.cache)
+
+<span class="gi">+    def get(self, key: K, default: Optional[D] = None) -&gt; Union[V, D, None]:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self[key]</span>
+<span class="gi">+        except KeyError:</span>
+<span class="gi">+            return default</span>
 <span class="gi">+</span>
-<span class="gi">+    return env.process(delayed_process())</span>
+<span class="gi">+    def set(self, key: K, value: V) -&gt; None:</span>
+<span class="gi">+        self[key] = value</span>
+<span class="gi">+</span>
 
-
-<span class="w"> </span>def subscribe_at(event: Event) -&gt;None:
-<span class="gu">@@ -45,4 +52,11 @@ def subscribe_at(event: Event) -&gt;None:</span>
-<span class="w"> </span>    Raise a :exc:`RuntimeError` if ``event`` has already occurred.
-
+<span class="w"> </span>class FrozenDict(dict):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -88,4 +103,10 @@ def freeze(obj):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Freeze an object by making it immutable and thus hashable.
 <span class="w"> </span>    &quot;&quot;&quot;
 <span class="gd">-    pass</span>
-<span class="gi">+    if event.triggered:</span>
-<span class="gi">+        raise RuntimeError(&quot;Cannot subscribe to an event that has already occurred&quot;)</span>
-<span class="gi">+    </span>
-<span class="gi">+    def interrupt_callback(event):</span>
-<span class="gi">+        import simpy</span>
-<span class="gi">+        simpy.exceptions.Interrupt(event.value)</span>
-<span class="gi">+</span>
-<span class="gi">+    event.callbacks.append(interrupt_callback)</span>
+<span class="gi">+    if isinstance(obj, dict):</span>
+<span class="gi">+        return FrozenDict((k, freeze(v)) for k, v in obj.items())</span>
+<span class="gi">+    elif isinstance(obj, list):</span>
+<span class="gi">+        return tuple(freeze(i) for i in obj)</span>
+<span class="gi">+    elif isinstance(obj, set):</span>
+<span class="gi">+        return frozenset(freeze(i) for i in obj)</span>
+<span class="gi">+    return obj</span>
 </code></pre></div>
 
 

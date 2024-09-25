@@ -316,662 +316,696 @@
 <p><a href="/analysis_baseline">back to baseline summary</a></p>
 <h1 id="submission-name-baseline">Submission Name: baseline</h1>
 <h1 id="repository-marshmallow">Repository: marshmallow</h1>
+<h2 id="failed-to-run-pytests">Failed to run pytests</h2>
+<p>ImportError while loading conftest '/testbed/tests/conftest.py'.
+tests/conftest.py:5: in <module>
+    from tests.base import Blog, User, UserSchema
+tests/base.py:11: in <module>
+    from marshmallow import Schema, fields, missing, post_load, validate
+src/marshmallow/<strong>init</strong>.py:17: in <module>
+    from marshmallow.schema import Schema, SchemaOpts
+src/marshmallow/schema.py:15: in <module>
+    from marshmallow import fields as ma_fields
+src/marshmallow/fields.py:18: in <module>
+    from marshmallow.utils import is_aware, is_collection, resolve_field_instance
+E   ImportError: cannot import name 'is_aware' from 'marshmallow.utils' (/testbed/src/marshmallow/utils.py)</p>
 <h3 id="patch-diff">Patch diff</h3>
-<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/simpy/core.py b/src/simpy/core.py</span>
-<span class="gh">index 10c88fb..b39ddef 100644</span>
-<span class="gd">--- a/src/simpy/core.py</span>
-<span class="gi">+++ b/src/simpy/core.py</span>
-<span class="gu">@@ -34,7 +34,10 @@ class BoundClass(Generic[T]):</span>
-<span class="w"> </span>    def bind_early(instance: object) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Bind all :class:`BoundClass` attributes of the *instance&#39;s* class
-<span class="w"> </span>        to the instance itself to increase performance.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        cls = type(instance)</span>
-<span class="gi">+        for name, obj in cls.__dict__.items():</span>
-<span class="gi">+            if isinstance(obj, BoundClass):</span>
-<span class="gi">+                setattr(instance, name, obj.__get__(instance, cls))</span>
-
-
-<span class="w"> </span>class EmptySchedule(Exception):
-<span class="gu">@@ -49,7 +52,7 @@ class StopSimulation(Exception):</span>
-<span class="w"> </span>    def callback(cls, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Used as callback in :meth:`Environment.run()` to stop the simulation
-<span class="w"> </span>        when the *until* event occurred.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        raise cls()</span>
-
-
-<span class="w"> </span>SimTime = Union[int, float]
-<span class="gu">@@ -77,12 +80,12 @@ class Environment:</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def now(self) -&gt;SimTime:
-<span class="w"> </span>        &quot;&quot;&quot;The current simulation time.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._now</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def active_process(self) -&gt;Optional[Process]:
-<span class="w"> </span>        &quot;&quot;&quot;The currently active process of the environment.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._active_proc</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def process(self, generator: ProcessGenerator) -&gt;Process:
-<span class="gu">@@ -121,12 +124,15 @@ class Environment:</span>
-<span class="w"> </span>    def schedule(self, event: Event, priority: EventPriority=NORMAL, delay:
-<span class="w"> </span>        SimTime=0) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Schedule an *event* with a given *priority* and a *delay*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        heappush(self._queue, (self._now + delay, priority, next(self._eid), event))</span>
-
-<span class="w"> </span>    def peek(self) -&gt;SimTime:
-<span class="w"> </span>        &quot;&quot;&quot;Get the time of the next scheduled event. Return
-<span class="w"> </span>        :data:`~simpy.core.Infinity` if there is no further event.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        try:</span>
-<span class="gi">+            return self._queue[0][0]</span>
-<span class="gi">+        except IndexError:</span>
-<span class="gi">+            return Infinity</span>
-
-<span class="w"> </span>    def step(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Process the next event.
-<span class="gu">@@ -134,7 +140,20 @@ class Environment:</span>
-<span class="w"> </span>        Raise an :exc:`EmptySchedule` if no further events are available.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        try:</span>
-<span class="gi">+            self._now, _, _, event = heappop(self._queue)</span>
-<span class="gi">+        except IndexError:</span>
-<span class="gi">+            raise EmptySchedule()</span>
-<span class="gi">+</span>
-<span class="gi">+        # Process the event</span>
-<span class="gi">+        event._ok = True</span>
-<span class="gi">+        event._value = event._callback(event)</span>
-<span class="gi">+        event._processed = True</span>
-<span class="gi">+</span>
-<span class="gi">+        if isinstance(event, Process):</span>
-<span class="gi">+            self._active_proc = event</span>
-<span class="gi">+        else:</span>
-<span class="gi">+            self._active_proc = None</span>
-
-<span class="w"> </span>    def run(self, until: Optional[Union[SimTime, Event]]=None) -&gt;Optional[Any]:
-<span class="w"> </span>        &quot;&quot;&quot;Executes :meth:`step()` until the given criterion *until* is met.
-<span class="gu">@@ -151,4 +170,27 @@ class Environment:</span>
-<span class="w"> </span>          until the environment&#39;s time reaches *until*.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if until is None:</span>
-<span class="gi">+            while True:</span>
-<span class="gi">+                try:</span>
-<span class="gi">+                    self.step()</span>
-<span class="gi">+                except EmptySchedule:</span>
-<span class="gi">+                    return None</span>
-<span class="gi">+        elif isinstance(until, Event):</span>
-<span class="gi">+            until.callbacks.append(StopSimulation.callback)</span>
-<span class="gi">+            try:</span>
-<span class="gi">+                while not until.triggered:</span>
-<span class="gi">+                    self.step()</span>
-<span class="gi">+            except StopSimulation:</span>
-<span class="gi">+                return until.value</span>
-<span class="gi">+            except EmptySchedule:</span>
-<span class="gi">+                if not until.triggered:</span>
-<span class="gi">+                    raise RuntimeError(&#39;No scheduled events left but &quot;until&quot; event was not triggered&#39;)</span>
-<span class="gi">+        elif isinstance(until, (int, float)):</span>
-<span class="gi">+            try:</span>
-<span class="gi">+                while self._now &lt; until:</span>
-<span class="gi">+                    self.step()</span>
-<span class="gi">+            except EmptySchedule:</span>
-<span class="gi">+                return None</span>
-<span class="gi">+        else:</span>
-<span class="gi">+            raise ValueError(&#39;Invalid until parameter type&#39;)</span>
-<span class="gh">diff --git a/src/simpy/events.py b/src/simpy/events.py</span>
-<span class="gh">index 128ed75..2781b3f 100644</span>
-<span class="gd">--- a/src/simpy/events.py</span>
-<span class="gi">+++ b/src/simpy/events.py</span>
-<span class="gu">@@ -75,19 +75,19 @@ class Event:</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Event()*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return &#39;Event()&#39;</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def triggered(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;Becomes ``True`` if the event has been triggered and its callbacks
-<span class="w"> </span>        are about to be invoked.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._value is not PENDING</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def processed(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;Becomes ``True`` if the event has been processed (e.g., its
-<span class="w"> </span>        callbacks have been invoked).&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self.callbacks is None</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def ok(self) -&gt;bool:
-<span class="gu">@@ -98,7 +98,9 @@ class Event:</span>
-<span class="w"> </span>        :raises AttributeError: if accessed before the event is triggered.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self._value is PENDING:</span>
-<span class="gi">+            raise AttributeError(&#39;Event has not yet been triggered&#39;)</span>
-<span class="gi">+        return self._ok</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def defused(self) -&gt;bool:
-<span class="gu">@@ -115,7 +117,7 @@ class Event:</span>
-<span class="w"> </span>        processed by the :class:`~simpy.core.Environment`.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._defused</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def value(self) -&gt;Optional[Any]:
-<span class="gu">@@ -126,7 +128,9 @@ class Event:</span>
-<span class="w"> </span>        Raises :exc:`AttributeError` if the value is not yet available.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self._value is PENDING:</span>
-<span class="gi">+            raise AttributeError(&#39;Value not yet available&#39;)</span>
-<span class="gi">+        return self._value</span>
-
-<span class="w"> </span>    def trigger(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Trigger the event with the state and value of the provided *event*.
-<span class="gu">@@ -136,7 +140,10 @@ class Event:</span>
-<span class="w"> </span>        chain reactions.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        self._ok = event._ok</span>
-<span class="gi">+        self._value = event._value</span>
-<span class="gi">+        self._defused = event._defused</span>
-<span class="gi">+        self.env.schedule(self)</span>
-
-<span class="w"> </span>    def succeed(self, value: Optional[Any]=None) -&gt;Event:
-<span class="w"> </span>        &quot;&quot;&quot;Set the event&#39;s value, mark it as successful and schedule it for
-<span class="gu">@@ -145,7 +152,12 @@ class Event:</span>
-<span class="w"> </span>        Raises :exc:`RuntimeError` if this event has already been triggerd.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self._value is not PENDING:</span>
-<span class="gi">+            raise RuntimeError(&#39;Event has already been triggered&#39;)</span>
-<span class="gi">+        self._ok = True</span>
-<span class="gi">+        self._value = value</span>
-<span class="gi">+        self.env.schedule(self)</span>
-<span class="gi">+        return self</span>
-
-<span class="w"> </span>    def fail(self, exception: Exception) -&gt;Event:
-<span class="w"> </span>        &quot;&quot;&quot;Set *exception* as the events value, mark it as failed and schedule
-<span class="gu">@@ -156,7 +168,15 @@ class Event:</span>
-<span class="w"> </span>        Raises :exc:`RuntimeError` if this event has already been triggered.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not isinstance(exception, Exception):</span>
-<span class="gi">+            raise TypeError(&#39;exception must be an Exception instance&#39;)</span>
-<span class="gi">+        if self._value is not PENDING:</span>
-<span class="gi">+            raise RuntimeError(&#39;Event has already been triggered&#39;)</span>
-<span class="gi">+        self._ok = False</span>
-<span class="gi">+        self._value = exception</span>
-<span class="gi">+        self._defused = False</span>
-<span class="gi">+        self.env.schedule(self)</span>
-<span class="gi">+        return self</span>
-
-<span class="w"> </span>    def __and__(self, other: Event) -&gt;Condition:
-<span class="w"> </span>        &quot;&quot;&quot;Return a :class:`~simpy.events.Condition` that will be triggered if
-<span class="gu">@@ -197,7 +217,8 @@ class Timeout(Event):</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Timeout(delay[, value=value])*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        value_str = f&#39;, value={self._value!r}&#39; if self._value is not None else &#39;&#39;</span>
-<span class="gi">+        return f&#39;Timeout({self._delay}{value_str})&#39;</span>
-
-
-<span class="w"> </span>class Initialize(Event):
-<span class="gu">@@ -267,7 +288,7 @@ class Process(Event):</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Process(process_func_name)*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return f&#39;Process({self._generator.__name__})&#39;</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def target(self) -&gt;Event:
-<span class="gu">@@ -277,17 +298,17 @@ class Process(Event):</span>
-<span class="w"> </span>        interrupted.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._target</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def name(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Name of the function used to start the process.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._generator.__name__</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def is_alive(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;``True`` until the process generator exits.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._value is PENDING</span>
-
-<span class="w"> </span>    def interrupt(self, cause: Optional[Any]=None) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Interrupt this process optionally providing a *cause*.
-<span class="gu">@@ -297,7 +318,12 @@ class Process(Event):</span>
-<span class="w"> </span>        cases.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self.is_alive:</span>
-<span class="gi">+            raise RuntimeError(f&#39;{self} has terminated and cannot be interrupted.&#39;)</span>
-<span class="gi">+        if self is self.env.active_process:</span>
-<span class="gi">+            raise RuntimeError(&#39;A process is not allowed to interrupt itself.&#39;)</span>
-<span class="gi">+        </span>
-<span class="gi">+        Interruption(self, cause)</span>
-
-<span class="w"> </span>    def _resume(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Resumes the execution of the process with the value of *event*. If
-<span class="gu">@@ -383,16 +409,24 @@ class Condition(Event):</span>
-
-<span class="w"> </span>    def _desc(self) -&gt;str:
-<span class="w"> </span>        &quot;&quot;&quot;Return a string *Condition(evaluate, [events])*.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return f&#39;Condition({self._evaluate.__name__}, {self._events})&#39;</span>
-
-<span class="w"> </span>    def _populate_value(self, value: ConditionValue) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Populate the *value* by recursively visiting all nested
-<span class="w"> </span>        conditions.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        for event in self._events:</span>
-<span class="gi">+            if isinstance(event, Condition):</span>
-<span class="gi">+                event._populate_value(value)</span>
-<span class="gi">+            elif event.callbacks is None:</span>
-<span class="gi">+                value.events.append(event)</span>
-
-<span class="w"> </span>    def _build_value(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Build the value of this condition.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self._ok:</span>
-<span class="gi">+            return</span>
-<span class="gi">+        value = ConditionValue()</span>
-<span class="gi">+        self._populate_value(value)</span>
-<span class="gi">+        self._value = value</span>
-
-<span class="w"> </span>    def _remove_check_callbacks(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Remove _check() callbacks from events recursively.
-<span class="gu">@@ -403,24 +437,36 @@ class Condition(Event):</span>
-<span class="w"> </span>        untriggered events.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        for event in self._events:</span>
-<span class="gi">+            if event.callbacks and self._check in event.callbacks:</span>
-<span class="gi">+                event.callbacks.remove(self._check)</span>
-<span class="gi">+            if isinstance(event, Condition):</span>
-<span class="gi">+                event._remove_check_callbacks()</span>
-
-<span class="w"> </span>    def _check(self, event: Event) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Check if the condition was already met and schedule the *event* if
-<span class="w"> </span>        so.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self._value is not PENDING:</span>
-<span class="gi">+            return</span>
-<span class="gi">+</span>
-<span class="gi">+        self._count += 1</span>
-<span class="gi">+</span>
-<span class="gi">+        if self._evaluate(self._events, self._count):</span>
-<span class="gi">+            self._ok = True</span>
-<span class="gi">+            self.env.schedule(self)</span>
-<span class="gi">+            self._remove_check_callbacks()</span>
-
-<span class="w"> </span>    @staticmethod
-<span class="w"> </span>    def all_events(events: Tuple[Event, ...], count: int) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;An evaluation function that returns ``True`` if all *events* have
-<span class="w"> </span>        been triggered.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return len(events) == count</span>
-
-<span class="w"> </span>    @staticmethod
-<span class="w"> </span>    def any_events(events: Tuple[Event, ...], count: int) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;An evaluation function that returns ``True`` if at least one of
-<span class="w"> </span>        *events* has been triggered.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return count &gt; 0</span>
-
-
-<span class="w"> </span>class AllOf(Condition):
-<span class="gu">@@ -447,4 +493,7 @@ class AnyOf(Condition):</span>
-
-<span class="w"> </span>def _describe_frame(frame: FrameType) -&gt;str:
-<span class="w"> </span>    &quot;&quot;&quot;Print filename, line number and function name of a stack frame.&quot;&quot;&quot;
-<span class="gd">-    pass</span>
-<span class="gi">+    filename = frame.f_code.co_filename</span>
-<span class="gi">+    lineno = frame.f_lineno</span>
-<span class="gi">+    funcname = frame.f_code.co_name</span>
-<span class="gi">+    return f&#39;{filename}:{lineno}, in {funcname}&#39;</span>
-<span class="gh">diff --git a/src/simpy/exceptions.py b/src/simpy/exceptions.py</span>
-<span class="gh">index d45300e..beef1b2 100644</span>
-<span class="gd">--- a/src/simpy/exceptions.py</span>
-<span class="gi">+++ b/src/simpy/exceptions.py</span>
-<span class="gu">@@ -31,4 +31,4 @@ class Interrupt(SimPyException):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def cause(self) -&gt;Optional[Any]:
-<span class="w"> </span>        &quot;&quot;&quot;The cause of the interrupt or ``None`` if no cause was provided.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self.args[0] if self.args else None</span>
-<span class="gh">diff --git a/src/simpy/resources/base.py b/src/simpy/resources/base.py</span>
-<span class="gh">index a7d0b96..ccedb56 100644</span>
-<span class="gd">--- a/src/simpy/resources/base.py</span>
-<span class="gi">+++ b/src/simpy/resources/base.py</span>
-<span class="gu">@@ -58,7 +58,8 @@ class Put(Event, ContextManager[&#39;Put&#39;], Generic[ResourceType]):</span>
-<span class="w"> </span>        method is called automatically.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self.triggered:</span>
-<span class="gi">+            self.resource.put_queue.remove(self)</span>
-
-
-<span class="w"> </span>class Get(Event, ContextManager[&#39;Get&#39;], Generic[ResourceType]):
-<span class="gu">@@ -104,7 +105,8 @@ class Get(Event, ContextManager[&#39;Get&#39;], Generic[ResourceType]):</span>
-<span class="w"> </span>        method is called automatically.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if not self.triggered:</span>
-<span class="gi">+            self.resource.get_queue.remove(self)</span>
-
-
-<span class="w"> </span>PutType = TypeVar(&#39;PutType&#39;, bound=Put)
-<span class="gu">@@ -152,7 +154,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def capacity(self) -&gt;Union[float, int]:
-<span class="w"> </span>        &quot;&quot;&quot;Maximum capacity of the resource.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._capacity</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def put(self) -&gt;Put:
-<span class="gu">@@ -181,7 +183,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        :attr:`put_queue`, as long as the return value does not evaluate
-<span class="w"> </span>        ``False``.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        raise NotImplementedError(&quot;The _do_put() method has to be implemented by subclasses.&quot;)</span>
-
-<span class="w"> </span>    def _trigger_put(self, get_event: Optional[GetType]) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;This method is called once a new put event has been created or a get
-<span class="gu">@@ -191,7 +193,12 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        calls :meth:`_do_put` to check if the conditions for the event are met.
-<span class="w"> </span>        If :meth:`_do_put` returns ``False``, the iteration is stopped early.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        idx = 0</span>
-<span class="gi">+        while idx &lt; len(self.put_queue):</span>
-<span class="gi">+            put_event = self.put_queue[idx]</span>
-<span class="gi">+            if not self._do_put(put_event):</span>
-<span class="gi">+                break</span>
-<span class="gi">+            idx += 1</span>
-
-<span class="w"> </span>    def _do_get(self, event: GetType) -&gt;Optional[bool]:
-<span class="w"> </span>        &quot;&quot;&quot;Perform the *get* operation.
-<span class="gu">@@ -204,7 +211,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        :attr:`get_queue`, as long as the return value does not evaluate
-<span class="w"> </span>        ``False``.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        raise NotImplementedError(&quot;The _do_get() method has to be implemented by subclasses.&quot;)</span>
-
-<span class="w"> </span>    def _trigger_get(self, put_event: Optional[PutType]) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Trigger get events.
-<span class="gu">@@ -216,4 +223,9 @@ class BaseResource(Generic[PutType, GetType]):</span>
-<span class="w"> </span>        calls :meth:`_do_get` to check if the conditions for the event are met.
-<span class="w"> </span>        If :meth:`_do_get` returns ``False``, the iteration is stopped early.
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        idx = 0</span>
-<span class="gi">+        while idx &lt; len(self.get_queue):</span>
-<span class="gi">+            get_event = self.get_queue[idx]</span>
-<span class="gi">+            if not self._do_get(get_event):</span>
-<span class="gi">+                break</span>
-<span class="gi">+            idx += 1</span>
-<span class="gh">diff --git a/src/simpy/resources/container.py b/src/simpy/resources/container.py</span>
-<span class="gh">index 00aa6de..fe7bce5 100644</span>
-<span class="gd">--- a/src/simpy/resources/container.py</span>
-<span class="gi">+++ b/src/simpy/resources/container.py</span>
-<span class="gu">@@ -77,16 +77,16 @@ class Container(base.BaseResource):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def level(self) -&gt;ContainerAmount:
-<span class="w"> </span>        &quot;&quot;&quot;The current amount of the matter in the container.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._level</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def put(self, amount: ContainerAmount) -&gt;ContainerPut:
-<span class="w"> </span>            &quot;&quot;&quot;Request to put *amount* of matter into the container.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return ContainerPut(self, amount)</span>
-
-<span class="w"> </span>        def get(self, amount: ContainerAmount) -&gt;ContainerGet:
-<span class="w"> </span>            &quot;&quot;&quot;Request to get *amount* of matter out of the container.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return ContainerGet(self, amount)</span>
-<span class="w"> </span>    else:
-<span class="w"> </span>        put = BoundClass(ContainerPut)
-<span class="w"> </span>        get = BoundClass(ContainerGet)
-<span class="gh">diff --git a/src/simpy/resources/resource.py b/src/simpy/resources/resource.py</span>
-<span class="gh">index 2c4f6dd..fa35618 100644</span>
-<span class="gd">--- a/src/simpy/resources/resource.py</span>
-<span class="gi">+++ b/src/simpy/resources/resource.py</span>
-<span class="gu">@@ -70,6 +70,15 @@ class Request(base.Put):</span>
-<span class="w"> </span>    resource: Resource
-<span class="w"> </span>    usage_since: Optional[SimTime] = None
-
-<span class="gi">+    def __init__(self, resource: Resource):</span>
-<span class="gi">+        super().__init__(resource)</span>
-<span class="gi">+        self.resource = resource</span>
-<span class="gi">+        self.usage_since = None</span>
-<span class="gi">+</span>
-<span class="gi">+    def __enter__(self):</span>
-<span class="gi">+        self.usage_since = self.env.now</span>
-<span class="gi">+        return self</span>
-<span class="gi">+</span>
-<span class="w"> </span>    def __exit__(self, exc_type: Optional[Type[BaseException]], exc_value:
-<span class="w"> </span>        Optional[BaseException], traceback: Optional[TracebackType]
-<span class="w"> </span>        ) -&gt;Optional[bool]:
-<span class="gu">@@ -90,6 +99,13 @@ class Release(base.Get):</span>
-<span class="w"> </span>        &quot;&quot;&quot;The request (:class:`Request`) that is to be released.&quot;&quot;&quot;
-<span class="w"> </span>        super().__init__(resource)
-
-<span class="gi">+    def __call__(self):</span>
-<span class="gi">+        if self.request in self.resource.users:</span>
-<span class="gi">+            self.resource.users.remove(self.request)</span>
-<span class="gi">+            self.succeed()</span>
-<span class="gi">+        else:</span>
-<span class="gi">+            self.fail(ValueError(&quot;This request is not in the resource&#39;s users.&quot;))</span>
-<span class="gi">+</span>
-
-<span class="w"> </span>class PriorityRequest(Request):
-<span class="w"> </span>    &quot;&quot;&quot;Request the usage of *resource* with a given *priority*. If the
-<span class="gu">@@ -138,7 +154,10 @@ class SortedQueue(list):</span>
-<span class="w"> </span>        Raise a :exc:`RuntimeError` if the queue is full.
-
-<span class="w"> </span>        &quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        if self.maxlen is not None and len(self) &gt;= self.maxlen:</span>
-<span class="gi">+            raise RuntimeError(&quot;Queue is full&quot;)</span>
-<span class="gi">+        super().append(item)</span>
-<span class="gi">+        self.sort(key=lambda x: x.key)</span>
-
-
-<span class="w"> </span>class Resource(base.BaseResource):
-<span class="gu">@@ -168,7 +187,7 @@ class Resource(base.BaseResource):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def count(self) -&gt;int:
-<span class="w"> </span>        &quot;&quot;&quot;Number of users currently using the resource.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return len(self.users)</span>
-<span class="w"> </span>    if TYPE_CHECKING:
-
-<span class="w"> </span>        def request(self) -&gt;Request:
-<span class="gh">diff --git a/src/simpy/resources/store.py b/src/simpy/resources/store.py</span>
-<span class="gh">index 5875e6d..379e325 100644</span>
-<span class="gd">--- a/src/simpy/resources/store.py</span>
-<span class="gi">+++ b/src/simpy/resources/store.py</span>
-<span class="gu">@@ -73,11 +73,11 @@ class Store(base.BaseResource):</span>
-
-<span class="w"> </span>        def put(self, item: Any) -&gt;StorePut:
-<span class="w"> </span>            &quot;&quot;&quot;Request to put *item* into the store.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return StorePut(self, item)</span>
-
-<span class="w"> </span>        def get(self) -&gt;StoreGet:
-<span class="w"> </span>            &quot;&quot;&quot;Request to get an *item* out of the store.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return StoreGet(self)</span>
-<span class="w"> </span>    else:
-<span class="w"> </span>        put = BoundClass(StorePut)
-<span class="w"> </span>        get = BoundClass(StoreGet)
-<span class="gu">@@ -111,6 +111,31 @@ class PriorityStore(Store):</span>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/marshmallow/class_registry.py b/src/marshmallow/class_registry.py</span>
+<span class="gh">index 249b898..a7b38e8 100644</span>
+<span class="gd">--- a/src/marshmallow/class_registry.py</span>
+<span class="gi">+++ b/src/marshmallow/class_registry.py</span>
+<span class="gu">@@ -35,14 +35,29 @@ def register(classname: str, cls: SchemaType) -&gt;None:</span>
+<span class="w"> </span>        # }
 
 <span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    global _registry</span>
+<span class="gi">+    _registry[classname] = [cls]</span>
+<span class="gi">+    _registry[f&quot;{cls.__module__}.{cls.__name__}&quot;] = [cls]</span>
 
-<span class="gi">+    def __init__(self, env: Environment, capacity: Union[float, int]=float(&#39;inf&#39;)):</span>
-<span class="gi">+        super().__init__(env, capacity)</span>
-<span class="gi">+        self.items = []  # Use a list as a heap</span>
+
+<span class="gd">-def get_class(classname: str, all: bool=False) -&gt;(list[SchemaType] | SchemaType</span>
+<span class="gd">-    ):</span>
+<span class="gi">+def get_class(classname: str, all: bool=False) -&gt;(list[SchemaType] | SchemaType):</span>
+<span class="w"> </span>    &quot;&quot;&quot;Retrieve a class from the registry.
+
+<span class="w"> </span>    :raises: marshmallow.exceptions.RegistryError if the class cannot be found
+<span class="w"> </span>        or if there are multiple entries for the given class name.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        classes = _registry[classname]</span>
+<span class="gi">+    except KeyError:</span>
+<span class="gi">+        raise RegistryError(f&quot;Class with name {classname!r} was not found.&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if all:</span>
+<span class="gi">+        return classes</span>
+<span class="gi">+    </span>
+<span class="gi">+    if len(classes) &gt; 1:</span>
+<span class="gi">+        raise RegistryError(</span>
+<span class="gi">+            f&quot;Multiple classes with name {classname!r} were found. &quot;</span>
+<span class="gi">+            &quot;Please use the full, module-qualified path.&quot;</span>
+<span class="gi">+        )</span>
+<span class="gi">+    </span>
+<span class="gi">+    return classes[0]</span>
+<span class="gh">diff --git a/src/marshmallow/decorators.py b/src/marshmallow/decorators.py</span>
+<span class="gh">index d78f5be..e2944df 100644</span>
+<span class="gd">--- a/src/marshmallow/decorators.py</span>
+<span class="gi">+++ b/src/marshmallow/decorators.py</span>
+<span class="gu">@@ -84,7 +84,13 @@ def validates(field_name: str) -&gt;Callable[..., Any]:</span>
+
+<span class="w"> </span>    :param str field_name: Name of the field that the method validates.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def decorator(fn):</span>
+<span class="gi">+        @functools.wraps(fn)</span>
+<span class="gi">+        def wrapper(self, value, **kwargs):</span>
+<span class="gi">+            return fn(self, value, **kwargs)</span>
+<span class="gi">+        wrapper.__marshmallow_hook__ = {VALIDATES: field_name}</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+    return decorator</span>
+
+
+<span class="w"> </span>def validates_schema(fn: (Callable[..., Any] | None)=None, pass_many: bool=
+<span class="gu">@@ -109,7 +115,25 @@ def validates_schema(fn: (Callable[..., Any] | None)=None, pass_many: bool=</span>
+<span class="w"> </span>        ``partial`` and ``many`` are always passed as keyword arguments to
+<span class="w"> </span>        the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(</span>
+<span class="gi">+            validates_schema,</span>
+<span class="gi">+            pass_many=pass_many,</span>
+<span class="gi">+            pass_original=pass_original,</span>
+<span class="gi">+            skip_on_field_errors=skip_on_field_errors,</span>
+<span class="gi">+        )</span>
 <span class="gi">+</span>
-<span class="gi">+    if TYPE_CHECKING:</span>
-<span class="gi">+        def put(self, item: Any) -&gt; StorePut:</span>
-<span class="gi">+            &quot;&quot;&quot;Request to put *item* into the store.&quot;&quot;&quot;</span>
-<span class="gi">+            return StorePut(self, item)</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        return fn(*args, **kwargs)</span>
 <span class="gi">+</span>
-<span class="gi">+        def get(self) -&gt; StoreGet:</span>
-<span class="gi">+            &quot;&quot;&quot;Request to get the highest priority *item* from the store.&quot;&quot;&quot;</span>
-<span class="gi">+            return StoreGet(self)</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {</span>
+<span class="gi">+        (VALIDATES_SCHEMA, pass_many): {</span>
+<span class="gi">+            &#39;pass_original&#39;: pass_original,</span>
+<span class="gi">+            &#39;skip_on_field_errors&#39;: skip_on_field_errors,</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>def pre_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False
+<span class="gu">@@ -124,7 +148,7 @@ def pre_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False</span>
+<span class="w"> </span>    .. versionchanged:: 3.0.0
+<span class="w"> </span>        ``many`` is always passed as a keyword arguments to the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return set_hook(fn, (PRE_DUMP, pass_many))</span>
+
+
+<span class="w"> </span>def post_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,
+<span class="gu">@@ -142,7 +166,7 @@ def post_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,</span>
+<span class="w"> </span>    .. versionchanged:: 3.0.0
+<span class="w"> </span>        ``many`` is always passed as a keyword arguments to the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return set_hook(fn, (POST_DUMP, pass_many), pass_original=pass_original)</span>
+
+
+<span class="w"> </span>def pre_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False
+<span class="gu">@@ -158,7 +182,7 @@ def pre_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False</span>
+<span class="w"> </span>        ``partial`` and ``many`` are always passed as keyword arguments to
+<span class="w"> </span>        the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return set_hook(fn, (PRE_LOAD, pass_many))</span>
+
+
+<span class="w"> </span>def post_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,
+<span class="gu">@@ -177,7 +201,7 @@ def post_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,</span>
+<span class="w"> </span>        ``partial`` and ``many`` are always passed as keyword arguments to
+<span class="w"> </span>        the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return set_hook(fn, (POST_LOAD, pass_many), pass_original=pass_original)</span>
+
+
+<span class="w"> </span>def set_hook(fn: (Callable[..., Any] | None), key: (tuple[str, bool] | str),
+<span class="gu">@@ -192,4 +216,11 @@ def set_hook(fn: (Callable[..., Any] | None), key: (tuple[str, bool] | str),</span>
+<span class="w"> </span>    :return: Decorated function if supplied, else this decorator with its args
+<span class="w"> </span>        bound.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def decorator(func):</span>
+<span class="gi">+        func.__marshmallow_hook__ = {key: kwargs or True}</span>
+<span class="gi">+        return func</span>
+<span class="gi">+</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return decorator</span>
 <span class="gi">+    else:</span>
-<span class="gi">+        put = BoundClass(StorePut)</span>
-<span class="gi">+        get = BoundClass(StoreGet)</span>
+<span class="gi">+        return decorator(fn)</span>
+<span class="gh">diff --git a/src/marshmallow/error_store.py b/src/marshmallow/error_store.py</span>
+<span class="gh">index a659aaf..d5a60d5 100644</span>
+<span class="gd">--- a/src/marshmallow/error_store.py</span>
+<span class="gi">+++ b/src/marshmallow/error_store.py</span>
+<span class="gu">@@ -13,6 +13,16 @@ class ErrorStore:</span>
+<span class="w"> </span>    def __init__(self):
+<span class="w"> </span>        self.errors = {}
+
+<span class="gi">+    def store_error(self, field_name, error):</span>
+<span class="gi">+        &quot;&quot;&quot;Store an error message for a field.&quot;&quot;&quot;</span>
+<span class="gi">+        if field_name not in self.errors:</span>
+<span class="gi">+            self.errors[field_name] = []</span>
+<span class="gi">+        self.errors[field_name].append(error)</span>
 <span class="gi">+</span>
-<span class="gi">+    def _do_put(self, event: StorePut) -&gt; None:</span>
-<span class="gi">+        if len(self.items) &lt; self.capacity:</span>
-<span class="gi">+            heappush(self.items, event.item)</span>
-<span class="gi">+            event.succeed()</span>
-<span class="gi">+</span>
-<span class="gi">+    def _do_get(self, event: StoreGet) -&gt; None:</span>
-<span class="gi">+        if self.items:</span>
-<span class="gi">+            event.succeed(heappop(self.items))</span>
+<span class="gi">+    def get_errors(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Return all stored errors.&quot;&quot;&quot;</span>
+<span class="gi">+        return self.errors</span>
 <span class="gi">+</span>
 
-<span class="w"> </span>class FilterStore(Store):
-<span class="w"> </span>    &quot;&quot;&quot;Resource with *capacity* slots for storing arbitrary objects supporting
-<span class="gu">@@ -139,6 +164,13 @@ class FilterStore(Store):</span>
-<span class="w"> </span>            ) -&gt;FilterStoreGet:
-<span class="w"> </span>            &quot;&quot;&quot;Request to get an *item*, for which *filter* returns ``True``,
-<span class="w"> </span>            out of the store.&quot;&quot;&quot;
-<span class="gd">-            pass</span>
-<span class="gi">+            return FilterStoreGet(self, filter)</span>
-<span class="w"> </span>    else:
-<span class="w"> </span>        get = BoundClass(FilterStoreGet)
-<span class="gi">+</span>
-<span class="gi">+    def _do_get(self, event: FilterStoreGet) -&gt; None:</span>
-<span class="gi">+        for item in self.items:</span>
-<span class="gi">+            if event.filter(item):</span>
-<span class="gi">+                self.items.remove(item)</span>
-<span class="gi">+                event.succeed(item)</span>
-<span class="gi">+                break</span>
-<span class="gh">diff --git a/src/simpy/rt.py b/src/simpy/rt.py</span>
-<span class="gh">index 9d99392..e3c068c 100644</span>
-<span class="gd">--- a/src/simpy/rt.py</span>
-<span class="gi">+++ b/src/simpy/rt.py</span>
-<span class="gu">@@ -31,14 +31,14 @@ class RealtimeEnvironment(Environment):</span>
-<span class="w"> </span>    @property
-<span class="w"> </span>    def factor(self) -&gt;float:
-<span class="w"> </span>        &quot;&quot;&quot;Scaling factor of the real-time.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._factor</span>
-
-<span class="w"> </span>    @property
-<span class="w"> </span>    def strict(self) -&gt;bool:
-<span class="w"> </span>        &quot;&quot;&quot;Running mode of the environment. :meth:`step()` will raise a
-<span class="w"> </span>        :exc:`RuntimeError` if this is set to ``True`` and the processing of
-<span class="w"> </span>        events takes too long.&quot;&quot;&quot;
-<span class="gd">-        pass</span>
-<span class="gi">+        return self._strict</span>
-
-<span class="w"> </span>    def sync(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Synchronize the internal time with the current wall-clock time.
-<span class="gu">@@ -48,7 +48,8 @@ class RealtimeEnvironment(Environment):</span>
-<span class="w"> </span>        calling :meth:`run()` or :meth:`step()`.
-
+<span class="w"> </span>def merge_errors(errors1, errors2):
+<span class="w"> </span>    &quot;&quot;&quot;Deeply merge two error messages.
+<span class="gu">@@ -20,4 +30,15 @@ def merge_errors(errors1, errors2):</span>
+<span class="w"> </span>    The format of ``errors1`` and ``errors2`` matches the ``message``
+<span class="w"> </span>    parameter of :exc:`marshmallow.exceptions.ValidationError`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    merged = errors1.copy()</span>
+<span class="gi">+    for key, value in errors2.items():</span>
+<span class="gi">+        if key in merged:</span>
+<span class="gi">+            if isinstance(merged[key], dict) and isinstance(value, dict):</span>
+<span class="gi">+                merged[key] = merge_errors(merged[key], value)</span>
+<span class="gi">+            elif isinstance(merged[key], list) and isinstance(value, list):</span>
+<span class="gi">+                merged[key].extend(value)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                merged[key] = [merged[key], value]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            merged[key] = value</span>
+<span class="gi">+    return merged</span>
+<span class="gh">diff --git a/src/marshmallow/fields.py b/src/marshmallow/fields.py</span>
+<span class="gh">index 8656a56..c3a5d4a 100644</span>
+<span class="gd">--- a/src/marshmallow/fields.py</span>
+<span class="gi">+++ b/src/marshmallow/fields.py</span>
+<span class="gu">@@ -166,19 +166,37 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :param callable accessor: A callable used to retrieve the value of `attr` from
+<span class="w"> </span>            the object `obj`. Defaults to `marshmallow.utils.get_value`.
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
-<span class="gi">+        self.real_start = monotonic()</span>
-<span class="gi">+        self.env_start = self._now</span>
+<span class="gi">+        accessor_func = accessor or utils.get_value</span>
+<span class="gi">+        return accessor_func(obj, attr, default)</span>
 
-<span class="w"> </span>    def step(self) -&gt;None:
-<span class="w"> </span>        &quot;&quot;&quot;Process the next event after enough real-time has passed for the
-<span class="gu">@@ -59,4 +60,17 @@ class RealtimeEnvironment(Environment):</span>
-<span class="w"> </span>        the event is processed too slowly.
+<span class="w"> </span>    def _validate(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;Perform validation on ``value``. Raise a :exc:`ValidationError` if validation
+<span class="w"> </span>        does not succeed.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        errors = []</span>
+<span class="gi">+        for validator in self.validators:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if validator(value) is False:</span>
+<span class="gi">+                    self.fail(&#39;validator_failed&#39;)</span>
+<span class="gi">+            except ValidationError as error:</span>
+<span class="gi">+                errors.extend(error.messages)</span>
+<span class="gi">+        if errors:</span>
+<span class="gi">+            raise ValidationError(errors)</span>
 
+<span class="w"> </span>    def make_error(self, key: str, **kwargs) -&gt;ValidationError:
+<span class="w"> </span>        &quot;&quot;&quot;Helper method to make a `ValidationError` with an error message
+<span class="w"> </span>        from ``self.error_messages``.
 <span class="w"> </span>        &quot;&quot;&quot;
 <span class="gd">-        pass</span>
 <span class="gi">+        try:</span>
-<span class="gi">+            evt_time = self.peek()</span>
-<span class="gi">+        except EmptySchedule:</span>
-<span class="gi">+            return</span>
-<span class="gi">+</span>
-<span class="gi">+        real_time = monotonic()</span>
-<span class="gi">+        expected_real_time = self.real_start + (evt_time - self.env_start) / self._factor</span>
-<span class="gi">+</span>
-<span class="gi">+        if real_time &lt; expected_real_time:</span>
-<span class="gi">+            sleep(expected_real_time - real_time)</span>
-<span class="gi">+        elif self._strict and real_time &gt; expected_real_time:</span>
-<span class="gi">+            raise RuntimeError(f&#39;Simulation too slow: {real_time - expected_real_time:.3f} seconds late&#39;)</span>
-<span class="gi">+</span>
-<span class="gi">+        super().step()</span>
-<span class="gh">diff --git a/src/simpy/util.py b/src/simpy/util.py</span>
-<span class="gh">index 5e3a81a..bb287ec 100644</span>
-<span class="gd">--- a/src/simpy/util.py</span>
-<span class="gi">+++ b/src/simpy/util.py</span>
-<span class="gu">@@ -33,7 +33,14 @@ def start_delayed(env: Environment, generator: ProcessGenerator, delay: SimTime</span>
-<span class="w"> </span>    Raise a :exc:`ValueError` if ``delay &lt;= 0``.
+<span class="gi">+            msg = self.error_messages[key]</span>
+<span class="gi">+        except KeyError as error:</span>
+<span class="gi">+            class_name = self.__class__.__name__</span>
+<span class="gi">+            message = (f&#39;Error key &quot;{key}&quot; does not exist for field &quot;{class_name}&quot;.&#39;</span>
+<span class="gi">+                       f&#39; Available keys are {&quot;, &quot;.join(self.error_messages.keys())}.&#39;)</span>
+<span class="gi">+            raise KeyError(message) from error</span>
+<span class="gi">+        if isinstance(msg, str):</span>
+<span class="gi">+            msg = msg.format(**kwargs)</span>
+<span class="gi">+        return ValidationError(msg)</span>
 
+<span class="w"> </span>    def fail(self, key: str, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Helper method that raises a `ValidationError` with an error message
+<span class="gu">@@ -187,13 +205,23 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        .. deprecated:: 3.0.0
+<span class="w"> </span>            Use `make_error &lt;marshmallow.fields.Field.make_error&gt;` instead.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        warnings.warn(</span>
+<span class="gi">+            &quot;Field.fail is deprecated. Use Field.make_error instead.&quot;,</span>
+<span class="gi">+            RemovedInMarshmallow4Warning,</span>
+<span class="gi">+            stacklevel=2</span>
+<span class="gi">+        )</span>
+<span class="gi">+        raise self.make_error(key, **kwargs)</span>
+
+<span class="w"> </span>    def _validate_missing(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;Validate missing values. Raise a :exc:`ValidationError` if
+<span class="w"> </span>        `value` should be considered missing.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if value is missing_:</span>
+<span class="gi">+            if self.required:</span>
+<span class="gi">+                raise self.make_error(&#39;required&#39;)</span>
+<span class="gi">+        elif value is None:</span>
+<span class="gi">+            if self.allow_none is False:</span>
+<span class="gi">+                raise self.make_error(&#39;null&#39;)</span>
+
+<span class="w"> </span>    def serialize(self, attr: str, obj: typing.Any, accessor: (typing.
+<span class="w"> </span>        Callable[[typing.Any, str, typing.Any], typing.Any] | None)=None,
+<span class="gu">@@ -206,7 +234,14 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :param accessor: Function used to access values from ``obj``.
+<span class="w"> </span>        :param kwargs: Field-specific keyword arguments.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.dump_only:</span>
+<span class="gi">+            return self.dump_default</span>
+<span class="gi">+</span>
+<span class="gi">+        value = self.get_value(obj, attr, accessor=accessor)</span>
+<span class="gi">+        if value is missing_:</span>
+<span class="gi">+            return self.dump_default</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._serialize(value, attr, obj, **kwargs)</span>
+
+<span class="w"> </span>    def deserialize(self, value: typing.Any, attr: (str | None)=None, data:
+<span class="w"> </span>        (typing.Mapping[str, typing.Any] | None)=None, **kwargs):
+<span class="gu">@@ -219,7 +254,17 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :raise ValidationError: If an invalid value is passed or if a required value
+<span class="w"> </span>            is missing.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.load_only:</span>
+<span class="gi">+            return self.load_default</span>
+<span class="gi">+</span>
+<span class="gi">+        self._validate_missing(value)</span>
+<span class="gi">+        if value is missing_:</span>
+<span class="gi">+            return self.load_default</span>
+<span class="gi">+</span>
+<span class="gi">+        value = self._deserialize(value, attr, data, **kwargs)</span>
+<span class="gi">+        self._validate(value)</span>
+<span class="gi">+</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def _bind_to_schema(self, field_name, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Update field with values from its parent schema. Called by
+<span class="gu">@@ -228,7 +273,13 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :param str field_name: Field name set in schema.
+<span class="w"> </span>        :param Schema|Field schema: Parent object.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.parent = self.schema = schema</span>
+<span class="gi">+        self.name = field_name</span>
+<span class="gi">+        self.root = schema.root</span>
+<span class="gi">+        # Allow fields to override their data key</span>
+<span class="gi">+        if self.data_key is None:</span>
+<span class="gi">+            self.data_key = field_name</span>
+<span class="gi">+        self.metadata.setdefault(&#39;name&#39;, field_name)</span>
+
+<span class="w"> </span>    def _serialize(self, value: typing.Any, attr: (str | None), obj: typing
+<span class="w"> </span>        .Any, **kwargs):
+<span class="gu">@@ -249,7 +300,7 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :param dict kwargs: Field-specific keyword arguments.
+<span class="w"> </span>        :return: The serialized value
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def _deserialize(self, value: typing.Any, attr: (str | None), data: (
+<span class="w"> </span>        typing.Mapping[str, typing.Any] | None), **kwargs):
+<span class="gu">@@ -268,12 +319,12 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        .. versionchanged:: 3.0.0
+<span class="w"> </span>            Added ``**kwargs`` to signature.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def context(self):
+<span class="w"> </span>        &quot;&quot;&quot;The context dictionary for the parent :class:`Schema`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.parent.context if self.parent else {}</span>
+
+
+<span class="w"> </span>class Raw(Field):
+<span class="gh">diff --git a/src/marshmallow/schema.py b/src/marshmallow/schema.py</span>
+<span class="gh">index 1e6eabf..38ad968 100644</span>
+<span class="gd">--- a/src/marshmallow/schema.py</span>
+<span class="gi">+++ b/src/marshmallow/schema.py</span>
+<span class="gu">@@ -311,7 +311,10 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+
+<span class="w"> </span>        .. versionadded:: 3.0.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        attrs = fields.copy()</span>
+<span class="gi">+        attrs[&#39;Meta&#39;] = type(&#39;Meta&#39;, (), {&#39;register&#39;: False})</span>
+<span class="gi">+        schema_cls = type(name, (Schema,), attrs)</span>
+<span class="gi">+        return schema_cls</span>
+
+<span class="w"> </span>    def handle_error(self, error: ValidationError, data: typing.Any, *,
+<span class="w"> </span>        many: bool, **kwargs):
+<span class="gu">@@ -327,7 +330,7 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+<span class="w"> </span>        .. versionchanged:: 3.0.0rc9
+<span class="w"> </span>            Receives `many` and `partial` (on deserialization) as keyword arguments.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        pass  # Default implementation does nothing</span>
+
+<span class="w"> </span>    def get_attribute(self, obj: typing.Any, attr: str, default: typing.Any):
+<span class="w"> </span>        &quot;&quot;&quot;Defines how to pull values from an object to serialize.
+<span class="gu">@@ -337,7 +340,7 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+<span class="w"> </span>        .. versionchanged:: 3.0.0a1
+<span class="w"> </span>            Changed position of ``obj`` and ``attr``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return get_value(obj, attr, default)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _call_and_store(getter_func, data, *, field_name, error_store,
+<span class="gu">@@ -351,7 +354,12 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+<span class="w"> </span>        :param int index: Index of the item being validated, if validating a collection,
+<span class="w"> </span>            otherwise `None`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            value = getter_func(data)</span>
+<span class="gi">+        except ValidationError as error:</span>
+<span class="gi">+            error_store.store_error(error.messages, field_name, index=index)</span>
+<span class="gi">+            return missing</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def _serialize(self, obj: (_T | typing.Iterable[_T]), *, many: bool=False):
+<span class="w"> </span>        &quot;&quot;&quot;Serialize ``obj``.
+<span class="gh">diff --git a/src/marshmallow/utils.py b/src/marshmallow/utils.py</span>
+<span class="gh">index 1c71b57..e9ec424 100644</span>
+<span class="gd">--- a/src/marshmallow/utils.py</span>
+<span class="gi">+++ b/src/marshmallow/utils.py</span>
+<span class="gu">@@ -40,29 +40,35 @@ missing = _Missing()</span>
+
+<span class="w"> </span>def is_generator(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` is a generator&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return inspect.isgenerator(obj)</span>
+
+
+<span class="w"> </span>def is_iterable_but_not_string(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` is an iterable object that isn&#39;t a string.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        isinstance(obj, collections.abc.Iterable) and</span>
+<span class="gi">+        not isinstance(obj, (str, bytes))</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def is_collection(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` is a collection type, e.g list, tuple, queryset.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return is_iterable_but_not_string(obj) and not isinstance(obj, Mapping)</span>
+
+
+<span class="w"> </span>def is_instance_or_subclass(val, class_) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``val`` is either a subclass or instance of ``class_``.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return issubclass(val, class_)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        return isinstance(val, class_)</span>
+
+
+<span class="w"> </span>def is_keyed_tuple(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` has keyed tuple behavior, such as
+<span class="w"> </span>    namedtuples or SQLAlchemy&#39;s KeyedTuples.
 <span class="w"> </span>    &quot;&quot;&quot;
 <span class="gd">-    pass</span>
-<span class="gi">+    if delay &lt;= 0:</span>
-<span class="gi">+        raise ValueError(&quot;delay must be &gt; 0&quot;)</span>
-<span class="gi">+    </span>
-<span class="gi">+    def delayed_process():</span>
-<span class="gi">+        yield env.timeout(delay)</span>
-<span class="gi">+        yield from generator</span>
-<span class="gi">+</span>
-<span class="gi">+    return env.process(delayed_process())</span>
+<span class="gi">+    return isinstance(obj, tuple) and hasattr(obj, &#39;_fields&#39;)</span>
 
 
-<span class="w"> </span>def subscribe_at(event: Event) -&gt;None:
-<span class="gu">@@ -45,4 +52,11 @@ def subscribe_at(event: Event) -&gt;None:</span>
-<span class="w"> </span>    Raise a :exc:`RuntimeError` if ``event`` has already occurred.
-
+<span class="w"> </span>def pprint(obj, *args, **kwargs) -&gt;None:
+<span class="gu">@@ -73,7 +79,15 @@ def pprint(obj, *args, **kwargs) -&gt;None:</span>
+<span class="w"> </span>    .. deprecated:: 3.7.0
+<span class="w"> </span>        marshmallow.pprint will be removed in marshmallow 4.
 <span class="w"> </span>    &quot;&quot;&quot;
 <span class="gd">-    pass</span>
-<span class="gi">+    if event.triggered:</span>
-<span class="gi">+        raise RuntimeError(&quot;Cannot subscribe to an event that has already occurred&quot;)</span>
-<span class="gi">+    </span>
-<span class="gi">+    def interrupt_callback(event):</span>
-<span class="gi">+        import simpy</span>
-<span class="gi">+        simpy.exceptions.Interrupt(event.value)</span>
+<span class="gi">+    warnings.warn(</span>
+<span class="gi">+        &quot;marshmallow.pprint is deprecated and will be removed in marshmallow 4.&quot;,</span>
+<span class="gi">+        RemovedInMarshmallow4Warning,</span>
+<span class="gi">+        stacklevel=2,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    if isinstance(obj, collections.OrderedDict):</span>
+<span class="gi">+        py_pprint(dict(obj), *args, **kwargs)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        py_pprint(obj, *args, **kwargs)</span>
+
+
+<span class="w"> </span>def from_rfc(datestring: str) -&gt;dt.datetime:
+<span class="gu">@@ -81,7 +95,7 @@ def from_rfc(datestring: str) -&gt;dt.datetime:</span>
+
+<span class="w"> </span>    https://stackoverflow.com/questions/885015/how-to-parse-a-rfc-2822-date-time-into-a-python-datetime  # noqa: B950
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return parsedate_to_datetime(datestring)</span>
+
+
+<span class="w"> </span>def rfcformat(datetime: dt.datetime) -&gt;str:
+<span class="gu">@@ -89,7 +103,7 @@ def rfcformat(datetime: dt.datetime) -&gt;str:</span>
+
+<span class="w"> </span>    :param datetime datetime: The datetime.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return format_datetime(datetime)</span>
+
+
+<span class="w"> </span>_iso8601_datetime_re = re.compile(
+<span class="gu">@@ -104,7 +118,9 @@ _iso8601_time_re = re.compile(</span>
+
+<span class="w"> </span>def get_fixed_timezone(offset: (int | float | dt.timedelta)) -&gt;dt.timezone:
+<span class="w"> </span>    &quot;&quot;&quot;Return a tzinfo instance with a fixed offset from UTC.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(offset, dt.timedelta):</span>
+<span class="gi">+        offset = offset.total_seconds()</span>
+<span class="gi">+    return dt.timezone(dt.timedelta(seconds=int(offset)))</span>
+
+
+<span class="w"> </span>def from_iso_datetime(value):
+<span class="gu">@@ -113,7 +129,32 @@ def from_iso_datetime(value):</span>
+<span class="w"> </span>    This function supports time zone offsets. When the input contains one,
+<span class="w"> </span>    the output uses a timezone with a fixed offset from UTC.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = _iso8601_datetime_re.match(value)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(&#39;Not a valid ISO8601-formatted datetime string&#39;)</span>
 <span class="gi">+</span>
-<span class="gi">+    event.callbacks.append(interrupt_callback)</span>
+<span class="gi">+    groups = match.groupdict()</span>
+<span class="gi">+</span>
+<span class="gi">+    groups[&#39;year&#39;] = int(groups[&#39;year&#39;])</span>
+<span class="gi">+    groups[&#39;month&#39;] = int(groups[&#39;month&#39;])</span>
+<span class="gi">+    groups[&#39;day&#39;] = int(groups[&#39;day&#39;])</span>
+<span class="gi">+    groups[&#39;hour&#39;] = int(groups[&#39;hour&#39;])</span>
+<span class="gi">+    groups[&#39;minute&#39;] = int(groups[&#39;minute&#39;])</span>
+<span class="gi">+    groups[&#39;second&#39;] = int(groups[&#39;second&#39;] or 0)</span>
+<span class="gi">+    groups[&#39;microsecond&#39;] = int(groups[&#39;microsecond&#39;] or 0)</span>
+<span class="gi">+</span>
+<span class="gi">+    if groups[&#39;tzinfo&#39;] == &#39;Z&#39;:</span>
+<span class="gi">+        tzinfo = dt.timezone.utc</span>
+<span class="gi">+    elif groups[&#39;tzinfo&#39;]:</span>
+<span class="gi">+        offset_mins = int(groups[&#39;tzinfo&#39;][-2:]) if len(groups[&#39;tzinfo&#39;]) &gt; 3 else 0</span>
+<span class="gi">+        offset = 60 * int(groups[&#39;tzinfo&#39;][1:3]) + offset_mins</span>
+<span class="gi">+        if groups[&#39;tzinfo&#39;][0] == &#39;-&#39;:</span>
+<span class="gi">+            offset = -offset</span>
+<span class="gi">+        tzinfo = get_fixed_timezone(offset * 60)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        tzinfo = None</span>
+<span class="gi">+</span>
+<span class="gi">+    return dt.datetime(tzinfo=tzinfo, **groups)</span>
+
+
+<span class="w"> </span>def from_iso_time(value):
+<span class="gu">@@ -121,12 +162,33 @@ def from_iso_time(value):</span>
+
+<span class="w"> </span>    This function doesn&#39;t support time zone offsets.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = _iso8601_time_re.match(value)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(&#39;Not a valid ISO8601-formatted time string&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    groups = match.groupdict()</span>
+<span class="gi">+</span>
+<span class="gi">+    groups[&#39;hour&#39;] = int(groups[&#39;hour&#39;])</span>
+<span class="gi">+    groups[&#39;minute&#39;] = int(groups[&#39;minute&#39;])</span>
+<span class="gi">+    groups[&#39;second&#39;] = int(groups[&#39;second&#39;] or 0)</span>
+<span class="gi">+    groups[&#39;microsecond&#39;] = int(groups[&#39;microsecond&#39;] or 0)</span>
+<span class="gi">+</span>
+<span class="gi">+    return dt.time(**groups)</span>
+
+
+<span class="w"> </span>def from_iso_date(value):
+<span class="w"> </span>    &quot;&quot;&quot;Parse a string and return a datetime.date.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = _iso8601_date_re.match(value)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(&#39;Not a valid ISO8601-formatted date string&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    groups = match.groupdict()</span>
+<span class="gi">+</span>
+<span class="gi">+    return dt.date(</span>
+<span class="gi">+        int(groups[&#39;year&#39;]),</span>
+<span class="gi">+        int(groups[&#39;month&#39;]),</span>
+<span class="gi">+        int(groups[&#39;day&#39;])</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def isoformat(datetime: dt.datetime) -&gt;str:
+<span class="gu">@@ -134,7 +196,7 @@ def isoformat(datetime: dt.datetime) -&gt;str:</span>
+
+<span class="w"> </span>    :param datetime datetime: The datetime.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return datetime.isoformat()</span>
+
+
+<span class="w"> </span>def pluck(dictlist: list[dict[str, typing.Any]], key: str):
+<span class="gu">@@ -145,7 +207,7 @@ def pluck(dictlist: list[dict[str, typing.Any]], key: str):</span>
+<span class="w"> </span>        &gt;&gt;&gt; pluck(dlist, &#39;id&#39;)
+<span class="w"> </span>        [1, 2]
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return [d.get(key) for d in dictlist]</span>
+
+
+<span class="w"> </span>def get_value(obj, key: (int | str), default=missing):
+<span class="gu">@@ -159,7 +221,19 @@ def get_value(obj, key: (int | str), default=missing):</span>
+<span class="w"> </span>        `get_value` will never check the value `x.i`. Consider overriding
+<span class="w"> </span>        `marshmallow.fields.Field.get_value` in this case.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(key, int):</span>
+<span class="gi">+        return obj[key] if isinstance(obj, collections.abc.Sequence) else default</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return obj[key]</span>
+<span class="gi">+    except (KeyError, AttributeError, IndexError, TypeError):</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="gi">+    # Fall back to getattr for dotted paths</span>
+<span class="gi">+    if &#39;.&#39; in key:</span>
+<span class="gi">+        return functools.reduce(lambda o, k: get_value(o, k, default), key.split(&#39;.&#39;), obj)</span>
+<span class="gi">+</span>
+<span class="gi">+    return getattr(obj, key, default)</span>
+
+
+<span class="w"> </span>def set_value(dct: dict[str, typing.Any], key: str, value: typing.Any):
+<span class="gu">@@ -173,12 +247,26 @@ def set_value(dct: dict[str, typing.Any], key: str, value: typing.Any):</span>
+<span class="w"> </span>        &gt;&gt;&gt; d
+<span class="w"> </span>        {&#39;foo&#39;: {&#39;bar&#39;: 42}}
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if &#39;.&#39; in key:</span>
+<span class="gi">+        head, rest = key.split(&#39;.&#39;, 1)</span>
+<span class="gi">+        target = dct.setdefault(head, {})</span>
+<span class="gi">+        if not isinstance(target, dict):</span>
+<span class="gi">+            raise ValueError(</span>
+<span class="gi">+                &quot;Cannot set &#39;{rest}&#39; in &#39;{head}&#39; ({target}) &quot;</span>
+<span class="gi">+                &quot;which is not a dict&quot;.format(</span>
+<span class="gi">+                    rest=rest, head=head, target=target</span>
+<span class="gi">+                )</span>
+<span class="gi">+            )</span>
+<span class="gi">+        set_value(target, rest, value)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        dct[key] = value</span>
+
+
+<span class="w"> </span>def callable_or_raise(obj):
+<span class="w"> </span>    &quot;&quot;&quot;Check that an object is callable, else raise a :exc:`TypeError`.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not callable(obj):</span>
+<span class="gi">+        raise TypeError(&#39;Object {!r} is not callable.&#39;.format(obj))</span>
+<span class="gi">+    return obj</span>
+
+
+<span class="w"> </span>def get_func_args(func: typing.Callable) -&gt;list[str]:
+<span class="gu">@@ -188,7 +276,12 @@ def get_func_args(func: typing.Callable) -&gt;list[str]:</span>
+<span class="w"> </span>    .. versionchanged:: 3.0.0a1
+<span class="w"> </span>        Do not return bound arguments, eg. ``self``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(func, functools.partial):</span>
+<span class="gi">+        return get_func_args(func.func)</span>
+<span class="gi">+    if inspect.isfunction(func) or inspect.ismethod(func):</span>
+<span class="gi">+        return list(inspect.signature(func).parameters.keys())</span>
+<span class="gi">+    # Callable class</span>
+<span class="gi">+    return list(inspect.signature(func.__call__).parameters.keys())[1:]</span>
+
+
+<span class="w"> </span>def resolve_field_instance(cls_or_instance):
+<span class="gu">@@ -196,7 +289,19 @@ def resolve_field_instance(cls_or_instance):</span>
+
+<span class="w"> </span>    :param type|Schema cls_or_instance: Marshmallow Schema class or instance.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(cls_or_instance, type):</span>
+<span class="gi">+        if not issubclass(cls_or_instance, FieldABC):</span>
+<span class="gi">+            raise FieldInstanceResolutionError(</span>
+<span class="gi">+                &#39;The class &quot;{}&quot; is not a subclass of &#39;</span>
+<span class="gi">+                &#39;marshmallow.base.FieldABC&#39;.format(cls_or_instance.__name__)</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return cls_or_instance()</span>
+<span class="gi">+    if not isinstance(cls_or_instance, FieldABC):</span>
+<span class="gi">+        raise FieldInstanceResolutionError(</span>
+<span class="gi">+            &#39;The object &quot;{}&quot; is not an instance of &#39;</span>
+<span class="gi">+            &#39;marshmallow.base.FieldABC&#39;.format(cls_or_instance)</span>
+<span class="gi">+        )</span>
+<span class="gi">+    return cls_or_instance</span>
+
+
+<span class="w"> </span>def timedelta_to_microseconds(value: dt.timedelta) -&gt;int:
+<span class="gu">@@ -204,4 +309,4 @@ def timedelta_to_microseconds(value: dt.timedelta) -&gt;int:</span>
+
+<span class="w"> </span>    https://github.com/python/cpython/blob/bb3e0c240bc60fe08d332ff5955d54197f79751c/Lib/datetime.py#L665-L667  # noqa: B950
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return (value.days * 86400 + value.seconds) * 1000000 + value.microseconds</span>
+<span class="gh">diff --git a/src/marshmallow/validate.py b/src/marshmallow/validate.py</span>
+<span class="gh">index 3cc3b97..928d96e 100644</span>
+<span class="gd">--- a/src/marshmallow/validate.py</span>
+<span class="gi">+++ b/src/marshmallow/validate.py</span>
+<span class="gu">@@ -105,6 +105,20 @@ class URL(Validator):</span>
+<span class="w"> </span>                self._memoized[key] = self._regex_generator(relative,
+<span class="w"> </span>                    absolute, require_tld)
+<span class="w"> </span>            return self._memoized[key]
+<span class="gi">+</span>
+<span class="gi">+        def _regex_generator(self, relative: bool, absolute: bool, require_tld: bool</span>
+<span class="gi">+            ) -&gt;typing.Pattern:</span>
+<span class="gi">+            return re.compile(</span>
+<span class="gi">+                r&quot;&quot;.join([</span>
+<span class="gi">+                    r&quot;^&quot;,</span>
+<span class="gi">+                    r&quot;(&quot; if relative else r&quot;&quot;,</span>
+<span class="gi">+                    r&quot;(?:[a-z0-9\.\-\+]*)://&quot; if absolute else r&quot;&quot;,</span>
+<span class="gi">+                    r&quot;(?:[^/:]+)&quot; if not require_tld else r&quot;(?:[^/:]+\.)+[^/:]{2,}&quot;,</span>
+<span class="gi">+                    r&quot;(?::\d+)?(?:/?|[/?]\S+)$&quot;,</span>
+<span class="gi">+                    r&quot;)?&quot; if relative else r&quot;&quot;,</span>
+<span class="gi">+                ]),</span>
+<span class="gi">+                re.IGNORECASE</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>    _regex = RegexMemoizer()
+<span class="w"> </span>    default_message = &#39;Not a valid URL.&#39;
+<span class="w"> </span>    default_schemes = {&#39;http&#39;, &#39;https&#39;, &#39;ftp&#39;, &#39;ftps&#39;}
+<span class="gu">@@ -419,7 +433,15 @@ class OneOf(Validator):</span>
+<span class="w"> </span>            of an attribute of the choice objects. Defaults to `str()`
+<span class="w"> </span>            or `str()`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if callable(valuegetter):</span>
+<span class="gi">+            getter = valuegetter</span>
+<span class="gi">+        elif isinstance(valuegetter, str):</span>
+<span class="gi">+            getter = attrgetter(valuegetter)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            getter = str</span>
+<span class="gi">+</span>
+<span class="gi">+        for choice, label in zip_longest(self.choices, self.labels):</span>
+<span class="gi">+            yield getter(choice), label or str(choice)</span>
+
+
+<span class="w"> </span>class ContainsOnly(OneOf):
 </code></pre></div>
 
 
