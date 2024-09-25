@@ -14,7 +14,6 @@ from commit0.harness.constants import SPLIT, SPLIT_ALL
 from commit0.harness.utils import clone_repo
 from commit0.cli import write_commit0_dot_file
 import pypdf
-# from render_utils import _find_files_to_edit
 
 import logging
 
@@ -28,13 +27,20 @@ analysis_files_path = "/share/rush/commit0_analysis_temp"
 def get_pytest_info(path_to_logs, repo_name, branch_name): 
     pytest_info = {}
     for pytest_hash in os.listdir(path_to_logs):
-        pytest_report = json.load(open(os.path.join(path_to_logs, pytest_hash, "report.json")))
         eval_script = open(os.path.join(path_to_logs, pytest_hash, "eval.sh")).read()
         testname = re.search(r'([\S]+) > test_output', eval_script).group(1)
         patch_diff = open(os.path.join(path_to_logs, pytest_hash, "patch.diff")).read()
+        pytest_info[testname] = {'hash': pytest_hash, 'patch_diff': patch_diff, 'failures': {}}
+        report_file_path = os.path.join(path_to_logs, pytest_hash, "report.json")
+        if not os.path.exists(report_file_path): 
+            reason_for_failure = open(os.path.join(path_to_logs, pytest_hash, "test_output.txt")).read()
+            pytest_info[testname]["failed_to_run"] = reason_for_failure
+            return pytest_info
+        pytest_report = json.load(open(report_file_path))
         pytest_summary = pytest_report['summary']
+        pytest_info[testname]['summary'] = pytest_summary
+        pytest_info[testname]['duration'] = pytest_report['duration']
         if 'passed' not in pytest_summary: pytest_summary['passed'] = 0
-        pytest_info[testname] = {'hash': pytest_hash, 'patch_diff': patch_diff, 'summary': pytest_summary, 'failures': {}, 'duration': pytest_report['duration']}
         for test in pytest_report["tests"]:
             if test['outcome'] == "passed": continue
             if 'longrepr' in test: 
@@ -46,9 +52,8 @@ def get_pytest_info(path_to_logs, repo_name, branch_name):
             elif 'setup' in test and 'longrepr' in test['setup']:
                 failure_string = test['setup']['longrepr']
             elif 'call' in test and 'longrepr' in test['call']:
-                failure_string = test_dict['call']['longrepr']
+                failure_string = test['call']['longrepr']
                 # could use test['call']['traceback'] information and test['call']['crash'] for more info
-                import pdb; pdb.set_trace()
             else:
                 import pdb; pdb.set_trace()
             duration = 0.
@@ -133,7 +138,7 @@ def render_mds(subfolder="docs"):
     method_repo_pytests = {}
     for branch_name in glob.glob(os.path.join(analysis_files_path, '*')):
         branch_name = os.path.basename(branch_name)
-        if branch_name in {"blank", "repos"}: continue
+        if branch_name in {"blank", "repos", "submission_repos"}: continue
         all_submissions[branch_name] = {}
         for repo_file in glob.glob(os.path.join(analysis_files_path, branch_name, '*.json')):
             
@@ -147,23 +152,26 @@ def render_mds(subfolder="docs"):
             if 'pytest_results' in repo_metrics: repo_metrics = repo_metrics['pytest_results']
             for pytest_group, pytest_info in repo_metrics.items():
                 pytest_group = os.path.basename(pytest_group.strip("/"))
-                all_submissions[branch_name][repo_name][pytest_group] = {"summary": pytest_info['summary'], "duration": pytest_info["duration"]}
-                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""\n## Pytest Summary: {pytest_group}
-| status   | count |
-|:---------|:-----:|
-"""
-                for category, count in pytest_info['summary'].items():
-                    if category not in {'duration'}:
-                        method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""| {category} | {count} |\n"""
-                    else: 
-                        method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""| {category} | {float(count):.2f}s |\n"""
-
-                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"\n## Failed pytest outputs: {pytest_group}\n\n"
-                for testname, failure in pytest_info['failures'].items():
-                    shortened_testname = os.path.basename(testname)
-                    method_repo_pytests[f"{branch_name}_{repo_name}"] += f"### {shortened_testname}\n\n<details><summary> <pre>{shortened_testname}</pre></summary><pre>\n{failure}\n</pre>\n</details>\n"
-
                 patch_diff = f"""\n\n### Patch diff\n```diff\n{pytest_info['patch_diff']}```"""
+                if 'reason_for_failure' in pytest_info:
+                    all_submissions[branch_name][repo_name][pytest_group] = {"reason_for_failure": pytest_info["failed_to_run"]}
+                    method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""\n## Failed to run pytests\n{ pytest_info['failed_to_run']}"""
+                else:
+                    all_submissions[branch_name][repo_name][pytest_group] = {"summary": pytest_info['summary'], "duration": pytest_info["duration"]}
+                    method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""\n## Pytest Summary: {pytest_group}
+    | status   | count |
+    |:---------|:-----:|
+    """
+                    for category, count in pytest_info['summary'].items():
+                        if category not in {'duration'}:
+                            method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""| {category} | {count} |\n"""
+                        else: 
+                            method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""| {category} | {float(count):.2f}s |\n"""
+
+                    method_repo_pytests[f"{branch_name}_{repo_name}"] += f"\n## Failed pytest outputs: {pytest_group}\n\n"
+                    for testname, failure in pytest_info['failures'].items():
+                        shortened_testname = os.path.basename(testname)
+                        method_repo_pytests[f"{branch_name}_{repo_name}"] += f"### {shortened_testname}\n\n<details><summary> <pre>{shortened_testname}</pre></summary><pre>\n{failure['failure_string']}\n</pre>\n</details>\n"
 
             back_button = f"[back to {branch_name} summary]({os.path.join('/', f'analysis_{branch_name}')})\n\n"
             with open(os.path.join(subfolder, f"analysis_{branch_name}_{repo_name}.md"), 'w') as wf: 
@@ -186,15 +194,18 @@ def render_mds(subfolder="docs"):
         total_duration = 0.
         for repo_name, repo_test_info in branch_info.items():
             for testname, test_info in repo_test_info.items():
-                total_duration += test_info['duration']
-                summary_pytests_string = f"{testname}: {test_info['summary']['passed']} / {test_info['summary']['collected']} ; duration: { test_info['duration']:.2f}s"
+                if "reason_for_failure" in test_info:
+                    summary_pytests_string = "failure"
+                else:
+                    total_duration += test_info['duration']
+                    summary_pytests_string = f"{testname}: {test_info['summary']['passed']} / {test_info['summary']['collected']} ; duration: { test_info['duration']:.2f}s"
+                    for category, count in test_info["summary"].items():
+                        if category not in cum_pytests:
+                            cum_pytests[category] = 0
+                        if isinstance(count, int): cum_pytests[category] += int(count)
+                        elif isinstance(count, float): cum_pytests[category] += float(count)
+                        total_tests += 1
                 method_to_repos[branch_name] += f"\n||[{repo_name}]({os.path.join('/', f'analysis_{branch_name}_{repo_name}')})|{summary_pytests_string}||"
-                for category, count in test_info["summary"].items():
-                    if category not in cum_pytests:
-                        cum_pytests[category] = 0
-                    if isinstance(count, int): cum_pytests[category] += int(count)
-                    elif isinstance(count, float): cum_pytests[category] += float(count)
-                    total_tests += 1
                 break # assume we ran all tests. will add functionality for checking diff tests later, as we need it.
         summary_pytests_string = f"{cum_pytests['passed']} / {total_tests} ; duration: {total_duration:.2f}s"
         leaderboard += f"\n||[{branch_name}]({os.path.join('/', f'analysis_{branch_name}')})|{summary_pytests_string}||"
@@ -235,7 +246,6 @@ def main(args):
             if os.path.exists(os.path.join(analysis_files_path, branch_name)):
                 shutil.rmtree(os.path.join(analysis_files_path, branch_name))
         os.makedirs(os.path.join(analysis_files_path, branch_name), exist_ok=True)
-        # TODO use _find_files_to_edit to remove test files from src directory
         tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name) 
         for example in dataset:
             repo_name = example["repo"].split('/')[-1]
@@ -279,8 +289,6 @@ def main(args):
 
     if args.analyze_submissions:
         commit0_dot_file_path = os.path.join(analysis_files_path, "submission_repos", ".commit0.yaml")
-        # if args.do_setup:  
-        #     os.system(f"commit0 setup {args.split} --base-dir {analysis_files_path}/submission_repos  --commit0-dot-file-path {analysis_files_path}/submission_repos/.commit0.yaml")
         for submission in submission_dataset:
             branch_name = submission['name']
             os.makedirs(os.path.join(analysis_files_path, branch_name), exist_ok=True)
@@ -293,7 +301,6 @@ def main(args):
                 if args.split != "all" and repo_name not in SPLIT[args.split]:
                     continue
                 clone_url = f"https://github.com/test-save-commit0/{repo_name}.git"
-                # maybe test-save-commit0 is a submission that should be part of the dataset 
                 clone_dir = os.path.abspath(os.path.join(analysis_files_path, "submission_repos", repo_name))
                 repo = clone_repo(clone_url, clone_dir, branch_name, logger)
             # after successfully setup, write the commit0 dot file
@@ -308,18 +315,20 @@ def main(args):
             )
             # run pytests
             os.system(f"commit0 evaluate --branch {branch_name} --commit0-dot-file-path {commit0_dot_file_path}")
-            # os.system(f"commit0 get-tests {repo_name}")
             for example in dataset:
                 repo_name = example["repo"].split('/')[-1]
                 if args.split != "all" and repo_name not in SPLIT[args.split]:
                     continue
 
-                repo_metrics_output_file = os.path.join(analysis_files_path, branch_name)
+                repo_metrics_output_file = os.path.join(analysis_files_path, branch_name, f"{repo_name}.json")
 
                 path_to_logs = f"{os.getcwd()}/logs/pytest/{repo_name}/{branch_name}"
                 pytest_results = get_pytest_info(path_to_logs, repo_name, branch_name)
                 json.dump(pytest_results, open(repo_metrics_output_file, "w"), indent=4)
                 
+    if not args.keep_previous_eval: 
+        for analysis_file in glob.glob("docs/analysis*.md"):
+            os.unlink(analysis_file)
     if args.render_webpages: render_mds()
 
 

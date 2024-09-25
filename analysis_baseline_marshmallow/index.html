@@ -1,0 +1,1029 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis baseline marshmallow - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#submission-name-baseline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis baseline marshmallow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submission Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_baseline">back to baseline summary</a></p>
+<h1 id="submission-name-baseline">Submission Name: baseline</h1>
+<h1 id="repository-marshmallow">Repository: marshmallow</h1>
+<h3 id="patch-diff">Patch diff</h3>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/simpy/core.py b/src/simpy/core.py</span>
+<span class="gh">index 10c88fb..b39ddef 100644</span>
+<span class="gd">--- a/src/simpy/core.py</span>
+<span class="gi">+++ b/src/simpy/core.py</span>
+<span class="gu">@@ -34,7 +34,10 @@ class BoundClass(Generic[T]):</span>
+<span class="w"> </span>    def bind_early(instance: object) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Bind all :class:`BoundClass` attributes of the *instance&#39;s* class
+<span class="w"> </span>        to the instance itself to increase performance.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        cls = type(instance)</span>
+<span class="gi">+        for name, obj in cls.__dict__.items():</span>
+<span class="gi">+            if isinstance(obj, BoundClass):</span>
+<span class="gi">+                setattr(instance, name, obj.__get__(instance, cls))</span>
+
+
+<span class="w"> </span>class EmptySchedule(Exception):
+<span class="gu">@@ -49,7 +52,7 @@ class StopSimulation(Exception):</span>
+<span class="w"> </span>    def callback(cls, event: Event) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Used as callback in :meth:`Environment.run()` to stop the simulation
+<span class="w"> </span>        when the *until* event occurred.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise cls()</span>
+
+
+<span class="w"> </span>SimTime = Union[int, float]
+<span class="gu">@@ -77,12 +80,12 @@ class Environment:</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def now(self) -&gt;SimTime:
+<span class="w"> </span>        &quot;&quot;&quot;The current simulation time.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._now</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def active_process(self) -&gt;Optional[Process]:
+<span class="w"> </span>        &quot;&quot;&quot;The currently active process of the environment.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._active_proc</span>
+<span class="w"> </span>    if TYPE_CHECKING:
+
+<span class="w"> </span>        def process(self, generator: ProcessGenerator) -&gt;Process:
+<span class="gu">@@ -121,12 +124,15 @@ class Environment:</span>
+<span class="w"> </span>    def schedule(self, event: Event, priority: EventPriority=NORMAL, delay:
+<span class="w"> </span>        SimTime=0) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Schedule an *event* with a given *priority* and a *delay*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        heappush(self._queue, (self._now + delay, priority, next(self._eid), event))</span>
+
+<span class="w"> </span>    def peek(self) -&gt;SimTime:
+<span class="w"> </span>        &quot;&quot;&quot;Get the time of the next scheduled event. Return
+<span class="w"> </span>        :data:`~simpy.core.Infinity` if there is no further event.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self._queue[0][0]</span>
+<span class="gi">+        except IndexError:</span>
+<span class="gi">+            return Infinity</span>
+
+<span class="w"> </span>    def step(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Process the next event.
+<span class="gu">@@ -134,7 +140,20 @@ class Environment:</span>
+<span class="w"> </span>        Raise an :exc:`EmptySchedule` if no further events are available.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            self._now, _, _, event = heappop(self._queue)</span>
+<span class="gi">+        except IndexError:</span>
+<span class="gi">+            raise EmptySchedule()</span>
+<span class="gi">+</span>
+<span class="gi">+        # Process the event</span>
+<span class="gi">+        event._ok = True</span>
+<span class="gi">+        event._value = event._callback(event)</span>
+<span class="gi">+        event._processed = True</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(event, Process):</span>
+<span class="gi">+            self._active_proc = event</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._active_proc = None</span>
+
+<span class="w"> </span>    def run(self, until: Optional[Union[SimTime, Event]]=None) -&gt;Optional[Any]:
+<span class="w"> </span>        &quot;&quot;&quot;Executes :meth:`step()` until the given criterion *until* is met.
+<span class="gu">@@ -151,4 +170,27 @@ class Environment:</span>
+<span class="w"> </span>          until the environment&#39;s time reaches *until*.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if until is None:</span>
+<span class="gi">+            while True:</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    self.step()</span>
+<span class="gi">+                except EmptySchedule:</span>
+<span class="gi">+                    return None</span>
+<span class="gi">+        elif isinstance(until, Event):</span>
+<span class="gi">+            until.callbacks.append(StopSimulation.callback)</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                while not until.triggered:</span>
+<span class="gi">+                    self.step()</span>
+<span class="gi">+            except StopSimulation:</span>
+<span class="gi">+                return until.value</span>
+<span class="gi">+            except EmptySchedule:</span>
+<span class="gi">+                if not until.triggered:</span>
+<span class="gi">+                    raise RuntimeError(&#39;No scheduled events left but &quot;until&quot; event was not triggered&#39;)</span>
+<span class="gi">+        elif isinstance(until, (int, float)):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                while self._now &lt; until:</span>
+<span class="gi">+                    self.step()</span>
+<span class="gi">+            except EmptySchedule:</span>
+<span class="gi">+                return None</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(&#39;Invalid until parameter type&#39;)</span>
+<span class="gh">diff --git a/src/simpy/events.py b/src/simpy/events.py</span>
+<span class="gh">index 128ed75..2781b3f 100644</span>
+<span class="gd">--- a/src/simpy/events.py</span>
+<span class="gi">+++ b/src/simpy/events.py</span>
+<span class="gu">@@ -75,19 +75,19 @@ class Event:</span>
+
+<span class="w"> </span>    def _desc(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Return a string *Event()*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return &#39;Event()&#39;</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def triggered(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Becomes ``True`` if the event has been triggered and its callbacks
+<span class="w"> </span>        are about to be invoked.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._value is not PENDING</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def processed(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Becomes ``True`` if the event has been processed (e.g., its
+<span class="w"> </span>        callbacks have been invoked).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.callbacks is None</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def ok(self) -&gt;bool:
+<span class="gu">@@ -98,7 +98,9 @@ class Event:</span>
+<span class="w"> </span>        :raises AttributeError: if accessed before the event is triggered.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._value is PENDING:</span>
+<span class="gi">+            raise AttributeError(&#39;Event has not yet been triggered&#39;)</span>
+<span class="gi">+        return self._ok</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def defused(self) -&gt;bool:
+<span class="gu">@@ -115,7 +117,7 @@ class Event:</span>
+<span class="w"> </span>        processed by the :class:`~simpy.core.Environment`.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._defused</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def value(self) -&gt;Optional[Any]:
+<span class="gu">@@ -126,7 +128,9 @@ class Event:</span>
+<span class="w"> </span>        Raises :exc:`AttributeError` if the value is not yet available.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._value is PENDING:</span>
+<span class="gi">+            raise AttributeError(&#39;Value not yet available&#39;)</span>
+<span class="gi">+        return self._value</span>
+
+<span class="w"> </span>    def trigger(self, event: Event) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Trigger the event with the state and value of the provided *event*.
+<span class="gu">@@ -136,7 +140,10 @@ class Event:</span>
+<span class="w"> </span>        chain reactions.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._ok = event._ok</span>
+<span class="gi">+        self._value = event._value</span>
+<span class="gi">+        self._defused = event._defused</span>
+<span class="gi">+        self.env.schedule(self)</span>
+
+<span class="w"> </span>    def succeed(self, value: Optional[Any]=None) -&gt;Event:
+<span class="w"> </span>        &quot;&quot;&quot;Set the event&#39;s value, mark it as successful and schedule it for
+<span class="gu">@@ -145,7 +152,12 @@ class Event:</span>
+<span class="w"> </span>        Raises :exc:`RuntimeError` if this event has already been triggerd.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._value is not PENDING:</span>
+<span class="gi">+            raise RuntimeError(&#39;Event has already been triggered&#39;)</span>
+<span class="gi">+        self._ok = True</span>
+<span class="gi">+        self._value = value</span>
+<span class="gi">+        self.env.schedule(self)</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    def fail(self, exception: Exception) -&gt;Event:
+<span class="w"> </span>        &quot;&quot;&quot;Set *exception* as the events value, mark it as failed and schedule
+<span class="gu">@@ -156,7 +168,15 @@ class Event:</span>
+<span class="w"> </span>        Raises :exc:`RuntimeError` if this event has already been triggered.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(exception, Exception):</span>
+<span class="gi">+            raise TypeError(&#39;exception must be an Exception instance&#39;)</span>
+<span class="gi">+        if self._value is not PENDING:</span>
+<span class="gi">+            raise RuntimeError(&#39;Event has already been triggered&#39;)</span>
+<span class="gi">+        self._ok = False</span>
+<span class="gi">+        self._value = exception</span>
+<span class="gi">+        self._defused = False</span>
+<span class="gi">+        self.env.schedule(self)</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    def __and__(self, other: Event) -&gt;Condition:
+<span class="w"> </span>        &quot;&quot;&quot;Return a :class:`~simpy.events.Condition` that will be triggered if
+<span class="gu">@@ -197,7 +217,8 @@ class Timeout(Event):</span>
+
+<span class="w"> </span>    def _desc(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Return a string *Timeout(delay[, value=value])*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        value_str = f&#39;, value={self._value!r}&#39; if self._value is not None else &#39;&#39;</span>
+<span class="gi">+        return f&#39;Timeout({self._delay}{value_str})&#39;</span>
+
+
+<span class="w"> </span>class Initialize(Event):
+<span class="gu">@@ -267,7 +288,7 @@ class Process(Event):</span>
+
+<span class="w"> </span>    def _desc(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Return a string *Process(process_func_name)*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return f&#39;Process({self._generator.__name__})&#39;</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def target(self) -&gt;Event:
+<span class="gu">@@ -277,17 +298,17 @@ class Process(Event):</span>
+<span class="w"> </span>        interrupted.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._target</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def name(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Name of the function used to start the process.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generator.__name__</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def is_alive(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;``True`` until the process generator exits.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._value is PENDING</span>
+
+<span class="w"> </span>    def interrupt(self, cause: Optional[Any]=None) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Interrupt this process optionally providing a *cause*.
+<span class="gu">@@ -297,7 +318,12 @@ class Process(Event):</span>
+<span class="w"> </span>        cases.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.is_alive:</span>
+<span class="gi">+            raise RuntimeError(f&#39;{self} has terminated and cannot be interrupted.&#39;)</span>
+<span class="gi">+        if self is self.env.active_process:</span>
+<span class="gi">+            raise RuntimeError(&#39;A process is not allowed to interrupt itself.&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        Interruption(self, cause)</span>
+
+<span class="w"> </span>    def _resume(self, event: Event) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Resumes the execution of the process with the value of *event*. If
+<span class="gu">@@ -383,16 +409,24 @@ class Condition(Event):</span>
+
+<span class="w"> </span>    def _desc(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Return a string *Condition(evaluate, [events])*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return f&#39;Condition({self._evaluate.__name__}, {self._events})&#39;</span>
+
+<span class="w"> </span>    def _populate_value(self, value: ConditionValue) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Populate the *value* by recursively visiting all nested
+<span class="w"> </span>        conditions.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for event in self._events:</span>
+<span class="gi">+            if isinstance(event, Condition):</span>
+<span class="gi">+                event._populate_value(value)</span>
+<span class="gi">+            elif event.callbacks is None:</span>
+<span class="gi">+                value.events.append(event)</span>
+
+<span class="w"> </span>    def _build_value(self, event: Event) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Build the value of this condition.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self._ok:</span>
+<span class="gi">+            return</span>
+<span class="gi">+        value = ConditionValue()</span>
+<span class="gi">+        self._populate_value(value)</span>
+<span class="gi">+        self._value = value</span>
+
+<span class="w"> </span>    def _remove_check_callbacks(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Remove _check() callbacks from events recursively.
+<span class="gu">@@ -403,24 +437,36 @@ class Condition(Event):</span>
+<span class="w"> </span>        untriggered events.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for event in self._events:</span>
+<span class="gi">+            if event.callbacks and self._check in event.callbacks:</span>
+<span class="gi">+                event.callbacks.remove(self._check)</span>
+<span class="gi">+            if isinstance(event, Condition):</span>
+<span class="gi">+                event._remove_check_callbacks()</span>
+
+<span class="w"> </span>    def _check(self, event: Event) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Check if the condition was already met and schedule the *event* if
+<span class="w"> </span>        so.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._value is not PENDING:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        self._count += 1</span>
+<span class="gi">+</span>
+<span class="gi">+        if self._evaluate(self._events, self._count):</span>
+<span class="gi">+            self._ok = True</span>
+<span class="gi">+            self.env.schedule(self)</span>
+<span class="gi">+            self._remove_check_callbacks()</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def all_events(events: Tuple[Event, ...], count: int) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;An evaluation function that returns ``True`` if all *events* have
+<span class="w"> </span>        been triggered.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return len(events) == count</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def any_events(events: Tuple[Event, ...], count: int) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;An evaluation function that returns ``True`` if at least one of
+<span class="w"> </span>        *events* has been triggered.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return count &gt; 0</span>
+
+
+<span class="w"> </span>class AllOf(Condition):
+<span class="gu">@@ -447,4 +493,7 @@ class AnyOf(Condition):</span>
+
+<span class="w"> </span>def _describe_frame(frame: FrameType) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Print filename, line number and function name of a stack frame.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    filename = frame.f_code.co_filename</span>
+<span class="gi">+    lineno = frame.f_lineno</span>
+<span class="gi">+    funcname = frame.f_code.co_name</span>
+<span class="gi">+    return f&#39;{filename}:{lineno}, in {funcname}&#39;</span>
+<span class="gh">diff --git a/src/simpy/exceptions.py b/src/simpy/exceptions.py</span>
+<span class="gh">index d45300e..beef1b2 100644</span>
+<span class="gd">--- a/src/simpy/exceptions.py</span>
+<span class="gi">+++ b/src/simpy/exceptions.py</span>
+<span class="gu">@@ -31,4 +31,4 @@ class Interrupt(SimPyException):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def cause(self) -&gt;Optional[Any]:
+<span class="w"> </span>        &quot;&quot;&quot;The cause of the interrupt or ``None`` if no cause was provided.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.args[0] if self.args else None</span>
+<span class="gh">diff --git a/src/simpy/resources/base.py b/src/simpy/resources/base.py</span>
+<span class="gh">index a7d0b96..ccedb56 100644</span>
+<span class="gd">--- a/src/simpy/resources/base.py</span>
+<span class="gi">+++ b/src/simpy/resources/base.py</span>
+<span class="gu">@@ -58,7 +58,8 @@ class Put(Event, ContextManager[&#39;Put&#39;], Generic[ResourceType]):</span>
+<span class="w"> </span>        method is called automatically.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.triggered:</span>
+<span class="gi">+            self.resource.put_queue.remove(self)</span>
+
+
+<span class="w"> </span>class Get(Event, ContextManager[&#39;Get&#39;], Generic[ResourceType]):
+<span class="gu">@@ -104,7 +105,8 @@ class Get(Event, ContextManager[&#39;Get&#39;], Generic[ResourceType]):</span>
+<span class="w"> </span>        method is called automatically.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.triggered:</span>
+<span class="gi">+            self.resource.get_queue.remove(self)</span>
+
+
+<span class="w"> </span>PutType = TypeVar(&#39;PutType&#39;, bound=Put)
+<span class="gu">@@ -152,7 +154,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def capacity(self) -&gt;Union[float, int]:
+<span class="w"> </span>        &quot;&quot;&quot;Maximum capacity of the resource.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._capacity</span>
+<span class="w"> </span>    if TYPE_CHECKING:
+
+<span class="w"> </span>        def put(self) -&gt;Put:
+<span class="gu">@@ -181,7 +183,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
+<span class="w"> </span>        :attr:`put_queue`, as long as the return value does not evaluate
+<span class="w"> </span>        ``False``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;The _do_put() method has to be implemented by subclasses.&quot;)</span>
+
+<span class="w"> </span>    def _trigger_put(self, get_event: Optional[GetType]) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;This method is called once a new put event has been created or a get
+<span class="gu">@@ -191,7 +193,12 @@ class BaseResource(Generic[PutType, GetType]):</span>
+<span class="w"> </span>        calls :meth:`_do_put` to check if the conditions for the event are met.
+<span class="w"> </span>        If :meth:`_do_put` returns ``False``, the iteration is stopped early.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        idx = 0</span>
+<span class="gi">+        while idx &lt; len(self.put_queue):</span>
+<span class="gi">+            put_event = self.put_queue[idx]</span>
+<span class="gi">+            if not self._do_put(put_event):</span>
+<span class="gi">+                break</span>
+<span class="gi">+            idx += 1</span>
+
+<span class="w"> </span>    def _do_get(self, event: GetType) -&gt;Optional[bool]:
+<span class="w"> </span>        &quot;&quot;&quot;Perform the *get* operation.
+<span class="gu">@@ -204,7 +211,7 @@ class BaseResource(Generic[PutType, GetType]):</span>
+<span class="w"> </span>        :attr:`get_queue`, as long as the return value does not evaluate
+<span class="w"> </span>        ``False``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;The _do_get() method has to be implemented by subclasses.&quot;)</span>
+
+<span class="w"> </span>    def _trigger_get(self, put_event: Optional[PutType]) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Trigger get events.
+<span class="gu">@@ -216,4 +223,9 @@ class BaseResource(Generic[PutType, GetType]):</span>
+<span class="w"> </span>        calls :meth:`_do_get` to check if the conditions for the event are met.
+<span class="w"> </span>        If :meth:`_do_get` returns ``False``, the iteration is stopped early.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        idx = 0</span>
+<span class="gi">+        while idx &lt; len(self.get_queue):</span>
+<span class="gi">+            get_event = self.get_queue[idx]</span>
+<span class="gi">+            if not self._do_get(get_event):</span>
+<span class="gi">+                break</span>
+<span class="gi">+            idx += 1</span>
+<span class="gh">diff --git a/src/simpy/resources/container.py b/src/simpy/resources/container.py</span>
+<span class="gh">index 00aa6de..fe7bce5 100644</span>
+<span class="gd">--- a/src/simpy/resources/container.py</span>
+<span class="gi">+++ b/src/simpy/resources/container.py</span>
+<span class="gu">@@ -77,16 +77,16 @@ class Container(base.BaseResource):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def level(self) -&gt;ContainerAmount:
+<span class="w"> </span>        &quot;&quot;&quot;The current amount of the matter in the container.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._level</span>
+<span class="w"> </span>    if TYPE_CHECKING:
+
+<span class="w"> </span>        def put(self, amount: ContainerAmount) -&gt;ContainerPut:
+<span class="w"> </span>            &quot;&quot;&quot;Request to put *amount* of matter into the container.&quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            return ContainerPut(self, amount)</span>
+
+<span class="w"> </span>        def get(self, amount: ContainerAmount) -&gt;ContainerGet:
+<span class="w"> </span>            &quot;&quot;&quot;Request to get *amount* of matter out of the container.&quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            return ContainerGet(self, amount)</span>
+<span class="w"> </span>    else:
+<span class="w"> </span>        put = BoundClass(ContainerPut)
+<span class="w"> </span>        get = BoundClass(ContainerGet)
+<span class="gh">diff --git a/src/simpy/resources/resource.py b/src/simpy/resources/resource.py</span>
+<span class="gh">index 2c4f6dd..fa35618 100644</span>
+<span class="gd">--- a/src/simpy/resources/resource.py</span>
+<span class="gi">+++ b/src/simpy/resources/resource.py</span>
+<span class="gu">@@ -70,6 +70,15 @@ class Request(base.Put):</span>
+<span class="w"> </span>    resource: Resource
+<span class="w"> </span>    usage_since: Optional[SimTime] = None
+
+<span class="gi">+    def __init__(self, resource: Resource):</span>
+<span class="gi">+        super().__init__(resource)</span>
+<span class="gi">+        self.resource = resource</span>
+<span class="gi">+        self.usage_since = None</span>
+<span class="gi">+</span>
+<span class="gi">+    def __enter__(self):</span>
+<span class="gi">+        self.usage_since = self.env.now</span>
+<span class="gi">+        return self</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __exit__(self, exc_type: Optional[Type[BaseException]], exc_value:
+<span class="w"> </span>        Optional[BaseException], traceback: Optional[TracebackType]
+<span class="w"> </span>        ) -&gt;Optional[bool]:
+<span class="gu">@@ -90,6 +99,13 @@ class Release(base.Get):</span>
+<span class="w"> </span>        &quot;&quot;&quot;The request (:class:`Request`) that is to be released.&quot;&quot;&quot;
+<span class="w"> </span>        super().__init__(resource)
+
+<span class="gi">+    def __call__(self):</span>
+<span class="gi">+        if self.request in self.resource.users:</span>
+<span class="gi">+            self.resource.users.remove(self.request)</span>
+<span class="gi">+            self.succeed()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self.fail(ValueError(&quot;This request is not in the resource&#39;s users.&quot;))</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class PriorityRequest(Request):
+<span class="w"> </span>    &quot;&quot;&quot;Request the usage of *resource* with a given *priority*. If the
+<span class="gu">@@ -138,7 +154,10 @@ class SortedQueue(list):</span>
+<span class="w"> </span>        Raise a :exc:`RuntimeError` if the queue is full.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.maxlen is not None and len(self) &gt;= self.maxlen:</span>
+<span class="gi">+            raise RuntimeError(&quot;Queue is full&quot;)</span>
+<span class="gi">+        super().append(item)</span>
+<span class="gi">+        self.sort(key=lambda x: x.key)</span>
+
+
+<span class="w"> </span>class Resource(base.BaseResource):
+<span class="gu">@@ -168,7 +187,7 @@ class Resource(base.BaseResource):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def count(self) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Number of users currently using the resource.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return len(self.users)</span>
+<span class="w"> </span>    if TYPE_CHECKING:
+
+<span class="w"> </span>        def request(self) -&gt;Request:
+<span class="gh">diff --git a/src/simpy/resources/store.py b/src/simpy/resources/store.py</span>
+<span class="gh">index 5875e6d..379e325 100644</span>
+<span class="gd">--- a/src/simpy/resources/store.py</span>
+<span class="gi">+++ b/src/simpy/resources/store.py</span>
+<span class="gu">@@ -73,11 +73,11 @@ class Store(base.BaseResource):</span>
+
+<span class="w"> </span>        def put(self, item: Any) -&gt;StorePut:
+<span class="w"> </span>            &quot;&quot;&quot;Request to put *item* into the store.&quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            return StorePut(self, item)</span>
+
+<span class="w"> </span>        def get(self) -&gt;StoreGet:
+<span class="w"> </span>            &quot;&quot;&quot;Request to get an *item* out of the store.&quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            return StoreGet(self)</span>
+<span class="w"> </span>    else:
+<span class="w"> </span>        put = BoundClass(StorePut)
+<span class="w"> </span>        get = BoundClass(StoreGet)
+<span class="gu">@@ -111,6 +111,31 @@ class PriorityStore(Store):</span>
+
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gi">+    def __init__(self, env: Environment, capacity: Union[float, int]=float(&#39;inf&#39;)):</span>
+<span class="gi">+        super().__init__(env, capacity)</span>
+<span class="gi">+        self.items = []  # Use a list as a heap</span>
+<span class="gi">+</span>
+<span class="gi">+    if TYPE_CHECKING:</span>
+<span class="gi">+        def put(self, item: Any) -&gt; StorePut:</span>
+<span class="gi">+            &quot;&quot;&quot;Request to put *item* into the store.&quot;&quot;&quot;</span>
+<span class="gi">+            return StorePut(self, item)</span>
+<span class="gi">+</span>
+<span class="gi">+        def get(self) -&gt; StoreGet:</span>
+<span class="gi">+            &quot;&quot;&quot;Request to get the highest priority *item* from the store.&quot;&quot;&quot;</span>
+<span class="gi">+            return StoreGet(self)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        put = BoundClass(StorePut)</span>
+<span class="gi">+        get = BoundClass(StoreGet)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _do_put(self, event: StorePut) -&gt; None:</span>
+<span class="gi">+        if len(self.items) &lt; self.capacity:</span>
+<span class="gi">+            heappush(self.items, event.item)</span>
+<span class="gi">+            event.succeed()</span>
+<span class="gi">+</span>
+<span class="gi">+    def _do_get(self, event: StoreGet) -&gt; None:</span>
+<span class="gi">+        if self.items:</span>
+<span class="gi">+            event.succeed(heappop(self.items))</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class FilterStore(Store):
+<span class="w"> </span>    &quot;&quot;&quot;Resource with *capacity* slots for storing arbitrary objects supporting
+<span class="gu">@@ -139,6 +164,13 @@ class FilterStore(Store):</span>
+<span class="w"> </span>            ) -&gt;FilterStoreGet:
+<span class="w"> </span>            &quot;&quot;&quot;Request to get an *item*, for which *filter* returns ``True``,
+<span class="w"> </span>            out of the store.&quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            return FilterStoreGet(self, filter)</span>
+<span class="w"> </span>    else:
+<span class="w"> </span>        get = BoundClass(FilterStoreGet)
+<span class="gi">+</span>
+<span class="gi">+    def _do_get(self, event: FilterStoreGet) -&gt; None:</span>
+<span class="gi">+        for item in self.items:</span>
+<span class="gi">+            if event.filter(item):</span>
+<span class="gi">+                self.items.remove(item)</span>
+<span class="gi">+                event.succeed(item)</span>
+<span class="gi">+                break</span>
+<span class="gh">diff --git a/src/simpy/rt.py b/src/simpy/rt.py</span>
+<span class="gh">index 9d99392..e3c068c 100644</span>
+<span class="gd">--- a/src/simpy/rt.py</span>
+<span class="gi">+++ b/src/simpy/rt.py</span>
+<span class="gu">@@ -31,14 +31,14 @@ class RealtimeEnvironment(Environment):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def factor(self) -&gt;float:
+<span class="w"> </span>        &quot;&quot;&quot;Scaling factor of the real-time.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._factor</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def strict(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Running mode of the environment. :meth:`step()` will raise a
+<span class="w"> </span>        :exc:`RuntimeError` if this is set to ``True`` and the processing of
+<span class="w"> </span>        events takes too long.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._strict</span>
+
+<span class="w"> </span>    def sync(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Synchronize the internal time with the current wall-clock time.
+<span class="gu">@@ -48,7 +48,8 @@ class RealtimeEnvironment(Environment):</span>
+<span class="w"> </span>        calling :meth:`run()` or :meth:`step()`.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.real_start = monotonic()</span>
+<span class="gi">+        self.env_start = self._now</span>
+
+<span class="w"> </span>    def step(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Process the next event after enough real-time has passed for the
+<span class="gu">@@ -59,4 +60,17 @@ class RealtimeEnvironment(Environment):</span>
+<span class="w"> </span>        the event is processed too slowly.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            evt_time = self.peek()</span>
+<span class="gi">+        except EmptySchedule:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        real_time = monotonic()</span>
+<span class="gi">+        expected_real_time = self.real_start + (evt_time - self.env_start) / self._factor</span>
+<span class="gi">+</span>
+<span class="gi">+        if real_time &lt; expected_real_time:</span>
+<span class="gi">+            sleep(expected_real_time - real_time)</span>
+<span class="gi">+        elif self._strict and real_time &gt; expected_real_time:</span>
+<span class="gi">+            raise RuntimeError(f&#39;Simulation too slow: {real_time - expected_real_time:.3f} seconds late&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        super().step()</span>
+<span class="gh">diff --git a/src/simpy/util.py b/src/simpy/util.py</span>
+<span class="gh">index 5e3a81a..bb287ec 100644</span>
+<span class="gd">--- a/src/simpy/util.py</span>
+<span class="gi">+++ b/src/simpy/util.py</span>
+<span class="gu">@@ -33,7 +33,14 @@ def start_delayed(env: Environment, generator: ProcessGenerator, delay: SimTime</span>
+<span class="w"> </span>    Raise a :exc:`ValueError` if ``delay &lt;= 0``.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if delay &lt;= 0:</span>
+<span class="gi">+        raise ValueError(&quot;delay must be &gt; 0&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    def delayed_process():</span>
+<span class="gi">+        yield env.timeout(delay)</span>
+<span class="gi">+        yield from generator</span>
+<span class="gi">+</span>
+<span class="gi">+    return env.process(delayed_process())</span>
+
+
+<span class="w"> </span>def subscribe_at(event: Event) -&gt;None:
+<span class="gu">@@ -45,4 +52,11 @@ def subscribe_at(event: Event) -&gt;None:</span>
+<span class="w"> </span>    Raise a :exc:`RuntimeError` if ``event`` has already occurred.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if event.triggered:</span>
+<span class="gi">+        raise RuntimeError(&quot;Cannot subscribe to an event that has already occurred&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    def interrupt_callback(event):</span>
+<span class="gi">+        import simpy</span>
+<span class="gi">+        simpy.exceptions.Interrupt(event.value)</span>
+<span class="gi">+</span>
+<span class="gi">+    event.callbacks.append(interrupt_callback)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  </body>
+</html>
