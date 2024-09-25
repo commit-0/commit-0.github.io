@@ -128,12 +128,12 @@ def render_mds(subfolder="docs"):
             
             all_submissions[branch_name][repo_name] = {}
 
-            method_repo_pytests[f"{branch_name}_{repo_name}"] = f"# {branch_name} > {repo_name}"
+            method_repo_pytests[f"{branch_name}_{repo_name}"] = f"# Submission Name: {branch_name}\n# Repository: {repo_name}"
             if 'pytest_results' in repo_metrics: repo_metrics = repo_metrics['pytest_results']
             for testname, pytest_info in repo_metrics.items():
                 testname = os.path.basename(testname)
                 all_submissions[branch_name][repo_name][testname] = pytest_info['summary']
-                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""## Pytest Summary: {testname}
+                method_repo_pytests[f"{branch_name}_{repo_name}"] += f"""\n## Pytest Summary: {testname}
 | status   | count |
 |:---------|:-----:|
 """
@@ -148,7 +148,7 @@ def render_mds(subfolder="docs"):
                     shortened_testname = os.path.basename(testname)
                     method_repo_pytests[f"{branch_name}_{repo_name}"] += f"### {shortened_testname}\n\n<details><summary> <pre>{shortened_testname}</pre></summary><pre>\n{failure}\n</pre>\n</details>\n"
 
-            back_button = f"[back]({os.path.join('/', f'analysis_{branch_name}')})\n\n"
+            back_button = f"[back to {branch_name} summary]({os.path.join('/', f'analysis_{branch_name}')})\n\n"
             with open(os.path.join(subfolder, f"analysis_{branch_name}_{repo_name}.md"), 'w') as wf: 
                 wf.write(back_button + method_repo_pytests[f"{branch_name}_{repo_name}"])    
             #     diff_info = """## Diff to gold\n"""
