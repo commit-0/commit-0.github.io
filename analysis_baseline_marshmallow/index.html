@@ -317,18 +317,19 @@
 <h1 id="submission-name-baseline">Submission Name: baseline</h1>
 <h1 id="repository-marshmallow">Repository: marshmallow</h1>
 <h2 id="failed-to-run-pytests">Failed to run pytests</h2>
-<p>ImportError while loading conftest '/testbed/tests/conftest.py'.
-tests/conftest.py:5: in <module>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:5: in &lt;module&gt;
     from tests.base import Blog, User, UserSchema
-tests/base.py:11: in <module>
+tests/base.py:11: in &lt;module&gt;
     from marshmallow import Schema, fields, missing, post_load, validate
-src/marshmallow/<strong>init</strong>.py:17: in <module>
+src/marshmallow/__init__.py:17: in &lt;module&gt;
     from marshmallow.schema import Schema, SchemaOpts
-src/marshmallow/schema.py:15: in <module>
+src/marshmallow/schema.py:15: in &lt;module&gt;
     from marshmallow import fields as ma_fields
-src/marshmallow/fields.py:18: in <module>
+src/marshmallow/fields.py:18: in &lt;module&gt;
     from marshmallow.utils import is_aware, is_collection, resolve_field_instance
-E   ImportError: cannot import name 'is_aware' from 'marshmallow.utils' (/testbed/src/marshmallow/utils.py)</p>
+E   ImportError: cannot import name &#39;is_aware&#39; from &#39;marshmallow.utils&#39; (/testbed/src/marshmallow/utils.py)
+</code></pre></div>
 <h3 id="patch-diff">Patch diff</h3>
 <div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/marshmallow/class_registry.py b/src/marshmallow/class_registry.py</span>
 <span class="gh">index 249b898..a7b38e8 100644</span>

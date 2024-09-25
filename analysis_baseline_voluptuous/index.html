@@ -346,7 +346,1273 @@
 <h2 id="failed-pytest-outputs-tests">Failed pytest outputs: tests</h2>
 <h3 id="testsmdtestsmd">tests.md::tests.md</h3>
 <details><summary> <pre>tests.md::tests.md</pre></summary><pre>
-{failure['failure_string']}
+path = PosixPath('/testbed/voluptuous/__init__.py')
+config = <_pytest.config.Config object at 0x7f651ae5c820>
+
+    def importtestmodule(
+        path: Path,
+        config: Config,
+    ):
+        # We assume we are only called once per module.
+        importmode = config.getoption("--import-mode")
+        try:
+>           mod = import_path(
+                path,
+                mode=importmode,
+                root=config.rootpath,
+                consider_namespace_packages=config.getini("consider_namespace_packages"),
+            )
+
+.venv/lib/python3.10/site-packages/_pytest/python.py:493: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/testbed/voluptuous/__init__.py')
+
+    def import_path(
+        path: str | os.PathLike[str],
+        *,
+        mode: str | ImportMode = ImportMode.prepend,
+        root: Path,
+        consider_namespace_packages: bool,
+    ) -> ModuleType:
+        """
+        Import and return a module from the given path, which can be a file (a module) or
+        a directory (a package).
+
+        :param path:
+            Path to the file to import.
+
+        :param mode:
+            Controls the underlying import mechanism that will be used:
+
+            * ImportMode.prepend: the directory containing the module (or package, taking
+              `__init__.py` files into account) will be put at the *start* of `sys.path` before
+              being imported with `importlib.import_module`.
+
+            * ImportMode.append: same as `prepend`, but the directory will be appended
+              to the end of `sys.path`, if not already in `sys.path`.
+
+            * ImportMode.importlib: uses more fine control mechanisms provided by `importlib`
+              to import the module, which avoids having to muck with `sys.path` at all. It effectively
+              allows having same-named test modules in different places.
+
+        :param root:
+            Used as an anchor when mode == ImportMode.importlib to obtain
+            a unique name for the module being imported so it can safely be stored
+            into ``sys.modules``.
+
+        :param consider_namespace_packages:
+            If True, consider namespace packages when resolving module names.
+
+        :raises ImportPathMismatchError:
+            If after importing the given `path` and the module `__file__`
+            are different. Only raised in `prepend` and `append` modes.
+        """
+        path = Path(path)
+        mode = ImportMode(mode)
+
+        if not path.exists():
+            raise ImportError(path)
+
+        if mode is ImportMode.importlib:
+            # Try to import this module using the standard import mechanisms, but
+            # without touching sys.path.
+            try:
+                pkg_root, module_name = resolve_pkg_root_and_module_name(
+                    path, consider_namespace_packages=consider_namespace_packages
+                )
+            except CouldNotResolvePathError:
+                pass
+            else:
+                # If the given module name is already in sys.modules, do not import it again.
+                with contextlib.suppress(KeyError):
+                    return sys.modules[module_name]
+
+                mod = _import_module_using_spec(
+                    module_name, path, pkg_root, insert_modules=False
+                )
+                if mod is not None:
+                    return mod
+
+            # Could not import the module with the current sys.path, so we fall back
+            # to importing the file as a single module, not being a part of a package.
+            module_name = module_name_from_path(path, root)
+            with contextlib.suppress(KeyError):
+                return sys.modules[module_name]
+
+            mod = _import_module_using_spec(
+                module_name, path, path.parent, insert_modules=True
+            )
+            if mod is None:
+                raise ImportError(f"Can't find module {module_name} at location {path}")
+            return mod
+
+        try:
+            pkg_root, module_name = resolve_pkg_root_and_module_name(
+                path, consider_namespace_packages=consider_namespace_packages
+            )
+        except CouldNotResolvePathError:
+            pkg_root, module_name = path.parent, path.stem
+
+        # Change sys.path permanently: restoring it at the end of this function would cause surprising
+        # problems because of delayed imports: for example, a conftest.py file imported by this function
+        # might have local imports, which would fail at runtime if we restored sys.path.
+        if mode is ImportMode.append:
+            if str(pkg_root) not in sys.path:
+                sys.path.append(str(pkg_root))
+        elif mode is ImportMode.prepend:
+            if str(pkg_root) != sys.path[0]:
+                sys.path.insert(0, str(pkg_root))
+        else:
+            assert_never(mode)
+
+>       importlib.import_module(module_name)
+
+.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'voluptuous', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                msg = ("the 'package' argument is required to perform a relative "
+                       "import for {!r}")
+                raise TypeError(msg.format(name))
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+>       return _bootstrap._gcd_import(name[level:], package, level)
+
+/usr/lib/python3.10/importlib/__init__.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'voluptuous', package = None, level = 0
+
+>   ???
+
+<frozen importlib._bootstrap>:1050: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'voluptuous', import_ = <function _gcd_import at 0x7f651b90f400>
+
+>   ???
+
+<frozen importlib._bootstrap>:1027: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'voluptuous', import_ = <function _gcd_import at 0x7f651b90f400>
+
+>   ???
+
+<frozen importlib._bootstrap>:1006: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+spec = ModuleSpec(name='voluptuous', loader=<_frozen_importlib_external.SourceFileLoader object at 0x7f651ad2bf70>, origin='/testbed/voluptuous/__init__.py', submodule_search_locations=['/testbed/voluptuous'])
+
+>   ???
+
+<frozen importlib._bootstrap>:688: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f651ad2bf70>
+module = <module 'voluptuous' from '/testbed/voluptuous/__init__.py'>
+
+>   ???
+
+<frozen importlib._bootstrap_external>:883: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+f = <built-in function exec>
+args = (<code object <module> at 0x7f651a226340, file "/testbed/voluptuous/__init__.py", line 1>, {'ALLOW_EXTRA': 1, 'Default...ing.Any]], 'Error': <class 'voluptuous.error.Error'>, 'Exclusive': <class 'voluptuous.schema_builder.Exclusive'>, ...})
+kwds = {}
+
+>   ???
+
+<frozen importlib._bootstrap>:241: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Schema validation for Python data structures.
+
+    Given eg. a nested data structure like this:
+
+        {
+            'exclude': ['Users', 'Uptime'],
+            'include': [],
+            'set': {
+                'snmp_community': 'public',
+                'snmp_timeout': 15,
+                'snmp_version': '2c',
+            },
+            'targets': {
+                'localhost': {
+                    'exclude': ['Uptime'],
+                    'features': {
+                        'Uptime': {
+                            'retries': 3,
+                        },
+                        'Users': {
+                            'snmp_community': 'monkey',
+                            'snmp_port': 15,
+                        },
+                    },
+                    'include': ['Users'],
+                    'set': {
+                        'snmp_community': 'monkeys',
+                    },
+                },
+            },
+        }
+
+    A schema like this:
+
+        >>> settings = {
+        ...   'snmp_community': str,
+        ...   'retries': int,
+        ...   'snmp_version': All(Coerce(str), Any('3', '2c', '1')),
+        ... }
+        >>> features = ['Ping', 'Uptime', 'Http']
+        >>> schema = Schema({
+        ...    'exclude': features,
+        ...    'include': features,
+        ...    'set': settings,
+        ...    'targets': {
+        ...      'exclude': features,
+        ...      'include': features,
+        ...      'features': {
+        ...        str: settings,
+        ...      },
+        ...    },
+        ... })
+
+    Validate like so:
+
+        >>> schema({
+        ...   'set': {
+        ...     'snmp_community': 'public',
+        ...     'snmp_version': '2c',
+        ...   },
+        ...   'targets': {
+        ...     'exclude': ['Ping'],
+        ...     'features': {
+        ...       'Uptime': {'retries': 3},
+        ...       'Users': {'snmp_community': 'monkey'},
+        ...     },
+        ...   },
+        ... }) == {
+        ...   'set': {'snmp_version': '2c', 'snmp_community': 'public'},
+        ...   'targets': {
+        ...     'exclude': ['Ping'],
+        ...     'features': {'Uptime': {'retries': 3},
+        ...                  'Users': {'snmp_community': 'monkey'}}}}
+        True
+    """
+
+    # flake8: noqa
+    # fmt: off
+    from voluptuous.schema_builder import *
+>   from voluptuous.util import *
+
+voluptuous/__init__.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import typing
+>   from voluptuous import validators
+
+voluptuous/util.py:2: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from __future__ import annotations
+    import datetime
+    import os
+    import re
+    import sys
+    import typing
+    from decimal import Decimal, InvalidOperation
+    from functools import wraps
+    from voluptuous.error import AllInvalid, AnyInvalid, BooleanInvalid, CoerceInvalid, ContainsInvalid, DateInvalid, DatetimeInvalid, DirInvalid, EmailInvalid, ExactSequenceInvalid, FalseInvalid, FileInvalid, InInvalid, Invalid, LengthInvalid, MatchInvalid, MultipleInvalid, NotEnoughValid, NotInInvalid, PathInvalid, RangeInvalid, TooManyValid, TrueInvalid, TypeInvalid, UrlInvalid
+>   from voluptuous.schema_builder import Schema, Schemable, message, raises
+E   ImportError: cannot import name 'raises' from 'voluptuous.schema_builder' (/testbed/voluptuous/schema_builder.py)
+
+voluptuous/validators.py:10: ImportError
+
+The above exception was the direct cause of the following exception:
+
+cls = <class '_pytest.runner.CallInfo'>
+func = <function call_and_report.<locals>.<lambda> at 0x7f651a2052d0>
+when = 'setup'
+reraise = (<class '_pytest.outcomes.Exit'>, <class 'KeyboardInterrupt'>)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -> CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+>           result: TResult | None = func()
+
+.venv/lib/python3.10/site-packages/_pytest/runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>       lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+    )
+
+.venv/lib/python3.10/site-packages/_pytest/runner.py:242: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <HookCaller 'pytest_runtest_setup'>
+kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def __call__(self, **kwargs: object) -> Any:
+        """Call the hook.
+
+        Only accepts keyword arguments, which should match the hook
+        specification.
+
+        Returns the result(s) of calling all registered plugins, see
+        :ref:`calling`.
+        """
+        assert (
+            not self.is_historic()
+        ), "Cannot directly call a historic hook - use call_historic instead."
+        self._verify_all_args_are_provided(kwargs)
+        firstresult = self.spec.opts.get("firstresult", False) if self.spec else False
+        # Copy because plugins may register other plugins during iteration (#438).
+>       return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+
+.venv/lib/python3.10/site-packages/pluggy/_hooks.py:513: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.config.PytestPluginManager object at 0x7f651b43ff40>
+hook_name = 'pytest_runtest_setup'
+methods = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _hookexec(
+        self,
+        hook_name: str,
+        methods: Sequence[HookImpl],
+        kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        # called from all hookcaller instances.
+        # enable_tracing will set its own wrapping function at self._inner_hookexec
+>       return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+
+.venv/lib/python3.10/site-packages/pluggy/_manager.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_setup'
+hook_impls = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+caller_kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        only_new_style_wrappers = True
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError:
+                        for argname in hook_impl.argnames:
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                )
+
+                    if hook_impl.hookwrapper:
+                        only_new_style_wrappers = False
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            wrapper_gen = cast(Generator[None, Result[object], None], res)
+                            next(wrapper_gen)  # first yield
+                            teardowns.append((wrapper_gen, hook_impl))
+                        except StopIteration:
+                            _raise_wrapfail(wrapper_gen, "did not yield")
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            # Fast path - only new-style wrappers, no Result.
+            if only_new_style_wrappers:
+                if firstresult:  # first result hooks return a single value
+                    result = results[0] if results else None
+                else:
+                    result = results
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    try:
+                        if exception is not None:
+                            teardown.throw(exception)  # type: ignore[union-attr]
+                        else:
+                            teardown.send(result)  # type: ignore[union-attr]
+                        # Following is unreachable for a well behaved hook wrapper.
+                        # Try to force finalizers otherwise postponed till GC action.
+                        # Note: close() may raise if generator handles GeneratorExit.
+                        teardown.close()  # type: ignore[union-attr]
+                    except StopIteration as si:
+                        result = si.value
+                        exception = None
+                        continue
+                    except BaseException as e:
+                        exception = e
+                        continue
+                    _raise_wrapfail(teardown, "has second yield")  # type: ignore[arg-type]
+
+                if exception is not None:
+                    raise exception.with_traceback(exception.__traceback__)
+                else:
+                    return result
+
+            # Slow path - need to support old-style wrappers.
+            else:
+                if firstresult:  # first result hooks return a single value
+                    outcome: Result[object | list[object]] = Result(
+                        results[0] if results else None, exception
+                    )
+                else:
+                    outcome = Result(results, exception)
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    if isinstance(teardown, tuple):
+                        try:
+                            teardown[0].send(outcome)
+                        except StopIteration:
+                            pass
+                        except BaseException as e:
+                            _warn_teardown_exception(hook_name, teardown[1], e)
+                            raise
+                        else:
+                            _raise_wrapfail(teardown[0], "has second yield")
+                    else:
+                        try:
+                            if outcome._exception is not None:
+                                teardown.throw(outcome._exception)
+                            else:
+                                teardown.send(outcome._result)
+                            # Following is unreachable for a well behaved hook wrapper.
+                            # Try to force finalizers otherwise postponed till GC action.
+                            # Note: close() may raise if generator handles GeneratorExit.
+                            teardown.close()
+                        except StopIteration as si:
+                            outcome.force_result(si.value)
+                            continue
+                        except BaseException as e:
+                            outcome.force_exception(e)
+                            continue
+                        _raise_wrapfail(teardown, "has second yield")
+
+>               return outcome.get_result()
+
+.venv/lib/python3.10/site-packages/pluggy/_callers.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pluggy._result.Result object at 0x7f651ae5d360>
+
+    def get_result(self) -> ResultType:
+        """Get the result(s) for this hook call.
+
+        If the hook was marked as a ``firstresult`` only a single value
+        will be returned, otherwise a list of results.
+        """
+        __tracebackhide__ = True
+        exc = self._exception
+        if exc is None:
+            return cast(ResultType, self._result)
+        else:
+>           raise exc.with_traceback(exc.__traceback__)
+
+.venv/lib/python3.10/site-packages/pluggy/_result.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_setup'
+hook_impls = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+caller_kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        only_new_style_wrappers = True
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError:
+                        for argname in hook_impl.argnames:
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                )
+
+                    if hook_impl.hookwrapper:
+                        only_new_style_wrappers = False
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            wrapper_gen = cast(Generator[None, Result[object], None], res)
+                            next(wrapper_gen)  # first yield
+                            teardowns.append((wrapper_gen, hook_impl))
+                        except StopIteration:
+                            _raise_wrapfail(wrapper_gen, "did not yield")
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            # Fast path - only new-style wrappers, no Result.
+            if only_new_style_wrappers:
+                if firstresult:  # first result hooks return a single value
+                    result = results[0] if results else None
+                else:
+                    result = results
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    try:
+                        if exception is not None:
+                            teardown.throw(exception)  # type: ignore[union-attr]
+                        else:
+                            teardown.send(result)  # type: ignore[union-attr]
+                        # Following is unreachable for a well behaved hook wrapper.
+                        # Try to force finalizers otherwise postponed till GC action.
+                        # Note: close() may raise if generator handles GeneratorExit.
+                        teardown.close()  # type: ignore[union-attr]
+                    except StopIteration as si:
+                        result = si.value
+                        exception = None
+                        continue
+                    except BaseException as e:
+                        exception = e
+                        continue
+                    _raise_wrapfail(teardown, "has second yield")  # type: ignore[arg-type]
+
+                if exception is not None:
+                    raise exception.with_traceback(exception.__traceback__)
+                else:
+                    return result
+
+            # Slow path - need to support old-style wrappers.
+            else:
+                if firstresult:  # first result hooks return a single value
+                    outcome: Result[object | list[object]] = Result(
+                        results[0] if results else None, exception
+                    )
+                else:
+                    outcome = Result(results, exception)
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    if isinstance(teardown, tuple):
+                        try:
+                            teardown[0].send(outcome)
+                        except StopIteration:
+                            pass
+                        except BaseException as e:
+                            _warn_teardown_exception(hook_name, teardown[1], e)
+                            raise
+                        else:
+                            _raise_wrapfail(teardown[0], "has second yield")
+                    else:
+                        try:
+                            if outcome._exception is not None:
+>                               teardown.throw(outcome._exception)
+
+.venv/lib/python3.10/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @pytest.hookimpl(wrapper=True, tryfirst=True)
+    def pytest_runtest_setup() -> Generator[None]:
+>       yield from unraisable_exception_runtest_hook()
+
+.venv/lib/python3.10/site-packages/_pytest/unraisableexception.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def unraisable_exception_runtest_hook() -> Generator[None]:
+        with catch_unraisable_exception() as cm:
+            try:
+>               yield
+
+.venv/lib/python3.10/site-packages/_pytest/unraisableexception.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_setup'
+hook_impls = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+caller_kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        only_new_style_wrappers = True
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError:
+                        for argname in hook_impl.argnames:
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                )
+
+                    if hook_impl.hookwrapper:
+                        only_new_style_wrappers = False
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            wrapper_gen = cast(Generator[None, Result[object], None], res)
+                            next(wrapper_gen)  # first yield
+                            teardowns.append((wrapper_gen, hook_impl))
+                        except StopIteration:
+                            _raise_wrapfail(wrapper_gen, "did not yield")
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            # Fast path - only new-style wrappers, no Result.
+            if only_new_style_wrappers:
+                if firstresult:  # first result hooks return a single value
+                    result = results[0] if results else None
+                else:
+                    result = results
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    try:
+                        if exception is not None:
+                            teardown.throw(exception)  # type: ignore[union-attr]
+                        else:
+                            teardown.send(result)  # type: ignore[union-attr]
+                        # Following is unreachable for a well behaved hook wrapper.
+                        # Try to force finalizers otherwise postponed till GC action.
+                        # Note: close() may raise if generator handles GeneratorExit.
+                        teardown.close()  # type: ignore[union-attr]
+                    except StopIteration as si:
+                        result = si.value
+                        exception = None
+                        continue
+                    except BaseException as e:
+                        exception = e
+                        continue
+                    _raise_wrapfail(teardown, "has second yield")  # type: ignore[arg-type]
+
+                if exception is not None:
+                    raise exception.with_traceback(exception.__traceback__)
+                else:
+                    return result
+
+            # Slow path - need to support old-style wrappers.
+            else:
+                if firstresult:  # first result hooks return a single value
+                    outcome: Result[object | list[object]] = Result(
+                        results[0] if results else None, exception
+                    )
+                else:
+                    outcome = Result(results, exception)
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    if isinstance(teardown, tuple):
+                        try:
+                            teardown[0].send(outcome)
+                        except StopIteration:
+                            pass
+                        except BaseException as e:
+                            _warn_teardown_exception(hook_name, teardown[1], e)
+                            raise
+                        else:
+                            _raise_wrapfail(teardown[0], "has second yield")
+                    else:
+                        try:
+                            if outcome._exception is not None:
+>                               teardown.throw(outcome._exception)
+
+.venv/lib/python3.10/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>
+item = <DoctestItem tests.md>
+
+    @hookimpl(wrapper=True)
+    def pytest_runtest_setup(self, item: nodes.Item) -> Generator[None]:
+        self.log_cli_handler.set_when("setup")
+
+        empty: dict[str, list[logging.LogRecord]] = {}
+        item.stash[caplog_records_key] = empty
+>       yield from self._runtest_for(item, "setup")
+
+.venv/lib/python3.10/site-packages/_pytest/logging.py:840: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>
+item = <DoctestItem tests.md>, when = 'setup'
+
+    def _runtest_for(self, item: nodes.Item, when: str) -> Generator[None]:
+        """Implement the internals of the pytest_runtest_xxx() hooks."""
+        with catching_logs(
+            self.caplog_handler,
+            level=self.log_level,
+        ) as caplog_handler, catching_logs(
+            self.report_handler,
+            level=self.log_level,
+        ) as report_handler:
+            caplog_handler.reset()
+            report_handler.reset()
+            item.stash[caplog_records_key][when] = caplog_handler.records
+            item.stash[caplog_handler_key] = caplog_handler
+
+            try:
+>               yield
+
+.venv/lib/python3.10/site-packages/_pytest/logging.py:829: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_setup'
+hook_impls = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+caller_kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        only_new_style_wrappers = True
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError:
+                        for argname in hook_impl.argnames:
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                )
+
+                    if hook_impl.hookwrapper:
+                        only_new_style_wrappers = False
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            wrapper_gen = cast(Generator[None, Result[object], None], res)
+                            next(wrapper_gen)  # first yield
+                            teardowns.append((wrapper_gen, hook_impl))
+                        except StopIteration:
+                            _raise_wrapfail(wrapper_gen, "did not yield")
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            # Fast path - only new-style wrappers, no Result.
+            if only_new_style_wrappers:
+                if firstresult:  # first result hooks return a single value
+                    result = results[0] if results else None
+                else:
+                    result = results
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    try:
+                        if exception is not None:
+                            teardown.throw(exception)  # type: ignore[union-attr]
+                        else:
+                            teardown.send(result)  # type: ignore[union-attr]
+                        # Following is unreachable for a well behaved hook wrapper.
+                        # Try to force finalizers otherwise postponed till GC action.
+                        # Note: close() may raise if generator handles GeneratorExit.
+                        teardown.close()  # type: ignore[union-attr]
+                    except StopIteration as si:
+                        result = si.value
+                        exception = None
+                        continue
+                    except BaseException as e:
+                        exception = e
+                        continue
+                    _raise_wrapfail(teardown, "has second yield")  # type: ignore[arg-type]
+
+                if exception is not None:
+                    raise exception.with_traceback(exception.__traceback__)
+                else:
+                    return result
+
+            # Slow path - need to support old-style wrappers.
+            else:
+                if firstresult:  # first result hooks return a single value
+                    outcome: Result[object | list[object]] = Result(
+                        results[0] if results else None, exception
+                    )
+                else:
+                    outcome = Result(results, exception)
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    if isinstance(teardown, tuple):
+                        try:
+                            teardown[0].send(outcome)
+                        except StopIteration:
+                            pass
+                        except BaseException as e:
+                            _warn_teardown_exception(hook_name, teardown[1], e)
+                            raise
+                        else:
+                            _raise_wrapfail(teardown[0], "has second yield")
+                    else:
+                        try:
+                            if outcome._exception is not None:
+>                               teardown.throw(outcome._exception)
+
+.venv/lib/python3.10/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io....xtIOWrapper name='/dev/null' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+item = <DoctestItem tests.md>
+
+    @hookimpl(wrapper=True)
+    def pytest_runtest_setup(self, item: Item) -> Generator[None]:
+        with self.item_capture("setup", item):
+>           return (yield)
+
+.venv/lib/python3.10/site-packages/_pytest/capture.py:875: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_setup'
+hook_impls = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+caller_kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        only_new_style_wrappers = True
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError:
+                        for argname in hook_impl.argnames:
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                )
+
+                    if hook_impl.hookwrapper:
+                        only_new_style_wrappers = False
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            wrapper_gen = cast(Generator[None, Result[object], None], res)
+                            next(wrapper_gen)  # first yield
+                            teardowns.append((wrapper_gen, hook_impl))
+                        except StopIteration:
+                            _raise_wrapfail(wrapper_gen, "did not yield")
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            # Fast path - only new-style wrappers, no Result.
+            if only_new_style_wrappers:
+                if firstresult:  # first result hooks return a single value
+                    result = results[0] if results else None
+                else:
+                    result = results
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    try:
+                        if exception is not None:
+                            teardown.throw(exception)  # type: ignore[union-attr]
+                        else:
+                            teardown.send(result)  # type: ignore[union-attr]
+                        # Following is unreachable for a well behaved hook wrapper.
+                        # Try to force finalizers otherwise postponed till GC action.
+                        # Note: close() may raise if generator handles GeneratorExit.
+                        teardown.close()  # type: ignore[union-attr]
+                    except StopIteration as si:
+                        result = si.value
+                        exception = None
+                        continue
+                    except BaseException as e:
+                        exception = e
+                        continue
+                    _raise_wrapfail(teardown, "has second yield")  # type: ignore[arg-type]
+
+                if exception is not None:
+                    raise exception.with_traceback(exception.__traceback__)
+                else:
+                    return result
+
+            # Slow path - need to support old-style wrappers.
+            else:
+                if firstresult:  # first result hooks return a single value
+                    outcome: Result[object | list[object]] = Result(
+                        results[0] if results else None, exception
+                    )
+                else:
+                    outcome = Result(results, exception)
+
+                # run all wrapper post-yield blocks
+                for teardown in reversed(teardowns):
+                    if isinstance(teardown, tuple):
+                        try:
+                            teardown[0].send(outcome)
+                        except StopIteration:
+                            pass
+                        except BaseException as e:
+                            _warn_teardown_exception(hook_name, teardown[1], e)
+                            raise
+                        else:
+                            _raise_wrapfail(teardown[0], "has second yield")
+                    else:
+                        try:
+                            if outcome._exception is not None:
+>                               teardown.throw(outcome._exception)
+
+.venv/lib/python3.10/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @pytest.hookimpl(wrapper=True, trylast=True)
+    def pytest_runtest_setup() -> Generator[None]:
+>       yield from thread_exception_runtest_hook()
+
+.venv/lib/python3.10/site-packages/_pytest/threadexception.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def thread_exception_runtest_hook() -> Generator[None]:
+        with catch_threading_exception() as cm:
+            try:
+>               yield
+
+.venv/lib/python3.10/site-packages/_pytest/threadexception.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_setup'
+hook_impls = [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from '/testbed/.venv/lib/python3.10/site-packages/_py...a4ac0>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x7f651aaee8f0>>, ...]
+caller_kwargs = {'item': <DoctestItem tests.md>}, firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        only_new_style_wrappers = True
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError:
+                        for argname in hook_impl.argnames:
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                )
+
+                    if hook_impl.hookwrapper:
+                        only_new_style_wrappers = False
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            wrapper_gen = cast(Generator[None, Result[object], None], res)
+                            next(wrapper_gen)  # first yield
+                            teardowns.append((wrapper_gen, hook_impl))
+                        except StopIteration:
+                            _raise_wrapfail(wrapper_gen, "did not yield")
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+>                       res = hook_impl.function(*args)
+
+.venv/lib/python3.10/site-packages/pluggy/_callers.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+item = <DoctestItem tests.md>
+
+    def pytest_runtest_setup(item: Item) -> None:
+        _update_current_test_var(item, "setup")
+>       item.session._setupstate.setup(item)
+
+.venv/lib/python3.10/site-packages/_pytest/runner.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.runner.SetupState object at 0x7f651aaec100>
+item = <DoctestItem tests.md>
+
+    def setup(self, item: Item) -> None:
+        """Setup objects along the collector chain to the item."""
+        needed_collectors = item.listchain()
+
+        # If a collector fails its setup, fail its entire subtree of items.
+        # The setup is not retried for each item - the same exception is used.
+        for col, (finalizers, exc) in self.stack.items():
+            assert col in needed_collectors, "previous item was not torn down properly"
+            if exc:
+                raise exc[0].with_traceback(exc[1])
+
+        for col in needed_collectors[len(self.stack) :]:
+            assert col not in self.stack
+            # Push onto the stack.
+            self.stack[col] = ([col.teardown], None)
+            try:
+>               col.setup()
+
+.venv/lib/python3.10/site-packages/_pytest/runner.py:514: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Package voluptuous>
+
+    def setup(self) -> None:
+>       init_mod = importtestmodule(self.path / "__init__.py", self.config)
+
+.venv/lib/python3.10/site-packages/_pytest/python.py:663: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/testbed/voluptuous/__init__.py')
+config = <_pytest.config.Config object at 0x7f651ae5c820>
+
+    def importtestmodule(
+        path: Path,
+        config: Config,
+    ):
+        # We assume we are only called once per module.
+        importmode = config.getoption("--import-mode")
+        try:
+            mod = import_path(
+                path,
+                mode=importmode,
+                root=config.rootpath,
+                consider_namespace_packages=config.getini("consider_namespace_packages"),
+            )
+        except SyntaxError as e:
+            raise nodes.Collector.CollectError(
+                ExceptionInfo.from_current().getrepr(style="short")
+            ) from e
+        except ImportPathMismatchError as e:
+            raise nodes.Collector.CollectError(
+                "import file mismatch:\n"
+                "imported module {!r} has this __file__ attribute:\n"
+                "  {}\n"
+                "which is not the same as the test file we want to collect:\n"
+                "  {}\n"
+                "HINT: remove __pycache__ / .pyc files and/or use a "
+                "unique basename for your test file modules".format(*e.args)
+            ) from e
+        except ImportError as e:
+            exc_info = ExceptionInfo.from_current()
+            if config.get_verbosity() < 2:
+                exc_info.traceback = exc_info.traceback.filter(filter_traceback)
+            exc_repr = (
+                exc_info.getrepr(style="short")
+                if exc_info.traceback
+                else exc_info.exconly()
+            )
+            formatted_tb = str(exc_repr)
+>           raise nodes.Collector.CollectError(
+                f"ImportError while importing test module '{path}'.\n"
+                "Hint: make sure your test modules/packages have valid Python names.\n"
+                "Traceback:\n"
+                f"{formatted_tb}"
+            ) from e
+E           _pytest.nodes.Collector.CollectError: ImportError while importing test module '/testbed/voluptuous/__init__.py'.
+E           Hint: make sure your test modules/packages have valid Python names.
+E           Traceback:
+E           /usr/lib/python3.10/importlib/__init__.py:126: in import_module
+E               return _bootstrap._gcd_import(name[level:], package, level)
+E           voluptuous/__init__.py:80: in <module>
+E               from voluptuous.util import *
+E           voluptuous/util.py:2: in <module>
+E               from voluptuous import validators
+E           voluptuous/validators.py:10: in <module>
+E               from voluptuous.schema_builder import Schema, Schemable, message, raises
+E           E   ImportError: cannot import name 'raises' from 'voluptuous.schema_builder' (/testbed/voluptuous/schema_builder.py)
+
+.venv/lib/python3.10/site-packages/_pytest/python.py:523: CollectError
 </pre>
 </details>
 

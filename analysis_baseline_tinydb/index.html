@@ -317,18 +317,19 @@
 <h1 id="submission-name-baseline">Submission Name: baseline</h1>
 <h1 id="repository-tinydb">Repository: tinydb</h1>
 <h2 id="failed-to-run-pytests">Failed to run pytests</h2>
-<p>ImportError while loading conftest '/testbed/tests/conftest.py'.
-tests/conftest.py:7: in <module>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:7: in &lt;module&gt;
     from tinydb.middlewares import CachingMiddleware
-tinydb/<strong>init</strong>.py:27: in <module>
+tinydb/__init__.py:27: in &lt;module&gt;
     from .queries import Query, where
-tinydb/queries.py:21: in <module>
+tinydb/queries.py:21: in &lt;module&gt;
     from .utils import freeze
-tinydb/utils.py:84: in <module>
+tinydb/utils.py:84: in &lt;module&gt;
     class FrozenDict(dict):
 tinydb/utils.py:95: in FrozenDict
-    <strong>setitem</strong> = _immutable
-E   NameError: name '_immutable' is not defined</p>
+    __setitem__ = _immutable
+E   NameError: name &#39;_immutable&#39; is not defined
+</code></pre></div>
 <h3 id="patch-diff">Patch diff</h3>
 <div class="highlight"><pre><span></span><code><span class="gh">diff --git a/tinydb/database.py b/tinydb/database.py</span>
 <span class="gh">index a4ce0e1..f05a307 100644</span>

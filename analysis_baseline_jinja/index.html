@@ -317,16 +317,17 @@
 <h1 id="submission-name-baseline">Submission Name: baseline</h1>
 <h1 id="repository-jinja">Repository: jinja</h1>
 <h2 id="failed-to-run-pytests">Failed to run pytests</h2>
-<p>ImportError while loading conftest '/testbed/tests/conftest.py'.
-tests/conftest.py:5: in <module>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:5: in &lt;module&gt;
     from jinja2 import loaders
-src/jinja2/<strong>init</strong>.py:9: in <module>
+src/jinja2/__init__.py:9: in &lt;module&gt;
     from .environment import Environment as Environment
-src/jinja2/environment.py:14: in <module>
+src/jinja2/environment.py:14: in &lt;module&gt;
     from . import nodes
-src/jinja2/nodes.py:808: in <module>
-    NodeType.<strong>new</strong> = staticmethod(_failing_new)
-E   NameError: name '_failing_new' is not defined</p>
+src/jinja2/nodes.py:808: in &lt;module&gt;
+    NodeType.__new__ = staticmethod(_failing_new)
+E   NameError: name &#39;_failing_new&#39; is not defined
+</code></pre></div>
 <h3 id="patch-diff">Patch diff</h3>
 <div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/jinja2/bccache.py b/src/jinja2/bccache.py</span>
 <span class="gh">index ae575a3..7417030 100644</span>

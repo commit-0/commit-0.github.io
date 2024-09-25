@@ -346,212 +346,537 @@
 <h2 id="failed-pytest-outputs-tests">Failed pytest outputs: tests</h2>
 <h3 id="test_cachedpycachewrappertesttest_decorator_typed">test_cached.py::CacheWrapperTest::test_decorator_typed</h3>
 <details><summary> <pre>test_cached.py::CacheWrapperTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cache = self.cache(3)
+        key = cachetools.keys.typedkey
+        wrapper = cachetools.cached(cache, key=key)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.typedkey(0), cache)
+>       self.assertNotIn(cachetools.keys.typedkey(1), cache)
+E       AssertionError: (<class 'int'>,) unexpectedly found in Cache({(<class 'int'>,): 0}, maxsize=3, currsize=1)
+
+tests/test_cached.py:64: AssertionError
 </pre>
 </details>
 <h3 id="test_cachedpydictwrappertesttest_decorator_typed">test_cached.py::DictWrapperTest::test_decorator_typed</h3>
 <details><summary> <pre>test_cached.py::DictWrapperTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cache = self.cache(3)
+        key = cachetools.keys.typedkey
+        wrapper = cachetools.cached(cache, key=key)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.typedkey(0), cache)
+>       self.assertNotIn(cachetools.keys.typedkey(1), cache)
+E       AssertionError: (<class 'int'>,) unexpectedly found in {(<class 'int'>,): 0}
+
+tests/test_cached.py:64: AssertionError
 </pre>
 </details>
 <h3 id="test_cachedmethodpycachedmethodtesttest_typedmethod_dict">test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict</h3>
 <details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_typedmethod_dict>
+
+    def test_typedmethod_dict(self):
+        cached = Cached(LRUCache(maxsize=2))
+
+        self.assertEqual(cached.get_typedmethod(0), 0)
+>       self.assertEqual(cached.get_typedmethod(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:74: AssertionError
 </pre>
 </details>
 <h3 id="test_cachedmethodpycachedmethodtesttest_typedmethod_lru">test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru</h3>
 <details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_typedmethod_lru>
+
+    def test_typedmethod_lru(self):
+        cached = Cached(LRUCache(maxsize=2))
+
+        self.assertEqual(cached.get_typedmethod(0), 0)
+>       self.assertEqual(cached.get_typedmethod(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:97: AssertionError
 </pre>
 </details>
 <h3 id="test_funcpyfifodecoratortesttest_decorator">test_func.py::FIFODecoratorTest::test_decorator</h3>
 <details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:12: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyfifodecoratortesttest_decorator_clear">test_func.py::FIFODecoratorTest::test_decorator_clear</h3>
 <details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_clear</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:23: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyfifodecoratortesttest_decorator_nocache">test_func.py::FIFODecoratorTest::test_decorator_nocache</h3>
 <details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_nocache</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:34: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyfifodecoratortesttest_decorator_typed">test_func.py::FIFODecoratorTest::test_decorator_typed</h3>
 <details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:56: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyfifodecoratortesttest_decorator_unbound">test_func.py::FIFODecoratorTest::test_decorator_unbound</h3>
 <details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_unbound</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:45: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyfifodecoratortesttest_decorator_user_function">test_func.py::FIFODecoratorTest::test_decorator_user_function</h3>
 <details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_user_function</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylfudecoratortesttest_decorator">test_func.py::LFUDecoratorTest::test_decorator</h3>
 <details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:12: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylfudecoratortesttest_decorator_clear">test_func.py::LFUDecoratorTest::test_decorator_clear</h3>
 <details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_clear</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:23: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylfudecoratortesttest_decorator_nocache">test_func.py::LFUDecoratorTest::test_decorator_nocache</h3>
 <details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_nocache</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:34: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylfudecoratortesttest_decorator_typed">test_func.py::LFUDecoratorTest::test_decorator_typed</h3>
 <details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:56: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylfudecoratortesttest_decorator_unbound">test_func.py::LFUDecoratorTest::test_decorator_unbound</h3>
 <details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_unbound</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:45: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylfudecoratortesttest_decorator_user_function">test_func.py::LFUDecoratorTest::test_decorator_user_function</h3>
 <details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_user_function</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylrudecoratortesttest_decorator">test_func.py::LRUDecoratorTest::test_decorator</h3>
 <details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:12: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylrudecoratortesttest_decorator_clear">test_func.py::LRUDecoratorTest::test_decorator_clear</h3>
 <details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_clear</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:23: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylrudecoratortesttest_decorator_nocache">test_func.py::LRUDecoratorTest::test_decorator_nocache</h3>
 <details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_nocache</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:34: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylrudecoratortesttest_decorator_typed">test_func.py::LRUDecoratorTest::test_decorator_typed</h3>
 <details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:56: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylrudecoratortesttest_decorator_unbound">test_func.py::LRUDecoratorTest::test_decorator_unbound</h3>
 <details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_unbound</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:45: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpylrudecoratortesttest_decorator_user_function">test_func.py::LRUDecoratorTest::test_decorator_user_function</h3>
 <details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_user_function</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpymrudecoratortesttest_decorator">test_func.py::MRUDecoratorTest::test_decorator</h3>
 <details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:12: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpymrudecoratortesttest_decorator_clear">test_func.py::MRUDecoratorTest::test_decorator_clear</h3>
 <details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_clear</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:23: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpymrudecoratortesttest_decorator_nocache">test_func.py::MRUDecoratorTest::test_decorator_nocache</h3>
 <details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_nocache</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:34: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpymrudecoratortesttest_decorator_typed">test_func.py::MRUDecoratorTest::test_decorator_typed</h3>
 <details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:56: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpymrudecoratortesttest_decorator_unbound">test_func.py::MRUDecoratorTest::test_decorator_unbound</h3>
 <details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_unbound</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:45: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpymrudecoratortesttest_decorator_user_function">test_func.py::MRUDecoratorTest::test_decorator_user_function</h3>
 <details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_user_function</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyrrdecoratortesttest_decorator">test_func.py::RRDecoratorTest::test_decorator</h3>
 <details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:12: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyrrdecoratortesttest_decorator_clear">test_func.py::RRDecoratorTest::test_decorator_clear</h3>
 <details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_clear</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:23: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyrrdecoratortesttest_decorator_nocache">test_func.py::RRDecoratorTest::test_decorator_nocache</h3>
 <details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_nocache</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:34: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyrrdecoratortesttest_decorator_typed">test_func.py::RRDecoratorTest::test_decorator_typed</h3>
 <details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:56: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyrrdecoratortesttest_decorator_unbound">test_func.py::RRDecoratorTest::test_decorator_unbound</h3>
 <details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_unbound</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:45: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyrrdecoratortesttest_decorator_user_function">test_func.py::RRDecoratorTest::test_decorator_user_function</h3>
 <details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_user_function</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyttldecoratortesttest_decorator">test_func.py::TTLDecoratorTest::test_decorator</h3>
 <details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:12: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyttldecoratortesttest_decorator_clear">test_func.py::TTLDecoratorTest::test_decorator_clear</h3>
 <details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_clear</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:23: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyttldecoratortesttest_decorator_nocache">test_func.py::TTLDecoratorTest::test_decorator_nocache</h3>
 <details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_nocache</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:34: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyttldecoratortesttest_decorator_typed">test_func.py::TTLDecoratorTest::test_decorator_typed</h3>
 <details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_typed</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:56: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyttldecoratortesttest_decorator_unbound">test_func.py::TTLDecoratorTest::test_decorator_unbound</h3>
 <details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_unbound</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:45: AttributeError
 </pre>
 </details>
 <h3 id="test_funcpyttldecoratortesttest_decorator_user_function">test_func.py::TTLDecoratorTest::test_decorator_user_function</h3>
 <details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_user_function</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
 </pre>
 </details>
 <h3 id="test_keyspycachekeystesttest_typedkey">test_keys.py::CacheKeysTest::test_typedkey</h3>
 <details><summary> <pre>test_keys.py::CacheKeysTest::test_typedkey</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_keys.CacheKeysTest testMethod=test_typedkey>
+key = <function typedkey at 0x7ec4b05cd480>
+
+    def test_typedkey(self, key=cachetools.keys.typedkey):
+        self.assertEqual(key(), key())
+        self.assertEqual(hash(key()), hash(key()))
+        self.assertEqual(key(1, 2, 3), key(1, 2, 3))
+        self.assertEqual(hash(key(1, 2, 3)), hash(key(1, 2, 3)))
+        self.assertEqual(key(1, 2, 3, x=0), key(1, 2, 3, x=0))
+        self.assertEqual(hash(key(1, 2, 3, x=0)), hash(key(1, 2, 3, x=0)))
+>       self.assertNotEqual(key(1, 2, 3), key(3, 2, 1))
+E       AssertionError: (<class 'int'>, <class 'int'>, <class 'int'>) == (<class 'int'>, <class 'int'>, <class 'int'>)
+
+tests/test_keys.py:49: AssertionError
 </pre>
 </details>
 <h3 id="test_keyspycachekeystesttest_typedmethodkey">test_keys.py::CacheKeysTest::test_typedmethodkey</h3>
 <details><summary> <pre>test_keys.py::CacheKeysTest::test_typedmethodkey</pre></summary><pre>
-{failure['failure_string']}
+self = <tests.test_keys.CacheKeysTest testMethod=test_typedmethodkey>
+key = <function typedmethodkey at 0x7ec4b05cd510>
+
+    def test_typedmethodkey(self, key=cachetools.keys.typedmethodkey):
+        # similar to typedkey(), but ignores its first positional argument
+        self.assertEqual(key("x"), key("y"))
+        self.assertEqual(hash(key("x")), hash(key("y")))
+        self.assertEqual(key("x", 1, 2, 3), key("y", 1, 2, 3))
+        self.assertEqual(hash(key("x", 1, 2, 3)), hash(key("y", 1, 2, 3)))
+        self.assertEqual(key("x", 1, 2, 3, x=0), key("y", 1, 2, 3, x=0))
+        self.assertEqual(hash(key("x", 1, 2, 3, x=0)), hash(key("y", 1, 2, 3, x=0)))
+>       self.assertNotEqual(key("x", 1, 2, 3), key("x", 3, 2, 1))
+E       AssertionError: (<class 'type'>, <class 'int'>, <class 'int'>, <class 'int'>) == (<class 'type'>, <class 'int'>, <class 'int'>, <class 'int'>)
+
+tests/test_keys.py:66: AssertionError
 </pre>
 </details>
 
