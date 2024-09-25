@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
     
     
       
-        <title>Setup - spec2repo</title>
+        <title>Setup - </title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
       
       
 
@@ -42,6 +42,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-aider" class="md-skip">
+        <a href="#quickstart" class="md-skip">
           Skip to content
         </a>
       
@@ -78,10 +80,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="spec2repo" class="md-header__button md-logo" aria-label="spec2repo" data-md-component="logo">
+    <a href=".." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../logo2.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +93,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            spec2repo
+            
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -173,13 +174,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="spec2repo" class="md-nav__button md-logo" aria-label="spec2repo" data-md-component="logo">
+    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../logo2.webp" alt="logo">
 
     </a>
-    spec2repo
+    
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -217,6 +217,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -245,6 +247,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -253,9 +257,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-aider" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Aider
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running an Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Tests
     </span>
   </a>
   
@@ -281,66 +312,6 @@
   
   <span class="md-ellipsis">
     Extending
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../leaderboard/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Leaderboard
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pytests/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Submission Pytests
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../analysis/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Submission Analysis
   </span>
   
 
@@ -386,6 +357,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -394,9 +367,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-aider" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Aider
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running an Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Tests
     </span>
   </a>
   
@@ -417,35 +417,91 @@
                   
 
 
-  <h1>Setup</h1>
-
+<h1 id="quickstart">Quickstart</h1>
+<h2 id="install">Install</h2>
 <p>First be sure that you have docker tools installed.</p>
 <div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>docker
 </code></pre></div>
 <p>To install the benchmark run,</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>spec2repo
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>commit0
 </code></pre></div>
-<p>Then run</p>
-<div class="highlight"><pre><span></span><code>spec2repo<span class="w"> </span>new<span class="w"> </span><span class="nb">local</span>
+<h2 id="commands">Commands</h2>
+<p>The system is a command-line tool that allows you to run unit-tests on a
+variety of libraries in isolated environments. To get started with the full
+setup run the <code>setup</code> command which will install a clone the code of a subset
+of libraries to your <code>repos/</code> directory.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span>setup<span class="w"> </span>lite
 </code></pre></div>
-<p>This will generate a file <code>spec2repo.yml</code> in your project.
-To launch the benchmark suite run</p>
-<div class="highlight"><pre><span></span><code>spec2repo<span class="w"> </span>launch
+<p>Next run the <code>build</code> command which will configure Docker containers for
+each of the libraries with isolated virtual environments. The command uses the
+<a href="https://github.com/astral-sh/uv">uv</a> library for efficient builds.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span>build<span class="w"> </span>lit
 </code></pre></div>
-<p>This will launch a set of docker instances for each of the repos as well as a
-local master.</p>
-<p>Now let's apply a patch to one of our repos:</p>
+<p>The main operation you can do with these enviroments is to run tests.
+Here we run <a href="https://github.com/commit-0/simpy/blob/master/tests/test_event.py#L11">a test</a> in the <code>simpy</code> library.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span><span class="nb">test</span><span class="w"> </span>simpy<span class="w"> </span>tests/test_event.py::test_succeed
+</code></pre></div>
+<p>This test should run and pass, but others will fail.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span><span class="nb">test</span><span class="w"> </span>minitorch<span class="w"> </span>tests/test_operators.py::test_relu
+</code></pre></div>
+<p>Let's now manually go in and change that repo.
+This is all just standard shell commands.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>repos/minitorch/
-git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>first_change
-patch<span class="w"> </span>../../minitorch.example.patch<span class="w"> </span>.
-spec2repo<span class="w"> </span><span class="nb">test</span><span class="w"> </span>minitorch<span class="w"> </span>first_change<span class="w"> </span>test_add
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>mychange
 </code></pre></div>
-<p>This will run the <code>test_add</code> in the MiniTorch Repository and show the results.</p>
-<p>To get your current score on a repository you can run</p>
-<div class="highlight"><pre><span></span><code>spec2repo<span class="w"> </span>score<span class="w"> </span>minitorch
+<p>And apply and commit this patch.</p>
+<div class="highlight"><pre><span></span><code>--- a/minitorch/operators.py
++++ b/minitorch/operators.py
+@@ -81,7 +81,7 @@ def relu(x: float) -&gt; float:
+     (See https://en.wikipedia.org/wiki/Rectifier_(neural_networks) .)
+     &quot;&quot;&quot;
+     # TODO: Implement for Task 0.1.
+-    raise NotImplementedError(&#39;Need to implement for Task 0.1&#39;)
++    return 1. if x &gt; 0. else 0.
 </code></pre></div>
-<h2 id="running-aider">Running Aider</h2>
-<p>...</p>
+<p>Once this is done we can run <code>test</code> with
+a branch and the environment will sync and run.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span><span class="nb">test</span><span class="w"> </span>minitorch<span class="w"> </span><span class="nv">branch</span><span class="o">=</span>mychange<span class="w"> </span>tests/test_operators.py::test_relu
+</code></pre></div>
+<h2 id="running-an-agent">Running an Agent</h2>
+<p>Next we will see how this can be run with an AI agent system.
+We will use <a href="https://aider.chat/">Aider</a> which is a nice
+command-line oriented agent system.</p>
+<p>To setup Aider first set your api key.
+We recommend using Claude Sonnet.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Work with Claude 3.5 Sonnet on your repo</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>your-key-goes-here
+</code></pre></div>
+<p>Once this is setup you can run Aider with the following command.
+This will edit the files locally in your branch, but
+run the tests inside the environment.</p>
+<div class="highlight"><pre><span></span><code>aider<span class="w"> </span>--model<span class="w"> </span>sonnet<span class="w"> </span>--file<span class="w"> </span>repos/minitorch/operators.py<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;fill in&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--auto-test<span class="w"> </span>--test<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--test-cmd<span class="w"> </span><span class="s1">&#39;commit0 test minitorch branch=mychange tests/test_operators.py::test_relu&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--yes
+</code></pre></div>
+<p>This will run an LLM agent that will try to fill in the
+functions in one file of the minitorch library.</p>
+<p>For a full example baseline system that tries to solve
+all the tests in the library see the <a href="baseline">baseline</a> documentation.</p>
+<h2 id="distributed-tests">Distributed Tests</h2>
+<p>One of the main advantages of <code>commit0</code> is that it can run
+a range of unit tests in distributed environments.</p>
+<p>By default, the library is configured to work with <a href="https://modal.com/">modal</a>.</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>modal
+modal<span class="w"> </span>token<span class="w"> </span>new
+</code></pre></div>
+<p>To enable distributed run, first
+create a file called <code>distributed.yaml</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modal</span>
+<span class="nt">base_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repos.dist/</span>
+</code></pre></div>
+<p>You can pass this configuration file as an argumnet to clone.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span>clone<span class="w"> </span>lite<span class="w"> </span>--cfg<span class="o">=</span>distributed.yaml
+</code></pre></div>
+<p>Next to run tests you can run the standard test command.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span><span class="nb">test</span><span class="w"> </span>simpy<span class="w"> </span>master<span class="w"> </span>tests/test_event.py::test_succeed<span class="w"> </span>--cfg<span class="o">=</span>distributed.yaml
+</code></pre></div>
 
 
 
@@ -492,16 +548,10 @@ spec2repo<span class="w"> </span><span class="nb">test</span><span class="w"> </
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
-      
-        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-      
-        <script src="../javascripts/tablesort.js"></script>
-      
-        <script src="../javascripts/button_select.js"></script>
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
       
     
   </body>

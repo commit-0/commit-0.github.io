@@ -1,0 +1,325 @@
+diff --git a/deprecated/classic.py b/deprecated/classic.py
+index fc9af25..6ca3f27 100644
+--- a/deprecated/classic.py
++++ b/deprecated/classic.py
+@@ -1,3 +1,4 @@
++# -*- coding: utf-8 -*-
+ """
+ Classic deprecation warning
+ ===========================
+@@ -10,18 +11,25 @@ import functools
+ import inspect
+ import platform
+ import warnings
++
+ import wrapt
++
+ try:
++    # If the C extension for wrapt was compiled and wrapt/_wrappers.pyd exists, then the
++    # stack level that should be passed to warnings.warn should be 2. However, if using
++    # a pure python wrapt, a extra stacklevel is required.
+     import wrapt._wrappers
++
+     _routine_stacklevel = 2
+     _class_stacklevel = 2
+ except ImportError:
+     _routine_stacklevel = 3
+-    if platform.python_implementation() == 'PyPy':
++    if platform.python_implementation() == "PyPy":
+         _class_stacklevel = 2
+     else:
+         _class_stacklevel = 3
+-string_types = type(b''), type(u'')
++
++string_types = (type(b''), type(u''))
+ 
+ 
+ class ClassicAdapter(wrapt.AdapterFactory):
+@@ -75,8 +83,7 @@ class ClassicAdapter(wrapt.AdapterFactory):
+            return x + y
+     """
+ 
+-    def __init__(self, reason='', version='', action=None, category=
+-        DeprecationWarning):
++    def __init__(self, reason="", version="", action=None, category=DeprecationWarning):
+         """
+         Construct a wrapper adapter.
+ 
+@@ -103,8 +110,8 @@ class ClassicAdapter(wrapt.AdapterFactory):
+             By default, the category class is :class:`~DeprecationWarning`,
+             you can inherit this class to define your own deprecation warning category.
+         """
+-        self.reason = reason or ''
+-        self.version = version or ''
++        self.reason = reason or ""
++        self.version = version or ""
+         self.action = action
+         self.category = category
+         super(ClassicAdapter, self).__init__()
+@@ -119,7 +126,21 @@ class ClassicAdapter(wrapt.AdapterFactory):
+ 
+         :return: The warning message.
+         """
+-        pass
++        if instance is None:
++            if inspect.isclass(wrapped):
++                fmt = "Call to deprecated class {name}."
++            else:
++                fmt = "Call to deprecated function (or staticmethod) {name}."
++        else:
++            if inspect.isclass(instance):
++                fmt = "Call to deprecated class method {name}."
++            else:
++                fmt = "Call to deprecated method {name}."
++        if self.reason:
++            fmt += " ({reason})"
++        if self.version:
++            fmt += " -- Deprecated since version {version}."
++        return fmt.format(name=wrapped.__name__, reason=self.reason or "", version=self.version or "")
+ 
+     def __call__(self, wrapped):
+         """
+@@ -143,15 +164,16 @@ class ClassicAdapter(wrapt.AdapterFactory):
+                 if self.action:
+                     with warnings.catch_warnings():
+                         warnings.simplefilter(self.action, self.category)
+-                        warnings.warn(msg, category=self.category,
+-                            stacklevel=_class_stacklevel)
++                        warnings.warn(msg, category=self.category, stacklevel=_class_stacklevel)
+                 else:
+-                    warnings.warn(msg, category=self.category, stacklevel=
+-                        _class_stacklevel)
++                    warnings.warn(msg, category=self.category, stacklevel=_class_stacklevel)
+                 if old_new1 is object.__new__:
+                     return old_new1(cls)
++                # actually, we don't know the real signature of *old_new1*
+                 return old_new1(cls, *args, **kwargs)
++
+             wrapped.__new__ = staticmethod(wrapped_cls)
++
+         return wrapped
+ 
+ 
+@@ -231,4 +253,40 @@ def deprecated(*args, **kwargs):
+            return x + y
+ 
+     """
+-    pass
++    if args and isinstance(args[0], string_types):
++        kwargs['reason'] = args[0]
++        args = args[1:]
++
++    if args and not callable(args[0]):
++        raise TypeError(repr(type(args[0])))
++
++    if args:
++        action = kwargs.get('action')
++        category = kwargs.get('category', DeprecationWarning)
++        adapter_cls = kwargs.pop('adapter_cls', ClassicAdapter)
++        adapter = adapter_cls(**kwargs)
++
++        wrapped = args[0]
++        if inspect.isclass(wrapped):
++            wrapped = adapter(wrapped)
++            return wrapped
++
++        elif inspect.isroutine(wrapped):
++
++            @wrapt.decorator(adapter=adapter)
++            def wrapper_function(wrapped_, instance_, args_, kwargs_):
++                msg = adapter.get_deprecated_msg(wrapped_, instance_)
++                if action:
++                    with warnings.catch_warnings():
++                        warnings.simplefilter(action, category)
++                        warnings.warn(msg, category=category, stacklevel=_routine_stacklevel)
++                else:
++                    warnings.warn(msg, category=category, stacklevel=_routine_stacklevel)
++                return wrapped_(*args_, **kwargs_)
++
++            return wrapper_function(wrapped)
++
++        else:
++            raise TypeError(repr(type(wrapped)))
++
++    return functools.partial(deprecated, **kwargs)
+diff --git a/deprecated/sphinx.py b/deprecated/sphinx.py
+index 6daf81f..7e717fb 100644
+--- a/deprecated/sphinx.py
++++ b/deprecated/sphinx.py
+@@ -1,3 +1,4 @@
++# coding: utf-8
+ """
+ Sphinx directive integration
+ ============================
+@@ -20,7 +21,9 @@ when the function/method is called or the class is constructed.
+ """
+ import re
+ import textwrap
++
+ import wrapt
++
+ from deprecated.classic import ClassicAdapter
+ from deprecated.classic import deprecated as _classic_deprecated
+ 
+@@ -38,8 +41,15 @@ class SphinxAdapter(ClassicAdapter):
+     - The reason message is obviously added in the directive block if not empty.
+     """
+ 
+-    def __init__(self, directive, reason='', version='', action=None,
+-        category=DeprecationWarning, line_length=70):
++    def __init__(
++        self,
++        directive,
++        reason="",
++        version="",
++        action=None,
++        category=DeprecationWarning,
++        line_length=70,
++    ):
+         """
+         Construct a wrapper adapter.
+ 
+@@ -75,12 +85,11 @@ class SphinxAdapter(ClassicAdapter):
+             Max line length of the directive text. If non nul, a long text is wrapped in several lines.
+         """
+         if not version:
+-            raise ValueError(
+-                "'version' argument is required in Sphinx directives")
++            # https://github.com/tantale/deprecated/issues/40
++            raise ValueError("'version' argument is required in Sphinx directives")
+         self.directive = directive
+         self.line_length = line_length
+-        super(SphinxAdapter, self).__init__(reason=reason, version=version,
+-            action=action, category=category)
++        super(SphinxAdapter, self).__init__(reason=reason, version=version, action=action, category=category)
+ 
+     def __call__(self, wrapped):
+         """
+@@ -90,32 +99,42 @@ class SphinxAdapter(ClassicAdapter):
+ 
+         :return: the decorated class or function.
+         """
+-        fmt = ('.. {directive}:: {version}' if self.version else
+-            '.. {directive}::')
+-        div_lines = [fmt.format(directive=self.directive, version=self.version)
+-            ]
++        # -- build the directive division
++        fmt = ".. {directive}:: {version}" if self.version else ".. {directive}::"
++        div_lines = [fmt.format(directive=self.directive, version=self.version)]
+         width = self.line_length - 3 if self.line_length > 3 else 2 ** 16
+         reason = textwrap.dedent(self.reason).strip()
+         for paragraph in reason.splitlines():
+             if paragraph:
+-                div_lines.extend(textwrap.fill(paragraph, width=width,
+-                    initial_indent='   ', subsequent_indent='   ').splitlines()
+-                    )
++                div_lines.extend(
++                    textwrap.fill(
++                        paragraph,
++                        width=width,
++                        initial_indent="   ",
++                        subsequent_indent="   ",
++                    ).splitlines()
++                )
+             else:
+-                div_lines.append('')
+-        docstring = wrapped.__doc__ or ''
+-        lines = docstring.splitlines(keepends=True) or ['']
+-        docstring = textwrap.dedent(''.join(lines[1:])) if len(lines
+-            ) > 1 else ''
++                div_lines.append("")
++
++        # -- get the docstring, normalize the trailing newlines
++        # keep a consistent behaviour if the docstring starts with newline or directly on the first one
++        docstring = wrapped.__doc__ or ""
++        lines = docstring.splitlines(keepends=True) or [""]
++        docstring = textwrap.dedent("".join(lines[1:])) if len(lines) > 1 else ""
+         docstring = lines[0] + docstring
+         if docstring:
+-            docstring = re.sub('\\n+$', '', docstring, flags=re.DOTALL
+-                ) + '\n\n'
++            # An empty line must separate the original docstring and the directive.
++            docstring = re.sub(r"\n+$", "", docstring, flags=re.DOTALL) + "\n\n"
+         else:
+-            docstring = '\n'
+-        docstring += ''.join('{}\n'.format(line) for line in div_lines)
++            # Avoid "Explicit markup ends without a blank line" when the decorated function has no docstring
++            docstring = "\n"
++
++        # -- append the directive division to the docstring
++        docstring += "".join("{}\n".format(line) for line in div_lines)
++
+         wrapped.__doc__ = docstring
+-        if self.directive in {'versionadded', 'versionchanged'}:
++        if self.directive in {"versionadded", "versionchanged"}:
+             return wrapped
+         return super(SphinxAdapter, self).__call__(wrapped)
+ 
+@@ -133,10 +152,15 @@ class SphinxAdapter(ClassicAdapter):
+            Strip Sphinx cross-referencing syntax from warning message.
+ 
+         """
+-        pass
++        msg = super(SphinxAdapter, self).get_deprecated_msg(wrapped, instance)
++        # Strip Sphinx cross reference syntax (like ":function:", ":py:func:" and ":py:meth:")
++        # Possible values are ":role:`foo`", ":domain:role:`foo`"
++        # where ``role`` and ``domain`` should match "[a-zA-Z]+"
++        msg = re.sub(r"(?: : [a-zA-Z]+ )? : [a-zA-Z]+ : (`[^`]*`)", r"\1", msg, flags=re.X)
++        return msg
+ 
+ 
+-def versionadded(reason='', version='', line_length=70):
++def versionadded(reason="", version="", line_length=70):
+     """
+     This decorator can be used to insert a "versionadded" directive
+     in your function/class docstring in order to documents the
+@@ -157,10 +181,16 @@ def versionadded(reason='', version='', line_length=70):
+ 
+     :return: the decorated function.
+     """
+-    pass
++    adapter = SphinxAdapter(
++        'versionadded',
++        reason=reason,
++        version=version,
++        line_length=line_length,
++    )
++    return adapter
+ 
+ 
+-def versionchanged(reason='', version='', line_length=70):
++def versionchanged(reason="", version="", line_length=70):
+     """
+     This decorator can be used to insert a "versionchanged" directive
+     in your function/class docstring in order to documents the
+@@ -180,10 +210,16 @@ def versionchanged(reason='', version='', line_length=70):
+ 
+     :return: the decorated function.
+     """
+-    pass
++    adapter = SphinxAdapter(
++        'versionchanged',
++        reason=reason,
++        version=version,
++        line_length=line_length,
++    )
++    return adapter
+ 
+ 
+-def deprecated(reason='', version='', line_length=70, **kwargs):
++def deprecated(reason="", version="", line_length=70, **kwargs):
+     """
+     This decorator can be used to insert a "deprecated" directive
+     in your function/class docstring in order to documents the
+@@ -218,4 +254,9 @@ def deprecated(reason='', version='', line_length=70, **kwargs):
+     .. versionchanged:: 1.2.13
+        Change the signature of the decorator to reflect the valid use cases.
+     """
+-    pass
++    directive = kwargs.pop('directive', 'deprecated')
++    adapter_cls = kwargs.pop('adapter_cls', SphinxAdapter)
++    kwargs["reason"] = reason
++    kwargs["version"] = version
++    kwargs["line_length"] = line_length
++    return _classic_deprecated(directive=directive, adapter_cls=adapter_cls, **kwargs)
+

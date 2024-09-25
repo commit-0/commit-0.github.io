@@ -9,8 +9,6 @@
       
       
       
-        <link rel="prev" href="../repos/">
-      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +16,7 @@
     
     
       
-        <title>About - </title>
+        <title>Distributed - </title>
       
     
     
@@ -61,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#distributed" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Distributed
             
           </span>
         </div>
@@ -241,17 +244,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -260,7 +256,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -282,6 +277,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modal-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modal Setup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -296,9 +310,25 @@
                   
 
 
-  <h1>About</h1>
-
-<p>Commit0 is ..</p>
+<h1 id="distributed">Distributed</h1>
+<p>One of the main advantages of <code>commit0</code> is that it can run
+a range of unit tests in distributed environments.</p>
+<p>By default, the library is configured to work with <a href="https://modal.com/">modal</a>.</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>modal
+modal<span class="w"> </span>token<span class="w"> </span>new
+</code></pre></div>
+<h2 id="modal-setup">Modal Setup</h2>
+<p>To enable distributed run, first
+create a file called <code>distributed.yaml</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modal</span>
+<span class="nt">base_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repos.dist/</span>
+</code></pre></div>
+<p>You can pass this configuration file as an argumnet to clone.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span>clone<span class="w"> </span>lite<span class="w"> </span>--cfg<span class="o">=</span>distributed
+</code></pre></div>
+<p>Next to run tests you can run the standard test command.</p>
+<div class="highlight"><pre><span></span><code>commit0<span class="w"> </span><span class="nb">test</span><span class="w"> </span>simpy<span class="w"> </span>master<span class="w"> </span>tests/test_event.py::test_succeed<span class="w"> </span>--cfg<span class="o">=</span>distributed
+</code></pre></div>
 
 
 
