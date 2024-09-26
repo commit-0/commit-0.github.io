@@ -207,12 +207,12 @@ def render_mds(subfolder="docs"):
                         f"""\n\n## Patch diff\n```diff\n{pytest_info['patch_diff']}```"""
                     )
                     if "failed_to_run" in pytest_info:
-                        submission_repo_page += f"""\n## Failed to run pytests\n```\n{pytest_info['failed_to_run']}\n```"""
+                        submission_repo_page += f"""\n## Failed to run pytests for test `{pytest_group}`\n```\n{pytest_info['failed_to_run']}\n```"""
                         resolved = False
                         pytest_details = "Pytest failed"
                         duration = "Failed."
                     else:
-                        submission_repo_page += """\n## Pytest Summary
+                        submission_repo_page += f"""\n## Pytest Summary for test `{pytest_group}`
 | status   | count |
 |:---------|:-----:|
 """
@@ -226,7 +226,7 @@ def render_mds(subfolder="docs"):
                                     f"""| {category} | {float(count):.2f}s |\n"""
                                 )
 
-                        submission_repo_page += "\n## Failed pytest:\n\n"
+                        submission_repo_page += "\n## Failed pytests:\n\n"
                         for testname, failure in pytest_info["failures"].items():
                             shortened_testname = os.path.basename(testname)
                             submission_repo_page += (
@@ -436,7 +436,6 @@ def main(args):
                 submission_details[repo_name] = pytest_results
             json.dump(submission_details, open(submission_metrics_output_file, "w"), indent=4)
             print(f"Saved pytest info to {submission_metrics_output_file}")
-            break
 
     if not args.keep_previous_eval:
         for analysis_file in glob.glob("docs/analysis*.md"):
