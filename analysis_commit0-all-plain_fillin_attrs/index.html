@@ -1,0 +1,1330 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin attrs - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-attrs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin attrs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-attrs"><strong>Claude Sonnet 3.5 - Fill-in</strong>: attrs</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
+  File &quot;/testbed/.venv/bin/pytest&quot;, line 8, in &lt;module&gt;
+    sys.exit(console_main())
+             ^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 201, in console_main
+    code = main()
+           ^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 156, in main
+    config = _prepareconfig(args, plugins)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 341, in _prepareconfig
+    config = pluginmanager.hook.pytest_cmdline_parse(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_hooks.py&quot;, line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py&quot;, line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py&quot;, line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py&quot;, line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/helpconfig.py&quot;, line 105, in pytest_cmdline_parse
+    config = yield
+             ^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py&quot;, line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 1140, in pytest_cmdline_parse
+    self.parse(args)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 1494, in parse
+    self._preparse(args, addopts=addopts)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 1381, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints(&quot;pytest11&quot;)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py&quot;, line 421, in load_setuptools_entrypoints
+    plugin = ep.load()
+             ^^^^^^^^^
+  File &quot;/root/.local/share/uv/python/cpython-3.12.6-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py&quot;, line 205, in load
+    module = import_module(match.group(&#39;module&#39;))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/root/.local/share/uv/python/cpython-3.12.6-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py&quot;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1387, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1360, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1331, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 935, in _load_unlocked
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py&quot;, line 184, in exec_module
+    exec(co, module.__dict__)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pytest_mypy_plugins/collect.py&quot;, line 20, in &lt;module&gt;
+    import jsonschema
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/jsonschema/__init__.py&quot;, line 13, in &lt;module&gt;
+    from jsonschema._format import FormatChecker
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/jsonschema/_format.py&quot;, line 11, in &lt;module&gt;
+    from jsonschema.exceptions import FormatError
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/jsonschema/exceptions.py&quot;, line 14, in &lt;module&gt;
+    from attrs import define
+  File &quot;/testbed/src/attrs/__init__.py&quot;, line 3, in &lt;module&gt;
+    from attr import (
+  File &quot;/testbed/src/attr/__init__.py&quot;, line 10, in &lt;module&gt;
+    from . import converters, exceptions, filters, setters, validators
+  File &quot;/testbed/src/attr/converters.py&quot;, line 6, in &lt;module&gt;
+    from ._make import NOTHING, Factory, pipe
+  File &quot;/testbed/src/attr/_make.py&quot;, line 725, in &lt;module&gt;
+    _a = [Attribute(name=name, default=NOTHING, validator=None, repr=True, cmp=
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/src/attr/_make.py&quot;, line 673, in __init__
+    eq, eq_key, order, order_key = _determine_attrib_eq_order(cmp, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/attr/_cmp.py b/src/attr/_cmp.py</span>
+<span class="gh">index 875bde6..577859d 100644</span>
+<span class="gd">--- a/src/attr/_cmp.py</span>
+<span class="gi">+++ b/src/attr/_cmp.py</span>
+<span class="gu">@@ -43,32 +43,67 @@ def cmp_using(eq=None, lt=None, le=None, gt=None, ge=None,</span>
+
+<span class="w"> </span>    .. versionadded:: 21.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def _make_method(op):</span>
+<span class="gi">+        def method(self, other):</span>
+<span class="gi">+            if require_same_type and not isinstance(other, type(self)):</span>
+<span class="gi">+                return NotImplemented</span>
+<span class="gi">+            return op(self.value, other.value)</span>
+<span class="gi">+        return method</span>
+<span class="gi">+</span>
+<span class="gi">+    class Comparable:</span>
+<span class="gi">+        __slots__ = (&#39;value&#39;,)</span>
+<span class="gi">+</span>
+<span class="gi">+        def __init__(self, value):</span>
+<span class="gi">+            self.value = value</span>
+<span class="gi">+</span>
+<span class="gi">+        if eq is not None:</span>
+<span class="gi">+            __eq__ = _make_method(eq)</span>
+<span class="gi">+        if lt is not None:</span>
+<span class="gi">+            __lt__ = _make_method(lt)</span>
+<span class="gi">+        if le is not None:</span>
+<span class="gi">+            __le__ = _make_method(le)</span>
+<span class="gi">+        if gt is not None:</span>
+<span class="gi">+            __gt__ = _make_method(gt)</span>
+<span class="gi">+        if ge is not None:</span>
+<span class="gi">+            __ge__ = _make_method(ge)</span>
+<span class="gi">+</span>
+<span class="gi">+        if eq is not None:</span>
+<span class="gi">+            __ne__ = _make_ne(__eq__)</span>
+<span class="gi">+</span>
+<span class="gi">+    Comparable.__name__ = class_name</span>
+<span class="gi">+    return Comparable</span>
+
+
+<span class="w"> </span>def _make_init():
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Create __init__ method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, value):</span>
+<span class="gi">+        self.value = value</span>
+<span class="gi">+    return __init__</span>
+
+
+<span class="w"> </span>def _make_operator(name, func):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Create operator method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def method(self, other):</span>
+<span class="gi">+        if not _is_comparable_to(self, other):</span>
+<span class="gi">+            return NotImplemented</span>
+<span class="gi">+        return func(self.value, other.value)</span>
+<span class="gi">+    method.__name__ = f&#39;__{name}__&#39;</span>
+<span class="gi">+    return method</span>
+
+
+<span class="w"> </span>def _is_comparable_to(self, other):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Check whether `other` is comparable to `self`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(other, type(self))</span>
+
+
+<span class="w"> </span>def _check_same_type(self, other):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Return True if *self* and *other* are of the same type, False otherwise.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(other, type(self))</span>
+<span class="gh">diff --git a/src/attr/_compat.py b/src/attr/_compat.py</span>
+<span class="gh">index 1afacff..a784ac1 100644</span>
+<span class="gd">--- a/src/attr/_compat.py</span>
+<span class="gi">+++ b/src/attr/_compat.py</span>
+<span class="gu">@@ -28,7 +28,7 @@ else:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Get annotations for *cls*.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return getattr(cls, &#39;__annotations__&#39;, {})</span>
+
+
+<span class="w"> </span>class _AnnotationExtractor:
+<span class="gu">@@ -48,13 +48,21 @@ class _AnnotationExtractor:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Return the type annotation of the first argument if it&#39;s not empty.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.sig is None:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        params = list(self.sig.parameters.values())</span>
+<span class="gi">+        if not params:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        first_param = params[0]</span>
+<span class="gi">+        return first_param.annotation if first_param.annotation != inspect.Parameter.empty else None</span>
+
+<span class="w"> </span>    def get_return_type(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Return the return type if it&#39;s not empty.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.sig is None:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        return self.sig.return_annotation if self.sig.return_annotation != inspect.Signature.empty else None</span>
+
+
+<span class="w"> </span>repr_context = threading.local()
+<span class="gu">@@ -62,4 +70,6 @@ repr_context = threading.local()</span>
+
+<span class="w"> </span>def get_generic_base(cl):
+<span class="w"> </span>    &quot;&quot;&quot;If this is a generic class (A[str]), return the generic base for it.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(cl, _GenericAlias):</span>
+<span class="gi">+        return cl.__origin__</span>
+<span class="gi">+    return None</span>
+<span class="gh">diff --git a/src/attr/_config.py b/src/attr/_config.py</span>
+<span class="gh">index cfa2d9b..a04e731 100644</span>
+<span class="gd">--- a/src/attr/_config.py</span>
+<span class="gi">+++ b/src/attr/_config.py</span>
+<span class="gu">@@ -10,7 +10,8 @@ def set_run_validators(run):</span>
+<span class="w"> </span>        moved to new ``attrs`` namespace. Use `attrs.validators.set_disabled()`
+<span class="w"> </span>        instead.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    global _run_validators</span>
+<span class="gi">+    _run_validators = run</span>
+
+
+<span class="w"> </span>def get_run_validators():
+<span class="gu">@@ -21,4 +22,4 @@ def get_run_validators():</span>
+<span class="w"> </span>        moved to new ``attrs`` namespace. Use `attrs.validators.get_disabled()`
+<span class="w"> </span>        instead.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _run_validators</span>
+<span class="gh">diff --git a/src/attr/_funcs.py b/src/attr/_funcs.py</span>
+<span class="gh">index 4c9728a..68e894d 100644</span>
+<span class="gd">--- a/src/attr/_funcs.py</span>
+<span class="gi">+++ b/src/attr/_funcs.py</span>
+<span class="gu">@@ -50,7 +50,27 @@ def asdict(inst, recurse=True, filter=None, dict_factory=dict,</span>
+<span class="w"> </span>    ..  versionadded:: 21.3.0
+<span class="w"> </span>        If a dict has a collection for a key, it is serialized as a tuple.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    attrs = fields(inst.__class__)</span>
+<span class="gi">+    rv = dict_factory()</span>
+<span class="gi">+    for a in attrs:</span>
+<span class="gi">+        v = getattr(inst, a.name)</span>
+<span class="gi">+        if filter is not None and not filter(a, v):</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if value_serializer is not None:</span>
+<span class="gi">+            v = value_serializer(inst, a, v)</span>
+<span class="gi">+        if recurse:</span>
+<span class="gi">+            if has(v.__class__):</span>
+<span class="gi">+                v = asdict(v, recurse=True, filter=filter, dict_factory=dict_factory,</span>
+<span class="gi">+                           retain_collection_types=retain_collection_types,</span>
+<span class="gi">+                           value_serializer=value_serializer)</span>
+<span class="gi">+            elif isinstance(v, (tuple, list, set, frozenset)):</span>
+<span class="gi">+                v = _asdict_anything(v, False, filter, dict_factory,</span>
+<span class="gi">+                                     retain_collection_types, value_serializer)</span>
+<span class="gi">+            elif isinstance(v, dict):</span>
+<span class="gi">+                v = _asdict_anything(v, True, filter, dict_factory,</span>
+<span class="gi">+                                     retain_collection_types, value_serializer)</span>
+<span class="gi">+        rv[a.name] = v</span>
+<span class="gi">+    return rv</span>
+
+
+<span class="w"> </span>def _asdict_anything(val, is_key, filter, dict_factory,
+<span class="gu">@@ -58,7 +78,21 @@ def _asdict_anything(val, is_key, filter, dict_factory,</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    ``asdict`` only works on attrs instances, this works on anything.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(val, dict):</span>
+<span class="gi">+        return dict_factory((</span>
+<span class="gi">+            _asdict_anything(k, True, filter, dict_factory, retain_collection_types, value_serializer),</span>
+<span class="gi">+            _asdict_anything(v, False, filter, dict_factory, retain_collection_types, value_serializer)</span>
+<span class="gi">+        ) for k, v in val.items())</span>
+<span class="gi">+    elif isinstance(val, (list, tuple)) and not (retain_collection_types and isinstance(val, tuple)):</span>
+<span class="gi">+        return [_asdict_anything(i, is_key, filter, dict_factory, retain_collection_types, value_serializer) for i in val]</span>
+<span class="gi">+    elif isinstance(val, set) and not retain_collection_types:</span>
+<span class="gi">+        return [_asdict_anything(i, is_key, filter, dict_factory, retain_collection_types, value_serializer) for i in val]</span>
+<span class="gi">+    elif has(val.__class__):</span>
+<span class="gi">+        return asdict(val, filter=filter, dict_factory=dict_factory,</span>
+<span class="gi">+                      retain_collection_types=retain_collection_types,</span>
+<span class="gi">+                      value_serializer=value_serializer)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return val</span>
+
+
+<span class="w"> </span>def astuple(inst, recurse=True, filter=None, tuple_factory=tuple,
+<span class="gu">@@ -98,7 +132,22 @@ def astuple(inst, recurse=True, filter=None, tuple_factory=tuple,</span>
+
+<span class="w"> </span>    ..  versionadded:: 16.2.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    attrs = fields(inst.__class__)</span>
+<span class="gi">+    rv = []</span>
+<span class="gi">+    for a in attrs:</span>
+<span class="gi">+        v = getattr(inst, a.name)</span>
+<span class="gi">+        if filter is not None and not filter(a, v):</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if recurse:</span>
+<span class="gi">+            if has(v.__class__):</span>
+<span class="gi">+                v = astuple(v, recurse=True, filter=filter, tuple_factory=tuple_factory,</span>
+<span class="gi">+                            retain_collection_types=retain_collection_types)</span>
+<span class="gi">+            elif isinstance(v, (tuple, list, set, frozenset)):</span>
+<span class="gi">+                v = _astuple_anything(v, filter, tuple_factory, retain_collection_types)</span>
+<span class="gi">+            elif isinstance(v, dict):</span>
+<span class="gi">+                v = _astuple_anything(v.items(), filter, tuple_factory, retain_collection_types)</span>
+<span class="gi">+        rv.append(v)</span>
+<span class="gi">+    return tuple_factory(rv)</span>
+
+
+<span class="w"> </span>def has(cls):
+<span class="gu">@@ -114,7 +163,9 @@ def has(cls):</span>
+<span class="w"> </span>    Returns:
+<span class="w"> </span>        bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(cls, type):</span>
+<span class="gi">+        raise TypeError(&quot;has() requires a class&quot;)</span>
+<span class="gi">+    return hasattr(cls, &quot;__attrs_attrs__&quot;)</span>
+
+
+<span class="w"> </span>def assoc(inst, **changes):
+<span class="gu">@@ -149,7 +200,16 @@ def assoc(inst, **changes):</span>
+<span class="w"> </span>        removed du to the slightly different approach compared to
+<span class="w"> </span>        `attrs.evolve`, though.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import warnings</span>
+<span class="gi">+    warnings.warn(&quot;assoc is deprecated, use attrs.evolve instead.&quot;, DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+    </span>
+<span class="gi">+    new_inst = copy.deepcopy(inst)</span>
+<span class="gi">+    attrs = fields(inst.__class__)</span>
+<span class="gi">+    for attr_name, new_value in changes.items():</span>
+<span class="gi">+        if not any(a.name == attr_name for a in attrs):</span>
+<span class="gi">+            raise AttrsAttributeNotFoundError(f&quot;&#39;{attr_name}&#39; is not an attrs attribute on {inst.__class__}&quot;)</span>
+<span class="gi">+        setattr(new_inst, attr_name, new_value)</span>
+<span class="gi">+    return new_inst</span>
+
+
+<span class="w"> </span>def evolve(*args, **changes):
+<span class="gu">@@ -185,7 +245,18 @@ def evolve(*args, **changes):</span>
+<span class="w"> </span>    .. versionchanged:: 24.1.0
+<span class="w"> </span>       *inst* can&#39;t be passed as a keyword argument anymore.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not args:</span>
+<span class="gi">+        raise TypeError(&quot;evolve() missing 1 required positional argument: &#39;inst&#39;&quot;)</span>
+<span class="gi">+    inst = args[0]</span>
+<span class="gi">+    if not has(inst.__class__):</span>
+<span class="gi">+        raise NotAnAttrsClassError(f&quot;{inst.__class__.__name__} is not an attrs-decorated class.&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    new_inst = copy.deepcopy(inst)</span>
+<span class="gi">+    for attr_name, new_value in changes.items():</span>
+<span class="gi">+        if not hasattr(new_inst, attr_name):</span>
+<span class="gi">+            raise TypeError(f&quot;&#39;{attr_name}&#39; is not an initialization argument for {inst.__class__.__name__}&quot;)</span>
+<span class="gi">+        setattr(new_inst, attr_name, new_value)</span>
+<span class="gi">+    return new_inst</span>
+
+
+<span class="w"> </span>def resolve_types(cls, globalns=None, localns=None, attribs=None,
+<span class="gu">@@ -238,4 +309,20 @@ def resolve_types(cls, globalns=None, localns=None, attribs=None,</span>
+<span class="w"> </span>    ..  versionadded:: 21.1.0 *attribs*
+<span class="w"> </span>    ..  versionadded:: 23.1.0 *include_extras*
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import typing</span>
+<span class="gi">+    </span>
+<span class="gi">+    if not isinstance(cls, type):</span>
+<span class="gi">+        raise TypeError(&quot;resolve_types() requires a class.&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if attribs is None:</span>
+<span class="gi">+        if not has(cls):</span>
+<span class="gi">+            raise NotAnAttrsClassError(f&quot;{cls.__name__} is not an attrs-decorated class.&quot;)</span>
+<span class="gi">+        attribs = fields(cls)</span>
+<span class="gi">+    </span>
+<span class="gi">+    hints = typing.get_type_hints(cls, globalns=globalns, localns=localns, include_extras=include_extras)</span>
+<span class="gi">+    </span>
+<span class="gi">+    for a in attribs:</span>
+<span class="gi">+        if a.name in hints:</span>
+<span class="gi">+            a.type = hints[a.name]</span>
+<span class="gi">+    </span>
+<span class="gi">+    return cls</span>
+<span class="gh">diff --git a/src/attr/_make.py b/src/attr/_make.py</span>
+<span class="gh">index f3ed380..7775983 100644</span>
+<span class="gd">--- a/src/attr/_make.py</span>
+<span class="gi">+++ b/src/attr/_make.py</span>
+<span class="gu">@@ -114,14 +114,19 @@ def _compile_and_eval(script, globs, locs=None, filename=&#39;&#39;):</span>
+<span class="w"> </span>    Evaluate the script with the given global (globs) and local (locs)
+<span class="w"> </span>    variables.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if locs is None:</span>
+<span class="gi">+        locs = {}</span>
+<span class="gi">+    code = compile(script, filename, &#39;exec&#39;)</span>
+<span class="gi">+    eval(code, globs, locs)</span>
+<span class="gi">+    return locs</span>
+
+
+<span class="w"> </span>def _make_method(name, script, filename, globs, locals=None):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Create the method with the script given and return the method object.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    locs = _compile_and_eval(script, globs, locals, filename)</span>
+<span class="gi">+    return locs[name]</span>
+
+
+<span class="w"> </span>def _make_attr_tuple_class(cls_name, attr_names):
+<span class="gu">@@ -134,7 +139,12 @@ def _make_attr_tuple_class(cls_name, attr_names):</span>
+<span class="w"> </span>        __slots__ = ()
+<span class="w"> </span>        x = property(itemgetter(0))
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    attr_class_name = f&quot;{cls_name}Attributes&quot;</span>
+<span class="gi">+    attr_class_body = {</span>
+<span class="gi">+        &quot;__slots__&quot;: (),</span>
+<span class="gi">+        **{name: property(itemgetter(index)) for index, name in enumerate(attr_names)}</span>
+<span class="gi">+    }</span>
+<span class="gi">+    return type(attr_class_name, (tuple,), attr_class_body)</span>
+
+
+<span class="w"> </span>_Attributes = _make_attr_tuple_class(&#39;_Attributes&#39;, [&#39;attrs&#39;, &#39;base_attrs&#39;,
+<span class="gu">@@ -149,14 +159,16 @@ def _is_class_var(annot):</span>
+<span class="w"> </span>    annotations which would put attrs-based classes at a performance
+<span class="w"> </span>    disadvantage compared to plain old classes.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return (isinstance(annot, str) and any(</span>
+<span class="gi">+        annot.startswith(cls_var) for cls_var in _CLASSVAR_PREFIXES</span>
+<span class="gi">+    )) or (not isinstance(annot, str) and getattr(annot, &quot;__origin__&quot;, None) is typing.ClassVar)</span>
+
+
+<span class="w"> </span>def _has_own_attribute(cls, attrib_name):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Check whether *cls* defines *attrib_name* (and doesn&#39;t just inherit it).
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return attrib_name in cls.__dict__</span>
+
+
+<span class="w"> </span>def _collect_base_attrs(cls, taken_attr_names):
+<span class="gh">diff --git a/src/attr/_next_gen.py b/src/attr/_next_gen.py</span>
+<span class="gh">index 067dc2f..89888b6 100644</span>
+<span class="gd">--- a/src/attr/_next_gen.py</span>
+<span class="gi">+++ b/src/attr/_next_gen.py</span>
+<span class="gu">@@ -313,7 +313,32 @@ def define(maybe_cls=None, *, these=None, repr=None, unsafe_hash=None, hash</span>
+<span class="w"> </span>          for backwards-compatibility have been removed.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def wrap(cls):</span>
+<span class="gi">+        return attrs(</span>
+<span class="gi">+            maybe_cls=cls,</span>
+<span class="gi">+            these=these,</span>
+<span class="gi">+            repr=repr,</span>
+<span class="gi">+            unsafe_hash=unsafe_hash,</span>
+<span class="gi">+            hash=hash,</span>
+<span class="gi">+            init=init,</span>
+<span class="gi">+            slots=slots,</span>
+<span class="gi">+            frozen=frozen,</span>
+<span class="gi">+            weakref_slot=weakref_slot,</span>
+<span class="gi">+            str=str,</span>
+<span class="gi">+            auto_attribs=auto_attribs,</span>
+<span class="gi">+            kw_only=kw_only,</span>
+<span class="gi">+            cache_hash=cache_hash,</span>
+<span class="gi">+            auto_exc=auto_exc,</span>
+<span class="gi">+            eq=eq,</span>
+<span class="gi">+            order=order,</span>
+<span class="gi">+            auto_detect=auto_detect,</span>
+<span class="gi">+            getstate_setstate=getstate_setstate,</span>
+<span class="gi">+            on_setattr=on_setattr,</span>
+<span class="gi">+            field_transformer=field_transformer,</span>
+<span class="gi">+            match_args=match_args,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    return wrap(maybe_cls) if maybe_cls is not None else wrap</span>
+
+
+<span class="w"> </span>mutable = define
+<span class="gu">@@ -476,7 +501,22 @@ def field(*, default=NOTHING, validator=None, repr=True, hash=None, init=</span>
+
+<span class="w"> </span>       `attr.ib`
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return attrib(</span>
+<span class="gi">+        default=default,</span>
+<span class="gi">+        validator=validator,</span>
+<span class="gi">+        repr=repr,</span>
+<span class="gi">+        hash=hash,</span>
+<span class="gi">+        init=init,</span>
+<span class="gi">+        metadata=metadata,</span>
+<span class="gi">+        type=type,</span>
+<span class="gi">+        converter=converter,</span>
+<span class="gi">+        factory=factory,</span>
+<span class="gi">+        kw_only=kw_only,</span>
+<span class="gi">+        eq=eq,</span>
+<span class="gi">+        order=order,</span>
+<span class="gi">+        on_setattr=on_setattr,</span>
+<span class="gi">+        alias=alias,</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def asdict(inst, *, recurse=True, filter=None, value_serializer=None):
+<span class="gu">@@ -486,7 +526,14 @@ def asdict(inst, *, recurse=True, filter=None, value_serializer=None):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _asdict(</span>
+<span class="gi">+        inst,</span>
+<span class="gi">+        recurse=recurse,</span>
+<span class="gi">+        filter=filter,</span>
+<span class="gi">+        dict_factory=dict,</span>
+<span class="gi">+        retain_collection_types=True,</span>
+<span class="gi">+        value_serializer=value_serializer,</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def astuple(inst, *, recurse=True, filter=None):
+<span class="gu">@@ -496,4 +543,10 @@ def astuple(inst, *, recurse=True, filter=None):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _astuple(</span>
+<span class="gi">+        inst,</span>
+<span class="gi">+        recurse=recurse,</span>
+<span class="gi">+        filter=filter,</span>
+<span class="gi">+        tuple_factory=tuple,</span>
+<span class="gi">+        retain_collection_types=True,</span>
+<span class="gi">+    )</span>
+<span class="gh">diff --git a/src/attr/_version_info.py b/src/attr/_version_info.py</span>
+<span class="gh">index 6691f84..a7a4b62 100644</span>
+<span class="gd">--- a/src/attr/_version_info.py</span>
+<span class="gi">+++ b/src/attr/_version_info.py</span>
+<span class="gu">@@ -35,7 +35,17 @@ class VersionInfo:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Parse *s* and return a _VersionInfo.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        parts = s.split(&#39;.&#39;)</span>
+<span class="gi">+        if len(parts) &lt; 3:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid version string&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        year = int(parts[0])</span>
+<span class="gi">+        minor = int(parts[1])</span>
+<span class="gi">+        micro_release = parts[2].split(&#39;-&#39;)</span>
+<span class="gi">+        micro = int(micro_release[0])</span>
+<span class="gi">+        releaselevel = &quot;final&quot; if len(micro_release) == 1 else micro_release[1]</span>
+<span class="gi">+        </span>
+<span class="gi">+        return cls(year, minor, micro, releaselevel)</span>
+
+<span class="w"> </span>    def _ensure_tuple(self, other):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -44,7 +54,19 @@ class VersionInfo:</span>
+<span class="w"> </span>        Returns a possibly transformed *other* and ourselves as a tuple of
+<span class="w"> </span>        the same length as *other*.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(other, tuple):</span>
+<span class="gi">+            raise NotImplementedError(&quot;Can only compare with tuples&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if len(other) &gt; 4:</span>
+<span class="gi">+            raise NotImplementedError(&quot;Can only compare with tuples of length 1-4&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        our_tuple = astuple(self)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if len(other) &lt; 4:</span>
+<span class="gi">+            other = other + (None,) * (4 - len(other))</span>
+<span class="gi">+            our_tuple = our_tuple[:len(other)]</span>
+<span class="gi">+        </span>
+<span class="gi">+        return our_tuple, other</span>
+
+<span class="w"> </span>    def __eq__(self, other):
+<span class="w"> </span>        try:
+<span class="gh">diff --git a/src/attr/converters.py b/src/attr/converters.py</span>
+<span class="gh">index df5c697..c803db9 100644</span>
+<span class="gd">--- a/src/attr/converters.py</span>
+<span class="gi">+++ b/src/attr/converters.py</span>
+<span class="gu">@@ -21,7 +21,12 @@ def optional(converter):</span>
+
+<span class="w"> </span>    .. versionadded:: 17.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def optional_converter(value):</span>
+<span class="gi">+        if value is None:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        return converter(value)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return optional_converter</span>
+
+
+<span class="w"> </span>def default_if_none(default=NOTHING, factory=None):
+<span class="gu">@@ -50,7 +55,30 @@ def default_if_none(default=NOTHING, factory=None):</span>
+
+<span class="w"> </span>    .. versionadded:: 18.2.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if default is NOTHING and factory is None:</span>
+<span class="gi">+        raise TypeError(&quot;Must pass either `default` or `factory`.&quot;)</span>
+<span class="gi">+    if default is not NOTHING and factory is not None:</span>
+<span class="gi">+        raise TypeError(&quot;Must pass either `default` or `factory`, not both.&quot;)</span>
+<span class="gi">+    if isinstance(default, Factory) and default.takes_self:</span>
+<span class="gi">+        raise ValueError(&quot;Factory instances with `takes_self=True` are not supported.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if factory is not None:</span>
+<span class="gi">+        def default_if_none_converter(value):</span>
+<span class="gi">+            if value is None:</span>
+<span class="gi">+                return factory()</span>
+<span class="gi">+            return value</span>
+<span class="gi">+    elif isinstance(default, Factory):</span>
+<span class="gi">+        def default_if_none_converter(value):</span>
+<span class="gi">+            if value is None:</span>
+<span class="gi">+                return default.factory()</span>
+<span class="gi">+            return value</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        def default_if_none_converter(value):</span>
+<span class="gi">+            if value is None:</span>
+<span class="gi">+                return default</span>
+<span class="gi">+            return value</span>
+<span class="gi">+</span>
+<span class="gi">+    return default_if_none_converter</span>
+
+
+<span class="w"> </span>def to_bool(val):
+<span class="gu">@@ -81,4 +109,14 @@ def to_bool(val):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(val, bool):</span>
+<span class="gi">+        return val</span>
+<span class="gi">+    if isinstance(val, (int, float)):</span>
+<span class="gi">+        return bool(val)</span>
+<span class="gi">+    if isinstance(val, str):</span>
+<span class="gi">+        val = val.lower()</span>
+<span class="gi">+        if val in (&quot;true&quot;, &quot;t&quot;, &quot;yes&quot;, &quot;y&quot;, &quot;on&quot;, &quot;1&quot;):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        if val in (&quot;false&quot;, &quot;f&quot;, &quot;no&quot;, &quot;n&quot;, &quot;off&quot;, &quot;0&quot;):</span>
+<span class="gi">+            return False</span>
+<span class="gi">+    raise ValueError(f&quot;Cannot convert {val!r} to bool&quot;)</span>
+<span class="gh">diff --git a/src/attr/filters.py b/src/attr/filters.py</span>
+<span class="gh">index c3c2781..058b593 100644</span>
+<span class="gd">--- a/src/attr/filters.py</span>
+<span class="gi">+++ b/src/attr/filters.py</span>
+<span class="gu">@@ -8,7 +8,11 @@ def _split_what(what):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns a tuple of `frozenset`s of classes and attributes.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    classes = frozenset(cls for cls in what if isinstance(cls, type))</span>
+<span class="gi">+    attrs = frozenset(</span>
+<span class="gi">+        attr for attr in what if isinstance(attr, (str, Attribute))</span>
+<span class="gi">+    )</span>
+<span class="gi">+    return classes, attrs</span>
+
+
+<span class="w"> </span>def include(*what):
+<span class="gu">@@ -26,7 +30,16 @@ def include(*what):</span>
+
+<span class="w"> </span>    .. versionchanged:: 23.1.0 Accept strings with field names.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    classes, attributes = _split_what(what)</span>
+<span class="gi">+</span>
+<span class="gi">+    def include_filter(attribute, value):</span>
+<span class="gi">+        return (</span>
+<span class="gi">+            attribute.__class__ in classes</span>
+<span class="gi">+            or attribute.name in attributes</span>
+<span class="gi">+            or attribute in attributes</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    return include_filter</span>
+
+
+<span class="w"> </span>def exclude(*what):
+<span class="gu">@@ -44,4 +57,13 @@ def exclude(*what):</span>
+
+<span class="w"> </span>    .. versionchanged:: 23.3.0 Accept field name string as input argument
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    classes, attributes = _split_what(what)</span>
+<span class="gi">+</span>
+<span class="gi">+    def exclude_filter(attribute, value):</span>
+<span class="gi">+        return not (</span>
+<span class="gi">+            attribute.__class__ in classes</span>
+<span class="gi">+            or attribute.name in attributes</span>
+<span class="gi">+            or attribute in attributes</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    return exclude_filter</span>
+<span class="gh">diff --git a/src/attr/setters.py b/src/attr/setters.py</span>
+<span class="gh">index 1bb6a12..b3d15fd 100644</span>
+<span class="gd">--- a/src/attr/setters.py</span>
+<span class="gi">+++ b/src/attr/setters.py</span>
+<span class="gu">@@ -11,16 +11,20 @@ def pipe(*setters):</span>
+
+<span class="w"> </span>    .. versionadded:: 20.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def wrapped(instance, attribute, value):</span>
+<span class="gi">+        for setter in setters:</span>
+<span class="gi">+            value = setter(instance, attribute, value)</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    return wrapped</span>
+
+
+<span class="gd">-def frozen(_, __, ___):</span>
+<span class="gi">+def frozen(instance, attribute, value):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Prevent an attribute to be modified.
+
+<span class="w"> </span>    .. versionadded:: 20.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    raise FrozenAttributeError(&quot;Can&#39;t set attribute: frozen&quot;)</span>
+
+
+<span class="w"> </span>def validate(instance, attrib, new_value):
+<span class="gu">@@ -29,7 +33,9 @@ def validate(instance, attrib, new_value):</span>
+
+<span class="w"> </span>    .. versionadded:: 20.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if attrib.validator is not None:</span>
+<span class="gi">+        attrib.validator(instance, attrib, new_value)</span>
+<span class="gi">+    return new_value</span>
+
+
+<span class="w"> </span>def convert(instance, attrib, new_value):
+<span class="gu">@@ -39,7 +45,9 @@ def convert(instance, attrib, new_value):</span>
+
+<span class="w"> </span>    .. versionadded:: 20.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if attrib.converter is not None:</span>
+<span class="gi">+        return attrib.converter(new_value)</span>
+<span class="gi">+    return new_value</span>
+
+
+<span class="w"> </span>NO_OP = object()
+<span class="gh">diff --git a/src/attr/validators.py b/src/attr/validators.py</span>
+<span class="gh">index d98967a..b9e0824 100644</span>
+<span class="gd">--- a/src/attr/validators.py</span>
+<span class="gi">+++ b/src/attr/validators.py</span>
+<span class="gu">@@ -30,7 +30,7 @@ def set_disabled(disabled):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    set_run_validators(not disabled)</span>
+
+
+<span class="w"> </span>def get_disabled():
+<span class="gu">@@ -42,7 +42,7 @@ def get_disabled():</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return not get_run_validators()</span>
+
+
+<span class="w"> </span>@contextmanager
+<span class="gu">@@ -56,7 +56,12 @@ def disabled():</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    original_run_validators = get_run_validators()</span>
+<span class="gi">+    set_run_validators(False)</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        yield</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        set_run_validators(original_run_validators)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -91,7 +96,7 @@ def instance_of(type):</span>
+<span class="w"> </span>            With a human readable error message, the attribute (of type
+<span class="w"> </span>            `attrs.Attribute`), the expected type, and the value it got.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _InstanceOfValidator(type)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, frozen=True, slots=True)
+<span class="gu">@@ -134,7 +139,19 @@ def matches_re(regex, flags=0, func=None):</span>
+<span class="w"> </span>    .. versionadded:: 19.2.0
+<span class="w"> </span>    .. versionchanged:: 21.3.0 *regex* can be a pre-compiled pattern.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(regex, Pattern):</span>
+<span class="gi">+        compiled_regex = regex</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        compiled_regex = re.compile(regex, flags)</span>
+<span class="gi">+</span>
+<span class="gi">+    if func is None:</span>
+<span class="gi">+        match_func = compiled_regex.fullmatch</span>
+<span class="gi">+    elif func in (re.fullmatch, re.search, re.match):</span>
+<span class="gi">+        match_func = lambda value: func(compiled_regex, value)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise ValueError(&quot;func must be re.fullmatch, re.search, or re.match&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return _MatchesReValidator(compiled_regex, match_func)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -165,7 +182,9 @@ def optional(validator):</span>
+<span class="w"> </span>    .. versionchanged:: 17.1.0 *validator* can be a list of validators.
+<span class="w"> </span>    .. versionchanged:: 23.1.0 *validator* can also be a tuple of validators.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(validator, (list, tuple)):</span>
+<span class="gi">+        validator = and_(*validator)</span>
+<span class="gi">+    return _OptionalValidator(validator)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -216,7 +235,9 @@ def in_(options):</span>
+<span class="w"> </span>       *options* that are a list, dict, or a set are now transformed into a
+<span class="w"> </span>       tuple to keep the validator hashable.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(options, (list, dict, set)):</span>
+<span class="gi">+        options = tuple(options)</span>
+<span class="gi">+    return _InValidator(options, options)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=False, unsafe_hash=True)
+<span class="gu">@@ -250,7 +271,7 @@ def is_callable():</span>
+<span class="w"> </span>            With a human readable error message containing the attribute
+<span class="w"> </span>            (`attrs.Attribute`) name, and the value it got.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _IsCallableValidator()</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -291,7 +312,7 @@ def deep_iterable(member_validator, iterable_validator=None):</span>
+
+<span class="w"> </span>    .. versionadded:: 19.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _DeepIterable(member_validator, iterable_validator)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -333,7 +354,7 @@ def deep_mapping(key_validator, value_validator, mapping_validator=None):</span>
+<span class="w"> </span>    Raises:
+<span class="w"> </span>        TypeError: if any sub-validators fail
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _DeepMapping(key_validator, value_validator, mapping_validator)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, frozen=True, slots=True)
+<span class="gu">@@ -368,7 +389,7 @@ def lt(val):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _NumberValidator(val, &quot;&lt;&quot;, operator.lt)</span>
+
+
+<span class="w"> </span>def le(val):
+<span class="gu">@@ -383,7 +404,7 @@ def le(val):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _NumberValidator(val, &quot;&lt;=&quot;, operator.le)</span>
+
+
+<span class="w"> </span>def ge(val):
+<span class="gu">@@ -398,7 +419,7 @@ def ge(val):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _NumberValidator(val, &quot;&gt;=&quot;, operator.ge)</span>
+
+
+<span class="w"> </span>def gt(val):
+<span class="gu">@@ -406,14 +427,14 @@ def gt(val):</span>
+<span class="w"> </span>    A validator that raises `ValueError` if the initializer is called with a
+<span class="w"> </span>    number smaller or equal to *val*.
+
+<span class="gd">-    The validator uses `operator.ge` to compare the values.</span>
+<span class="gi">+    The validator uses `operator.gt` to compare the values.</span>
+
+<span class="w"> </span>    Args:
+<span class="w"> </span>       val: Exclusive lower bound for values
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _NumberValidator(val, &quot;&gt;&quot;, operator.gt)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, frozen=True, slots=True)
+<span class="gu">@@ -444,7 +465,7 @@ def max_len(length):</span>
+
+<span class="w"> </span>    .. versionadded:: 21.3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _MaxLengthValidator(length)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, frozen=True, slots=True)
+<span class="gu">@@ -475,7 +496,7 @@ def min_len(length):</span>
+
+<span class="w"> </span>    .. versionadded:: 22.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _MinLengthValidator(length)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -510,7 +531,7 @@ def _subclass_of(type):</span>
+<span class="w"> </span>            With a human readable error message, the attribute (of type
+<span class="w"> </span>            `attrs.Attribute`), the expected type, and the value it got.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _SubclassOfValidator(type)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -566,7 +587,7 @@ def not_(validator, *, msg=None, exc_types=(ValueError, TypeError)):</span>
+
+<span class="w"> </span>    .. versionadded:: 22.2.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _NotValidator(validator, msg, exc_types)</span>
+
+
+<span class="w"> </span>@attrs(repr=False, slots=True, unsafe_hash=True)
+<span class="gu">@@ -607,4 +628,4 @@ def or_(*validators):</span>
+
+<span class="w"> </span>    .. versionadded:: 24.1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _OrValidator(validators)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

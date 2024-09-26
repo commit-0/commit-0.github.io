@@ -1,0 +1,1760 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin virtualenv - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-virtualenv" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin virtualenv
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-virtualenv"><strong>Claude Sonnet 3.5 - Fill-in</strong>: virtualenv</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:14: in &lt;module&gt;
+    from virtualenv.app_data import AppDataDiskFolder
+src/virtualenv/__init__.py:3: in &lt;module&gt;
+    from .run import cli_run, session_via_cli
+src/virtualenv/run/__init__.py:7: in &lt;module&gt;
+    from virtualenv.app_data import make_app_data
+src/virtualenv/app_data/__init__.py:11: in &lt;module&gt;
+    from .read_only import ReadOnlyAppData
+src/virtualenv/app_data/read_only.py:4: in &lt;module&gt;
+    from .via_disk_folder import AppDataDiskFolder, PyInfoStoreDisk
+src/virtualenv/app_data/via_disk_folder.py:31: in &lt;module&gt;
+    from virtualenv.util.path import safe_delete
+src/virtualenv/util/path/__init__.py:3: in &lt;module&gt;
+    from ._permission import make_exe, set_tree
+E   ImportError: cannot import name &#39;make_exe&#39; from &#39;virtualenv.util.path._permission&#39; (/testbed/src/virtualenv/util/path/_permission.py)
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/virtualenv/activation/activator.py b/src/virtualenv/activation/activator.py</span>
+<span class="gh">index 328589c..b9e2571 100644</span>
+<span class="gd">--- a/src/virtualenv/activation/activator.py</span>
+<span class="gi">+++ b/src/virtualenv/activation/activator.py</span>
+<span class="gu">@@ -23,7 +23,7 @@ class Activator(ABC):</span>
+<span class="w"> </span>        :param interpreter: the interpreter we need to support
+<span class="w"> </span>        :return: ``True`` if supported, ``False`` otherwise
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return True  # By default, assume support for all interpreters</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def add_parser_arguments(cls, parser, interpreter):
+<span class="gu">@@ -33,7 +33,11 @@ class Activator(ABC):</span>
+<span class="w"> </span>        :param parser: the CLI parser
+<span class="w"> </span>        :param interpreter: the interpreter this virtual environment is based of
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        parser.add_argument(</span>
+<span class="gi">+            &quot;--prompt&quot;,</span>
+<span class="gi">+            default=&quot;.&quot;,</span>
+<span class="gi">+            help=&quot;Provides an alternative prompt prefix for this environment&quot;</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def generate(self, creator):
+<span class="gu">@@ -42,7 +46,7 @@ class Activator(ABC):</span>
+
+<span class="w"> </span>        :param creator: the creator (based of :class:`virtualenv.create.creator.Creator`) we used to create this         virtual environment
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;Subclasses must implement this method&quot;)</span>
+
+
+<span class="w"> </span>__all__ = [&#39;Activator&#39;]
+<span class="gh">diff --git a/src/virtualenv/activation/via_template.py b/src/virtualenv/activation/via_template.py</span>
+<span class="gh">index 6b70a4d..62be29e 100644</span>
+<span class="gd">--- a/src/virtualenv/activation/via_template.py</span>
+<span class="gi">+++ b/src/virtualenv/activation/via_template.py</span>
+<span class="gu">@@ -10,7 +10,36 @@ else:</span>
+
+
+<span class="w"> </span>class ViaTemplateActivator(Activator, ABC):
+<span class="gd">-    pass</span>
+<span class="gi">+    @abstractmethod</span>
+<span class="gi">+    def templates(self):</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="gi">+    def generate(self, creator):</span>
+<span class="gi">+        dest_folder = creator.bin_dir</span>
+<span class="gi">+        replacements = self.replacements(creator, dest_folder)</span>
+<span class="gi">+        generated = {}</span>
+<span class="gi">+        for template in self.templates():</span>
+<span class="gi">+            text = self.instantiate_template(replacements, template, creator)</span>
+<span class="gi">+            dest = os.path.join(dest_folder, self.as_name(template))</span>
+<span class="gi">+            generated[dest] = text</span>
+<span class="gi">+        return generated</span>
+<span class="gi">+</span>
+<span class="gi">+    @abstractmethod</span>
+<span class="gi">+    def replacements(self, creator, dest_folder):</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="gi">+    def instantiate_template(self, replacements, template, creator):</span>
+<span class="gi">+        if sys.version_info &gt;= (3, 10):</span>
+<span class="gi">+            text = files(self.__class__).joinpath(template).read_text()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            text = read_binary(self.__class__, template).decode(&#39;utf-8&#39;)</span>
+<span class="gi">+        for key, value in replacements.items():</span>
+<span class="gi">+            text = text.replace(key.encode(&#39;utf-8&#39;), value.encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;)</span>
+<span class="gi">+        return text</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def as_name(template):</span>
+<span class="gi">+        return template</span>
+
+
+<span class="w"> </span>__all__ = [&#39;ViaTemplateActivator&#39;]
+<span class="gh">diff --git a/src/virtualenv/app_data/base.py b/src/virtualenv/app_data/base.py</span>
+<span class="gh">index c8e5b7b..6e73b5d 100644</span>
+<span class="gd">--- a/src/virtualenv/app_data/base.py</span>
+<span class="gi">+++ b/src/virtualenv/app_data/base.py</span>
+<span class="gu">@@ -11,17 +11,31 @@ class AppData(ABC):</span>
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def close(self):
+<span class="w"> </span>        &quot;&quot;&quot;Called before virtualenv exits.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;Subclasses must implement this method&quot;)</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def reset(self):
+<span class="w"> </span>        &quot;&quot;&quot;Called when the user passes in the reset app data.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;Subclasses must implement this method&quot;)</span>
+
+<span class="w"> </span>    @contextmanager
+<span class="w"> </span>    def ensure_extracted(self, path, to_folder=None):
+<span class="w"> </span>        &quot;&quot;&quot;Some paths might be within the zipapp, unzip these to a path on the disk.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if IS_ZIPAPP:</span>
+<span class="gi">+            import tempfile</span>
+<span class="gi">+            import shutil</span>
+<span class="gi">+            import os</span>
+<span class="gi">+</span>
+<span class="gi">+            temp_dir = to_folder or tempfile.mkdtemp()</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                extracted_path = os.path.join(temp_dir, os.path.basename(path))</span>
+<span class="gi">+                shutil.copy(path, extracted_path)</span>
+<span class="gi">+                yield extracted_path</span>
+<span class="gi">+            finally:</span>
+<span class="gi">+                if not to_folder:</span>
+<span class="gi">+                    shutil.rmtree(temp_dir)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            yield path</span>
+
+
+<span class="w"> </span>class ContentStore(ABC):
+<span class="gh">diff --git a/src/virtualenv/app_data/na.py b/src/virtualenv/app_data/na.py</span>
+<span class="gh">index 76639f8..b921fac 100644</span>
+<span class="gd">--- a/src/virtualenv/app_data/na.py</span>
+<span class="gi">+++ b/src/virtualenv/app_data/na.py</span>
+<span class="gu">@@ -15,35 +15,35 @@ class AppDataDisabled(AppData):</span>
+
+<span class="w"> </span>    def close(self):
+<span class="w"> </span>        &quot;&quot;&quot;Do nothing.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return</span>
+
+<span class="w"> </span>    def reset(self):
+<span class="w"> </span>        &quot;&quot;&quot;Do nothing.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return</span>
+
+<span class="w"> </span>    @contextmanager
+<span class="w"> </span>    def locked(self, path):
+<span class="w"> </span>        &quot;&quot;&quot;Do nothing.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        yield</span>
+
+<span class="w"> </span>    def py_info_clear(self):
+<span class="w"> </span>        &quot;&quot;&quot;Nothing to clear.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return</span>
+
+
+<span class="w"> </span>class ContentStoreNA(ContentStore):
+
+<span class="w"> </span>    def read(self):
+<span class="w"> </span>        &quot;&quot;&quot;Nothing to read.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def write(self, content):
+<span class="w"> </span>        &quot;&quot;&quot;Nothing to write.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return</span>
+
+<span class="w"> </span>    def remove(self):
+<span class="w"> </span>        &quot;&quot;&quot;Nothing to remove.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return</span>
+
+
+<span class="w"> </span>__all__ = [&#39;AppDataDisabled&#39;, &#39;ContentStoreNA&#39;]
+<span class="gh">diff --git a/src/virtualenv/app_data/read_only.py b/src/virtualenv/app_data/read_only.py</span>
+<span class="gh">index a2e161c..8015508 100644</span>
+<span class="gd">--- a/src/virtualenv/app_data/read_only.py</span>
+<span class="gi">+++ b/src/virtualenv/app_data/read_only.py</span>
+<span class="gu">@@ -16,7 +16,17 @@ class ReadOnlyAppData(AppDataDiskFolder):</span>
+
+
+<span class="w"> </span>class _PyInfoStoreDiskReadOnly(PyInfoStoreDisk):
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, folder):</span>
+<span class="gi">+        super().__init__(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+    def read(self, path):</span>
+<span class="gi">+        return super().read(path)</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, path, content):</span>
+<span class="gi">+        raise PermissionError(f&quot;Cannot write to read-only app data: {path}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def remove(self, path):</span>
+<span class="gi">+        raise PermissionError(f&quot;Cannot remove from read-only app data: {path}&quot;)</span>
+
+
+<span class="w"> </span>__all__ = [&#39;ReadOnlyAppData&#39;]
+<span class="gh">diff --git a/src/virtualenv/app_data/via_disk_folder.py b/src/virtualenv/app_data/via_disk_folder.py</span>
+<span class="gh">index fe0a164..3ed5807 100644</span>
+<span class="gd">--- a/src/virtualenv/app_data/via_disk_folder.py</span>
+<span class="gi">+++ b/src/virtualenv/app_data/via_disk_folder.py</span>
+<span class="gu">@@ -50,11 +50,13 @@ class AppDataDiskFolder(AppData):</span>
+
+<span class="w"> </span>    def close(self):
+<span class="w"> </span>        &quot;&quot;&quot;Do nothing.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.lock.release()</span>
+
+<span class="w"> </span>    def py_info_clear(self):
+<span class="w"> </span>        &quot;&quot;&quot;clear py info.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        py_info_folder = self.lock.path / &#39;py&#39;</span>
+<span class="gi">+        with suppress(FileNotFoundError):</span>
+<span class="gi">+            safe_delete(py_info_folder)</span>
+
+
+<span class="w"> </span>class JSONStoreDisk(ContentStore, ABC):
+<span class="gu">@@ -65,6 +67,32 @@ class JSONStoreDisk(ContentStore, ABC):</span>
+<span class="w"> </span>        self.msg = msg
+<span class="w"> </span>        self.msg_args = *msg_args, self.file
+
+<span class="gi">+    @property</span>
+<span class="gi">+    def file(self):</span>
+<span class="gi">+        return self.in_folder / f&#39;{self.key}.json&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    @contextmanager</span>
+<span class="gi">+    def locked(self):</span>
+<span class="gi">+        with ReentrantFileLock(self.file):</span>
+<span class="gi">+            yield</span>
+<span class="gi">+</span>
+<span class="gi">+    def read(self):</span>
+<span class="gi">+        with self.locked():</span>
+<span class="gi">+            if self.file.exists():</span>
+<span class="gi">+                with self.file.open() as file_handler:</span>
+<span class="gi">+                    return json.load(file_handler)</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, content):</span>
+<span class="gi">+        with self.locked():</span>
+<span class="gi">+            with self.file.open(&#39;w&#39;) as file_handler:</span>
+<span class="gi">+                json.dump(content, file_handler, indent=2)</span>
+<span class="gi">+</span>
+<span class="gi">+    def remove(self):</span>
+<span class="gi">+        with self.locked():</span>
+<span class="gi">+            with suppress(FileNotFoundError):</span>
+<span class="gi">+                self.file.unlink()</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class PyInfoStoreDisk(JSONStoreDisk):
+
+<span class="gh">diff --git a/src/virtualenv/app_data/via_tempdir.py b/src/virtualenv/app_data/via_tempdir.py</span>
+<span class="gh">index c3cae69..119036b 100644</span>
+<span class="gd">--- a/src/virtualenv/app_data/via_tempdir.py</span>
+<span class="gi">+++ b/src/virtualenv/app_data/via_tempdir.py</span>
+<span class="gu">@@ -15,7 +15,8 @@ class TempAppData(AppDataDiskFolder):</span>
+
+<span class="w"> </span>    def reset(self):
+<span class="w"> </span>        &quot;&quot;&quot;This is a temporary folder, is already empty to start with.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        safe_delete(self.lock.path)</span>
+<span class="gi">+        self.__init__()</span>
+
+
+<span class="w"> </span>__all__ = [&#39;TempAppData&#39;]
+<span class="gh">diff --git a/src/virtualenv/config/convert.py b/src/virtualenv/config/convert.py</span>
+<span class="gh">index d0fdefb..616fc01 100644</span>
+<span class="gd">--- a/src/virtualenv/config/convert.py</span>
+<span class="gi">+++ b/src/virtualenv/config/convert.py</span>
+<span class="gu">@@ -30,7 +30,8 @@ class ListType(TypeData):</span>
+
+<span class="w"> </span>    def _validate(self):
+<span class="w"> </span>        &quot;&quot;&quot;no op.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(self.as_type, (list, tuple)):</span>
+<span class="gi">+            raise ValueError(&quot;as_type must be a list or tuple&quot;)</span>
+
+<span class="w"> </span>    def split_values(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -39,12 +40,42 @@ class ListType(TypeData):</span>
+<span class="w"> </span>        First this is done by newlines. If there were no newlines in the text,
+<span class="w"> </span>        then we next try to split by comma.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(value, str):</span>
+<span class="gi">+            if &#39;\n&#39; in value:</span>
+<span class="gi">+                return [v.strip() for v in value.split(&#39;\n&#39;) if v.strip()]</span>
+<span class="gi">+            return [v.strip() for v in value.split(&#39;,&#39;) if v.strip()]</span>
+<span class="gi">+        elif isinstance(value, (list, tuple)):</span>
+<span class="gi">+            return list(value)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return [value]</span>
+
+
+<span class="w"> </span>def convert(value, as_type, source):
+<span class="w"> </span>    &quot;&quot;&quot;Convert the value as a given type where the value comes from the given source.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if as_type is bool:</span>
+<span class="gi">+        return _convert_bool(value, source)</span>
+<span class="gi">+    elif as_type is None:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    elif isinstance(as_type, (list, tuple)):</span>
+<span class="gi">+        return _convert_list(value, as_type, source)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return as_type(value)</span>
+<span class="gi">+        except ValueError as e:</span>
+<span class="gi">+            raise ValueError(f&quot;failed to convert {value!r} to {as_type.__name__} via {source}: {e}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+def _convert_bool(value, source):</span>
+<span class="gi">+    if isinstance(value, bool):</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return BoolType.BOOLEAN_STATES[str(value).lower()]</span>
+<span class="gi">+    except KeyError:</span>
+<span class="gi">+        raise ValueError(f&quot;failed to convert {value!r} to bool via {source}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+def _convert_list(value, as_type, source):</span>
+<span class="gi">+    list_type = _CONVERT[list](list, as_type)</span>
+<span class="gi">+    values = list_type.split_values(value)</span>
+<span class="gi">+    return [convert(v, as_type[0], source) for v in values]</span>
+
+
+<span class="w"> </span>_CONVERT = {bool: BoolType, type(None): NoneType, list: ListType}
+<span class="gh">diff --git a/src/virtualenv/config/env_var.py b/src/virtualenv/config/env_var.py</span>
+<span class="gh">index 1c12a68..d4bbb67 100644</span>
+<span class="gd">--- a/src/virtualenv/config/env_var.py</span>
+<span class="gi">+++ b/src/virtualenv/config/env_var.py</span>
+<span class="gu">@@ -10,9 +10,12 @@ def get_env_var(key, as_type, env):</span>
+<span class="w"> </span>    :param key: the config key requested
+<span class="w"> </span>    :param as_type: the type we would like to convert it to
+<span class="w"> </span>    :param env: environment variables to use
+<span class="gd">-    :return:</span>
+<span class="gi">+    :return: The converted value of the environment variable, or None if not found</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    with suppress(KeyError):</span>
+<span class="gi">+        value = env[key]</span>
+<span class="gi">+        return convert(value, as_type, f&quot;env var {key}&quot;)</span>
+<span class="gi">+    return None</span>
+
+
+<span class="w"> </span>__all__ = [&#39;get_env_var&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/creator.py b/src/virtualenv/create/creator.py</span>
+<span class="gh">index 96df65b..f8e4c78 100644</span>
+<span class="gd">--- a/src/virtualenv/create/creator.py</span>
+<span class="gi">+++ b/src/virtualenv/create/creator.py</span>
+<span class="gu">@@ -47,6 +47,90 @@ class Creator(ABC):</span>
+<span class="w"> </span>            f&quot;{self.__class__.__name__}({&#39;, &#39;.join(f&#39;{k}={v}&#39; for k, v in self._args())})&quot;
+<span class="w"> </span>            )
+
+<span class="gi">+    def _copy_python_executable(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Copy the Python executable to the virtual environment.&quot;&quot;&quot;</span>
+<span class="gi">+        src = Path(sys.executable)</span>
+<span class="gi">+        dst = self.dest / &quot;bin&quot; / src.name</span>
+<span class="gi">+        dst.write_bytes(src.read_bytes())</span>
+<span class="gi">+        dst.chmod(0o755)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _create_activation_scripts(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Create activation scripts for different shells.&quot;&quot;&quot;</span>
+<span class="gi">+        activate_this = f&quot;&quot;&quot;</span>
+<span class="gi">+# This file must be used with &quot;source bin/activate&quot; *from bash*</span>
+<span class="gi">+# you cannot run it directly</span>
+<span class="gi">+</span>
+<span class="gi">+deactivate () {{</span>
+<span class="gi">+    unset -f pydoc &gt;/dev/null 2&gt;&amp;1 || true</span>
+<span class="gi">+</span>
+<span class="gi">+    # reset old environment variables</span>
+<span class="gi">+    if [ -n &quot;${{_OLD_VIRTUAL_PATH:-}}&quot; ] ; then</span>
+<span class="gi">+        PATH=&quot;${{_OLD_VIRTUAL_PATH:-}}&quot;</span>
+<span class="gi">+        export PATH</span>
+<span class="gi">+        unset _OLD_VIRTUAL_PATH</span>
+<span class="gi">+    fi</span>
+<span class="gi">+    if [ -n &quot;${{_OLD_VIRTUAL_PYTHONHOME:-}}&quot; ] ; then</span>
+<span class="gi">+        PYTHONHOME=&quot;${{_OLD_VIRTUAL_PYTHONHOME:-}}&quot;</span>
+<span class="gi">+        export PYTHONHOME</span>
+<span class="gi">+        unset _OLD_VIRTUAL_PYTHONHOME</span>
+<span class="gi">+    fi</span>
+<span class="gi">+</span>
+<span class="gi">+    # This should detect bash and zsh, which have a hash command that must</span>
+<span class="gi">+    # be called to get it to forget past commands.  Without forgetting</span>
+<span class="gi">+    # past commands the $PATH changes we made may not be respected</span>
+<span class="gi">+    if [ -n &quot;${{BASH:-}}&quot; -o -n &quot;${{ZSH_VERSION:-}}&quot; ] ; then</span>
+<span class="gi">+        hash -r 2&gt; /dev/null</span>
+<span class="gi">+    fi</span>
+<span class="gi">+</span>
+<span class="gi">+    if [ -n &quot;${{_OLD_VIRTUAL_PS1:-}}&quot; ] ; then</span>
+<span class="gi">+        PS1=&quot;${{_OLD_VIRTUAL_PS1:-}}&quot;</span>
+<span class="gi">+        export PS1</span>
+<span class="gi">+        unset _OLD_VIRTUAL_PS1</span>
+<span class="gi">+    fi</span>
+<span class="gi">+</span>
+<span class="gi">+    unset VIRTUAL_ENV</span>
+<span class="gi">+    unset VIRTUAL_ENV_PROMPT</span>
+<span class="gi">+    if [ ! &quot;${{1:-}}&quot; = &quot;nondestructive&quot; ] ; then</span>
+<span class="gi">+    # Self destruct!</span>
+<span class="gi">+        unset -f deactivate</span>
+<span class="gi">+    fi</span>
+<span class="gi">+}}</span>
+<span class="gi">+</span>
+<span class="gi">+# unset irrelevant variables</span>
+<span class="gi">+deactivate nondestructive</span>
+<span class="gi">+</span>
+<span class="gi">+VIRTUAL_ENV=&quot;{self.dest}&quot;</span>
+<span class="gi">+export VIRTUAL_ENV</span>
+<span class="gi">+</span>
+<span class="gi">+_OLD_VIRTUAL_PATH=&quot;$PATH&quot;</span>
+<span class="gi">+PATH=&quot;$VIRTUAL_ENV/bin:$PATH&quot;</span>
+<span class="gi">+export PATH</span>
+<span class="gi">+</span>
+<span class="gi">+# unset PYTHONHOME if set</span>
+<span class="gi">+# this will fail if PYTHONHOME is set to the empty string (which is bad anyway)</span>
+<span class="gi">+# could use `if (set -u; : $PYTHONHOME) ;` in bash</span>
+<span class="gi">+if [ -n &quot;${{PYTHONHOME:-}}&quot; ] ; then</span>
+<span class="gi">+    _OLD_VIRTUAL_PYTHONHOME=&quot;${{PYTHONHOME:-}}&quot;</span>
+<span class="gi">+    unset PYTHONHOME</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+if [ -z &quot;${{VIRTUAL_ENV_DISABLE_PROMPT:-}}&quot; ] ; then</span>
+<span class="gi">+    _OLD_VIRTUAL_PS1=&quot;${{PS1:-}}&quot;</span>
+<span class="gi">+    PS1=&quot;({self.dest.name}) ${{PS1:-}}&quot;</span>
+<span class="gi">+    export PS1</span>
+<span class="gi">+    VIRTUAL_ENV_PROMPT=&quot;({self.dest.name}) &quot;</span>
+<span class="gi">+    export VIRTUAL_ENV_PROMPT</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+# This should detect bash and zsh, which have a hash command that must</span>
+<span class="gi">+# be called to get it to forget past commands.  Without forgetting</span>
+<span class="gi">+# past commands the $PATH changes we made may not be respected</span>
+<span class="gi">+if [ -n &quot;${{BASH:-}}&quot; -o -n &quot;${{ZSH_VERSION:-}}&quot; ] ; then</span>
+<span class="gi">+    hash -r 2&gt; /dev/null</span>
+<span class="gi">+fi</span>
+<span class="gi">+&quot;&quot;&quot;</span>
+<span class="gi">+        (self.dest / &quot;bin&quot; / &quot;activate&quot;).write_text(activate_this)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def can_create(cls, interpreter):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -55,7 +139,7 @@ class Creator(ABC):</span>
+<span class="w"> </span>        :param interpreter: the interpreter in question
+<span class="w"> </span>        :return: ``None`` if we can&#39;t create, any other object otherwise that will be forwarded to                   :meth:`add_parser_arguments`
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return True  # Assume we can always create a virtual environment</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def add_parser_arguments(cls, parser, interpreter, meta, app_data):
+<span class="gu">@@ -67,26 +151,88 @@ class Creator(ABC):</span>
+<span class="w"> </span>        :param interpreter: the interpreter we&#39;re asked to create virtual environment for
+<span class="w"> </span>        :param meta: value as returned by :meth:`can_create`
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        parser.add_argument(</span>
+<span class="gi">+            &quot;--dest&quot;,</span>
+<span class="gi">+            help=&quot;The destination directory to create the virtual environment in&quot;,</span>
+<span class="gi">+            required=True,</span>
+<span class="gi">+        )</span>
+<span class="gi">+        parser.add_argument(</span>
+<span class="gi">+            &quot;--clear&quot;,</span>
+<span class="gi">+            action=&quot;store_true&quot;,</span>
+<span class="gi">+            help=&quot;Clear the destination directory if it already exists&quot;,</span>
+<span class="gi">+        )</span>
+<span class="gi">+        parser.add_argument(</span>
+<span class="gi">+            &quot;--no-vcs-ignore&quot;,</span>
+<span class="gi">+            action=&quot;store_true&quot;,</span>
+<span class="gi">+            help=&quot;Don&#39;t create VCS ignore files&quot;,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def create(self):
+<span class="w"> </span>        &quot;&quot;&quot;Perform the virtual environment creation.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.clear and self.dest.exists():</span>
+<span class="gi">+            safe_delete(self.dest)</span>
+<span class="gi">+        </span>
+<span class="gi">+        self.dest.mkdir(parents=True, exist_ok=True)</span>
+<span class="gi">+        </span>
+<span class="gi">+        self.setup_ignore_vcs()</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Create necessary directories</span>
+<span class="gi">+        (self.dest / &quot;bin&quot;).mkdir(exist_ok=True)</span>
+<span class="gi">+        (self.dest / &quot;lib&quot;).mkdir(exist_ok=True)</span>
+<span class="gi">+        (self.dest / &quot;include&quot;).mkdir(exist_ok=True)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Create pyvenv.cfg file</span>
+<span class="gi">+        self.pyenv_cfg.write()</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Copy python executable</span>
+<span class="gi">+        self._copy_python_executable()</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Create activation scripts</span>
+<span class="gi">+        self._create_activation_scripts()</span>
+<span class="gi">+        </span>
+<span class="gi">+        return self.dest</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def validate_dest(cls, raw_value):
+<span class="w"> </span>        &quot;&quot;&quot;No path separator in the path, valid chars and must be write-able.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            path = Path(raw_value).resolve()</span>
+<span class="gi">+            if not path.parent.exists():</span>
+<span class="gi">+                raise ArgumentTypeError(f&quot;Parent directory {path.parent} does not exist&quot;)</span>
+<span class="gi">+            if path.exists() and not os.access(path, os.W_OK):</span>
+<span class="gi">+                raise ArgumentTypeError(f&quot;Destination {path} is not writable&quot;)</span>
+<span class="gi">+            return path</span>
+<span class="gi">+        except Exception as e:</span>
+<span class="gi">+            raise ArgumentTypeError(f&quot;Invalid destination path: {e}&quot;)</span>
+
+<span class="w"> </span>    def setup_ignore_vcs(self):
+<span class="w"> </span>        &quot;&quot;&quot;Generate ignore instructions for version control systems.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.no_vcs_ignore:</span>
+<span class="gi">+            vcs_ignore_contents = &quot;# created by virtualenv automatically\n*&quot;</span>
+<span class="gi">+            ignore_files = [&quot;.gitignore&quot;, &quot;.bzrignore&quot;, &quot;.hgignore&quot;]</span>
+<span class="gi">+            </span>
+<span class="gi">+            for ignore_file in ignore_files:</span>
+<span class="gi">+                ignore_path = self.dest / ignore_file</span>
+<span class="gi">+                if not ignore_path.exists():</span>
+<span class="gi">+                    ignore_path.write_text(vcs_ignore_contents)</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def debug(self):
+<span class="w"> </span>        &quot;&quot;&quot;:return: debug information about the virtual environment (only valid after :meth:`create` has run)&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._debug is None:</span>
+<span class="gi">+            self._debug = self._get_debug_info()</span>
+<span class="gi">+        return self._debug</span>
+<span class="gi">+</span>
+<span class="gi">+    def _get_debug_info(self):</span>
+<span class="gi">+        debug_info = OrderedDict()</span>
+<span class="gi">+        debug_info[&quot;creator&quot;] = self.__class__.__name__</span>
+<span class="gi">+        debug_info[&quot;interpreter&quot;] = self.interpreter.executable</span>
+<span class="gi">+        debug_info[&quot;dest&quot;] = str(self.dest)</span>
+<span class="gi">+        debug_info[&quot;version&quot;] = __version__</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Add more debug information as needed</span>
+<span class="gi">+        return debug_info</span>
+
+
+<span class="w"> </span>__all__ = [&#39;Creator&#39;, &#39;CreatorMeta&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/debug.py b/src/virtualenv/create/debug.py</span>
+<span class="gh">index e728f1f..0cf8819 100644</span>
+<span class="gd">--- a/src/virtualenv/create/debug.py</span>
+<span class="gi">+++ b/src/virtualenv/create/debug.py</span>
+<span class="gu">@@ -5,7 +5,19 @@ import sys</span>
+
+<span class="w"> </span>def run():
+<span class="w"> </span>    &quot;&quot;&quot;Print debug data about the virtual environment.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    print(&quot;Virtual Environment Debug Information:&quot;)</span>
+<span class="gi">+    print(f&quot;Python Version: {sys.version}&quot;)</span>
+<span class="gi">+    print(f&quot;Python Executable: {sys.executable}&quot;)</span>
+<span class="gi">+    print(f&quot;sys.prefix: {sys.prefix}&quot;)</span>
+<span class="gi">+    print(f&quot;sys.base_prefix: {sys.base_prefix}&quot;)</span>
+<span class="gi">+    print(f&quot;sys.exec_prefix: {sys.exec_prefix}&quot;)</span>
+<span class="gi">+    print(f&quot;sys.base_exec_prefix: {sys.base_exec_prefix}&quot;)</span>
+<span class="gi">+    print(f&quot;sys.path:&quot;)</span>
+<span class="gi">+    for path in sys.path:</span>
+<span class="gi">+        print(f&quot;  - {path}&quot;)</span>
+<span class="gi">+    print(f&quot;Environment Variables:&quot;)</span>
+<span class="gi">+    for key, value in sorted(sys.environ.items()):</span>
+<span class="gi">+        print(f&quot;  {key}: {value}&quot;)</span>
+
+
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="gh">diff --git a/src/virtualenv/create/describe.py b/src/virtualenv/create/describe.py</span>
+<span class="gh">index 5d7690c..2c7c6f8 100644</span>
+<span class="gd">--- a/src/virtualenv/create/describe.py</span>
+<span class="gi">+++ b/src/virtualenv/create/describe.py</span>
+<span class="gu">@@ -20,12 +20,12 @@ class Describe:</span>
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def can_describe(cls, interpreter):
+<span class="w"> </span>        &quot;&quot;&quot;Knows means it knows how the output will look.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return True</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def exe_stem(cls):
+<span class="w"> </span>        &quot;&quot;&quot;Executable name without suffix - there seems to be no standard way to get this without creating it.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return &#39;python&#39; if not IS_WIN else &#39;python&#39;</span>
+
+
+<span class="w"> </span>class Python3Supports(Describe, ABC):
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/_virtualenv.py b/src/virtualenv/create/via_global_ref/_virtualenv.py</span>
+<span class="gh">index e27c1e4..b31d038 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/_virtualenv.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/_virtualenv.py</span>
+<span class="gu">@@ -12,7 +12,19 @@ def patch_dist(dist):</span>
+
+<span class="w"> </span>    Some of this arguments though don&#39;t make sense in context of the virtual environment files, let&#39;s fix them up.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Reset the prefix and exec_prefix to empty strings</span>
+<span class="gi">+    dist.prefix = &#39;&#39;</span>
+<span class="gi">+    dist.exec_prefix = &#39;&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    # Set install_lib to None to use the default</span>
+<span class="gi">+    dist.install_lib = None</span>
+<span class="gi">+</span>
+<span class="gi">+    # Reset the install directories</span>
+<span class="gi">+    dist.install_platlib = None</span>
+<span class="gi">+    dist.install_purelib = None</span>
+<span class="gi">+    dist.install_headers = None</span>
+<span class="gi">+    dist.install_scripts = None</span>
+<span class="gi">+    dist.install_data = None</span>
+
+
+<span class="w"> </span>_DISTUTILS_PATCH = &#39;distutils.dist&#39;, &#39;setuptools.dist&#39;
+<span class="gu">@@ -23,5 +35,41 @@ class _Finder:</span>
+<span class="w"> </span>    fullname = None
+<span class="w"> </span>    lock = []
+
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def find_spec(cls, fullname, path, target=None):</span>
+<span class="gi">+        if fullname in _DISTUTILS_PATCH:</span>
+<span class="gi">+            return cls._create_spec(fullname)</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def _create_spec(cls, fullname):</span>
+<span class="gi">+        from importlib.util import spec_from_loader</span>
+<span class="gi">+        return spec_from_loader(fullname, cls())</span>
+<span class="gi">+</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def load_module(cls, fullname):</span>
+<span class="gi">+        with cls.lock:</span>
+<span class="gi">+            if fullname != cls.fullname:</span>
+<span class="gi">+                cls.fullname = fullname</span>
+<span class="gi">+                module = cls._load_module(fullname)</span>
+<span class="gi">+                sys.modules[fullname] = module</span>
+<span class="gi">+                return module</span>
+<span class="gi">+        return sys.modules[fullname]</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def _load_module(fullname):</span>
+<span class="gi">+        import importlib</span>
+<span class="gi">+        module = importlib.import_module(fullname)</span>
+<span class="gi">+        if fullname.startswith(&#39;distutils&#39;):</span>
+<span class="gi">+            patch_dist(module.Distribution)</span>
+<span class="gi">+        return module</span>
+<span class="gi">+</span>
+<span class="gi">+    def create_module(self, spec):</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    def exec_module(self, module):</span>
+<span class="gi">+        fullname = module.__spec__.name</span>
+<span class="gi">+        self.load_module(fullname)</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>sys.meta_path.insert(0, _Finder())
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/api.py b/src/virtualenv/create/via_global_ref/api.py</span>
+<span class="gh">index 942e93c..a199126 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/api.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/api.py</span>
+<span class="gu">@@ -1,6 +1,7 @@</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="w"> </span>import logging
+<span class="w"> </span>import os
+<span class="gi">+import textwrap</span>
+<span class="w"> </span>from abc import ABC
+<span class="w"> </span>from pathlib import Path
+<span class="w"> </span>from virtualenv.create.creator import Creator, CreatorMeta
+<span class="gu">@@ -26,7 +27,28 @@ class ViaGlobalRefApi(Creator, ABC):</span>
+
+<span class="w"> </span>    def env_patch_text(self):
+<span class="w"> </span>        &quot;&quot;&quot;Patch the distutils package to not be derailed by its configuration files.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return textwrap.dedent(</span>
+<span class="gi">+            &quot;&quot;&quot;</span>
+<span class="gi">+            import distutils.dist</span>
+<span class="gi">+            import distutils.sysconfig</span>
+<span class="gi">+            from distutils import log</span>
+<span class="gi">+            from distutils.command import install</span>
+<span class="gi">+</span>
+<span class="gi">+            # Patch distutils to ignore user configuration files</span>
+<span class="gi">+            distutils.dist.Distribution.parse_config_files = lambda self, *args, **kwargs: None</span>
+<span class="gi">+            distutils.sysconfig.get_config_vars = lambda *args, **kwargs: {}</span>
+<span class="gi">+            distutils.sysconfig.get_config_var = lambda *args, **kwargs: None</span>
+<span class="gi">+</span>
+<span class="gi">+            # Patch distutils to not write to the user&#39;s home directory</span>
+<span class="gi">+            def _dont_write_bytecode(self):</span>
+<span class="gi">+                self.byte_compile = 0</span>
+<span class="gi">+            install.install._dont_write_bytecode = _dont_write_bytecode</span>
+<span class="gi">+            install.install.finalize_options = _dont_write_bytecode</span>
+<span class="gi">+</span>
+<span class="gi">+            # Suppress distutils warnings</span>
+<span class="gi">+            log.set_threshold(log.ERROR)</span>
+<span class="gi">+            &quot;&quot;&quot;</span>
+<span class="gi">+        )</span>
+
+
+<span class="w"> </span>__all__ = [&#39;ViaGlobalRefApi&#39;, &#39;ViaGlobalRefMeta&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/builtin/cpython/common.py b/src/virtualenv/create/via_global_ref/builtin/cpython/common.py</span>
+<span class="gh">index 4560e8d..98e098c 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/builtin/cpython/common.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/builtin/cpython/common.py</span>
+<span class="gu">@@ -25,3 +25,11 @@ _BREW = re.compile(</span>
+<span class="w"> </span>    )
+<span class="w"> </span>__all__ = [&#39;CPython&#39;, &#39;CPythonPosix&#39;, &#39;CPythonWindows&#39;,
+<span class="w"> </span>    &#39;is_mac_os_framework&#39;, &#39;is_macos_brew&#39;]
+<span class="gi">+</span>
+<span class="gi">+def is_mac_os_framework(interpreter):</span>
+<span class="gi">+    &quot;&quot;&quot;Check if the interpreter is a macOS framework build.&quot;&quot;&quot;</span>
+<span class="gi">+    return interpreter.executable.parts[:3] == Path(&quot;/Library/Frameworks/Python.framework&quot;).parts[:3]</span>
+<span class="gi">+</span>
+<span class="gi">+def is_macos_brew(interpreter):</span>
+<span class="gi">+    &quot;&quot;&quot;Check if the interpreter is a Homebrew-installed Python on macOS.&quot;&quot;&quot;</span>
+<span class="gi">+    return bool(_BREW.match(str(interpreter.executable)))</span>
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/builtin/cpython/cpython3.py b/src/virtualenv/create/via_global_ref/builtin/cpython/cpython3.py</span>
+<span class="gh">index fd977a0..fa5c929 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/builtin/cpython/cpython3.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/builtin/cpython/cpython3.py</span>
+<span class="gu">@@ -36,7 +36,9 @@ class CPython3Windows(CPythonWindows, CPython3):</span>
+<span class="w"> </span>        move/rename *zip* file and edit `sys.path` by editing *_pth* file.
+<span class="w"> </span>        Here the `pattern` is used only for the default *zip* file name!
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        py_version_nodot = interpreter.version_info.major * 10 + interpreter.version_info.minor</span>
+<span class="gi">+        pattern = f&quot;python{py_version_nodot}.zip&quot;</span>
+<span class="gi">+        return cls.mappings(interpreter, pattern)</span>
+
+
+<span class="w"> </span>__all__ = [&#39;CPython3&#39;, &#39;CPython3Posix&#39;, &#39;CPython3Windows&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/builtin/cpython/mac_os.py b/src/virtualenv/create/via_global_ref/builtin/cpython/mac_os.py</span>
+<span class="gh">index ed427f7..38ef9c6 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/builtin/cpython/mac_os.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/builtin/cpython/mac_os.py</span>
+<span class="gu">@@ -45,7 +45,26 @@ def fix_mach_o(exe, current, new, max_size):</span>
+<span class="w"> </span>    (found in the __LINKEDIT section) function. In 10.6 these new Link Edit tables are compressed by removing unused and
+<span class="w"> </span>    unneeded bits of information, however Mac OS X 10.5 and earlier cannot read this new Link Edit table format.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    with open(exe, &#39;rb+&#39;) as f:</span>
+<span class="gi">+        content = f.read()</span>
+<span class="gi">+        f.seek(0)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Find all occurrences of the current path</span>
+<span class="gi">+        offsets = [i for i in range(len(content)) if content.startswith(current.encode(), i)]</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not offsets:</span>
+<span class="gi">+            raise ValueError(f&quot;Could not find {current} in {exe}&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Replace the path, ensuring it doesn&#39;t exceed max_size</span>
+<span class="gi">+        new_path = new.encode().ljust(len(current), b&#39;\0&#39;)</span>
+<span class="gi">+        if len(new_path) &gt; max_size:</span>
+<span class="gi">+            raise ValueError(f&quot;New path {new} is too long (max {max_size} bytes)&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        for offset in offsets:</span>
+<span class="gi">+            f.seek(offset)</span>
+<span class="gi">+            f.write(new_path)</span>
+<span class="gi">+        </span>
+<span class="gi">+        f.truncate()</span>
+
+
+<span class="w"> </span>class CPython3macOsBrew(CPython3, CPythonPosix):
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/builtin/pypy/common.py b/src/virtualenv/create/via_global_ref/builtin/pypy/common.py</span>
+<span class="gh">index 1056bf3..e2e2350 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/builtin/pypy/common.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/builtin/pypy/common.py</span>
+<span class="gu">@@ -6,7 +6,45 @@ from virtualenv.create.via_global_ref.builtin.via_global_self_do import ViaGloba</span>
+
+
+<span class="w"> </span>class PyPy(ViaGlobalRefVirtualenvBuiltin, abc.ABC):
+<span class="gd">-    pass</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def stdlib(self):</span>
+<span class="gi">+        return self.dest / &quot;lib-python&quot; / f&quot;{self.interpreter.version_info.major}.{self.interpreter.version_info.minor}&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def site_packages(self):</span>
+<span class="gi">+        return self.dest / &quot;site-packages&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def exe(self):</span>
+<span class="gi">+        return self.dest / self.interpreter.exe.name</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def bin_dir(self):</span>
+<span class="gi">+        return self.dest / &quot;bin&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    def ensure_directories(self):</span>
+<span class="gi">+        dirs = [self.stdlib, self.site_packages, self.bin_dir]</span>
+<span class="gi">+        for directory in dirs:</span>
+<span class="gi">+            directory.mkdir(parents=True, exist_ok=True)</span>
+<span class="gi">+</span>
+<span class="gi">+    def set_pypy_exe(self):</span>
+<span class="gi">+        src = self.interpreter.exe</span>
+<span class="gi">+        dst = self.exe</span>
+<span class="gi">+        if not dst.exists():</span>
+<span class="gi">+            dst.symlink_to(src)</span>
+<span class="gi">+</span>
+<span class="gi">+    def create(self):</span>
+<span class="gi">+        self.ensure_directories()</span>
+<span class="gi">+        self.set_pypy_exe()</span>
+<span class="gi">+        super().create()</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def sources(self):</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &quot;stdlib&quot;: RefMust(self.interpreter.stdlib, self.stdlib, RefWhen.ANY),</span>
+<span class="gi">+            &quot;site-packages&quot;: RefMust(self.interpreter.site_packages, self.site_packages, RefWhen.ANY),</span>
+<span class="gi">+            &quot;executable&quot;: PathRefToDest(self.interpreter.exe, self.exe),</span>
+<span class="gi">+        }</span>
+
+
+<span class="w"> </span>__all__ = [&#39;PyPy&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/builtin/pypy/pypy3.py b/src/virtualenv/create/via_global_ref/builtin/pypy/pypy3.py</span>
+<span class="gh">index 023840f..98c7e54 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/builtin/pypy/pypy3.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/builtin/pypy/pypy3.py</span>
+<span class="gu">@@ -7,15 +7,36 @@ from .common import PyPy</span>
+
+
+<span class="w"> </span>class PyPy3(PyPy, Python3Supports, abc.ABC):
+<span class="gd">-    pass</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def exe_stem(cls):</span>
+<span class="gi">+        return &quot;pypy3&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def can_describe(cls, interpreter):</span>
+<span class="gi">+        return interpreter.implementation == &quot;PyPy&quot; and interpreter.version_info[0] == 3</span>
+
+
+<span class="w"> </span>class PyPy3Posix(PyPy3, PosixSupports):
+<span class="w"> </span>    &quot;&quot;&quot;PyPy 3 on POSIX.&quot;&quot;&quot;
+<span class="gi">+    </span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def sources(cls, interpreter):</span>
+<span class="gi">+        for src in super().sources(interpreter):</span>
+<span class="gi">+            yield src</span>
+<span class="gi">+        # Add POSIX-specific sources if needed</span>
+<span class="gi">+        yield PathRefToDest(interpreter.prefix / &quot;bin&quot; / &quot;python3&quot;, dest=cls.bin_dir / &quot;python&quot;)</span>
+
+
+<span class="w"> </span>class Pypy3Windows(PyPy3, WindowsSupports):
+<span class="w"> </span>    &quot;&quot;&quot;PyPy 3 on Windows.&quot;&quot;&quot;
+<span class="gi">+    </span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def sources(cls, interpreter):</span>
+<span class="gi">+        for src in super().sources(interpreter):</span>
+<span class="gi">+            yield src</span>
+<span class="gi">+        # Add Windows-specific sources if needed</span>
+<span class="gi">+        yield PathRefToDest(interpreter.prefix / &quot;python.exe&quot;, dest=cls.bin_dir / &quot;python.exe&quot;)</span>
+<span class="gi">+        yield PathRefToDest(interpreter.prefix / &quot;pythonw.exe&quot;, dest=cls.bin_dir / &quot;pythonw.exe&quot;)</span>
+
+
+<span class="w"> </span>__all__ = [&#39;PyPy3&#39;, &#39;PyPy3Posix&#39;, &#39;Pypy3Windows&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/builtin/via_global_self_do.py b/src/virtualenv/create/via_global_ref/builtin/via_global_self_do.py</span>
+<span class="gh">index 5be5210..4dd7b07 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/builtin/via_global_self_do.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/builtin/via_global_self_do.py</span>
+<span class="gu">@@ -22,14 +22,16 @@ class ViaGlobalRefVirtualenvBuiltin(ViaGlobalRefApi, VirtualenvBuiltin, ABC):</span>
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def can_create(cls, interpreter):
+<span class="w"> </span>        &quot;&quot;&quot;By default, all built-in methods assume that if we can describe it we can create it.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return cls.can_describe(interpreter)</span>
+
+<span class="w"> </span>    def set_pyenv_cfg(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        We directly inject the base prefix and base exec prefix to avoid site.py needing to discover these
+<span class="w"> </span>        from home (which usually is done within the interpreter itself).
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        super().set_pyenv_cfg()</span>
+<span class="gi">+        self.pyenv_cfg[&quot;base-prefix&quot;] = self.interpreter.prefix</span>
+<span class="gi">+        self.pyenv_cfg[&quot;base-exec-prefix&quot;] = self.interpreter.base_exec_prefix</span>
+
+
+<span class="w"> </span>__all__ = [&#39;BuiltinViaGlobalRefMeta&#39;, &#39;ViaGlobalRefVirtualenvBuiltin&#39;]
+<span class="gh">diff --git a/src/virtualenv/create/via_global_ref/venv.py b/src/virtualenv/create/via_global_ref/venv.py</span>
+<span class="gh">index dab115b..7d6be47 100644</span>
+<span class="gd">--- a/src/virtualenv/create/via_global_ref/venv.py</span>
+<span class="gi">+++ b/src/virtualenv/create/via_global_ref/venv.py</span>
+<span class="gu">@@ -27,7 +27,12 @@ class Venv(ViaGlobalRefApi):</span>
+<span class="w"> </span>        Venv does not handle non-existing exe sources, e.g. python.exe, so this
+<span class="w"> </span>        patch does it.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(self.interpreter, Pypy3Windows) and self.interpreter.version_info[:2] &lt;= (3, 6):</span>
+<span class="gi">+            executables = copy(self.interpreter.executables)</span>
+<span class="gi">+            executables[&#39;python&#39;] = executables[&#39;pypy&#39;]</span>
+<span class="gi">+            executables[&#39;pythonw&#39;] = executables[&#39;pypyw&#39;]</span>
+<span class="gi">+            return executables</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def __getattribute__(self, item):
+<span class="w"> </span>        describe = object.__getattribute__(self, &#39;describe&#39;)
+<span class="gh">diff --git a/src/virtualenv/discovery/builtin.py b/src/virtualenv/discovery/builtin.py</span>
+<span class="gh">index c685c6c..844c7f6 100644</span>
+<span class="gd">--- a/src/virtualenv/discovery/builtin.py</span>
+<span class="gi">+++ b/src/virtualenv/discovery/builtin.py</span>
+<span class="gu">@@ -57,7 +57,23 @@ class LazyPathDump:</span>
+<span class="w"> </span>def path_exe_finder(spec: PythonSpec) -&gt;Callable[[Path], Generator[tuple[
+<span class="w"> </span>    Path, bool], None, None]]:
+<span class="w"> </span>    &quot;&quot;&quot;Given a spec, return a function that can be called on a path to find all matching files in it.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def finder(path: Path) -&gt; Generator[tuple[Path, bool], None, None]:</span>
+<span class="gi">+        if not path.is_dir():</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        for item in path.iterdir():</span>
+<span class="gi">+            if item.is_file() and item.stat().st_mode &amp; os.X_OK:</span>
+<span class="gi">+                name = item.name.lower()</span>
+<span class="gi">+                if IS_WIN:</span>
+<span class="gi">+                    if name.startswith(spec.implementation) and name.endswith(&#39;.exe&#39;):</span>
+<span class="gi">+                        yield item, True</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    if name.startswith(spec.implementation):</span>
+<span class="gi">+                        yield item, True</span>
+<span class="gi">+            elif item.is_dir():</span>
+<span class="gi">+                yield item, False</span>
+<span class="gi">+</span>
+<span class="gi">+    return finder</span>
+
+
+<span class="w"> </span>class PathPythonInfo(PythonInfo):
+<span class="gh">diff --git a/src/virtualenv/discovery/discover.py b/src/virtualenv/discovery/discover.py</span>
+<span class="gh">index c6a9976..b6bd412 100644</span>
+<span class="gd">--- a/src/virtualenv/discovery/discover.py</span>
+<span class="gi">+++ b/src/virtualenv/discovery/discover.py</span>
+<span class="gu">@@ -14,7 +14,7 @@ class Discover(ABC):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gd">-    def __init__(self, options) -&gt;None:</span>
+<span class="gi">+    def __init__(self, options) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Create a new discovery mechanism.
+
+<span class="gu">@@ -31,12 +31,26 @@ class Discover(ABC):</span>
+
+<span class="w"> </span>        :return: the interpreter ready to use for virtual environment creation
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self._has_run:</span>
+<span class="gi">+            self._interpreter = self._discover_interpreter()</span>
+<span class="gi">+            self._has_run = True</span>
+<span class="gi">+        return self._interpreter</span>
+<span class="gi">+</span>
+<span class="gi">+    @abstractmethod</span>
+<span class="gi">+    def _discover_interpreter(self):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Abstract method to be implemented by subclasses for actual interpreter discovery.</span>
+<span class="gi">+</span>
+<span class="gi">+        :return: the discovered interpreter</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def interpreter(self):
+<span class="w"> </span>        &quot;&quot;&quot;:return: the interpreter as returned by :meth:`run`, cached&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self._has_run:</span>
+<span class="gi">+            self.run()</span>
+<span class="gi">+        return self._interpreter</span>
+
+
+<span class="w"> </span>__all__ = [&#39;Discover&#39;]
+<span class="gh">diff --git a/src/virtualenv/discovery/py_info.py b/src/virtualenv/discovery/py_info.py</span>
+<span class="gh">index 423ca50..c5dd6d8 100644</span>
+<span class="gd">--- a/src/virtualenv/discovery/py_info.py</span>
+<span class="gi">+++ b/src/virtualenv/discovery/py_info.py</span>
+<span class="gu">@@ -92,7 +92,9 @@ class PythonInfo:</span>
+
+<span class="w"> </span>    def _fast_get_system_executable(self):
+<span class="w"> </span>        &quot;&quot;&quot;Try to get the system executable by just looking at properties.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.prefix == self.base_prefix == self.exec_prefix == self.base_exec_prefix:</span>
+<span class="gi">+            return self.executable</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def __repr__(self) -&gt;str:
+<span class="w"> </span>        return &#39;{}({!r})&#39;.format(self.__class__.__name__, {k: v for k, v in
+<span class="gu">@@ -112,7 +114,14 @@ class PythonInfo:</span>
+
+<span class="w"> </span>    def satisfies(self, spec, impl_must_match):
+<span class="w"> </span>        &quot;&quot;&quot;Check if a given specification can be satisfied by the this python interpreter instance.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if impl_must_match and spec.implementation != self.implementation:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        if spec.architecture is not None and spec.architecture != self.architecture:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        if spec.version_info:</span>
+<span class="gi">+            if self.version_info[:len(spec.version_info)] != spec.version_info:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+        return True</span>
+<span class="w"> </span>    _current_system = None
+<span class="w"> </span>    _current = None
+
+<span class="gu">@@ -122,7 +131,9 @@ class PythonInfo:</span>
+<span class="w"> </span>        This locates the current host interpreter information. This might be different than what we run into in case
+<span class="w"> </span>        the host python has been upgraded from underneath us.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if cls._current is None:</span>
+<span class="gi">+            cls._current = cls()</span>
+<span class="gi">+        return cls._current</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def current_system(cls, app_data=None) -&gt;PythonInfo:
+<span class="gu">@@ -130,13 +141,37 @@ class PythonInfo:</span>
+<span class="w"> </span>        This locates the current host interpreter information. This might be different than what we run into in case
+<span class="w"> </span>        the host python has been upgraded from underneath us.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if cls._current_system is None:</span>
+<span class="gi">+            cls._current_system = cls.from_exe(sys.executable, app_data=app_data)</span>
+<span class="gi">+        return cls._current_system</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def from_exe(cls, exe, app_data=None, raise_on_error=True, ignore_cache
+<span class="w"> </span>        =False, resolve_to_host=True, env=None):
+<span class="w"> </span>        &quot;&quot;&quot;Given a path to an executable get the python information.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        key = (exe, resolve_to_host)</span>
+<span class="gi">+        if ignore_cache:</span>
+<span class="gi">+            cls._cache_exe_discovery.pop(key, None)</span>
+<span class="gi">+        if key not in cls._cache_exe_discovery:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                info = cls._from_exe(exe, app_data, resolve_to_host, env)</span>
+<span class="gi">+                cls._cache_exe_discovery[key] = info</span>
+<span class="gi">+            except Exception as exception:</span>
+<span class="gi">+                if raise_on_error:</span>
+<span class="gi">+                    raise</span>
+<span class="gi">+                cls._cache_exe_discovery[key] = exception</span>
+<span class="gi">+        result = cls._cache_exe_discovery[key]</span>
+<span class="gi">+        if isinstance(result, Exception):</span>
+<span class="gi">+            if raise_on_error:</span>
+<span class="gi">+                raise result</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        return result</span>
+<span class="gi">+</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def _from_exe(cls, exe, app_data, resolve_to_host, env):</span>
+<span class="gi">+        # This is a placeholder for the actual implementation</span>
+<span class="gi">+        # In a real scenario, this method would gather information about the Python executable</span>
+<span class="gi">+        return cls()</span>
+<span class="w"> </span>    _cache_exe_discovery = {}
+
+
+<span class="gh">diff --git a/src/virtualenv/discovery/py_spec.py b/src/virtualenv/discovery/py_spec.py</span>
+<span class="gh">index fda6851..bf31792 100644</span>
+<span class="gd">--- a/src/virtualenv/discovery/py_spec.py</span>
+<span class="gi">+++ b/src/virtualenv/discovery/py_spec.py</span>
+<span class="gu">@@ -22,11 +22,34 @@ class PythonSpec:</span>
+
+<span class="w"> </span>    def generate_re(self, *, windows: bool) -&gt;re.Pattern:
+<span class="w"> </span>        &quot;&quot;&quot;Generate a regular expression for matching against a filename.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        pattern = r&quot;&quot;</span>
+<span class="gi">+        if self.implementation:</span>
+<span class="gi">+            pattern += rf&quot;{re.escape(self.implementation)}&quot;</span>
+<span class="gi">+        if self.major is not None:</span>
+<span class="gi">+            pattern += rf&quot;{self.major}&quot;</span>
+<span class="gi">+            if self.minor is not None:</span>
+<span class="gi">+                pattern += rf&quot;\.{self.minor}&quot;</span>
+<span class="gi">+                if self.micro is not None:</span>
+<span class="gi">+                    pattern += rf&quot;\.{self.micro}&quot;</span>
+<span class="gi">+        if self.architecture:</span>
+<span class="gi">+            pattern += rf&quot;-{self.architecture}&quot;</span>
+<span class="gi">+        if windows:</span>
+<span class="gi">+            pattern += r&quot;\.exe&quot;</span>
+<span class="gi">+        return re.compile(pattern, re.IGNORECASE)</span>
+
+<span class="w"> </span>    def satisfies(self, spec):
+<span class="w"> </span>        &quot;&quot;&quot;Called when there&#39;s a candidate metadata spec to see if compatible - e.g. PEP-514 on Windows.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.implementation and spec.implementation and self.implementation.lower() != spec.implementation.lower():</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        if self.major is not None and spec.major is not None and self.major != spec.major:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        if self.minor is not None and spec.minor is not None and self.minor != spec.minor:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        if self.micro is not None and spec.micro is not None and self.micro != spec.micro:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        if self.architecture and spec.architecture and self.architecture != spec.architecture:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        return True</span>
+
+<span class="w"> </span>    def __repr__(self) -&gt;str:
+<span class="w"> </span>        name = type(self).__name__
+<span class="gh">diff --git a/src/virtualenv/run/session.py b/src/virtualenv/run/session.py</span>
+<span class="gh">index 33a12c6..f42ea0c 100644</span>
+<span class="gd">--- a/src/virtualenv/run/session.py</span>
+<span class="gi">+++ b/src/virtualenv/run/session.py</span>
+<span class="gu">@@ -18,27 +18,27 @@ class Session:</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def verbosity(self):
+<span class="w"> </span>        &quot;&quot;&quot;The verbosity of the run.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._verbosity</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def interpreter(self):
+<span class="w"> </span>        &quot;&quot;&quot;Create a virtual environment based on this reference interpreter.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._interpreter</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def creator(self):
+<span class="w"> </span>        &quot;&quot;&quot;The creator used to build the virtual environment (must be compatible with the interpreter).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._creator</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def seeder(self):
+<span class="w"> </span>        &quot;&quot;&quot;The mechanism used to provide the seed packages (pip, setuptools, wheel).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._seeder</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def activators(self):
+<span class="w"> </span>        &quot;&quot;&quot;Activators used to generate activations scripts.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._activators</span>
+
+<span class="w"> </span>    def __enter__(self):
+<span class="w"> </span>        return self
+<span class="gh">diff --git a/src/virtualenv/seed/embed/via_app_data/pip_install/copy.py b/src/virtualenv/seed/embed/via_app_data/pip_install/copy.py</span>
+<span class="gh">index c1e008c..5149be5 100644</span>
+<span class="gd">--- a/src/virtualenv/seed/embed/via_app_data/pip_install/copy.py</span>
+<span class="gi">+++ b/src/virtualenv/seed/embed/via_app_data/pip_install/copy.py</span>
+<span class="gu">@@ -6,7 +6,23 @@ from .base import PipInstall</span>
+
+
+<span class="w"> </span>class CopyPipInstall(PipInstall):
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, wheel):</span>
+<span class="gi">+        super().__init__(wheel)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _sync(self, src, dst):</span>
+<span class="gi">+        dst_folder = os.path.dirname(dst)</span>
+<span class="gi">+        if not os.path.isdir(dst_folder):</span>
+<span class="gi">+            os.makedirs(dst_folder)</span>
+<span class="gi">+        if src != dst:</span>
+<span class="gi">+            copy(src, dst)</span>
+<span class="gi">+</span>
+<span class="gi">+    def install(self, creator):</span>
+<span class="gi">+        for src in self.wheel.src_files:</span>
+<span class="gi">+            dst = os.path.join(creator.purelib, self.wheel.name, os.path.basename(src))</span>
+<span class="gi">+            self._sync(src, dst)</span>
+<span class="gi">+</span>
+<span class="gi">+    def clear(self, creator):</span>
+<span class="gi">+        pass  # No need to clear anything for copy installation</span>
+
+
+<span class="w"> </span>__all__ = [&#39;CopyPipInstall&#39;]
+<span class="gh">diff --git a/src/virtualenv/seed/embed/via_app_data/pip_install/symlink.py b/src/virtualenv/seed/embed/via_app_data/pip_install/symlink.py</span>
+<span class="gh">index 4d91177..b130da5 100644</span>
+<span class="gd">--- a/src/virtualenv/seed/embed/via_app_data/pip_install/symlink.py</span>
+<span class="gi">+++ b/src/virtualenv/seed/embed/via_app_data/pip_install/symlink.py</span>
+<span class="gu">@@ -7,7 +7,31 @@ from .base import PipInstall</span>
+
+
+<span class="w"> </span>class SymlinkPipInstall(PipInstall):
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, wheel, creator, app_data):</span>
+<span class="gi">+        super().__init__(wheel, creator, app_data)</span>
+<span class="gi">+        self.symlink_path = None</span>
+<span class="gi">+</span>
+<span class="gi">+    def _sync(self, src, dst):</span>
+<span class="gi">+        safe_delete(dst)</span>
+<span class="gi">+        os.symlink(src, dst)</span>
+<span class="gi">+        self.symlink_path = dst</span>
+<span class="gi">+</span>
+<span class="gi">+    def _generate_new_files(self):</span>
+<span class="gi">+        # Create a symlink instead of copying files</span>
+<span class="gi">+        src = str(self.wheel.path)</span>
+<span class="gi">+        dst = str(self.dest_dir / self.wheel.path.name)</span>
+<span class="gi">+        self._sync(src, dst)</span>
+<span class="gi">+</span>
+<span class="gi">+    def clear(self):</span>
+<span class="gi">+        if self.symlink_path:</span>
+<span class="gi">+            safe_delete(self.symlink_path)</span>
+<span class="gi">+        super().clear()</span>
+<span class="gi">+</span>
+<span class="gi">+    def install(self, version_info):</span>
+<span class="gi">+        self._generate_new_files()</span>
+<span class="gi">+        # Set read-only permissions for the symlink</span>
+<span class="gi">+        os.chmod(self.symlink_path, S_IREAD | S_IRGRP | S_IROTH)</span>
+<span class="gi">+        return super().install(version_info)</span>
+
+
+<span class="w"> </span>__all__ = [&#39;SymlinkPipInstall&#39;]
+<span class="gh">diff --git a/src/virtualenv/seed/seeder.py b/src/virtualenv/seed/seeder.py</span>
+<span class="gh">index 744b173..f393569 100644</span>
+<span class="gd">--- a/src/virtualenv/seed/seeder.py</span>
+<span class="gi">+++ b/src/virtualenv/seed/seeder.py</span>
+<span class="gu">@@ -24,7 +24,11 @@ class Seeder(ABC):</span>
+<span class="w"> </span>        :param app_data: the CLI parser
+<span class="w"> </span>        :param interpreter: the interpreter this virtual environment is based of
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        parser.add_argument(</span>
+<span class="gi">+            &quot;--seed-packages&quot;,</span>
+<span class="gi">+            nargs=&quot;*&quot;,</span>
+<span class="gi">+            help=&quot;Specify additional packages to install when seeding the environment&quot;,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def run(self, creator):
+<span class="gu">@@ -33,7 +37,28 @@ class Seeder(ABC):</span>
+
+<span class="w"> </span>        :param creator: the creator (based of :class:`virtualenv.create.creator.Creator`) we used to create this         virtual environment
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.enabled:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        packages = self.env.get(&quot;seed_packages&quot;, [])</span>
+<span class="gi">+        if packages:</span>
+<span class="gi">+            self._install_packages(creator, packages)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _install_packages(self, creator, packages):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Install specified packages in the virtual environment.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param creator: the creator of the virtual environment</span>
+<span class="gi">+        :param packages: list of packages to install</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        pip_path = creator.bin_path / &quot;pip&quot;</span>
+<span class="gi">+        if not pip_path.exists():</span>
+<span class="gi">+            raise RuntimeError(&quot;pip not found in the virtual environment&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        import subprocess</span>
+<span class="gi">+</span>
+<span class="gi">+        cmd = [str(pip_path), &quot;install&quot;] + packages</span>
+<span class="gi">+        subprocess.check_call(cmd, env=self.env)</span>
+
+
+<span class="w"> </span>__all__ = [&#39;Seeder&#39;]
+<span class="gh">diff --git a/src/virtualenv/seed/wheels/acquire.py b/src/virtualenv/seed/wheels/acquire.py</span>
+<span class="gh">index a3225d0..a1f1125 100644</span>
+<span class="gd">--- a/src/virtualenv/seed/wheels/acquire.py</span>
+<span class="gi">+++ b/src/virtualenv/seed/wheels/acquire.py</span>
+<span class="gu">@@ -13,7 +13,51 @@ from .util import Version, Wheel, discover_wheels</span>
+<span class="w"> </span>def get_wheel(distribution, version, for_py_version, search_dirs, download,
+<span class="w"> </span>    app_data, do_periodic_update, env):
+<span class="w"> </span>    &quot;&quot;&quot;Get a wheel with the given distribution-version-for_py_version trio, by using the extra search dir + download.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # First, try to find the wheel in the search directories</span>
+<span class="gi">+    for search_dir in search_dirs:</span>
+<span class="gi">+        wheels = discover_wheels(Path(search_dir), distribution, version, for_py_version)</span>
+<span class="gi">+        if wheels:</span>
+<span class="gi">+            return wheels[0]</span>
+
+<span class="gi">+    # If not found in search dirs, try to get it from the bundle</span>
+<span class="gi">+    bundle_wheel = from_bundle(distribution, version, for_py_version, search_dirs)</span>
+<span class="gi">+    if bundle_wheel:</span>
+<span class="gi">+        return bundle_wheel</span>
+<span class="gi">+</span>
+<span class="gi">+    # If not in bundle, try to download</span>
+<span class="gi">+    if download:</span>
+<span class="gi">+        downloaded_wheel = download_wheel(distribution, version, for_py_version, app_data, env)</span>
+<span class="gi">+        if downloaded_wheel:</span>
+<span class="gi">+            if do_periodic_update:</span>
+<span class="gi">+                add_wheel_to_update_log(app_data, distribution, downloaded_wheel)</span>
+<span class="gi">+            return downloaded_wheel</span>
+<span class="gi">+</span>
+<span class="gi">+    # If we couldn&#39;t find or download the wheel, raise an exception</span>
+<span class="gi">+    raise ValueError(f&quot;Unable to find or download wheel for {distribution} {version} (Python {for_py_version})&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def download_wheel(distribution, version, for_py_version, app_data, env):</span>
+<span class="gi">+    &quot;&quot;&quot;Download a wheel for the given distribution, version, and Python version.&quot;&quot;&quot;</span>
+<span class="gi">+    logging.info(f&quot;Downloading wheel for {distribution} {version} (Python {for_py_version})&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    cmd = [</span>
+<span class="gi">+        sys.executable,</span>
+<span class="gi">+        &quot;-m&quot;, &quot;pip&quot;,</span>
+<span class="gi">+        &quot;download&quot;,</span>
+<span class="gi">+        &quot;--only-binary=:all:&quot;,</span>
+<span class="gi">+        &quot;--no-deps&quot;,</span>
+<span class="gi">+        &quot;--python-version&quot;, for_py_version,</span>
+<span class="gi">+        f&quot;{distribution}=={version}&quot;</span>
+<span class="gi">+    ]</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        result = pip_wheel_env_run(cmd, env)</span>
+<span class="gi">+        wheel_file = Path(result.strip())</span>
+<span class="gi">+        if wheel_file.exists() and wheel_file.is_file():</span>
+<span class="gi">+            return str(wheel_file)</span>
+<span class="gi">+    except CalledProcessError as e:</span>
+<span class="gi">+        logging.error(f&quot;Failed to download wheel: {e}&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return None</span>
+
+<span class="w"> </span>__all__ = [&#39;download_wheel&#39;, &#39;get_wheel&#39;, &#39;pip_wheel_env_run&#39;]
+<span class="gh">diff --git a/src/virtualenv/seed/wheels/bundle.py b/src/virtualenv/seed/wheels/bundle.py</span>
+<span class="gh">index dacec6a..7a47a6f 100644</span>
+<span class="gd">--- a/src/virtualenv/seed/wheels/bundle.py</span>
+<span class="gi">+++ b/src/virtualenv/seed/wheels/bundle.py</span>
+<span class="gu">@@ -7,12 +7,24 @@ from .util import Version, Wheel, discover_wheels</span>
+<span class="w"> </span>def from_bundle(distribution, version, for_py_version, search_dirs,
+<span class="w"> </span>    app_data, do_periodic_update, env):
+<span class="w"> </span>    &quot;&quot;&quot;Load the bundled wheel to a cache directory.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    wheel = get_embed_wheel(distribution, for_py_version)</span>
+<span class="gi">+    if wheel is None:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    if do_periodic_update:</span>
+<span class="gi">+        wheel = periodic_update(distribution, wheel, search_dirs, app_data, env)</span>
+<span class="gi">+</span>
+<span class="gi">+    return wheel</span>
+
+
+<span class="w"> </span>def from_dir(distribution, version, for_py_version, directories):
+<span class="w"> </span>    &quot;&quot;&quot;Load a compatible wheel from a given folder.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    wheels = discover_wheels(directories, distribution, version, for_py_version)</span>
+<span class="gi">+    if not wheels:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    # Sort wheels by version (highest first) and return the best match</span>
+<span class="gi">+    return sorted(wheels, key=lambda w: Version(w.version), reverse=True)[0]</span>
+
+
+<span class="gd">-__all__ = [&#39;from_bundle&#39;, &#39;load_embed_wheel&#39;]</span>
+<span class="gi">+__all__ = [&#39;from_bundle&#39;, &#39;from_dir&#39;, &#39;load_embed_wheel&#39;]</span>
+<span class="gh">diff --git a/src/virtualenv/util/path/_win.py b/src/virtualenv/util/path/_win.py</span>
+<span class="gh">index e274b39..758b003 100644</span>
+<span class="gd">--- a/src/virtualenv/util/path/_win.py</span>
+<span class="gi">+++ b/src/virtualenv/util/path/_win.py</span>
+<span class="gu">@@ -1,9 +1,21 @@</span>
+<span class="w"> </span>from __future__ import annotations
+
+<span class="gi">+import ctypes</span>
+<span class="gi">+from ctypes import wintypes</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>def get_short_path_name(long_name):
+<span class="w"> </span>    &quot;&quot;&quot;Gets the short path name of a given long path - http://stackoverflow.com/a/23598461/200291.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    buffer_size = 256</span>
+<span class="gi">+    buffer = ctypes.create_unicode_buffer(buffer_size)</span>
+<span class="gi">+    get_short_path_name_w = ctypes.windll.kernel32.GetShortPathNameW</span>
+<span class="gi">+    get_short_path_name_w.argtypes = [wintypes.LPCWSTR, wintypes.LPWSTR, wintypes.DWORD]</span>
+<span class="gi">+    get_short_path_name_w.restype = wintypes.DWORD</span>
+<span class="gi">+    </span>
+<span class="gi">+    result = get_short_path_name_w(long_name, buffer, buffer_size)</span>
+<span class="gi">+    if result == 0:</span>
+<span class="gi">+        raise ctypes.WinError()</span>
+<span class="gi">+    return buffer.value</span>
+
+
+<span class="w"> </span>__all__ = [&#39;get_short_path_name&#39;]
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
