@@ -254,7 +254,7 @@ def render_mds(subfolder="docs"):
         analysis_link = f"[Analysis](/{f'analysis_{branch_name}'})"
         leaderboard[split] += f"\n||[{display_name}]({project_page_link})|" \
                     f"{repos_resolved}|" \
-                    f"{total_duration:.2f}" \
+                    f"{total_duration:.2f}|" \
                     f"{submission_date}|" \
                     f"{analysis_link}||"
 
