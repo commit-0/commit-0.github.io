@@ -1926,7 +1926,7 @@ tinydb/table.py:128: in all
     for doc_id, doc in self._read_table().items()]
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e23c5e0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce27388070>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -1945,7 +1945,7 @@ tinydb/table.py:354: AttributeError
 </details>
 <h3 id="test_middlewarespytest_caching_write">test_middlewares.py::test_caching_write</h3>
 <details><summary> <pre>test_middlewares.py::test_caching_write</pre></summary><pre>
-storage = <tinydb.middlewares.CachingMiddleware object at 0x7fa29f676350>
+storage = <tinydb.middlewares.CachingMiddleware object at 0x7fce277d0880>
 
     def test_caching_write(storage):
         # Write contents
@@ -1956,8 +1956,8 @@ storage = <tinydb.middlewares.CachingMiddleware object at 0x7fa29f676350>
         # Verify contents: Cache should be emptied and written to storage
 >       assert storage.storage.memory
 E       assert None
-E        +  where None = <tinydb.storages.MemoryStorage object at 0x7fa29f6750f0>.memory
-E        +    where <tinydb.storages.MemoryStorage object at 0x7fa29f6750f0> = <tinydb.middlewares.CachingMiddleware object at 0x7fa29f676350>.storage
+E        +  where None = <tinydb.storages.MemoryStorage object at 0x7fce277d00a0>.memory
+E        +    where <tinydb.storages.MemoryStorage object at 0x7fce277d00a0> = <tinydb.middlewares.CachingMiddleware object at 0x7fce277d0880>.storage
 
 tests/test_middlewares.py:74: AssertionError
 </pre>
@@ -1980,7 +1980,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fa29f9418a0>
+self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fce278fc340>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -2011,7 +2011,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e24d090>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce266cd5d0>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -2030,7 +2030,7 @@ tinydb/table.py:354: AttributeError
 </details>
 <h3 id="test_operationspytest_add_intmemory">test_operations.py::test_add_int[memory]</h3>
 <details><summary> <pre>test_operations.py::test_add_int[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f949ba0>
+db = <tinydb.database.TinyDB object at 0x7fce2733e560>
 
     def test_add_int(db):
 >       db.update(add('int', 5), where('char') == 'a')
@@ -2053,7 +2053,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_add_intjson">test_operations.py::test_add_int[json]</h3>
 <details><summary> <pre>test_operations.py::test_add_int[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29fab5210>
+db = <tinydb.database.TinyDB object at 0x7fce278ed780>
 
     def test_add_int(db):
 >       db.update(add('int', 5), where('char') == 'a')
@@ -2076,7 +2076,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_add_strmemory">test_operations.py::test_add_str[memory]</h3>
 <details><summary> <pre>test_operations.py::test_add_str[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e3d3c40>
+db = <tinydb.database.TinyDB object at 0x7fce26603c40>
 
     def test_add_str(db):
 >       db.update(add('char', 'xyz'), where('char') == 'a')
@@ -2099,7 +2099,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_add_strjson">test_operations.py::test_add_str[json]</h3>
 <details><summary> <pre>test_operations.py::test_add_str[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dfda740>
+db = <tinydb.database.TinyDB object at 0x7fce2688ea40>
 
     def test_add_str(db):
 >       db.update(add('char', 'xyz'), where('char') == 'a')
@@ -2122,7 +2122,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_subtractmemory">test_operations.py::test_subtract[memory]</h3>
 <details><summary> <pre>test_operations.py::test_subtract[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29deb7e80>
+db = <tinydb.database.TinyDB object at 0x7fce265abe80>
 
     def test_subtract(db):
 >       db.update(subtract('int', 5), where('char') == 'a')
@@ -2145,7 +2145,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_subtractjson">test_operations.py::test_subtract[json]</h3>
 <details><summary> <pre>test_operations.py::test_subtract[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df73af0>
+db = <tinydb.database.TinyDB object at 0x7fce26467af0>
 
     def test_subtract(db):
 >       db.update(subtract('int', 5), where('char') == 'a')
@@ -2168,7 +2168,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_setmemory">test_operations.py::test_set[memory]</h3>
 <details><summary> <pre>test_operations.py::test_set[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f2d3f70>
+db = <tinydb.database.TinyDB object at 0x7fce266f6080>
 
     def test_set(db):
 >       db.update(set('char', 'xyz'), where('char') == 'a')
@@ -2191,7 +2191,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_setjson">test_operations.py::test_set[json]</h3>
 <details><summary> <pre>test_operations.py::test_set[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29deb5de0>
+db = <tinydb.database.TinyDB object at 0x7fce2645d5d0>
 
     def test_set(db):
 >       db.update(set('char', 'xyz'), where('char') == 'a')
@@ -2214,7 +2214,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_incrementmemory">test_operations.py::test_increment[memory]</h3>
 <details><summary> <pre>test_operations.py::test_increment[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e2c3880>
+db = <tinydb.database.TinyDB object at 0x7fce2686bd30>
 
     def test_increment(db):
 >       db.update(increment('int'), where('char') == 'a')
@@ -2237,7 +2237,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_incrementjson">test_operations.py::test_increment[json]</h3>
 <details><summary> <pre>test_operations.py::test_increment[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df1fc10>
+db = <tinydb.database.TinyDB object at 0x7fce26533130>
 
     def test_increment(db):
 >       db.update(increment('int'), where('char') == 'a')
@@ -2260,7 +2260,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_decrementmemory">test_operations.py::test_decrement[memory]</h3>
 <details><summary> <pre>test_operations.py::test_decrement[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e03bb50>
+db = <tinydb.database.TinyDB object at 0x7fce264ac460>
 
     def test_decrement(db):
 >       db.update(decrement('int'), where('char') == 'a')
@@ -2283,7 +2283,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_operationspytest_decrementjson">test_operations.py::test_decrement[json]</h3>
 <details><summary> <pre>test_operations.py::test_decrement[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e017c70>
+db = <tinydb.database.TinyDB object at 0x7fce263cfc70>
 
     def test_decrement(db):
 >       db.update(decrement('int'), where('char') == 'a')
@@ -2317,7 +2317,7 @@ tinydb/queries.py:205: in __eq__
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = Query()
-test = <function Query.__eq__.<locals>.<lambda> at 0x7fa29de3e950>
+test = <function Query.__eq__.<locals>.<lambda> at 0x7fce26332950>
 hashval = ('==', (), None), allow_empty_path = False
 
     def _generate_test(self, test: Callable[[Any], bool], hashval: Tuple,
@@ -2889,7 +2889,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e23f3a0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce278edf00>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -2935,7 +2935,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29de55930>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce2675c070>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -2973,7 +2973,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29f949060>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce268c3070>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -3004,7 +3004,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e211ab0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce26b96c20>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -3048,7 +3048,7 @@ def test_read_once():
 tests/test_storages.py:178: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.database.TinyDB object at 0x7fa29de57f70>
+self = <tinydb.database.TinyDB object at 0x7fce2634ecb0>
 name = 'default_table_name'
 
     def __getattr__(self, name):
@@ -3112,7 +3112,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e1ad780>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce27c880a0>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -3154,7 +3154,7 @@ tests/test_storages.py:275: Failed
 </details>
 <h3 id="test_tablespytest_next_idmemory">test_tables.py::test_next_id[memory]</h3>
 <details><summary> <pre>test_tables.py::test_next_id[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e015690>
+db = <tinydb.database.TinyDB object at 0x7fce266a6d70>
 
     def test_next_id(db):
         db.truncate()
@@ -3162,14 +3162,14 @@ db = <tinydb.database.TinyDB object at 0x7fa29e015690>
 >       assert db._get_next_id() == 1
 E       assert 4 == 1
 E        +  where 4 = _get_next_id()
-E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fa29e015690>._get_next_id
+E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fce266a6d70>._get_next_id
 
 tests/test_tables.py:11: AssertionError
 </pre>
 </details>
 <h3 id="test_tablespytest_next_idjson">test_tables.py::test_next_id[json]</h3>
 <details><summary> <pre>test_tables.py::test_next_id[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dd5d7e0>
+db = <tinydb.database.TinyDB object at 0x7fce27c88370>
 
     def test_next_id(db):
         db.truncate()
@@ -3177,14 +3177,14 @@ db = <tinydb.database.TinyDB object at 0x7fa29dd5d7e0>
 >       assert db._get_next_id() == 1
 E       assert 4 == 1
 E        +  where 4 = _get_next_id()
-E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fa29dd5d7e0>._get_next_id
+E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fce27c88370>._get_next_id
 
 tests/test_tables.py:11: AssertionError
 </pre>
 </details>
 <h3 id="test_tablespytest_tables_listmemory">test_tables.py::test_tables_list[memory]</h3>
 <details><summary> <pre>test_tables.py::test_tables_list[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e0146a0>
+db = <tinydb.database.TinyDB object at 0x7fce266a6a70>
 
     def test_tables_list(db):
         db.table('table1').insert({'a': 1})
@@ -3207,7 +3207,7 @@ tests/test_tables.py:20: AssertionError
 </details>
 <h3 id="test_tablespytest_tables_listjson">test_tables.py::test_tables_list[json]</h3>
 <details><summary> <pre>test_tables.py::test_tables_list[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dd5e2c0>
+db = <tinydb.database.TinyDB object at 0x7fce261eb2e0>
 
     def test_tables_list(db):
         db.table('table1').insert({'a': 1})
@@ -3230,7 +3230,7 @@ tests/test_tables.py:20: AssertionError
 </details>
 <h3 id="test_tablespytest_one_tablememory">test_tables.py::test_one_table[memory]</h3>
 <details><summary> <pre>test_tables.py::test_one_table[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e0aa2f0>
+db = <tinydb.database.TinyDB object at 0x7fce268e99c0>
 
     def test_one_table(db):
         table1 = db.table('table1')
@@ -3257,7 +3257,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_one_tablejson">test_tables.py::test_one_table[json]</h3>
 <details><summary> <pre>test_tables.py::test_one_table[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e3e41f0>
+db = <tinydb.database.TinyDB object at 0x7fce26533370>
 
     def test_one_table(db):
         table1 = db.table('table1')
@@ -3284,7 +3284,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_multiple_tablesmemory">test_tables.py::test_multiple_tables[memory]</h3>
 <details><summary> <pre>test_tables.py::test_multiple_tables[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e03ac20>
+db = <tinydb.database.TinyDB object at 0x7fce27ec8af0>
 
     def test_multiple_tables(db):
         table1 = db.table('table1')
@@ -3315,7 +3315,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_multiple_tablesjson">test_tables.py::test_multiple_tables[json]</h3>
 <details><summary> <pre>test_tables.py::test_multiple_tables[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f674f70>
+db = <tinydb.database.TinyDB object at 0x7fce277e9bd0>
 
     def test_multiple_tables(db):
         table1 = db.table('table1')
@@ -3346,7 +3346,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_query_cachememory">test_tables.py::test_query_cache[memory]</h3>
 <details><summary> <pre>test_tables.py::test_query_cache[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e695210>
+db = <tinydb.database.TinyDB object at 0x7fce2647c820>
 
     def test_query_cache(db):
 >       query1 = where('int') == 1
@@ -3369,7 +3369,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_query_cachejson">test_tables.py::test_query_cache[json]</h3>
 <details><summary> <pre>test_tables.py::test_query_cache[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f5f3640>
+db = <tinydb.database.TinyDB object at 0x7fce263f8610>
 
     def test_query_cache(db):
 >       query1 = where('int') == 1
@@ -3392,7 +3392,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_query_cache_with_mutable_callablememory">test_tables.py::test_query_cache_with_mutable_callable[memory]</h3>
 <details><summary> <pre>test_tables.py::test_query_cache_with_mutable_callable[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f1611b0>
+db = <tinydb.database.TinyDB object at 0x7fce276dc7f0>
 
     def test_query_cache_with_mutable_callable(db):
         table = db.table('table')
@@ -3421,7 +3421,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_query_cache_with_mutable_callablejson">test_tables.py::test_query_cache_with_mutable_callable[json]</h3>
 <details><summary> <pre>test_tables.py::test_query_cache_with_mutable_callable[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f94bb80>
+db = <tinydb.database.TinyDB object at 0x7fce261d5930>
 
     def test_query_cache_with_mutable_callable(db):
         table = db.table('table')
@@ -3450,7 +3450,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_zero_cache_sizememory">test_tables.py::test_zero_cache_size[memory]</h3>
 <details><summary> <pre>test_tables.py::test_zero_cache_size[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df90a00>
+db = <tinydb.database.TinyDB object at 0x7fce26240a00>
 
     def test_zero_cache_size(db):
         table = db.table('table3', cache_size=0)
@@ -3474,7 +3474,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_zero_cache_sizejson">test_tables.py::test_zero_cache_size[json]</h3>
 <details><summary> <pre>test_tables.py::test_zero_cache_size[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29db53b80>
+db = <tinydb.database.TinyDB object at 0x7fce26067b80>
 
     def test_zero_cache_size(db):
         table = db.table('table3', cache_size=0)
@@ -3498,7 +3498,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_query_cache_sizememory">test_tables.py::test_query_cache_size[memory]</h3>
 <details><summary> <pre>test_tables.py::test_query_cache_size[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29d9f1ff0>
+db = <tinydb.database.TinyDB object at 0x7fce25f05ff0>
 
     def test_query_cache_size(db):
         table = db.table('table3', cache_size=1)
@@ -3522,7 +3522,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_query_cache_sizejson">test_tables.py::test_query_cache_size[json]</h3>
 <details><summary> <pre>test_tables.py::test_query_cache_size[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dce7c10>
+db = <tinydb.database.TinyDB object at 0x7fce26362c50>
 
     def test_query_cache_size(db):
         table = db.table('table3', cache_size=1)
@@ -3546,7 +3546,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_lru_cachememory">test_tables.py::test_lru_cache[memory]</h3>
 <details><summary> <pre>test_tables.py::test_lru_cache[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29de0e650>
+db = <tinydb.database.TinyDB object at 0x7fce264651b0>
 
     def test_lru_cache(db):
         # Test integration into TinyDB
@@ -3571,7 +3571,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_lru_cachejson">test_tables.py::test_lru_cache[json]</h3>
 <details><summary> <pre>test_tables.py::test_lru_cache[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e1ae9e0>
+db = <tinydb.database.TinyDB object at 0x7fce266cc400>
 
     def test_lru_cache(db):
         # Test integration into TinyDB
@@ -3596,35 +3596,35 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tablespytest_truncate_tablememory">test_tables.py::test_truncate_table[memory]</h3>
 <details><summary> <pre>test_tables.py::test_truncate_table[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e03dc00>
+db = <tinydb.database.TinyDB object at 0x7fce2683ff10>
 
     def test_truncate_table(db):
         db.truncate()
 >       assert db._get_next_id() == 1
 E       assert 4 == 1
 E        +  where 4 = _get_next_id()
-E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fa29e03dc00>._get_next_id
+E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fce2683ff10>._get_next_id
 
 tests/test_tables.py:171: AssertionError
 </pre>
 </details>
 <h3 id="test_tablespytest_truncate_tablejson">test_tables.py::test_truncate_table[json]</h3>
 <details><summary> <pre>test_tables.py::test_truncate_table[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dcee470>
+db = <tinydb.database.TinyDB object at 0x7fce2647d870>
 
     def test_truncate_table(db):
         db.truncate()
 >       assert db._get_next_id() == 1
 E       assert 4 == 1
 E        +  where 4 = _get_next_id()
-E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fa29dcee470>._get_next_id
+E        +    where _get_next_id = <tinydb.database.TinyDB object at 0x7fce2647d870>._get_next_id
 
 tests/test_tables.py:171: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_drop_tablesmemory">test_tinydb.py::test_drop_tables[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_drop_tables[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f385720>
+db = <tinydb.database.TinyDB object at 0x7fce2656d570>
 
     def test_drop_tables(db: TinyDB):
         db.drop_tables()
@@ -3640,7 +3640,7 @@ tests/test_tinydb.py:18: TypeError
 </details>
 <h3 id="test_tinydbpytest_drop_tablesjson">test_tinydb.py::test_drop_tables[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_drop_tables[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29da3fac0>
+db = <tinydb.database.TinyDB object at 0x7fce25f5fac0>
 
     def test_drop_tables(db: TinyDB):
         db.drop_tables()
@@ -3656,7 +3656,7 @@ tests/test_tinydb.py:18: TypeError
 </details>
 <h3 id="test_tinydbpytest_insertmemory">test_tinydb.py::test_insert[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29da3ea40>
+db = <tinydb.database.TinyDB object at 0x7fce25f5ea40>
 
     def test_insert(db: TinyDB):
         db.drop_tables()
@@ -3682,7 +3682,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_insertjson">test_tinydb.py::test_insert[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e02f130>
+db = <tinydb.database.TinyDB object at 0x7fce2675e3b0>
 
     def test_insert(db: TinyDB):
         db.drop_tables()
@@ -3708,91 +3708,91 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_insert_idsmemory">test_tinydb.py::test_insert_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e7e2ce0>
+db = <tinydb.database.TinyDB object at 0x7fce265ad2d0>
 
     def test_insert_ids(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29e7e2ce0>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce265ad2d0>.insert
 
 tests/test_tinydb.py:48: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_insert_idsjson">test_tinydb.py::test_insert_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29de46290>
+db = <tinydb.database.TinyDB object at 0x7fce26869540>
 
     def test_insert_ids(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29de46290>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce26869540>.insert
 
 tests/test_tinydb.py:48: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_insert_with_doc_idmemory">test_tinydb.py::test_insert_with_doc_id[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_with_doc_id[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e7e22c0>
+db = <tinydb.database.TinyDB object at 0x7fce265acb20>
 
     def test_insert_with_doc_id(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29e7e22c0>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce265acb20>.insert
 
 tests/test_tinydb.py:54: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_insert_with_doc_idjson">test_tinydb.py::test_insert_with_doc_id[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_with_doc_id[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df1dc30>
+db = <tinydb.database.TinyDB object at 0x7fce273295d0>
 
     def test_insert_with_doc_id(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29df1dc30>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce273295d0>.insert
 
 tests/test_tinydb.py:54: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_insert_with_duplicate_doc_idmemory">test_tinydb.py::test_insert_with_duplicate_doc_id[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_with_duplicate_doc_id[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e7586d0>
+db = <tinydb.database.TinyDB object at 0x7fce27329960>
 
     def test_insert_with_duplicate_doc_id(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29e7586d0>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce27329960>.insert
 
 tests/test_tinydb.py:62: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_insert_with_duplicate_doc_idjson">test_tinydb.py::test_insert_with_duplicate_doc_id[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_with_duplicate_doc_id[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e00da20>
+db = <tinydb.database.TinyDB object at 0x7fce265a8220>
 
     def test_insert_with_duplicate_doc_id(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29e00da20>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce265a8220>.insert
 
 tests/test_tinydb.py:62: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_insert_multiplememory">test_tinydb.py::test_insert_multiple[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e758d60>
+db = <tinydb.database.TinyDB object at 0x7fce27329240>
 
     def test_insert_multiple(db: TinyDB):
         db.drop_tables()
@@ -3816,7 +3816,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_insert_multiplejson">test_tinydb.py::test_insert_multiple[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29db53880>
+db = <tinydb.database.TinyDB object at 0x7fce2656c130>
 
     def test_insert_multiple(db: TinyDB):
         db.drop_tables()
@@ -3840,7 +3840,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_insert_multiple_with_idsmemory">test_tinydb.py::test_insert_multiple_with_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple_with_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f6760b0>
+db = <tinydb.database.TinyDB object at 0x7fce2733d630>
 
     def test_insert_multiple_with_ids(db: TinyDB):
         db.drop_tables()
@@ -3865,7 +3865,7 @@ tests/test_tinydb.py:106: AssertionError
 </details>
 <h3 id="test_tinydbpytest_insert_multiple_with_idsjson">test_tinydb.py::test_insert_multiple_with_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple_with_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e28a800>
+db = <tinydb.database.TinyDB object at 0x7fce267bb9a0>
 
     def test_insert_multiple_with_ids(db: TinyDB):
         db.drop_tables()
@@ -3890,7 +3890,7 @@ tests/test_tinydb.py:106: AssertionError
 </details>
 <h3 id="test_tinydbpytest_insert_multiple_with_doc_idsmemory">test_tinydb.py::test_insert_multiple_with_doc_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple_with_doc_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29de50130>
+db = <tinydb.database.TinyDB object at 0x7fce25f06110>
 
     def test_insert_multiple_with_doc_ids(db: TinyDB):
         db.drop_tables()
@@ -3915,7 +3915,7 @@ tests/test_tinydb.py:114: AssertionError
 </details>
 <h3 id="test_tinydbpytest_insert_multiple_with_doc_idsjson">test_tinydb.py::test_insert_multiple_with_doc_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple_with_doc_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29efe16f0>
+db = <tinydb.database.TinyDB object at 0x7fce2634f730>
 
     def test_insert_multiple_with_doc_ids(db: TinyDB):
         db.drop_tables()
@@ -3940,7 +3940,7 @@ tests/test_tinydb.py:114: AssertionError
 </details>
 <h3 id="test_tinydbpytest_insert_invalid_type_raises_errormemory">test_tinydb.py::test_insert_invalid_type_raises_error[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_invalid_type_raises_error[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29d9f2e90>
+db = <tinydb.database.TinyDB object at 0x7fce2634fa00>
 
     def test_insert_invalid_type_raises_error(db: TinyDB):
 >       with pytest.raises(ValueError, match='Document is not a Mapping'):
@@ -3951,7 +3951,7 @@ tests/test_tinydb.py:126: Failed
 </details>
 <h3 id="test_tinydbpytest_insert_invalid_type_raises_errorjson">test_tinydb.py::test_insert_invalid_type_raises_error[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_invalid_type_raises_error[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df69b40>
+db = <tinydb.database.TinyDB object at 0x7fce26407c70>
 
     def test_insert_invalid_type_raises_error(db: TinyDB):
         with pytest.raises(ValueError, match='Document is not a Mapping'):
@@ -3978,8 +3978,8 @@ tinydb/storages.py:108: in write
     o = _default(o)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <json.encoder.JSONEncoder object at 0x7fa29f9322c0>
-o = <object object at 0x7fa29fb89cd0>
+self = <json.encoder.JSONEncoder object at 0x7fce27eba2c0>
+o = <object object at 0x7fce28136940>
 
     def default(self, o):
         """Implement this method in a subclass such that it returns
@@ -4009,7 +4009,7 @@ E       TypeError: Object of type object is not JSON serializable
 </details>
 <h3 id="test_tinydbpytest_insert_valid_mapping_typememory">test_tinydb.py::test_insert_valid_mapping_type[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_valid_mapping_type[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f110e50>
+db = <tinydb.database.TinyDB object at 0x7fce27c93520>
 
     def test_insert_valid_mapping_type(db: TinyDB):
         class CustomDocument(Mapping):
@@ -4047,7 +4047,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_insert_valid_mapping_typejson">test_tinydb.py::test_insert_valid_mapping_type[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_valid_mapping_type[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e03aa10>
+db = <tinydb.database.TinyDB object at 0x7fce26876dd0>
 
     def test_insert_valid_mapping_type(db: TinyDB):
         class CustomDocument(Mapping):
@@ -4086,8 +4086,8 @@ tinydb/storages.py:108: in write
     o = _default(o)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <json.encoder.JSONEncoder object at 0x7fa29f9322c0>
-o = <tests.test_tinydb.test_insert_valid_mapping_type.<locals>.CustomDocument object at 0x7fa29e038310>
+self = <json.encoder.JSONEncoder object at 0x7fce27eba2c0>
+o = <tests.test_tinydb.test_insert_valid_mapping_type.<locals>.CustomDocument object at 0x7fce26877040>
 
     def default(self, o):
         """Implement this method in a subclass such that it returns
@@ -4158,8 +4158,8 @@ tinydb/storages.py:108: in write
     o = _default(o)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <json.encoder.JSONEncoder object at 0x7fa29f9322c0>
-o = <tests.test_tinydb.test_custom_mapping_type_with_json.<locals>.CustomDocument object at 0x7fa29d9eaa10>
+self = <json.encoder.JSONEncoder object at 0x7fce27eba2c0>
+o = <tests.test_tinydb.test_custom_mapping_type_with_json.<locals>.CustomDocument object at 0x7fce26262860>
 
     def default(self, o):
         """Implement this method in a subclass such that it returns
@@ -4189,7 +4189,7 @@ E       TypeError: Object of type CustomDocument is not JSON serializable
 </details>
 <h3 id="test_tinydbpytest_removememory">test_tinydb.py::test_remove[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e2c0ca0>
+db = <tinydb.database.TinyDB object at 0x7fce27b6d660>
 
     def test_remove(db: TinyDB):
 >       db.remove(where('char') == 'b')
@@ -4212,7 +4212,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_removejson">test_tinydb.py::test_remove[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29d9d9450>
+db = <tinydb.database.TinyDB object at 0x7fce26667c40>
 
     def test_remove(db: TinyDB):
 >       db.remove(where('char') == 'b')
@@ -4235,7 +4235,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_remove_all_failsmemory">test_tinydb.py::test_remove_all_fails[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_all_fails[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df1d960>
+db = <tinydb.database.TinyDB object at 0x7fce2603d060>
 
     def test_remove_all_fails(db: TinyDB):
 >       with pytest.raises(RuntimeError):
@@ -4246,7 +4246,7 @@ tests/test_tinydb.py:194: Failed
 </details>
 <h3 id="test_tinydbpytest_remove_all_failsjson">test_tinydb.py::test_remove_all_fails[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_all_fails[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f5f07c0>
+db = <tinydb.database.TinyDB object at 0x7fce278ffa00>
 
     def test_remove_all_fails(db: TinyDB):
 >       with pytest.raises(RuntimeError):
@@ -4257,7 +4257,7 @@ tests/test_tinydb.py:194: Failed
 </details>
 <h3 id="test_tinydbpytest_remove_multiplememory">test_tinydb.py::test_remove_multiple[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_multiple[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dd30310>
+db = <tinydb.database.TinyDB object at 0x7fce2675e350>
 
     def test_remove_multiple(db: TinyDB):
 >       db.remove(where('int') == 1)
@@ -4280,7 +4280,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_remove_multiplejson">test_tinydb.py::test_remove_multiple[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_multiple[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df1a4d0>
+db = <tinydb.database.TinyDB object at 0x7fce25f5f730>
 
     def test_remove_multiple(db: TinyDB):
 >       db.remove(where('int') == 1)
@@ -4303,7 +4303,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_remove_idsmemory">test_tinydb.py::test_remove_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e23e170>
+db = <tinydb.database.TinyDB object at 0x7fce2730f130>
 
     def test_remove_ids(db: TinyDB):
         db.remove(doc_ids=[1, 2])
@@ -4316,7 +4316,7 @@ tests/test_tinydb.py:207: TypeError
 </details>
 <h3 id="test_tinydbpytest_remove_idsjson">test_tinydb.py::test_remove_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df1eec0>
+db = <tinydb.database.TinyDB object at 0x7fce263c70d0>
 
     def test_remove_ids(db: TinyDB):
         db.remove(doc_ids=[1, 2])
@@ -4329,7 +4329,7 @@ tests/test_tinydb.py:207: TypeError
 </details>
 <h3 id="test_tinydbpytest_remove_returns_idsmemory">test_tinydb.py::test_remove_returns_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_returns_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e7e2230>
+db = <tinydb.database.TinyDB object at 0x7fce27c881c0>
 
     def test_remove_returns_ids(db: TinyDB):
 >       assert db.remove(where('char') == 'b') == [2]
@@ -4352,7 +4352,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_remove_returns_idsjson">test_tinydb.py::test_remove_returns_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_remove_returns_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29ddd3d30>
+db = <tinydb.database.TinyDB object at 0x7fce278fa560>
 
     def test_remove_returns_ids(db: TinyDB):
 >       assert db.remove(where('char') == 'b') == [2]
@@ -4375,7 +4375,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_updatememory">test_tinydb.py::test_update[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dd7c100>
+db = <tinydb.database.TinyDB object at 0x7fce2606bd00>
 
     def test_update(db: TinyDB):
 >       assert len(db) == 3
@@ -4386,7 +4386,7 @@ tests/test_tinydb.py:215: TypeError
 </details>
 <h3 id="test_tinydbpytest_updatejson">test_tinydb.py::test_update[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29ef01000>
+db = <tinydb.database.TinyDB object at 0x7fce264cb400>
 
     def test_update(db: TinyDB):
 >       assert len(db) == 3
@@ -4397,7 +4397,7 @@ tests/test_tinydb.py:215: TypeError
 </details>
 <h3 id="test_tinydbpytest_update_allmemory">test_tinydb.py::test_update_all[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_all[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e43b220>
+db = <tinydb.database.TinyDB object at 0x7fce26069810>
 
     def test_update_all(db: TinyDB):
 >       assert db.count(where('int') == 1) == 3
@@ -4420,7 +4420,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_alljson">test_tinydb.py::test_update_all[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_all[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f2d3b20>
+db = <tinydb.database.TinyDB object at 0x7fce276dcf70>
 
     def test_update_all(db: TinyDB):
 >       assert db.count(where('int') == 1) == 3
@@ -4443,35 +4443,35 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_returns_idsmemory">test_tinydb.py::test_update_returns_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_returns_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e19c0d0>
+db = <tinydb.database.TinyDB object at 0x7fce264657e0>
 
     def test_update_returns_ids(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29e19c0d0>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce264657e0>.insert
 
 tests/test_tinydb.py:233: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_update_returns_idsjson">test_tinydb.py::test_update_returns_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_returns_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e28a380>
+db = <tinydb.database.TinyDB object at 0x7fce263fb100>
 
     def test_update_returns_ids(db: TinyDB):
         db.drop_tables()
 >       assert db.insert({'int': 1, 'char': 'a'}) == 1
 E       AssertionError: assert 4 == 1
 E        +  where 4 = insert({'char': 'a', 'int': 1})
-E        +    where insert = <tinydb.database.TinyDB object at 0x7fa29e28a380>.insert
+E        +    where insert = <tinydb.database.TinyDB object at 0x7fce263fb100>.insert
 
 tests/test_tinydb.py:233: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_update_transformmemory">test_tinydb.py::test_update_transform[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_transform[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e19cbb0>
+db = <tinydb.database.TinyDB object at 0x7fce26466080>
 
     def test_update_transform(db: TinyDB):
         def increment(field):
@@ -4506,7 +4506,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_transformjson">test_tinydb.py::test_update_transform[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_transform[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e014610>
+db = <tinydb.database.TinyDB object at 0x7fce26894cd0>
 
     def test_update_transform(db: TinyDB):
         def increment(field):
@@ -4541,7 +4541,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_idsmemory">test_tinydb.py::test_update_ids[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_ids[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dee87f0>
+db = <tinydb.database.TinyDB object at 0x7fce26ba0670>
 
     def test_update_ids(db: TinyDB):
         db.update({'int': 2}, doc_ids=[1, 2])
@@ -4566,7 +4566,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_idsjson">test_tinydb.py::test_update_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e758e20>
+db = <tinydb.database.TinyDB object at 0x7fce2603ead0>
 
     def test_update_ids(db: TinyDB):
         db.update({'int': 2}, doc_ids=[1, 2])
@@ -4591,7 +4591,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_multiplememory">test_tinydb.py::test_update_multiple[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_multiple[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dcdbc70>
+db = <tinydb.database.TinyDB object at 0x7fce27c93820>
 
     def test_update_multiple(db: TinyDB):
 >       assert len(db) == 3
@@ -4602,7 +4602,7 @@ tests/test_tinydb.py:269: TypeError
 </details>
 <h3 id="test_tinydbpytest_update_multiplejson">test_tinydb.py::test_update_multiple[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_multiple[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e1e8400>
+db = <tinydb.database.TinyDB object at 0x7fce268c3b80>
 
     def test_update_multiple(db: TinyDB):
 >       assert len(db) == 3
@@ -4613,7 +4613,7 @@ tests/test_tinydb.py:269: TypeError
 </details>
 <h3 id="test_tinydbpytest_update_multiple_operationmemory">test_tinydb.py::test_update_multiple_operation[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_multiple_operation[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e18e650>
+db = <tinydb.database.TinyDB object at 0x7fce27c934c0>
 
     def test_update_multiple_operation(db: TinyDB):
         def increment(field):
@@ -4642,7 +4642,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_update_multiple_operationjson">test_tinydb.py::test_update_multiple_operation[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_update_multiple_operation[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e1aee60>
+db = <tinydb.database.TinyDB object at 0x7fce264cb010>
 
     def test_update_multiple_operation(db: TinyDB):
         def increment(field):
@@ -4671,7 +4671,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_upsertmemory">test_tinydb.py::test_upsert[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_upsert[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dd33010>
+db = <tinydb.database.TinyDB object at 0x7fce25eeead0>
 
     def test_upsert(db: TinyDB):
 >       assert len(db) == 3
@@ -4682,7 +4682,7 @@ tests/test_tinydb.py:299: TypeError
 </details>
 <h3 id="test_tinydbpytest_upsertjson">test_tinydb.py::test_upsert[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_upsert[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29da3d240>
+db = <tinydb.database.TinyDB object at 0x7fce2675c070>
 
     def test_upsert(db: TinyDB):
 >       assert len(db) == 3
@@ -4693,7 +4693,7 @@ tests/test_tinydb.py:299: TypeError
 </details>
 <h3 id="test_tinydbpytest_upsert_by_idmemory">test_tinydb.py::test_upsert_by_id[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_upsert_by_id[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e692d10>
+db = <tinydb.database.TinyDB object at 0x7fce27ec8550>
 
     def test_upsert_by_id(db: TinyDB):
 >       assert len(db) == 3
@@ -4704,7 +4704,7 @@ tests/test_tinydb.py:311: TypeError
 </details>
 <h3 id="test_tinydbpytest_upsert_by_idjson">test_tinydb.py::test_upsert_by_id[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_upsert_by_id[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e6aa230>
+db = <tinydb.database.TinyDB object at 0x7fce2646f9a0>
 
     def test_upsert_by_id(db: TinyDB):
 >       assert len(db) == 3
@@ -4715,7 +4715,7 @@ tests/test_tinydb.py:311: TypeError
 </details>
 <h3 id="test_tinydbpytest_searchmemory">test_tinydb.py::test_search[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_search[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dd8a0b0>
+db = <tinydb.database.TinyDB object at 0x7fce266f5c60>
 
     def test_search(db: TinyDB):
 >       assert not db._query_cache
@@ -4723,7 +4723,7 @@ db = <tinydb.database.TinyDB object at 0x7fa29dd8a0b0>
 tests/test_tinydb.py:340: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29dd8aad0>
+self = <tinydb.utils.LRUCache object at 0x7fce266f7760>
 
     def __len__(self) ->int:
 >       return self.length
@@ -4734,7 +4734,7 @@ tinydb/utils.py:48: AttributeError
 </details>
 <h3 id="test_tinydbpytest_searchjson">test_tinydb.py::test_search[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_search[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f385b10>
+db = <tinydb.database.TinyDB object at 0x7fce26530940>
 
     def test_search(db: TinyDB):
 >       assert not db._query_cache
@@ -4742,7 +4742,7 @@ db = <tinydb.database.TinyDB object at 0x7fa29f385b10>
 tests/test_tinydb.py:340: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29f386170>
+self = <tinydb.utils.LRUCache object at 0x7fce26533370>
 
     def __len__(self) ->int:
 >       return self.length
@@ -4753,7 +4753,7 @@ tinydb/utils.py:48: AttributeError
 </details>
 <h3 id="test_tinydbpytest_search_pathmemory">test_tinydb.py::test_search_path[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_search_path[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29ef02140>
+db = <tinydb.database.TinyDB object at 0x7fce261e8be0>
 
     def test_search_path(db: TinyDB):
 >       assert not db._query_cache
@@ -4761,7 +4761,7 @@ db = <tinydb.database.TinyDB object at 0x7fa29ef02140>
 tests/test_tinydb.py:348: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29ef02800>
+self = <tinydb.utils.LRUCache object at 0x7fce261ea7d0>
 
     def __len__(self) ->int:
 >       return self.length
@@ -4772,7 +4772,7 @@ tinydb/utils.py:48: AttributeError
 </details>
 <h3 id="test_tinydbpytest_search_pathjson">test_tinydb.py::test_search_path[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_search_path[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29d9d8ac0>
+db = <tinydb.database.TinyDB object at 0x7fce27c91150>
 
     def test_search_path(db: TinyDB):
 >       assert not db._query_cache
@@ -4780,7 +4780,7 @@ db = <tinydb.database.TinyDB object at 0x7fa29d9d8ac0>
 tests/test_tinydb.py:348: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29d9d8160>
+self = <tinydb.utils.LRUCache object at 0x7fce261e1630>
 
     def __len__(self) ->int:
 >       return self.length
@@ -4791,7 +4791,7 @@ tinydb/utils.py:48: AttributeError
 </details>
 <h3 id="test_tinydbpytest_search_no_results_cachememory">test_tinydb.py::test_search_no_results_cache[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_search_no_results_cache[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dfd9240>
+db = <tinydb.database.TinyDB object at 0x7fce261e9b40>
 
     def test_search_no_results_cache(db: TinyDB):
 >       assert len(db.search(where('missing').exists())) == 0
@@ -4814,7 +4814,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_search_no_results_cachejson">test_tinydb.py::test_search_no_results_cache[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_search_no_results_cache[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dcd9db0>
+db = <tinydb.database.TinyDB object at 0x7fce261bab90>
 
     def test_search_no_results_cache(db: TinyDB):
 >       assert len(db.search(where('missing').exists())) == 0
@@ -4837,7 +4837,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_getmemory">test_tinydb.py::test_get[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_get[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e02fe20>
+db = <tinydb.database.TinyDB object at 0x7fce26602440>
 
     def test_get(db: TinyDB):
 >       item = db.get(where('char') == 'b')
@@ -4860,7 +4860,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_getjson">test_tinydb.py::test_get[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_get[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29d9f3940>
+db = <tinydb.database.TinyDB object at 0x7fce263d5c90>
 
     def test_get(db: TinyDB):
 >       item = db.get(where('char') == 'b')
@@ -4883,14 +4883,14 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_get_idsjson">test_tinydb.py::test_get_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_get_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dec30a0>
+db = <tinydb.database.TinyDB object at 0x7fce2637a680>
 
     def test_get_ids(db: TinyDB):
         el = db.all()[0]
 >       assert db.get(doc_id=el.doc_id) == el
 E       AssertionError: assert None == {'int': 1, 'char': 'a'}
 E        +  where None = get(doc_id=1)
-E        +    where get = <tinydb.database.TinyDB object at 0x7fa29dec30a0>.get
+E        +    where get = <tinydb.database.TinyDB object at 0x7fce2637a680>.get
 E        +    and   1 = {'int': 1, 'char': 'a'}.doc_id
 
 tests/test_tinydb.py:370: AssertionError
@@ -4898,7 +4898,7 @@ tests/test_tinydb.py:370: AssertionError
 </details>
 <h3 id="test_tinydbpytest_get_multiple_idsjson">test_tinydb.py::test_get_multiple_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_get_multiple_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e1ade70>
+db = <tinydb.database.TinyDB object at 0x7fce264aeaa0>
 
     def test_get_multiple_ids(db: TinyDB):
         el = db.all()
@@ -4919,7 +4919,7 @@ tests/test_tinydb.py:376: AssertionError
 </details>
 <h3 id="test_tinydbpytest_get_invalidmemory">test_tinydb.py::test_get_invalid[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_get_invalid[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df93c70>
+db = <tinydb.database.TinyDB object at 0x7fce274843a0>
 
     def test_get_invalid(db: TinyDB):
 >       with pytest.raises(RuntimeError):
@@ -4930,7 +4930,7 @@ tests/test_tinydb.py:380: Failed
 </details>
 <h3 id="test_tinydbpytest_get_invalidjson">test_tinydb.py::test_get_invalid[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_get_invalid[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29dede5c0>
+db = <tinydb.database.TinyDB object at 0x7fce277d0040>
 
     def test_get_invalid(db: TinyDB):
 >       with pytest.raises(RuntimeError):
@@ -4941,7 +4941,7 @@ tests/test_tinydb.py:380: Failed
 </details>
 <h3 id="test_tinydbpytest_countmemory">test_tinydb.py::test_count[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_count[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f675000>
+db = <tinydb.database.TinyDB object at 0x7fce27484c70>
 
     def test_count(db: TinyDB):
 >       assert db.count(where('int') == 1) == 3
@@ -4964,7 +4964,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_countjson">test_tinydb.py::test_count[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_count[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e064460>
+db = <tinydb.database.TinyDB object at 0x7fce2658abf0>
 
     def test_count(db: TinyDB):
 >       assert db.count(where('int') == 1) == 3
@@ -4987,7 +4987,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_containsmemory">test_tinydb.py::test_contains[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_contains[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df92e90>
+db = <tinydb.database.TinyDB object at 0x7fce27487100>
 
     def test_contains(db: TinyDB):
 >       assert db.contains(where('int') == 1)
@@ -5010,7 +5010,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_containsjson">test_tinydb.py::test_contains[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_contains[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f113400>
+db = <tinydb.database.TinyDB object at 0x7fce277e8eb0>
 
     def test_contains(db: TinyDB):
 >       assert db.contains(where('int') == 1)
@@ -5033,20 +5033,20 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_contains_idsjson">test_tinydb.py::test_contains_ids[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_contains_ids[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f387a90>
+db = <tinydb.database.TinyDB object at 0x7fce261e3c10>
 
     def test_contains_ids(db: TinyDB):
 >       assert db.contains(doc_id=1)
 E       assert False
 E        +  where False = contains(doc_id=1)
-E        +    where contains = <tinydb.database.TinyDB object at 0x7fa29f387a90>.contains
+E        +    where contains = <tinydb.database.TinyDB object at 0x7fce261e3c10>.contains
 
 tests/test_tinydb.py:395: AssertionError
 </pre>
 </details>
 <h3 id="test_tinydbpytest_contains_invalidmemory">test_tinydb.py::test_contains_invalid[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_contains_invalid[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29deea8c0>
+db = <tinydb.database.TinyDB object at 0x7fce2652fd00>
 
     def test_contains_invalid(db: TinyDB):
 >       with pytest.raises(RuntimeError):
@@ -5057,7 +5057,7 @@ tests/test_tinydb.py:401: Failed
 </details>
 <h3 id="test_tinydbpytest_contains_invalidjson">test_tinydb.py::test_contains_invalid[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_contains_invalid[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29df83190>
+db = <tinydb.database.TinyDB object at 0x7fce2696a860>
 
     def test_contains_invalid(db: TinyDB):
 >       with pytest.raises(RuntimeError):
@@ -5068,7 +5068,7 @@ tests/test_tinydb.py:401: Failed
 </details>
 <h3 id="test_tinydbpytest_get_idempotentmemory">test_tinydb.py::test_get_idempotent[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_get_idempotent[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29ddc9d20>
+db = <tinydb.database.TinyDB object at 0x7fce264743d0>
 
     def test_get_idempotent(db: TinyDB):
 >       u = db.get(where('int') == 1)
@@ -5091,7 +5091,7 @@ E   RecursionError: maximum recursion depth exceeded while calling a Python obje
 </details>
 <h3 id="test_tinydbpytest_get_idempotentjson">test_tinydb.py::test_get_idempotent[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_get_idempotent[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f2d2dd0>
+db = <tinydb.database.TinyDB object at 0x7fce2606b340>
 
     def test_get_idempotent(db: TinyDB):
 >       u = db.get(where('int') == 1)
@@ -5131,7 +5131,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29dabe0e0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce26478280>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5175,12 +5175,12 @@ tinydb/database.py:281: in close
     self._storage.close()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tests.test_tinydb.test_storage_closed_once.<locals>.Storage object at 0x7fa29da3e830>
+self = <tests.test_tinydb.test_storage_closed_once.<locals>.Storage object at 0x7fce262db0d0>
 
     def close(self):
 >       assert not self.closed
 E       assert not True
-E        +  where True = <tests.test_tinydb.test_storage_closed_once.<locals>.Storage object at 0x7fa29da3e830>.closed
+E        +  where True = <tests.test_tinydb.test_storage_closed_once.<locals>.Storage object at 0x7fce262db0d0>.closed
 
 tests/test_tinydb.py:440: AssertionError
 </pre>
@@ -5207,7 +5207,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fa29dd7c040>
+self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fce27329450>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5247,8 +5247,8 @@ tinydb/table.py:117: in insert_multiple
     self._update_table(updater)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fa29efe2050>
-updater = <function Table.insert_multiple.<locals>.updater at 0x7fa29df601f0>
+self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fce26243310>
+updater = <function Table.insert_multiple.<locals>.updater at 0x7fce261d01f0>
 
     def _update_table(self, updater: Callable[[Dict[int, Mapping]], None]):
         """
@@ -5321,8 +5321,8 @@ tinydb/table.py:117: in insert_multiple
     self._update_table(updater)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fa29f110ca0>
-updater = <function Table.insert_multiple.<locals>.updater at 0x7fa29df61900>
+self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fce27484460>
+updater = <function Table.insert_multiple.<locals>.updater at 0x7fce261d1900>
 
     def _update_table(self, updater: Callable[[Dict[int, Mapping]], None]):
         """
@@ -5361,8 +5361,8 @@ tinydb/table.py:117: in insert_multiple
     self._update_table(updater)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fa29e02c430>
-updater = <function Table.insert_multiple.<locals>.updater at 0x7fa29df620e0>
+self = <[ValueError('I/O operation on closed file.') raised in repr()] Table object at 0x7fce278ec1c0>
+updater = <function Table.insert_multiple.<locals>.updater at 0x7fce261d20e0>
 
     def _update_table(self, updater: Callable[[Dict[int, Mapping]], None]):
         """
@@ -5403,7 +5403,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e1afcd0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce26602bf0>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5429,7 +5429,7 @@ def test_drop_table():
 tests/test_tinydb.py:577: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.database.TinyDB object at 0x7fa29de45f60>
+self = <tinydb.database.TinyDB object at 0x7fce2645cd30>
 name = 'default_table_name'
 
     def __getattr__(self, name):
@@ -5457,8 +5457,8 @@ tinydb/table.py:117: in insert_multiple
     self._update_table(updater)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29f5f0340>
-updater = <function Table.insert_multiple.<locals>.updater at 0x7fa29df603a0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce26240c10>
+updater = <function Table.insert_multiple.<locals>.updater at 0x7fce261d03a0>
 
     def _update_table(self, updater: Callable[[Dict[int, Mapping]], None]):
         """
@@ -5482,7 +5482,7 @@ tinydb/table.py:370: AttributeError
 </details>
 <h3 id="test_tinydbpytest_tinydb_is_iterablememory">test_tinydb.py::test_tinydb_is_iterable[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_tinydb_is_iterable[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e3e76a0>
+db = <tinydb.database.TinyDB object at 0x7fce263385e0>
 
     def test_tinydb_is_iterable(db: TinyDB):
 >       assert [r for r in db] == db.all()
@@ -5493,7 +5493,7 @@ tests/test_tinydb.py:634: TypeError
 </details>
 <h3 id="test_tinydbpytest_tinydb_is_iterablejson">test_tinydb.py::test_tinydb_is_iterable[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_tinydb_is_iterable[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29f940bb0>
+db = <tinydb.database.TinyDB object at 0x7fce26241f90>
 
     def test_tinydb_is_iterable(db: TinyDB):
 >       assert [r for r in db] == db.all()
@@ -5520,7 +5520,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29f940ee0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce261bb8b0>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5557,7 +5557,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29dcecaf0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce266a4e20>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5576,7 +5576,7 @@ tinydb/table.py:354: AttributeError
 </details>
 <h3 id="test_tinydbpytest_insert_multiple_with_single_dictmemory">test_tinydb.py::test_insert_multiple_with_single_dict[memory]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple_with_single_dict[memory]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29e03fc40>
+db = <tinydb.database.TinyDB object at 0x7fce262619c0>
 
     def test_insert_multiple_with_single_dict(db: TinyDB):
 >       with pytest.raises(ValueError):
@@ -5587,7 +5587,7 @@ tests/test_tinydb.py:668: Failed
 </details>
 <h3 id="test_tinydbpytest_insert_multiple_with_single_dictjson">test_tinydb.py::test_insert_multiple_with_single_dict[json]</h3>
 <details><summary> <pre>test_tinydb.py::test_insert_multiple_with_single_dict[json]</pre></summary><pre>
-db = <tinydb.database.TinyDB object at 0x7fa29de45de0>
+db = <tinydb.database.TinyDB object at 0x7fce266a4400>
 
     def test_insert_multiple_with_single_dict(db: TinyDB):
 >       with pytest.raises(ValueError):
@@ -5624,7 +5624,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29deb60b0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce265500a0>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5655,7 +5655,7 @@ tinydb/table.py:340: in _get_next_id
     self._next_id = max(self._read_table().keys() or [0]) + 1
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fa29e0aa3e0>
+self = <[AttributeError("'NoneType' object has no attribute 'get'") raised in repr()] Table object at 0x7fce27b6e740>
 
     def _read_table(self) ->Dict[str, Mapping]:
         """
@@ -5681,7 +5681,7 @@ def test_lru_cache():
 tests/test_utils.py:8: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29dceda20>, key = 'a', value = 1
+self = <tinydb.utils.LRUCache object at 0x7fce26476050>, key = 'a', value = 1
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)
@@ -5699,7 +5699,7 @@ def test_lru_cache_set_multiple():
 tests/test_utils.py:24: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29e02c850>, key = 'a', value = 1
+self = <tinydb.utils.LRUCache object at 0x7fce266678e0>, key = 'a', value = 1
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)
@@ -5717,7 +5717,7 @@ def test_lru_cache_get():
 tests/test_utils.py:34: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29ef3a140>, key = 'a', value = 1
+self = <tinydb.utils.LRUCache object at 0x7fce2652c400>, key = 'a', value = 1
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)
@@ -5735,7 +5735,7 @@ def test_lru_cache_delete():
 tests/test_utils.py:45: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29e02f8e0>, key = 'a', value = 1
+self = <tinydb.utils.LRUCache object at 0x7fce26666500>, key = 'a', value = 1
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)
@@ -5753,7 +5753,7 @@ def test_lru_cache_clear():
 tests/test_utils.py:59: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29dcef250>, key = 'a', value = 1
+self = <tinydb.utils.LRUCache object at 0x7fce2652f820>, key = 'a', value = 1
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)
@@ -5772,7 +5772,7 @@ def test_lru_cache_unlimited():
 tests/test_utils.py:69: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29e02dd80>, key = 0, value = 0
+self = <tinydb.utils.LRUCache object at 0x7fce26665750>, key = 0, value = 0
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)
@@ -5791,7 +5791,7 @@ def test_lru_cache_unlimited_explicit():
 tests/test_utils.py:77: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <tinydb.utils.LRUCache object at 0x7fa29dcefe80>, key = 0, value = 0
+self = <tinydb.utils.LRUCache object at 0x7fce2652e1d0>, key = 0, value = 0
 
     def __setitem__(self, key: K, value: V) ->None:
 >       self.set(key, value)

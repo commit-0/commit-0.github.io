@@ -993,7 +993,7 @@
 <h2 id="failed-pytests">Failed pytests:</h2>
 <h3 id="test_conditionpytest_operator_and_blocked">test_condition.py::test_operator_and_blocked</h3>
 <details><summary> <pre>test_condition.py::test_operator_and_blocked</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cbf5f30>
+env = <simpy.core.Environment object at 0x7fc610ecfeb0>
 
     def test_operator_and_blocked(env):
         def process(env):
@@ -1019,7 +1019,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cbf5f30>
+env = <simpy.core.Environment object at 0x7fc610ecfeb0>
 
     def process(env):
         timeout = env.timeout(1)
@@ -1029,14 +1029,14 @@ env = <simpy.core.Environment object at 0x7ff97cbf5f30>
         condition = timeout & event
 >       assert not condition.triggered
 E       assert not True
-E        +  where True = <Condition(all_events, (<Timeout(1) object at 0x7ff97cbf4cd0>, <Event() object at 0x7ff97cbf54b0>)) object at 0x7ff97cbf5ed0>.triggered
+E        +  where True = <Condition(all_events, (<Timeout(1) object at 0x7fc610ece0b0>, <Event() object at 0x7fc610ecf700>)) object at 0x7fc610ecc940>.triggered
 
 tests/test_condition.py:26: AssertionError
 </pre>
 </details>
 <h3 id="test_conditionpytest_nested_cond_with_error">test_condition.py::test_nested_cond_with_error</h3>
 <details><summary> <pre>test_condition.py::test_nested_cond_with_error</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97ce89990>
+env = <simpy.core.Environment object at 0x7fc61110a050>
 
     def test_nested_cond_with_error(env):
         def explode(env):
@@ -1062,7 +1062,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97ce89990>
+env = <simpy.core.Environment object at 0x7fc61110a050>
 
     def explode(env):
         yield env.timeout(1)
@@ -1074,7 +1074,7 @@ tests/test_condition.py:79: ValueError
 </details>
 <h3 id="test_conditionpytest_cond_with_error">test_condition.py::test_cond_with_error</h3>
 <details><summary> <pre>test_condition.py::test_cond_with_error</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cc96980>
+env = <simpy.core.Environment object at 0x7fc610e9f1c0>
 
     def test_cond_with_error(env):
         def explode(env, delay):
@@ -1100,7 +1100,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cc96980>, delay = 0
+env = <simpy.core.Environment object at 0x7fc610e9f1c0>, delay = 0
 
     def explode(env, delay):
         yield env.timeout(delay)
@@ -1112,7 +1112,7 @@ tests/test_condition.py:92: ValueError
 </details>
 <h3 id="test_conditionpytest_cond_with_nested_error">test_condition.py::test_cond_with_nested_error</h3>
 <details><summary> <pre>test_condition.py::test_cond_with_nested_error</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cfe5ff0>
+env = <simpy.core.Environment object at 0x7fc610e68790>
 
     def test_cond_with_nested_error(env):
         def explode(env, delay):
@@ -1138,7 +1138,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cfe5ff0>, delay = 0
+env = <simpy.core.Environment object at 0x7fc610e68790>, delay = 0
 
     def explode(env, delay):
         yield env.timeout(delay)
@@ -1150,7 +1150,7 @@ tests/test_condition.py:105: ValueError
 </details>
 <h3 id="test_environmentpytest_event_queue_empty">test_environment.py::test_event_queue_empty</h3>
 <details><summary> <pre>test_environment.py::test_event_queue_empty</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d18d450>, log = [0, 1, 1]
+env = <simpy.core.Environment object at 0x7fc610ece590>, log = [0, 1, 1]
 
     def test_event_queue_empty(env, log):
         """The simulation should stop if there are no more events, that means, no
@@ -1175,7 +1175,7 @@ tests/test_environment.py:21: AssertionError
 </details>
 <h3 id="test_environmentpytest_run_resume">test_environment.py::test_run_resume</h3>
 <details><summary> <pre>test_environment.py::test_run_resume</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d1ea680>
+env = <simpy.core.Environment object at 0x7fc610e688e0>
 
     def test_run_resume(env):
         """Stopped simulation can be resumed."""
@@ -1188,14 +1188,14 @@ env = <simpy.core.Environment object at 0x7ff97d1ea680>
         assert env.now == 10
 >       assert all(event.processed for event in events[:1])
 E       assert False
-E        +  where False = all(<generator object test_run_resume.<locals>.<genexpr> at 0x7ff97c151930>)
+E        +  where False = all(<generator object test_run_resume.<locals>.<genexpr> at 0x7fc61004d930>)
 
 tests/test_environment.py:41: AssertionError
 </pre>
 </details>
 <h3 id="test_environmentpytest_run_with_processed_event">test_environment.py::test_run_with_processed_event</h3>
 <details><summary> <pre>test_environment.py::test_run_with_processed_event</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c177e80>
+env = <simpy.core.Environment object at 0x7fc610975c30>
 
     def test_run_with_processed_event(env):
         """An already processed event may also be passed as until value."""
@@ -1203,15 +1203,15 @@ env = <simpy.core.Environment object at 0x7ff97c177e80>
         assert env.run(until=timeout) == 'spam'
 >       assert env.now == 1
 E       AssertionError: assert 'spam' == 1
-E        +  where 'spam' = <simpy.core.Environment object at 0x7ff97c177e80>.now
+E        +  where 'spam' = <simpy.core.Environment object at 0x7fc610975c30>.now
 
 tests/test_environment.py:64: AssertionError
 </pre>
 </details>
 <h3 id="test_eventpytest_fail">test_event.py::test_fail</h3>
 <details><summary> <pre>test_event.py::test_fail</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cef8550>
-event = <Event() object at 0x7ff97cefa590>
+env = <simpy.core.Environment object at 0x7fc60ffef220>
+event = <Event() object at 0x7fc60ffef5e0>
 
     def child(env, event):
         with pytest.raises(ValueError, match='ohai'):
@@ -1222,7 +1222,7 @@ tests/test_event.py:34: ValueError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97cef8550>
+env = <simpy.core.Environment object at 0x7fc60ffef220>
 
     def test_fail(env):
         """Test for the Environment.event() helper function."""
@@ -1253,7 +1253,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(child) object at 0x7ff97cef9cc0>, exception = ValueError('ohai')
+self = <Process(child) object at 0x7fc60ffeea70>, exception = ValueError('ohai')
 
     def fail(self, exception: Any) ->Event:
         """Set *exception* as the events value, mark it as failed and schedule
@@ -1274,7 +1274,7 @@ src/simpy/events.py:179: RuntimeError
 </details>
 <h3 id="test_eventpytest_triggered">test_event.py::test_triggered</h3>
 <details><summary> <pre>test_event.py::test_triggered</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d1900a0>
+env = <simpy.core.Environment object at 0x7fc610c1b2e0>
 
     def test_triggered(env):
         def pem(env, event):
@@ -1294,7 +1294,7 @@ tests/test_event.py:96: AssertionError
 </details>
 <h3 id="test_eventpytest_condition_callback_removal">test_event.py::test_condition_callback_removal</h3>
 <details><summary> <pre>test_event.py::test_condition_callback_removal</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cbf4340>
+env = <simpy.core.Environment object at 0x7fc610d649a0>
 
     def test_condition_callback_removal(env):
         """A condition will remove all outstanding callbacks from its events."""
@@ -1303,15 +1303,15 @@ env = <simpy.core.Environment object at 0x7ff97cbf4340>
         env.run(until=a | b)
         # The condition has removed its callback from event b.
 >       assert not a.callbacks
-E       assert not [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7ff97cbf47f0>, <Event() object at 0x7ff97cbf5ae0>)) object at 0x7ff97cbf73d0>>]
-E        +  where [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7ff97cbf47f0>, <Event() object at 0x7ff97cbf5ae0>)) object at 0x7ff97cbf73d0>>] = <Event() object at 0x7ff97cbf47f0>.callbacks
+E       assert not [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7fc610e688e0>, <Event() object at 0x7fc610e6bc70>)) object at 0x7fc610e684f0>>]
+E        +  where [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7fc610e688e0>, <Event() object at 0x7fc610e6bc70>)) object at 0x7fc610e684f0>>] = <Event() object at 0x7fc610e688e0>.callbacks
 
 tests/test_event.py:118: AssertionError
 </pre>
 </details>
 <h3 id="test_eventpytest_condition_nested_callback_removal">test_event.py::test_condition_nested_callback_removal</h3>
 <details><summary> <pre>test_event.py::test_condition_nested_callback_removal</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d1e8040>
+env = <simpy.core.Environment object at 0x7fc610c1a710>
 
     def test_condition_nested_callback_removal(env):
         """A condition will remove all outstanding callbacks from its events (even
@@ -1323,15 +1323,15 @@ env = <simpy.core.Environment object at 0x7ff97d1e8040>
         env.run(until=a_or_b_and_c)
         # Callbacks from nested conditions are also removed.
 >       assert not a.callbacks
-E       assert not [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7ff97d1ead10>, <Condition(all_events, ...object at 0x7ff97d1ea1d0>, <Event() object at 0x7ff97d1ebfd0>)) object at 0x7ff97d1ebac0>)) object at 0x7ff97d259b40>>]
-E        +  where [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7ff97d1ead10>, <Condition(all_events, ...object at 0x7ff97d1ea1d0>, <Event() object at 0x7ff97d1ebfd0>)) object at 0x7ff97d1ebac0>)) object at 0x7ff97d259b40>>] = <Event() object at 0x7ff97d1ead10>.callbacks
+E       assert not [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7fc610c1a3b0>, <Condition(all_events, ...object at 0x7fc610c18ca0>, <Event() object at 0x7fc610c1a0b0>)) object at 0x7fc610c1b370>)) object at 0x7fc610c18520>>]
+E        +  where [<bound method Condition._check of <Condition(any_events, (<Event() object at 0x7fc610c1a3b0>, <Condition(all_events, ...object at 0x7fc610c18ca0>, <Event() object at 0x7fc610c1a0b0>)) object at 0x7fc610c1b370>)) object at 0x7fc610c18520>>] = <Event() object at 0x7fc610c1a3b0>.callbacks
 
 tests/test_event.py:131: AssertionError
 </pre>
 </details>
 <h3 id="test_exceptionspytest_error_forwarding">test_exceptions.py::test_error_forwarding</h3>
 <details><summary> <pre>test_exceptions.py::test_error_forwarding</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cbf50f0>
+env = <simpy.core.Environment object at 0x7fc6111d4250>
 
     def parent(env):
         with pytest.raises(ValueError, match='Onoes!'):
@@ -1343,7 +1343,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cbf50f0>
+env = <simpy.core.Environment object at 0x7fc6111d4250>
 
     def child(env):
 >       raise ValueError('Onoes!')
@@ -1353,7 +1353,7 @@ tests/test_exceptions.py:20: ValueError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97cbf50f0>
+env = <simpy.core.Environment object at 0x7fc6111d4250>
 
     def test_error_forwarding(env):
         """Exceptions are forwarded from child to parent processes if there
@@ -1384,7 +1384,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(parent) object at 0x7ff97cbf7e20>
+self = <Process(parent) object at 0x7fc6111d5c30>
 exception = ValueError('Onoes!')
 
     def fail(self, exception: Any) ->Event:
@@ -1406,7 +1406,7 @@ src/simpy/events.py:179: RuntimeError
 </details>
 <h3 id="test_exceptionspytest_crashing_child_traceback">test_exceptions.py::test_crashing_child_traceback</h3>
 <details><summary> <pre>test_exceptions.py::test_crashing_child_traceback</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97ce89ea0>
+env = <simpy.core.Environment object at 0x7fc610087970>
 
     def root(env):
         try:
@@ -1418,7 +1418,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97ce89ea0>
+env = <simpy.core.Environment object at 0x7fc610087970>
 
     def panic(env):
         yield env.timeout(1)
@@ -1429,7 +1429,7 @@ tests/test_exceptions.py:56: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97ce89ea0>
+env = <simpy.core.Environment object at 0x7fc610087970>
 
     def test_crashing_child_traceback(env):
         def panic(env):
@@ -1461,7 +1461,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(root) object at 0x7ff97ce881c0>
+self = <Process(root) object at 0x7fc610087a60>
 exception = RuntimeError('Oh noes, roflcopter incoming... BOOM!')
 
     def fail(self, exception: Any) ->Event:
@@ -1483,7 +1483,7 @@ src/simpy/events.py:179: RuntimeError
 </details>
 <h3 id="test_exceptionspytest_exception_chaining">test_exceptions.py::test_exception_chaining</h3>
 <details><summary> <pre>test_exceptions.py::test_exception_chaining</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cfe4cd0>
+env = <simpy.core.Environment object at 0x7fc610245c30>
 
     def parent(env):
         child_proc = env.process(child(env))
@@ -1495,7 +1495,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cfe4cd0>
+env = <simpy.core.Environment object at 0x7fc610245c30>
 
     def child(env):
         yield env.timeout(1)
@@ -1506,7 +1506,7 @@ tests/test_exceptions.py:80: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97cfe4cd0>
+env = <simpy.core.Environment object at 0x7fc610245c30>
 
     def test_exception_chaining(env):
         """Unhandled exceptions pass through the entire event stack. This must be
@@ -1542,7 +1542,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(parent) object at 0x7ff97cfe5a50>
+self = <Process(parent) object at 0x7fc6102462f0>
 exception = RuntimeError('foo')
 
     def fail(self, exception: Any) ->Event:
@@ -1563,7 +1563,7 @@ src/simpy/events.py:179: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97cfe4cd0>
+env = <simpy.core.Environment object at 0x7fc610245c30>
 
     def test_exception_chaining(env):
         """Unhandled exceptions pass through the entire event stack. This must be
@@ -1636,15 +1636,15 @@ env = <simpy.core.Environment object at 0x7ff97cfe4cd0>
 >           assert re.match(expected, trace), 'Traceback mismatch'
 E           AssertionError: Traceback mismatch
 E           assert None
-E            +  where None = <function match at 0x7ff97d458e50>('Traceback\\ \\(most\\ recent\\ call\\ last\\):\\\n\\ \\ File\\ ".*tests/test_exceptions\\.py",\\ line\\ \\d+,\\ in\\ ...\\\n\\ \\ File\\ ".*simpy/core\\.py",\\ line\\ \\d+,\\ in\\ step\\\n\\ \\ \\ \\ raise\\ exc\\\nRuntimeError:\\ foo\\\n', 'Traceback (most recent call last):\n  File "/testbed/src/simpy/events.py", line 348, in _resume\n    next_event = sel...n fail\n    raise RuntimeError(\'Event has already been triggered\')\nRuntimeError: Event has already been triggered\n')
-E            +    where <function match at 0x7ff97d458e50> = re.match
+E            +  where None = <function match at 0x7fc6113d4e50>('Traceback\\ \\(most\\ recent\\ call\\ last\\):\\\n\\ \\ File\\ ".*tests/test_exceptions\\.py",\\ line\\ \\d+,\\ in\\ ...\\\n\\ \\ File\\ ".*simpy/core\\.py",\\ line\\ \\d+,\\ in\\ step\\\n\\ \\ \\ \\ raise\\ exc\\\nRuntimeError:\\ foo\\\n', 'Traceback (most recent call last):\n  File "/testbed/src/simpy/events.py", line 348, in _resume\n    next_event = sel...n fail\n    raise RuntimeError(\'Event has already been triggered\')\nRuntimeError: Event has already been triggered\n')
+E            +    where <function match at 0x7fc6113d4e50> = re.match
 
 tests/test_exceptions.py:140: AssertionError
 </pre>
 </details>
 <h3 id="test_exceptionspytest_invalid_event">test_exceptions.py::test_invalid_event</h3>
 <details><summary> <pre>test_exceptions.py::test_invalid_event</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cbf7eb0>
+env = <simpy.core.Environment object at 0x7fc6111efca0>
 
     def test_invalid_event(env):
         """Invalid yield values will cause the simulation to fail."""
@@ -1661,8 +1661,8 @@ tests/test_exceptions.py:150: Failed
 </details>
 <h3 id="test_exceptionspytest_process_exception_handling">test_exceptions.py::test_process_exception_handling</h3>
 <details><summary> <pre>test_exceptions.py::test_process_exception_handling</pre></summary><pre>
-_ = <simpy.core.Environment object at 0x7ff97cd6faf0>
-event = <Event() object at 0x7ff97cd6d5a0>
+_ = <simpy.core.Environment object at 0x7fc610edce80>
+event = <Event() object at 0x7fc610ede2c0>
 
     def pem(_, event):
         try:
@@ -1673,7 +1673,7 @@ tests/test_exceptions.py:184: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97cd6faf0>
+env = <simpy.core.Environment object at 0x7fc610edce80>
 
     def test_process_exception_handling(env):
         """Processes can't ignore failed events and auto-handle exceptions."""
@@ -1704,7 +1704,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(pem) object at 0x7ff97cd6d7b0>, exception = RuntimeError()
+self = <Process(pem) object at 0x7fc610edd480>, exception = RuntimeError()
 
     def fail(self, exception: Any) ->Event:
         """Set *exception* as the events value, mark it as failed and schedule
@@ -1725,7 +1725,7 @@ src/simpy/events.py:179: RuntimeError
 </details>
 <h3 id="test_exceptionspytest_process_exception_chaining">test_exceptions.py::test_process_exception_chaining</h3>
 <details><summary> <pre>test_exceptions.py::test_process_exception_chaining</pre></summary><pre>
-event = <Event() object at 0x7ff97c503910>
+event = <Event() object at 0x7fc610df0400>
 
     def process_a(event):
         try:
@@ -1736,7 +1736,7 @@ tests/test_exceptions.py:208: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97c5033a0>
+env = <simpy.core.Environment object at 0x7fc610df2500>
 
     def test_process_exception_chaining(env):
         """Because multiple processes can be waiting for an event, exceptions of
@@ -1780,7 +1780,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(process_a) object at 0x7ff97c500b20>
+self = <Process(process_a) object at 0x7fc610df04f0>
 exception = RuntimeError('foo')
 
     def fail(self, exception: Any) ->Event:
@@ -1802,7 +1802,7 @@ src/simpy/events.py:179: RuntimeError
 </details>
 <h3 id="test_exceptionspytest_sys_excepthook">test_exceptions.py::test_sys_excepthook</h3>
 <details><summary> <pre>test_exceptions.py::test_sys_excepthook</pre></summary><pre>
-event = <Event() object at 0x7ff97bff2a70>
+event = <Event() object at 0x7fc610087c40>
 
     def process_a(event):
 >       yield event
@@ -1812,7 +1812,7 @@ tests/test_exceptions.py:233: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97bff2b30>
+env = <simpy.core.Environment object at 0x7fc6100843a0>
 
     def test_sys_excepthook(env):
         """Check that the default exception hook reports exception chains."""
@@ -1843,7 +1843,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(process_a) object at 0x7ff97bff2ce0>
+self = <Process(process_a) object at 0x7fc610085570>
 exception = RuntimeError('foo')
 
     def fail(self, exception: Any) ->Event:
@@ -1864,7 +1864,7 @@ src/simpy/events.py:179: RuntimeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97bff2b30>
+env = <simpy.core.Environment object at 0x7fc6100843a0>
 
     def test_sys_excepthook(env):
         """Check that the default exception hook reports exception chains."""
@@ -1910,7 +1910,7 @@ tests/test_exceptions.py:265: AssertionError
 </details>
 <h3 id="test_interruptspytest_init_interrupt">test_interrupts.py::test_init_interrupt</h3>
 <details><summary> <pre>test_interrupts.py::test_init_interrupt</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0e7c40>
+env = <simpy.core.Environment object at 0x7fc610edd5a0>
 
     def test_init_interrupt(env):
         """An interrupt should always be executed after the Initialize event at the
@@ -1944,7 +1944,7 @@ src/simpy/events.py:348: in _resume
     next_event = self._generator.throw(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c0e7c40>
+env = <simpy.core.Environment object at 0x7fc610edd5a0>
 
 >   def child(env):
 E   simpy.exceptions.Interrupt: Interrupt(None)
@@ -1954,7 +1954,7 @@ tests/test_interrupts.py:85: Interrupt
 </details>
 <h3 id="test_interruptspytest_interrupt_terminated_process">test_interrupts.py::test_interrupt_terminated_process</h3>
 <details><summary> <pre>test_interrupts.py::test_interrupt_terminated_process</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cb1e170>
+env = <simpy.core.Environment object at 0x7fc610974280>
 
     def test_interrupt_terminated_process(env):
         """Dead processes cannot be interrupted."""
@@ -1987,8 +1987,8 @@ src/simpy/core.py:151: in step
     self._process_event(event)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.core.Environment object at 0x7ff97cb1e170>
-event = <Process(parent) object at 0x7ff97cb1d330>
+self = <simpy.core.Environment object at 0x7fc610974280>
+event = <Process(parent) object at 0x7fc610974a60>
 
     def _process_event(self, event):
         event._processed = True
@@ -2029,7 +2029,7 @@ src/simpy/core.py:186: RuntimeError
 </details>
 <h3 id="test_interruptspytest_multiple_interrupts">test_interrupts.py::test_multiple_interrupts</h3>
 <details><summary> <pre>test_interrupts.py::test_multiple_interrupts</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cc96e60>
+env = <simpy.core.Environment object at 0x7fc610c18fa0>
 
     def test_multiple_interrupts(env):
         """Interrupts on dead processes are discarded. If there are multiple
@@ -2068,7 +2068,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cc96e60>
+env = <simpy.core.Environment object at 0x7fc610c18fa0>
 
     def parent(env):
         c = env.process(child(env))
@@ -2084,7 +2084,7 @@ tests/test_interrupts.py:146: AssertionError
 </details>
 <h3 id="test_interruptspytest_interrupt_self">test_interrupts.py::test_interrupt_self</h3>
 <details><summary> <pre>test_interrupts.py::test_interrupt_self</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d193e80>
+env = <simpy.core.Environment object at 0x7fc61092b880>
 
     def test_interrupt_self(env):
         """A process should not be able to interrupt itself."""
@@ -2108,7 +2108,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97d193e80>
+env = <simpy.core.Environment object at 0x7fc61092b880>
 
     def pem(env):
 >       pytest.raises(RuntimeError, env.active_process.interrupt)
@@ -2119,7 +2119,7 @@ tests/test_interrupts.py:156: AttributeError
 </details>
 <h3 id="test_interruptspytest_immediate_interrupt">test_interrupts.py::test_immediate_interrupt</h3>
 <details><summary> <pre>test_interrupts.py::test_immediate_interrupt</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cec16c0>, log = []
+env = <simpy.core.Environment object at 0x7fc60ffecd00>, log = []
 
     def test_immediate_interrupt(env, log):
         """Processes are immediately interruptable."""
@@ -2151,7 +2151,7 @@ src/simpy/events.py:348: in _resume
     next_event = self._generator.throw(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cec16c0>, log = []
+env = <simpy.core.Environment object at 0x7fc60ffecd00>, log = []
 
 >   def child(env, log):
 E   simpy.exceptions.Interrupt: Interrupt(None)
@@ -2161,7 +2161,7 @@ tests/test_interrupts.py:166: Interrupt
 </details>
 <h3 id="test_processpytest_get_state">test_process.py::test_get_state</h3>
 <details><summary> <pre>test_process.py::test_get_state</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c174430>
+env = <simpy.core.Environment object at 0x7fc61110ed70>
 
     def test_get_state(env):
         """A process is alive until it's generator has not terminated."""
@@ -2192,8 +2192,8 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c174430>
-pem_a = <Process(pem_a) object at 0x7ff97c177700>
+env = <simpy.core.Environment object at 0x7fc61110ed70>
+pem_a = <Process(pem_a) object at 0x7fc61110fca0>
 
     def pem_b(env, pem_a):
         yield env.timeout(1)
@@ -2202,14 +2202,14 @@ pem_a = <Process(pem_a) object at 0x7ff97c177700>
         yield env.timeout(3)
 >       assert not pem_a.is_alive
 E       assert not True
-E        +  where True = <Process(pem_a) object at 0x7ff97c177700>.is_alive
+E        +  where True = <Process(pem_a) object at 0x7fc61110fca0>.is_alive
 
 tests/test_process.py:32: AssertionError
 </pre>
 </details>
 <h3 id="test_processpytest_return_value">test_process.py::test_return_value</h3>
 <details><summary> <pre>test_process.py::test_return_value</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c500460>
+env = <simpy.core.Environment object at 0x7fc610add480>
 
     def test_return_value(env):
         """Processes can set a return value."""
@@ -2239,7 +2239,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c500460>
+env = <simpy.core.Environment object at 0x7fc610add480>
 
     def parent(env):
         result1 = yield env.process(child(env))
@@ -2256,7 +2256,7 @@ tests/test_process.py:80: AssertionError
 </details>
 <h3 id="test_processpytest_interrupted_join">test_process.py::test_interrupted_join</h3>
 <details><summary> <pre>test_process.py::test_interrupted_join</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d4c94b0>
+env = <simpy.core.Environment object at 0x7fc61110fbe0>
 
     def parent(env):
         child_proc = env.process(child(env))
@@ -2268,7 +2268,7 @@ tests/test_process.py:114: Interrupt
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97d4c94b0>
+env = <simpy.core.Environment object at 0x7fc61110fbe0>
 
     def test_interrupted_join(env):
         """Interrupts remove a process from the callbacks of its target."""
@@ -2309,7 +2309,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97d4c94b0>
+env = <simpy.core.Environment object at 0x7fc61110fbe0>
 
     def parent(env):
         child_proc = env.process(child(env))
@@ -2324,14 +2324,14 @@ env = <simpy.core.Environment object at 0x7ff97d4c94b0>
             yield env.timeout(5)
 >           assert env.now == 6
 E           assert 2 == 6
-E            +  where 2 = <simpy.core.Environment object at 0x7ff97d4c94b0>.now
+E            +  where 2 = <simpy.core.Environment object at 0x7fc61110fbe0>.now
 
 tests/test_process.py:122: AssertionError
 </pre>
 </details>
 <h3 id="test_processpytest_error_and_interrupted_join">test_process.py::test_error_and_interrupted_join</h3>
 <details><summary> <pre>test_process.py::test_error_and_interrupted_join</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cd6e5f0>
+env = <simpy.core.Environment object at 0x7fc610e69b70>
 
     def parent(env):
         env.process(child_a(env, env.active_process))
@@ -2346,7 +2346,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cd6e5f0>
+env = <simpy.core.Environment object at 0x7fc610e69b70>
 
     def child_b(env):
 >       raise AttributeError('spam')
@@ -2356,7 +2356,7 @@ tests/test_process.py:167: AttributeError
 
 During handling of the above exception, another exception occurred:
 
-env = <simpy.core.Environment object at 0x7ff97cd6e5f0>
+env = <simpy.core.Environment object at 0x7fc610e69b70>
 
     def test_error_and_interrupted_join(env):
         def child_a(env, process):
@@ -2397,7 +2397,7 @@ src/simpy/events.py:360: in _resume
     self.fail(e)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <Process(parent) object at 0x7ff97cd6df60>
+self = <Process(parent) object at 0x7fc610e688b0>
 exception = AttributeError('spam')
 
     def fail(self, exception: Any) ->Event:
@@ -2419,7 +2419,7 @@ src/simpy/events.py:179: RuntimeError
 </details>
 <h3 id="test_resourcespytest_resource">test_resources.py::test_resource</h3>
 <details><summary> <pre>test_resources.py::test_resource</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cfd7b80>, log = [('a', 0)]
+env = <simpy.core.Environment object at 0x7fc6112363e0>, log = [('a', 0)]
 
     def test_resource(env, log):
         """A *resource* is something with a limited numer of slots that need
@@ -2457,7 +2457,7 @@ tests/test_resources.py:40: AssertionError
 </details>
 <h3 id="test_resourcespytest_resource_context_manager">test_resources.py::test_resource_context_manager</h3>
 <details><summary> <pre>test_resources.py::test_resource_context_manager</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c2d34f0>, log = [('a', 0)]
+env = <simpy.core.Environment object at 0x7fc610dbb940>, log = [('a', 0)]
 
     def test_resource_context_manager(env, log):
         """The event that ``Resource.request()`` returns can be used as
@@ -2487,7 +2487,7 @@ tests/test_resources.py:64: AssertionError
 </details>
 <h3 id="test_resourcespytest_resource_slots">test_resources.py::test_resource_slots</h3>
 <details><summary> <pre>test_resources.py::test_resource_slots</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bff3a30>
+env = <simpy.core.Environment object at 0x7fc611175240>
 log = [('0', 0), ('1', 0)]
 
     def test_resource_slots(env, log):
@@ -2523,7 +2523,7 @@ tests/test_resources.py:79: AssertionError
 </details>
 <h3 id="test_resourcespytest_resource_immediate_requests">test_resources.py::test_resource_immediate_requests</h3>
 <details><summary> <pre>test_resources.py::test_resource_immediate_requests</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0e9870>
+env = <simpy.core.Environment object at 0x7fc60ff60f70>
 
     def test_resource_immediate_requests(env):
         """A process must not acquire a resource if it releases it and immediately
@@ -2564,7 +2564,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c0e9870>
+env = <simpy.core.Environment object at 0x7fc60ff60f70>
 
     def parent(env):
         res = simpy.Resource(env, 1)
@@ -2585,7 +2585,7 @@ tests/test_resources.py:175: AssertionError
 </details>
 <h3 id="test_resourcespytest_resource_cm_exception">test_resources.py::test_resource_cm_exception</h3>
 <details><summary> <pre>test_resources.py::test_resource_cm_exception</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c520a60>, log = [0]
+env = <simpy.core.Environment object at 0x7fc6111099f0>, log = [0]
 
     def test_resource_cm_exception(env, log):
         """Resource with context manager receives an exception."""
@@ -2618,7 +2618,7 @@ tests/test_resources.py:201: AssertionError
 </details>
 <h3 id="test_resourcespytest_resource_with_priority_queue">test_resources.py::test_resource_with_priority_queue</h3>
 <details><summary> <pre>test_resources.py::test_resource_with_priority_queue</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0e8460>
+env = <simpy.core.Environment object at 0x7fc610e9f340>
 
     def test_resource_with_priority_queue(env):
         def process(env, delay, resource, priority, res_time):
@@ -2648,8 +2648,8 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c0e8460>, delay = 2
-resource = <simpy.resources.resource.PriorityResource object at 0x7ff97c0ebaf0>
+env = <simpy.core.Environment object at 0x7fc610e9f340>, delay = 2
+resource = <simpy.resources.resource.PriorityResource object at 0x7fc610e9ddb0>
 priority = 3, res_time = 10
 
     def process(env, delay, resource, priority, res_time):
@@ -2658,14 +2658,14 @@ priority = 3, res_time = 10
         yield req
 >       assert env.now == res_time
 E       assert 2 == 10
-E        +  where 2 = <simpy.core.Environment object at 0x7ff97c0e8460>.now
+E        +  where 2 = <simpy.core.Environment object at 0x7fc610e9f340>.now
 
 tests/test_resources.py:220: AssertionError
 </pre>
 </details>
 <h3 id="test_resourcespytest_sorted_queue_maxlen">test_resources.py::test_sorted_queue_maxlen</h3>
 <details><summary> <pre>test_resources.py::test_sorted_queue_maxlen</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cfe4ac0>
+env = <simpy.core.Environment object at 0x7fc6109ac070>
 
     def test_sorted_queue_maxlen(env):
         """Requests must fail if more than *maxlen* requests happen
@@ -2704,8 +2704,8 @@ src/simpy/resources/base.py:37: in __init__
     resource.put_queue.append(self)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<Event() object at 0x7ff97cfe5ea0>]
-item = <Event() object at 0x7ff97cfe62f0>
+self = [<Event() object at 0x7fc6109acb80>]
+item = <Event() object at 0x7fc6109af280>
 
     def append(self, item: Any) ->None:
         """Sort *item* into the queue.
@@ -2722,7 +2722,7 @@ src/simpy/resources/resource.py:157: RuntimeError
 </details>
 <h3 id="test_resourcespytest_get_users">test_resources.py::test_get_users</h3>
 <details><summary> <pre>test_resources.py::test_get_users</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bff2da0>
+env = <simpy.core.Environment object at 0x7fc610ecfa60>
 
     def test_get_users(env):
         def process(env, resource):
@@ -2734,9 +2734,9 @@ env = <simpy.core.Environment object at 0x7ff97bff2da0>
         procs = [env.process(process(env, resource)) for _ in range(3)]
         env.run(until=1)
 >       assert [evt.proc for evt in resource.users] == procs[0:1]
-E       assert [None] == [<Process(pro...7ff97bff2860>]
+E       assert [None] == [<Process(pro...7fc610ecd5d0>]
 E         
-E         At index 0 diff: None != <Process(process) object at 0x7ff97bff2860>
+E         At index 0 diff: None != <Process(process) object at 0x7fc610ecd5d0>
 E         Use -v to get more diff
 
 tests/test_resources.py:261: AssertionError
@@ -2744,7 +2744,7 @@ tests/test_resources.py:261: AssertionError
 </details>
 <h3 id="test_resourcespytest_preemptive_resource">test_resources.py::test_preemptive_resource</h3>
 <details><summary> <pre>test_resources.py::test_preemptive_resource</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf545b0>
+env = <simpy.core.Environment object at 0x7fc60fdde350>
 
     def test_preemptive_resource(env):
         """Processes with a higher priority may preempt requests of lower priority
@@ -2777,8 +2777,8 @@ src/simpy/core.py:151: in step
     self._process_event(event)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.core.Environment object at 0x7ff97bf545b0>
-event = <Process(proc_a) object at 0x7ff97bf545e0>
+self = <simpy.core.Environment object at 0x7fc60fdde350>
+event = <Process(proc_a) object at 0x7fc60fdde170>
 
     def _process_event(self, event):
         event._processed = True
@@ -2819,7 +2819,7 @@ src/simpy/core.py:186: RuntimeError
 </details>
 <h3 id="test_resourcespytest_preemptive_resource_timeout_0">test_resources.py::test_preemptive_resource_timeout_0</h3>
 <details><summary> <pre>test_resources.py::test_preemptive_resource_timeout_0</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cfe6a40>
+env = <simpy.core.Environment object at 0x7fc610974dc0>
 
     def test_preemptive_resource_timeout_0(env):
         def proc_a(env, resource, prio):
@@ -2850,8 +2850,8 @@ src/simpy/core.py:151: in step
     self._process_event(event)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.core.Environment object at 0x7ff97cfe6a40>
-event = <Process(proc_a) object at 0x7ff97bf0a5c0>
+self = <simpy.core.Environment object at 0x7fc610974dc0>
+event = <Process(proc_a) object at 0x7fc6109afa30>
 
     def _process_event(self, event):
         event._processed = True
@@ -2892,7 +2892,7 @@ src/simpy/core.py:186: RuntimeError
 </details>
 <h3 id="test_resourcespytest_mixed_preemption">test_resources.py::test_mixed_preemption</h3>
 <details><summary> <pre>test_resources.py::test_mixed_preemption</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0e56f0>
+env = <simpy.core.Environment object at 0x7fc60fe54190>
 log = [(0, 0), (2, 1), (3, 2), (3, 3), (6, 4)]
 
     def test_mixed_preemption(env, log):
@@ -2939,7 +2939,7 @@ tests/test_resources.py:345: AssertionError
 </details>
 <h3 id="test_resourcespytest_nested_preemption">test_resources.py::test_nested_preemption</h3>
 <details><summary> <pre>test_resources.py::test_nested_preemption</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bed3cd0>
+env = <simpy.core.Environment object at 0x7fc610adc9d0>
 log = [(0, 0), (6, 1), (26, 3)]
 
     def test_nested_preemption(env, log):
@@ -3005,7 +3005,7 @@ log = [(0, 0), (6, 1), (26, 3)]
         ]
 E       assert [(0, 0), (6, 1), (26, 3)] == [(1, 0, (<Pro..., 3), (31, 4)]
 E         
-E         At index 0 diff: (0, 0) != (1, 0, (<Process(process) object at 0x7ff97bed3d90>, 0, <simpy.resources.resource.PreemptiveResource object at 0x7ff97bed3130>))
+E         At index 0 diff: (0, 0) != (1, 0, (<Process(process) object at 0x7fc610ade020>, 0, <simpy.resources.resource.PreemptiveResource object at 0x7fc610add7b0>))
 E         Right contains 2 more items, first extra item: (26, 3)
 E         Use -v to get more diff
 
@@ -3014,7 +3014,7 @@ tests/test_resources.py:408: AssertionError
 </details>
 <h3 id="test_resourcespytest_container">test_resources.py::test_container</h3>
 <details><summary> <pre>test_resources.py::test_container</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d18c910>, log = []
+env = <simpy.core.Environment object at 0x7fc610ece380>, log = []
 
     def test_container(env, log):
         """A *container* is a resource (of optionally limited capacity) where
@@ -3066,8 +3066,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.container.Container object at 0x7ff97d18e050>
-event = <Event() object at 0x7ff97d18fca0>
+self = <simpy.resources.container.Container object at 0x7fc610ece4a0>
+event = <Event() object at 0x7fc610ece4d0>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3088,7 +3088,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_container_get_queued">test_resources.py::test_container_get_queued</h3>
 <details><summary> <pre>test_resources.py::test_container_get_queued</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf17a30>
+env = <simpy.core.Environment object at 0x7fc60fe2f9d0>
 
     def test_container_get_queued(env):
         def proc(env, wait, container, what):
@@ -3124,8 +3124,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.container.Container object at 0x7ff97bf179a0>
-event = <Event() object at 0x7ff97bf17790>
+self = <simpy.resources.container.Container object at 0x7fc60fe2fa00>
+event = <Event() object at 0x7fc60fe2f700>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3146,7 +3146,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_store">test_resources.py::test_store</h3>
 <details><summary> <pre>test_resources.py::test_store</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cec3d90>
+env = <simpy.core.Environment object at 0x7fc6108c0490>
 
     def test_store(env):
         """A store models the production and consumption of concrete python
@@ -3191,8 +3191,8 @@ src/simpy/resources/base.py:199: in _trigger_put
     if not self._do_put(put_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.Store object at 0x7ff97cec0610>
-event = <Event() object at 0x7ff97cec09a0>
+self = <simpy.resources.store.Store object at 0x7fc6108c02e0>
+event = <Event() object at 0x7fc6108c13c0>
 
     def _do_put(self, event: PutType) ->Optional[bool]:
         """Perform the *put* operation.
@@ -3213,7 +3213,7 @@ src/simpy/resources/base.py:186: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_store_capacity">test_resources.py::test_store_capacity</h3>
 <details><summary> <pre>test_resources.py::test_store_capacity</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cbf7970>
+env = <simpy.core.Environment object at 0x7fc610b8eb90>
 
     def test_store_capacity(env):
         with pytest.raises(ValueError, match='"capacity" must be > 0'):
@@ -3246,8 +3246,8 @@ src/simpy/resources/base.py:199: in _trigger_put
     if not self._do_put(put_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.Store object at 0x7ff97cbf5e70>
-event = <Event() object at 0x7ff97cbf4940>
+self = <simpy.resources.store.Store object at 0x7fc610b8e530>
+event = <Event() object at 0x7fc610b8ffa0>
 
     def _do_put(self, event: PutType) ->Optional[bool]:
         """Perform the *put* operation.
@@ -3268,7 +3268,7 @@ src/simpy/resources/base.py:186: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_store_cancel">test_resources.py::test_store_cancel</h3>
 <details><summary> <pre>test_resources.py::test_store_cancel</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cfd4880>
+env = <simpy.core.Environment object at 0x7fc60ffa9b10>
 
     def test_store_cancel(env):
         store = simpy.Store(env, capacity=1)
@@ -3299,8 +3299,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.Store object at 0x7ff97cfd6f50>
-event = <Event() object at 0x7ff97cfd7af0>
+self = <simpy.resources.store.Store object at 0x7fc60ffabac0>
+event = <Event() object at 0x7fc60ffab1c0>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3321,7 +3321,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_priority_store_item_priority">test_resources.py::test_priority_store_item_priority</h3>
 <details><summary> <pre>test_resources.py::test_priority_store_item_priority</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0a7eb0>
+env = <simpy.core.Environment object at 0x7fc60fdd88b0>
 
     def test_priority_store_item_priority(env):
         pstore = simpy.PriorityStore(env, 3)
@@ -3360,8 +3360,8 @@ src/simpy/resources/base.py:199: in _trigger_put
     if not self._do_put(put_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.PriorityStore object at 0x7ff97c0a5b10>
-event = <Event() object at 0x7ff97c0a68c0>
+self = <simpy.resources.store.PriorityStore object at 0x7fc60fddada0>
+event = <Event() object at 0x7fc60fdd87c0>
 
     def _do_put(self, event: PutType) ->Optional[bool]:
         """Perform the *put* operation.
@@ -3382,7 +3382,7 @@ src/simpy/resources/base.py:186: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_priority_store_stable_order">test_resources.py::test_priority_store_stable_order</h3>
 <details><summary> <pre>test_resources.py::test_priority_store_stable_order</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c2d2110>
+env = <simpy.core.Environment object at 0x7fc610db92d0>
 
     def test_priority_store_stable_order(env):
         pstore = simpy.PriorityStore(env, 3)
@@ -3422,8 +3422,8 @@ src/simpy/resources/base.py:199: in _trigger_put
     if not self._do_put(put_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.PriorityStore object at 0x7ff97c2d3af0>
-event = <Event() object at 0x7ff97c2d2560>
+self = <simpy.resources.store.PriorityStore object at 0x7fc610dba680>
+event = <Event() object at 0x7fc610dbb190>
 
     def _do_put(self, event: PutType) ->Optional[bool]:
         """Perform the *put* operation.
@@ -3444,7 +3444,7 @@ src/simpy/resources/base.py:186: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_filter_store">test_resources.py::test_filter_store</h3>
 <details><summary> <pre>test_resources.py::test_filter_store</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97d191540>
+env = <simpy.core.Environment object at 0x7fc60fe8da20>
 
     def test_filter_store(env):
         def pem(env):
@@ -3479,8 +3479,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.FilterStore object at 0x7ff97d1937c0>
-event = <Event() object at 0x7ff97d192620>
+self = <simpy.resources.store.FilterStore object at 0x7fc60fe8de10>
+event = <Event() object at 0x7fc60fe8d810>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3501,7 +3501,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_filter_store_get_after_mismatch">test_resources.py::test_filter_store_get_after_mismatch</h3>
 <details><summary> <pre>test_resources.py::test_filter_store_get_after_mismatch</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf169e0>
+env = <simpy.core.Environment object at 0x7fc60ffab070>
 
     def test_filter_store_get_after_mismatch(env):
         """Regression test for issue #49.
@@ -3555,8 +3555,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.FilterStore object at 0x7ff97bf14100>
-event = <Event() object at 0x7ff97bf14f40>
+self = <simpy.resources.store.FilterStore object at 0x7fc60ffa8b20>
+event = <Event() object at 0x7fc60ffa87c0>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3577,7 +3577,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_filter_calls_best_case">test_resources.py::test_filter_calls_best_case</h3>
 <details><summary> <pre>test_resources.py::test_filter_calls_best_case</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0aa0b0>
+env = <simpy.core.Environment object at 0x7fc60ff2fd60>
 
     def test_filter_calls_best_case(env):
         """The filter function is called every item in the store until a match is
@@ -3619,8 +3619,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.FilterStore object at 0x7ff97c0ab250>
-event = <Event() object at 0x7ff97c0ab0d0>
+self = <simpy.resources.store.FilterStore object at 0x7fc60ff2cb20>
+event = <Event() object at 0x7fc60ff2ff70>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3641,7 +3641,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_filter_calls_worst_case">test_resources.py::test_filter_calls_worst_case</h3>
 <details><summary> <pre>test_resources.py::test_filter_calls_worst_case</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0b4790>
+env = <simpy.core.Environment object at 0x7fc60fe42530>
 
     def test_filter_calls_worst_case(env):
         """In the worst case the filter function is being called for items multiple
@@ -3686,8 +3686,8 @@ src/simpy/resources/base.py:229: in _trigger_get
     if not self._do_get(get_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.store.FilterStore object at 0x7ff97c0b4d60>
-event = <Event() object at 0x7ff97c0b4250>
+self = <simpy.resources.store.FilterStore object at 0x7fc60fe42e90>
+event = <Event() object at 0x7fc60fe43190>
 
     def _do_get(self, event: GetType) ->Optional[bool]:
         """Perform the *get* operation.
@@ -3708,7 +3708,7 @@ src/simpy/resources/base.py:214: NotImplementedError
 </details>
 <h3 id="test_resourcespytest_immediate_put_request">test_resources.py::test_immediate_put_request</h3>
 <details><summary> <pre>test_resources.py::test_immediate_put_request</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cb1d120>
+env = <simpy.core.Environment object at 0x7fc60ff2ebc0>
 
     def test_immediate_put_request(env):
         """Put requests that can be fulfilled immediately do not enter the put
@@ -3724,15 +3724,15 @@ env = <simpy.core.Environment object at 0x7ff97cb1d120>
         assert len(resource.users) == 1
 >       assert len(resource.queue) == 0
 E       assert 1 == 0
-E        +  where 1 = len([<Event() object at 0x7ff97cb1e4a0>])
-E        +    where [<Event() object at 0x7ff97cb1e4a0>] = <simpy.resources.resource.Resource object at 0x7ff97cb1dff0>.queue
+E        +  where 1 = len([<Event() object at 0x7fc60ff2f100>])
+E        +    where [<Event() object at 0x7fc60ff2f100>] = <simpy.resources.resource.Resource object at 0x7fc60ff2fb20>.queue
 
 tests/test_resources.py:736: AssertionError
 </pre>
 </details>
 <h3 id="test_resourcespytest_immediate_get_request">test_resources.py::test_immediate_get_request</h3>
 <details><summary> <pre>test_resources.py::test_immediate_get_request</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf65120>
+env = <simpy.core.Environment object at 0x7fc610e9ef20>
 
     def test_immediate_get_request(env):
         """Get requests that can be fulfilled immediately do not enter the get
@@ -3752,8 +3752,8 @@ src/simpy/resources/base.py:199: in _trigger_put
     if not self._do_put(put_event):
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.resources.container.Container object at 0x7ff97bf644f0>
-event = <Event() object at 0x7ff97bf65510>
+self = <simpy.resources.container.Container object at 0x7fc610e9c100>
+event = <Event() object at 0x7fc610e9ef80>
 
     def _do_put(self, event: PutType) ->Optional[bool]:
         """Perform the *put* operation.
@@ -3792,7 +3792,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97cec1f60>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc60ff2f100>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -3830,7 +3830,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97c503f70>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc60fdc6200>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -3868,7 +3868,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97bf55030>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc60fec43d0>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -3906,7 +3906,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97d192980>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc60fe57b50>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -3942,7 +3942,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97c502140>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc610e697e0>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -3978,7 +3978,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97bff2d40>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc610e9ef80>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -4014,7 +4014,7 @@ src/simpy/core.py:290: in run
     self.step()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <simpy.rt.RealtimeEnvironment object at 0x7ff97d258fa0>
+self = <simpy.rt.RealtimeEnvironment object at 0x7fc60fec5c90>
 
     def step(self) ->None:
         """Process the next event after enough real-time has passed for the
@@ -4034,7 +4034,7 @@ src/simpy/rt.py:64: ValueError
 </details>
 <h3 id="test_timeoutpytest_discrete_time_steps">test_timeout.py::test_discrete_time_steps</h3>
 <details><summary> <pre>test_timeout.py::test_discrete_time_steps</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cb1c970>
+env = <simpy.core.Environment object at 0x7fc60fdc5bd0>
 log = [0, 1, 1, 2, 2, 2, ...]
 
     def test_discrete_time_steps(env, log):
@@ -4060,7 +4060,7 @@ tests/test_timeout.py:20: AssertionError
 </details>
 <h3 id="test_utilpytest_subscribe_at_timeout">test_util.py::test_subscribe_at_timeout</h3>
 <details><summary> <pre>test_util.py::test_subscribe_at_timeout</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c062ec0>
+env = <simpy.core.Environment object at 0x7fc60fe57eb0>
 
     def test_subscribe_at_timeout(env):
         """You should be able to subscribe at arbitrary events."""
@@ -4091,7 +4091,7 @@ tests/test_util.py:99: in pem
     subscribe_at(to)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-event = <Timeout(2) object at 0x7ff97c062a10>
+event = <Timeout(2) object at 0x7fc60fe55750>
 
     def subscribe_at(event: Event) ->None:
         """Register at the *event* to receive an interrupt when it occurs.
@@ -4119,7 +4119,7 @@ src/simpy/util.py:64: RuntimeError
 </details>
 <h3 id="test_utilpytest_subscribe_at_timeout_with_value">test_util.py::test_subscribe_at_timeout_with_value</h3>
 <details><summary> <pre>test_util.py::test_subscribe_at_timeout_with_value</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf17e80>
+env = <simpy.core.Environment object at 0x7fc61092a1d0>
 
     def test_subscribe_at_timeout_with_value(env):
         """An event's value should be accessible via the interrupt cause."""
@@ -4151,7 +4151,7 @@ tests/test_util.py:116: in pem
     subscribe_at(to)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-event = <Timeout(2, value=ohai) object at 0x7ff97bf16470>
+event = <Timeout(2, value=ohai) object at 0x7fc610928d00>
 
     def subscribe_at(event: Event) ->None:
         """Register at the *event* to receive an interrupt when it occurs.
@@ -4179,7 +4179,7 @@ src/simpy/util.py:64: RuntimeError
 </details>
 <h3 id="test_utilpytest_wait_for_all_with_errors">test_util.py::test_wait_for_all_with_errors</h3>
 <details><summary> <pre>test_util.py::test_wait_for_all_with_errors</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c0760b0>
+env = <simpy.core.Environment object at 0x7fc60fdc5d50>
 
     def test_wait_for_all_with_errors(env):
         """On default AllOf should fail immediately if one of its events
@@ -4221,7 +4221,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c0760b0>, value = 2
+env = <simpy.core.Environment object at 0x7fc60fdc5d50>, value = 2
 
     def child_with_error(env, value):
         yield env.timeout(value)
@@ -4233,7 +4233,7 @@ tests/test_util.py:163: RuntimeError
 </details>
 <h3 id="test_utilpytest_all_of_chaining_intermediate_results">test_util.py::test_all_of_chaining_intermediate_results</h3>
 <details><summary> <pre>test_util.py::test_all_of_chaining_intermediate_results</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf1b070>
+env = <simpy.core.Environment object at 0x7fc610b8f940>
 
     def test_all_of_chaining_intermediate_results(env):
         """If a wait_for_all condition A with intermediate results is merged into
@@ -4269,7 +4269,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97bf1b070>
+env = <simpy.core.Environment object at 0x7fc610b8f940>
 
     def parent(env):
         condition_a = env.all_of([env.timeout(i, value=i) for i in range(2)])
@@ -4281,9 +4281,9 @@ env = <simpy.core.Environment object at 0x7ff97bf1b070>
         result = ConditionValue()
         condition._populate_value(result)
 >       assert list(result.values()) == [0, 0]
-E       assert [<ConditionVa...bf1a830>: 1}>] == [0, 0]
+E       assert [<ConditionVa...0b8cbe0>: 1}>] == [0, 0]
 E         
-E         At index 0 diff: <ConditionValue {<Timeout(0, value=0) object at 0x7ff97bf19d50>: 0, <Timeout(1, value=1) object at 0x7ff97bf1b100>: 1}> != 0
+E         At index 0 diff: <ConditionValue {<Timeout(0, value=0) object at 0x7fc610b8c310>: 0, <Timeout(1, value=1) object at 0x7fc610b8cf10>: 1}> != 0
 E         Use -v to get more diff
 
 tests/test_util.py:217: AssertionError
@@ -4291,7 +4291,7 @@ tests/test_util.py:217: AssertionError
 </details>
 <h3 id="test_utilpytest_all_of_with_triggered_events">test_util.py::test_all_of_with_triggered_events</h3>
 <details><summary> <pre>test_util.py::test_all_of_with_triggered_events</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97c074c70>
+env = <simpy.core.Environment object at 0x7fc60fdc6e60>
 
     def test_all_of_with_triggered_events(env):
         """Processed events can be added to a condition. Confirm this with
@@ -4319,7 +4319,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97c074c70>
+env = <simpy.core.Environment object at 0x7fc60fdc6e60>
 
     def parent(env):
         events = [env.timeout(0, value='spam'), env.timeout(1, value='eggs')]
@@ -4333,7 +4333,7 @@ tests/test_util.py:234: AttributeError
 </details>
 <h3 id="test_utilpytest_any_of_with_errors">test_util.py::test_any_of_with_errors</h3>
 <details><summary> <pre>test_util.py::test_any_of_with_errors</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97bf19e10>
+env = <simpy.core.Environment object at 0x7fc60ff605b0>
 
     def test_any_of_with_errors(env):
         """On default any_of should fail if the event has failed too."""
@@ -4367,7 +4367,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97bf19e10>, value = 1
+env = <simpy.core.Environment object at 0x7fc60ff605b0>, value = 1
 
     def child_with_error(env, value):
         yield env.timeout(value)
@@ -4379,7 +4379,7 @@ tests/test_util.py:261: RuntimeError
 </details>
 <h3 id="test_utilpytest_any_of_with_triggered_events">test_util.py::test_any_of_with_triggered_events</h3>
 <details><summary> <pre>test_util.py::test_any_of_with_triggered_events</pre></summary><pre>
-env = <simpy.core.Environment object at 0x7ff97cef9c60>
+env = <simpy.core.Environment object at 0x7fc60fe49e10>
 
     def test_any_of_with_triggered_events(env):
         """Processed events can be added to a condition. Confirm this with
@@ -4407,7 +4407,7 @@ src/simpy/events.py:346: in _resume
     next_event = self._generator.send(event._value)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-env = <simpy.core.Environment object at 0x7ff97cef9c60>
+env = <simpy.core.Environment object at 0x7fc60fe49e10>
 
     def parent(env):
         events = [env.timeout(0, value='spam'), env.timeout(1, value='eggs')]
