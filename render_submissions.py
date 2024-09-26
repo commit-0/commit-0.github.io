@@ -195,12 +195,11 @@ def render_mds(subfolder="docs"):
 | Repository | Resolved | Pass Rate | Test Duration (s) | Analysis | Github Link |
 |------------|---------|:-----:|:-----:|-----|-----|"""
 
-            repo_name = os.path.basename(branch_path[: -len(".json")])
-            submission_repo_page = (
-                f"# **{display_name}**: {repo_name}"
-            )
             for repo_name, repo_pytest_results in branch_metrics.items():
                 if repo_name == "submission_info": continue
+                submission_repo_page = (
+                    f"# **{display_name}**: {repo_name}"
+                )
                 for pytest_group, pytest_info in repo_pytest_results.items():
                     pytest_group = os.path.basename(pytest_group.strip("/"))
                     patch_diff = (
@@ -436,6 +435,7 @@ def main(args):
                 submission_details[repo_name] = pytest_results
             json.dump(submission_details, open(submission_metrics_output_file, "w"), indent=4)
             print(f"Saved pytest info to {submission_metrics_output_file}")
+            break
 
     if not args.keep_previous_eval:
         for analysis_file in glob.glob("docs/analysis*.md"):
