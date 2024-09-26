@@ -1,0 +1,1235 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 lite with test fillin marshmallow - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-unit-test-feedback-marshmallow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 lite with test fillin marshmallow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-lite-with-test_fillin">back to Claude Sonnet 3.5 - Fill-in + Unit Test Feedback summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-unit-test-feedback-marshmallow"><strong>Claude Sonnet 3.5 - Fill-in + Unit Test Feedback</strong>: marshmallow</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:5: in &lt;module&gt;
+    from tests.base import Blog, User, UserSchema
+tests/base.py:11: in &lt;module&gt;
+    from marshmallow import Schema, fields, missing, post_load, validate
+src/marshmallow/__init__.py:17: in &lt;module&gt;
+    from marshmallow.schema import Schema, SchemaOpts
+src/marshmallow/schema.py:20: in &lt;module&gt;
+    from marshmallow.utils import EXCLUDE, INCLUDE, RAISE, get_value, is_collection, is_instance_or_subclass, missing, set_value, validate_unknown_parameter_value
+E   ImportError: cannot import name &#39;validate_unknown_parameter_value&#39; from &#39;marshmallow.utils&#39; (/testbed/src/marshmallow/utils.py)
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/marshmallow/decorators.py b/src/marshmallow/decorators.py</span>
+<span class="gh">index d78f5be..885181e 100644</span>
+<span class="gd">--- a/src/marshmallow/decorators.py</span>
+<span class="gi">+++ b/src/marshmallow/decorators.py</span>
+<span class="gu">@@ -84,7 +84,13 @@ def validates(field_name: str) -&gt;Callable[..., Any]:</span>
+
+<span class="w"> </span>    :param str field_name: Name of the field that the method validates.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def decorator(fn):</span>
+<span class="gi">+        @functools.wraps(fn)</span>
+<span class="gi">+        def wrapper(self, value, **kwargs):</span>
+<span class="gi">+            return fn(self, value, **kwargs)</span>
+<span class="gi">+        wrapper.__marshmallow_hook__ = {VALIDATES: field_name}</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+    return decorator</span>
+
+
+<span class="w"> </span>def validates_schema(fn: (Callable[..., Any] | None)=None, pass_many: bool=
+<span class="gu">@@ -109,7 +115,25 @@ def validates_schema(fn: (Callable[..., Any] | None)=None, pass_many: bool=</span>
+<span class="w"> </span>        ``partial`` and ``many`` are always passed as keyword arguments to
+<span class="w"> </span>        the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(</span>
+<span class="gi">+            validates_schema,</span>
+<span class="gi">+            pass_many=pass_many,</span>
+<span class="gi">+            pass_original=pass_original,</span>
+<span class="gi">+            skip_on_field_errors=skip_on_field_errors,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        return fn(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {</span>
+<span class="gi">+        (VALIDATES_SCHEMA, pass_many): {</span>
+<span class="gi">+            &#39;pass_original&#39;: pass_original,</span>
+<span class="gi">+            &#39;skip_on_field_errors&#39;: skip_on_field_errors,</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>def pre_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False
+<span class="gu">@@ -124,7 +148,15 @@ def pre_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False</span>
+<span class="w"> </span>    .. versionchanged:: 3.0.0
+<span class="w"> </span>        ``many`` is always passed as a keyword arguments to the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(pre_dump, pass_many=pass_many)</span>
+<span class="gi">+</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        return fn(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {(PRE_DUMP, pass_many): {}}</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>def post_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,
+<span class="gu">@@ -142,7 +174,15 @@ def post_dump(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,</span>
+<span class="w"> </span>    .. versionchanged:: 3.0.0
+<span class="w"> </span>        ``many`` is always passed as a keyword arguments to the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(post_dump, pass_many=pass_many, pass_original=pass_original)</span>
+<span class="gi">+</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        return fn(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {(POST_DUMP, pass_many): {&#39;pass_original&#39;: pass_original}}</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>def pre_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False
+<span class="gu">@@ -158,7 +198,15 @@ def pre_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False</span>
+<span class="w"> </span>        ``partial`` and ``many`` are always passed as keyword arguments to
+<span class="w"> </span>        the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(pre_load, pass_many=pass_many)</span>
+<span class="gi">+</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        return fn(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {(PRE_LOAD, pass_many): {}}</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>def post_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,
+<span class="gu">@@ -177,7 +225,15 @@ def post_load(fn: (Callable[..., Any] | None)=None, pass_many: bool=False,</span>
+<span class="w"> </span>        ``partial`` and ``many`` are always passed as keyword arguments to
+<span class="w"> </span>        the decorated method.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(post_load, pass_many=pass_many, pass_original=pass_original)</span>
+<span class="gi">+</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        return fn(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {(POST_LOAD, pass_many): {&#39;pass_original&#39;: pass_original}}</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>def set_hook(fn: (Callable[..., Any] | None), key: (tuple[str, bool] | str),
+<span class="gu">@@ -192,4 +248,12 @@ def set_hook(fn: (Callable[..., Any] | None), key: (tuple[str, bool] | str),</span>
+<span class="w"> </span>    :return: Decorated function if supplied, else this decorator with its args
+<span class="w"> </span>        bound.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if fn is None:</span>
+<span class="gi">+        return functools.partial(set_hook, key=key, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    @functools.wraps(fn)</span>
+<span class="gi">+    def wrapper(*args, **kw):</span>
+<span class="gi">+        return fn(*args, **kw)</span>
+<span class="gi">+</span>
+<span class="gi">+    wrapper.__marshmallow_hook__ = {key: kwargs}</span>
+<span class="gi">+    return wrapper</span>
+<span class="gh">diff --git a/src/marshmallow/error_store.py b/src/marshmallow/error_store.py</span>
+<span class="gh">index a659aaf..25acd66 100644</span>
+<span class="gd">--- a/src/marshmallow/error_store.py</span>
+<span class="gi">+++ b/src/marshmallow/error_store.py</span>
+<span class="gu">@@ -13,6 +13,16 @@ class ErrorStore:</span>
+<span class="w"> </span>    def __init__(self):
+<span class="w"> </span>        self.errors = {}
+
+<span class="gi">+    def store_error(self, field_name, error):</span>
+<span class="gi">+        &quot;&quot;&quot;Store an error message.&quot;&quot;&quot;</span>
+<span class="gi">+        if field_name not in self.errors:</span>
+<span class="gi">+            self.errors[field_name] = []</span>
+<span class="gi">+        self.errors[field_name].append(error)</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_errors(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Return all stored errors.&quot;&quot;&quot;</span>
+<span class="gi">+        return self.errors</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>def merge_errors(errors1, errors2):
+<span class="w"> </span>    &quot;&quot;&quot;Deeply merge two error messages.
+<span class="gu">@@ -20,4 +30,17 @@ def merge_errors(errors1, errors2):</span>
+<span class="w"> </span>    The format of ``errors1`` and ``errors2`` matches the ``message``
+<span class="w"> </span>    parameter of :exc:`marshmallow.exceptions.ValidationError`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(errors1, dict) and isinstance(errors2, dict):</span>
+<span class="gi">+        merged = errors1.copy()</span>
+<span class="gi">+        for key, value in errors2.items():</span>
+<span class="gi">+            if key in merged:</span>
+<span class="gi">+                merged[key] = merge_errors(merged[key], value)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                merged[key] = value</span>
+<span class="gi">+        return merged</span>
+<span class="gi">+    elif isinstance(errors1, list) and isinstance(errors2, list):</span>
+<span class="gi">+        return errors1 + errors2</span>
+<span class="gi">+    elif isinstance(errors1, (str, int, float)) and isinstance(errors2, (str, int, float)):</span>
+<span class="gi">+        return [errors1, errors2]</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return errors2</span>
+<span class="gh">diff --git a/src/marshmallow/fields.py b/src/marshmallow/fields.py</span>
+<span class="gh">index 8656a56..3f34e91 100644</span>
+<span class="gd">--- a/src/marshmallow/fields.py</span>
+<span class="gi">+++ b/src/marshmallow/fields.py</span>
+<span class="gu">@@ -15,10 +15,81 @@ from enum import Enum as EnumType</span>
+<span class="w"> </span>from marshmallow import class_registry, types, utils, validate
+<span class="w"> </span>from marshmallow.base import FieldABC, SchemaABC
+<span class="w"> </span>from marshmallow.exceptions import FieldInstanceResolutionError, StringNotCollectionError, ValidationError
+<span class="gd">-from marshmallow.utils import is_aware, is_collection, resolve_field_instance</span>
+<span class="gi">+from marshmallow.utils import is_collection, resolve_field_instance, missing</span>
+<span class="gi">+import datetime as dt</span>
+<span class="w"> </span>from marshmallow.utils import missing as missing_
+<span class="w"> </span>from marshmallow.validate import And, Length
+<span class="gi">+import datetime as dt</span>
+<span class="gi">+</span>
+<span class="gi">+def is_aware(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Determine if a given datetime.datetime is aware.&quot;&quot;&quot;</span>
+<span class="gi">+    return value.tzinfo is not None and value.tzinfo.utcoffset(value) is not None</span>
+<span class="gi">+</span>
+<span class="gi">+def timestamp(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a datetime to a POSIX timestamp (seconds since epoch).&quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(value, dt.datetime):</span>
+<span class="gi">+        if is_aware(value):</span>
+<span class="gi">+            return value.timestamp()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return (value - dt.datetime(1970, 1, 1)).total_seconds()</span>
+<span class="gi">+    return value</span>
+<span class="gi">+</span>
+<span class="gi">+def timestamp_ms(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a datetime to a POSIX timestamp in milliseconds.&quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(value, dt.datetime):</span>
+<span class="gi">+        return int(timestamp(value) * 1000)</span>
+<span class="gi">+    return value</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp_ms(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp in milliseconds to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value / 1000, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_rfc(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Return a datetime object from an RFC822-formatted string.&quot;&quot;&quot;</span>
+<span class="gi">+    return email.utils.parsedate_to_datetime(value)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp_ms(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp in milliseconds to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value / 1000, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp_ms(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp in milliseconds to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value / 1000, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="w"> </span>from marshmallow.warnings import RemovedInMarshmallow4Warning
+<span class="gi">+import datetime as dt</span>
+<span class="gi">+</span>
+<span class="gi">+def is_aware(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Determine if a given datetime.datetime is aware.&quot;&quot;&quot;</span>
+<span class="gi">+    return value.tzinfo is not None and value.tzinfo.utcoffset(value) is not None</span>
+<span class="gi">+</span>
+<span class="gi">+def is_collection(obj):</span>
+<span class="gi">+    return False  # Placeholder implementation</span>
+<span class="gi">+</span>
+<span class="gi">+def resolve_field_instance(obj):</span>
+<span class="gi">+    return None  # Placeholder implementation</span>
+<span class="gi">+</span>
+<span class="gi">+missing = object()</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = [&#39;is_aware&#39;, &#39;is_collection&#39;, &#39;resolve_field_instance&#39;, &#39;missing&#39;]</span>
+<span class="gi">+</span>
+<span class="gi">+# ... (keep all existing content)</span>
+<span class="w"> </span>__all__ = [&#39;Field&#39;, &#39;Raw&#39;, &#39;Nested&#39;, &#39;Mapping&#39;, &#39;Dict&#39;, &#39;List&#39;, &#39;Tuple&#39;,
+<span class="w"> </span>    &#39;String&#39;, &#39;UUID&#39;, &#39;Number&#39;, &#39;Integer&#39;, &#39;Decimal&#39;, &#39;Boolean&#39;, &#39;Float&#39;,
+<span class="w"> </span>    &#39;DateTime&#39;, &#39;NaiveDateTime&#39;, &#39;AwareDateTime&#39;, &#39;Time&#39;, &#39;Date&#39;,
+<span class="gu">@@ -166,19 +237,37 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :param callable accessor: A callable used to retrieve the value of `attr` from
+<span class="w"> </span>            the object `obj`. Defaults to `marshmallow.utils.get_value`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if accessor is None:</span>
+<span class="gi">+            accessor = utils.get_value</span>
+<span class="gi">+        return accessor(obj, attr, default)</span>
+
+<span class="w"> </span>    def _validate(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;Perform validation on ``value``. Raise a :exc:`ValidationError` if validation
+<span class="w"> </span>        does not succeed.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        errors = []</span>
+<span class="gi">+        for validator in self.validators:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if validator(value) is False:</span>
+<span class="gi">+                    self.fail(&#39;validator_failed&#39;)</span>
+<span class="gi">+            except ValidationError as error:</span>
+<span class="gi">+                errors.extend(error.messages)</span>
+<span class="gi">+        if errors:</span>
+<span class="gi">+            raise ValidationError(errors)</span>
+
+<span class="w"> </span>    def make_error(self, key: str, **kwargs) -&gt;ValidationError:
+<span class="w"> </span>        &quot;&quot;&quot;Helper method to make a `ValidationError` with an error message
+<span class="w"> </span>        from ``self.error_messages``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            msg = self.error_messages[key]</span>
+<span class="gi">+        except KeyError as error:</span>
+<span class="gi">+            class_name = self.__class__.__name__</span>
+<span class="gi">+            msg = f&#39;&quot;{key}&quot; is not a valid error key for {class_name}&#39;</span>
+<span class="gi">+            raise ValueError(msg) from error</span>
+<span class="gi">+        if isinstance(msg, str):</span>
+<span class="gi">+            msg = msg.format(**kwargs)</span>
+<span class="gi">+        return ValidationError(msg)</span>
+
+<span class="w"> </span>    def fail(self, key: str, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Helper method that raises a `ValidationError` with an error message
+<span class="gu">@@ -187,13 +276,23 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        .. deprecated:: 3.0.0
+<span class="w"> </span>            Use `make_error &lt;marshmallow.fields.Field.make_error&gt;` instead.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        warnings.warn(</span>
+<span class="gi">+            &quot;Field.fail is deprecated. Use Field.make_error instead.&quot;,</span>
+<span class="gi">+            DeprecationWarning,</span>
+<span class="gi">+            stacklevel=2</span>
+<span class="gi">+        )</span>
+<span class="gi">+        raise self.make_error(key, **kwargs)</span>
+
+<span class="w"> </span>    def _validate_missing(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;Validate missing values. Raise a :exc:`ValidationError` if
+<span class="w"> </span>        `value` should be considered missing.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if value is missing_:</span>
+<span class="gi">+            if self.required:</span>
+<span class="gi">+                raise self.make_error(&#39;required&#39;)</span>
+<span class="gi">+        elif value is None:</span>
+<span class="gi">+            if self.allow_none is False:</span>
+<span class="gi">+                raise self.make_error(&#39;null&#39;)</span>
+
+<span class="w"> </span>    def serialize(self, attr: str, obj: typing.Any, accessor: (typing.
+<span class="w"> </span>        Callable[[typing.Any, str, typing.Any], typing.Any] | None)=None,
+<span class="gu">@@ -206,7 +305,14 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :param accessor: Function used to access values from ``obj``.
+<span class="w"> </span>        :param kwargs: Field-specific keyword arguments.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.dump_only:</span>
+<span class="gi">+            return self.dump_default</span>
+<span class="gi">+</span>
+<span class="gi">+        value = self.get_value(obj, attr, accessor=accessor)</span>
+<span class="gi">+        if value is missing_:</span>
+<span class="gi">+            return self.dump_default</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._serialize(value, attr, obj, **kwargs)</span>
+
+<span class="w"> </span>    def deserialize(self, value: typing.Any, attr: (str | None)=None, data:
+<span class="w"> </span>        (typing.Mapping[str, typing.Any] | None)=None, **kwargs):
+<span class="gu">@@ -219,7 +325,17 @@ class Field(FieldABC):</span>
+<span class="w"> </span>        :raise ValidationError: If an invalid value is passed or if a required value
+<span class="w"> </span>            is missing.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.load_only:</span>
+<span class="gi">+            return self.load_default</span>
+<span class="gi">+</span>
+<span class="gi">+        self._validate_missing(value)</span>
+<span class="gi">+        if value is missing_:</span>
+<span class="gi">+            return self.load_default</span>
+<span class="gi">+</span>
+<span class="gi">+        value = self._deserialize(value, attr, data, **kwargs)</span>
+<span class="gi">+        self._validate(value)</span>
+<span class="gi">+</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def _bind_to_schema(self, field_name, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Update field with values from its parent schema. Called by
+<span class="gu">@@ -644,11 +760,13 @@ class DateTime(Field):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    SERIALIZATION_FUNCS = {&#39;iso&#39;: utils.isoformat, &#39;iso8601&#39;: utils.
+<span class="w"> </span>        isoformat, &#39;rfc&#39;: utils.rfcformat, &#39;rfc822&#39;: utils.rfcformat,
+<span class="gd">-        &#39;timestamp&#39;: utils.timestamp, &#39;timestamp_ms&#39;: utils.timestamp_ms}</span>
+<span class="gi">+        &#39;timestamp&#39;: timestamp, &#39;timestamp_ms&#39;: timestamp_ms}</span>
+<span class="w"> </span>    DESERIALIZATION_FUNCS = {&#39;iso&#39;: utils.from_iso_datetime, &#39;iso8601&#39;:
+<span class="w"> </span>        utils.from_iso_datetime, &#39;rfc&#39;: utils.from_rfc, &#39;rfc822&#39;: utils.
+<span class="w"> </span>        from_rfc, &#39;timestamp&#39;: utils.from_timestamp, &#39;timestamp_ms&#39;: utils.
+<span class="w"> </span>        from_timestamp_ms}
+<span class="gi">+    SERIALIZATION_FUNCS = {&#39;iso&#39;: utils.isoformat, &#39;iso8601&#39;: utils.isoformat}</span>
+<span class="gi">+    DESERIALIZATION_FUNCS = {&#39;iso&#39;: utils.from_iso_datetime, &#39;iso8601&#39;: utils.from_iso_datetime}</span>
+<span class="w"> </span>    DEFAULT_FORMAT = &#39;iso&#39;
+<span class="w"> </span>    OBJ_TYPE = &#39;datetime&#39;
+<span class="w"> </span>    SCHEMA_OPTS_VAR_NAME = &#39;datetimeformat&#39;
+<span class="gu">@@ -709,10 +827,8 @@ class Time(DateTime):</span>
+<span class="w"> </span>        If `None`, defaults to &quot;iso&quot;.
+<span class="w"> </span>    :param kwargs: The same keyword arguments that :class:`Field` receives.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    SERIALIZATION_FUNCS = {&#39;iso&#39;: utils.to_iso_time, &#39;iso8601&#39;: utils.</span>
+<span class="gd">-        to_iso_time}</span>
+<span class="gd">-    DESERIALIZATION_FUNCS = {&#39;iso&#39;: utils.from_iso_time, &#39;iso8601&#39;: utils.</span>
+<span class="gd">-        from_iso_time}</span>
+<span class="gi">+    SERIALIZATION_FUNCS = {&#39;iso&#39;: lambda x: x.isoformat(), &#39;iso8601&#39;: lambda x: x.isoformat()}</span>
+<span class="gi">+    DESERIALIZATION_FUNCS = {&#39;iso&#39;: utils.from_iso_time, &#39;iso8601&#39;: utils.from_iso_time}</span>
+<span class="w"> </span>    DEFAULT_FORMAT = &#39;iso&#39;
+<span class="w"> </span>    OBJ_TYPE = &#39;time&#39;
+<span class="w"> </span>    SCHEMA_OPTS_VAR_NAME = &#39;timeformat&#39;
+<span class="gu">@@ -727,8 +843,7 @@ class Date(DateTime):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    default_error_messages = {&#39;invalid&#39;: &#39;Not a valid date.&#39;, &#39;format&#39;:
+<span class="w"> </span>        &#39;&quot;{input}&quot; cannot be formatted as a date.&#39;}
+<span class="gd">-    SERIALIZATION_FUNCS = {&#39;iso&#39;: utils.to_iso_date, &#39;iso8601&#39;: utils.</span>
+<span class="gd">-        to_iso_date}</span>
+<span class="gi">+    SERIALIZATION_FUNCS = {&#39;iso&#39;: lambda x: x.isoformat(), &#39;iso8601&#39;: lambda x: x.isoformat()}</span>
+<span class="w"> </span>    DESERIALIZATION_FUNCS = {&#39;iso&#39;: utils.from_iso_date, &#39;iso8601&#39;: utils.
+<span class="w"> </span>        from_iso_date}
+<span class="w"> </span>    DEFAULT_FORMAT = &#39;iso&#39;
+<span class="gh">diff --git a/src/marshmallow/schema.py b/src/marshmallow/schema.py</span>
+<span class="gh">index 1e6eabf..7851fa0 100644</span>
+<span class="gd">--- a/src/marshmallow/schema.py</span>
+<span class="gi">+++ b/src/marshmallow/schema.py</span>
+<span class="gu">@@ -27,7 +27,12 @@ def _get_fields(attrs):</span>
+
+<span class="w"> </span>    :param attrs: Mapping of class attributes
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    fields = [</span>
+<span class="gi">+        (field_name, field_obj)</span>
+<span class="gi">+        for field_name, field_obj in attrs.items()</span>
+<span class="gi">+        if isinstance(field_obj, ma_fields.Field)</span>
+<span class="gi">+    ]</span>
+<span class="gi">+    return fields</span>
+
+
+<span class="w"> </span>def _get_fields_by_mro(klass):
+<span class="gu">@@ -37,7 +42,13 @@ def _get_fields_by_mro(klass):</span>
+
+<span class="w"> </span>    :param type klass: Class whose fields to retrieve
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    fields = []</span>
+<span class="gi">+    for base_class in klass.__mro__[1:]:  # skip the class itself</span>
+<span class="gi">+        if hasattr(base_class, &#39;_declared_fields&#39;):</span>
+<span class="gi">+            fields += list(base_class._declared_fields.items())</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            fields += _get_fields(base_class.__dict__)</span>
+<span class="gi">+    return fields</span>
+
+
+<span class="w"> </span>class SchemaMeta(ABCMeta):
+<span class="gu">@@ -83,7 +94,16 @@ class SchemaMeta(ABCMeta):</span>
+<span class="w"> </span>        :param inherited_fields: Inherited fields.
+<span class="w"> </span>        :param dict_cls: dict-like class to use for dict output Default to ``dict``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        declared_fields = dict_cls()</span>
+<span class="gi">+        for field_name, field_obj in inherited_fields + cls_fields:</span>
+<span class="gi">+            if field_name in klass.opts.exclude:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if field_name in declared_fields:</span>
+<span class="gi">+                prev_obj = declared_fields[field_name]</span>
+<span class="gi">+                if hasattr(prev_obj, &#39;resolve_field_instance&#39;):</span>
+<span class="gi">+                    field_obj = prev_obj.resolve_field_instance(field_obj)</span>
+<span class="gi">+            declared_fields[field_name] = field_obj</span>
+<span class="gi">+        return declared_fields</span>
+
+<span class="w"> </span>    def __init__(cls, name, bases, attrs):
+<span class="w"> </span>        super().__init__(name, bases, attrs)
+<span class="gu">@@ -97,7 +117,13 @@ class SchemaMeta(ABCMeta):</span>
+<span class="w"> </span>        By doing this after constructing the class, we let standard inheritance
+<span class="w"> </span>        do all the hard work.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        hooks = defaultdict(list)</span>
+<span class="gi">+        for attr_name in dir(cls):</span>
+<span class="gi">+            attr = getattr(cls, attr_name)</span>
+<span class="gi">+            if hasattr(attr, &#39;__marshmallow_hook__&#39;):</span>
+<span class="gi">+                hook = getattr(attr, &#39;__marshmallow_hook__&#39;)</span>
+<span class="gi">+                hooks[hook.tag].append(attr_name)</span>
+<span class="gi">+        return dict(hooks)</span>
+
+
+<span class="w"> </span>class SchemaOpts:
+<span class="gu">@@ -311,7 +337,10 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+
+<span class="w"> </span>        .. versionadded:: 3.0.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        attrs = fields.copy()</span>
+<span class="gi">+        attrs[&#39;Meta&#39;] = type(&#39;Meta&#39;, (), {&#39;register&#39;: False})</span>
+<span class="gi">+        schema_cls = type(name, (cls,), attrs)</span>
+<span class="gi">+        return schema_cls</span>
+
+<span class="w"> </span>    def handle_error(self, error: ValidationError, data: typing.Any, *,
+<span class="w"> </span>        many: bool, **kwargs):
+<span class="gu">@@ -327,7 +356,7 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+<span class="w"> </span>        .. versionchanged:: 3.0.0rc9
+<span class="w"> </span>            Receives `many` and `partial` (on deserialization) as keyword arguments.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        pass  # Default implementation does nothing</span>
+
+<span class="w"> </span>    def get_attribute(self, obj: typing.Any, attr: str, default: typing.Any):
+<span class="w"> </span>        &quot;&quot;&quot;Defines how to pull values from an object to serialize.
+<span class="gu">@@ -337,7 +366,7 @@ class Schema(base.SchemaABC, metaclass=SchemaMeta):</span>
+<span class="w"> </span>        .. versionchanged:: 3.0.0a1
+<span class="w"> </span>            Changed position of ``obj`` and ``attr``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return get_value(obj, attr, default)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _call_and_store(getter_func, data, *, field_name, error_store,
+<span class="gh">diff --git a/src/marshmallow/utils.py b/src/marshmallow/utils.py</span>
+<span class="gh">index 1c71b57..013b94f 100644</span>
+<span class="gd">--- a/src/marshmallow/utils.py</span>
+<span class="gi">+++ b/src/marshmallow/utils.py</span>
+<span class="gu">@@ -40,29 +40,34 @@ missing = _Missing()</span>
+
+<span class="w"> </span>def is_generator(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` is a generator&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return inspect.isgenerator(obj)</span>
+
+
+<span class="w"> </span>def is_iterable_but_not_string(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` is an iterable object that isn&#39;t a string.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        isinstance(obj, collections.abc.Iterable) and not isinstance(obj, (str, bytes))</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def is_collection(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` is a collection type, e.g list, tuple, queryset.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return is_iterable_but_not_string(obj) and not isinstance(obj, Mapping)</span>
+
+
+<span class="w"> </span>def is_instance_or_subclass(val, class_) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``val`` is either a subclass or instance of ``class_``.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return issubclass(val, class_)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        return isinstance(val, class_)</span>
+
+
+<span class="w"> </span>def is_keyed_tuple(obj) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return True if ``obj`` has keyed tuple behavior, such as
+<span class="w"> </span>    namedtuples or SQLAlchemy&#39;s KeyedTuples.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(obj, tuple) and hasattr(obj, &#39;_fields&#39;)</span>
+
+
+<span class="w"> </span>def pprint(obj, *args, **kwargs) -&gt;None:
+<span class="gu">@@ -73,7 +78,15 @@ def pprint(obj, *args, **kwargs) -&gt;None:</span>
+<span class="w"> </span>    .. deprecated:: 3.7.0
+<span class="w"> </span>        marshmallow.pprint will be removed in marshmallow 4.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    warnings.warn(</span>
+<span class="gi">+        &quot;marshmallow.pprint is deprecated and will be removed in marshmallow 4.&quot;,</span>
+<span class="gi">+        RemovedInMarshmallow4Warning,</span>
+<span class="gi">+        stacklevel=2,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    if isinstance(obj, collections.OrderedDict):</span>
+<span class="gi">+        print(json.dumps(obj, indent=2))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        py_pprint(obj, *args, **kwargs)</span>
+
+
+<span class="w"> </span>def from_rfc(datestring: str) -&gt;dt.datetime:
+<span class="gu">@@ -81,7 +94,7 @@ def from_rfc(datestring: str) -&gt;dt.datetime:</span>
+
+<span class="w"> </span>    https://stackoverflow.com/questions/885015/how-to-parse-a-rfc-2822-date-time-into-a-python-datetime  # noqa: B950
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return parsedate_to_datetime(datestring)</span>
+
+
+<span class="w"> </span>def rfcformat(datetime: dt.datetime) -&gt;str:
+<span class="gu">@@ -89,7 +102,7 @@ def rfcformat(datetime: dt.datetime) -&gt;str:</span>
+
+<span class="w"> </span>    :param datetime datetime: The datetime.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return format_datetime(datetime)</span>
+
+
+<span class="w"> </span>_iso8601_datetime_re = re.compile(
+<span class="gu">@@ -104,7 +117,11 @@ _iso8601_time_re = re.compile(</span>
+
+<span class="w"> </span>def get_fixed_timezone(offset: (int | float | dt.timedelta)) -&gt;dt.timezone:
+<span class="w"> </span>    &quot;&quot;&quot;Return a tzinfo instance with a fixed offset from UTC.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(offset, dt.timedelta):</span>
+<span class="gi">+        offset = offset.total_seconds() // 60</span>
+<span class="gi">+    sign = &#39;-&#39; if offset &lt; 0 else &#39;+&#39;</span>
+<span class="gi">+    h, m = divmod(abs(int(offset)), 60)</span>
+<span class="gi">+    return dt.timezone(dt.timedelta(hours=h, minutes=m), f&quot;{sign}{h:02d}:{m:02d}&quot;)</span>
+
+
+<span class="w"> </span>def from_iso_datetime(value):
+<span class="gu">@@ -113,7 +130,32 @@ def from_iso_datetime(value):</span>
+<span class="w"> </span>    This function supports time zone offsets. When the input contains one,
+<span class="w"> </span>    the output uses a timezone with a fixed offset from UTC.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = _iso8601_datetime_re.match(value)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(f&quot;Not a valid ISO8601-formatted datetime string: {value}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    groups = match.groupdict()</span>
+<span class="gi">+</span>
+<span class="gi">+    groups[&#39;year&#39;] = int(groups[&#39;year&#39;])</span>
+<span class="gi">+    groups[&#39;month&#39;] = int(groups[&#39;month&#39;])</span>
+<span class="gi">+    groups[&#39;day&#39;] = int(groups[&#39;day&#39;])</span>
+<span class="gi">+    groups[&#39;hour&#39;] = int(groups[&#39;hour&#39;])</span>
+<span class="gi">+    groups[&#39;minute&#39;] = int(groups[&#39;minute&#39;])</span>
+<span class="gi">+    groups[&#39;second&#39;] = int(groups[&#39;second&#39;] or 0)</span>
+<span class="gi">+    groups[&#39;microsecond&#39;] = int(groups[&#39;microsecond&#39;] or 0)</span>
+<span class="gi">+</span>
+<span class="gi">+    tzinfo = None</span>
+<span class="gi">+    if groups[&#39;tzinfo&#39;]:</span>
+<span class="gi">+        if groups[&#39;tzinfo&#39;] == &#39;Z&#39;:</span>
+<span class="gi">+            tzinfo = dt.timezone.utc</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            offset_mins = int(groups[&#39;tzinfo&#39;][-2:]) if len(groups[&#39;tzinfo&#39;]) &gt; 3 else 0</span>
+<span class="gi">+            offset = 60 * int(groups[&#39;tzinfo&#39;][1:3]) + offset_mins</span>
+<span class="gi">+            if groups[&#39;tzinfo&#39;][0] == &#39;-&#39;:</span>
+<span class="gi">+                offset = -offset</span>
+<span class="gi">+            tzinfo = get_fixed_timezone(offset)</span>
+<span class="gi">+</span>
+<span class="gi">+    return dt.datetime(tzinfo=tzinfo, **groups)</span>
+
+
+<span class="w"> </span>def from_iso_time(value):
+<span class="gu">@@ -121,12 +163,33 @@ def from_iso_time(value):</span>
+
+<span class="w"> </span>    This function doesn&#39;t support time zone offsets.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = _iso8601_time_re.match(value)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(f&quot;Not a valid ISO8601-formatted time string: {value}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    groups = match.groupdict()</span>
+<span class="gi">+</span>
+<span class="gi">+    groups[&#39;hour&#39;] = int(groups[&#39;hour&#39;])</span>
+<span class="gi">+    groups[&#39;minute&#39;] = int(groups[&#39;minute&#39;])</span>
+<span class="gi">+    groups[&#39;second&#39;] = int(groups[&#39;second&#39;] or 0)</span>
+<span class="gi">+    groups[&#39;microsecond&#39;] = int(groups[&#39;microsecond&#39;] or 0)</span>
+<span class="gi">+</span>
+<span class="gi">+    return dt.time(**groups)</span>
+
+
+<span class="w"> </span>def from_iso_date(value):
+<span class="w"> </span>    &quot;&quot;&quot;Parse a string and return a datetime.date.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = _iso8601_date_re.match(value)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(f&quot;Not a valid ISO8601-formatted date string: {value}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    groups = match.groupdict()</span>
+<span class="gi">+</span>
+<span class="gi">+    return dt.date(</span>
+<span class="gi">+        int(groups[&#39;year&#39;]),</span>
+<span class="gi">+        int(groups[&#39;month&#39;]),</span>
+<span class="gi">+        int(groups[&#39;day&#39;])</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def isoformat(datetime: dt.datetime) -&gt;str:
+<span class="gu">@@ -134,7 +197,7 @@ def isoformat(datetime: dt.datetime) -&gt;str:</span>
+
+<span class="w"> </span>    :param datetime datetime: The datetime.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return datetime.isoformat()</span>
+
+
+<span class="w"> </span>def pluck(dictlist: list[dict[str, typing.Any]], key: str):
+<span class="gu">@@ -145,7 +208,7 @@ def pluck(dictlist: list[dict[str, typing.Any]], key: str):</span>
+<span class="w"> </span>        &gt;&gt;&gt; pluck(dlist, &#39;id&#39;)
+<span class="w"> </span>        [1, 2]
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return [d.get(key) for d in dictlist]</span>
+
+
+<span class="w"> </span>def get_value(obj, key: (int | str), default=missing):
+<span class="gu">@@ -159,7 +222,26 @@ def get_value(obj, key: (int | str), default=missing):</span>
+<span class="w"> </span>        `get_value` will never check the value `x.i`. Consider overriding
+<span class="w"> </span>        `marshmallow.fields.Field.get_value` in this case.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(key, int):</span>
+<span class="gi">+        return _get_value_for_key(obj, key, default)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return _get_value_for_keys(obj, key.split(&#39;.&#39;), default)</span>
+<span class="gi">+</span>
+<span class="gi">+def _get_value_for_keys(obj, keys, default):</span>
+<span class="gi">+    if len(keys) == 1:</span>
+<span class="gi">+        return _get_value_for_key(obj, keys[0], default)</span>
+<span class="gi">+    return _get_value_for_keys(</span>
+<span class="gi">+        _get_value_for_key(obj, keys[0], default), keys[1:], default</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+def _get_value_for_key(obj, key, default):</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return obj[key]</span>
+<span class="gi">+    except (KeyError, IndexError, TypeError, AttributeError):</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return getattr(obj, key)</span>
+<span class="gi">+        except AttributeError:</span>
+<span class="gi">+            return default</span>
+
+
+<span class="w"> </span>def set_value(dct: dict[str, typing.Any], key: str, value: typing.Any):
+<span class="gu">@@ -173,12 +255,17 @@ def set_value(dct: dict[str, typing.Any], key: str, value: typing.Any):</span>
+<span class="w"> </span>        &gt;&gt;&gt; d
+<span class="w"> </span>        {&#39;foo&#39;: {&#39;bar&#39;: 42}}
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    keys = key.split(&#39;.&#39;)</span>
+<span class="gi">+    for key in keys[:-1]:</span>
+<span class="gi">+        dct = dct.setdefault(key, {})</span>
+<span class="gi">+    dct[keys[-1]] = value</span>
+
+
+<span class="w"> </span>def callable_or_raise(obj):
+<span class="w"> </span>    &quot;&quot;&quot;Check that an object is callable, else raise a :exc:`TypeError`.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not callable(obj):</span>
+<span class="gi">+        raise TypeError(f&quot;Object {obj!r} is not callable.&quot;)</span>
+<span class="gi">+    return obj</span>
+
+
+<span class="w"> </span>def get_func_args(func: typing.Callable) -&gt;list[str]:
+<span class="gu">@@ -188,7 +275,19 @@ def get_func_args(func: typing.Callable) -&gt;list[str]:</span>
+<span class="w"> </span>    .. versionchanged:: 3.0.0a1
+<span class="w"> </span>        Do not return bound arguments, eg. ``self``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(func, functools.partial):</span>
+<span class="gi">+        return get_func_args(func.func)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if inspect.isfunction(func) or inspect.ismethod(func):</span>
+<span class="gi">+        return list(inspect.signature(func).parameters.keys())</span>
+<span class="gi">+    </span>
+<span class="gi">+    if inspect.isclass(func):</span>
+<span class="gi">+        return get_func_args(func.__init__)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if callable(func):</span>
+<span class="gi">+        return get_func_args(func.__call__)</span>
+<span class="gi">+    </span>
+<span class="gi">+    raise TypeError(f&quot;{func!r} is not a callable.&quot;)</span>
+
+
+<span class="w"> </span>def resolve_field_instance(cls_or_instance):
+<span class="gu">@@ -196,7 +295,19 @@ def resolve_field_instance(cls_or_instance):</span>
+
+<span class="w"> </span>    :param type|Schema cls_or_instance: Marshmallow Schema class or instance.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(cls_or_instance, type):</span>
+<span class="gi">+        if not issubclass(cls_or_instance, FieldABC):</span>
+<span class="gi">+            raise FieldInstanceResolutionError(</span>
+<span class="gi">+                f&quot;The class {cls_or_instance} is not a subclass of &quot;</span>
+<span class="gi">+                &quot;marshmallow.base.FieldABC&quot;</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return cls_or_instance()</span>
+<span class="gi">+    if isinstance(cls_or_instance, FieldABC):</span>
+<span class="gi">+        return cls_or_instance</span>
+<span class="gi">+    raise FieldInstanceResolutionError(</span>
+<span class="gi">+        f&quot;{cls_or_instance!r} is not a subclass or instance of &quot;</span>
+<span class="gi">+        &quot;marshmallow.base.FieldABC&quot;</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def timedelta_to_microseconds(value: dt.timedelta) -&gt;int:
+<span class="gu">@@ -204,4 +315,13 @@ def timedelta_to_microseconds(value: dt.timedelta) -&gt;int:</span>
+
+<span class="w"> </span>    https://github.com/python/cpython/blob/bb3e0c240bc60fe08d332ff5955d54197f79751c/Lib/datetime.py#L665-L667  # noqa: B950
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return (value.days * 86400 + value.seconds) * 1000000 + value.microseconds</span>
+<span class="gi">+import datetime as dt</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value, dt.timezone.utc)</span>
+<span class="gi">+</span>
+<span class="gi">+def from_timestamp_ms(value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a POSIX timestamp in milliseconds to a datetime object.&quot;&quot;&quot;</span>
+<span class="gi">+    return dt.datetime.fromtimestamp(value / 1000, dt.timezone.utc)</span>
+<span class="gh">diff --git a/src/marshmallow/validate.py b/src/marshmallow/validate.py</span>
+<span class="gh">index 3cc3b97..c06287b 100644</span>
+<span class="gd">--- a/src/marshmallow/validate.py</span>
+<span class="gi">+++ b/src/marshmallow/validate.py</span>
+<span class="gu">@@ -28,7 +28,7 @@ class Validator(ABC):</span>
+<span class="w"> </span>        &quot;&quot;&quot;A string representation of the args passed to this validator. Used by
+<span class="w"> </span>        `__repr__`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return &#39;&#39;</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def __call__(self, value: typing.Any) -&gt;typing.Any:
+<span class="gu">@@ -419,7 +419,13 @@ class OneOf(Validator):</span>
+<span class="w"> </span>            of an attribute of the choice objects. Defaults to `str()`
+<span class="w"> </span>            or `str()`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if callable(valuegetter):</span>
+<span class="gi">+            getter = valuegetter</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            getter = lambda x: getattr(x, valuegetter)</span>
+<span class="gi">+</span>
+<span class="gi">+        for choice, label in zip_longest(self.choices, self.labels):</span>
+<span class="gi">+            yield getter(choice), label or str(choice)</span>
+
+
+<span class="w"> </span>class ContainsOnly(OneOf):
+<span class="gh">diff --git a/src/marshmallow/warnings.py b/src/marshmallow/warnings.py</span>
+<span class="gh">index 0da3c50..23b6477 100644</span>
+<span class="gd">--- a/src/marshmallow/warnings.py</span>
+<span class="gi">+++ b/src/marshmallow/warnings.py</span>
+<span class="gu">@@ -1,2 +1,10 @@</span>
+<span class="w"> </span>class RemovedInMarshmallow4Warning(DeprecationWarning):
+<span class="gd">-    pass</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Warning class to indicate functionality that will be removed in Marshmallow 4.</span>
+<span class="gi">+    </span>
+<span class="gi">+    This warning is a subclass of DeprecationWarning and is used to notify users</span>
+<span class="gi">+    about features or behaviors that are deprecated and will be removed in the</span>
+<span class="gi">+    next major version (Marshmallow 4) of the library.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    def __init__(self, message):</span>
+<span class="gi">+        super().__init__(message)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

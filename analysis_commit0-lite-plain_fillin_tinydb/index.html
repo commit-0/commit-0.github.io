@@ -1,0 +1,1047 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 lite plain fillin tinydb - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-tinydb" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 lite plain fillin tinydb
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-lite-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-tinydb"><strong>Claude Sonnet 3.5 - Fill-in</strong>: tinydb</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:7: in &lt;module&gt;
+    from tinydb.middlewares import CachingMiddleware
+tinydb/__init__.py:27: in &lt;module&gt;
+    from .queries import Query, where
+tinydb/queries.py:21: in &lt;module&gt;
+    from .utils import freeze
+tinydb/utils.py:69: in &lt;module&gt;
+    class FrozenDict(dict):
+tinydb/utils.py:80: in FrozenDict
+    __setitem__ = _immutable
+E   NameError: name &#39;_immutable&#39; is not defined
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/tinydb/database.py b/tinydb/database.py</span>
+<span class="gh">index a4ce0e1..dc97dc6 100644</span>
+<span class="gd">--- a/tinydb/database.py</span>
+<span class="gi">+++ b/tinydb/database.py</span>
+<span class="gu">@@ -99,7 +99,11 @@ class TinyDB(TableBase):</span>
+<span class="w"> </span>        :param name: The name of the table.
+<span class="w"> </span>        :param kwargs: Keyword arguments to pass to the table class constructor
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if name not in self._tables:</span>
+<span class="gi">+            self._tables[name] = self.table_class(</span>
+<span class="gi">+                self._storage, name, **kwargs</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return self._tables[name]</span>
+
+<span class="w"> </span>    def tables(self) -&gt;Set[str]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -107,13 +111,14 @@ class TinyDB(TableBase):</span>
+
+<span class="w"> </span>        :returns: a set of table names
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return set(self._storage.read().keys())</span>
+
+<span class="w"> </span>    def drop_tables(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Drop all tables from the database. **CANNOT BE REVERSED!**
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._storage.write({})</span>
+<span class="gi">+        self._tables.clear()</span>
+
+<span class="w"> </span>    def drop_table(self, name: str) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -121,7 +126,12 @@ class TinyDB(TableBase):</span>
+
+<span class="w"> </span>        :param name: The name of the table to drop.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        data = self._storage.read()</span>
+<span class="gi">+        if name in data:</span>
+<span class="gi">+            del data[name]</span>
+<span class="gi">+            self._storage.write(data)</span>
+<span class="gi">+        if name in self._tables:</span>
+<span class="gi">+            del self._tables[name]</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def storage(self) -&gt;Storage:
+<span class="gu">@@ -131,7 +141,7 @@ class TinyDB(TableBase):</span>
+<span class="w"> </span>        :return: This instance&#39;s storage
+<span class="w"> </span>        :rtype: Storage
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._storage</span>
+
+<span class="w"> </span>    def close(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -148,7 +158,8 @@ class TinyDB(TableBase):</span>
+
+<span class="w"> </span>        Upon leaving this context, the ``close`` method will be called.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._storage.close()</span>
+<span class="gi">+        self._opened = False</span>
+
+<span class="w"> </span>    def __enter__(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gh">diff --git a/tinydb/middlewares.py b/tinydb/middlewares.py</span>
+<span class="gh">index 50c2af2..5a47a37 100644</span>
+<span class="gd">--- a/tinydb/middlewares.py</span>
+<span class="gi">+++ b/tinydb/middlewares.py</span>
+<span class="gu">@@ -84,8 +84,29 @@ class CachingMiddleware(Middleware):</span>
+<span class="w"> </span>        self.cache = None
+<span class="w"> </span>        self._cache_modified_count = 0
+
+<span class="gi">+    def read(self):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Read data from cache if available, otherwise read from storage.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if self.cache is None:</span>
+<span class="gi">+            self.cache = self.storage.read()</span>
+<span class="gi">+        return self.cache</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, data):</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Write data to cache and increment the modified count.</span>
+<span class="gi">+        Flush to storage if the modified count reaches WRITE_CACHE_SIZE.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        self.cache = data</span>
+<span class="gi">+        self._cache_modified_count += 1</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self._cache_modified_count &gt;= self.WRITE_CACHE_SIZE:</span>
+<span class="gi">+            self.flush()</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def flush(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Flush all unwritten data to disk.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.cache is not None:</span>
+<span class="gi">+            self.storage.write(self.cache)</span>
+<span class="gi">+            self._cache_modified_count = 0</span>
+<span class="gh">diff --git a/tinydb/operations.py b/tinydb/operations.py</span>
+<span class="gh">index fdfa678..4c82060 100644</span>
+<span class="gd">--- a/tinydb/operations.py</span>
+<span class="gi">+++ b/tinydb/operations.py</span>
+<span class="gu">@@ -13,39 +13,56 @@ def delete(field):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Delete a given field from the document.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            del doc[field]</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def add(field, n):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Add ``n`` to a given field in the document.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] += n</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def subtract(field, n):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Subtract ``n`` to a given field in the document.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] -= n</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def set(field, val):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Set a given field to ``val``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        doc[field] = val</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def increment(field):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Increment a given field in the document by 1.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] += 1</span>
+<span class="gi">+    return transform</span>
+
+
+<span class="w"> </span>def decrement(field):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Decrement a given field in the document by 1.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def transform(doc):</span>
+<span class="gi">+        if field in doc:</span>
+<span class="gi">+            doc[field] -= 1</span>
+<span class="gi">+    return transform</span>
+<span class="gh">diff --git a/tinydb/queries.py b/tinydb/queries.py</span>
+<span class="gh">index 0ad5c7e..35a89c4 100644</span>
+<span class="gd">--- a/tinydb/queries.py</span>
+<span class="gi">+++ b/tinydb/queries.py</span>
+<span class="gu">@@ -181,7 +181,18 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param hashval: The hash of the query.
+<span class="w"> </span>        :return: A :class:`~tinydb.queries.QueryInstance` object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self._path and not allow_empty_path:</span>
+<span class="gi">+            raise RuntimeError(&#39;Query has no path&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        def runner(value):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                for part in self._path:</span>
+<span class="gi">+                    value = value[part]</span>
+<span class="gi">+                return test(value)</span>
+<span class="gi">+            except (KeyError, TypeError):</span>
+<span class="gi">+                return False</span>
+<span class="gi">+</span>
+<span class="gi">+        return QueryInstance(runner, hashval)</span>
+
+<span class="w"> </span>    def __eq__(self, rhs: Any):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -255,7 +266,7 @@ class Query(QueryInstance):</span>
+
+<span class="w"> </span>        &gt;&gt;&gt; Query().f1.exists()
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(lambda _: True, (&#39;exists&#39;, self._path))</span>
+
+<span class="w"> </span>    def matches(self, regex: str, flags: int=0) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -266,7 +277,10 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param regex: The regular expression to use for matching
+<span class="w"> </span>        :param flags: regex flags to pass to ``re.match``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(</span>
+<span class="gi">+            lambda value: re.match(regex, value, flags) is not None,</span>
+<span class="gi">+            (&#39;matches&#39;, self._path, regex, flags)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def search(self, regex: str, flags: int=0) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -278,7 +292,10 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param regex: The regular expression to use for matching
+<span class="w"> </span>        :param flags: regex flags to pass to ``re.match``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(</span>
+<span class="gi">+            lambda value: re.search(regex, value, flags) is not None,</span>
+<span class="gi">+            (&#39;search&#39;, self._path, regex, flags)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def test(self, func: Callable[[Mapping], bool], *args) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -300,7 +317,10 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>                     argument
+<span class="w"> </span>        :param args: Additional arguments to pass to the test function
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(</span>
+<span class="gi">+            lambda value: func(value, *args),</span>
+<span class="gi">+            (&#39;test&#39;, self._path, func, args)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def any(self, cond: Union[QueryInstance, List[Any]]) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -324,7 +344,14 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>                     a list of which at least one document has to be contained
+<span class="w"> </span>                     in the tested document.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(cond, QueryInstance):</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return any(cond(item) for item in value)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return any(item in cond for item in value)</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._generate_test(test, (&#39;any&#39;, self._path, freeze(cond)))</span>
+
+<span class="w"> </span>    def all(self, cond: Union[&#39;QueryInstance&#39;, List[Any]]) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -346,7 +373,14 @@ class Query(QueryInstance):</span>
+<span class="w"> </span>        :param cond: Either a query that all documents have to match or a list
+<span class="w"> </span>                     which has to be contained in the tested document.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(cond, QueryInstance):</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return all(cond(item) for item in value)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            def test(value):</span>
+<span class="gi">+                return all(item in value for item in cond)</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._generate_test(test, (&#39;all&#39;, self._path, freeze(cond)))</span>
+
+<span class="w"> </span>    def one_of(self, items: List[Any]) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -356,7 +390,8 @@ class Query(QueryInstance):</span>
+
+<span class="w"> </span>        :param items: The list of items to check with
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(lambda value: value in items,</span>
+<span class="gi">+                                   (&#39;one_of&#39;, self._path, freeze(items)))</span>
+
+<span class="w"> </span>    def noop(self) -&gt;QueryInstance:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -364,18 +399,21 @@ class Query(QueryInstance):</span>
+
+<span class="w"> </span>        Useful for having a base value when composing queries dynamically.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._generate_test(lambda _: True, (&#39;noop&#39;,), allow_empty_path=True)</span>
+
+<span class="w"> </span>    def map(self, fn: Callable[[Any], Any]) -&gt;&#39;Query&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Add a function to the query path. Similar to __getattr__ but for
+<span class="w"> </span>        arbitrary functions.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        query = type(self)()</span>
+<span class="gi">+        query._path = self._path + (fn,)</span>
+<span class="gi">+        query._hash = (&#39;map&#39;, query._path) if self.is_cacheable() else None</span>
+<span class="gi">+        return query</span>
+
+
+<span class="w"> </span>def where(key: str) -&gt;Query:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    A shorthand for ``Query()[key]``
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return Query()[key]</span>
+<span class="gh">diff --git a/tinydb/storages.py b/tinydb/storages.py</span>
+<span class="gh">index 0ddc223..16f317b 100644</span>
+<span class="gd">--- a/tinydb/storages.py</span>
+<span class="gi">+++ b/tinydb/storages.py</span>
+<span class="gu">@@ -18,7 +18,12 @@ def touch(path: str, create_dirs: bool):</span>
+<span class="w"> </span>    :param path: The file to create.
+<span class="w"> </span>    :param create_dirs: Whether to create all missing parent directories.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if create_dirs:</span>
+<span class="gi">+        os.makedirs(os.path.dirname(path), exist_ok=True)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if not os.path.exists(path):</span>
+<span class="gi">+        with open(path, &#39;a&#39;):</span>
+<span class="gi">+            os.utime(path, None)</span>
+
+
+<span class="w"> </span>class Storage(ABC):
+<span class="gu">@@ -38,7 +43,7 @@ class Storage(ABC):</span>
+
+<span class="w"> </span>        Return ``None`` here to indicate that the storage is empty.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;This method needs to be implemented by a subclass&quot;)</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="w"> </span>    def write(self, data: Dict[str, Dict[str, Any]]) -&gt;None:
+<span class="gu">@@ -49,7 +54,7 @@ class Storage(ABC):</span>
+
+<span class="w"> </span>        :param data: The current state of the database.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(&quot;This method needs to be implemented by a subclass&quot;)</span>
+
+<span class="w"> </span>    def close(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -88,6 +93,23 @@ class JSONStorage(Storage):</span>
+<span class="w"> </span>        if any([(character in self._mode) for character in (&#39;+&#39;, &#39;w&#39;, &#39;a&#39;)]):
+<span class="w"> </span>            touch(path, create_dirs=create_dirs)
+<span class="w"> </span>        self._handle = open(path, mode=self._mode, encoding=encoding)
+<span class="gi">+        self.path = path</span>
+<span class="gi">+        self.encoding = encoding</span>
+<span class="gi">+</span>
+<span class="gi">+    def read(self) -&gt;Optional[Dict[str, Dict[str, Any]]]:</span>
+<span class="gi">+        self._handle.seek(0)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return json.load(self._handle)</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, data: Dict[str, Dict[str, Any]]) -&gt;None:</span>
+<span class="gi">+        self._handle.seek(0)</span>
+<span class="gi">+        json.dump(data, self._handle, **self.kwargs)</span>
+<span class="gi">+        self._handle.truncate()</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self) -&gt;None:</span>
+<span class="gi">+        self._handle.close()</span>
+
+
+<span class="w"> </span>class MemoryStorage(Storage):
+<span class="gu">@@ -101,3 +123,12 @@ class MemoryStorage(Storage):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        super().__init__()
+<span class="w"> </span>        self.memory = None
+<span class="gi">+</span>
+<span class="gi">+    def read(self) -&gt;Optional[Dict[str, Dict[str, Any]]]:</span>
+<span class="gi">+        return self.memory</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, data: Dict[str, Dict[str, Any]]) -&gt;None:</span>
+<span class="gi">+        self.memory = data</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self) -&gt;None:</span>
+<span class="gi">+        pass</span>
+<span class="gh">diff --git a/tinydb/table.py b/tinydb/table.py</span>
+<span class="gh">index 48eea63..51f83f9 100644</span>
+<span class="gd">--- a/tinydb/table.py</span>
+<span class="gi">+++ b/tinydb/table.py</span>
+<span class="gu">@@ -85,14 +85,14 @@ class Table:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Get the table name.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._name</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def storage(self) -&gt;Storage:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Get the table storage instance.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._storage</span>
+
+<span class="w"> </span>    def insert(self, document: Mapping) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -101,7 +101,10 @@ class Table:</span>
+<span class="w"> </span>        :param document: the document to insert
+<span class="w"> </span>        :returns: the inserted document&#39;s ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        doc_id = self._get_next_id()</span>
+<span class="gi">+        self._update_table(lambda table: table.update({doc_id: document}))</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return doc_id</span>
+
+<span class="w"> </span>    def insert_multiple(self, documents: Iterable[Mapping]) -&gt;List[int]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -110,7 +113,15 @@ class Table:</span>
+<span class="w"> </span>        :param documents: an Iterable of documents to insert
+<span class="w"> </span>        :returns: a list containing the inserted documents&#39; IDs
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        doc_ids = []</span>
+<span class="gi">+        def updater(table):</span>
+<span class="gi">+            for document in documents:</span>
+<span class="gi">+                doc_id = self._get_next_id()</span>
+<span class="gi">+                table[doc_id] = document</span>
+<span class="gi">+                doc_ids.append(doc_id)</span>
+<span class="gi">+        self._update_table(updater)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return doc_ids</span>
+
+<span class="w"> </span>    def all(self) -&gt;List[Document]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -118,7 +129,8 @@ class Table:</span>
+
+<span class="w"> </span>        :returns: a list with all documents.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return [self.document_class(doc, self.document_id_class(doc_id))</span>
+<span class="gi">+                for doc_id, doc in self._read_table().items()]</span>
+
+<span class="w"> </span>    def search(self, cond: QueryLike) -&gt;List[Document]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -127,7 +139,14 @@ class Table:</span>
+<span class="w"> </span>        :param cond: the condition to check against
+<span class="w"> </span>        :returns: list of matching documents
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if cond in self._query_cache:</span>
+<span class="gi">+            return self._query_cache[cond]</span>
+<span class="gi">+</span>
+<span class="gi">+        docs = [self.document_class(doc, self.document_id_class(doc_id))</span>
+<span class="gi">+                for doc_id, doc in self._read_table().items()</span>
+<span class="gi">+                if cond(doc)]</span>
+<span class="gi">+        self._query_cache[cond] = docs</span>
+<span class="gi">+        return docs</span>
+
+<span class="w"> </span>    def get(self, cond: Optional[QueryLike]=None, doc_id: Optional[int]=
+<span class="w"> </span>        None, doc_ids: Optional[List]=None) -&gt;Optional[Union[Document, List
+<span class="gu">@@ -145,7 +164,23 @@ class Table:</span>
+
+<span class="w"> </span>        :returns: the document(s) or ``None``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if doc_id is not None:</span>
+<span class="gi">+            table = self._read_table()</span>
+<span class="gi">+            if doc_id in table:</span>
+<span class="gi">+                return self.document_class(table[doc_id], self.document_id_class(doc_id))</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+        if doc_ids is not None:</span>
+<span class="gi">+            table = self._read_table()</span>
+<span class="gi">+            return [self.document_class(table[id], self.document_id_class(id))</span>
+<span class="gi">+                    for id in doc_ids if id in table]</span>
+<span class="gi">+</span>
+<span class="gi">+        if cond is not None:</span>
+<span class="gi">+            docs = self.search(cond)</span>
+<span class="gi">+            if docs:</span>
+<span class="gi">+                return docs[0]</span>
+<span class="gi">+</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def contains(self, cond: Optional[QueryLike]=None, doc_id: Optional[int
+<span class="w"> </span>        ]=None) -&gt;bool:
+<span class="gu">@@ -158,7 +193,10 @@ class Table:</span>
+<span class="w"> </span>        :param cond: the condition use
+<span class="w"> </span>        :param doc_id: the document ID to look for
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if doc_id is not None:</span>
+<span class="gi">+            return doc_id in self._read_table()</span>
+<span class="gi">+</span>
+<span class="gi">+        return bool(self.get(cond))</span>
+
+<span class="w"> </span>    def update(self, fields: Union[Mapping, Callable[[Mapping], None]],
+<span class="w"> </span>        cond: Optional[QueryLike]=None, doc_ids: Optional[Iterable[int]]=None
+<span class="gu">@@ -172,7 +210,20 @@ class Table:</span>
+<span class="w"> </span>        :param doc_ids: a list of document IDs
+<span class="w"> </span>        :returns: a list containing the updated document&#39;s ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        updated_ids = []</span>
+<span class="gi">+</span>
+<span class="gi">+        def updater(table):</span>
+<span class="gi">+            for doc_id, doc in table.items():</span>
+<span class="gi">+                if (doc_ids is None or doc_id in doc_ids) and (cond is None or cond(doc)):</span>
+<span class="gi">+                    if callable(fields):</span>
+<span class="gi">+                        fields(doc)</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        doc.update(fields)</span>
+<span class="gi">+                    updated_ids.append(doc_id)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._update_table(updater)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return updated_ids</span>
+
+<span class="w"> </span>    def update_multiple(self, updates: Iterable[Tuple[Union[Mapping,
+<span class="w"> </span>        Callable[[Mapping], None]], QueryLike]]) -&gt;List[int]:
+<span class="gu">@@ -181,7 +232,21 @@ class Table:</span>
+
+<span class="w"> </span>        :returns: a list containing the updated document&#39;s ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        updated_ids = []</span>
+<span class="gi">+</span>
+<span class="gi">+        def updater(table):</span>
+<span class="gi">+            for fields, cond in updates:</span>
+<span class="gi">+                for doc_id, doc in table.items():</span>
+<span class="gi">+                    if cond(doc):</span>
+<span class="gi">+                        if callable(fields):</span>
+<span class="gi">+                            fields(doc)</span>
+<span class="gi">+                        else:</span>
+<span class="gi">+                            doc.update(fields)</span>
+<span class="gi">+                        updated_ids.append(doc_id)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._update_table(updater)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return updated_ids</span>
+
+<span class="w"> </span>    def upsert(self, document: Mapping, cond: Optional[QueryLike]=None) -&gt;List[
+<span class="w"> </span>        int]:
+<span class="gu">@@ -197,7 +262,18 @@ class Table:</span>
+<span class="w"> </span>        Document with a doc_id
+<span class="w"> </span>        :returns: a list containing the updated documents&#39; IDs
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(document, Document):</span>
+<span class="gi">+            doc_id = document.doc_id</span>
+<span class="gi">+            document = dict(document)</span>
+<span class="gi">+            del document[&#39;doc_id&#39;]</span>
+<span class="gi">+            if cond is None:</span>
+<span class="gi">+                cond = lambda doc: doc.doc_id == doc_id</span>
+<span class="gi">+</span>
+<span class="gi">+        updated = self.update(document, cond)</span>
+<span class="gi">+        if updated:</span>
+<span class="gi">+            return updated</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return [self.insert(document)]</span>
+
+<span class="w"> </span>    def remove(self, cond: Optional[QueryLike]=None, doc_ids: Optional[
+<span class="w"> </span>        Iterable[int]]=None) -&gt;List[int]:
+<span class="gu">@@ -208,13 +284,29 @@ class Table:</span>
+<span class="w"> </span>        :param doc_ids: a list of document IDs
+<span class="w"> </span>        :returns: a list containing the removed documents&#39; ID
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        removed = []</span>
+<span class="gi">+</span>
+<span class="gi">+        def updater(table):</span>
+<span class="gi">+            nonlocal removed</span>
+<span class="gi">+            if doc_ids is not None:</span>
+<span class="gi">+                removed = [doc_id for doc_id in doc_ids if doc_id in table]</span>
+<span class="gi">+                for doc_id in removed:</span>
+<span class="gi">+                    del table[doc_id]</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                removed = [doc_id for doc_id, doc in table.items() if cond is None or cond(doc)]</span>
+<span class="gi">+                for doc_id in removed:</span>
+<span class="gi">+                    del table[doc_id]</span>
+<span class="gi">+</span>
+<span class="gi">+        self._update_table(updater)</span>
+<span class="gi">+        self.clear_cache()</span>
+<span class="gi">+        return removed</span>
+
+<span class="w"> </span>    def truncate(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Truncate the table by removing all documents.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._update_table(lambda table: table.clear())</span>
+<span class="gi">+        self.clear_cache()</span>
+
+<span class="w"> </span>    def count(self, cond: QueryLike) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -222,7 +314,7 @@ class Table:</span>
+
+<span class="w"> </span>        :param cond: the condition use
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return len(self.search(cond))</span>
+
+<span class="w"> </span>    def clear_cache(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -249,7 +341,11 @@ class Table:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Return the ID for a newly inserted document.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._next_id is None:</span>
+<span class="gi">+            self._next_id = max(self._read_table().keys() or [0]) + 1</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._next_id += 1</span>
+<span class="gi">+        return self._next_id</span>
+
+<span class="w"> </span>    def _read_table(self) -&gt;Dict[str, Mapping]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -259,7 +355,8 @@ class Table:</span>
+<span class="w"> </span>        we may not want to convert *all* documents when returning
+<span class="w"> </span>        only one document for example.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        data = self._storage.read()</span>
+<span class="gi">+        return data.get(self._name, {})</span>
+
+<span class="w"> </span>    def _update_table(self, updater: Callable[[Dict[int, Mapping]], None]):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -274,4 +371,8 @@ class Table:</span>
+<span class="w"> </span>        As a further optimization, we don&#39;t convert the documents into the
+<span class="w"> </span>        document class, as the table data will *not* be returned to the user.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        data = self._storage.read()</span>
+<span class="gi">+        table = data.get(self._name, {})</span>
+<span class="gi">+        updater(table)</span>
+<span class="gi">+        data[self._name] = table</span>
+<span class="gi">+        self._storage.write(data)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

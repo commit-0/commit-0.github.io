@@ -1,0 +1,1788 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 lite with test fillin cachetools - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-unit-test-feedback-cachetools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 lite with test fillin cachetools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-lite-with-test_fillin">back to Claude Sonnet 3.5 - Fill-in + Unit Test Feedback summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-unit-test-feedback-cachetools"><strong>Claude Sonnet 3.5 - Fill-in + Unit Test Feedback</strong>: cachetools</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">178</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">37</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">215</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">215</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_funcpyfifodecoratortesttest_decorator">test_func.py::FIFODecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:15: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_clear">test_func.py::FIFODecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:26: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_nocache">test_func.py::FIFODecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 0, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 0, 0))
+E       AssertionError: Tuples differ: (0, 0, 0, 0) != (0, 1, 0, 0)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 0, 0)
+E       ?        ---
+E       
+E       + (0, 1, 0, 0)
+E       ?     +++
+
+tests/test_func.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_typed">test_func.py::FIFODecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_unbound">test_func.py::FIFODecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, None, 0))
+>       self.assertEqual(cached(1), 1)
+
+tests/test_func.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cachetools/__init__.py:754: in wrapper
+    cache[k] = v
+src/cachetools/__init__.py:151: in __setitem__
+    cache_setitem(self, key, value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = FIFOCache({}, maxsize=None, currsize=0), key = (1,), value = 1
+
+    def __setitem__(self, key, value):
+        maxsize = self.__maxsize
+        size = self.getsizeof(value)
+>       if size > maxsize:
+E       TypeError: '>' not supported between instances of 'int' and 'NoneType'
+
+src/cachetools/__init__.py:74: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_user_function">test_func.py::FIFODecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator">test_func.py::LFUDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:15: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_clear">test_func.py::LFUDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:26: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_nocache">test_func.py::LFUDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 0, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 0, 0))
+E       AssertionError: Tuples differ: (0, 0, 0, 0) != (0, 1, 0, 0)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 0, 0)
+E       ?        ---
+E       
+E       + (0, 1, 0, 0)
+E       ?     +++
+
+tests/test_func.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_typed">test_func.py::LFUDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_unbound">test_func.py::LFUDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, None, 0))
+>       self.assertEqual(cached(1), 1)
+
+tests/test_func.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cachetools/__init__.py:754: in wrapper
+    cache[k] = v
+src/cachetools/__init__.py:185: in __setitem__
+    cache_setitem(self, key, value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = LFUCache({}, maxsize=None, currsize=0), key = (1,), value = 1
+
+    def __setitem__(self, key, value):
+        maxsize = self.__maxsize
+        size = self.getsizeof(value)
+>       if size > maxsize:
+E       TypeError: '>' not supported between instances of 'int' and 'NoneType'
+
+src/cachetools/__init__.py:74: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_user_function">test_func.py::LFUDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator">test_func.py::LRUDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:15: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_clear">test_func.py::LRUDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:26: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_nocache">test_func.py::LRUDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 0, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 0, 0))
+E       AssertionError: Tuples differ: (0, 0, 0, 0) != (0, 1, 0, 0)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 0, 0)
+E       ?        ---
+E       
+E       + (0, 1, 0, 0)
+E       ?     +++
+
+tests/test_func.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_typed">test_func.py::LRUDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_unbound">test_func.py::LRUDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, None, 0))
+>       self.assertEqual(cached(1), 1)
+
+tests/test_func.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cachetools/__init__.py:754: in wrapper
+    cache[k] = v
+src/cachetools/__init__.py:216: in __setitem__
+    cache_setitem(self, key, value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = LRUCache({}, maxsize=None, currsize=0), key = (1,), value = 1
+
+    def __setitem__(self, key, value):
+        maxsize = self.__maxsize
+        size = self.getsizeof(value)
+>       if size > maxsize:
+E       TypeError: '>' not supported between instances of 'int' and 'NoneType'
+
+src/cachetools/__init__.py:74: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_user_function">test_func.py::LRUDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator">test_func.py::MRUDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:15: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_clear">test_func.py::MRUDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:26: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_needs_rlock">test_func.py::MRUDecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+
+            def __hash__(self):
+                return hash(self._use_cache)
+
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+
+tests/test_func.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = <tests.test_func.DecoratorTestMixin.test_decorator_needs_rlock.<locals>.RecursiveEquals object at 0x7f10119a1090>
+
+    def decorator(func):
+>       warnings.warn(f"mru_cache is deprecated for function {func.__name__}", DeprecationWarning, stacklevel=2)
+E       AttributeError: 'RecursiveEquals' object has no attribute '__name__'. Did you mean: '__ne__'?
+
+src/cachetools/func.py:79: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_nocache">test_func.py::MRUDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 0, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 0, 0))
+E       AssertionError: Tuples differ: (0, 0, 0, 0) != (0, 1, 0, 0)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 0, 0)
+E       ?        ---
+E       
+E       + (0, 1, 0, 0)
+E       ?     +++
+
+tests/test_func.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_typed">test_func.py::MRUDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_unbound">test_func.py::MRUDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, None, 0))
+>       self.assertEqual(cached(1), 1)
+
+tests/test_func.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cachetools/__init__.py:754: in wrapper
+    cache[k] = v
+src/cachetools/__init__.py:257: in __setitem__
+    cache_setitem(self, key, value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = MRUCache({}, maxsize=None, currsize=0), key = (1,), value = 1
+
+    def __setitem__(self, key, value):
+        maxsize = self.__maxsize
+        size = self.getsizeof(value)
+>       if size > maxsize:
+E       TypeError: '>' not supported between instances of 'int' and 'NoneType'
+
+src/cachetools/__init__.py:74: TypeError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_user_function">test_func.py::MRUDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator">test_func.py::RRDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:15: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_clear">test_func.py::RRDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:26: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_nocache">test_func.py::RRDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 0, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 0, 0))
+E       AssertionError: Tuples differ: (0, 0, 0, 0) != (0, 1, 0, 0)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 0, 0)
+E       ?        ---
+E       
+E       + (0, 1, 0, 0)
+E       ?     +++
+
+tests/test_func.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_typed">test_func.py::RRDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_unbound">test_func.py::RRDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, None, 0))
+>       self.assertEqual(cached(1), 1)
+
+tests/test_func.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cachetools/__init__.py:754: in wrapper
+    cache[k] = v
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = RRCache({}, maxsize=None, currsize=0), key = (1,), value = 1
+
+    def __setitem__(self, key, value):
+        maxsize = self.__maxsize
+        size = self.getsizeof(value)
+>       if size > maxsize:
+E       TypeError: '>' not supported between instances of 'int' and 'NoneType'
+
+src/cachetools/__init__.py:74: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_user_function">test_func.py::RRDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator">test_func.py::TTLDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:15: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_clear">test_func.py::TTLDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+        cached = self.decorator(maxsize=2)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:26: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_nocache">test_func.py::TTLDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+        cached = self.decorator(maxsize=0)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 0, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, 0, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 0, 0))
+E       AssertionError: Tuples differ: (0, 0, 0, 0) != (0, 1, 0, 0)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 0, 0)
+E       ?        ---
+E       
+E       + (0, 1, 0, 0)
+E       ?     +++
+
+tests/test_func.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_typed">test_func.py::TTLDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": 2, "typed": True})
+        self.assertEqual(cached.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(cached(1), 1)
+>       self.assertEqual(cached.cache_info(), (0, 1, 2, 1))
+E       AssertionError: Tuples differ: (0, 0, 2, 1) != (0, 1, 2, 1)
+E       
+E       First differing element 1:
+E       0
+E       1
+E       
+E       - (0, 0, 2, 1)
+E       ?     ^
+E       
+E       + (0, 1, 2, 1)
+E       ?     ^
+
+tests/test_func.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_unbound">test_func.py::TTLDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+        cached = self.decorator(maxsize=None)(lambda n: n)
+        self.assertEqual(cached.cache_parameters(), {"maxsize": None, "typed": False})
+        self.assertEqual(cached.cache_info(), (0, 0, None, 0))
+>       self.assertEqual(cached(1), 1)
+
+tests/test_func.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cachetools/__init__.py:754: in wrapper
+    cache[k] = v
+src/cachetools/__init__.py:425: in __setitem__
+    cache_setitem(self, key, value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = TTLCache({}, maxsize=None, currsize=0), key = (1,), value = 1
+
+    def __setitem__(self, key, value):
+        maxsize = self.__maxsize
+        size = self.getsizeof(value)
+>       if size > maxsize:
+E       TypeError: '>' not supported between instances of 'int' and 'NoneType'
+
+src/cachetools/__init__.py:74: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_user_function">test_func.py::TTLDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'function' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/cachetools/func.py b/src/cachetools/func.py</span>
+<span class="gh">index 338ef94..08c34d3 100644</span>
+<span class="gd">--- a/src/cachetools/func.py</span>
+<span class="gi">+++ b/src/cachetools/func.py</span>
+<span class="gu">@@ -11,6 +11,7 @@ except ImportError:</span>
+<span class="w"> </span>from . import FIFOCache, LFUCache, LRUCache, MRUCache, RRCache, TTLCache
+<span class="w"> </span>from . import cached
+<span class="w"> </span>from . import keys
+<span class="gi">+import functools</span>
+
+
+<span class="w"> </span>class _UnboundTTLCache(TTLCache):
+<span class="gu">@@ -19,13 +20,34 @@ class _UnboundTTLCache(TTLCache):</span>
+<span class="w"> </span>        TTLCache.__init__(self, math.inf, ttl, timer)
+
+
+<span class="gi">+def _cache_decorator(cache_class, maxsize=128, typed=False, **kwargs):</span>
+<span class="gi">+    def decorator(func):</span>
+<span class="gi">+        cache = cache_class(maxsize, **kwargs)</span>
+<span class="gi">+        wrapper = cached(cache=cache, key=keys.typedkey if typed else keys.hashkey)(func)</span>
+<span class="gi">+        </span>
+<span class="gi">+        def cache_parameters():</span>
+<span class="gi">+            return {&quot;maxsize&quot;: maxsize, &quot;typed&quot;: typed}</span>
+<span class="gi">+        </span>
+<span class="gi">+        def cache_info():</span>
+<span class="gi">+            hits = getattr(cache, &#39;hits&#39;, 0)</span>
+<span class="gi">+            misses = getattr(cache, &#39;misses&#39;, 0)</span>
+<span class="gi">+            maxsize = getattr(cache, &#39;maxsize&#39;, None)</span>
+<span class="gi">+            currsize = getattr(cache, &#39;currsize&#39;, 0)</span>
+<span class="gi">+            return (hits, misses, maxsize, currsize)</span>
+<span class="gi">+        </span>
+<span class="gi">+        wrapper.cache_parameters = cache_parameters</span>
+<span class="gi">+        wrapper.cache_info = cache_info</span>
+<span class="gi">+        return functools.wraps(func)(wrapper)</span>
+<span class="gi">+    return decorator</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>def fifo_cache(maxsize=128, typed=False):
+<span class="w"> </span>    &quot;&quot;&quot;Decorator to wrap a function with a memoizing callable that saves
+<span class="w"> </span>    up to `maxsize` results based on a First In First Out (FIFO)
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _cache_decorator(FIFOCache, maxsize, typed)</span>
+
+
+<span class="w"> </span>def lfu_cache(maxsize=128, typed=False):
+<span class="gu">@@ -34,7 +56,7 @@ def lfu_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _cache_decorator(LFUCache, maxsize, typed)</span>
+
+
+<span class="w"> </span>def lru_cache(maxsize=128, typed=False):
+<span class="gu">@@ -43,7 +65,7 @@ def lru_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _cache_decorator(LRUCache, maxsize, typed)</span>
+
+
+<span class="w"> </span>def mru_cache(maxsize=128, typed=False):
+<span class="gu">@@ -51,7 +73,12 @@ def mru_cache(maxsize=128, typed=False):</span>
+<span class="w"> </span>    up to `maxsize` results based on a Most Recently Used (MRU)
+<span class="w"> </span>    algorithm.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import warnings</span>
+<span class="gi">+    warnings.warn(&quot;mru_cache is deprecated&quot;, DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+    def decorator(func):</span>
+<span class="gi">+        warnings.warn(f&quot;mru_cache is deprecated for function {func.__name__}&quot;, DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+        return _cache_decorator(MRUCache, maxsize, typed)(func)</span>
+<span class="gi">+    return decorator</span>
+
+
+<span class="w"> </span>def rr_cache(maxsize=128, choice=random.choice, typed=False):
+<span class="gu">@@ -60,7 +87,7 @@ def rr_cache(maxsize=128, choice=random.choice, typed=False):</span>
+<span class="w"> </span>    algorithm.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _cache_decorator(RRCache, maxsize, typed, choice=choice)</span>
+
+
+<span class="w"> </span>def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):
+<span class="gu">@@ -68,4 +95,4 @@ def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):</span>
+<span class="w"> </span>    up to `maxsize` results based on a Least Recently Used (LRU)
+<span class="w"> </span>    algorithm with a per-item time-to-live (TTL) value.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _cache_decorator(TTLCache, maxsize, typed, ttl=ttl, timer=timer)</span>
+<span class="gh">diff --git a/src/cachetools/keys.py b/src/cachetools/keys.py</span>
+<span class="gh">index ed97ffd..5404d80 100644</span>
+<span class="gd">--- a/src/cachetools/keys.py</span>
+<span class="gi">+++ b/src/cachetools/keys.py</span>
+<span class="gu">@@ -32,19 +32,24 @@ _kwmark = _HashedTuple,</span>
+
+<span class="w"> </span>def hashkey(*args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a cache key for the specified hashable arguments.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if kwargs:</span>
+<span class="gi">+        return _HashedTuple(args + sum(sorted(kwargs.items()), _kwmark))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return _HashedTuple(args)</span>
+
+
+<span class="w"> </span>def methodkey(self, *args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a cache key for use with cached methods.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return hashkey(self.__class__, *args, **kwargs)</span>
+
+
+<span class="w"> </span>def typedkey(*args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a typed cache key for the specified hashable arguments.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    key = hashkey(*args, **kwargs)</span>
+<span class="gi">+    return _HashedTuple(tuple(type(arg) for arg in args) + (key,))</span>
+
+
+<span class="w"> </span>def typedmethodkey(self, *args, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Return a typed cache key for use with cached methods.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    key = methodkey(self, *args, **kwargs)</span>
+<span class="gi">+    return _HashedTuple((self.__class__,) + tuple(type(arg) for arg in args) + (key,))</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
