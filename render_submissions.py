@@ -257,8 +257,9 @@ def render_mds(subfolder="docs"):
                     repos_resolved += 1
                     pytest_details = f"{pytest_info['summary']['passed']} / {pytest_info['summary']['collected']}"
                     duration = f"{pytest_info['duration']:.2f}"
+            github_hyperlink = f"{project_page_link}/{repo_name}" if branch_name == "reference" else f"{project_page_link}/{repo_name}/tree/{branch_name}"
             submission_page += f"""
-| {repo_name} | {'Yes' if resolved else 'No'} | {pytest_details} | {duration} | [Analysis](/{f'analysis_{org_name}_{branch_name}_{repo_name}'}) | [Github]({project_page_link}/{repo_name}/tree/{branch_name}) |"""
+| {repo_name} | {'Yes' if resolved else 'No'} | {pytest_details} | {duration} | [Analysis](/{f'analysis_{org_name}_{branch_name}_{repo_name}'}) | [Github]({github_hyperlink}) |"""
             back_button = (
                 f"[back to {display_name} summary](/{f'analysis_{org_name}_{branch_name}'})\n\n"
             )
