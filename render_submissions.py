@@ -173,7 +173,7 @@ def render_mds(subfolder="docs"):
     for split in tqdm.tqdm(["lite", "all"]):
         num_repos = len(SPLIT[split])
         leaderboard[split] = f"""\n\n## Leaderboard ({split})
-|  | Name | Repos Resolved /{num_repos} | Test Duration (s) | Date | Analysis | |
+|  | Name | Repos Resolved (/{num_repos}) | Test Duration (s) | Date | Analysis | |
 |--|------|-------------------------|--------------------|----------|----| |"""
 
     for branch_name in tqdm.tqdm(glob.glob(os.path.join(analysis_files_path, "*"))):
@@ -241,7 +241,7 @@ def render_mds(subfolder="docs"):
                     pytest_details = f"{pytest_info['summary']['passed']} / {pytest_info['summary']['collected']}"
                     duration = f"{pytest_info['duration']:.2f}"
             submission_page +=f"""
-| | {repo_name} | {'Yes' if resolved else 'No'} | {pytest_details} | {duration} | (Analysis)(/{f'analysis_{branch_name}_{repo_name}'}) | |"""
+| | {repo_name} | {'Yes' if resolved else 'No'} | {pytest_details} | {duration} | [Analysis](/{f'analysis_{branch_name}_{repo_name}'}) | |"""
             back_button = f"[back to {branch_name} summary](/{f'analysis_{branch_name}'})\n\n"
             with open(
                 os.path.join(subfolder, f"analysis_{branch_name}_{repo_name}.md"), "w"
