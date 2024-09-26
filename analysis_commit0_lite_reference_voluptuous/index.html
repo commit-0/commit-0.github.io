@@ -1,0 +1,2792 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 lite reference voluptuous - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reference-gold-voluptuous" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 lite reference voluptuous
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0_lite_reference">back to Reference (Gold) summary</a></p>
+<h1 id="reference-gold-voluptuous"><strong>Reference (Gold)</strong>: voluptuous</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">149</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">149</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">149</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/voluptuous/error.py b/voluptuous/error.py</span>
+<span class="gh">index f72fbe7..9dab943 100644</span>
+<span class="gd">--- a/voluptuous/error.py</span>
+<span class="gi">+++ b/voluptuous/error.py</span>
+<span class="gu">@@ -1,5 +1,8 @@</span>
+<span class="gi">+# fmt: off</span>
+<span class="w"> </span>import typing
+
+<span class="gi">+# fmt: on</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class Error(Exception):
+<span class="w"> </span>    &quot;&quot;&quot;Base validation exception.&quot;&quot;&quot;
+<span class="gu">@@ -19,35 +22,70 @@ class Invalid(Error):</span>
+
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, message: str, path: typing.Optional[typing.List[</span>
+<span class="gd">-        typing.Hashable]]=None, error_message: typing.Optional[str]=None,</span>
+<span class="gd">-        error_type: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        message: str,</span>
+<span class="gi">+        path: typing.Optional[typing.List[typing.Hashable]] = None,</span>
+<span class="gi">+        error_message: typing.Optional[str] = None,</span>
+<span class="gi">+        error_type: typing.Optional[str] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        Error.__init__(self, message)
+<span class="w"> </span>        self._path = path or []
+<span class="w"> </span>        self._error_message = error_message or message
+<span class="w"> </span>        self.error_type = error_type
+
+<span class="gd">-    def __str__(self) -&gt;str:</span>
+<span class="gd">-        path = &#39; @ data[%s]&#39; % &#39;][&#39;.join(map(repr, self.path)</span>
+<span class="gd">-            ) if self.path else &#39;&#39;</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def msg(self) -&gt; str:</span>
+<span class="gi">+        return self.args[0]</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def path(self) -&gt; typing.List[typing.Hashable]:</span>
+<span class="gi">+        return self._path</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def error_message(self) -&gt; str:</span>
+<span class="gi">+        return self._error_message</span>
+<span class="gi">+</span>
+<span class="gi">+    def __str__(self) -&gt; str:</span>
+<span class="gi">+        path = &#39; @ data[%s]&#39; % &#39;][&#39;.join(map(repr, self.path)) if self.path else &#39;&#39;</span>
+<span class="w"> </span>        output = Exception.__str__(self)
+<span class="w"> </span>        if self.error_type:
+<span class="w"> </span>            output += &#39; for &#39; + self.error_type
+<span class="w"> </span>        return output + path
+
+<span class="gi">+    def prepend(self, path: typing.List[typing.Hashable]) -&gt; None:</span>
+<span class="gi">+        self._path = path + self.path</span>
+
+<span class="gd">-class MultipleInvalid(Invalid):</span>
+
+<span class="gd">-    def __init__(self, errors: typing.Optional[typing.List[Invalid]]=None</span>
+<span class="gd">-        ) -&gt;None:</span>
+<span class="gi">+class MultipleInvalid(Invalid):</span>
+<span class="gi">+    def __init__(self, errors: typing.Optional[typing.List[Invalid]] = None) -&gt; None:</span>
+<span class="w"> </span>        self.errors = errors[:] if errors else []
+
+<span class="gd">-    def __repr__(self) -&gt;str:</span>
+<span class="gi">+    def __repr__(self) -&gt; str:</span>
+<span class="w"> </span>        return &#39;MultipleInvalid(%r)&#39; % self.errors
+
+<span class="gd">-    def __str__(self) -&gt;str:</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def msg(self) -&gt; str:</span>
+<span class="gi">+        return self.errors[0].msg</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def path(self) -&gt; typing.List[typing.Hashable]:</span>
+<span class="gi">+        return self.errors[0].path</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def error_message(self) -&gt; str:</span>
+<span class="gi">+        return self.errors[0].error_message</span>
+<span class="gi">+</span>
+<span class="gi">+    def add(self, error: Invalid) -&gt; None:</span>
+<span class="gi">+        self.errors.append(error)</span>
+<span class="gi">+</span>
+<span class="gi">+    def __str__(self) -&gt; str:</span>
+<span class="w"> </span>        return str(self.errors[0])
+
+<span class="gi">+    def prepend(self, path: typing.List[typing.Hashable]) -&gt; None:</span>
+<span class="gi">+        for error in self.errors:</span>
+<span class="gi">+            error.prepend(path)</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class RequiredFieldInvalid(Invalid):
+<span class="w"> </span>    &quot;&quot;&quot;Required field was missing.&quot;&quot;&quot;
+<span class="gu">@@ -171,9 +209,11 @@ class ExactSequenceInvalid(Invalid):</span>
+
+<span class="w"> </span>class NotEnoughValid(Invalid):
+<span class="w"> </span>    &quot;&quot;&quot;The value did not pass enough validations.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    pass
+
+
+<span class="w"> </span>class TooManyValid(Invalid):
+<span class="w"> </span>    &quot;&quot;&quot;The value passed more than expected validations.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    pass
+<span class="gh">diff --git a/voluptuous/humanize.py b/voluptuous/humanize.py</span>
+<span class="gh">index 2902871..eabfd02 100644</span>
+<span class="gd">--- a/voluptuous/humanize.py</span>
+<span class="gi">+++ b/voluptuous/humanize.py</span>
+<span class="gu">@@ -1,14 +1,57 @@</span>
+<span class="gi">+# fmt: off</span>
+<span class="w"> </span>import typing
+<span class="gi">+</span>
+<span class="w"> </span>from voluptuous import Invalid, MultipleInvalid
+<span class="w"> </span>from voluptuous.error import Error
+<span class="w"> </span>from voluptuous.schema_builder import Schema
+<span class="gi">+</span>
+<span class="gi">+# fmt: on</span>
+<span class="gi">+</span>
+<span class="w"> </span>MAX_VALIDATION_ERROR_ITEM_LENGTH = 500
+
+
+<span class="gd">-def humanize_error(data, validation_error: Invalid, max_sub_error_length:</span>
+<span class="gd">-    int=MAX_VALIDATION_ERROR_ITEM_LENGTH) -&gt;str:</span>
+<span class="gi">+def _nested_getitem(</span>
+<span class="gi">+    data: typing.Any, path: typing.List[typing.Hashable]</span>
+<span class="gi">+) -&gt; typing.Optional[typing.Any]:</span>
+<span class="gi">+    for item_index in path:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            data = data[item_index]</span>
+<span class="gi">+        except (KeyError, IndexError, TypeError):</span>
+<span class="gi">+            # The index is not present in the dictionary, list or other</span>
+<span class="gi">+            # indexable or data is not subscriptable</span>
+<span class="gi">+            return None</span>
+<span class="gi">+    return data</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def humanize_error(</span>
+<span class="gi">+    data,</span>
+<span class="gi">+    validation_error: Invalid,</span>
+<span class="gi">+    max_sub_error_length: int = MAX_VALIDATION_ERROR_ITEM_LENGTH,</span>
+<span class="gi">+) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Provide a more helpful + complete validation error message than that provided automatically
+<span class="w"> </span>    Invalid and MultipleInvalid do not include the offending value in error messages,
+<span class="w"> </span>    and MultipleInvalid.__str__ only provides the first error.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(validation_error, MultipleInvalid):</span>
+<span class="gi">+        return &#39;\n&#39;.join(</span>
+<span class="gi">+            sorted(</span>
+<span class="gi">+                humanize_error(data, sub_error, max_sub_error_length)</span>
+<span class="gi">+                for sub_error in validation_error.errors</span>
+<span class="gi">+            )</span>
+<span class="gi">+        )</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        offending_item_summary = repr(_nested_getitem(data, validation_error.path))</span>
+<span class="gi">+        if len(offending_item_summary) &gt; max_sub_error_length:</span>
+<span class="gi">+            offending_item_summary = (</span>
+<span class="gi">+                offending_item_summary[: max_sub_error_length - 3] + &#39;...&#39;</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return &#39;%s. Got %s&#39; % (validation_error, offending_item_summary)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def validate_with_humanized_errors(</span>
+<span class="gi">+    data, schema: Schema, max_sub_error_length: int = MAX_VALIDATION_ERROR_ITEM_LENGTH</span>
+<span class="gi">+) -&gt; typing.Any:</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return schema(data)</span>
+<span class="gi">+    except (Invalid, MultipleInvalid) as e:</span>
+<span class="gi">+        raise Error(humanize_error(data, e, max_sub_error_length))</span>
+<span class="gh">diff --git a/voluptuous/schema_builder.py b/voluptuous/schema_builder.py</span>
+<span class="gh">index de2b53c..cdeb514 100644</span>
+<span class="gd">--- a/voluptuous/schema_builder.py</span>
+<span class="gi">+++ b/voluptuous/schema_builder.py</span>
+<span class="gu">@@ -1,4 +1,6 @@</span>
+<span class="gi">+# fmt: off</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="gi">+</span>
+<span class="w"> </span>import collections
+<span class="w"> </span>import inspect
+<span class="w"> </span>import itertools
+<span class="gu">@@ -8,15 +10,23 @@ import typing</span>
+<span class="w"> </span>from collections.abc import Generator
+<span class="w"> </span>from contextlib import contextmanager
+<span class="w"> </span>from functools import cache, wraps
+<span class="gi">+</span>
+<span class="w"> </span>from voluptuous import error as er
+<span class="w"> </span>from voluptuous.error import Error
+<span class="gd">-PREVENT_EXTRA = 0</span>
+<span class="gd">-ALLOW_EXTRA = 1</span>
+<span class="gd">-REMOVE_EXTRA = 2</span>
+
+<span class="gi">+# fmt: on</span>
+
+<span class="gd">-class Undefined(object):</span>
+<span class="gi">+# options for extra keys</span>
+<span class="gi">+PREVENT_EXTRA = 0  # any extra key not in schema will raise an error</span>
+<span class="gi">+ALLOW_EXTRA = 1  # extra keys not in schema will be included in output</span>
+<span class="gi">+REMOVE_EXTRA = 2  # extra keys not in schema will be excluded from output</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def _isnamedtuple(obj):</span>
+<span class="gi">+    return isinstance(obj, tuple) and hasattr(obj, &#39;_fields&#39;)</span>
+
+<span class="gi">+</span>
+<span class="gi">+class Undefined(object):</span>
+<span class="w"> </span>    def __nonzero__(self):
+<span class="w"> </span>        return False
+
+<span class="gu">@@ -25,19 +35,56 @@ class Undefined(object):</span>
+
+
+<span class="w"> </span>UNDEFINED = Undefined()
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def Self() -&gt; None:</span>
+<span class="gi">+    raise er.SchemaError(&#39;&quot;Self&quot; should never be called&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>DefaultFactory = typing.Union[Undefined, typing.Callable[[], typing.Any]]
+
+
+<span class="gd">-def Extra(_) -&gt;None:</span>
+<span class="gi">+def default_factory(value) -&gt; DefaultFactory:</span>
+<span class="gi">+    if value is UNDEFINED or callable(value):</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    return lambda: value</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+@contextmanager</span>
+<span class="gi">+def raises(</span>
+<span class="gi">+    exc, msg: typing.Optional[str] = None, regex: typing.Optional[re.Pattern] = None</span>
+<span class="gi">+) -&gt; Generator[None, None, None]:</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        yield</span>
+<span class="gi">+    except exc as e:</span>
+<span class="gi">+        if msg is not None:</span>
+<span class="gi">+            assert str(e) == msg, &#39;%r != %r&#39; % (str(e), msg)</span>
+<span class="gi">+        if regex is not None:</span>
+<span class="gi">+            assert re.search(regex, str(e)), &#39;%r does not match %r&#39; % (str(e), regex)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise AssertionError(f&quot;Did not raise exception {exc.__name__}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def Extra(_) -&gt; None:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Allow keys in the data that are not present in the schema.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    raise er.SchemaError(&#39;&quot;Extra&quot; should never be called&#39;)</span>
+
+
+<span class="gi">+# As extra() is never called there&#39;s no way to catch references to the</span>
+<span class="gi">+# deprecated object, so we just leave an alias here instead.</span>
+<span class="w"> </span>extra = Extra
+<span class="gd">-primitive_types = bool, bytes, int, str, float, complex</span>
+<span class="gd">-Schemable = typing.Union[&#39;Schema&#39;, &#39;Object&#39;, collections.abc.Mapping, list,</span>
+<span class="gd">-    tuple, frozenset, set, bool, bytes, int, str, float, complex, type,</span>
+<span class="gd">-    object, dict, None, typing.Callable]</span>
+<span class="gi">+</span>
+<span class="gi">+primitive_types = (bool, bytes, int, str, float, complex)</span>
+<span class="gi">+</span>
+<span class="gi">+# fmt: off</span>
+<span class="gi">+Schemable = typing.Union[</span>
+<span class="gi">+    &#39;Schema&#39;, &#39;Object&#39;,</span>
+<span class="gi">+    collections.abc.Mapping,</span>
+<span class="gi">+    list, tuple, frozenset, set,</span>
+<span class="gi">+    bool, bytes, int, str, float, complex,</span>
+<span class="gi">+    type, object, dict, None, typing.Callable</span>
+<span class="gi">+]</span>
+<span class="gi">+# fmt: on</span>
+
+
+<span class="w"> </span>class Schema(object):
+<span class="gu">@@ -61,11 +108,16 @@ class Schema(object):</span>
+<span class="w"> </span>            &gt;&gt;&gt; assert v != v2
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    _extra_to_name = {REMOVE_EXTRA: &#39;REMOVE_EXTRA&#39;, ALLOW_EXTRA:</span>
+<span class="gd">-        &#39;ALLOW_EXTRA&#39;, PREVENT_EXTRA: &#39;PREVENT_EXTRA&#39;}</span>
+
+<span class="gd">-    def __init__(self, schema: Schemable, required: bool=False, extra: int=</span>
+<span class="gd">-        PREVENT_EXTRA) -&gt;None:</span>
+<span class="gi">+    _extra_to_name = {</span>
+<span class="gi">+        REMOVE_EXTRA: &#39;REMOVE_EXTRA&#39;,</span>
+<span class="gi">+        ALLOW_EXTRA: &#39;ALLOW_EXTRA&#39;,</span>
+<span class="gi">+        PREVENT_EXTRA: &#39;PREVENT_EXTRA&#39;,</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self, schema: Schemable, required: bool = False, extra: int = PREVENT_EXTRA</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Create a new Schema.
+
+<span class="w"> </span>        :param schema: Validation schema. See :module:`voluptuous` for details.
+<span class="gu">@@ -82,11 +134,11 @@ class Schema(object):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        self.schema: typing.Any = schema
+<span class="w"> </span>        self.required = required
+<span class="gd">-        self.extra = int(extra)</span>
+<span class="gi">+        self.extra = int(extra)  # ensure the value is an integer</span>
+<span class="w"> </span>        self._compiled = self._compile(schema)
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def infer(cls, data, **kwargs) -&gt;Schema:</span>
+<span class="gi">+    def infer(cls, data, **kwargs) -&gt; Schema:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Create a Schema from concrete data (e.g. an API response).
+
+<span class="w"> </span>        For example, this will take a dict like:
+<span class="gu">@@ -113,7 +165,20 @@ class Schema(object):</span>
+
+<span class="w"> </span>        Note: only very basic inference is supported.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        def value_to_schema_type(value):</span>
+<span class="gi">+            if isinstance(value, dict):</span>
+<span class="gi">+                if len(value) == 0:</span>
+<span class="gi">+                    return dict</span>
+<span class="gi">+                return {k: value_to_schema_type(v) for k, v in value.items()}</span>
+<span class="gi">+            if isinstance(value, list):</span>
+<span class="gi">+                if len(value) == 0:</span>
+<span class="gi">+                    return list</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return [value_to_schema_type(v) for v in value]</span>
+<span class="gi">+            return type(value)</span>
+<span class="gi">+</span>
+<span class="gi">+        return cls(value_to_schema_type(data), **kwargs)</span>
+
+<span class="w"> </span>    def __eq__(self, other):
+<span class="w"> </span>        if not isinstance(other, Schema):
+<span class="gu">@@ -121,15 +186,18 @@ class Schema(object):</span>
+<span class="w"> </span>        return other.schema == self.schema
+
+<span class="w"> </span>    def __ne__(self, other):
+<span class="gd">-        return not self == other</span>
+<span class="gi">+        return not (self == other)</span>
+
+<span class="w"> </span>    def __str__(self):
+<span class="w"> </span>        return str(self.schema)
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;&lt;Schema(%s, extra=%s, required=%s) object at 0x%x&gt;&#39; % (self</span>
+<span class="gd">-            .schema, self._extra_to_name.get(self.extra, &#39;??&#39;), self.</span>
+<span class="gd">-            required, id(self))</span>
+<span class="gi">+        return &quot;&lt;Schema(%s, extra=%s, required=%s) object at 0x%x&gt;&quot; % (</span>
+<span class="gi">+            self.schema,</span>
+<span class="gi">+            self._extra_to_name.get(self.extra, &#39;??&#39;),</span>
+<span class="gi">+            self.required,</span>
+<span class="gi">+            id(self),</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def __call__(self, data):
+<span class="w"> </span>        &quot;&quot;&quot;Validate data against this schema.&quot;&quot;&quot;
+<span class="gu">@@ -139,10 +207,183 @@ class Schema(object):</span>
+<span class="w"> </span>            raise
+<span class="w"> </span>        except er.Invalid as e:
+<span class="w"> </span>            raise er.MultipleInvalid([e])
+<span class="gi">+            # return self.validate([], self.schema, data)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _compile(self, schema):</span>
+<span class="gi">+        if schema is Extra:</span>
+<span class="gi">+            return lambda _, v: v</span>
+<span class="gi">+        if schema is Self:</span>
+<span class="gi">+            return lambda p, v: self._compiled(p, v)</span>
+<span class="gi">+        elif hasattr(schema, &quot;__voluptuous_compile__&quot;):</span>
+<span class="gi">+            return schema.__voluptuous_compile__(self)</span>
+<span class="gi">+        if isinstance(schema, Object):</span>
+<span class="gi">+            return self._compile_object(schema)</span>
+<span class="gi">+        if isinstance(schema, collections.abc.Mapping):</span>
+<span class="gi">+            return self._compile_dict(schema)</span>
+<span class="gi">+        elif isinstance(schema, list):</span>
+<span class="gi">+            return self._compile_list(schema)</span>
+<span class="gi">+        elif isinstance(schema, tuple):</span>
+<span class="gi">+            return self._compile_tuple(schema)</span>
+<span class="gi">+        elif isinstance(schema, (frozenset, set)):</span>
+<span class="gi">+            return self._compile_set(schema)</span>
+<span class="gi">+        type_ = type(schema)</span>
+<span class="gi">+        if inspect.isclass(schema):</span>
+<span class="gi">+            type_ = schema</span>
+<span class="gi">+        if type_ in (*primitive_types, object, type(None)) or callable(schema):</span>
+<span class="gi">+            return _compile_scalar(schema)</span>
+<span class="gi">+        raise er.SchemaError(&#39;unsupported schema data type %r&#39; % type(schema).__name__)</span>
+
+<span class="w"> </span>    def _compile_mapping(self, schema, invalid_msg=None):
+<span class="w"> </span>        &quot;&quot;&quot;Create validator for given mapping.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        invalid_msg = invalid_msg or &#39;mapping value&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        # Keys that may be required</span>
+<span class="gi">+        all_required_keys = set(</span>
+<span class="gi">+            key</span>
+<span class="gi">+            for key in schema</span>
+<span class="gi">+            if key is not Extra</span>
+<span class="gi">+            and (</span>
+<span class="gi">+                (self.required and not isinstance(key, (Optional, Remove)))</span>
+<span class="gi">+                or isinstance(key, Required)</span>
+<span class="gi">+            )</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        # Keys that may have defaults</span>
+<span class="gi">+        all_default_keys = set(</span>
+<span class="gi">+            key</span>
+<span class="gi">+            for key in schema</span>
+<span class="gi">+            if isinstance(key, Required) or isinstance(key, Optional)</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        _compiled_schema = {}</span>
+<span class="gi">+        for skey, svalue in schema.items():</span>
+<span class="gi">+            new_key = self._compile(skey)</span>
+<span class="gi">+            new_value = self._compile(svalue)</span>
+<span class="gi">+            _compiled_schema[skey] = (new_key, new_value)</span>
+<span class="gi">+</span>
+<span class="gi">+        candidates = list(_iterate_mapping_candidates(_compiled_schema))</span>
+<span class="gi">+</span>
+<span class="gi">+        # After we have the list of candidates in the correct order, we want to apply some optimization so that each</span>
+<span class="gi">+        # key in the data being validated will be matched against the relevant schema keys only.</span>
+<span class="gi">+        # No point in matching against different keys</span>
+<span class="gi">+        additional_candidates = []</span>
+<span class="gi">+        candidates_by_key = {}</span>
+<span class="gi">+        for skey, (ckey, cvalue) in candidates:</span>
+<span class="gi">+            if type(skey) in primitive_types:</span>
+<span class="gi">+                candidates_by_key.setdefault(skey, []).append((skey, (ckey, cvalue)))</span>
+<span class="gi">+            elif isinstance(skey, Marker) and type(skey.schema) in primitive_types:</span>
+<span class="gi">+                candidates_by_key.setdefault(skey.schema, []).append(</span>
+<span class="gi">+                    (skey, (ckey, cvalue))</span>
+<span class="gi">+                )</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                # These are wildcards such as &#39;int&#39;, &#39;str&#39;, &#39;Remove&#39; and others which should be applied to all keys</span>
+<span class="gi">+                additional_candidates.append((skey, (ckey, cvalue)))</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_mapping(path, iterable, out):</span>
+<span class="gi">+            required_keys = all_required_keys.copy()</span>
+<span class="gi">+</span>
+<span class="gi">+            # Build a map of all provided key-value pairs.</span>
+<span class="gi">+            # The type(out) is used to retain ordering in case a ordered</span>
+<span class="gi">+            # map type is provided as input.</span>
+<span class="gi">+            key_value_map = type(out)()</span>
+<span class="gi">+            for key, value in iterable:</span>
+<span class="gi">+                key_value_map[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+            # Insert default values for non-existing keys.</span>
+<span class="gi">+            for key in all_default_keys:</span>
+<span class="gi">+                if (</span>
+<span class="gi">+                    not isinstance(key.default, Undefined)</span>
+<span class="gi">+                    and key.schema not in key_value_map</span>
+<span class="gi">+                ):</span>
+<span class="gi">+                    # A default value has been specified for this missing</span>
+<span class="gi">+                    # key, insert it.</span>
+<span class="gi">+                    key_value_map[key.schema] = key.default()</span>
+<span class="gi">+</span>
+<span class="gi">+            errors = []</span>
+<span class="gi">+            for key, value in key_value_map.items():</span>
+<span class="gi">+                key_path = path + [key]</span>
+<span class="gi">+                remove_key = False</span>
+<span class="gi">+</span>
+<span class="gi">+                # Optimization. Validate against the matching key first, then fallback to the rest</span>
+<span class="gi">+                relevant_candidates = itertools.chain(</span>
+<span class="gi">+                    candidates_by_key.get(key, []), additional_candidates</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+                # compare each given key/value against all compiled key/values</span>
+<span class="gi">+                # schema key, (compiled key, compiled value)</span>
+<span class="gi">+                error = None</span>
+<span class="gi">+                for skey, (ckey, cvalue) in relevant_candidates:</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        new_key = ckey(key_path, key)</span>
+<span class="gi">+                    except er.Invalid as e:</span>
+<span class="gi">+                        if len(e.path) &gt; len(key_path):</span>
+<span class="gi">+                            raise</span>
+<span class="gi">+                        if not error or len(e.path) &gt; len(error.path):</span>
+<span class="gi">+                            error = e</span>
+<span class="gi">+                        continue</span>
+<span class="gi">+                    # Backtracking is not performed once a key is selected, so if</span>
+<span class="gi">+                    # the value is invalid we immediately throw an exception.</span>
+<span class="gi">+                    exception_errors = []</span>
+<span class="gi">+                    # check if the key is marked for removal</span>
+<span class="gi">+                    is_remove = new_key is Remove</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        cval = cvalue(key_path, value)</span>
+<span class="gi">+                        # include if it&#39;s not marked for removal</span>
+<span class="gi">+                        if not is_remove:</span>
+<span class="gi">+                            out[new_key] = cval</span>
+<span class="gi">+                        else:</span>
+<span class="gi">+                            remove_key = True</span>
+<span class="gi">+                            continue</span>
+<span class="gi">+                    except er.MultipleInvalid as e:</span>
+<span class="gi">+                        exception_errors.extend(e.errors)</span>
+<span class="gi">+                    except er.Invalid as e:</span>
+<span class="gi">+                        exception_errors.append(e)</span>
+<span class="gi">+</span>
+<span class="gi">+                    if exception_errors:</span>
+<span class="gi">+                        if is_remove or remove_key:</span>
+<span class="gi">+                            continue</span>
+<span class="gi">+                        for err in exception_errors:</span>
+<span class="gi">+                            if len(err.path) &lt;= len(key_path):</span>
+<span class="gi">+                                err.error_type = invalid_msg</span>
+<span class="gi">+                            errors.append(err)</span>
+<span class="gi">+                        # If there is a validation error for a required</span>
+<span class="gi">+                        # key, this means that the key was provided.</span>
+<span class="gi">+                        # Discard the required key so it does not</span>
+<span class="gi">+                        # create an additional, noisy exception.</span>
+<span class="gi">+                        required_keys.discard(skey)</span>
+<span class="gi">+                        break</span>
+<span class="gi">+</span>
+<span class="gi">+                    # Key and value okay, mark as found in case it was</span>
+<span class="gi">+                    # a Required() field.</span>
+<span class="gi">+                    required_keys.discard(skey)</span>
+<span class="gi">+</span>
+<span class="gi">+                    break</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    if remove_key:</span>
+<span class="gi">+                        # remove key</span>
+<span class="gi">+                        continue</span>
+<span class="gi">+                    elif self.extra == ALLOW_EXTRA:</span>
+<span class="gi">+                        out[key] = value</span>
+<span class="gi">+                    elif error:</span>
+<span class="gi">+                        errors.append(error)</span>
+<span class="gi">+                    elif self.extra != REMOVE_EXTRA:</span>
+<span class="gi">+                        errors.append(er.Invalid(&#39;extra keys not allowed&#39;, key_path))</span>
+<span class="gi">+                        # else REMOVE_EXTRA: ignore the key so it&#39;s removed from output</span>
+<span class="gi">+</span>
+<span class="gi">+            # for any required keys left that weren&#39;t found and don&#39;t have defaults:</span>
+<span class="gi">+            for key in required_keys:</span>
+<span class="gi">+                msg = (</span>
+<span class="gi">+                    key.msg</span>
+<span class="gi">+                    if hasattr(key, &#39;msg&#39;) and key.msg</span>
+<span class="gi">+                    else &#39;required key not provided&#39;</span>
+<span class="gi">+                )</span>
+<span class="gi">+                errors.append(er.RequiredFieldInvalid(msg, path + [key]))</span>
+<span class="gi">+            if errors:</span>
+<span class="gi">+                raise er.MultipleInvalid(errors)</span>
+<span class="gi">+</span>
+<span class="gi">+            return out</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_mapping</span>
+
+<span class="w"> </span>    def _compile_object(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate an object.
+<span class="gu">@@ -162,7 +403,17 @@ class Schema(object):</span>
+<span class="w"> </span>            ...   validate(Structure(one=&#39;three&#39;))
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        base_validate = self._compile_mapping(schema, invalid_msg=&#39;object value&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_object(path, data):</span>
+<span class="gi">+            if schema.cls is not UNDEFINED and not isinstance(data, schema.cls):</span>
+<span class="gi">+                raise er.ObjectInvalid(&#39;expected a {0!r}&#39;.format(schema.cls), path)</span>
+<span class="gi">+            iterable = _iterate_object(data)</span>
+<span class="gi">+            iterable = filter(lambda item: item[1] is not None, iterable)</span>
+<span class="gi">+            out = base_validate(path, iterable, {})</span>
+<span class="gi">+            return type(data)(**out)</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_object</span>
+
+<span class="w"> </span>    def _compile_dict(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a dictionary.
+<span class="gu">@@ -240,7 +491,64 @@ class Schema(object):</span>
+<span class="w"> </span>         &quot;expected str for dictionary value @ data[&#39;adict&#39;][&#39;strfield&#39;]&quot;]
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        base_validate = self._compile_mapping(schema, invalid_msg=&#39;dictionary value&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        groups_of_exclusion = {}</span>
+<span class="gi">+        groups_of_inclusion = {}</span>
+<span class="gi">+        for node in schema:</span>
+<span class="gi">+            if isinstance(node, Exclusive):</span>
+<span class="gi">+                g = groups_of_exclusion.setdefault(node.group_of_exclusion, [])</span>
+<span class="gi">+                g.append(node)</span>
+<span class="gi">+            elif isinstance(node, Inclusive):</span>
+<span class="gi">+                g = groups_of_inclusion.setdefault(node.group_of_inclusion, [])</span>
+<span class="gi">+                g.append(node)</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_dict(path, data):</span>
+<span class="gi">+            if not isinstance(data, dict):</span>
+<span class="gi">+                raise er.DictInvalid(&#39;expected a dictionary&#39;, path)</span>
+<span class="gi">+</span>
+<span class="gi">+            errors = []</span>
+<span class="gi">+            for label, group in groups_of_exclusion.items():</span>
+<span class="gi">+                exists = False</span>
+<span class="gi">+                for exclusive in group:</span>
+<span class="gi">+                    if exclusive.schema in data:</span>
+<span class="gi">+                        if exists:</span>
+<span class="gi">+                            msg = (</span>
+<span class="gi">+                                exclusive.msg</span>
+<span class="gi">+                                if hasattr(exclusive, &#39;msg&#39;) and exclusive.msg</span>
+<span class="gi">+                                else &quot;two or more values in the same group of exclusion &#39;%s&#39;&quot;</span>
+<span class="gi">+                                % label</span>
+<span class="gi">+                            )</span>
+<span class="gi">+                            next_path = path + [VirtualPathComponent(label)]</span>
+<span class="gi">+                            errors.append(er.ExclusiveInvalid(msg, next_path))</span>
+<span class="gi">+                            break</span>
+<span class="gi">+                        exists = True</span>
+<span class="gi">+</span>
+<span class="gi">+            if errors:</span>
+<span class="gi">+                raise er.MultipleInvalid(errors)</span>
+<span class="gi">+</span>
+<span class="gi">+            for label, group in groups_of_inclusion.items():</span>
+<span class="gi">+                included = [node.schema in data for node in group]</span>
+<span class="gi">+                if any(included) and not all(included):</span>
+<span class="gi">+                    msg = (</span>
+<span class="gi">+                        &quot;some but not all values in the same group of inclusion &#39;%s&#39;&quot;</span>
+<span class="gi">+                        % label</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                    for g in group:</span>
+<span class="gi">+                        if hasattr(g, &#39;msg&#39;) and g.msg:</span>
+<span class="gi">+                            msg = g.msg</span>
+<span class="gi">+                            break</span>
+<span class="gi">+                    next_path = path + [VirtualPathComponent(label)]</span>
+<span class="gi">+                    errors.append(er.InclusiveInvalid(msg, next_path))</span>
+<span class="gi">+                    break</span>
+<span class="gi">+</span>
+<span class="gi">+            if errors:</span>
+<span class="gi">+                raise er.MultipleInvalid(errors)</span>
+<span class="gi">+</span>
+<span class="gi">+            out = data.__class__()</span>
+<span class="gi">+            return base_validate(path, data.items(), out)</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_dict</span>
+
+<span class="w"> </span>    def _compile_sequence(self, schema, seq_type):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a sequence type.
+<span class="gu">@@ -255,7 +563,49 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; validator([1])
+<span class="w"> </span>        [1]
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        _compiled = [self._compile(s) for s in schema]</span>
+<span class="gi">+        seq_type_name = seq_type.__name__</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_sequence(path, data):</span>
+<span class="gi">+            if not isinstance(data, seq_type):</span>
+<span class="gi">+                raise er.SequenceTypeInvalid(&#39;expected a %s&#39; % seq_type_name, path)</span>
+<span class="gi">+</span>
+<span class="gi">+            # Empty seq schema, reject any data.</span>
+<span class="gi">+            if not schema:</span>
+<span class="gi">+                if data:</span>
+<span class="gi">+                    raise er.MultipleInvalid(</span>
+<span class="gi">+                        [er.ValueInvalid(&#39;not a valid value&#39;, path if path else data)]</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                return data</span>
+<span class="gi">+</span>
+<span class="gi">+            out = []</span>
+<span class="gi">+            invalid = None</span>
+<span class="gi">+            errors = []</span>
+<span class="gi">+            index_path = UNDEFINED</span>
+<span class="gi">+            for i, value in enumerate(data):</span>
+<span class="gi">+                index_path = path + [i]</span>
+<span class="gi">+                invalid = None</span>
+<span class="gi">+                for validate in _compiled:</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        cval = validate(index_path, value)</span>
+<span class="gi">+                        if cval is not Remove:  # do not include Remove values</span>
+<span class="gi">+                            out.append(cval)</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    except er.Invalid as e:</span>
+<span class="gi">+                        if len(e.path) &gt; len(index_path):</span>
+<span class="gi">+                            raise</span>
+<span class="gi">+                        invalid = e</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    errors.append(invalid)</span>
+<span class="gi">+            if errors:</span>
+<span class="gi">+                raise er.MultipleInvalid(errors)</span>
+<span class="gi">+</span>
+<span class="gi">+            if _isnamedtuple(data):</span>
+<span class="gi">+                return type(data)(*out)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return type(data)(out)</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_sequence</span>
+
+<span class="w"> </span>    def _compile_tuple(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a tuple.
+<span class="gu">@@ -270,7 +620,7 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; validator((1,))
+<span class="w"> </span>        (1,)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._compile_sequence(schema, tuple)</span>
+
+<span class="w"> </span>    def _compile_list(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a list.
+<span class="gu">@@ -285,7 +635,7 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; validator([1])
+<span class="w"> </span>        [1]
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._compile_sequence(schema, list)</span>
+
+<span class="w"> </span>    def _compile_set(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a set.
+<span class="gu">@@ -300,10 +650,39 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; with raises(er.MultipleInvalid, &#39;invalid value in set&#39;):
+<span class="w"> </span>        ...   validator(set([&#39;a&#39;]))
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    def extend(self, schema: Schemable, required: typing.Optional[bool]=</span>
+<span class="gd">-        None, extra: typing.Optional[int]=None) -&gt;Schema:</span>
+<span class="gi">+        type_ = type(schema)</span>
+<span class="gi">+        type_name = type_.__name__</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_set(path, data):</span>
+<span class="gi">+            if not isinstance(data, type_):</span>
+<span class="gi">+                raise er.Invalid(&#39;expected a %s&#39; % type_name, path)</span>
+<span class="gi">+</span>
+<span class="gi">+            _compiled = [self._compile(s) for s in schema]</span>
+<span class="gi">+            errors = []</span>
+<span class="gi">+            for value in data:</span>
+<span class="gi">+                for validate in _compiled:</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        validate(path, value)</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    except er.Invalid:</span>
+<span class="gi">+                        pass</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    invalid = er.Invalid(&#39;invalid value in %s&#39; % type_name, path)</span>
+<span class="gi">+                    errors.append(invalid)</span>
+<span class="gi">+</span>
+<span class="gi">+            if errors:</span>
+<span class="gi">+                raise er.MultipleInvalid(errors)</span>
+<span class="gi">+</span>
+<span class="gi">+            return data</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_set</span>
+<span class="gi">+</span>
+<span class="gi">+    def extend(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema: Schemable,</span>
+<span class="gi">+        required: typing.Optional[bool] = None,</span>
+<span class="gi">+        extra: typing.Optional[int] = None,</span>
+<span class="gi">+    ) -&gt; Schema:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Create a new `Schema` by merging this and the provided `schema`.
+
+<span class="w"> </span>        Neither this `Schema` nor the provided `schema` are modified. The
+<span class="gu">@@ -316,7 +695,51 @@ class Schema(object):</span>
+<span class="w"> </span>        :param required: if set, overrides `required` of this `Schema`
+<span class="w"> </span>        :param extra: if set, overrides `extra` of this `Schema`
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        assert isinstance(self.schema, dict) and isinstance(</span>
+<span class="gi">+            schema, dict</span>
+<span class="gi">+        ), &#39;Both schemas must be dictionary-based&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        result = self.schema.copy()</span>
+<span class="gi">+</span>
+<span class="gi">+        # returns the key that may have been passed as an argument to Marker constructor</span>
+<span class="gi">+        def key_literal(key):</span>
+<span class="gi">+            return key.schema if isinstance(key, Marker) else key</span>
+<span class="gi">+</span>
+<span class="gi">+        # build a map that takes the key literals to the needed objects</span>
+<span class="gi">+        # literal -&gt; Required|Optional|literal</span>
+<span class="gi">+        result_key_map = dict((key_literal(key), key) for key in result)</span>
+<span class="gi">+</span>
+<span class="gi">+        # for each item in the extension schema, replace duplicates</span>
+<span class="gi">+        # or add new keys</span>
+<span class="gi">+        for key, value in schema.items():</span>
+<span class="gi">+            # if the key is already in the dictionary, we need to replace it</span>
+<span class="gi">+            # transform key to literal before checking presence</span>
+<span class="gi">+            if key_literal(key) in result_key_map:</span>
+<span class="gi">+                result_key = result_key_map[key_literal(key)]</span>
+<span class="gi">+                result_value = result[result_key]</span>
+<span class="gi">+</span>
+<span class="gi">+                # if both are dictionaries, we need to extend recursively</span>
+<span class="gi">+                # create the new extended sub schema, then remove the old key and add the new one</span>
+<span class="gi">+                if isinstance(result_value, dict) and isinstance(value, dict):</span>
+<span class="gi">+                    new_value = Schema(result_value).extend(value).schema</span>
+<span class="gi">+                    del result[result_key]</span>
+<span class="gi">+                    result[key] = new_value</span>
+<span class="gi">+                # one or the other or both are not sub-schemas, simple replacement is fine</span>
+<span class="gi">+                # remove old key and add new one</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    del result[result_key]</span>
+<span class="gi">+                    result[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+            # key is new and can simply be added</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                result[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+        # recompile and send old object</span>
+<span class="gi">+        result_cls = type(self)</span>
+<span class="gi">+        result_required = required if required is not None else self.required</span>
+<span class="gi">+        result_extra = extra if extra is not None else self.extra</span>
+<span class="gi">+        return result_cls(result, required=result_required, extra=result_extra)</span>
+
+
+<span class="w"> </span>def _compile_scalar(schema):
+<span class="gu">@@ -338,12 +761,78 @@ def _compile_scalar(schema):</span>
+<span class="w"> </span>    &gt;&gt;&gt; with raises(er.Invalid, &#39;not a valid value&#39;):
+<span class="w"> </span>    ...   _compile_scalar(lambda v: float(v))([], &#39;a&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if inspect.isclass(schema):</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_instance(path, data):</span>
+<span class="gi">+            if isinstance(data, schema):</span>
+<span class="gi">+                return data</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                msg = &#39;expected %s&#39; % schema.__name__</span>
+<span class="gi">+                raise er.TypeInvalid(msg, path)</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_instance</span>
+<span class="gi">+</span>
+<span class="gi">+    if callable(schema):</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_callable(path, data):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                return schema(data)</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                raise er.ValueInvalid(&#39;not a valid value&#39;, path)</span>
+<span class="gi">+            except er.Invalid as e:</span>
+<span class="gi">+                e.prepend(path)</span>
+<span class="gi">+                raise</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_callable</span>
+<span class="gi">+</span>
+<span class="gi">+    def validate_value(path, data):</span>
+<span class="gi">+        if data != schema:</span>
+<span class="gi">+            raise er.ScalarInvalid(&#39;not a valid value&#39;, path)</span>
+<span class="gi">+        return data</span>
+<span class="gi">+</span>
+<span class="gi">+    return validate_value</span>
+
+
+<span class="w"> </span>def _compile_itemsort():
+<span class="gd">-    &quot;&quot;&quot;return sort function of mappings&quot;&quot;&quot;</span>
+<span class="gd">-    pass</span>
+<span class="gi">+    &#39;&#39;&#39;return sort function of mappings&#39;&#39;&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_extra(key_):</span>
+<span class="gi">+        return key_ is Extra</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_remove(key_):</span>
+<span class="gi">+        return isinstance(key_, Remove)</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_marker(key_):</span>
+<span class="gi">+        return isinstance(key_, Marker)</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_type(key_):</span>
+<span class="gi">+        return inspect.isclass(key_)</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_callable(key_):</span>
+<span class="gi">+        return callable(key_)</span>
+<span class="gi">+</span>
+<span class="gi">+    # priority list for map sorting (in order of checking)</span>
+<span class="gi">+    # We want Extra to match last, because it&#39;s a catch-all. On the other hand,</span>
+<span class="gi">+    # Remove markers should match first (since invalid values will not</span>
+<span class="gi">+    # raise an Error, instead the validator will check if other schemas match</span>
+<span class="gi">+    # the same value).</span>
+<span class="gi">+    priority = [</span>
+<span class="gi">+        (1, is_remove),  # Remove highest priority after values</span>
+<span class="gi">+        (2, is_marker),  # then other Markers</span>
+<span class="gi">+        (4, is_type),  # types/classes lowest before Extra</span>
+<span class="gi">+        (3, is_callable),  # callables after markers</span>
+<span class="gi">+        (5, is_extra),  # Extra lowest priority</span>
+<span class="gi">+    ]</span>
+<span class="gi">+</span>
+<span class="gi">+    def item_priority(item_):</span>
+<span class="gi">+        key_ = item_[0]</span>
+<span class="gi">+        for i, check_ in priority:</span>
+<span class="gi">+            if check_(key_):</span>
+<span class="gi">+                return i</span>
+<span class="gi">+        # values have highest priorities</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    return item_priority</span>
+
+
+<span class="w"> </span>_sort_item = _compile_itemsort()
+<span class="gu">@@ -351,7 +840,10 @@ _sort_item = _compile_itemsort()</span>
+
+<span class="w"> </span>def _iterate_mapping_candidates(schema):
+<span class="w"> </span>    &quot;&quot;&quot;Iterate over schema in a meaningful order.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Without this, Extra might appear first in the iterator, and fail to</span>
+<span class="gi">+    # validate a key even though it&#39;s a Required that has its own validation,</span>
+<span class="gi">+    # generating a false positive.</span>
+<span class="gi">+    return sorted(schema.items(), key=_sort_item)</span>
+
+
+<span class="w"> </span>def _iterate_object(obj):
+<span class="gu">@@ -359,7 +851,23 @@ def _iterate_object(obj):</span>
+<span class="w"> </span>    defined __slots__.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    d = {}</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        d = vars(obj)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        # maybe we have named tuple here?</span>
+<span class="gi">+        if hasattr(obj, &#39;_asdict&#39;):</span>
+<span class="gi">+            d = obj._asdict()</span>
+<span class="gi">+    for item in d.items():</span>
+<span class="gi">+        yield item</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        slots = obj.__slots__</span>
+<span class="gi">+    except AttributeError:</span>
+<span class="gi">+        pass</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        for key in slots:</span>
+<span class="gi">+            if key != &#39;__dict__&#39;:</span>
+<span class="gi">+                yield (key, getattr(obj, key))</span>
+
+
+<span class="w"> </span>class Msg(object):
+<span class="gu">@@ -391,11 +899,16 @@ class Msg(object):</span>
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], er.RangeInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema: Schemable, msg: str, cls: typing.Optional[</span>
+<span class="gd">-        typing.Type[Error]]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema: Schemable,</span>
+<span class="gi">+        msg: str,</span>
+<span class="gi">+        cls: typing.Optional[typing.Type[Error]] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        if cls and not issubclass(cls, er.Invalid):
+<span class="w"> </span>            raise er.SchemaError(
+<span class="gd">-                &#39;Msg can only use subclases of Invalid as custom class&#39;)</span>
+<span class="gi">+                &quot;Msg can only use subclases of Invalid as custom class&quot;</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        self._schema = schema
+<span class="w"> </span>        self.schema = Schema(schema)
+<span class="w"> </span>        self.msg = msg
+<span class="gu">@@ -417,13 +930,12 @@ class Msg(object):</span>
+<span class="w"> </span>class Object(dict):
+<span class="w"> </span>    &quot;&quot;&quot;Indicate that we should work with attributes, not keys.&quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema: typing.Any, cls: object=UNDEFINED) -&gt;None:</span>
+<span class="gi">+    def __init__(self, schema: typing.Any, cls: object = UNDEFINED) -&gt; None:</span>
+<span class="w"> </span>        self.cls = cls
+<span class="w"> </span>        super(Object, self).__init__(schema)
+
+
+<span class="w"> </span>class VirtualPathComponent(str):
+<span class="gd">-</span>
+<span class="w"> </span>    def __str__(self):
+<span class="w"> </span>        return &#39;&lt;&#39; + self + &#39;&gt;&#39;
+
+<span class="gu">@@ -437,15 +949,20 @@ class Marker(object):</span>
+<span class="w"> </span>    `description` is an optional field, unused by Voluptuous itself, but can be
+<span class="w"> </span>    introspected by any external tool, for example to generate schema documentation.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    __slots__ = &#39;schema&#39;, &#39;_schema&#39;, &#39;msg&#39;, &#39;description&#39;, &#39;__hash__&#39;</span>
+
+<span class="gd">-    def __init__(self, schema_: Schemable, msg: typing.Optional[str]=None,</span>
+<span class="gd">-        description: (typing.Any | None)=None) -&gt;None:</span>
+<span class="gi">+    __slots__ = (&#39;schema&#39;, &#39;_schema&#39;, &#39;msg&#39;, &#39;description&#39;, &#39;__hash__&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema_: Schemable,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        description: typing.Any | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.schema: typing.Any = schema_
+<span class="w"> </span>        self._schema = Schema(schema_)
+<span class="w"> </span>        self.msg = msg
+<span class="w"> </span>        self.description = description
+<span class="gd">-        self.__hash__ = cache(lambda : hash(schema_))</span>
+<span class="gi">+        self.__hash__ = cache(lambda: hash(schema_))  # type: ignore[method-assign]</span>
+
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        try:
+<span class="gu">@@ -470,7 +987,7 @@ class Marker(object):</span>
+<span class="w"> </span>        return self.schema == other
+
+<span class="w"> </span>    def __ne__(self, other):
+<span class="gd">-        return not self.schema == other</span>
+<span class="gi">+        return not (self.schema == other)</span>
+
+
+<span class="w"> </span>class Optional(Marker):
+<span class="gu">@@ -496,11 +1013,14 @@ class Optional(Marker):</span>
+<span class="w"> </span>    {&#39;key2&#39;: &#39;value&#39;}
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema: Schemable, msg: typing.Optional[str]=None,</span>
+<span class="gd">-        default: typing.Any=UNDEFINED, description: (typing.Any | None)=None</span>
+<span class="gd">-        ) -&gt;None:</span>
+<span class="gd">-        super(Optional, self).__init__(schema, msg=msg, description=description</span>
+<span class="gd">-            )</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema: Schemable,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        default: typing.Any = UNDEFINED,</span>
+<span class="gi">+        description: typing.Any | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        super(Optional, self).__init__(schema, msg=msg, description=description)</span>
+<span class="w"> </span>        self.default = default_factory(default)
+
+
+<span class="gu">@@ -540,11 +1060,14 @@ class Exclusive(Optional):</span>
+<span class="w"> </span>    ...             &#39;social&#39;: {&#39;social_network&#39;: &#39;barfoo&#39;, &#39;token&#39;: &#39;tEMp&#39;}})
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema: Schemable, group_of_exclusion: str, msg:</span>
+<span class="gd">-        typing.Optional[str]=None, description: (typing.Any | None)=None</span>
+<span class="gd">-        ) -&gt;None:</span>
+<span class="gd">-        super(Exclusive, self).__init__(schema, msg=msg, description=</span>
+<span class="gd">-            description)</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema: Schemable,</span>
+<span class="gi">+        group_of_exclusion: str,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        description: typing.Any | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        super(Exclusive, self).__init__(schema, msg=msg, description=description)</span>
+<span class="w"> </span>        self.group_of_exclusion = group_of_exclusion
+
+
+<span class="gu">@@ -590,11 +1113,17 @@ class Inclusive(Optional):</span>
+<span class="w"> </span>    True
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema: Schemable, group_of_inclusion: str, msg:</span>
+<span class="gd">-        typing.Optional[str]=None, description: (typing.Any | None)=None,</span>
+<span class="gd">-        default: typing.Any=UNDEFINED) -&gt;None:</span>
+<span class="gd">-        super(Inclusive, self).__init__(schema, msg=msg, default=default,</span>
+<span class="gd">-            description=description)</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema: Schemable,</span>
+<span class="gi">+        group_of_inclusion: str,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        description: typing.Any | None = None,</span>
+<span class="gi">+        default: typing.Any = UNDEFINED,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        super(Inclusive, self).__init__(</span>
+<span class="gi">+            schema, msg=msg, default=default, description=description</span>
+<span class="gi">+        )</span>
+<span class="w"> </span>        self.group_of_inclusion = group_of_inclusion
+
+
+<span class="gu">@@ -613,11 +1142,14 @@ class Required(Marker):</span>
+<span class="w"> </span>    {&#39;key&#39;: []}
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema: Schemable, msg: typing.Optional[str]=None,</span>
+<span class="gd">-        default: typing.Any=UNDEFINED, description: (typing.Any | None)=None</span>
+<span class="gd">-        ) -&gt;None:</span>
+<span class="gd">-        super(Required, self).__init__(schema, msg=msg, description=description</span>
+<span class="gd">-            )</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema: Schemable,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        default: typing.Any = UNDEFINED,</span>
+<span class="gi">+        description: typing.Any | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        super(Required, self).__init__(schema, msg=msg, description=description)</span>
+<span class="w"> </span>        self.default = default_factory(default)
+
+
+<span class="gu">@@ -636,21 +1168,27 @@ class Remove(Marker):</span>
+<span class="w"> </span>    [1, 2, 3, 5, &#39;7&#39;]
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, schema_: Schemable, msg: typing.Optional[str]=None,</span>
+<span class="gd">-        description: (typing.Any | None)=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        schema_: Schemable,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        description: typing.Any | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        super().__init__(schema_, msg, description)
+<span class="gd">-        self.__hash__ = cache(lambda : object.__hash__(self))</span>
+<span class="gi">+        self.__hash__ = cache(lambda: object.__hash__(self))  # type: ignore[method-assign]</span>
+
+<span class="w"> </span>    def __call__(self, schema: Schemable):
+<span class="w"> </span>        super(Remove, self).__call__(schema)
+<span class="w"> </span>        return self.__class__
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;Remove(%r)&#39; % (self.schema,)</span>
+<span class="gi">+        return &quot;Remove(%r)&quot; % (self.schema,)</span>
+
+
+<span class="gd">-def message(default: typing.Optional[str]=None, cls: typing.Optional[typing</span>
+<span class="gd">-    .Type[Error]]=None) -&gt;typing.Callable:</span>
+<span class="gi">+def message(</span>
+<span class="gi">+    default: typing.Optional[str] = None,</span>
+<span class="gi">+    cls: typing.Optional[typing.Type[Error]] = None,</span>
+<span class="gi">+) -&gt; typing.Callable:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Convenience decorator to allow functions to provide a message.
+
+<span class="w"> </span>    Set a default message:
+<span class="gu">@@ -678,20 +1216,56 @@ def message(default: typing.Optional[str]=None, cls: typing.Optional[typing</span>
+<span class="w"> </span>        ... except er.MultipleInvalid as e:
+<span class="w"> </span>        ...   assert isinstance(e.errors[0], IntegerInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if cls and not issubclass(cls, er.Invalid):</span>
+<span class="gi">+        raise er.SchemaError(</span>
+<span class="gi">+            &quot;message can only use subclases of Invalid as custom class&quot;</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    def decorator(f):</span>
+<span class="gi">+        @wraps(f)</span>
+<span class="gi">+        def check(msg=None, clsoverride=None):</span>
+<span class="gi">+            @wraps(f)</span>
+<span class="gi">+            def wrapper(*args, **kwargs):</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    return f(*args, **kwargs)</span>
+<span class="gi">+                except ValueError:</span>
+<span class="gi">+                    raise (clsoverride or cls or er.ValueInvalid)(</span>
+<span class="gi">+                        msg or default or &#39;invalid value&#39;</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="gi">+            return wrapper</span>
+<span class="gi">+</span>
+<span class="gi">+        return check</span>
+<span class="gi">+</span>
+<span class="gi">+    return decorator</span>
+
+
+<span class="w"> </span>def _args_to_dict(func, args):
+<span class="w"> </span>    &quot;&quot;&quot;Returns argument names as values as key-value pairs.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if sys.version_info &gt;= (3, 0):</span>
+<span class="gi">+        arg_count = func.__code__.co_argcount</span>
+<span class="gi">+        arg_names = func.__code__.co_varnames[:arg_count]</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        arg_count = func.func_code.co_argcount</span>
+<span class="gi">+        arg_names = func.func_code.co_varnames[:arg_count]</span>
+<span class="gi">+</span>
+<span class="gi">+    arg_value_list = list(args)</span>
+<span class="gi">+    arguments = dict(</span>
+<span class="gi">+        (arg_name, arg_value_list[i])</span>
+<span class="gi">+        for i, arg_name in enumerate(arg_names)</span>
+<span class="gi">+        if i &lt; len(arg_value_list)</span>
+<span class="gi">+    )</span>
+<span class="gi">+    return arguments</span>
+
+
+<span class="w"> </span>def _merge_args_with_kwargs(args_dict, kwargs_dict):
+<span class="w"> </span>    &quot;&quot;&quot;Merge args with kwargs.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ret = args_dict.copy()</span>
+<span class="gi">+    ret.update(kwargs_dict)</span>
+<span class="gi">+    return ret</span>
+
+
+<span class="gd">-def validate(*a, **kw) -&gt;typing.Callable:</span>
+<span class="gi">+def validate(*a, **kw) -&gt; typing.Callable:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Decorator for validating arguments of a function against a given schema.
+
+<span class="w"> </span>    Set restrictions for arguments:
+<span class="gu">@@ -707,4 +1281,35 @@ def validate(*a, **kw) -&gt;typing.Callable:</span>
+<span class="w"> </span>        ...   return arg1 * 2
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    RETURNS_KEY = &#39;__return__&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    def validate_schema_decorator(func):</span>
+<span class="gi">+        returns_defined = False</span>
+<span class="gi">+        returns = None</span>
+<span class="gi">+</span>
+<span class="gi">+        schema_args_dict = _args_to_dict(func, a)</span>
+<span class="gi">+        schema_arguments = _merge_args_with_kwargs(schema_args_dict, kw)</span>
+<span class="gi">+</span>
+<span class="gi">+        if RETURNS_KEY in schema_arguments:</span>
+<span class="gi">+            returns_defined = True</span>
+<span class="gi">+            returns = schema_arguments[RETURNS_KEY]</span>
+<span class="gi">+            del schema_arguments[RETURNS_KEY]</span>
+<span class="gi">+</span>
+<span class="gi">+        input_schema = (</span>
+<span class="gi">+            Schema(schema_arguments, extra=ALLOW_EXTRA)</span>
+<span class="gi">+            if len(schema_arguments) != 0</span>
+<span class="gi">+            else lambda x: x</span>
+<span class="gi">+        )</span>
+<span class="gi">+        output_schema = Schema(returns) if returns_defined else lambda x: x</span>
+<span class="gi">+</span>
+<span class="gi">+        @wraps(func)</span>
+<span class="gi">+        def func_wrapper(*args, **kwargs):</span>
+<span class="gi">+            args_dict = _args_to_dict(func, args)</span>
+<span class="gi">+            arguments = _merge_args_with_kwargs(args_dict, kwargs)</span>
+<span class="gi">+            validated_arguments = input_schema(arguments)</span>
+<span class="gi">+            output = func(**validated_arguments)</span>
+<span class="gi">+            return output_schema(output)</span>
+<span class="gi">+</span>
+<span class="gi">+        return func_wrapper</span>
+<span class="gi">+</span>
+<span class="gi">+    return validate_schema_decorator</span>
+<span class="gh">diff --git a/voluptuous/util.py b/voluptuous/util.py</span>
+<span class="gh">index fe15b1a..0bf9302 100644</span>
+<span class="gd">--- a/voluptuous/util.py</span>
+<span class="gi">+++ b/voluptuous/util.py</span>
+<span class="gu">@@ -1,59 +1,65 @@</span>
+<span class="gi">+# F401: &quot;imported but unused&quot;</span>
+<span class="gi">+# fmt: off</span>
+<span class="w"> </span>import typing
+<span class="gd">-from voluptuous import validators</span>
+<span class="gd">-from voluptuous.error import Invalid, LiteralInvalid, TypeInvalid</span>
+<span class="gd">-from voluptuous.schema_builder import DefaultFactory</span>
+<span class="gd">-from voluptuous.schema_builder import Schema, default_factory, raises</span>
+<span class="gi">+</span>
+<span class="gi">+from voluptuous import validators  # noqa: F401</span>
+<span class="gi">+from voluptuous.error import Invalid, LiteralInvalid, TypeInvalid  # noqa: F401</span>
+<span class="gi">+from voluptuous.schema_builder import DefaultFactory  # noqa: F401</span>
+<span class="gi">+from voluptuous.schema_builder import Schema, default_factory, raises  # noqa: F401</span>
+<span class="gi">+</span>
+<span class="gi">+# fmt: on</span>
+<span class="gi">+</span>
+<span class="w"> </span>__author__ = &#39;tusharmakkar08&#39;
+
+
+<span class="gd">-def Lower(v: str) -&gt;str:</span>
+<span class="gi">+def Lower(v: str) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Transform a string to lower case.
+
+<span class="w"> </span>    &gt;&gt;&gt; s = Schema(Lower)
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;HI&#39;)
+<span class="w"> </span>    &#39;hi&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return str(v).lower()</span>
+
+
+<span class="gd">-def Upper(v: str) -&gt;str:</span>
+<span class="gi">+def Upper(v: str) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Transform a string to upper case.
+
+<span class="w"> </span>    &gt;&gt;&gt; s = Schema(Upper)
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;hi&#39;)
+<span class="w"> </span>    &#39;HI&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return str(v).upper()</span>
+
+
+<span class="gd">-def Capitalize(v: str) -&gt;str:</span>
+<span class="gi">+def Capitalize(v: str) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Capitalise a string.
+
+<span class="w"> </span>    &gt;&gt;&gt; s = Schema(Capitalize)
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;hello world&#39;)
+<span class="w"> </span>    &#39;Hello world&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return str(v).capitalize()</span>
+
+
+<span class="gd">-def Title(v: str) -&gt;str:</span>
+<span class="gi">+def Title(v: str) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Title case a string.
+
+<span class="w"> </span>    &gt;&gt;&gt; s = Schema(Title)
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;hello world&#39;)
+<span class="w"> </span>    &#39;Hello World&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return str(v).title()</span>
+
+
+<span class="gd">-def Strip(v: str) -&gt;str:</span>
+<span class="gi">+def Strip(v: str) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Strip whitespace from a string.
+
+<span class="w"> </span>    &gt;&gt;&gt; s = Schema(Strip)
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;  hello world  &#39;)
+<span class="w"> </span>    &#39;hello world&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return str(v).strip()</span>
+
+
+<span class="w"> </span>class DefaultTo(object):
+<span class="gu">@@ -67,7 +73,7 @@ class DefaultTo(object):</span>
+<span class="w"> </span>    []
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, default_value, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, default_value, msg: typing.Optional[str] = None) -&gt; None:</span>
+<span class="w"> </span>        self.default_value = default_factory(default_value)
+<span class="w"> </span>        self.msg = msg
+
+<span class="gu">@@ -90,7 +96,7 @@ class SetTo(object):</span>
+<span class="w"> </span>    42
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, value) -&gt;None:</span>
+<span class="gi">+    def __init__(self, value) -&gt; None:</span>
+<span class="w"> </span>        self.value = default_factory(value)
+
+<span class="w"> </span>    def __call__(self, v):
+<span class="gu">@@ -112,15 +118,14 @@ class Set(object):</span>
+<span class="w"> </span>    ...   s([set([1, 2]), set([3, 4])])
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, msg: typing.Optional[str] = None) -&gt; None:</span>
+<span class="w"> </span>        self.msg = msg
+
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        try:
+<span class="w"> </span>            set_v = set(v)
+<span class="w"> </span>        except Exception as e:
+<span class="gd">-            raise TypeInvalid(self.msg or &#39;cannot be presented as set: {0}&#39;</span>
+<span class="gd">-                .format(e))</span>
+<span class="gi">+            raise TypeInvalid(self.msg or &#39;cannot be presented as set: {0}&#39;.format(e))</span>
+<span class="w"> </span>        return set_v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -128,14 +133,12 @@ class Set(object):</span>
+
+
+<span class="w"> </span>class Literal(object):
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, lit) -&gt;None:</span>
+<span class="gi">+    def __init__(self, lit) -&gt; None:</span>
+<span class="w"> </span>        self.lit = lit
+
+<span class="gd">-    def __call__(self, value, msg: typing.Optional[str]=None):</span>
+<span class="gi">+    def __call__(self, value, msg: typing.Optional[str] = None):</span>
+<span class="w"> </span>        if self.lit != value:
+<span class="gd">-            raise LiteralInvalid(msg or &#39;%s not match for %s&#39; % (value,</span>
+<span class="gd">-                self.lit))</span>
+<span class="gi">+            raise LiteralInvalid(msg or &#39;%s not match for %s&#39; % (value, self.lit))</span>
+<span class="w"> </span>        else:
+<span class="w"> </span>            return self.lit
+
+<span class="gh">diff --git a/voluptuous/validators.py b/voluptuous/validators.py</span>
+<span class="gh">index 88b50f6..d385260 100644</span>
+<span class="gd">--- a/voluptuous/validators.py</span>
+<span class="gi">+++ b/voluptuous/validators.py</span>
+<span class="gu">@@ -1,4 +1,6 @@</span>
+<span class="gi">+# fmt: off</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="gi">+</span>
+<span class="w"> </span>import datetime
+<span class="w"> </span>import os
+<span class="w"> </span>import re
+<span class="gu">@@ -6,30 +8,73 @@ import sys</span>
+<span class="w"> </span>import typing
+<span class="w"> </span>from decimal import Decimal, InvalidOperation
+<span class="w"> </span>from functools import wraps
+<span class="gd">-from voluptuous.error import AllInvalid, AnyInvalid, BooleanInvalid, CoerceInvalid, ContainsInvalid, DateInvalid, DatetimeInvalid, DirInvalid, EmailInvalid, ExactSequenceInvalid, FalseInvalid, FileInvalid, InInvalid, Invalid, LengthInvalid, MatchInvalid, MultipleInvalid, NotEnoughValid, NotInInvalid, PathInvalid, RangeInvalid, TooManyValid, TrueInvalid, TypeInvalid, UrlInvalid</span>
+<span class="gd">-from voluptuous.schema_builder import Schema, Schemable, message, raises</span>
+<span class="gi">+</span>
+<span class="gi">+from voluptuous.error import (</span>
+<span class="gi">+    AllInvalid, AnyInvalid, BooleanInvalid, CoerceInvalid, ContainsInvalid, DateInvalid,</span>
+<span class="gi">+    DatetimeInvalid, DirInvalid, EmailInvalid, ExactSequenceInvalid, FalseInvalid,</span>
+<span class="gi">+    FileInvalid, InInvalid, Invalid, LengthInvalid, MatchInvalid, MultipleInvalid,</span>
+<span class="gi">+    NotEnoughValid, NotInInvalid, PathInvalid, RangeInvalid, TooManyValid, TrueInvalid,</span>
+<span class="gi">+    TypeInvalid, UrlInvalid,</span>
+<span class="gi">+)</span>
+<span class="gi">+</span>
+<span class="gi">+# F401: flake8 complains about &#39;raises&#39; not being used, but it is used in doctests</span>
+<span class="gi">+from voluptuous.schema_builder import Schema, Schemable, message, raises  # noqa: F401</span>
+<span class="gi">+</span>
+<span class="w"> </span>if typing.TYPE_CHECKING:
+<span class="w"> </span>    from _typeshed import SupportsAllComparisons
+<span class="gi">+</span>
+<span class="gi">+# fmt: on</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>Enum: typing.Union[type, None]
+<span class="w"> </span>try:
+<span class="w"> </span>    from enum import Enum
+<span class="w"> </span>except ImportError:
+<span class="w"> </span>    Enum = None
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>if sys.version_info &gt;= (3,):
+<span class="w"> </span>    import urllib.parse as urlparse
+<span class="gi">+</span>
+<span class="w"> </span>    basestring = str
+<span class="w"> </span>else:
+<span class="w"> </span>    import urlparse
+<span class="gi">+</span>
+<span class="gi">+# Taken from https://github.com/kvesteri/validators/blob/master/validators/email.py</span>
+<span class="gi">+# fmt: off</span>
+<span class="w"> </span>USER_REGEX = re.compile(
+<span class="gd">-    &#39;(?:(^[-!#$%&amp;\&#39;*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&amp;\&#39;*+/=?^_`{}|~0-9A-Z]+)*$|^&quot;([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-\\011\\013\\014\\016-\\177])*&quot;$))\\Z&#39;</span>
+<span class="gd">-    , re.IGNORECASE)</span>
+<span class="gi">+    # start anchor, because fullmatch is not available in python 2.7</span>
+<span class="gi">+    &quot;(?:&quot;</span>
+<span class="gi">+    # dot-atom</span>
+<span class="gi">+    r&quot;(^[-!#$%&amp;&#39;*+/=?^_`{}|~0-9A-Z]+&quot;</span>
+<span class="gi">+    r&quot;(\.[-!#$%&amp;&#39;*+/=?^_`{}|~0-9A-Z]+)*$&quot;</span>
+<span class="gi">+    # quoted-string</span>
+<span class="gi">+    r&#39;|^&quot;([\001-\010\013\014\016-\037!#-\[\]-\177]|&#39;</span>
+<span class="gi">+    r&quot;&quot;&quot;\\[\001-\011\013\014\016-\177])*&quot;$)&quot;&quot;&quot;</span>
+<span class="gi">+    # end anchor, because fullmatch is not available in python 2.7</span>
+<span class="gi">+    r&quot;)\Z&quot;,</span>
+<span class="gi">+    re.IGNORECASE,</span>
+<span class="gi">+)</span>
+<span class="w"> </span>DOMAIN_REGEX = re.compile(
+<span class="gd">-    &#39;(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\\.)+(?:[A-Z]{2,6}\\.?|[A-Z0-9-]{2,}\\.?$)|^\\[(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}\\]$)\\Z&#39;</span>
+<span class="gd">-    , re.IGNORECASE)</span>
+<span class="gi">+    # start anchor, because fullmatch is not available in python 2.7</span>
+<span class="gi">+    &quot;(?:&quot;</span>
+<span class="gi">+    # domain</span>
+<span class="gi">+    r&#39;(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+&#39;</span>
+<span class="gi">+    # tld</span>
+<span class="gi">+    r&#39;(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?$)&#39;</span>
+<span class="gi">+    # literal form, ipv4 address (SMTP 4.1.3)</span>
+<span class="gi">+    r&#39;|^\[(25[0-5]|2[0-4]\d|[0-1]?\d?\d)&#39;</span>
+<span class="gi">+    r&#39;(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}\]$&#39;</span>
+<span class="gi">+    # end anchor, because fullmatch is not available in python 2.7</span>
+<span class="gi">+    r&quot;)\Z&quot;,</span>
+<span class="gi">+    re.IGNORECASE,</span>
+<span class="gi">+)</span>
+<span class="gi">+# fmt: on</span>
+<span class="gi">+</span>
+<span class="w"> </span>__author__ = &#39;tusharmakkar08&#39;
+
+
+<span class="gd">-def truth(f: typing.Callable) -&gt;typing.Callable:</span>
+<span class="gi">+def truth(f: typing.Callable) -&gt; typing.Callable:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Convenience decorator to convert truth functions into validators.
+
+<span class="w"> </span>    &gt;&gt;&gt; @truth
+<span class="gu">@@ -41,7 +86,15 @@ def truth(f: typing.Callable) -&gt;typing.Callable:</span>
+<span class="w"> </span>    &gt;&gt;&gt; with raises(MultipleInvalid, &#39;not a valid value&#39;):
+<span class="w"> </span>    ...   validate(&#39;/notavaliddir&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    @wraps(f)</span>
+<span class="gi">+    def check(v):</span>
+<span class="gi">+        t = f(v)</span>
+<span class="gi">+        if not t:</span>
+<span class="gi">+            raise ValueError</span>
+<span class="gi">+        return v</span>
+<span class="gi">+</span>
+<span class="gi">+    return check</span>
+
+
+<span class="w"> </span>class Coerce(object):
+<span class="gu">@@ -65,8 +118,11 @@ class Coerce(object):</span>
+<span class="w"> </span>        ...   validate(&#39;foo&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, type: typing.Union[type, typing.Callable], msg:</span>
+<span class="gd">-        typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        type: typing.Union[type, typing.Callable],</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.type = type
+<span class="w"> </span>        self.msg = msg
+<span class="w"> </span>        self.type_name = type.__name__
+<span class="gu">@@ -75,10 +131,9 @@ class Coerce(object):</span>
+<span class="w"> </span>        try:
+<span class="w"> </span>            return self.type(v)
+<span class="w"> </span>        except (ValueError, TypeError, InvalidOperation):
+<span class="gd">-            msg = self.msg or &#39;expected %s&#39; % self.type_name</span>
+<span class="gi">+            msg = self.msg or (&#39;expected %s&#39; % self.type_name)</span>
+<span class="w"> </span>            if not self.msg and Enum and issubclass(self.type, Enum):
+<span class="gd">-                msg += &#39; or one of %s&#39; % str([e.value for e in self.type])[1:-1</span>
+<span class="gd">-                    ]</span>
+<span class="gi">+                msg += &quot; or one of %s&quot; % str([e.value for e in self.type])[1:-1]</span>
+<span class="w"> </span>            raise CoerceInvalid(msg)
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -109,7 +164,7 @@ def IsTrue(v):</span>
+<span class="w"> </span>    ... except MultipleInvalid as e:
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], TrueInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v</span>
+
+
+<span class="w"> </span>@message(&#39;value was not false&#39;, cls=FalseInvalid)
+<span class="gu">@@ -129,7 +184,9 @@ def IsFalse(v):</span>
+<span class="w"> </span>    ... except MultipleInvalid as e:
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], FalseInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if v:</span>
+<span class="gi">+        raise ValueError</span>
+<span class="gi">+    return v</span>
+
+
+<span class="w"> </span>@message(&#39;expected boolean&#39;, cls=BooleanInvalid)
+<span class="gu">@@ -153,7 +210,14 @@ def Boolean(v):</span>
+<span class="w"> </span>    ... except MultipleInvalid as e:
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], BooleanInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(v, basestring):</span>
+<span class="gi">+        v = v.lower()</span>
+<span class="gi">+        if v in (&#39;1&#39;, &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;, &#39;enable&#39;):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        if v in (&#39;0&#39;, &#39;false&#39;, &#39;no&#39;, &#39;off&#39;, &#39;disable&#39;):</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        raise ValueError</span>
+<span class="gi">+    return bool(v)</span>
+
+
+<span class="w"> </span>class _WithSubValidators(object):
+<span class="gu">@@ -164,14 +228,15 @@ class _WithSubValidators(object):</span>
+<span class="w"> </span>    sub-validators are compiled by the parent `Schema`.
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, *validators, msg=None, required=False, discriminant=</span>
+<span class="gd">-        None, **kwargs) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self, *validators, msg=None, required=False, discriminant=None, **kwargs</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.validators = validators
+<span class="w"> </span>        self.msg = msg
+<span class="w"> </span>        self.required = required
+<span class="w"> </span>        self.discriminant = discriminant
+
+<span class="gd">-    def __voluptuous_compile__(self, schema: Schema) -&gt;typing.Callable:</span>
+<span class="gi">+    def __voluptuous_compile__(self, schema: Schema) -&gt; typing.Callable:</span>
+<span class="w"> </span>        self._compiled = []
+<span class="w"> </span>        old_required = schema.required
+<span class="w"> </span>        self.schema = schema
+<span class="gu">@@ -181,12 +246,32 @@ class _WithSubValidators(object):</span>
+<span class="w"> </span>        schema.required = old_required
+<span class="w"> </span>        return self._run
+
+<span class="gi">+    def _run(self, path: typing.List[typing.Hashable], value):</span>
+<span class="gi">+        if self.discriminant is not None:</span>
+<span class="gi">+            self._compiled = [</span>
+<span class="gi">+                self.schema._compile(v)</span>
+<span class="gi">+                for v in self.discriminant(value, self.validators)</span>
+<span class="gi">+            ]</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._exec(self._compiled, value, path)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        return self._exec((Schema(val) for val in self.validators), v)
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;%s(%s, msg=%r)&#39; % (self.__class__.__name__, &#39;, &#39;.join(repr(</span>
+<span class="gd">-            v) for v in self.validators), self.msg)</span>
+<span class="gi">+        return &#39;%s(%s, msg=%r)&#39; % (</span>
+<span class="gi">+            self.__class__.__name__,</span>
+<span class="gi">+            &quot;, &quot;.join(repr(v) for v in self.validators),</span>
+<span class="gi">+            self.msg,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    def _exec(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        funcs: typing.Iterable,</span>
+<span class="gi">+        v,</span>
+<span class="gi">+        path: typing.Optional[typing.List[typing.Hashable]] = None,</span>
+<span class="gi">+    ):</span>
+<span class="gi">+        raise NotImplementedError()</span>
+
+
+<span class="w"> </span>class Any(_WithSubValidators):
+<span class="gu">@@ -214,7 +299,24 @@ class Any(_WithSubValidators):</span>
+<span class="w"> </span>    ...   validate(4)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gi">+    def _exec(self, funcs, v, path=None):</span>
+<span class="gi">+        error = None</span>
+<span class="gi">+        for func in funcs:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if path is None:</span>
+<span class="gi">+                    return func(v)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return func(path, v)</span>
+<span class="gi">+            except Invalid as e:</span>
+<span class="gi">+                if error is None or len(e.path) &gt; len(error.path):</span>
+<span class="gi">+                    error = e</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if error:</span>
+<span class="gi">+                raise error if self.msg is None else AnyInvalid(self.msg, path=path)</span>
+<span class="gi">+            raise AnyInvalid(self.msg or &#39;no valid value found&#39;, path=path)</span>
+<span class="gi">+</span>
+
+<span class="gi">+# Convenience alias</span>
+<span class="w"> </span>Or = Any
+
+
+<span class="gu">@@ -239,7 +341,24 @@ class Union(_WithSubValidators):</span>
+<span class="w"> </span>    Without the discriminant, the exception would be &quot;extra keys not allowed @ data[&#39;b_val&#39;]&quot;
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gi">+    def _exec(self, funcs, v, path=None):</span>
+<span class="gi">+        error = None</span>
+<span class="gi">+        for func in funcs:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if path is None:</span>
+<span class="gi">+                    return func(v)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return func(path, v)</span>
+<span class="gi">+            except Invalid as e:</span>
+<span class="gi">+                if error is None or len(e.path) &gt; len(error.path):</span>
+<span class="gi">+                    error = e</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if error:</span>
+<span class="gi">+                raise error if self.msg is None else AnyInvalid(self.msg, path=path)</span>
+<span class="gi">+            raise AnyInvalid(self.msg or &#39;no valid value found&#39;, path=path)</span>
+<span class="gi">+</span>
+
+<span class="gi">+# Convenience alias</span>
+<span class="w"> </span>Switch = Union
+
+
+<span class="gu">@@ -256,7 +375,19 @@ class All(_WithSubValidators):</span>
+<span class="w"> </span>    10
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gi">+    def _exec(self, funcs, v, path=None):</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            for func in funcs:</span>
+<span class="gi">+                if path is None:</span>
+<span class="gi">+                    v = func(v)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    v = func(path, v)</span>
+<span class="gi">+        except Invalid as e:</span>
+<span class="gi">+            raise e if self.msg is None else AllInvalid(self.msg, path=path)</span>
+<span class="gi">+        return v</span>
+
+<span class="gi">+</span>
+<span class="gi">+# Convenience alias</span>
+<span class="w"> </span>And = All
+
+
+<span class="gu">@@ -279,8 +410,9 @@ class Match(object):</span>
+<span class="w"> </span>    &#39;0x123ef4&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, pattern: typing.Union[re.Pattern, str], msg: typing.</span>
+<span class="gd">-        Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self, pattern: typing.Union[re.Pattern, str], msg: typing.Optional[str] = None</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        if isinstance(pattern, basestring):
+<span class="w"> </span>            pattern = re.compile(pattern)
+<span class="w"> </span>        self.pattern = pattern
+<span class="gu">@@ -290,11 +422,12 @@ class Match(object):</span>
+<span class="w"> </span>        try:
+<span class="w"> </span>            match = self.pattern.match(v)
+<span class="w"> </span>        except TypeError:
+<span class="gd">-            raise MatchInvalid(&#39;expected string or buffer&#39;)</span>
+<span class="gi">+            raise MatchInvalid(&quot;expected string or buffer&quot;)</span>
+<span class="w"> </span>        if not match:
+<span class="gd">-            raise MatchInvalid(self.msg or</span>
+<span class="gd">-                &#39;does not match regular expression {}&#39;.format(self.pattern.</span>
+<span class="gd">-                pattern))</span>
+<span class="gi">+            raise MatchInvalid(</span>
+<span class="gi">+                self.msg</span>
+<span class="gi">+                or &#39;does not match regular expression {}&#39;.format(self.pattern.pattern)</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -310,8 +443,12 @@ class Replace(object):</span>
+<span class="w"> </span>    &#39;I say goodbye&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, pattern: typing.Union[re.Pattern, str], substitution:</span>
+<span class="gd">-        str, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        pattern: typing.Union[re.Pattern, str],</span>
+<span class="gi">+        substitution: str,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        if isinstance(pattern, basestring):
+<span class="w"> </span>            pattern = re.compile(pattern)
+<span class="w"> </span>        self.pattern = pattern
+<span class="gu">@@ -322,8 +459,18 @@ class Replace(object):</span>
+<span class="w"> </span>        return self.pattern.sub(self.substitution, v)
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;Replace(%r, %r, msg=%r)&#39; % (self.pattern.pattern, self.</span>
+<span class="gd">-            substitution, self.msg)</span>
+<span class="gi">+        return &#39;Replace(%r, %r, msg=%r)&#39; % (</span>
+<span class="gi">+            self.pattern.pattern,</span>
+<span class="gi">+            self.substitution,</span>
+<span class="gi">+            self.msg,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def _url_validation(v: str) -&gt; urlparse.ParseResult:</span>
+<span class="gi">+    parsed = urlparse.urlparse(v)</span>
+<span class="gi">+    if not parsed.scheme or not parsed.netloc:</span>
+<span class="gi">+        raise UrlInvalid(&quot;must have a URL scheme and host&quot;)</span>
+<span class="gi">+    return parsed</span>
+
+
+<span class="w"> </span>@message(&#39;expected an email address&#39;, cls=EmailInvalid)
+<span class="gu">@@ -340,7 +487,16 @@ def Email(v):</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;t@x.com&#39;)
+<span class="w"> </span>    &#39;t@x.com&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        if not v or &quot;@&quot; not in v:</span>
+<span class="gi">+            raise EmailInvalid(&quot;Invalid email address&quot;)</span>
+<span class="gi">+        user_part, domain_part = v.rsplit(&#39;@&#39;, 1)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not (USER_REGEX.match(user_part) and DOMAIN_REGEX.match(domain_part)):</span>
+<span class="gi">+            raise EmailInvalid(&quot;Invalid email address&quot;)</span>
+<span class="gi">+        return v</span>
+<span class="gi">+    except:  # noqa: E722</span>
+<span class="gi">+        raise ValueError</span>
+
+
+<span class="w"> </span>@message(&#39;expected a fully qualified domain name URL&#39;, cls=UrlInvalid)
+<span class="gu">@@ -353,7 +509,13 @@ def FqdnUrl(v):</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;http://w3.org&#39;)
+<span class="w"> </span>    &#39;http://w3.org&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        parsed_url = _url_validation(v)</span>
+<span class="gi">+        if &quot;.&quot; not in parsed_url.netloc:</span>
+<span class="gi">+            raise UrlInvalid(&quot;must have a domain name in URL&quot;)</span>
+<span class="gi">+        return v</span>
+<span class="gi">+    except:  # noqa: E722</span>
+<span class="gi">+        raise ValueError</span>
+
+
+<span class="w"> </span>@message(&#39;expected a URL&#39;, cls=UrlInvalid)
+<span class="gu">@@ -366,7 +528,11 @@ def Url(v):</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;http://w3.org&#39;)
+<span class="w"> </span>    &#39;http://w3.org&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        _url_validation(v)</span>
+<span class="gi">+        return v</span>
+<span class="gi">+    except:  # noqa: E722</span>
+<span class="gi">+        raise ValueError</span>
+
+
+<span class="w"> </span>@message(&#39;Not a file&#39;, cls=FileInvalid)
+<span class="gu">@@ -381,7 +547,14 @@ def IsFile(v):</span>
+<span class="w"> </span>    &gt;&gt;&gt; with raises(FileInvalid, &#39;Not a file&#39;):
+<span class="w"> </span>    ...   IsFile()(None)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        if v:</span>
+<span class="gi">+            v = str(v)</span>
+<span class="gi">+            return os.path.isfile(v)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise FileInvalid(&#39;Not a file&#39;)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        raise FileInvalid(&#39;Not a file&#39;)</span>
+
+
+<span class="w"> </span>@message(&#39;Not a directory&#39;, cls=DirInvalid)
+<span class="gu">@@ -394,7 +567,14 @@ def IsDir(v):</span>
+<span class="w"> </span>    &gt;&gt;&gt; with raises(DirInvalid, &#39;Not a directory&#39;):
+<span class="w"> </span>    ...   IsDir()(None)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        if v:</span>
+<span class="gi">+            v = str(v)</span>
+<span class="gi">+            return os.path.isdir(v)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise DirInvalid(&quot;Not a directory&quot;)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        raise DirInvalid(&quot;Not a directory&quot;)</span>
+
+
+<span class="w"> </span>@message(&#39;path does not exist&#39;, cls=PathInvalid)
+<span class="gu">@@ -409,10 +589,17 @@ def PathExists(v):</span>
+<span class="w"> </span>    &gt;&gt;&gt; with raises(PathInvalid, &#39;Not a Path&#39;):
+<span class="w"> </span>    ...   PathExists()(None)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        if v:</span>
+<span class="gi">+            v = str(v)</span>
+<span class="gi">+            return os.path.exists(v)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise PathInvalid(&quot;Not a Path&quot;)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        raise PathInvalid(&quot;Not a Path&quot;)</span>
+
+
+<span class="gd">-def Maybe(validator: Schemable, msg: typing.Optional[str]=None):</span>
+<span class="gi">+def Maybe(validator: Schemable, msg: typing.Optional[str] = None):</span>
+<span class="w"> </span>    &quot;&quot;&quot;Validate that the object matches given validator or is None.
+
+<span class="w"> </span>    :raises Invalid: If the value does not match the given validator and is not
+<span class="gu">@@ -425,7 +612,7 @@ def Maybe(validator: Schemable, msg: typing.Optional[str]=None):</span>
+<span class="w"> </span>    ...  s(&quot;string&quot;)
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return Any(None, validator, msg=msg)</span>
+
+
+<span class="w"> </span>class Range(object):
+<span class="gu">@@ -449,9 +636,14 @@ class Range(object):</span>
+<span class="w"> </span>    ...   Schema(Range(max=10, max_included=False))(20)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, min: (SupportsAllComparisons | None)=None, max: (</span>
+<span class="gd">-        SupportsAllComparisons | None)=None, min_included: bool=True,</span>
+<span class="gd">-        max_included: bool=True, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        min: SupportsAllComparisons | None = None,</span>
+<span class="gi">+        max: SupportsAllComparisons | None = None,</span>
+<span class="gi">+        min_included: bool = True,</span>
+<span class="gi">+        max_included: bool = True,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.min = min
+<span class="w"> </span>        self.max = max
+<span class="w"> </span>        self.min_included = min_included
+<span class="gu">@@ -462,28 +654,41 @@ class Range(object):</span>
+<span class="w"> </span>        try:
+<span class="w"> </span>            if self.min_included:
+<span class="w"> </span>                if self.min is not None and not v &gt;= self.min:
+<span class="gd">-                    raise RangeInvalid(self.msg or </span>
+<span class="gd">-                        &#39;value must be at least %s&#39; % self.min)</span>
+<span class="gd">-            elif self.min is not None and not v &gt; self.min:</span>
+<span class="gd">-                raise RangeInvalid(self.msg or </span>
+<span class="gd">-                    &#39;value must be higher than %s&#39; % self.min)</span>
+<span class="gi">+                    raise RangeInvalid(</span>
+<span class="gi">+                        self.msg or &#39;value must be at least %s&#39; % self.min</span>
+<span class="gi">+                    )</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if self.min is not None and not v &gt; self.min:</span>
+<span class="gi">+                    raise RangeInvalid(</span>
+<span class="gi">+                        self.msg or &#39;value must be higher than %s&#39; % self.min</span>
+<span class="gi">+                    )</span>
+<span class="w"> </span>            if self.max_included:
+<span class="w"> </span>                if self.max is not None and not v &lt;= self.max:
+<span class="gd">-                    raise RangeInvalid(self.msg or </span>
+<span class="gd">-                        &#39;value must be at most %s&#39; % self.max)</span>
+<span class="gd">-            elif self.max is not None and not v &lt; self.max:</span>
+<span class="gd">-                raise RangeInvalid(self.msg or </span>
+<span class="gd">-                    &#39;value must be lower than %s&#39; % self.max)</span>
+<span class="gi">+                    raise RangeInvalid(</span>
+<span class="gi">+                        self.msg or &#39;value must be at most %s&#39; % self.max</span>
+<span class="gi">+                    )</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if self.max is not None and not v &lt; self.max:</span>
+<span class="gi">+                    raise RangeInvalid(</span>
+<span class="gi">+                        self.msg or &#39;value must be lower than %s&#39; % self.max</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="w"> </span>            return v
+<span class="gi">+</span>
+<span class="gi">+        # Objects that lack a partial ordering, e.g. None or strings will raise TypeError</span>
+<span class="w"> </span>        except TypeError:
+<span class="gd">-            raise RangeInvalid(self.msg or</span>
+<span class="gd">-                &#39;invalid value or type (must have a partial ordering)&#39;)</span>
+<span class="gi">+            raise RangeInvalid(</span>
+<span class="gi">+                self.msg or &#39;invalid value or type (must have a partial ordering)&#39;</span>
+<span class="gi">+            )</span>
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return (</span>
+<span class="gd">-            &#39;Range(min=%r, max=%r, min_included=%r, max_included=%r, msg=%r)&#39; %</span>
+<span class="gd">-            (self.min, self.max, self.min_included, self.max_included, self</span>
+<span class="gd">-            .msg))</span>
+<span class="gi">+        return &#39;Range(min=%r, max=%r, min_included=%r, max_included=%r, msg=%r)&#39; % (</span>
+<span class="gi">+            self.min,</span>
+<span class="gi">+            self.max,</span>
+<span class="gi">+            self.min_included,</span>
+<span class="gi">+            self.max_included,</span>
+<span class="gi">+            self.msg,</span>
+<span class="gi">+        )</span>
+
+
+<span class="w"> </span>class Clamp(object):
+<span class="gu">@@ -500,9 +705,12 @@ class Clamp(object):</span>
+<span class="w"> </span>    0
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, min: (SupportsAllComparisons | None)=None, max: (</span>
+<span class="gd">-        SupportsAllComparisons | None)=None, msg: typing.Optional[str]=None</span>
+<span class="gd">-        ) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        min: SupportsAllComparisons | None = None,</span>
+<span class="gi">+        max: SupportsAllComparisons | None = None,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.min = min
+<span class="w"> </span>        self.max = max
+<span class="w"> </span>        self.msg = msg
+<span class="gu">@@ -514,9 +722,12 @@ class Clamp(object):</span>
+<span class="w"> </span>            if self.max is not None and v &gt; self.max:
+<span class="w"> </span>                v = self.max
+<span class="w"> </span>            return v
+<span class="gi">+</span>
+<span class="gi">+        # Objects that lack a partial ordering, e.g. None or strings will raise TypeError</span>
+<span class="w"> </span>        except TypeError:
+<span class="gd">-            raise RangeInvalid(self.msg or</span>
+<span class="gd">-                &#39;invalid value or type (must have a partial ordering)&#39;)</span>
+<span class="gi">+            raise RangeInvalid(</span>
+<span class="gi">+                self.msg or &#39;invalid value or type (must have a partial ordering)&#39;</span>
+<span class="gi">+            )</span>
+
+<span class="w"> </span>    def __repr__(self):
+<span class="w"> </span>        return &#39;Clamp(min=%s, max=%s)&#39; % (self.min, self.max)
+<span class="gu">@@ -525,9 +736,12 @@ class Clamp(object):</span>
+<span class="w"> </span>class Length(object):
+<span class="w"> </span>    &quot;&quot;&quot;The length of a value must be in a certain range.&quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, min: (SupportsAllComparisons | None)=None, max: (</span>
+<span class="gd">-        SupportsAllComparisons | None)=None, msg: typing.Optional[str]=None</span>
+<span class="gd">-        ) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        min: SupportsAllComparisons | None = None,</span>
+<span class="gi">+        max: SupportsAllComparisons | None = None,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.min = min
+<span class="w"> </span>        self.max = max
+<span class="w"> </span>        self.msg = msg
+<span class="gu">@@ -535,12 +749,16 @@ class Length(object):</span>
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        try:
+<span class="w"> </span>            if self.min is not None and len(v) &lt; self.min:
+<span class="gd">-                raise LengthInvalid(self.msg or </span>
+<span class="gd">-                    &#39;length of value must be at least %s&#39; % self.min)</span>
+<span class="gi">+                raise LengthInvalid(</span>
+<span class="gi">+                    self.msg or &#39;length of value must be at least %s&#39; % self.min</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>            if self.max is not None and len(v) &gt; self.max:
+<span class="gd">-                raise LengthInvalid(self.msg or </span>
+<span class="gd">-                    &#39;length of value must be at most %s&#39; % self.max)</span>
+<span class="gi">+                raise LengthInvalid(</span>
+<span class="gi">+                    self.msg or &#39;length of value must be at most %s&#39; % self.max</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>            return v
+<span class="gi">+</span>
+<span class="gi">+        # Objects that have no length e.g. None or strings will raise TypeError</span>
+<span class="w"> </span>        except TypeError:
+<span class="w"> </span>            raise RangeInvalid(self.msg or &#39;invalid value or type&#39;)
+
+<span class="gu">@@ -550,10 +768,12 @@ class Length(object):</span>
+
+<span class="w"> </span>class Datetime(object):
+<span class="w"> </span>    &quot;&quot;&quot;Validate that the value matches the datetime format.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    DEFAULT_FORMAT = &#39;%Y-%m-%dT%H:%M:%S.%fZ&#39;
+
+<span class="gd">-    def __init__(self, format: typing.Optional[str]=None, msg: typing.</span>
+<span class="gd">-        Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self, format: typing.Optional[str] = None, msg: typing.Optional[str] = None</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.format = format or self.DEFAULT_FORMAT
+<span class="w"> </span>        self.msg = msg
+
+<span class="gu">@@ -561,8 +781,9 @@ class Datetime(object):</span>
+<span class="w"> </span>        try:
+<span class="w"> </span>            datetime.datetime.strptime(v, self.format)
+<span class="w"> </span>        except (TypeError, ValueError):
+<span class="gd">-            raise DatetimeInvalid(self.msg or </span>
+<span class="gd">-                &#39;value does not match expected format %s&#39; % self.format)</span>
+<span class="gi">+            raise DatetimeInvalid(</span>
+<span class="gi">+                self.msg or &#39;value does not match expected format %s&#39; % self.format</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -571,14 +792,16 @@ class Datetime(object):</span>
+
+<span class="w"> </span>class Date(Datetime):
+<span class="w"> </span>    &quot;&quot;&quot;Validate that the value matches the date format.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    DEFAULT_FORMAT = &#39;%Y-%m-%d&#39;
+
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        try:
+<span class="w"> </span>            datetime.datetime.strptime(v, self.format)
+<span class="w"> </span>        except (TypeError, ValueError):
+<span class="gd">-            raise DateInvalid(self.msg or </span>
+<span class="gd">-                &#39;value does not match expected format %s&#39; % self.format)</span>
+<span class="gi">+            raise DateInvalid(</span>
+<span class="gi">+                self.msg or &#39;value does not match expected format %s&#39; % self.format</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -588,8 +811,9 @@ class Date(Datetime):</span>
+<span class="w"> </span>class In(object):
+<span class="w"> </span>    &quot;&quot;&quot;Validate that a value is in a collection.&quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, container: typing.Container, msg: typing.Optional[</span>
+<span class="gd">-        str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self, container: typing.Container, msg: typing.Optional[str] = None</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.container = container
+<span class="w"> </span>        self.msg = msg
+
+<span class="gu">@@ -600,11 +824,14 @@ class In(object):</span>
+<span class="w"> </span>            check = True
+<span class="w"> </span>        if check:
+<span class="w"> </span>            try:
+<span class="gd">-                raise InInvalid(self.msg or</span>
+<span class="gd">-                    f&#39;value must be one of {sorted(self.container)}&#39;)</span>
+<span class="gi">+                raise InInvalid(</span>
+<span class="gi">+                    self.msg or f&#39;value must be one of {sorted(self.container)}&#39;</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>            except TypeError:
+<span class="gd">-                raise InInvalid(self.msg or</span>
+<span class="gd">-                    f&#39;value must be one of {sorted(self.container, key=str)}&#39;)</span>
+<span class="gi">+                raise InInvalid(</span>
+<span class="gi">+                    self.msg</span>
+<span class="gi">+                    or f&#39;value must be one of {sorted(self.container, key=str)}&#39;</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -614,8 +841,9 @@ class In(object):</span>
+<span class="w"> </span>class NotIn(object):
+<span class="w"> </span>    &quot;&quot;&quot;Validate that a value is not in a collection.&quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, container: typing.Iterable, msg: typing.Optional[str</span>
+<span class="gd">-        ]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self, container: typing.Iterable, msg: typing.Optional[str] = None</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.container = container
+<span class="w"> </span>        self.msg = msg
+
+<span class="gu">@@ -626,12 +854,14 @@ class NotIn(object):</span>
+<span class="w"> </span>            check = True
+<span class="w"> </span>        if check:
+<span class="w"> </span>            try:
+<span class="gd">-                raise NotInInvalid(self.msg or</span>
+<span class="gd">-                    f&#39;value must not be one of {sorted(self.container)}&#39;)</span>
+<span class="gi">+                raise NotInInvalid(</span>
+<span class="gi">+                    self.msg or f&#39;value must not be one of {sorted(self.container)}&#39;</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>            except TypeError:
+<span class="gd">-                raise NotInInvalid(self.msg or</span>
+<span class="gd">-                    f&#39;value must not be one of {sorted(self.container, key=str)}&#39;</span>
+<span class="gd">-                    )</span>
+<span class="gi">+                raise NotInInvalid(</span>
+<span class="gi">+                    self.msg</span>
+<span class="gi">+                    or f&#39;value must not be one of {sorted(self.container, key=str)}&#39;</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -648,7 +878,7 @@ class Contains(object):</span>
+<span class="w"> </span>    ...   s([3, 2])
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, item, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, item, msg: typing.Optional[str] = None) -&gt; None:</span>
+<span class="w"> </span>        self.item = item
+<span class="w"> </span>        self.msg = msg
+
+<span class="gu">@@ -681,8 +911,12 @@ class ExactSequence(object):</span>
+<span class="w"> </span>    (&#39;hourly_report&#39;, 10, [], [])
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, validators: typing.Iterable[Schemable], msg: typing.</span>
+<span class="gd">-        Optional[str]=None, **kwargs) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        validators: typing.Iterable[Schemable],</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        **kwargs,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.validators = validators
+<span class="w"> </span>        self.msg = msg
+<span class="w"> </span>        self._schemas = [Schema(val, **kwargs) for val in validators]
+<span class="gu">@@ -693,12 +927,11 @@ class ExactSequence(object):</span>
+<span class="w"> </span>        try:
+<span class="w"> </span>            v = type(v)(schema(x) for x, schema in zip(v, self._schemas))
+<span class="w"> </span>        except Invalid as e:
+<span class="gd">-            raise (e if self.msg is None else ExactSequenceInvalid(self.msg))</span>
+<span class="gi">+            raise e if self.msg is None else ExactSequenceInvalid(self.msg)</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;ExactSequence([%s])&#39; % &#39;, &#39;.join(repr(v) for v in self.</span>
+<span class="gd">-            validators)</span>
+<span class="gi">+        return &#39;ExactSequence([%s])&#39; % &quot;, &quot;.join(repr(v) for v in self.validators)</span>
+
+
+<span class="w"> </span>class Unique(object):
+<span class="gu">@@ -727,20 +960,18 @@ class Unique(object):</span>
+<span class="w"> </span>    ...   s(&#39;aabbc&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, msg: typing.Optional[str] = None) -&gt; None:</span>
+<span class="w"> </span>        self.msg = msg
+
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        try:
+<span class="w"> </span>            set_v = set(v)
+<span class="w"> </span>        except TypeError as e:
+<span class="gd">-            raise TypeInvalid(self.msg or</span>
+<span class="gd">-                &#39;contains unhashable elements: {0}&#39;.format(e))</span>
+<span class="gi">+            raise TypeInvalid(self.msg or &#39;contains unhashable elements: {0}&#39;.format(e))</span>
+<span class="w"> </span>        if len(set_v) != len(v):
+<span class="w"> </span>            seen = set()
+<span class="w"> </span>            dupes = list(set(x for x in v if x in seen or seen.add(x)))
+<span class="gd">-            raise Invalid(self.msg or &#39;contains duplicate items: {0}&#39;.</span>
+<span class="gd">-                format(dupes))</span>
+<span class="gi">+            raise Invalid(self.msg or &#39;contains duplicate items: {0}&#39;.format(dupes))</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -763,15 +994,16 @@ class Equal(object):</span>
+<span class="w"> </span>    ...     s(&#39;foo&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, target, msg: typing.Optional[str]=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, target, msg: typing.Optional[str] = None) -&gt; None:</span>
+<span class="w"> </span>        self.target = target
+<span class="w"> </span>        self.msg = msg
+
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        if v != self.target:
+<span class="gd">-            raise Invalid(self.msg or</span>
+<span class="gd">-                &#39;Values are not equal: value:{} != target:{}&#39;.format(v,</span>
+<span class="gd">-                self.target))</span>
+<span class="gi">+            raise Invalid(</span>
+<span class="gi">+                self.msg</span>
+<span class="gi">+                or &#39;Values are not equal: value:{} != target:{}&#39;.format(v, self.target)</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gu">@@ -793,8 +1025,12 @@ class Unordered(object):</span>
+<span class="w"> </span>    [1, &#39;foo&#39;]
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, validators: typing.Iterable[Schemable], msg: typing.</span>
+<span class="gd">-        Optional[str]=None, **kwargs) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        validators: typing.Iterable[Schemable],</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        **kwargs,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.validators = validators
+<span class="w"> </span>        self.msg = msg
+<span class="w"> </span>        self._schemas = [Schema(val, **kwargs) for val in validators]
+<span class="gu">@@ -802,10 +1038,15 @@ class Unordered(object):</span>
+<span class="w"> </span>    def __call__(self, v):
+<span class="w"> </span>        if not isinstance(v, (list, tuple)):
+<span class="w"> </span>            raise Invalid(self.msg or &#39;Value {} is not sequence!&#39;.format(v))
+<span class="gi">+</span>
+<span class="w"> </span>        if len(v) != len(self._schemas):
+<span class="gd">-            raise Invalid(self.msg or</span>
+<span class="gd">-                &#39;List lengths differ, value:{} != target:{}&#39;.format(len(v),</span>
+<span class="gd">-                len(self._schemas)))</span>
+<span class="gi">+            raise Invalid(</span>
+<span class="gi">+                self.msg</span>
+<span class="gi">+                or &#39;List lengths differ, value:{} != target:{}&#39;.format(</span>
+<span class="gi">+                    len(v), len(self._schemas)</span>
+<span class="gi">+                )</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="w"> </span>        consumed = set()
+<span class="w"> </span>        missing = []
+<span class="w"> </span>        for index, value in enumerate(v):
+<span class="gu">@@ -823,20 +1064,31 @@ class Unordered(object):</span>
+<span class="w"> </span>                    break
+<span class="w"> </span>            if not found:
+<span class="w"> </span>                missing.append((index, value))
+<span class="gi">+</span>
+<span class="w"> </span>        if len(missing) == 1:
+<span class="w"> </span>            el = missing[0]
+<span class="gd">-            raise Invalid(self.msg or</span>
+<span class="gd">-                &#39;Element #{} ({}) is not valid against any validator&#39;.</span>
+<span class="gd">-                format(el[0], el[1]))</span>
+<span class="gi">+            raise Invalid(</span>
+<span class="gi">+                self.msg</span>
+<span class="gi">+                or &#39;Element #{} ({}) is not valid against any validator&#39;.format(</span>
+<span class="gi">+                    el[0], el[1]</span>
+<span class="gi">+                )</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        elif missing:
+<span class="gd">-            raise MultipleInvalid([Invalid(self.msg or</span>
+<span class="gd">-                &#39;Element #{} ({}) is not valid against any validator&#39;.</span>
+<span class="gd">-                format(el[0], el[1])) for el in missing])</span>
+<span class="gi">+            raise MultipleInvalid(</span>
+<span class="gi">+                [</span>
+<span class="gi">+                    Invalid(</span>
+<span class="gi">+                        self.msg</span>
+<span class="gi">+                        or &#39;Element #{} ({}) is not valid against any validator&#39;.format(</span>
+<span class="gi">+                            el[0], el[1]</span>
+<span class="gi">+                        )</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                    for el in missing</span>
+<span class="gi">+                ]</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;Unordered([{}])&#39;.format(&#39;, &#39;.join(repr(v) for v in self.</span>
+<span class="gd">-            validators))</span>
+<span class="gi">+        return &#39;Unordered([{}])&#39;.format(&quot;, &quot;.join(repr(v) for v in self.validators))</span>
+
+
+<span class="w"> </span>class Number(object):
+<span class="gu">@@ -854,9 +1106,13 @@ class Number(object):</span>
+<span class="w"> </span>    Decimal(&#39;1234.01&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, precision: typing.Optional[int]=None, scale: typing.</span>
+<span class="gd">-        Optional[int]=None, msg: typing.Optional[str]=None, yield_decimal:</span>
+<span class="gd">-        bool=False) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        precision: typing.Optional[int] = None,</span>
+<span class="gi">+        scale: typing.Optional[int] = None,</span>
+<span class="gi">+        msg: typing.Optional[str] = None,</span>
+<span class="gi">+        yield_decimal: bool = False,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self.precision = precision
+<span class="w"> </span>        self.scale = scale
+<span class="w"> </span>        self.msg = msg
+<span class="gu">@@ -868,33 +1124,56 @@ class Number(object):</span>
+<span class="w"> </span>        :return: Decimal number
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        precision, scale, decimal_num = self._get_precision_scale(v)
+<span class="gd">-        if (self.precision is not None and self.scale is not None and </span>
+<span class="gd">-            precision != self.precision and scale != self.scale):</span>
+<span class="gd">-            raise Invalid(self.msg or </span>
+<span class="gd">-                &#39;Precision must be equal to %s, and Scale must be equal to %s&#39;</span>
+<span class="gd">-                 % (self.precision, self.scale))</span>
+<span class="gi">+</span>
+<span class="gi">+        if (</span>
+<span class="gi">+            self.precision is not None</span>
+<span class="gi">+            and self.scale is not None</span>
+<span class="gi">+            and precision != self.precision</span>
+<span class="gi">+            and scale != self.scale</span>
+<span class="gi">+        ):</span>
+<span class="gi">+            raise Invalid(</span>
+<span class="gi">+                self.msg</span>
+<span class="gi">+                or &quot;Precision must be equal to %s, and Scale must be equal to %s&quot;</span>
+<span class="gi">+                % (self.precision, self.scale)</span>
+<span class="gi">+            )</span>
+<span class="w"> </span>        else:
+<span class="w"> </span>            if self.precision is not None and precision != self.precision:
+<span class="gd">-                raise Invalid(self.msg or &#39;Precision must be equal to %s&#39; %</span>
+<span class="gd">-                    self.precision)</span>
+<span class="gi">+                raise Invalid(</span>
+<span class="gi">+                    self.msg or &quot;Precision must be equal to %s&quot; % self.precision</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="w"> </span>            if self.scale is not None and scale != self.scale:
+<span class="gd">-                raise Invalid(self.msg or &#39;Scale must be equal to %s&#39; %</span>
+<span class="gd">-                    self.scale)</span>
+<span class="gi">+                raise Invalid(self.msg or &quot;Scale must be equal to %s&quot; % self.scale)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        if self.yield_decimal:
+<span class="w"> </span>            return decimal_num
+<span class="w"> </span>        else:
+<span class="w"> </span>            return v
+
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return &#39;Number(precision=%s, scale=%s, msg=%s)&#39; % (self.precision,</span>
+<span class="gd">-            self.scale, self.msg)</span>
+<span class="gi">+        return &#39;Number(precision=%s, scale=%s, msg=%s)&#39; % (</span>
+<span class="gi">+            self.precision,</span>
+<span class="gi">+            self.scale,</span>
+<span class="gi">+            self.msg,</span>
+<span class="gi">+        )</span>
+
+<span class="gd">-    def _get_precision_scale(self, number) -&gt;typing.Tuple[int, int, Decimal]:</span>
+<span class="gi">+    def _get_precision_scale(self, number) -&gt; typing.Tuple[int, int, Decimal]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        :param number:
+<span class="w"> </span>        :return: tuple(precision, scale, decimal_number)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            decimal_num = Decimal(number)</span>
+<span class="gi">+        except InvalidOperation:</span>
+<span class="gi">+            raise Invalid(self.msg or &#39;Value must be a number enclosed with string&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        exp = decimal_num.as_tuple().exponent</span>
+<span class="gi">+        if isinstance(exp, int):</span>
+<span class="gi">+            return (len(decimal_num.as_tuple().digits), -exp, decimal_num)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # TODO: handle infinity and NaN</span>
+<span class="gi">+            # raise Invalid(self.msg or &#39;Value has no precision&#39;)</span>
+<span class="gi">+            raise TypeError(&quot;infinity and NaN have no precision&quot;)</span>
+
+
+<span class="w"> </span>class SomeOf(_WithSubValidators):
+<span class="gu">@@ -921,17 +1200,49 @@ class SomeOf(_WithSubValidators):</span>
+<span class="w"> </span>    ...     validate(6.2)
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, validators: typing.List[Schemable], min_valid:</span>
+<span class="gd">-        typing.Optional[int]=None, max_valid: typing.Optional[int]=None, **</span>
+<span class="gd">-        kwargs) -&gt;None:</span>
+<span class="gd">-        assert min_valid is not None or max_valid is not None, &#39;when using &quot;%s&quot; you should specify at least one of min_valid and max_valid&#39; % (</span>
+<span class="gd">-            type(self).__name__,)</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        validators: typing.List[Schemable],</span>
+<span class="gi">+        min_valid: typing.Optional[int] = None,</span>
+<span class="gi">+        max_valid: typing.Optional[int] = None,</span>
+<span class="gi">+        **kwargs,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        assert min_valid is not None or max_valid is not None, (</span>
+<span class="gi">+            &#39;when using &quot;%s&quot; you should specify at least one of min_valid and max_valid&#39;</span>
+<span class="gi">+            % (type(self).__name__,)</span>
+<span class="gi">+        )</span>
+<span class="w"> </span>        self.min_valid = min_valid or 0
+<span class="w"> </span>        self.max_valid = max_valid or len(validators)
+<span class="w"> </span>        super(SomeOf, self).__init__(*validators, **kwargs)
+
+<span class="gi">+    def _exec(self, funcs, v, path=None):</span>
+<span class="gi">+        errors = []</span>
+<span class="gi">+        funcs = list(funcs)</span>
+<span class="gi">+        for func in funcs:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if path is None:</span>
+<span class="gi">+                    v = func(v)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    v = func(path, v)</span>
+<span class="gi">+            except Invalid as e:</span>
+<span class="gi">+                errors.append(e)</span>
+<span class="gi">+</span>
+<span class="gi">+        passed_count = len(funcs) - len(errors)</span>
+<span class="gi">+        if self.min_valid &lt;= passed_count &lt;= self.max_valid:</span>
+<span class="gi">+            return v</span>
+<span class="gi">+</span>
+<span class="gi">+        msg = self.msg</span>
+<span class="gi">+        if not msg:</span>
+<span class="gi">+            msg = &#39;, &#39;.join(map(str, errors))</span>
+<span class="gi">+</span>
+<span class="gi">+        if passed_count &gt; self.max_valid:</span>
+<span class="gi">+            raise TooManyValid(msg)</span>
+<span class="gi">+        raise NotEnoughValid(msg)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __repr__(self):
+<span class="gd">-        return (</span>
+<span class="gd">-            &#39;SomeOf(min_valid=%s, validators=[%s], max_valid=%s, msg=%r)&#39; %</span>
+<span class="gd">-            (self.min_valid, &#39;, &#39;.join(repr(v) for v in self.validators),</span>
+<span class="gd">-            self.max_valid, self.msg))</span>
+<span class="gi">+        return &#39;SomeOf(min_valid=%s, validators=[%s], max_valid=%s, msg=%r)&#39; % (</span>
+<span class="gi">+            self.min_valid,</span>
+<span class="gi">+            &quot;, &quot;.join(repr(v) for v in self.validators),</span>
+<span class="gi">+            self.max_valid,</span>
+<span class="gi">+            self.msg,</span>
+<span class="gi">+        )</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

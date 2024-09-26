@@ -1,0 +1,2754 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all reference pyjwt - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reference-gold-pyjwt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all reference pyjwt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_utilspytest_to_base64url_uint-1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_utils.py::test_to_base64url_uint[-1-]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0_all_reference">back to Reference (Gold) summary</a></p>
+<h1 id="reference-gold-pyjwt"><strong>Reference (Gold)</strong>: pyjwt</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">259</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">xfailed</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">262</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">262</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_utilspytest_to_base64url_uint-1-">test_utils.py::test_to_base64url_uint[-1-]</h3>
+<details><summary> <pre>test_utils.py::test_to_base64url_uint[-1-]</pre></summary><pre>
+inputval = -1, expected = ''
+
+    @pytest.mark.parametrize(
+        "inputval,expected",
+        [
+            (0, b"AA"),
+            (1, b"AQ"),
+            (255, b"_w"),
+            (65537, b"AQAB"),
+            (123456789, b"B1vNFQ"),
+            pytest.param(-1, "", marks=pytest.mark.xfail(raises=ValueError)),
+        ],
+    )
+    def test_to_base64url_uint(inputval, expected):
+>       actual = to_base64url_uint(inputval)
+
+tests/test_utils.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+val = -1
+
+    def to_base64url_uint(val: int) -> bytes:
+        if val < 0:
+>           raise ValueError("Must be a positive integer")
+E           ValueError: Must be a positive integer
+
+jwt/utils.py:42: ValueError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/jwt/algorithms.py b/jwt/algorithms.py</span>
+<span class="gh">index 15c200a..ed18715 100644</span>
+<span class="gd">--- a/jwt/algorithms.py</span>
+<span class="gi">+++ b/jwt/algorithms.py</span>
+<span class="gu">@@ -1,49 +1,146 @@</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="gi">+</span>
+<span class="w"> </span>import hashlib
+<span class="w"> </span>import hmac
+<span class="w"> </span>import json
+<span class="w"> </span>import sys
+<span class="w"> </span>from abc import ABC, abstractmethod
+<span class="w"> </span>from typing import TYPE_CHECKING, Any, ClassVar, NoReturn, Union, cast, overload
+<span class="gi">+</span>
+<span class="w"> </span>from .exceptions import InvalidKeyError
+<span class="w"> </span>from .types import HashlibHash, JWKDict
+<span class="gd">-from .utils import base64url_decode, base64url_encode, der_to_raw_signature, force_bytes, from_base64url_uint, is_pem_format, is_ssh_key, raw_to_der_signature, to_base64url_uint</span>
+<span class="gi">+from .utils import (</span>
+<span class="gi">+    base64url_decode,</span>
+<span class="gi">+    base64url_encode,</span>
+<span class="gi">+    der_to_raw_signature,</span>
+<span class="gi">+    force_bytes,</span>
+<span class="gi">+    from_base64url_uint,</span>
+<span class="gi">+    is_pem_format,</span>
+<span class="gi">+    is_ssh_key,</span>
+<span class="gi">+    raw_to_der_signature,</span>
+<span class="gi">+    to_base64url_uint,</span>
+<span class="gi">+)</span>
+<span class="gi">+</span>
+<span class="w"> </span>if sys.version_info &gt;= (3, 8):
+<span class="w"> </span>    from typing import Literal
+<span class="w"> </span>else:
+<span class="w"> </span>    from typing_extensions import Literal
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    from cryptography.exceptions import InvalidSignature
+<span class="w"> </span>    from cryptography.hazmat.backends import default_backend
+<span class="w"> </span>    from cryptography.hazmat.primitives import hashes
+<span class="w"> </span>    from cryptography.hazmat.primitives.asymmetric import padding
+<span class="gd">-    from cryptography.hazmat.primitives.asymmetric.ec import ECDSA, SECP256K1, SECP256R1, SECP384R1, SECP521R1, EllipticCurve, EllipticCurvePrivateKey, EllipticCurvePrivateNumbers, EllipticCurvePublicKey, EllipticCurvePublicNumbers</span>
+<span class="gd">-    from cryptography.hazmat.primitives.asymmetric.ed448 import Ed448PrivateKey, Ed448PublicKey</span>
+<span class="gd">-    from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey, Ed25519PublicKey</span>
+<span class="gd">-    from cryptography.hazmat.primitives.asymmetric.rsa import RSAPrivateKey, RSAPrivateNumbers, RSAPublicKey, RSAPublicNumbers, rsa_crt_dmp1, rsa_crt_dmq1, rsa_crt_iqmp, rsa_recover_prime_factors</span>
+<span class="gd">-    from cryptography.hazmat.primitives.serialization import Encoding, NoEncryption, PrivateFormat, PublicFormat, load_pem_private_key, load_pem_public_key, load_ssh_public_key</span>
+<span class="gi">+    from cryptography.hazmat.primitives.asymmetric.ec import (</span>
+<span class="gi">+        ECDSA,</span>
+<span class="gi">+        SECP256K1,</span>
+<span class="gi">+        SECP256R1,</span>
+<span class="gi">+        SECP384R1,</span>
+<span class="gi">+        SECP521R1,</span>
+<span class="gi">+        EllipticCurve,</span>
+<span class="gi">+        EllipticCurvePrivateKey,</span>
+<span class="gi">+        EllipticCurvePrivateNumbers,</span>
+<span class="gi">+        EllipticCurvePublicKey,</span>
+<span class="gi">+        EllipticCurvePublicNumbers,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    from cryptography.hazmat.primitives.asymmetric.ed448 import (</span>
+<span class="gi">+        Ed448PrivateKey,</span>
+<span class="gi">+        Ed448PublicKey,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    from cryptography.hazmat.primitives.asymmetric.ed25519 import (</span>
+<span class="gi">+        Ed25519PrivateKey,</span>
+<span class="gi">+        Ed25519PublicKey,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    from cryptography.hazmat.primitives.asymmetric.rsa import (</span>
+<span class="gi">+        RSAPrivateKey,</span>
+<span class="gi">+        RSAPrivateNumbers,</span>
+<span class="gi">+        RSAPublicKey,</span>
+<span class="gi">+        RSAPublicNumbers,</span>
+<span class="gi">+        rsa_crt_dmp1,</span>
+<span class="gi">+        rsa_crt_dmq1,</span>
+<span class="gi">+        rsa_crt_iqmp,</span>
+<span class="gi">+        rsa_recover_prime_factors,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    from cryptography.hazmat.primitives.serialization import (</span>
+<span class="gi">+        Encoding,</span>
+<span class="gi">+        NoEncryption,</span>
+<span class="gi">+        PrivateFormat,</span>
+<span class="gi">+        PublicFormat,</span>
+<span class="gi">+        load_pem_private_key,</span>
+<span class="gi">+        load_pem_public_key,</span>
+<span class="gi">+        load_ssh_public_key,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="w"> </span>    has_crypto = True
+<span class="w"> </span>except ModuleNotFoundError:
+<span class="w"> </span>    has_crypto = False
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>if TYPE_CHECKING:
+<span class="gi">+    # Type aliases for convenience in algorithms method signatures</span>
+<span class="w"> </span>    AllowedRSAKeys = RSAPrivateKey | RSAPublicKey
+<span class="w"> </span>    AllowedECKeys = EllipticCurvePrivateKey | EllipticCurvePublicKey
+<span class="gd">-    AllowedOKPKeys = (Ed25519PrivateKey | Ed25519PublicKey |</span>
+<span class="gd">-        Ed448PrivateKey | Ed448PublicKey)</span>
+<span class="gi">+    AllowedOKPKeys = (</span>
+<span class="gi">+        Ed25519PrivateKey | Ed25519PublicKey | Ed448PrivateKey | Ed448PublicKey</span>
+<span class="gi">+    )</span>
+<span class="w"> </span>    AllowedKeys = AllowedRSAKeys | AllowedECKeys | AllowedOKPKeys
+<span class="gd">-    AllowedPrivateKeys = (RSAPrivateKey | EllipticCurvePrivateKey |</span>
+<span class="gd">-        Ed25519PrivateKey | Ed448PrivateKey)</span>
+<span class="gd">-    AllowedPublicKeys = (RSAPublicKey | EllipticCurvePublicKey |</span>
+<span class="gd">-        Ed25519PublicKey | Ed448PublicKey)</span>
+<span class="gd">-requires_cryptography = {&#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39;ES256&#39;, &#39;ES256K&#39;,</span>
+<span class="gd">-    &#39;ES384&#39;, &#39;ES521&#39;, &#39;ES512&#39;, &#39;PS256&#39;, &#39;PS384&#39;, &#39;PS512&#39;, &#39;EdDSA&#39;}</span>
+<span class="gd">-</span>
+<span class="gd">-</span>
+<span class="gd">-def get_default_algorithms() -&gt;dict[str, Algorithm]:</span>
+<span class="gi">+    AllowedPrivateKeys = (</span>
+<span class="gi">+        RSAPrivateKey | EllipticCurvePrivateKey | Ed25519PrivateKey | Ed448PrivateKey</span>
+<span class="gi">+    )</span>
+<span class="gi">+    AllowedPublicKeys = (</span>
+<span class="gi">+        RSAPublicKey | EllipticCurvePublicKey | Ed25519PublicKey | Ed448PublicKey</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+requires_cryptography = {</span>
+<span class="gi">+    &quot;RS256&quot;,</span>
+<span class="gi">+    &quot;RS384&quot;,</span>
+<span class="gi">+    &quot;RS512&quot;,</span>
+<span class="gi">+    &quot;ES256&quot;,</span>
+<span class="gi">+    &quot;ES256K&quot;,</span>
+<span class="gi">+    &quot;ES384&quot;,</span>
+<span class="gi">+    &quot;ES521&quot;,</span>
+<span class="gi">+    &quot;ES512&quot;,</span>
+<span class="gi">+    &quot;PS256&quot;,</span>
+<span class="gi">+    &quot;PS384&quot;,</span>
+<span class="gi">+    &quot;PS512&quot;,</span>
+<span class="gi">+    &quot;EdDSA&quot;,</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def get_default_algorithms() -&gt; dict[str, Algorithm]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns the algorithms that are implemented by the library.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    default_algorithms = {</span>
+<span class="gi">+        &quot;none&quot;: NoneAlgorithm(),</span>
+<span class="gi">+        &quot;HS256&quot;: HMACAlgorithm(HMACAlgorithm.SHA256),</span>
+<span class="gi">+        &quot;HS384&quot;: HMACAlgorithm(HMACAlgorithm.SHA384),</span>
+<span class="gi">+        &quot;HS512&quot;: HMACAlgorithm(HMACAlgorithm.SHA512),</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    if has_crypto:</span>
+<span class="gi">+        default_algorithms.update(</span>
+<span class="gi">+            {</span>
+<span class="gi">+                &quot;RS256&quot;: RSAAlgorithm(RSAAlgorithm.SHA256),</span>
+<span class="gi">+                &quot;RS384&quot;: RSAAlgorithm(RSAAlgorithm.SHA384),</span>
+<span class="gi">+                &quot;RS512&quot;: RSAAlgorithm(RSAAlgorithm.SHA512),</span>
+<span class="gi">+                &quot;ES256&quot;: ECAlgorithm(ECAlgorithm.SHA256),</span>
+<span class="gi">+                &quot;ES256K&quot;: ECAlgorithm(ECAlgorithm.SHA256),</span>
+<span class="gi">+                &quot;ES384&quot;: ECAlgorithm(ECAlgorithm.SHA384),</span>
+<span class="gi">+                &quot;ES521&quot;: ECAlgorithm(ECAlgorithm.SHA512),</span>
+<span class="gi">+                &quot;ES512&quot;: ECAlgorithm(</span>
+<span class="gi">+                    ECAlgorithm.SHA512</span>
+<span class="gi">+                ),  # Backward compat for #219 fix</span>
+<span class="gi">+                &quot;PS256&quot;: RSAPSSAlgorithm(RSAPSSAlgorithm.SHA256),</span>
+<span class="gi">+                &quot;PS384&quot;: RSAPSSAlgorithm(RSAPSSAlgorithm.SHA384),</span>
+<span class="gi">+                &quot;PS512&quot;: RSAPSSAlgorithm(RSAPSSAlgorithm.SHA512),</span>
+<span class="gi">+                &quot;EdDSA&quot;: OKPAlgorithm(),</span>
+<span class="gi">+            }</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    return default_algorithms</span>
+
+
+<span class="w"> </span>class Algorithm(ABC):
+<span class="gu">@@ -51,53 +148,74 @@ class Algorithm(ABC):</span>
+<span class="w"> </span>    The interface for an algorithm used to sign and verify tokens.
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def compute_hash_digest(self, bytestr: bytes) -&gt;bytes:</span>
+<span class="gi">+    def compute_hash_digest(self, bytestr: bytes) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Compute a hash digest using the specified algorithm&#39;s hash algorithm.
+
+<span class="w"> </span>        If there is no hash algorithm, raises a NotImplementedError.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # lookup self.hash_alg if defined in a way that mypy can understand</span>
+<span class="gi">+        hash_alg = getattr(self, &quot;hash_alg&quot;, None)</span>
+<span class="gi">+        if hash_alg is None:</span>
+<span class="gi">+            raise NotImplementedError</span>
+<span class="gi">+</span>
+<span class="gi">+        if (</span>
+<span class="gi">+            has_crypto</span>
+<span class="gi">+            and isinstance(hash_alg, type)</span>
+<span class="gi">+            and issubclass(hash_alg, hashes.HashAlgorithm)</span>
+<span class="gi">+        ):</span>
+<span class="gi">+            digest = hashes.Hash(hash_alg(), backend=default_backend())</span>
+<span class="gi">+            digest.update(bytestr)</span>
+<span class="gi">+            return bytes(digest.finalize())</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return bytes(hash_alg(bytestr).digest())</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="gd">-    def prepare_key(self, key: Any) -&gt;Any:</span>
+<span class="gi">+    def prepare_key(self, key: Any) -&gt; Any:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Performs necessary validation and conversions on the key and returns
+<span class="w"> </span>        the key value in the proper format for sign() and verify().
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="gd">-    def sign(self, msg: bytes, key: Any) -&gt;bytes:</span>
+<span class="gi">+    def sign(self, msg: bytes, key: Any) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Returns a digital signature for the specified message
+<span class="w"> </span>        using the specified key value.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="w"> </span>    @abstractmethod
+<span class="gd">-    def verify(self, msg: bytes, key: Any, sig: bytes) -&gt;bool:</span>
+<span class="gi">+    def verify(self, msg: bytes, key: Any, sig: bytes) -&gt; bool:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Verifies that the specified digital signature is valid
+<span class="w"> </span>        for the specified message and key values.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+    @overload</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    @abstractmethod</span>
+<span class="gi">+    def to_jwk(key_obj, as_dict: Literal[True]) -&gt; JWKDict:</span>
+<span class="gi">+        ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+    @overload</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    @abstractmethod</span>
+<span class="gi">+    def to_jwk(key_obj, as_dict: Literal[False] = False) -&gt; str:</span>
+<span class="gi">+        ...  # pragma: no cover</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    @abstractmethod
+<span class="gd">-    def to_jwk(key_obj, as_dict: bool=False) -&gt;Union[JWKDict, str]:</span>
+<span class="gi">+    def to_jwk(key_obj, as_dict: bool = False) -&gt; Union[JWKDict, str]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Serializes a given key into a JWK
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    @abstractmethod
+<span class="gd">-    def from_jwk(jwk: (str | JWKDict)) -&gt;Any:</span>
+<span class="gi">+    def from_jwk(jwk: str | JWKDict) -&gt; Any:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Deserializes a given key from JWK back into a key object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+
+<span class="w"> </span>class NoneAlgorithm(Algorithm):
+<span class="gu">@@ -106,54 +224,478 @@ class NoneAlgorithm(Algorithm):</span>
+<span class="w"> </span>    operations are required.
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gi">+    def prepare_key(self, key: str | None) -&gt; None:</span>
+<span class="gi">+        if key == &quot;&quot;:</span>
+<span class="gi">+            key = None</span>
+<span class="gi">+</span>
+<span class="gi">+        if key is not None:</span>
+<span class="gi">+            raise InvalidKeyError(&#39;When alg = &quot;none&quot;, key value must be None.&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return key</span>
+<span class="gi">+</span>
+<span class="gi">+    def sign(self, msg: bytes, key: None) -&gt; bytes:</span>
+<span class="gi">+        return b&quot;&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    def verify(self, msg: bytes, key: None, sig: bytes) -&gt; bool:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def to_jwk(key_obj: Any, as_dict: bool = False) -&gt; NoReturn:</span>
+<span class="gi">+        raise NotImplementedError()</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def from_jwk(jwk: str | JWKDict) -&gt; NoReturn:</span>
+<span class="gi">+        raise NotImplementedError()</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class HMACAlgorithm(Algorithm):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Performs signing and verification operations using HMAC
+<span class="w"> </span>    and the specified hash function.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    SHA256: ClassVar[HashlibHash] = hashlib.sha256
+<span class="w"> </span>    SHA384: ClassVar[HashlibHash] = hashlib.sha384
+<span class="w"> </span>    SHA512: ClassVar[HashlibHash] = hashlib.sha512
+
+<span class="gd">-    def __init__(self, hash_alg: HashlibHash) -&gt;None:</span>
+<span class="gi">+    def __init__(self, hash_alg: HashlibHash) -&gt; None:</span>
+<span class="w"> </span>        self.hash_alg = hash_alg
+
+<span class="gi">+    def prepare_key(self, key: str | bytes) -&gt; bytes:</span>
+<span class="gi">+        key_bytes = force_bytes(key)</span>
+
+<span class="gd">-if has_crypto:</span>
+<span class="gi">+        if is_pem_format(key_bytes) or is_ssh_key(key_bytes):</span>
+<span class="gi">+            raise InvalidKeyError(</span>
+<span class="gi">+                &quot;The specified key is an asymmetric key or x509 certificate and&quot;</span>
+<span class="gi">+                &quot; should not be used as an HMAC secret.&quot;</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        return key_bytes</span>
+<span class="gi">+</span>
+<span class="gi">+    @overload</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def to_jwk(key_obj: str | bytes, as_dict: Literal[True]) -&gt; JWKDict:</span>
+<span class="gi">+        ...  # pragma: no cover</span>
+
+<span class="gi">+    @overload</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def to_jwk(key_obj: str | bytes, as_dict: Literal[False] = False) -&gt; str:</span>
+<span class="gi">+        ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def to_jwk(key_obj: str | bytes, as_dict: bool = False) -&gt; Union[JWKDict, str]:</span>
+<span class="gi">+        jwk = {</span>
+<span class="gi">+            &quot;k&quot;: base64url_encode(force_bytes(key_obj)).decode(),</span>
+<span class="gi">+            &quot;kty&quot;: &quot;oct&quot;,</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+        if as_dict:</span>
+<span class="gi">+            return jwk</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return json.dumps(jwk)</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def from_jwk(jwk: str | JWKDict) -&gt; bytes:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            if isinstance(jwk, str):</span>
+<span class="gi">+                obj: JWKDict = json.loads(jwk)</span>
+<span class="gi">+            elif isinstance(jwk, dict):</span>
+<span class="gi">+                obj = jwk</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise ValueError</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            raise InvalidKeyError(&quot;Key is not valid JSON&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if obj.get(&quot;kty&quot;) != &quot;oct&quot;:</span>
+<span class="gi">+            raise InvalidKeyError(&quot;Not an HMAC key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return base64url_decode(obj[&quot;k&quot;])</span>
+<span class="gi">+</span>
+<span class="gi">+    def sign(self, msg: bytes, key: bytes) -&gt; bytes:</span>
+<span class="gi">+        return hmac.new(key, msg, self.hash_alg).digest()</span>
+<span class="gi">+</span>
+<span class="gi">+    def verify(self, msg: bytes, key: bytes, sig: bytes) -&gt; bool:</span>
+<span class="gi">+        return hmac.compare_digest(sig, self.sign(msg, key))</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+if has_crypto:</span>
+
+<span class="w"> </span>    class RSAAlgorithm(Algorithm):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Performs signing and verification operations using
+<span class="w"> </span>        RSASSA-PKCS-v1_5 and the specified hash function.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>        SHA256: ClassVar[type[hashes.HashAlgorithm]] = hashes.SHA256
+<span class="w"> </span>        SHA384: ClassVar[type[hashes.HashAlgorithm]] = hashes.SHA384
+<span class="w"> </span>        SHA512: ClassVar[type[hashes.HashAlgorithm]] = hashes.SHA512
+
+<span class="gd">-        def __init__(self, hash_alg: type[hashes.HashAlgorithm]) -&gt;None:</span>
+<span class="gi">+        def __init__(self, hash_alg: type[hashes.HashAlgorithm]) -&gt; None:</span>
+<span class="w"> </span>            self.hash_alg = hash_alg
+
+<span class="gi">+        def prepare_key(self, key: AllowedRSAKeys | str | bytes) -&gt; AllowedRSAKeys:</span>
+<span class="gi">+            if isinstance(key, (RSAPrivateKey, RSAPublicKey)):</span>
+<span class="gi">+                return key</span>
+<span class="gi">+</span>
+<span class="gi">+            if not isinstance(key, (bytes, str)):</span>
+<span class="gi">+                raise TypeError(&quot;Expecting a PEM-formatted key.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            key_bytes = force_bytes(key)</span>
+<span class="gi">+</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if key_bytes.startswith(b&quot;ssh-rsa&quot;):</span>
+<span class="gi">+                    return cast(RSAPublicKey, load_ssh_public_key(key_bytes))</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return cast(</span>
+<span class="gi">+                        RSAPrivateKey, load_pem_private_key(key_bytes, password=None)</span>
+<span class="gi">+                    )</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                return cast(RSAPublicKey, load_pem_public_key(key_bytes))</span>
+<span class="gi">+</span>
+<span class="gi">+        @overload</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key_obj: AllowedRSAKeys, as_dict: Literal[True]) -&gt; JWKDict:</span>
+<span class="gi">+            ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+        @overload</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key_obj: AllowedRSAKeys, as_dict: Literal[False] = False) -&gt; str:</span>
+<span class="gi">+            ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(</span>
+<span class="gi">+            key_obj: AllowedRSAKeys, as_dict: bool = False</span>
+<span class="gi">+        ) -&gt; Union[JWKDict, str]:</span>
+<span class="gi">+            obj: dict[str, Any] | None = None</span>
+<span class="gi">+</span>
+<span class="gi">+            if hasattr(key_obj, &quot;private_numbers&quot;):</span>
+<span class="gi">+                # Private key</span>
+<span class="gi">+                numbers = key_obj.private_numbers()</span>
+<span class="gi">+</span>
+<span class="gi">+                obj = {</span>
+<span class="gi">+                    &quot;kty&quot;: &quot;RSA&quot;,</span>
+<span class="gi">+                    &quot;key_ops&quot;: [&quot;sign&quot;],</span>
+<span class="gi">+                    &quot;n&quot;: to_base64url_uint(numbers.public_numbers.n).decode(),</span>
+<span class="gi">+                    &quot;e&quot;: to_base64url_uint(numbers.public_numbers.e).decode(),</span>
+<span class="gi">+                    &quot;d&quot;: to_base64url_uint(numbers.d).decode(),</span>
+<span class="gi">+                    &quot;p&quot;: to_base64url_uint(numbers.p).decode(),</span>
+<span class="gi">+                    &quot;q&quot;: to_base64url_uint(numbers.q).decode(),</span>
+<span class="gi">+                    &quot;dp&quot;: to_base64url_uint(numbers.dmp1).decode(),</span>
+<span class="gi">+                    &quot;dq&quot;: to_base64url_uint(numbers.dmq1).decode(),</span>
+<span class="gi">+                    &quot;qi&quot;: to_base64url_uint(numbers.iqmp).decode(),</span>
+<span class="gi">+                }</span>
+<span class="gi">+</span>
+<span class="gi">+            elif hasattr(key_obj, &quot;verify&quot;):</span>
+<span class="gi">+                # Public key</span>
+<span class="gi">+                numbers = key_obj.public_numbers()</span>
+<span class="gi">+</span>
+<span class="gi">+                obj = {</span>
+<span class="gi">+                    &quot;kty&quot;: &quot;RSA&quot;,</span>
+<span class="gi">+                    &quot;key_ops&quot;: [&quot;verify&quot;],</span>
+<span class="gi">+                    &quot;n&quot;: to_base64url_uint(numbers.n).decode(),</span>
+<span class="gi">+                    &quot;e&quot;: to_base64url_uint(numbers.e).decode(),</span>
+<span class="gi">+                }</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not a public or private key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if as_dict:</span>
+<span class="gi">+                return obj</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return json.dumps(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def from_jwk(jwk: str | JWKDict) -&gt; AllowedRSAKeys:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if isinstance(jwk, str):</span>
+<span class="gi">+                    obj = json.loads(jwk)</span>
+<span class="gi">+                elif isinstance(jwk, dict):</span>
+<span class="gi">+                    obj = jwk</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise ValueError</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Key is not valid JSON&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if obj.get(&quot;kty&quot;) != &quot;RSA&quot;:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not an RSA key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if &quot;d&quot; in obj and &quot;e&quot; in obj and &quot;n&quot; in obj:</span>
+<span class="gi">+                # Private key</span>
+<span class="gi">+                if &quot;oth&quot; in obj:</span>
+<span class="gi">+                    raise InvalidKeyError(</span>
+<span class="gi">+                        &quot;Unsupported RSA private key: &gt; 2 primes not supported&quot;</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="gi">+                other_props = [&quot;p&quot;, &quot;q&quot;, &quot;dp&quot;, &quot;dq&quot;, &quot;qi&quot;]</span>
+<span class="gi">+                props_found = [prop in obj for prop in other_props]</span>
+<span class="gi">+                any_props_found = any(props_found)</span>
+<span class="gi">+</span>
+<span class="gi">+                if any_props_found and not all(props_found):</span>
+<span class="gi">+                    raise InvalidKeyError(</span>
+<span class="gi">+                        &quot;RSA key must include all parameters if any are present besides d&quot;</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="gi">+                public_numbers = RSAPublicNumbers(</span>
+<span class="gi">+                    from_base64url_uint(obj[&quot;e&quot;]),</span>
+<span class="gi">+                    from_base64url_uint(obj[&quot;n&quot;]),</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+                if any_props_found:</span>
+<span class="gi">+                    numbers = RSAPrivateNumbers(</span>
+<span class="gi">+                        d=from_base64url_uint(obj[&quot;d&quot;]),</span>
+<span class="gi">+                        p=from_base64url_uint(obj[&quot;p&quot;]),</span>
+<span class="gi">+                        q=from_base64url_uint(obj[&quot;q&quot;]),</span>
+<span class="gi">+                        dmp1=from_base64url_uint(obj[&quot;dp&quot;]),</span>
+<span class="gi">+                        dmq1=from_base64url_uint(obj[&quot;dq&quot;]),</span>
+<span class="gi">+                        iqmp=from_base64url_uint(obj[&quot;qi&quot;]),</span>
+<span class="gi">+                        public_numbers=public_numbers,</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    d = from_base64url_uint(obj[&quot;d&quot;])</span>
+<span class="gi">+                    p, q = rsa_recover_prime_factors(</span>
+<span class="gi">+                        public_numbers.n, d, public_numbers.e</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="gi">+                    numbers = RSAPrivateNumbers(</span>
+<span class="gi">+                        d=d,</span>
+<span class="gi">+                        p=p,</span>
+<span class="gi">+                        q=q,</span>
+<span class="gi">+                        dmp1=rsa_crt_dmp1(d, p),</span>
+<span class="gi">+                        dmq1=rsa_crt_dmq1(d, q),</span>
+<span class="gi">+                        iqmp=rsa_crt_iqmp(p, q),</span>
+<span class="gi">+                        public_numbers=public_numbers,</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="gi">+                return numbers.private_key()</span>
+<span class="gi">+            elif &quot;n&quot; in obj and &quot;e&quot; in obj:</span>
+<span class="gi">+                # Public key</span>
+<span class="gi">+                return RSAPublicNumbers(</span>
+<span class="gi">+                    from_base64url_uint(obj[&quot;e&quot;]),</span>
+<span class="gi">+                    from_base64url_uint(obj[&quot;n&quot;]),</span>
+<span class="gi">+                ).public_key()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not a public or private key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        def sign(self, msg: bytes, key: RSAPrivateKey) -&gt; bytes:</span>
+<span class="gi">+            return key.sign(msg, padding.PKCS1v15(), self.hash_alg())</span>
+<span class="gi">+</span>
+<span class="gi">+        def verify(self, msg: bytes, key: RSAPublicKey, sig: bytes) -&gt; bool:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                key.verify(sig, msg, padding.PKCS1v15(), self.hash_alg())</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            except InvalidSignature:</span>
+<span class="gi">+                return False</span>
+
+<span class="w"> </span>    class ECAlgorithm(Algorithm):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Performs signing and verification operations using
+<span class="w"> </span>        ECDSA and the specified hash function
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>        SHA256: ClassVar[type[hashes.HashAlgorithm]] = hashes.SHA256
+<span class="w"> </span>        SHA384: ClassVar[type[hashes.HashAlgorithm]] = hashes.SHA384
+<span class="w"> </span>        SHA512: ClassVar[type[hashes.HashAlgorithm]] = hashes.SHA512
+
+<span class="gd">-        def __init__(self, hash_alg: type[hashes.HashAlgorithm]) -&gt;None:</span>
+<span class="gi">+        def __init__(self, hash_alg: type[hashes.HashAlgorithm]) -&gt; None:</span>
+<span class="w"> </span>            self.hash_alg = hash_alg
+
+<span class="gi">+        def prepare_key(self, key: AllowedECKeys | str | bytes) -&gt; AllowedECKeys:</span>
+<span class="gi">+            if isinstance(key, (EllipticCurvePrivateKey, EllipticCurvePublicKey)):</span>
+<span class="gi">+                return key</span>
+<span class="gi">+</span>
+<span class="gi">+            if not isinstance(key, (bytes, str)):</span>
+<span class="gi">+                raise TypeError(&quot;Expecting a PEM-formatted key.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            key_bytes = force_bytes(key)</span>
+<span class="gi">+</span>
+<span class="gi">+            # Attempt to load key. We don&#39;t know if it&#39;s</span>
+<span class="gi">+            # a Signing Key or a Verifying Key, so we try</span>
+<span class="gi">+            # the Verifying Key first.</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if key_bytes.startswith(b&quot;ecdsa-sha2-&quot;):</span>
+<span class="gi">+                    crypto_key = load_ssh_public_key(key_bytes)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    crypto_key = load_pem_public_key(key_bytes)  # type: ignore[assignment]</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                crypto_key = load_pem_private_key(key_bytes, password=None)  # type: ignore[assignment]</span>
+<span class="gi">+</span>
+<span class="gi">+            # Explicit check the key to prevent confusing errors from cryptography</span>
+<span class="gi">+            if not isinstance(</span>
+<span class="gi">+                crypto_key, (EllipticCurvePrivateKey, EllipticCurvePublicKey)</span>
+<span class="gi">+            ):</span>
+<span class="gi">+                raise InvalidKeyError(</span>
+<span class="gi">+                    &quot;Expecting a EllipticCurvePrivateKey/EllipticCurvePublicKey. Wrong key provided for ECDSA algorithms&quot;</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+            return crypto_key</span>
+<span class="gi">+</span>
+<span class="gi">+        def sign(self, msg: bytes, key: EllipticCurvePrivateKey) -&gt; bytes:</span>
+<span class="gi">+            der_sig = key.sign(msg, ECDSA(self.hash_alg()))</span>
+<span class="gi">+</span>
+<span class="gi">+            return der_to_raw_signature(der_sig, key.curve)</span>
+<span class="gi">+</span>
+<span class="gi">+        def verify(self, msg: bytes, key: &quot;AllowedECKeys&quot;, sig: bytes) -&gt; bool:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                der_sig = raw_to_der_signature(sig, key.curve)</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                public_key = (</span>
+<span class="gi">+                    key.public_key()</span>
+<span class="gi">+                    if isinstance(key, EllipticCurvePrivateKey)</span>
+<span class="gi">+                    else key</span>
+<span class="gi">+                )</span>
+<span class="gi">+                public_key.verify(der_sig, msg, ECDSA(self.hash_alg()))</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            except InvalidSignature:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+</span>
+<span class="gi">+        @overload</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key_obj: AllowedECKeys, as_dict: Literal[True]) -&gt; JWKDict:</span>
+<span class="gi">+            ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+        @overload</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key_obj: AllowedECKeys, as_dict: Literal[False] = False) -&gt; str:</span>
+<span class="gi">+            ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(</span>
+<span class="gi">+            key_obj: AllowedECKeys, as_dict: bool = False</span>
+<span class="gi">+        ) -&gt; Union[JWKDict, str]:</span>
+<span class="gi">+            if isinstance(key_obj, EllipticCurvePrivateKey):</span>
+<span class="gi">+                public_numbers = key_obj.public_key().public_numbers()</span>
+<span class="gi">+            elif isinstance(key_obj, EllipticCurvePublicKey):</span>
+<span class="gi">+                public_numbers = key_obj.public_numbers()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not a public or private key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if isinstance(key_obj.curve, SECP256R1):</span>
+<span class="gi">+                crv = &quot;P-256&quot;</span>
+<span class="gi">+            elif isinstance(key_obj.curve, SECP384R1):</span>
+<span class="gi">+                crv = &quot;P-384&quot;</span>
+<span class="gi">+            elif isinstance(key_obj.curve, SECP521R1):</span>
+<span class="gi">+                crv = &quot;P-521&quot;</span>
+<span class="gi">+            elif isinstance(key_obj.curve, SECP256K1):</span>
+<span class="gi">+                crv = &quot;secp256k1&quot;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise InvalidKeyError(f&quot;Invalid curve: {key_obj.curve}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            obj: dict[str, Any] = {</span>
+<span class="gi">+                &quot;kty&quot;: &quot;EC&quot;,</span>
+<span class="gi">+                &quot;crv&quot;: crv,</span>
+<span class="gi">+                &quot;x&quot;: to_base64url_uint(public_numbers.x).decode(),</span>
+<span class="gi">+                &quot;y&quot;: to_base64url_uint(public_numbers.y).decode(),</span>
+<span class="gi">+            }</span>
+<span class="gi">+</span>
+<span class="gi">+            if isinstance(key_obj, EllipticCurvePrivateKey):</span>
+<span class="gi">+                obj[&quot;d&quot;] = to_base64url_uint(</span>
+<span class="gi">+                    key_obj.private_numbers().private_value</span>
+<span class="gi">+                ).decode()</span>
+<span class="gi">+</span>
+<span class="gi">+            if as_dict:</span>
+<span class="gi">+                return obj</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return json.dumps(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def from_jwk(jwk: str | JWKDict) -&gt; AllowedECKeys:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if isinstance(jwk, str):</span>
+<span class="gi">+                    obj = json.loads(jwk)</span>
+<span class="gi">+                elif isinstance(jwk, dict):</span>
+<span class="gi">+                    obj = jwk</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise ValueError</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Key is not valid JSON&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if obj.get(&quot;kty&quot;) != &quot;EC&quot;:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not an Elliptic curve key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if &quot;x&quot; not in obj or &quot;y&quot; not in obj:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not an Elliptic curve key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            x = base64url_decode(obj.get(&quot;x&quot;))</span>
+<span class="gi">+            y = base64url_decode(obj.get(&quot;y&quot;))</span>
+<span class="gi">+</span>
+<span class="gi">+            curve = obj.get(&quot;crv&quot;)</span>
+<span class="gi">+            curve_obj: EllipticCurve</span>
+<span class="gi">+</span>
+<span class="gi">+            if curve == &quot;P-256&quot;:</span>
+<span class="gi">+                if len(x) == len(y) == 32:</span>
+<span class="gi">+                    curve_obj = SECP256R1()</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise InvalidKeyError(&quot;Coords should be 32 bytes for curve P-256&quot;)</span>
+<span class="gi">+            elif curve == &quot;P-384&quot;:</span>
+<span class="gi">+                if len(x) == len(y) == 48:</span>
+<span class="gi">+                    curve_obj = SECP384R1()</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise InvalidKeyError(&quot;Coords should be 48 bytes for curve P-384&quot;)</span>
+<span class="gi">+            elif curve == &quot;P-521&quot;:</span>
+<span class="gi">+                if len(x) == len(y) == 66:</span>
+<span class="gi">+                    curve_obj = SECP521R1()</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise InvalidKeyError(&quot;Coords should be 66 bytes for curve P-521&quot;)</span>
+<span class="gi">+            elif curve == &quot;secp256k1&quot;:</span>
+<span class="gi">+                if len(x) == len(y) == 32:</span>
+<span class="gi">+                    curve_obj = SECP256K1()</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise InvalidKeyError(</span>
+<span class="gi">+                        &quot;Coords should be 32 bytes for curve secp256k1&quot;</span>
+<span class="gi">+                    )</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise InvalidKeyError(f&quot;Invalid curve: {curve}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            public_numbers = EllipticCurvePublicNumbers(</span>
+<span class="gi">+                x=int.from_bytes(x, byteorder=&quot;big&quot;),</span>
+<span class="gi">+                y=int.from_bytes(y, byteorder=&quot;big&quot;),</span>
+<span class="gi">+                curve=curve_obj,</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+            if &quot;d&quot; not in obj:</span>
+<span class="gi">+                return public_numbers.public_key()</span>
+<span class="gi">+</span>
+<span class="gi">+            d = base64url_decode(obj.get(&quot;d&quot;))</span>
+<span class="gi">+            if len(d) != len(x):</span>
+<span class="gi">+                raise InvalidKeyError(</span>
+<span class="gi">+                    &quot;D should be {} bytes for curve {}&quot;, len(x), curve</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+            return EllipticCurvePrivateNumbers(</span>
+<span class="gi">+                int.from_bytes(d, byteorder=&quot;big&quot;), public_numbers</span>
+<span class="gi">+            ).private_key()</span>
+
+<span class="w"> </span>    class RSAPSSAlgorithm(RSAAlgorithm):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Performs a signature using RSASSA-PSS with MGF1
+<span class="w"> </span>        &quot;&quot;&quot;
+
+<span class="gi">+        def sign(self, msg: bytes, key: RSAPrivateKey) -&gt; bytes:</span>
+<span class="gi">+            return key.sign(</span>
+<span class="gi">+                msg,</span>
+<span class="gi">+                padding.PSS(</span>
+<span class="gi">+                    mgf=padding.MGF1(self.hash_alg()),</span>
+<span class="gi">+                    salt_length=self.hash_alg().digest_size,</span>
+<span class="gi">+                ),</span>
+<span class="gi">+                self.hash_alg(),</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        def verify(self, msg: bytes, key: RSAPublicKey, sig: bytes) -&gt; bool:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                key.verify(</span>
+<span class="gi">+                    sig,</span>
+<span class="gi">+                    msg,</span>
+<span class="gi">+                    padding.PSS(</span>
+<span class="gi">+                        mgf=padding.MGF1(self.hash_alg()),</span>
+<span class="gi">+                        salt_length=self.hash_alg().digest_size,</span>
+<span class="gi">+                    ),</span>
+<span class="gi">+                    self.hash_alg(),</span>
+<span class="gi">+                )</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            except InvalidSignature:</span>
+<span class="gi">+                return False</span>
+
+<span class="w"> </span>    class OKPAlgorithm(Algorithm):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -162,11 +704,35 @@ if has_crypto:</span>
+<span class="w"> </span>        This class requires ``cryptography&gt;=2.6`` to be installed.
+<span class="w"> </span>        &quot;&quot;&quot;
+
+<span class="gd">-        def __init__(self, **kwargs: Any) -&gt;None:</span>
+<span class="gi">+        def __init__(self, **kwargs: Any) -&gt; None:</span>
+<span class="w"> </span>            pass
+
+<span class="gd">-        def sign(self, msg: (str | bytes), key: (Ed25519PrivateKey |</span>
+<span class="gd">-            Ed448PrivateKey)) -&gt;bytes:</span>
+<span class="gi">+        def prepare_key(self, key: AllowedOKPKeys | str | bytes) -&gt; AllowedOKPKeys:</span>
+<span class="gi">+            if isinstance(key, (bytes, str)):</span>
+<span class="gi">+                key_str = key.decode(&quot;utf-8&quot;) if isinstance(key, bytes) else key</span>
+<span class="gi">+                key_bytes = key.encode(&quot;utf-8&quot;) if isinstance(key, str) else key</span>
+<span class="gi">+</span>
+<span class="gi">+                if &quot;-----BEGIN PUBLIC&quot; in key_str:</span>
+<span class="gi">+                    key = load_pem_public_key(key_bytes)  # type: ignore[assignment]</span>
+<span class="gi">+                elif &quot;-----BEGIN PRIVATE&quot; in key_str:</span>
+<span class="gi">+                    key = load_pem_private_key(key_bytes, password=None)  # type: ignore[assignment]</span>
+<span class="gi">+                elif key_str[0:4] == &quot;ssh-&quot;:</span>
+<span class="gi">+                    key = load_ssh_public_key(key_bytes)  # type: ignore[assignment]</span>
+<span class="gi">+</span>
+<span class="gi">+            # Explicit check the key to prevent confusing errors from cryptography</span>
+<span class="gi">+            if not isinstance(</span>
+<span class="gi">+                key,</span>
+<span class="gi">+                (Ed25519PrivateKey, Ed25519PublicKey, Ed448PrivateKey, Ed448PublicKey),</span>
+<span class="gi">+            ):</span>
+<span class="gi">+                raise InvalidKeyError(</span>
+<span class="gi">+                    &quot;Expecting a EllipticCurvePrivateKey/EllipticCurvePublicKey. Wrong key provided for EdDSA algorithms&quot;</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+            return key</span>
+<span class="gi">+</span>
+<span class="gi">+        def sign(</span>
+<span class="gi">+            self, msg: str | bytes, key: Ed25519PrivateKey | Ed448PrivateKey</span>
+<span class="gi">+        ) -&gt; bytes:</span>
+<span class="w"> </span>            &quot;&quot;&quot;
+<span class="w"> </span>            Sign a message ``msg`` using the EdDSA private key ``key``
+<span class="w"> </span>            :param str|bytes msg: Message to sign
+<span class="gu">@@ -174,10 +740,12 @@ if has_crypto:</span>
+<span class="w"> </span>                or :class:`.Ed448PrivateKey` isinstance
+<span class="w"> </span>            :return bytes signature: The signature, as bytes
+<span class="w"> </span>            &quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            msg_bytes = msg.encode(&quot;utf-8&quot;) if isinstance(msg, str) else msg</span>
+<span class="gi">+            return key.sign(msg_bytes)</span>
+
+<span class="gd">-        def verify(self, msg: (str | bytes), key: AllowedOKPKeys, sig: (str |</span>
+<span class="gd">-            bytes)) -&gt;bool:</span>
+<span class="gi">+        def verify(</span>
+<span class="gi">+            self, msg: str | bytes, key: AllowedOKPKeys, sig: str | bytes</span>
+<span class="gi">+        ) -&gt; bool:</span>
+<span class="w"> </span>            &quot;&quot;&quot;
+<span class="w"> </span>            Verify a given ``msg`` against a signature ``sig`` using the EdDSA key ``key``
+
+<span class="gu">@@ -187,4 +755,108 @@ if has_crypto:</span>
+<span class="w"> </span>                A private or public EdDSA key instance
+<span class="w"> </span>            :return bool verified: True if signature is valid, False if not.
+<span class="w"> </span>            &quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                msg_bytes = msg.encode(&quot;utf-8&quot;) if isinstance(msg, str) else msg</span>
+<span class="gi">+                sig_bytes = sig.encode(&quot;utf-8&quot;) if isinstance(sig, str) else sig</span>
+<span class="gi">+</span>
+<span class="gi">+                public_key = (</span>
+<span class="gi">+                    key.public_key()</span>
+<span class="gi">+                    if isinstance(key, (Ed25519PrivateKey, Ed448PrivateKey))</span>
+<span class="gi">+                    else key</span>
+<span class="gi">+                )</span>
+<span class="gi">+                public_key.verify(sig_bytes, msg_bytes)</span>
+<span class="gi">+                return True  # If no exception was raised, the signature is valid.</span>
+<span class="gi">+            except InvalidSignature:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+</span>
+<span class="gi">+        @overload</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key: AllowedOKPKeys, as_dict: Literal[True]) -&gt; JWKDict:</span>
+<span class="gi">+            ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+        @overload</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key: AllowedOKPKeys, as_dict: Literal[False] = False) -&gt; str:</span>
+<span class="gi">+            ...  # pragma: no cover</span>
+<span class="gi">+</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def to_jwk(key: AllowedOKPKeys, as_dict: bool = False) -&gt; Union[JWKDict, str]:</span>
+<span class="gi">+            if isinstance(key, (Ed25519PublicKey, Ed448PublicKey)):</span>
+<span class="gi">+                x = key.public_bytes(</span>
+<span class="gi">+                    encoding=Encoding.Raw,</span>
+<span class="gi">+                    format=PublicFormat.Raw,</span>
+<span class="gi">+                )</span>
+<span class="gi">+                crv = &quot;Ed25519&quot; if isinstance(key, Ed25519PublicKey) else &quot;Ed448&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+                obj = {</span>
+<span class="gi">+                    &quot;x&quot;: base64url_encode(force_bytes(x)).decode(),</span>
+<span class="gi">+                    &quot;kty&quot;: &quot;OKP&quot;,</span>
+<span class="gi">+                    &quot;crv&quot;: crv,</span>
+<span class="gi">+                }</span>
+<span class="gi">+</span>
+<span class="gi">+                if as_dict:</span>
+<span class="gi">+                    return obj</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return json.dumps(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+            if isinstance(key, (Ed25519PrivateKey, Ed448PrivateKey)):</span>
+<span class="gi">+                d = key.private_bytes(</span>
+<span class="gi">+                    encoding=Encoding.Raw,</span>
+<span class="gi">+                    format=PrivateFormat.Raw,</span>
+<span class="gi">+                    encryption_algorithm=NoEncryption(),</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+                x = key.public_key().public_bytes(</span>
+<span class="gi">+                    encoding=Encoding.Raw,</span>
+<span class="gi">+                    format=PublicFormat.Raw,</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+                crv = &quot;Ed25519&quot; if isinstance(key, Ed25519PrivateKey) else &quot;Ed448&quot;</span>
+<span class="gi">+                obj = {</span>
+<span class="gi">+                    &quot;x&quot;: base64url_encode(force_bytes(x)).decode(),</span>
+<span class="gi">+                    &quot;d&quot;: base64url_encode(force_bytes(d)).decode(),</span>
+<span class="gi">+                    &quot;kty&quot;: &quot;OKP&quot;,</span>
+<span class="gi">+                    &quot;crv&quot;: crv,</span>
+<span class="gi">+                }</span>
+<span class="gi">+</span>
+<span class="gi">+                if as_dict:</span>
+<span class="gi">+                    return obj</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return json.dumps(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+            raise InvalidKeyError(&quot;Not a public or private key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        @staticmethod</span>
+<span class="gi">+        def from_jwk(jwk: str | JWKDict) -&gt; AllowedOKPKeys:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if isinstance(jwk, str):</span>
+<span class="gi">+                    obj = json.loads(jwk)</span>
+<span class="gi">+                elif isinstance(jwk, dict):</span>
+<span class="gi">+                    obj = jwk</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise ValueError</span>
+<span class="gi">+            except ValueError:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Key is not valid JSON&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if obj.get(&quot;kty&quot;) != &quot;OKP&quot;:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Not an Octet Key Pair&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            curve = obj.get(&quot;crv&quot;)</span>
+<span class="gi">+            if curve != &quot;Ed25519&quot; and curve != &quot;Ed448&quot;:</span>
+<span class="gi">+                raise InvalidKeyError(f&quot;Invalid curve: {curve}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if &quot;x&quot; not in obj:</span>
+<span class="gi">+                raise InvalidKeyError(&#39;OKP should have &quot;x&quot; parameter&#39;)</span>
+<span class="gi">+            x = base64url_decode(obj.get(&quot;x&quot;))</span>
+<span class="gi">+</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if &quot;d&quot; not in obj:</span>
+<span class="gi">+                    if curve == &quot;Ed25519&quot;:</span>
+<span class="gi">+                        return Ed25519PublicKey.from_public_bytes(x)</span>
+<span class="gi">+                    return Ed448PublicKey.from_public_bytes(x)</span>
+<span class="gi">+                d = base64url_decode(obj.get(&quot;d&quot;))</span>
+<span class="gi">+                if curve == &quot;Ed25519&quot;:</span>
+<span class="gi">+                    return Ed25519PrivateKey.from_private_bytes(d)</span>
+<span class="gi">+                return Ed448PrivateKey.from_private_bytes(d)</span>
+<span class="gi">+            except ValueError as err:</span>
+<span class="gi">+                raise InvalidKeyError(&quot;Invalid key parameter&quot;) from err</span>
+<span class="gh">diff --git a/jwt/api_jwk.py b/jwt/api_jwk.py</span>
+<span class="gh">index 175e782..456c7f4 100644</span>
+<span class="gd">--- a/jwt/api_jwk.py</span>
+<span class="gi">+++ b/jwt/api_jwk.py</span>
+<span class="gu">@@ -1,86 +1,132 @@</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="gi">+</span>
+<span class="w"> </span>import json
+<span class="w"> </span>import time
+<span class="w"> </span>from typing import Any
+<span class="gi">+</span>
+<span class="w"> </span>from .algorithms import get_default_algorithms, has_crypto, requires_cryptography
+<span class="w"> </span>from .exceptions import InvalidKeyError, PyJWKError, PyJWKSetError, PyJWTError
+<span class="w"> </span>from .types import JWKDict
+
+
+<span class="w"> </span>class PyJWK:
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, jwk_data: JWKDict, algorithm: (str | None)=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, jwk_data: JWKDict, algorithm: str | None = None) -&gt; None:</span>
+<span class="w"> </span>        self._algorithms = get_default_algorithms()
+<span class="w"> </span>        self._jwk_data = jwk_data
+<span class="gd">-        kty = self._jwk_data.get(&#39;kty&#39;, None)</span>
+<span class="gi">+</span>
+<span class="gi">+        kty = self._jwk_data.get(&quot;kty&quot;, None)</span>
+<span class="w"> </span>        if not kty:
+<span class="gd">-            raise InvalidKeyError(f&#39;kty is not found: {self._jwk_data}&#39;)</span>
+<span class="gi">+            raise InvalidKeyError(f&quot;kty is not found: {self._jwk_data}&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        if not algorithm and isinstance(self._jwk_data, dict):
+<span class="gd">-            algorithm = self._jwk_data.get(&#39;alg&#39;, None)</span>
+<span class="gi">+            algorithm = self._jwk_data.get(&quot;alg&quot;, None)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        if not algorithm:
+<span class="gd">-            crv = self._jwk_data.get(&#39;crv&#39;, None)</span>
+<span class="gd">-            if kty == &#39;EC&#39;:</span>
+<span class="gd">-                if crv == &#39;P-256&#39; or not crv:</span>
+<span class="gd">-                    algorithm = &#39;ES256&#39;</span>
+<span class="gd">-                elif crv == &#39;P-384&#39;:</span>
+<span class="gd">-                    algorithm = &#39;ES384&#39;</span>
+<span class="gd">-                elif crv == &#39;P-521&#39;:</span>
+<span class="gd">-                    algorithm = &#39;ES512&#39;</span>
+<span class="gd">-                elif crv == &#39;secp256k1&#39;:</span>
+<span class="gd">-                    algorithm = &#39;ES256K&#39;</span>
+<span class="gi">+            # Determine alg with kty (and crv).</span>
+<span class="gi">+            crv = self._jwk_data.get(&quot;crv&quot;, None)</span>
+<span class="gi">+            if kty == &quot;EC&quot;:</span>
+<span class="gi">+                if crv == &quot;P-256&quot; or not crv:</span>
+<span class="gi">+                    algorithm = &quot;ES256&quot;</span>
+<span class="gi">+                elif crv == &quot;P-384&quot;:</span>
+<span class="gi">+                    algorithm = &quot;ES384&quot;</span>
+<span class="gi">+                elif crv == &quot;P-521&quot;:</span>
+<span class="gi">+                    algorithm = &quot;ES512&quot;</span>
+<span class="gi">+                elif crv == &quot;secp256k1&quot;:</span>
+<span class="gi">+                    algorithm = &quot;ES256K&quot;</span>
+<span class="w"> </span>                else:
+<span class="gd">-                    raise InvalidKeyError(f&#39;Unsupported crv: {crv}&#39;)</span>
+<span class="gd">-            elif kty == &#39;RSA&#39;:</span>
+<span class="gd">-                algorithm = &#39;RS256&#39;</span>
+<span class="gd">-            elif kty == &#39;oct&#39;:</span>
+<span class="gd">-                algorithm = &#39;HS256&#39;</span>
+<span class="gd">-            elif kty == &#39;OKP&#39;:</span>
+<span class="gi">+                    raise InvalidKeyError(f&quot;Unsupported crv: {crv}&quot;)</span>
+<span class="gi">+            elif kty == &quot;RSA&quot;:</span>
+<span class="gi">+                algorithm = &quot;RS256&quot;</span>
+<span class="gi">+            elif kty == &quot;oct&quot;:</span>
+<span class="gi">+                algorithm = &quot;HS256&quot;</span>
+<span class="gi">+            elif kty == &quot;OKP&quot;:</span>
+<span class="w"> </span>                if not crv:
+<span class="gd">-                    raise InvalidKeyError(f&#39;crv is not found: {self._jwk_data}&#39;</span>
+<span class="gd">-                        )</span>
+<span class="gd">-                if crv == &#39;Ed25519&#39;:</span>
+<span class="gd">-                    algorithm = &#39;EdDSA&#39;</span>
+<span class="gi">+                    raise InvalidKeyError(f&quot;crv is not found: {self._jwk_data}&quot;)</span>
+<span class="gi">+                if crv == &quot;Ed25519&quot;:</span>
+<span class="gi">+                    algorithm = &quot;EdDSA&quot;</span>
+<span class="w"> </span>                else:
+<span class="gd">-                    raise InvalidKeyError(f&#39;Unsupported crv: {crv}&#39;)</span>
+<span class="gi">+                    raise InvalidKeyError(f&quot;Unsupported crv: {crv}&quot;)</span>
+<span class="w"> </span>            else:
+<span class="gd">-                raise InvalidKeyError(f&#39;Unsupported kty: {kty}&#39;)</span>
+<span class="gi">+                raise InvalidKeyError(f&quot;Unsupported kty: {kty}&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        if not has_crypto and algorithm in requires_cryptography:
+<span class="gd">-            raise PyJWKError(</span>
+<span class="gd">-                f&quot;{algorithm} requires &#39;cryptography&#39; to be installed.&quot;)</span>
+<span class="gi">+            raise PyJWKError(f&quot;{algorithm} requires &#39;cryptography&#39; to be installed.&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        self.Algorithm = self._algorithms.get(algorithm)
+<span class="gi">+</span>
+<span class="w"> </span>        if not self.Algorithm:
+<span class="gd">-            raise PyJWKError(</span>
+<span class="gd">-                f&#39;Unable to find an algorithm for key: {self._jwk_data}&#39;)</span>
+<span class="gi">+            raise PyJWKError(f&quot;Unable to find an algorithm for key: {self._jwk_data}&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        self.key = self.Algorithm.from_jwk(self._jwk_data)
+
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def from_dict(obj: JWKDict, algorithm: str | None = None) -&gt; &quot;PyJWK&quot;:</span>
+<span class="gi">+        return PyJWK(obj, algorithm)</span>
+
+<span class="gd">-class PyJWKSet:</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def from_json(data: str, algorithm: None = None) -&gt; &quot;PyJWK&quot;:</span>
+<span class="gi">+        obj = json.loads(data)</span>
+<span class="gi">+        return PyJWK.from_dict(obj, algorithm)</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def key_type(self) -&gt; str | None:</span>
+<span class="gi">+        return self._jwk_data.get(&quot;kty&quot;, None)</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def key_id(self) -&gt; str | None:</span>
+<span class="gi">+        return self._jwk_data.get(&quot;kid&quot;, None)</span>
+
+<span class="gd">-    def __init__(self, keys: list[JWKDict]) -&gt;None:</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def public_key_use(self) -&gt; str | None:</span>
+<span class="gi">+        return self._jwk_data.get(&quot;use&quot;, None)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+class PyJWKSet:</span>
+<span class="gi">+    def __init__(self, keys: list[JWKDict]) -&gt; None:</span>
+<span class="w"> </span>        self.keys = []
+<span class="gi">+</span>
+<span class="w"> </span>        if not keys:
+<span class="gd">-            raise PyJWKSetError(&#39;The JWK Set did not contain any keys&#39;)</span>
+<span class="gi">+            raise PyJWKSetError(&quot;The JWK Set did not contain any keys&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        if not isinstance(keys, list):
+<span class="gd">-            raise PyJWKSetError(&#39;Invalid JWK Set value&#39;)</span>
+<span class="gi">+            raise PyJWKSetError(&quot;Invalid JWK Set value&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        for key in keys:
+<span class="w"> </span>            try:
+<span class="w"> </span>                self.keys.append(PyJWK(key))
+<span class="w"> </span>            except PyJWTError:
+<span class="gi">+                # skip unusable keys</span>
+<span class="w"> </span>                continue
+<span class="gi">+</span>
+<span class="w"> </span>        if len(self.keys) == 0:
+<span class="w"> </span>            raise PyJWKSetError(
+<span class="w"> </span>                &quot;The JWK Set did not contain any usable keys. Perhaps &#39;cryptography&#39; is not installed?&quot;
+<span class="gd">-                )</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def from_dict(obj: dict[str, Any]) -&gt; &quot;PyJWKSet&quot;:</span>
+<span class="gi">+        keys = obj.get(&quot;keys&quot;, [])</span>
+<span class="gi">+        return PyJWKSet(keys)</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def from_json(data: str) -&gt; &quot;PyJWKSet&quot;:</span>
+<span class="gi">+        obj = json.loads(data)</span>
+<span class="gi">+        return PyJWKSet.from_dict(obj)</span>
+
+<span class="gd">-    def __getitem__(self, kid: str) -&gt;&#39;PyJWK&#39;:</span>
+<span class="gi">+    def __getitem__(self, kid: str) -&gt; &quot;PyJWK&quot;:</span>
+<span class="w"> </span>        for key in self.keys:
+<span class="w"> </span>            if key.key_id == kid:
+<span class="w"> </span>                return key
+<span class="gd">-        raise KeyError(f&#39;keyset has no key for kid: {kid}&#39;)</span>
+<span class="gi">+        raise KeyError(f&quot;keyset has no key for kid: {kid}&quot;)</span>
+
+
+<span class="w"> </span>class PyJWTSetWithTimestamp:
+<span class="gd">-</span>
+<span class="w"> </span>    def __init__(self, jwk_set: PyJWKSet):
+<span class="w"> </span>        self.jwk_set = jwk_set
+<span class="w"> </span>        self.timestamp = time.monotonic()
+<span class="gi">+</span>
+<span class="gi">+    def get_jwk_set(self) -&gt; PyJWKSet:</span>
+<span class="gi">+        return self.jwk_set</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_timestamp(self) -&gt; float:</span>
+<span class="gi">+        return self.timestamp</span>
+<span class="gh">diff --git a/jwt/api_jws.py b/jwt/api_jws.py</span>
+<span class="gh">index eeb5924..fa6708c 100644</span>
+<span class="gd">--- a/jwt/api_jws.py</span>
+<span class="gi">+++ b/jwt/api_jws.py</span>
+<span class="gu">@@ -1,51 +1,89 @@</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="gi">+</span>
+<span class="w"> </span>import binascii
+<span class="w"> </span>import json
+<span class="w"> </span>import warnings
+<span class="w"> </span>from typing import TYPE_CHECKING, Any
+<span class="gd">-from .algorithms import Algorithm, get_default_algorithms, has_crypto, requires_cryptography</span>
+<span class="gd">-from .exceptions import DecodeError, InvalidAlgorithmError, InvalidSignatureError, InvalidTokenError</span>
+<span class="gi">+</span>
+<span class="gi">+from .algorithms import (</span>
+<span class="gi">+    Algorithm,</span>
+<span class="gi">+    get_default_algorithms,</span>
+<span class="gi">+    has_crypto,</span>
+<span class="gi">+    requires_cryptography,</span>
+<span class="gi">+)</span>
+<span class="gi">+from .exceptions import (</span>
+<span class="gi">+    DecodeError,</span>
+<span class="gi">+    InvalidAlgorithmError,</span>
+<span class="gi">+    InvalidSignatureError,</span>
+<span class="gi">+    InvalidTokenError,</span>
+<span class="gi">+)</span>
+<span class="w"> </span>from .utils import base64url_decode, base64url_encode
+<span class="w"> </span>from .warnings import RemovedInPyjwt3Warning
+<span class="gi">+</span>
+<span class="w"> </span>if TYPE_CHECKING:
+<span class="w"> </span>    from .algorithms import AllowedPrivateKeys, AllowedPublicKeys
+
+
+<span class="w"> </span>class PyJWS:
+<span class="gd">-    header_typ = &#39;JWT&#39;</span>
+<span class="gi">+    header_typ = &quot;JWT&quot;</span>
+
+<span class="gd">-    def __init__(self, algorithms: (list[str] | None)=None, options: (dict[</span>
+<span class="gd">-        str, Any] | None)=None) -&gt;None:</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        algorithms: list[str] | None = None,</span>
+<span class="gi">+        options: dict[str, Any] | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        self._algorithms = get_default_algorithms()
+<span class="gd">-        self._valid_algs = set(algorithms) if algorithms is not None else set(</span>
+<span class="gd">-            self._algorithms)</span>
+<span class="gi">+        self._valid_algs = (</span>
+<span class="gi">+            set(algorithms) if algorithms is not None else set(self._algorithms)</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        # Remove algorithms that aren&#39;t on the whitelist</span>
+<span class="w"> </span>        for key in list(self._algorithms.keys()):
+<span class="w"> </span>            if key not in self._valid_algs:
+<span class="w"> </span>                del self._algorithms[key]
+<span class="gi">+</span>
+<span class="w"> </span>        if options is None:
+<span class="w"> </span>            options = {}
+<span class="w"> </span>        self.options = {**self._get_default_options(), **options}
+
+<span class="gd">-    def register_algorithm(self, alg_id: str, alg_obj: Algorithm) -&gt;None:</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def _get_default_options() -&gt; dict[str, bool]:</span>
+<span class="gi">+        return {&quot;verify_signature&quot;: True}</span>
+<span class="gi">+</span>
+<span class="gi">+    def register_algorithm(self, alg_id: str, alg_obj: Algorithm) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Registers a new Algorithm for use when creating and verifying tokens.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if alg_id in self._algorithms:</span>
+<span class="gi">+            raise ValueError(&quot;Algorithm already has a handler.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not isinstance(alg_obj, Algorithm):</span>
+<span class="gi">+            raise TypeError(&quot;Object is not of type `Algorithm`&quot;)</span>
+
+<span class="gd">-    def unregister_algorithm(self, alg_id: str) -&gt;None:</span>
+<span class="gi">+        self._algorithms[alg_id] = alg_obj</span>
+<span class="gi">+        self._valid_algs.add(alg_id)</span>
+<span class="gi">+</span>
+<span class="gi">+    def unregister_algorithm(self, alg_id: str) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Unregisters an Algorithm for use when creating and verifying tokens
+<span class="w"> </span>        Throws KeyError if algorithm is not registered.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if alg_id not in self._algorithms:</span>
+<span class="gi">+            raise KeyError(</span>
+<span class="gi">+                &quot;The specified algorithm could not be removed&quot;</span>
+<span class="gi">+                &quot; because it is not registered.&quot;</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        del self._algorithms[alg_id]</span>
+<span class="gi">+        self._valid_algs.remove(alg_id)</span>
+
+<span class="gd">-    def get_algorithms(self) -&gt;list[str]:</span>
+<span class="gi">+    def get_algorithms(self) -&gt; list[str]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Returns a list of supported values for the &#39;alg&#39; parameter.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return list(self._valid_algs)</span>
+
+<span class="gd">-    def get_algorithm_by_name(self, alg_name: str) -&gt;Algorithm:</span>
+<span class="gi">+    def get_algorithm_by_name(self, alg_name: str) -&gt; Algorithm:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        For a given string name, return the matching Algorithm object.
+
+<span class="gu">@@ -53,15 +91,231 @@ class PyJWS:</span>
+
+<span class="w"> </span>        &gt;&gt;&gt; jws_obj.get_algorithm_by_name(&quot;RS256&quot;)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self._algorithms[alg_name]</span>
+<span class="gi">+        except KeyError as e:</span>
+<span class="gi">+            if not has_crypto and alg_name in requires_cryptography:</span>
+<span class="gi">+                raise NotImplementedError(</span>
+<span class="gi">+                    f&quot;Algorithm &#39;{alg_name}&#39; could not be found. Do you have cryptography installed?&quot;</span>
+<span class="gi">+                ) from e</span>
+<span class="gi">+            raise NotImplementedError(&quot;Algorithm not supported&quot;) from e</span>
+<span class="gi">+</span>
+<span class="gi">+    def encode(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: bytes,</span>
+<span class="gi">+        key: AllowedPrivateKeys | str | bytes,</span>
+<span class="gi">+        algorithm: str | None = &quot;HS256&quot;,</span>
+<span class="gi">+        headers: dict[str, Any] | None = None,</span>
+<span class="gi">+        json_encoder: type[json.JSONEncoder] | None = None,</span>
+<span class="gi">+        is_payload_detached: bool = False,</span>
+<span class="gi">+        sort_headers: bool = True,</span>
+<span class="gi">+    ) -&gt; str:</span>
+<span class="gi">+        segments = []</span>
+<span class="gi">+</span>
+<span class="gi">+        # declare a new var to narrow the type for type checkers</span>
+<span class="gi">+        algorithm_: str = algorithm if algorithm is not None else &quot;none&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+        # Prefer headers values if present to function parameters.</span>
+<span class="gi">+        if headers:</span>
+<span class="gi">+            headers_alg = headers.get(&quot;alg&quot;)</span>
+<span class="gi">+            if headers_alg:</span>
+<span class="gi">+                algorithm_ = headers[&quot;alg&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+            headers_b64 = headers.get(&quot;b64&quot;)</span>
+<span class="gi">+            if headers_b64 is False:</span>
+<span class="gi">+                is_payload_detached = True</span>
+<span class="gi">+</span>
+<span class="gi">+        # Header</span>
+<span class="gi">+        header: dict[str, Any] = {&quot;typ&quot;: self.header_typ, &quot;alg&quot;: algorithm_}</span>
+<span class="gi">+</span>
+<span class="gi">+        if headers:</span>
+<span class="gi">+            self._validate_headers(headers)</span>
+<span class="gi">+            header.update(headers)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not header[&quot;typ&quot;]:</span>
+<span class="gi">+            del header[&quot;typ&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+        if is_payload_detached:</span>
+<span class="gi">+            header[&quot;b64&quot;] = False</span>
+<span class="gi">+        elif &quot;b64&quot; in header:</span>
+<span class="gi">+            # True is the standard value for b64, so no need for it</span>
+<span class="gi">+            del header[&quot;b64&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+        json_header = json.dumps(</span>
+<span class="gi">+            header, separators=(&quot;,&quot;, &quot;:&quot;), cls=json_encoder, sort_keys=sort_headers</span>
+<span class="gi">+        ).encode()</span>
+<span class="gi">+</span>
+<span class="gi">+        segments.append(base64url_encode(json_header))</span>
+<span class="gi">+</span>
+<span class="gi">+        if is_payload_detached:</span>
+<span class="gi">+            msg_payload = payload</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            msg_payload = base64url_encode(payload)</span>
+<span class="gi">+        segments.append(msg_payload)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Segments</span>
+<span class="gi">+        signing_input = b&quot;.&quot;.join(segments)</span>
+<span class="gi">+</span>
+<span class="gi">+        alg_obj = self.get_algorithm_by_name(algorithm_)</span>
+<span class="gi">+        key = alg_obj.prepare_key(key)</span>
+<span class="gi">+        signature = alg_obj.sign(signing_input, key)</span>
+<span class="gi">+</span>
+<span class="gi">+        segments.append(base64url_encode(signature))</span>
+<span class="gi">+</span>
+<span class="gi">+        # Don&#39;t put the payload content inside the encoded token when detached</span>
+<span class="gi">+        if is_payload_detached:</span>
+<span class="gi">+            segments[1] = b&quot;&quot;</span>
+<span class="gi">+        encoded_string = b&quot;.&quot;.join(segments)</span>
+<span class="gi">+</span>
+<span class="gi">+        return encoded_string.decode(&quot;utf-8&quot;)</span>
+
+<span class="gd">-    def get_unverified_header(self, jwt: (str | bytes)) -&gt;dict[str, Any]:</span>
+<span class="gi">+    def decode_complete(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        jwt: str | bytes,</span>
+<span class="gi">+        key: AllowedPublicKeys | str | bytes = &quot;&quot;,</span>
+<span class="gi">+        algorithms: list[str] | None = None,</span>
+<span class="gi">+        options: dict[str, Any] | None = None,</span>
+<span class="gi">+        detached_payload: bytes | None = None,</span>
+<span class="gi">+        **kwargs,</span>
+<span class="gi">+    ) -&gt; dict[str, Any]:</span>
+<span class="gi">+        if kwargs:</span>
+<span class="gi">+            warnings.warn(</span>
+<span class="gi">+                &quot;passing additional kwargs to decode_complete() is deprecated &quot;</span>
+<span class="gi">+                &quot;and will be removed in pyjwt version 3. &quot;</span>
+<span class="gi">+                f&quot;Unsupported kwargs: {tuple(kwargs.keys())}&quot;,</span>
+<span class="gi">+                RemovedInPyjwt3Warning,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        if options is None:</span>
+<span class="gi">+            options = {}</span>
+<span class="gi">+        merged_options = {**self.options, **options}</span>
+<span class="gi">+        verify_signature = merged_options[&quot;verify_signature&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+        if verify_signature and not algorithms:</span>
+<span class="gi">+            raise DecodeError(</span>
+<span class="gi">+                &#39;It is required that you pass in a value for the &quot;algorithms&quot; argument when calling decode().&#39;</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        payload, signing_input, header, signature = self._load(jwt)</span>
+<span class="gi">+</span>
+<span class="gi">+        if header.get(&quot;b64&quot;, True) is False:</span>
+<span class="gi">+            if detached_payload is None:</span>
+<span class="gi">+                raise DecodeError(</span>
+<span class="gi">+                    &#39;It is required that you pass in a value for the &quot;detached_payload&quot; argument to decode a message having the b64 header set to false.&#39;</span>
+<span class="gi">+                )</span>
+<span class="gi">+            payload = detached_payload</span>
+<span class="gi">+            signing_input = b&quot;.&quot;.join([signing_input.rsplit(b&quot;.&quot;, 1)[0], payload])</span>
+<span class="gi">+</span>
+<span class="gi">+        if verify_signature:</span>
+<span class="gi">+            self._verify_signature(signing_input, header, signature, key, algorithms)</span>
+<span class="gi">+</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &quot;payload&quot;: payload,</span>
+<span class="gi">+            &quot;header&quot;: header,</span>
+<span class="gi">+            &quot;signature&quot;: signature,</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+    def decode(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        jwt: str | bytes,</span>
+<span class="gi">+        key: AllowedPublicKeys | str | bytes = &quot;&quot;,</span>
+<span class="gi">+        algorithms: list[str] | None = None,</span>
+<span class="gi">+        options: dict[str, Any] | None = None,</span>
+<span class="gi">+        detached_payload: bytes | None = None,</span>
+<span class="gi">+        **kwargs,</span>
+<span class="gi">+    ) -&gt; Any:</span>
+<span class="gi">+        if kwargs:</span>
+<span class="gi">+            warnings.warn(</span>
+<span class="gi">+                &quot;passing additional kwargs to decode() is deprecated &quot;</span>
+<span class="gi">+                &quot;and will be removed in pyjwt version 3. &quot;</span>
+<span class="gi">+                f&quot;Unsupported kwargs: {tuple(kwargs.keys())}&quot;,</span>
+<span class="gi">+                RemovedInPyjwt3Warning,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        decoded = self.decode_complete(</span>
+<span class="gi">+            jwt, key, algorithms, options, detached_payload=detached_payload</span>
+<span class="gi">+        )</span>
+<span class="gi">+        return decoded[&quot;payload&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_unverified_header(self, jwt: str | bytes) -&gt; dict[str, Any]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Returns back the JWT header parameters as a dict()
+
+<span class="w"> </span>        Note: The signature is not verified so the header parameters
+<span class="w"> </span>        should not be fully trusted until signature verification is complete
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        headers = self._load(jwt)[2]</span>
+<span class="gi">+        self._validate_headers(headers)</span>
+<span class="gi">+</span>
+<span class="gi">+        return headers</span>
+<span class="gi">+</span>
+<span class="gi">+    def _load(self, jwt: str | bytes) -&gt; tuple[bytes, bytes, dict[str, Any], bytes]:</span>
+<span class="gi">+        if isinstance(jwt, str):</span>
+<span class="gi">+            jwt = jwt.encode(&quot;utf-8&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not isinstance(jwt, bytes):</span>
+<span class="gi">+            raise DecodeError(f&quot;Invalid token type. Token must be a {bytes}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            signing_input, crypto_segment = jwt.rsplit(b&quot;.&quot;, 1)</span>
+<span class="gi">+            header_segment, payload_segment = signing_input.split(b&quot;.&quot;, 1)</span>
+<span class="gi">+        except ValueError as err:</span>
+<span class="gi">+            raise DecodeError(&quot;Not enough segments&quot;) from err</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            header_data = base64url_decode(header_segment)</span>
+<span class="gi">+        except (TypeError, binascii.Error) as err:</span>
+<span class="gi">+            raise DecodeError(&quot;Invalid header padding&quot;) from err</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            header = json.loads(header_data)</span>
+<span class="gi">+        except ValueError as e:</span>
+<span class="gi">+            raise DecodeError(f&quot;Invalid header string: {e}&quot;) from e</span>
+<span class="gi">+</span>
+<span class="gi">+        if not isinstance(header, dict):</span>
+<span class="gi">+            raise DecodeError(&quot;Invalid header string: must be a json object&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            payload = base64url_decode(payload_segment)</span>
+<span class="gi">+        except (TypeError, binascii.Error) as err:</span>
+<span class="gi">+            raise DecodeError(&quot;Invalid payload padding&quot;) from err</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            signature = base64url_decode(crypto_segment)</span>
+<span class="gi">+        except (TypeError, binascii.Error) as err:</span>
+<span class="gi">+            raise DecodeError(&quot;Invalid crypto padding&quot;) from err</span>
+<span class="gi">+</span>
+<span class="gi">+        return (payload, signing_input, header, signature)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _verify_signature(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        signing_input: bytes,</span>
+<span class="gi">+        header: dict[str, Any],</span>
+<span class="gi">+        signature: bytes,</span>
+<span class="gi">+        key: AllowedPublicKeys | str | bytes = &quot;&quot;,</span>
+<span class="gi">+        algorithms: list[str] | None = None,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            alg = header[&quot;alg&quot;]</span>
+<span class="gi">+        except KeyError:</span>
+<span class="gi">+            raise InvalidAlgorithmError(&quot;Algorithm not specified&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not alg or (algorithms is not None and alg not in algorithms):</span>
+<span class="gi">+            raise InvalidAlgorithmError(&quot;The specified alg value is not allowed&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            alg_obj = self.get_algorithm_by_name(alg)</span>
+<span class="gi">+        except NotImplementedError as e:</span>
+<span class="gi">+            raise InvalidAlgorithmError(&quot;Algorithm not supported&quot;) from e</span>
+<span class="gi">+        prepared_key = alg_obj.prepare_key(key)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not alg_obj.verify(signing_input, prepared_key, signature):</span>
+<span class="gi">+            raise InvalidSignatureError(&quot;Signature verification failed&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_headers(self, headers: dict[str, Any]) -&gt; None:</span>
+<span class="gi">+        if &quot;kid&quot; in headers:</span>
+<span class="gi">+            self._validate_kid(headers[&quot;kid&quot;])</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_kid(self, kid: Any) -&gt; None:</span>
+<span class="gi">+        if not isinstance(kid, str):</span>
+<span class="gi">+            raise InvalidTokenError(&quot;Key ID header parameter must be a string&quot;)</span>
+
+
+<span class="w"> </span>_jws_global_obj = PyJWS()
+<span class="gh">diff --git a/jwt/api_jwt.py b/jwt/api_jwt.py</span>
+<span class="gh">index 961d144..48d739a 100644</span>
+<span class="gd">--- a/jwt/api_jwt.py</span>
+<span class="gi">+++ b/jwt/api_jwt.py</span>
+<span class="gu">@@ -1,37 +1,172 @@</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="gi">+</span>
+<span class="w"> </span>import json
+<span class="w"> </span>import warnings
+<span class="w"> </span>from calendar import timegm
+<span class="w"> </span>from collections.abc import Iterable
+<span class="w"> </span>from datetime import datetime, timedelta, timezone
+<span class="w"> </span>from typing import TYPE_CHECKING, Any
+<span class="gi">+</span>
+<span class="w"> </span>from . import api_jws
+<span class="gd">-from .exceptions import DecodeError, ExpiredSignatureError, ImmatureSignatureError, InvalidAudienceError, InvalidIssuedAtError, InvalidIssuerError, MissingRequiredClaimError</span>
+<span class="gi">+from .exceptions import (</span>
+<span class="gi">+    DecodeError,</span>
+<span class="gi">+    ExpiredSignatureError,</span>
+<span class="gi">+    ImmatureSignatureError,</span>
+<span class="gi">+    InvalidAudienceError,</span>
+<span class="gi">+    InvalidIssuedAtError,</span>
+<span class="gi">+    InvalidIssuerError,</span>
+<span class="gi">+    MissingRequiredClaimError,</span>
+<span class="gi">+)</span>
+<span class="w"> </span>from .warnings import RemovedInPyjwt3Warning
+<span class="gi">+</span>
+<span class="w"> </span>if TYPE_CHECKING:
+<span class="w"> </span>    from .algorithms import AllowedPrivateKeys, AllowedPublicKeys
+
+
+<span class="w"> </span>class PyJWT:
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, options: (dict[str, Any] | None)=None) -&gt;None:</span>
+<span class="gi">+    def __init__(self, options: dict[str, Any] | None = None) -&gt; None:</span>
+<span class="w"> </span>        if options is None:
+<span class="w"> </span>            options = {}
+<span class="gd">-        self.options: dict[str, Any] = {**self._get_default_options(), **</span>
+<span class="gd">-            options}</span>
+<span class="gi">+        self.options: dict[str, Any] = {**self._get_default_options(), **options}</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def _get_default_options() -&gt; dict[str, bool | list[str]]:</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &quot;verify_signature&quot;: True,</span>
+<span class="gi">+            &quot;verify_exp&quot;: True,</span>
+<span class="gi">+            &quot;verify_nbf&quot;: True,</span>
+<span class="gi">+            &quot;verify_iat&quot;: True,</span>
+<span class="gi">+            &quot;verify_aud&quot;: True,</span>
+<span class="gi">+            &quot;verify_iss&quot;: True,</span>
+<span class="gi">+            &quot;require&quot;: [],</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+    def encode(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        key: AllowedPrivateKeys | str | bytes,</span>
+<span class="gi">+        algorithm: str | None = &quot;HS256&quot;,</span>
+<span class="gi">+        headers: dict[str, Any] | None = None,</span>
+<span class="gi">+        json_encoder: type[json.JSONEncoder] | None = None,</span>
+<span class="gi">+        sort_headers: bool = True,</span>
+<span class="gi">+    ) -&gt; str:</span>
+<span class="gi">+        # Check that we get a dict</span>
+<span class="gi">+        if not isinstance(payload, dict):</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;Expecting a dict object, as JWT only supports &quot;</span>
+<span class="gi">+                &quot;JSON objects as payloads.&quot;</span>
+<span class="gi">+            )</span>
+
+<span class="gd">-    def _encode_payload(self, payload: dict[str, Any], headers: (dict[str,</span>
+<span class="gd">-        Any] | None)=None, json_encoder: (type[json.JSONEncoder] | None)=None</span>
+<span class="gd">-        ) -&gt;bytes:</span>
+<span class="gi">+        # Payload</span>
+<span class="gi">+        payload = payload.copy()</span>
+<span class="gi">+        for time_claim in [&quot;exp&quot;, &quot;iat&quot;, &quot;nbf&quot;]:</span>
+<span class="gi">+            # Convert datetime to a intDate value in known time-format claims</span>
+<span class="gi">+            if isinstance(payload.get(time_claim), datetime):</span>
+<span class="gi">+                payload[time_claim] = timegm(payload[time_claim].utctimetuple())</span>
+<span class="gi">+</span>
+<span class="gi">+        json_payload = self._encode_payload(</span>
+<span class="gi">+            payload,</span>
+<span class="gi">+            headers=headers,</span>
+<span class="gi">+            json_encoder=json_encoder,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        return api_jws.encode(</span>
+<span class="gi">+            json_payload,</span>
+<span class="gi">+            key,</span>
+<span class="gi">+            algorithm,</span>
+<span class="gi">+            headers,</span>
+<span class="gi">+            json_encoder,</span>
+<span class="gi">+            sort_headers=sort_headers,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    def _encode_payload(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        headers: dict[str, Any] | None = None,</span>
+<span class="gi">+        json_encoder: type[json.JSONEncoder] | None = None,</span>
+<span class="gi">+    ) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Encode a given payload to the bytes to be signed.
+
+<span class="w"> </span>        This method is intended to be overridden by subclasses that need to
+<span class="w"> </span>        encode the payload in a different way, e.g. compress the payload.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return json.dumps(</span>
+<span class="gi">+            payload,</span>
+<span class="gi">+            separators=(&quot;,&quot;, &quot;:&quot;),</span>
+<span class="gi">+            cls=json_encoder,</span>
+<span class="gi">+        ).encode(&quot;utf-8&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def decode_complete(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        jwt: str | bytes,</span>
+<span class="gi">+        key: AllowedPublicKeys | str | bytes = &quot;&quot;,</span>
+<span class="gi">+        algorithms: list[str] | None = None,</span>
+<span class="gi">+        options: dict[str, Any] | None = None,</span>
+<span class="gi">+        # deprecated arg, remove in pyjwt3</span>
+<span class="gi">+        verify: bool | None = None,</span>
+<span class="gi">+        # could be used as passthrough to api_jws, consider removal in pyjwt3</span>
+<span class="gi">+        detached_payload: bytes | None = None,</span>
+<span class="gi">+        # passthrough arguments to _validate_claims</span>
+<span class="gi">+        # consider putting in options</span>
+<span class="gi">+        audience: str | Iterable[str] | None = None,</span>
+<span class="gi">+        issuer: str | None = None,</span>
+<span class="gi">+        leeway: float | timedelta = 0,</span>
+<span class="gi">+        # kwargs</span>
+<span class="gi">+        **kwargs: Any,</span>
+<span class="gi">+    ) -&gt; dict[str, Any]:</span>
+<span class="gi">+        if kwargs:</span>
+<span class="gi">+            warnings.warn(</span>
+<span class="gi">+                &quot;passing additional kwargs to decode_complete() is deprecated &quot;</span>
+<span class="gi">+                &quot;and will be removed in pyjwt version 3. &quot;</span>
+<span class="gi">+                f&quot;Unsupported kwargs: {tuple(kwargs.keys())}&quot;,</span>
+<span class="gi">+                RemovedInPyjwt3Warning,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        options = dict(options or {})  # shallow-copy or initialize an empty dict</span>
+<span class="gi">+        options.setdefault(&quot;verify_signature&quot;, True)</span>
+<span class="gi">+</span>
+<span class="gi">+        # If the user has set the legacy `verify` argument, and it doesn&#39;t match</span>
+<span class="gi">+        # what the relevant `options` entry for the argument is, inform the user</span>
+<span class="gi">+        # that they&#39;re likely making a mistake.</span>
+<span class="gi">+        if verify is not None and verify != options[&quot;verify_signature&quot;]:</span>
+<span class="gi">+            warnings.warn(</span>
+<span class="gi">+                &quot;The `verify` argument to `decode` does nothing in PyJWT 2.0 and newer. &quot;</span>
+<span class="gi">+                &quot;The equivalent is setting `verify_signature` to False in the `options` dictionary. &quot;</span>
+<span class="gi">+                &quot;This invocation has a mismatch between the kwarg and the option entry.&quot;,</span>
+<span class="gi">+                category=DeprecationWarning,</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        if not options[&quot;verify_signature&quot;]:</span>
+<span class="gi">+            options.setdefault(&quot;verify_exp&quot;, False)</span>
+<span class="gi">+            options.setdefault(&quot;verify_nbf&quot;, False)</span>
+<span class="gi">+            options.setdefault(&quot;verify_iat&quot;, False)</span>
+<span class="gi">+            options.setdefault(&quot;verify_aud&quot;, False)</span>
+<span class="gi">+            options.setdefault(&quot;verify_iss&quot;, False)</span>
+
+<span class="gd">-    def _decode_payload(self, decoded: dict[str, Any]) -&gt;Any:</span>
+<span class="gi">+        if options[&quot;verify_signature&quot;] and not algorithms:</span>
+<span class="gi">+            raise DecodeError(</span>
+<span class="gi">+                &#39;It is required that you pass in a value for the &quot;algorithms&quot; argument when calling decode().&#39;</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        decoded = api_jws.decode_complete(</span>
+<span class="gi">+            jwt,</span>
+<span class="gi">+            key=key,</span>
+<span class="gi">+            algorithms=algorithms,</span>
+<span class="gi">+            options=options,</span>
+<span class="gi">+            detached_payload=detached_payload,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        payload = self._decode_payload(decoded)</span>
+<span class="gi">+</span>
+<span class="gi">+        merged_options = {**self.options, **options}</span>
+<span class="gi">+        self._validate_claims(</span>
+<span class="gi">+            payload, merged_options, audience=audience, issuer=issuer, leeway=leeway</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        decoded[&quot;payload&quot;] = payload</span>
+<span class="gi">+        return decoded</span>
+<span class="gi">+</span>
+<span class="gi">+    def _decode_payload(self, decoded: dict[str, Any]) -&gt; Any:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Decode the payload from a JWS dictionary (payload, signature, header).
+
+<span class="gu">@@ -39,7 +174,196 @@ class PyJWT:</span>
+<span class="w"> </span>        decode the payload in a different way, e.g. decompress compressed
+<span class="w"> </span>        payloads.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            payload = json.loads(decoded[&quot;payload&quot;])</span>
+<span class="gi">+        except ValueError as e:</span>
+<span class="gi">+            raise DecodeError(f&quot;Invalid payload string: {e}&quot;)</span>
+<span class="gi">+        if not isinstance(payload, dict):</span>
+<span class="gi">+            raise DecodeError(&quot;Invalid payload string: must be a json object&quot;)</span>
+<span class="gi">+        return payload</span>
+<span class="gi">+</span>
+<span class="gi">+    def decode(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        jwt: str | bytes,</span>
+<span class="gi">+        key: AllowedPublicKeys | str | bytes = &quot;&quot;,</span>
+<span class="gi">+        algorithms: list[str] | None = None,</span>
+<span class="gi">+        options: dict[str, Any] | None = None,</span>
+<span class="gi">+        # deprecated arg, remove in pyjwt3</span>
+<span class="gi">+        verify: bool | None = None,</span>
+<span class="gi">+        # could be used as passthrough to api_jws, consider removal in pyjwt3</span>
+<span class="gi">+        detached_payload: bytes | None = None,</span>
+<span class="gi">+        # passthrough arguments to _validate_claims</span>
+<span class="gi">+        # consider putting in options</span>
+<span class="gi">+        audience: str | Iterable[str] | None = None,</span>
+<span class="gi">+        issuer: str | None = None,</span>
+<span class="gi">+        leeway: float | timedelta = 0,</span>
+<span class="gi">+        # kwargs</span>
+<span class="gi">+        **kwargs: Any,</span>
+<span class="gi">+    ) -&gt; Any:</span>
+<span class="gi">+        if kwargs:</span>
+<span class="gi">+            warnings.warn(</span>
+<span class="gi">+                &quot;passing additional kwargs to decode() is deprecated &quot;</span>
+<span class="gi">+                &quot;and will be removed in pyjwt version 3. &quot;</span>
+<span class="gi">+                f&quot;Unsupported kwargs: {tuple(kwargs.keys())}&quot;,</span>
+<span class="gi">+                RemovedInPyjwt3Warning,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        decoded = self.decode_complete(</span>
+<span class="gi">+            jwt,</span>
+<span class="gi">+            key,</span>
+<span class="gi">+            algorithms,</span>
+<span class="gi">+            options,</span>
+<span class="gi">+            verify=verify,</span>
+<span class="gi">+            detached_payload=detached_payload,</span>
+<span class="gi">+            audience=audience,</span>
+<span class="gi">+            issuer=issuer,</span>
+<span class="gi">+            leeway=leeway,</span>
+<span class="gi">+        )</span>
+<span class="gi">+        return decoded[&quot;payload&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_claims(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        options: dict[str, Any],</span>
+<span class="gi">+        audience=None,</span>
+<span class="gi">+        issuer=None,</span>
+<span class="gi">+        leeway: float | timedelta = 0,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        if isinstance(leeway, timedelta):</span>
+<span class="gi">+            leeway = leeway.total_seconds()</span>
+<span class="gi">+</span>
+<span class="gi">+        if audience is not None and not isinstance(audience, (str, Iterable)):</span>
+<span class="gi">+            raise TypeError(&quot;audience must be a string, iterable or None&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._validate_required_claims(payload, options)</span>
+<span class="gi">+</span>
+<span class="gi">+        now = datetime.now(tz=timezone.utc).timestamp()</span>
+<span class="gi">+</span>
+<span class="gi">+        if &quot;iat&quot; in payload and options[&quot;verify_iat&quot;]:</span>
+<span class="gi">+            self._validate_iat(payload, now, leeway)</span>
+<span class="gi">+</span>
+<span class="gi">+        if &quot;nbf&quot; in payload and options[&quot;verify_nbf&quot;]:</span>
+<span class="gi">+            self._validate_nbf(payload, now, leeway)</span>
+<span class="gi">+</span>
+<span class="gi">+        if &quot;exp&quot; in payload and options[&quot;verify_exp&quot;]:</span>
+<span class="gi">+            self._validate_exp(payload, now, leeway)</span>
+<span class="gi">+</span>
+<span class="gi">+        if options[&quot;verify_iss&quot;]:</span>
+<span class="gi">+            self._validate_iss(payload, issuer)</span>
+<span class="gi">+</span>
+<span class="gi">+        if options[&quot;verify_aud&quot;]:</span>
+<span class="gi">+            self._validate_aud(</span>
+<span class="gi">+                payload, audience, strict=options.get(&quot;strict_aud&quot;, False)</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_required_claims(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        options: dict[str, Any],</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        for claim in options[&quot;require&quot;]:</span>
+<span class="gi">+            if payload.get(claim) is None:</span>
+<span class="gi">+                raise MissingRequiredClaimError(claim)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_iat(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        now: float,</span>
+<span class="gi">+        leeway: float,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            iat = int(payload[&quot;iat&quot;])</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            raise InvalidIssuedAtError(&quot;Issued At claim (iat) must be an integer.&quot;)</span>
+<span class="gi">+        if iat &gt; (now + leeway):</span>
+<span class="gi">+            raise ImmatureSignatureError(&quot;The token is not yet valid (iat)&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_nbf(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        now: float,</span>
+<span class="gi">+        leeway: float,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            nbf = int(payload[&quot;nbf&quot;])</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            raise DecodeError(&quot;Not Before claim (nbf) must be an integer.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if nbf &gt; (now + leeway):</span>
+<span class="gi">+            raise ImmatureSignatureError(&quot;The token is not yet valid (nbf)&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_exp(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        now: float,</span>
+<span class="gi">+        leeway: float,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            exp = int(payload[&quot;exp&quot;])</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            raise DecodeError(&quot;Expiration Time claim (exp) must be an&quot; &quot; integer.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if exp &lt;= (now - leeway):</span>
+<span class="gi">+            raise ExpiredSignatureError(&quot;Signature has expired&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_aud(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        payload: dict[str, Any],</span>
+<span class="gi">+        audience: str | Iterable[str] | None,</span>
+<span class="gi">+        *,</span>
+<span class="gi">+        strict: bool = False,</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="gi">+        if audience is None:</span>
+<span class="gi">+            if &quot;aud&quot; not in payload or not payload[&quot;aud&quot;]:</span>
+<span class="gi">+                return</span>
+<span class="gi">+            # Application did not specify an audience, but</span>
+<span class="gi">+            # the token has the &#39;aud&#39; claim</span>
+<span class="gi">+            raise InvalidAudienceError(&quot;Invalid audience&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if &quot;aud&quot; not in payload or not payload[&quot;aud&quot;]:</span>
+<span class="gi">+            # Application specified an audience, but it could not be</span>
+<span class="gi">+            # verified since the token does not contain a claim.</span>
+<span class="gi">+            raise MissingRequiredClaimError(&quot;aud&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        audience_claims = payload[&quot;aud&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+        # In strict mode, we forbid list matching: the supplied audience</span>
+<span class="gi">+        # must be a string, and it must exactly match the audience claim.</span>
+<span class="gi">+        if strict:</span>
+<span class="gi">+            # Only a single audience is allowed in strict mode.</span>
+<span class="gi">+            if not isinstance(audience, str):</span>
+<span class="gi">+                raise InvalidAudienceError(&quot;Invalid audience (strict)&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            # Only a single audience claim is allowed in strict mode.</span>
+<span class="gi">+            if not isinstance(audience_claims, str):</span>
+<span class="gi">+                raise InvalidAudienceError(&quot;Invalid claim format in token (strict)&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if audience != audience_claims:</span>
+<span class="gi">+                raise InvalidAudienceError(&quot;Audience doesn&#39;t match (strict)&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(audience_claims, str):</span>
+<span class="gi">+            audience_claims = [audience_claims]</span>
+<span class="gi">+        if not isinstance(audience_claims, list):</span>
+<span class="gi">+            raise InvalidAudienceError(&quot;Invalid claim format in token&quot;)</span>
+<span class="gi">+        if any(not isinstance(c, str) for c in audience_claims):</span>
+<span class="gi">+            raise InvalidAudienceError(&quot;Invalid claim format in token&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(audience, str):</span>
+<span class="gi">+            audience = [audience]</span>
+<span class="gi">+</span>
+<span class="gi">+        if all(aud not in audience_claims for aud in audience):</span>
+<span class="gi">+            raise InvalidAudienceError(&quot;Audience doesn&#39;t match&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _validate_iss(self, payload: dict[str, Any], issuer: Any) -&gt; None:</span>
+<span class="gi">+        if issuer is None:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        if &quot;iss&quot; not in payload:</span>
+<span class="gi">+            raise MissingRequiredClaimError(&quot;iss&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if payload[&quot;iss&quot;] != issuer:</span>
+<span class="gi">+            raise InvalidIssuerError(&quot;Invalid issuer&quot;)</span>
+
+
+<span class="w"> </span>_jwt_global_obj = PyJWT()
+<span class="gh">diff --git a/jwt/exceptions.py b/jwt/exceptions.py</span>
+<span class="gh">index 43e9576..8ac6ecf 100644</span>
+<span class="gd">--- a/jwt/exceptions.py</span>
+<span class="gi">+++ b/jwt/exceptions.py</span>
+<span class="gu">@@ -2,6 +2,7 @@ class PyJWTError(Exception):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Base class for all exceptions
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    pass
+
+
+<span class="gu">@@ -46,11 +47,10 @@ class InvalidAlgorithmError(InvalidTokenError):</span>
+
+
+<span class="w"> </span>class MissingRequiredClaimError(InvalidTokenError):
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, claim: str) -&gt;None:</span>
+<span class="gi">+    def __init__(self, claim: str) -&gt; None:</span>
+<span class="w"> </span>        self.claim = claim
+
+<span class="gd">-    def __str__(self) -&gt;str:</span>
+<span class="gi">+    def __str__(self) -&gt; str:</span>
+<span class="w"> </span>        return f&#39;Token is missing the &quot;{self.claim}&quot; claim&#39;
+
+
+<span class="gh">diff --git a/jwt/help.py b/jwt/help.py</span>
+<span class="gh">index c6b2173..80b0ca5 100644</span>
+<span class="gd">--- a/jwt/help.py</span>
+<span class="gi">+++ b/jwt/help.py</span>
+<span class="gu">@@ -2,26 +2,63 @@ import json</span>
+<span class="w"> </span>import platform
+<span class="w"> </span>import sys
+<span class="w"> </span>from typing import Dict
+<span class="gi">+</span>
+<span class="w"> </span>from . import __version__ as pyjwt_version
+<span class="gi">+</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    import cryptography
+<span class="gi">+</span>
+<span class="w"> </span>    cryptography_version = cryptography.__version__
+<span class="w"> </span>except ModuleNotFoundError:
+<span class="gd">-    cryptography_version = &#39;&#39;</span>
+<span class="gi">+    cryptography_version = &quot;&quot;</span>
+
+
+<span class="gd">-def info() -&gt;Dict[str, Dict[str, str]]:</span>
+<span class="gi">+def info() -&gt; Dict[str, Dict[str, str]]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Generate information for a bug report.
+<span class="w"> </span>    Based on the requests package help utility module.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        platform_info = {</span>
+<span class="gi">+            &quot;system&quot;: platform.system(),</span>
+<span class="gi">+            &quot;release&quot;: platform.release(),</span>
+<span class="gi">+        }</span>
+<span class="gi">+    except OSError:</span>
+<span class="gi">+        platform_info = {&quot;system&quot;: &quot;Unknown&quot;, &quot;release&quot;: &quot;Unknown&quot;}</span>
+<span class="gi">+</span>
+<span class="gi">+    implementation = platform.python_implementation()</span>
+<span class="gi">+</span>
+<span class="gi">+    if implementation == &quot;CPython&quot;:</span>
+<span class="gi">+        implementation_version = platform.python_version()</span>
+<span class="gi">+    elif implementation == &quot;PyPy&quot;:</span>
+<span class="gi">+        pypy_version_info = sys.pypy_version_info  # type: ignore[attr-defined]</span>
+<span class="gi">+        implementation_version = (</span>
+<span class="gi">+            f&quot;{pypy_version_info.major}.&quot;</span>
+<span class="gi">+            f&quot;{pypy_version_info.minor}.&quot;</span>
+<span class="gi">+            f&quot;{pypy_version_info.micro}&quot;</span>
+<span class="gi">+        )</span>
+<span class="gi">+        if pypy_version_info.releaselevel != &quot;final&quot;:</span>
+<span class="gi">+            implementation_version = &quot;&quot;.join(</span>
+<span class="gi">+                [implementation_version, pypy_version_info.releaselevel]</span>
+<span class="gi">+            )</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        implementation_version = &quot;Unknown&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    return {</span>
+<span class="gi">+        &quot;platform&quot;: platform_info,</span>
+<span class="gi">+        &quot;implementation&quot;: {</span>
+<span class="gi">+            &quot;name&quot;: implementation,</span>
+<span class="gi">+            &quot;version&quot;: implementation_version,</span>
+<span class="gi">+        },</span>
+<span class="gi">+        &quot;cryptography&quot;: {&quot;version&quot;: cryptography_version},</span>
+<span class="gi">+        &quot;pyjwt&quot;: {&quot;version&quot;: pyjwt_version},</span>
+<span class="gi">+    }</span>
+
+
+<span class="gd">-def main() -&gt;None:</span>
+<span class="gi">+def main() -&gt; None:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Pretty-print the bug information as JSON.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    print(json.dumps(info(), sort_keys=True, indent=2))</span>
+
+
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="w"> </span>    main()
+<span class="gh">diff --git a/jwt/jwk_set_cache.py b/jwt/jwk_set_cache.py</span>
+<span class="gh">index 6b2abcd..2432563 100644</span>
+<span class="gd">--- a/jwt/jwk_set_cache.py</span>
+<span class="gi">+++ b/jwt/jwk_set_cache.py</span>
+<span class="gu">@@ -1,10 +1,31 @@</span>
+<span class="w"> </span>import time
+<span class="w"> </span>from typing import Optional
+<span class="gi">+</span>
+<span class="w"> </span>from .api_jwk import PyJWKSet, PyJWTSetWithTimestamp
+
+
+<span class="w"> </span>class JWKSetCache:
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, lifespan: int) -&gt;None:</span>
+<span class="gi">+    def __init__(self, lifespan: int) -&gt; None:</span>
+<span class="w"> </span>        self.jwk_set_with_timestamp: Optional[PyJWTSetWithTimestamp] = None
+<span class="w"> </span>        self.lifespan = lifespan
+<span class="gi">+</span>
+<span class="gi">+    def put(self, jwk_set: PyJWKSet) -&gt; None:</span>
+<span class="gi">+        if jwk_set is not None:</span>
+<span class="gi">+            self.jwk_set_with_timestamp = PyJWTSetWithTimestamp(jwk_set)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # clear cache</span>
+<span class="gi">+            self.jwk_set_with_timestamp = None</span>
+<span class="gi">+</span>
+<span class="gi">+    def get(self) -&gt; Optional[PyJWKSet]:</span>
+<span class="gi">+        if self.jwk_set_with_timestamp is None or self.is_expired():</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.jwk_set_with_timestamp.get_jwk_set()</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_expired(self) -&gt; bool:</span>
+<span class="gi">+        return (</span>
+<span class="gi">+            self.jwk_set_with_timestamp is not None</span>
+<span class="gi">+            and self.lifespan &gt; -1</span>
+<span class="gi">+            and time.monotonic()</span>
+<span class="gi">+            &gt; self.jwk_set_with_timestamp.get_timestamp() + self.lifespan</span>
+<span class="gi">+        )</span>
+<span class="gh">diff --git a/jwt/jwks_client.py b/jwt/jwks_client.py</span>
+<span class="gh">index 6cc0010..f19b10a 100644</span>
+<span class="gd">--- a/jwt/jwks_client.py</span>
+<span class="gi">+++ b/jwt/jwks_client.py</span>
+<span class="gu">@@ -4,6 +4,7 @@ from functools import lru_cache</span>
+<span class="w"> </span>from ssl import SSLContext
+<span class="w"> </span>from typing import Any, Dict, List, Optional
+<span class="w"> </span>from urllib.error import URLError
+<span class="gi">+</span>
+<span class="w"> </span>from .api_jwk import PyJWK, PyJWKSet
+<span class="w"> </span>from .api_jwt import decode_complete as decode_token
+<span class="w"> </span>from .exceptions import PyJWKClientConnectionError, PyJWKClientError
+<span class="gu">@@ -11,11 +12,17 @@ from .jwk_set_cache import JWKSetCache</span>
+
+
+<span class="w"> </span>class PyJWKClient:
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, uri: str, cache_keys: bool=False, max_cached_keys:</span>
+<span class="gd">-        int=16, cache_jwk_set: bool=True, lifespan: int=300, headers:</span>
+<span class="gd">-        Optional[Dict[str, Any]]=None, timeout: int=30, ssl_context:</span>
+<span class="gd">-        Optional[SSLContext]=None):</span>
+<span class="gi">+    def __init__(</span>
+<span class="gi">+        self,</span>
+<span class="gi">+        uri: str,</span>
+<span class="gi">+        cache_keys: bool = False,</span>
+<span class="gi">+        max_cached_keys: int = 16,</span>
+<span class="gi">+        cache_jwk_set: bool = True,</span>
+<span class="gi">+        lifespan: int = 300,</span>
+<span class="gi">+        headers: Optional[Dict[str, Any]] = None,</span>
+<span class="gi">+        timeout: int = 30,</span>
+<span class="gi">+        ssl_context: Optional[SSLContext] = None,</span>
+<span class="gi">+    ):</span>
+<span class="w"> </span>        if headers is None:
+<span class="w"> </span>            headers = {}
+<span class="w"> </span>        self.uri = uri
+<span class="gu">@@ -23,14 +30,95 @@ class PyJWKClient:</span>
+<span class="w"> </span>        self.headers = headers
+<span class="w"> </span>        self.timeout = timeout
+<span class="w"> </span>        self.ssl_context = ssl_context
+<span class="gi">+</span>
+<span class="w"> </span>        if cache_jwk_set:
+<span class="gi">+            # Init jwt set cache with default or given lifespan.</span>
+<span class="gi">+            # Default lifespan is 300 seconds (5 minutes).</span>
+<span class="w"> </span>            if lifespan &lt;= 0:
+<span class="w"> </span>                raise PyJWKClientError(
+<span class="w"> </span>                    f&#39;Lifespan must be greater than 0, the input is &quot;{lifespan}&quot;&#39;
+<span class="gd">-                    )</span>
+<span class="gi">+                )</span>
+<span class="w"> </span>            self.jwk_set_cache = JWKSetCache(lifespan)
+<span class="w"> </span>        else:
+<span class="w"> </span>            self.jwk_set_cache = None
+<span class="gi">+</span>
+<span class="w"> </span>        if cache_keys:
+<span class="gd">-            self.get_signing_key = lru_cache(maxsize=max_cached_keys)(self.</span>
+<span class="gd">-                get_signing_key)</span>
+<span class="gi">+            # Cache signing keys</span>
+<span class="gi">+            # Ignore mypy (https://github.com/python/mypy/issues/2427)</span>
+<span class="gi">+            self.get_signing_key = lru_cache(maxsize=max_cached_keys)(self.get_signing_key)  # type: ignore</span>
+<span class="gi">+</span>
+<span class="gi">+    def fetch_data(self) -&gt; Any:</span>
+<span class="gi">+        jwk_set: Any = None</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            r = urllib.request.Request(url=self.uri, headers=self.headers)</span>
+<span class="gi">+            with urllib.request.urlopen(</span>
+<span class="gi">+                r, timeout=self.timeout, context=self.ssl_context</span>
+<span class="gi">+            ) as response:</span>
+<span class="gi">+                jwk_set = json.load(response)</span>
+<span class="gi">+        except (URLError, TimeoutError) as e:</span>
+<span class="gi">+            raise PyJWKClientConnectionError(</span>
+<span class="gi">+                f&#39;Fail to fetch data from the url, err: &quot;{e}&quot;&#39;</span>
+<span class="gi">+            )</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return jwk_set</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            if self.jwk_set_cache is not None:</span>
+<span class="gi">+                self.jwk_set_cache.put(jwk_set)</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_jwk_set(self, refresh: bool = False) -&gt; PyJWKSet:</span>
+<span class="gi">+        data = None</span>
+<span class="gi">+        if self.jwk_set_cache is not None and not refresh:</span>
+<span class="gi">+            data = self.jwk_set_cache.get()</span>
+<span class="gi">+</span>
+<span class="gi">+        if data is None:</span>
+<span class="gi">+            data = self.fetch_data()</span>
+<span class="gi">+</span>
+<span class="gi">+        if not isinstance(data, dict):</span>
+<span class="gi">+            raise PyJWKClientError(&quot;The JWKS endpoint did not return a JSON object&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return PyJWKSet.from_dict(data)</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_signing_keys(self, refresh: bool = False) -&gt; List[PyJWK]:</span>
+<span class="gi">+        jwk_set = self.get_jwk_set(refresh)</span>
+<span class="gi">+        signing_keys = [</span>
+<span class="gi">+            jwk_set_key</span>
+<span class="gi">+            for jwk_set_key in jwk_set.keys</span>
+<span class="gi">+            if jwk_set_key.public_key_use in [&quot;sig&quot;, None] and jwk_set_key.key_id</span>
+<span class="gi">+        ]</span>
+<span class="gi">+</span>
+<span class="gi">+        if not signing_keys:</span>
+<span class="gi">+            raise PyJWKClientError(&quot;The JWKS endpoint did not contain any signing keys&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return signing_keys</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_signing_key(self, kid: str) -&gt; PyJWK:</span>
+<span class="gi">+        signing_keys = self.get_signing_keys()</span>
+<span class="gi">+        signing_key = self.match_kid(signing_keys, kid)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not signing_key:</span>
+<span class="gi">+            # If no matching signing key from the jwk set, refresh the jwk set and try again.</span>
+<span class="gi">+            signing_keys = self.get_signing_keys(refresh=True)</span>
+<span class="gi">+            signing_key = self.match_kid(signing_keys, kid)</span>
+<span class="gi">+</span>
+<span class="gi">+            if not signing_key:</span>
+<span class="gi">+                raise PyJWKClientError(</span>
+<span class="gi">+                    f&#39;Unable to find a signing key that matches: &quot;{kid}&quot;&#39;</span>
+<span class="gi">+                )</span>
+<span class="gi">+</span>
+<span class="gi">+        return signing_key</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_signing_key_from_jwt(self, token: str) -&gt; PyJWK:</span>
+<span class="gi">+        unverified = decode_token(token, options={&quot;verify_signature&quot;: False})</span>
+<span class="gi">+        header = unverified[&quot;header&quot;]</span>
+<span class="gi">+        return self.get_signing_key(header.get(&quot;kid&quot;))</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def match_kid(signing_keys: List[PyJWK], kid: str) -&gt; Optional[PyJWK]:</span>
+<span class="gi">+        signing_key = None</span>
+<span class="gi">+</span>
+<span class="gi">+        for key in signing_keys:</span>
+<span class="gi">+            if key.key_id == kid:</span>
+<span class="gi">+                signing_key = key</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+        return signing_key</span>
+<span class="gh">diff --git a/jwt/types.py b/jwt/types.py</span>
+<span class="gh">index 5aa6306..7d99352 100644</span>
+<span class="gd">--- a/jwt/types.py</span>
+<span class="gi">+++ b/jwt/types.py</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="w"> </span>from typing import Any, Callable, Dict
+<span class="gi">+</span>
+<span class="w"> </span>JWKDict = Dict[str, Any]
+<span class="gi">+</span>
+<span class="w"> </span>HashlibHash = Callable[..., Any]
+<span class="gh">diff --git a/jwt/utils.py b/jwt/utils.py</span>
+<span class="gh">index 1e1c20d..81c5ee4 100644</span>
+<span class="gd">--- a/jwt/utils.py</span>
+<span class="gi">+++ b/jwt/utils.py</span>
+<span class="gu">@@ -2,20 +2,155 @@ import base64</span>
+<span class="w"> </span>import binascii
+<span class="w"> </span>import re
+<span class="w"> </span>from typing import Union
+<span class="gi">+</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    from cryptography.hazmat.primitives.asymmetric.ec import EllipticCurve
+<span class="gd">-    from cryptography.hazmat.primitives.asymmetric.utils import decode_dss_signature, encode_dss_signature</span>
+<span class="gi">+    from cryptography.hazmat.primitives.asymmetric.utils import (</span>
+<span class="gi">+        decode_dss_signature,</span>
+<span class="gi">+        encode_dss_signature,</span>
+<span class="gi">+    )</span>
+<span class="w"> </span>except ModuleNotFoundError:
+<span class="w"> </span>    pass
+<span class="gd">-_PEMS = {b&#39;CERTIFICATE&#39;, b&#39;TRUSTED CERTIFICATE&#39;, b&#39;PRIVATE KEY&#39;,</span>
+<span class="gd">-    b&#39;PUBLIC KEY&#39;, b&#39;ENCRYPTED PRIVATE KEY&#39;, b&#39;OPENSSH PRIVATE KEY&#39;,</span>
+<span class="gd">-    b&#39;DSA PRIVATE KEY&#39;, b&#39;RSA PRIVATE KEY&#39;, b&#39;RSA PUBLIC KEY&#39;,</span>
+<span class="gd">-    b&#39;EC PRIVATE KEY&#39;, b&#39;DH PARAMETERS&#39;, b&#39;NEW CERTIFICATE REQUEST&#39;,</span>
+<span class="gd">-    b&#39;CERTIFICATE REQUEST&#39;, b&#39;SSH2 PUBLIC KEY&#39;,</span>
+<span class="gd">-    b&#39;SSH2 ENCRYPTED PRIVATE KEY&#39;, b&#39;X509 CRL&#39;}</span>
+<span class="gd">-_PEM_RE = re.compile(b&#39;----[- ]BEGIN (&#39; + b&#39;|&#39;.join(_PEMS) +</span>
+<span class="gd">-    b&#39;)[- ]----\r?\n.+?\r?\n----[- ]END \\1[- ]----\r?\n?&#39;, re.DOTALL)</span>
+<span class="gd">-_CERT_SUFFIX = b&#39;-cert-v01@openssh.com&#39;</span>
+<span class="gd">-_SSH_PUBKEY_RC = re.compile(b&#39;\\A(\\S+)[ \\t]+(\\S+)&#39;)</span>
+<span class="gd">-_SSH_KEY_FORMATS = [b&#39;ssh-ed25519&#39;, b&#39;ssh-rsa&#39;, b&#39;ssh-dss&#39;,</span>
+<span class="gd">-    b&#39;ecdsa-sha2-nistp256&#39;, b&#39;ecdsa-sha2-nistp384&#39;, b&#39;ecdsa-sha2-nistp521&#39;]</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def force_bytes(value: Union[bytes, str]) -&gt; bytes:</span>
+<span class="gi">+    if isinstance(value, str):</span>
+<span class="gi">+        return value.encode(&quot;utf-8&quot;)</span>
+<span class="gi">+    elif isinstance(value, bytes):</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(&quot;Expected a string value&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def base64url_decode(input: Union[bytes, str]) -&gt; bytes:</span>
+<span class="gi">+    input_bytes = force_bytes(input)</span>
+<span class="gi">+</span>
+<span class="gi">+    rem = len(input_bytes) % 4</span>
+<span class="gi">+</span>
+<span class="gi">+    if rem &gt; 0:</span>
+<span class="gi">+        input_bytes += b&quot;=&quot; * (4 - rem)</span>
+<span class="gi">+</span>
+<span class="gi">+    return base64.urlsafe_b64decode(input_bytes)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def base64url_encode(input: bytes) -&gt; bytes:</span>
+<span class="gi">+    return base64.urlsafe_b64encode(input).replace(b&quot;=&quot;, b&quot;&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def to_base64url_uint(val: int) -&gt; bytes:</span>
+<span class="gi">+    if val &lt; 0:</span>
+<span class="gi">+        raise ValueError(&quot;Must be a positive integer&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    int_bytes = bytes_from_int(val)</span>
+<span class="gi">+</span>
+<span class="gi">+    if len(int_bytes) == 0:</span>
+<span class="gi">+        int_bytes = b&quot;\x00&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    return base64url_encode(int_bytes)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def from_base64url_uint(val: Union[bytes, str]) -&gt; int:</span>
+<span class="gi">+    data = base64url_decode(force_bytes(val))</span>
+<span class="gi">+    return int.from_bytes(data, byteorder=&quot;big&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def number_to_bytes(num: int, num_bytes: int) -&gt; bytes:</span>
+<span class="gi">+    padded_hex = &quot;%0*x&quot; % (2 * num_bytes, num)</span>
+<span class="gi">+    return binascii.a2b_hex(padded_hex.encode(&quot;ascii&quot;))</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def bytes_to_number(string: bytes) -&gt; int:</span>
+<span class="gi">+    return int(binascii.b2a_hex(string), 16)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def bytes_from_int(val: int) -&gt; bytes:</span>
+<span class="gi">+    remaining = val</span>
+<span class="gi">+    byte_length = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    while remaining != 0:</span>
+<span class="gi">+        remaining &gt;&gt;= 8</span>
+<span class="gi">+        byte_length += 1</span>
+<span class="gi">+</span>
+<span class="gi">+    return val.to_bytes(byte_length, &quot;big&quot;, signed=False)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def der_to_raw_signature(der_sig: bytes, curve: &quot;EllipticCurve&quot;) -&gt; bytes:</span>
+<span class="gi">+    num_bits = curve.key_size</span>
+<span class="gi">+    num_bytes = (num_bits + 7) // 8</span>
+<span class="gi">+</span>
+<span class="gi">+    r, s = decode_dss_signature(der_sig)</span>
+<span class="gi">+</span>
+<span class="gi">+    return number_to_bytes(r, num_bytes) + number_to_bytes(s, num_bytes)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def raw_to_der_signature(raw_sig: bytes, curve: &quot;EllipticCurve&quot;) -&gt; bytes:</span>
+<span class="gi">+    num_bits = curve.key_size</span>
+<span class="gi">+    num_bytes = (num_bits + 7) // 8</span>
+<span class="gi">+</span>
+<span class="gi">+    if len(raw_sig) != 2 * num_bytes:</span>
+<span class="gi">+        raise ValueError(&quot;Invalid signature&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    r = bytes_to_number(raw_sig[:num_bytes])</span>
+<span class="gi">+    s = bytes_to_number(raw_sig[num_bytes:])</span>
+<span class="gi">+</span>
+<span class="gi">+    return bytes(encode_dss_signature(r, s))</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+# Based on https://github.com/hynek/pem/blob/7ad94db26b0bc21d10953f5dbad3acfdfacf57aa/src/pem/_core.py#L224-L252</span>
+<span class="gi">+_PEMS = {</span>
+<span class="gi">+    b&quot;CERTIFICATE&quot;,</span>
+<span class="gi">+    b&quot;TRUSTED CERTIFICATE&quot;,</span>
+<span class="gi">+    b&quot;PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;PUBLIC KEY&quot;,</span>
+<span class="gi">+    b&quot;ENCRYPTED PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;OPENSSH PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;DSA PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;RSA PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;RSA PUBLIC KEY&quot;,</span>
+<span class="gi">+    b&quot;EC PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;DH PARAMETERS&quot;,</span>
+<span class="gi">+    b&quot;NEW CERTIFICATE REQUEST&quot;,</span>
+<span class="gi">+    b&quot;CERTIFICATE REQUEST&quot;,</span>
+<span class="gi">+    b&quot;SSH2 PUBLIC KEY&quot;,</span>
+<span class="gi">+    b&quot;SSH2 ENCRYPTED PRIVATE KEY&quot;,</span>
+<span class="gi">+    b&quot;X509 CRL&quot;,</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+_PEM_RE = re.compile(</span>
+<span class="gi">+    b&quot;----[- ]BEGIN (&quot;</span>
+<span class="gi">+    + b&quot;|&quot;.join(_PEMS)</span>
+<span class="gi">+    + b&quot;&quot;&quot;)[- ]----\r?</span>
+<span class="gi">+.+?\r?</span>
+<span class="gi">+----[- ]END \\1[- ]----\r?\n?&quot;&quot;&quot;,</span>
+<span class="gi">+    re.DOTALL,</span>
+<span class="gi">+)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def is_pem_format(key: bytes) -&gt; bool:</span>
+<span class="gi">+    return bool(_PEM_RE.search(key))</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+# Based on https://github.com/pyca/cryptography/blob/bcb70852d577b3f490f015378c75cba74986297b/src/cryptography/hazmat/primitives/serialization/ssh.py#L40-L46</span>
+<span class="gi">+_CERT_SUFFIX = b&quot;-cert-v01@openssh.com&quot;</span>
+<span class="gi">+_SSH_PUBKEY_RC = re.compile(rb&quot;\A(\S+)[ \t]+(\S+)&quot;)</span>
+<span class="gi">+_SSH_KEY_FORMATS = [</span>
+<span class="gi">+    b&quot;ssh-ed25519&quot;,</span>
+<span class="gi">+    b&quot;ssh-rsa&quot;,</span>
+<span class="gi">+    b&quot;ssh-dss&quot;,</span>
+<span class="gi">+    b&quot;ecdsa-sha2-nistp256&quot;,</span>
+<span class="gi">+    b&quot;ecdsa-sha2-nistp384&quot;,</span>
+<span class="gi">+    b&quot;ecdsa-sha2-nistp521&quot;,</span>
+<span class="gi">+]</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def is_ssh_key(key: bytes) -&gt; bool:</span>
+<span class="gi">+    if any(string_value in key for string_value in _SSH_KEY_FORMATS):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    ssh_pubkey_match = _SSH_PUBKEY_RC.match(key)</span>
+<span class="gi">+    if ssh_pubkey_match:</span>
+<span class="gi">+        key_type = ssh_pubkey_match.group(1)</span>
+<span class="gi">+        if _CERT_SUFFIX == key_type[-len(_CERT_SUFFIX) :]:</span>
+<span class="gi">+            return True</span>
+<span class="gi">+</span>
+<span class="gi">+    return False</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
