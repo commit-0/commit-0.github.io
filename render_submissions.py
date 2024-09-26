@@ -174,7 +174,7 @@ def render_mds(subfolder="docs"):
         num_repos = len(SPLIT[split])
         leaderboard[split] = f"""\n\n## Leaderboard ({split})
 |  | Name | Repos Resolved /{num_repos} | Test Duration (s) | Date | Analysis | |
-|--|------|-----------|------|----------|------|---|--------| |"""
+|--|------|-------------------------|--------------------|----------|----| |"""
 
     for branch_name in tqdm.tqdm(glob.glob(os.path.join(analysis_files_path, "*"))):
         branch_name = os.path.basename(branch_name)
@@ -185,7 +185,7 @@ def render_mds(subfolder="docs"):
         total_duration = 0.
         # TODO better way to have submission info loaded up before get into repos...
         submission_info = None
-        submission_page = """# Submission Name: DISPLAYNAME_GOES_HERE (SPLIT_GOES_HERE)
+        submission_page = """# Submission Name: DISPLAYNAME_GOES_HERE (split: SPLIT_GOES_HERE)
 
 | | Repository | Resolved | Pass Rate | Test Duration (s) | Analysis | |
 |-|------------|---------|-----| -----|-----||"""
@@ -375,6 +375,7 @@ def main(args):
                         print(f"{e}: when removing {subfolder}")
 
         for submission in submission_dataset:
+            # submission_details = {"submission_info": submission}
             branch_name = submission["branch"]
             os.makedirs(os.path.join(analysis_files_path, branch_name), exist_ok=True)
             if not args.keep_previous_eval:
@@ -416,6 +417,7 @@ def main(args):
 
                 path_to_logs = f"{os.getcwd()}/logs/pytest/{repo_name}/{branch_name}"
                 pytest_results = get_pytest_info(path_to_logs, repo_name, branch_name)
+                # submission_details.update(pytest_results)
                 pytest_results["submission_info"] = submission
                 json.dump(pytest_results, open(repo_metrics_output_file, "w"), indent=4)
 
