@@ -47,6 +47,10 @@ def get_pytest_info(path_to_logs, repo_name, branch_name):
         pytest_report = json.load(open(report_file_path))
         pytest_summary = pytest_report["summary"]
         pytest_info[testname]["summary"] = pytest_summary
+        if pytest_summary["collected"] < 5:  # TODO this is a hacky fix, should eventually do a check against true num collected
+            reason_for_failure = "Pytest collection failure."
+            pytest_info[testname]["failed_to_run"] = reason_for_failure
+            return pytest_info
         pytest_info[testname]["duration"] = pytest_report["duration"]
         if "passed" not in pytest_summary:
             pytest_summary["passed"] = 0
@@ -252,7 +256,8 @@ def render_mds(subfolder="docs"):
                     + patch_diff
                 )
         analysis_link = f"[Analysis](/{f'analysis_{branch_name}'})"
-        leaderboard[split] += f"\n|[{display_name}]({project_page_link})|" \
+        # f"\n|[{display_name}]({project_page_link})|" \
+        leaderboard[split] += f"\n|{display_name}|" \
                     f"{repos_resolved}|" \
                     f"{total_duration:.2f}|" \
                     f"{submission_date}|" \
@@ -358,7 +363,7 @@ def main(args):
 
             path_to_logs = f"{os.getcwd()}/logs/pytest/{repo_name}/{branch_name}"
             pytest_results = get_pytest_info(path_to_logs, repo_name, branch_name)
-            pytest_results["submission_info"] = {"branch": "reference", "display_name": "Reference (Gold)", "submission_date": "NA", "split": args.split, "project_page": "commit-0.github.io"}
+            pytest_results["submission_info"] = {"branch": "reference", "display_name": "Reference (Gold)", "submission_date": "NA", "split": args.split, "project_page": "https://commit-0.github.io"}
             json.dump(pytest_results, open(repo_metrics_output_file, "w"), indent=4)
 
     if args.analyze_submissions:
