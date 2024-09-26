@@ -172,7 +172,7 @@ def render_mds(subfolder="docs"):
 
     for split in tqdm.tqdm(["lite", "all"]):
         num_repos = len(SPLIT[split])
-        leaderboard[split] = f"""## Leaderboard ({split})
+        leaderboard[split] = f"""\n\n## Leaderboard ({split})
 |  | Name | Repos Resolved /{num_repos} | Test Duration (s) | Date | Analysis | |
 |--|------|-----------|------|----------|------|---|--------| |"""
 
@@ -183,6 +183,12 @@ def render_mds(subfolder="docs"):
         repos_resolved = 0
         # cum_passed = 0
         total_duration = 0.
+        # TODO better way to have submission info loaded up before get into repos...
+        submission_info = None
+        submission_page = """# Submission Name: DISPLAYNAME_GOES_HERE (SPLIT_GOES_HERE)
+
+| | Repository | Resolved | Pass Rate | Test Duration (s) | Analysis | |
+|-|------------|---------|-----| -----|-----||"""
         for repo_file in glob.glob(
             os.path.join(analysis_files_path, branch_name, "*.json")
         ):
@@ -192,16 +198,13 @@ def render_mds(subfolder="docs"):
             repo_metrics = json.load(open(repo_metrics_output_file))
             repo_name = os.path.basename(repo_file[: -len(".json")])
             submission_repo_page = f"# Submission Name: {branch_name}\n# Repository: {repo_name}"
-            if "submission_info" not in repo_metrics: import pdb; pdb.set_trace()
-            submission_info = repo_metrics["submission_info"]
-            split = submission_info["split"]
-            project_page_link = submission_info["project_page"]
-            display_name = submission_info["display_name"]
-            submission_date = submission_info['submission_date']
-            submission_page = f"""# Submission Name: {display_name} ({split})
-
-| | Repository | Resolved | Pass Rate | Test Duration (s) | Analysis | |
-|-|------------|---------|-----| -----|-----||"""
+            if submission_info is None:
+                submission_info = repo_metrics["submission_info"]
+                split = submission_info["split"]
+                project_page_link = submission_info["project_page"]
+                display_name = submission_info["display_name"]
+                submission_date = submission_info['submission_date']
+                submission_page = submission_page.replace("DISPLAYNAME_GOES_HERE", display_name).replace("SPLIT_GOES_HERE", split)
             for pytest_group, pytest_info in repo_metrics.items():
                 if pytest_group == "submission_info": continue
                 pytest_group = os.path.basename(pytest_group.strip("/"))
@@ -237,6 +240,8 @@ def render_mds(subfolder="docs"):
                     repos_resolved += 1
                     pytest_details = f"{pytest_info['summary']['passed']} / {pytest_info['summary']['collected']}"
                     duration = f"{pytest_info['duration']:.2f}"
+            submission_page +=f"""
+| | {repo_name} | {'Yes' if resolved else 'No'} | {pytest_details} | {duration} | {f'analysis_{branch_name}_{repo_name}'} | |"""
             back_button = f"[back to {branch_name} summary]({f'analysis_{branch_name}'})\n\n"
             with open(
                 os.path.join(subfolder, f"analysis_{branch_name}_{repo_name}.md"), "w"
@@ -246,8 +251,6 @@ def render_mds(subfolder="docs"):
                     + submission_repo_page
                     + patch_diff
                 )
-            submission_page +=f"""
-| | {repo_name} | {'Yes' if resolved else 'No'} | {pytest_details} | {duration} | {f'analysis_{branch_name}_{repo_name}'} | |"""
         analysis_link = f"[Analysis]({f'analysis_{branch_name}'})"
         leaderboard[split] += f"\n||[{display_name}]({project_page_link})|" \
                     f"{repos_resolved}|" \
