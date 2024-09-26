@@ -432,7 +432,7 @@
 running AI agents to assist with code development and testing.
 In this example we use <a href="https://aider.chat/">Aider</a> as the
 baseline code completion agent</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>aider
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>aider-chat
 </code></pre></div>
 <p>First we assume there is an underlying <code>commit0</code>
 project that is configured. To create a new project,
@@ -446,15 +446,16 @@ can also be used to pass in arguments.</p>
 agent<span class="w"> </span>config<span class="w"> </span>aider
 </code></pre></div>
 <p>Finally we run the underlying agent. This will create a display
-that shows the current progress of the agent.</p>
-<div class="highlight"><pre><span></span><code>agent<span class="w"> </span>run
+that shows the current progress of the agent. Specify the branch
+you want to commit changes on.</p>
+<div class="highlight"><pre><span></span><code>agent<span class="w"> </span>run<span class="w"> </span>BRANCH
 </code></pre></div>
 <h3 id="extending">Extending</h3>
 <p>Refer to <code>class Agents</code> in <code>agent/agents.py</code>. You can design your own agent by inheriting <code>Agents</code> class and implement the <code>run</code> method.</p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Aider automatically retries certain API errors. For details, see <a href="https://github.com/paul-gauthier/aider/blob/75e1d519da9b328b0eca8a73ee27278f1289eadb/aider/sendchat.py#L17">here</a>.</li>
-<li>When increasing --max-parallel-repos, be mindful of aider's <a href="https://github.com/paul-gauthier/aider/blob/75e1d519da9b328b0eca8a73ee27278f1289eadb/aider/sendchat.py#L39">60-second retry timeout</a>. Set this value according to your API tier to avoid RateLimitErrors stopping processes.</li>
+<li>When increasing <code>--max-parallel-repos</code>, be mindful of aider's <a href="https://github.com/paul-gauthier/aider/blob/75e1d519da9b328b0eca8a73ee27278f1289eadb/aider/sendchat.py#L39">60-second retry timeout</a>. Set this value according to your API tier to avoid RateLimitErrors stopping processes.</li>
 <li>Currently, agent will skip file with more than 1500 lines. See <code>agent/agent_utils.py#L199</code> for details.</li>
 <li>Running a full <code>all</code> commit0 split costs approximately $100 with Claude Sonnet 3.5.</li>
 </ul>
