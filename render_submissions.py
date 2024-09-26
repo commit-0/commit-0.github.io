@@ -215,7 +215,7 @@ def render_mds(overwrite_previous, subfolder="docs"):
                     github_hyperlink = f"{project_page_link}/{repo_name}/tree/{branch_name}"
                     if branch_name == "reference":
                         github_hyperlink = f"{project_page_link}/{repo_name}"
-                    submission_page += (
+                    submission_page = submission_table_header.format(display_name=display_name, split=split) + (
                         f"| {repo_name} | No; Failed to clone. | - | - | "
                         f"[Analysis](/{f'analysis_{org_name}_{branch_name}_{repo_name}'}) | "
                         f"[Github]({github_hyperlink}) |"
@@ -247,7 +247,6 @@ def render_mds(overwrite_previous, subfolder="docs"):
                         )
                         if write_submission:
                             submission_repo_page += pytest_summary_table_header.format(pytest_group=pytest_group)
-                            total_duration += pytest_info["duration"]
                             for category, count in pytest_info["summary"].items():
                                 if category not in {"duration"}:
                                     submission_repo_page += f"""| {category} | {count} |\n"""
@@ -263,6 +262,7 @@ def render_mds(overwrite_previous, subfolder="docs"):
                                     f"### {shortened_testname}\n\n<details><summary> <pre>{shortened_testname}"
                                     f"</pre></summary><pre>\n{failure['failure_string']}\n</pre>\n</details>\n"
                                 )
+                        total_duration += pytest_info["duration"]
                         repos_resolved += int(resolved)
                         if write_submission:
                             pytest_details = f"{pytest_info['summary']['passed']} / {pytest_info['summary']['collected']}"
@@ -403,10 +403,9 @@ def main(args):
             if os.path.exists(os.path.join(repo_log_path, branch_name)):
                 if args.overwrite_previous_eval:
                     shutil.rmtree(os.path.join(repo_log_path, branch_name))
-                else: 
-                    need_re_eval = True
-                    import pdb; pdb.set_trace()
-        if need_re_eval:
+            else: 
+                need_re_eval = True
+        if args.overwrite_previous_eval or need_re_eval:
             os.system(
                 "commit0 evaluate --reference "
                 f"--commit0-dot-file-path {analysis_files_path}/repos/.commit0.yaml"
