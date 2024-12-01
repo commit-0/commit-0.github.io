@@ -1,0 +1,339 @@
+diff --git a/src/marshmallow/__init__.py b/src/marshmallow/__init__.py
+index be32c09..8128d91 100644
+--- a/src/marshmallow/__init__.py
++++ b/src/marshmallow/__init__.py
+@@ -5,6 +5,8 @@ import typing
+ 
+ from packaging.version import Version
+ 
++from marshmallow.utils import EXCLUDE, INCLUDE, RAISE, missing, pprint, is_collection, resolve_field_instance
++from marshmallow.datetime import is_aware
+ from marshmallow.decorators import (
+     post_dump,
+     post_load,
+@@ -15,7 +17,6 @@ from marshmallow.decorators import (
+ )
+ from marshmallow.exceptions import ValidationError
+ from marshmallow.schema import Schema, SchemaOpts
+-from marshmallow.utils import EXCLUDE, INCLUDE, RAISE, missing, pprint
+ 
+ from . import fields
+ 
+diff --git a/src/marshmallow/datetime.py b/src/marshmallow/datetime.py
+new file mode 100644
+index 0000000..b079f9e
+--- /dev/null
++++ b/src/marshmallow/datetime.py
+@@ -0,0 +1,10 @@
++"""Datetime-related utilities."""
++from __future__ import annotations
++import datetime as dt
++
++def is_aware(dt_obj: dt.datetime | dt.time) -> bool:
++    """Return True if the datetime or time object has tzinfo.
++
++    :param dt_obj: The datetime or time object to check.
++    """
++    return dt_obj.tzinfo is not None and dt_obj.tzinfo.utcoffset(None) is not None
+\ No newline at end of file
+diff --git a/src/marshmallow/fields.py b/src/marshmallow/fields.py
+index d14c192..798ae60 100644
+--- a/src/marshmallow/fields.py
++++ b/src/marshmallow/fields.py
+@@ -12,12 +12,12 @@ import uuid
+ import warnings
+ from collections.abc import Mapping as _Mapping
+ from enum import Enum as EnumType
+-from marshmallow import class_registry, types, utils, validate
+ from marshmallow.base import FieldABC, SchemaABC
+ from marshmallow.exceptions import FieldInstanceResolutionError, StringNotCollectionError, ValidationError
+-from marshmallow.utils import is_aware, is_collection, resolve_field_instance
+-from marshmallow.utils import missing as missing_
+ from marshmallow.validate import And, Length
++from marshmallow import class_registry, types, validate, utils
++from marshmallow.utils import missing as missing_, is_collection, resolve_field_instance
++from marshmallow.datetime import is_aware
+ from marshmallow.warnings import RemovedInMarshmallow4Warning
+ __all__ = ['Field', 'Raw', 'Nested', 'Mapping', 'Dict', 'List', 'Tuple', 'String', 'UUID', 'Number', 'Integer', 'Decimal', 'Boolean', 'Float', 'DateTime', 'NaiveDateTime', 'AwareDateTime', 'Time', 'Date', 'TimeDelta', 'Url', 'URL', 'Email', 'IP', 'IPv4', 'IPv6', 'IPInterface', 'IPv4Interface', 'IPv6Interface', 'Enum', 'Method', 'Function', 'Str', 'Bool', 'Int', 'Constant', 'Pluck']
+ _T = typing.TypeVar('_T')
+diff --git a/src/marshmallow/schema.py b/src/marshmallow/schema.py
+index 7b9efc5..79ef0c4 100644
+--- a/src/marshmallow/schema.py
++++ b/src/marshmallow/schema.py
+@@ -12,12 +12,12 @@ from abc import ABCMeta
+ from collections import OrderedDict, defaultdict
+ from collections.abc import Mapping
+ from marshmallow import base, class_registry, types
+-from marshmallow import fields as ma_fields
+ from marshmallow.decorators import POST_DUMP, POST_LOAD, PRE_DUMP, PRE_LOAD, VALIDATES, VALIDATES_SCHEMA
+ from marshmallow.error_store import ErrorStore
+ from marshmallow.exceptions import StringNotCollectionError, ValidationError
+ from marshmallow.orderedset import OrderedSet
+ from marshmallow.utils import EXCLUDE, INCLUDE, RAISE, get_value, is_collection, is_instance_or_subclass, missing, set_value, validate_unknown_parameter_value
++from marshmallow import fields as ma_fields
+ from marshmallow.warnings import RemovedInMarshmallow4Warning
+ _T = typing.TypeVar('_T')
+ 
+diff --git a/src/marshmallow/utils.py b/src/marshmallow/utils.py
+index 1c20aa5..c5646fe 100644
+--- a/src/marshmallow/utils.py
++++ b/src/marshmallow/utils.py
+@@ -1,5 +1,14 @@
+ """Utility methods for marshmallow."""
+ from __future__ import annotations
++
++__all__ = [
++    'is_generator', 'is_iterable_but_not_string', 'is_collection',
++    'is_instance_or_subclass', 'is_keyed_tuple', 'pprint', 'from_rfc',
++    'rfcformat', 'get_fixed_timezone', 'from_iso_datetime', 'from_iso_time',
++    'from_iso_date', 'isoformat', 'pluck', 'get_value', 'set_value',
++    'callable_or_raise', 'get_func_args', 'resolve_field_instance',
++    'timedelta_to_microseconds', 'missing', 'EXCLUDE', 'INCLUDE', 'RAISE'
++]
+ import collections
+ import datetime as dt
+ import functools
+@@ -36,25 +45,28 @@ missing = _Missing()
+ 
+ def is_generator(obj) -> bool:
+     """Return True if ``obj`` is a generator"""
+-    pass
++    return inspect.isgenerator(obj)
+ 
+ def is_iterable_but_not_string(obj) -> bool:
+     """Return True if ``obj`` is an iterable object that isn't a string."""
+-    pass
++    return not isinstance(obj, (str, bytes)) and hasattr(obj, '__iter__')
+ 
+ def is_collection(obj) -> bool:
+     """Return True if ``obj`` is a collection type, e.g list, tuple, queryset."""
+-    pass
++    return is_iterable_but_not_string(obj) and not isinstance(obj, Mapping)
+ 
+ def is_instance_or_subclass(val, class_) -> bool:
+     """Return True if ``val`` is either a subclass or instance of ``class_``."""
+-    pass
++    try:
++        return issubclass(val, class_)
++    except TypeError:
++        return isinstance(val, class_)
+ 
+ def is_keyed_tuple(obj) -> bool:
+     """Return True if ``obj`` has keyed tuple behavior, such as
+     namedtuples or SQLAlchemy's KeyedTuples.
+     """
+-    pass
++    return isinstance(obj, tuple) and hasattr(obj, '_fields')
+ 
+ def pprint(obj, *args, **kwargs) -> None:
+     """Pretty-printing function that can pretty-print OrderedDicts
+@@ -64,28 +76,35 @@ def pprint(obj, *args, **kwargs) -> None:
+     .. deprecated:: 3.7.0
+         marshmallow.pprint will be removed in marshmallow 4.
+     """
+-    pass
++    warnings.warn(
++        'marshmallow.pprint is deprecated and will be removed in marshmallow 4.',
++        RemovedInMarshmallow4Warning,
++        stacklevel=2
++    )
++    py_pprint(obj, *args, **kwargs)
+ 
+ def from_rfc(datestring: str) -> dt.datetime:
+     """Parse a RFC822-formatted datetime string and return a datetime object.
+ 
+     https://stackoverflow.com/questions/885015/how-to-parse-a-rfc-2822-date-time-into-a-python-datetime  # noqa: B950
+     """
+-    pass
++    return parsedate_to_datetime(datestring)
+ 
+ def rfcformat(datetime: dt.datetime) -> str:
+     """Return the RFC822-formatted representation of a datetime object.
+ 
+     :param datetime datetime: The datetime.
+     """
+-    pass
++    return format_datetime(datetime)
+ _iso8601_datetime_re = re.compile('(?P<year>\\d{4})-(?P<month>\\d{1,2})-(?P<day>\\d{1,2})[T ](?P<hour>\\d{1,2}):(?P<minute>\\d{1,2})(?::(?P<second>\\d{1,2})(?:\\.(?P<microsecond>\\d{1,6})\\d{0,6})?)?(?P<tzinfo>Z|[+-]\\d{2}(?::?\\d{2})?)?$')
+ _iso8601_date_re = re.compile('(?P<year>\\d{4})-(?P<month>\\d{1,2})-(?P<day>\\d{1,2})$')
+ _iso8601_time_re = re.compile('(?P<hour>\\d{1,2}):(?P<minute>\\d{1,2})(?::(?P<second>\\d{1,2})(?:\\.(?P<microsecond>\\d{1,6})\\d{0,6})?)?')
+ 
+ def get_fixed_timezone(offset: int | float | dt.timedelta) -> dt.timezone:
+     """Return a tzinfo instance with a fixed offset from UTC."""
+-    pass
++    if isinstance(offset, dt.timedelta):
++        offset = offset.total_seconds()
++    return dt.timezone(dt.timedelta(seconds=offset))
+ 
+ def from_iso_datetime(value):
+     """Parse a string and return a datetime.datetime.
+@@ -93,25 +112,73 @@ def from_iso_datetime(value):
+     This function supports time zone offsets. When the input contains one,
+     the output uses a timezone with a fixed offset from UTC.
+     """
+-    pass
++    match = _iso8601_datetime_re.match(value)
++    if not match:
++        raise ValueError('Not a valid ISO8601-formatted datetime string')
++
++    groups = match.groupdict()
++    groups['year'] = int(groups['year'])
++    groups['month'] = int(groups['month'])
++    groups['day'] = int(groups['day'])
++    groups['hour'] = int(groups['hour'])
++    groups['minute'] = int(groups['minute'])
++    groups['second'] = int(groups['second']) if groups['second'] else 0
++    groups['microsecond'] = int(groups['microsecond'].ljust(6, '0')) if groups['microsecond'] else 0
++
++    tzinfo = None
++    if groups['tzinfo']:
++        tzinfo_str = groups.pop('tzinfo')
++        if tzinfo_str == 'Z':
++            tzinfo = dt.timezone.utc
++        else:
++            offset_mins = 0
++            if ':' in tzinfo_str:
++                hours, minutes = map(int, tzinfo_str[1:].split(':'))
++                offset_mins = hours * 60 + minutes
++            else:
++                offset_mins = int(tzinfo_str[1:]) * 60
++            if tzinfo_str[0] == '-':
++                offset_mins = -offset_mins
++            tzinfo = get_fixed_timezone(offset_mins * 60)
++    else:
++        groups.pop('tzinfo')
++
++    return dt.datetime(tzinfo=tzinfo, **groups)
+ 
+ def from_iso_time(value):
+     """Parse a string and return a datetime.time.
+ 
+     This function doesn't support time zone offsets.
+     """
+-    pass
++    match = _iso8601_time_re.match(value)
++    if not match:
++        raise ValueError('Not a valid ISO8601-formatted time string')
++
++    groups = match.groupdict()
++    groups['hour'] = int(groups['hour'])
++    groups['minute'] = int(groups['minute'])
++    groups['second'] = int(groups['second']) if groups['second'] else 0
++    groups['microsecond'] = int(groups['microsecond'].ljust(6, '0')) if groups['microsecond'] else 0
++
++    return dt.time(**groups)
+ 
+ def from_iso_date(value):
+     """Parse a string and return a datetime.date."""
+-    pass
++    match = _iso8601_date_re.match(value)
++    if not match:
++        raise ValueError('Not a valid ISO8601-formatted date string')
++
++    groups = match.groupdict()
++    return dt.date(
++        int(groups['year']), int(groups['month']), int(groups['day'])
++    )
+ 
+ def isoformat(datetime: dt.datetime) -> str:
+     """Return the ISO8601-formatted representation of a datetime object.
+ 
+     :param datetime datetime: The datetime.
+     """
+-    pass
++    return datetime.isoformat()
+ 
+ def pluck(dictlist: list[dict[str, typing.Any]], key: str):
+     """Extracts a list of dictionary values from a list of dictionaries.
+@@ -121,7 +188,7 @@ def pluck(dictlist: list[dict[str, typing.Any]], key: str):
+         >>> pluck(dlist, 'id')
+         [1, 2]
+     """
+-    pass
++    return [d[key] for d in dictlist]
+ 
+ def get_value(obj, key: int | str, default=missing):
+     """Helper for pulling a keyed value off various types of objects. Fields use
+@@ -134,7 +201,13 @@ def get_value(obj, key: int | str, default=missing):
+         `get_value` will never check the value `x.i`. Consider overriding
+         `marshmallow.fields.Field.get_value` in this case.
+     """
+-    pass
++    if not hasattr(obj, '__getitem__'):
++        return getattr(obj, key, default)
++
++    try:
++        return obj[key]
++    except (KeyError, IndexError, TypeError, AttributeError):
++        return getattr(obj, key, default)
+ 
+ def set_value(dct: dict[str, typing.Any], key: str, value: typing.Any):
+     """Set a value in a dict. If `key` contains a '.', it is assumed
+@@ -147,11 +220,27 @@ def set_value(dct: dict[str, typing.Any], key: str, value: typing.Any):
+         >>> d
+         {'foo': {'bar': 42}}
+     """
+-    pass
++    if '.' not in key:
++        dct[key] = value
++        return
++
++    parts = key.split('.')
++    for i, part in enumerate(parts[:-1]):
++        if part not in dct:
++            dct[part] = {}
++        else:
++            if not isinstance(dct[part], dict):
++                raise ValueError(
++                    f"String path conflicts with current dictionary structure at {'.'.join(parts[:i+1])}"
++                )
++        dct = dct[part]
++
++    dct[parts[-1]] = value
+ 
+ def callable_or_raise(obj):
+     """Check that an object is callable, else raise a :exc:`TypeError`."""
+-    pass
++    if not callable(obj):
++        raise TypeError('Object {!r} is not callable'.format(obj))
+ 
+ def get_func_args(func: typing.Callable) -> list[str]:
+     """Given a callable, return a list of argument names. Handles
+@@ -160,18 +249,31 @@ def get_func_args(func: typing.Callable) -> list[str]:
+     .. versionchanged:: 3.0.0a1
+         Do not return bound arguments, eg. ``self``.
+     """
+-    pass
++    if isinstance(func, functools.partial):
++        return get_func_args(func.func)
++
++    if inspect.isfunction(func) or inspect.ismethod(func):
++        return list(inspect.signature(func).parameters.keys())
++
++    # Callable class
++    return list(inspect.signature(func.__call__).parameters.keys())[1:]
+ 
+ def resolve_field_instance(cls_or_instance):
+     """Return a Schema instance from a Schema class or instance.
+ 
+     :param type|Schema cls_or_instance: Marshmallow Schema class or instance.
+     """
+-    pass
++    if isinstance(cls_or_instance, type) and issubclass(cls_or_instance, FieldABC):
++        return cls_or_instance()
++    if isinstance(cls_or_instance, FieldABC):
++        return cls_or_instance
++    raise FieldInstanceResolutionError(
++        'Could not resolve field instance from {!r}'.format(cls_or_instance)
++    )
+ 
+ def timedelta_to_microseconds(value: dt.timedelta) -> int:
+     """Compute the total microseconds of a timedelta
+ 
+     https://github.com/python/cpython/blob/bb3e0c240bc60fe08d332ff5955d54197f79751c/Lib/datetime.py#L665-L667  # noqa: B950
+     """
+-    pass
+\ No newline at end of file
++    return (value.days * 86400 + value.seconds) * 1000000 + value.microseconds
+\ No newline at end of file
+

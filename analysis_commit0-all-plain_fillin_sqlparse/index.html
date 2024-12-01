@@ -1,0 +1,1025 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin sqlparse - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-sqlparse" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin sqlparse
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-sqlparse"><strong>Claude Sonnet 3.5 - Fill-in</strong>: sqlparse</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/sqlparse/cli.py b/sqlparse/cli.py</span>
+<span class="gh">index 51e62e6..193c369 100755</span>
+<span class="gd">--- a/sqlparse/cli.py</span>
+<span class="gi">+++ b/sqlparse/cli.py</span>
+<span class="gu">@@ -19,4 +19,5 @@ from sqlparse.exceptions import SQLParseError</span>
+
+<span class="w"> </span>def _error(msg):
+<span class="w"> </span>    &quot;&quot;&quot;Print msg and optionally exit with return code exit_.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    sys.stderr.write(f&quot;Error: {msg}\n&quot;)</span>
+<span class="gi">+    sys.exit(1)</span>
+<span class="gh">diff --git a/sqlparse/engine/grouping.py b/sqlparse/engine/grouping.py</span>
+<span class="gh">index a730974..6927157 100644</span>
+<span class="gd">--- a/sqlparse/engine/grouping.py</span>
+<span class="gi">+++ b/sqlparse/engine/grouping.py</span>
+<span class="gu">@@ -8,16 +8,58 @@ T_NAME = T.Name, T.Name.Placeholder</span>
+
+<span class="w"> </span>def _group_matching(tlist, cls):
+<span class="w"> </span>    &quot;&quot;&quot;Groups Tokens that have beginning and end.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    idx = 0</span>
+<span class="gi">+    while idx &lt; len(tlist):</span>
+<span class="gi">+        token = tlist[idx]</span>
+<span class="gi">+        if token.is_group() and not isinstance(token, cls):</span>
+<span class="gi">+            _group_matching(token, cls)</span>
+<span class="gi">+            idx += 1</span>
+<span class="gi">+        elif cls.M_OPEN.match(token):</span>
+<span class="gi">+            end = _find_matching(tlist[idx:], cls)</span>
+<span class="gi">+            if end is None:</span>
+<span class="gi">+                idx += 1</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            group = cls(tlist[idx:end + idx + 1])</span>
+<span class="gi">+            tlist.tokens[idx:end + idx + 1] = [group]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            idx += 1</span>
+
+
+<span class="w"> </span>@recurse(sql.Identifier)
+<span class="w"> </span>def group_order(tlist):
+<span class="w"> </span>    &quot;&quot;&quot;Group together Identifier and Asc/Desc token&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    idx = 0</span>
+<span class="gi">+    while idx &lt; len(tlist):</span>
+<span class="gi">+        token = tlist[idx]</span>
+<span class="gi">+        if isinstance(token, sql.Identifier):</span>
+<span class="gi">+            if idx + 1 &lt; len(tlist) and tlist[idx + 1].match(T.Keyword, (&#39;ASC&#39;, &#39;DESC&#39;)):</span>
+<span class="gi">+                order = sql.Identifier([token, tlist[idx + 1]])</span>
+<span class="gi">+                tlist.tokens[idx:idx + 2] = [order]</span>
+<span class="gi">+            idx += 1</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            idx += 1</span>
+
+
+<span class="w"> </span>def _group(tlist, cls, match, valid_prev=lambda t: True, valid_next=lambda
+<span class="w"> </span>    t: True, post=None, extend=True, recurse=True):
+<span class="w"> </span>    &quot;&quot;&quot;Groups together tokens that are joined by a middle token. i.e. x &lt; y&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    idx = 0</span>
+<span class="gi">+    while idx &lt; len(tlist):</span>
+<span class="gi">+        token = tlist[idx]</span>
+<span class="gi">+        if token.is_group() and recurse:</span>
+<span class="gi">+            _group(token, cls, match, valid_prev, valid_next, post, extend)</span>
+<span class="gi">+            idx += 1</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        if match(token) and idx &gt; 0 and idx + 1 &lt; len(tlist):</span>
+<span class="gi">+            prev = tlist[idx - 1]</span>
+<span class="gi">+            next_ = tlist[idx + 1]</span>
+<span class="gi">+            if valid_prev(prev) and valid_next(next_):</span>
+<span class="gi">+                group = cls([prev, token, next_])</span>
+<span class="gi">+                if post:</span>
+<span class="gi">+                    post(group)</span>
+<span class="gi">+                tlist.tokens[idx - 1:idx + 2] = [group]</span>
+<span class="gi">+                if extend:</span>
+<span class="gi">+                    idx -= 1</span>
+<span class="gi">+                    continue</span>
+<span class="gi">+        idx += 1</span>
+<span class="gh">diff --git a/sqlparse/engine/statement_splitter.py b/sqlparse/engine/statement_splitter.py</span>
+<span class="gh">index c9a1569..19406f6 100644</span>
+<span class="gd">--- a/sqlparse/engine/statement_splitter.py</span>
+<span class="gi">+++ b/sqlparse/engine/statement_splitter.py</span>
+<span class="gu">@@ -9,12 +9,55 @@ class StatementSplitter:</span>
+
+<span class="w"> </span>    def _reset(self):
+<span class="w"> </span>        &quot;&quot;&quot;Set the filter attributes to its default values&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.level = 0</span>
+<span class="gi">+        self.stmt = sql.Statement()</span>
+<span class="gi">+        self.consume_ws = False</span>
+<span class="gi">+        self.consume_comments = False</span>
+
+<span class="w"> </span>    def _change_splitlevel(self, ttype, value):
+<span class="w"> </span>        &quot;&quot;&quot;Get the new split level (increase, decrease or remain equal)&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if ttype in T.Keyword:</span>
+<span class="gi">+            if value.upper() in (&#39;BEGIN&#39;, &#39;CASE&#39;):</span>
+<span class="gi">+                return 1</span>
+<span class="gi">+            elif value.upper() == &#39;END&#39;:</span>
+<span class="gi">+                return -1</span>
+<span class="gi">+        elif ttype is T.Punctuation:</span>
+<span class="gi">+            if value == &#39;(&#39;:</span>
+<span class="gi">+                return 1</span>
+<span class="gi">+            elif value == &#39;)&#39;:</span>
+<span class="gi">+                return -1</span>
+<span class="gi">+        return 0</span>
+
+<span class="w"> </span>    def process(self, stream):
+<span class="w"> </span>        &quot;&quot;&quot;Process the stream&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        EOS_TTYPE = T.Whitespace, T.Comment.Single, T.Comment.Multiline</span>
+<span class="gi">+</span>
+<span class="gi">+        for ttype, value in stream:</span>
+<span class="gi">+            # Consume whitespaces if needed</span>
+<span class="gi">+            if self.consume_ws and ttype in T.Whitespace:</span>
+<span class="gi">+                self.stmt.tokens.append(sql.Token(ttype, value))</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            # Consume comments if needed</span>
+<span class="gi">+            if self.consume_comments and ttype in T.Comment:</span>
+<span class="gi">+                self.stmt.tokens.append(sql.Token(ttype, value))</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            # Change the split level</span>
+<span class="gi">+            self.level += self._change_splitlevel(ttype, value)</span>
+<span class="gi">+</span>
+<span class="gi">+            # Append the token to the statement</span>
+<span class="gi">+            self.stmt.tokens.append(sql.Token(ttype, value))</span>
+<span class="gi">+</span>
+<span class="gi">+            if self.level &lt;= 0 and ttype in EOS_TTYPE:</span>
+<span class="gi">+                if self.stmt.tokens:</span>
+<span class="gi">+                    yield self.stmt</span>
+<span class="gi">+                self._reset()</span>
+<span class="gi">+            elif ttype is T.Punctuation and value == &#39;;&#39;:</span>
+<span class="gi">+                if self.stmt.tokens:</span>
+<span class="gi">+                    yield self.stmt</span>
+<span class="gi">+                self._reset()</span>
+<span class="gi">+</span>
+<span class="gi">+        # Yield any remaining statement</span>
+<span class="gi">+        if self.stmt.tokens:</span>
+<span class="gi">+            yield self.stmt</span>
+<span class="gh">diff --git a/sqlparse/filters/others.py b/sqlparse/filters/others.py</span>
+<span class="gh">index a5dc327..6e9b635 100644</span>
+<span class="gd">--- a/sqlparse/filters/others.py</span>
+<span class="gi">+++ b/sqlparse/filters/others.py</span>
+<span class="gu">@@ -4,20 +4,42 @@ from sqlparse.utils import split_unquoted_newlines</span>
+
+
+<span class="w"> </span>class StripCommentsFilter:
+<span class="gd">-    pass</span>
+<span class="gi">+    def process(self, stack, stream):</span>
+<span class="gi">+        for token in stream:</span>
+<span class="gi">+            if not token.is_whitespace and not token.ttype in T.Comment:</span>
+<span class="gi">+                yield token</span>
+
+
+<span class="w"> </span>class StripWhitespaceFilter:
+<span class="gd">-    pass</span>
+<span class="gi">+    def process(self, stack, stream):</span>
+<span class="gi">+        for token in stream:</span>
+<span class="gi">+            if not token.is_whitespace:</span>
+<span class="gi">+                yield token</span>
+
+
+<span class="w"> </span>class SpacesAroundOperatorsFilter:
+<span class="gd">-    pass</span>
+<span class="gi">+    def process(self, stack, stream):</span>
+<span class="gi">+        for token in stream:</span>
+<span class="gi">+            if token.ttype in T.Operator:</span>
+<span class="gi">+                yield sql.Token(T.Whitespace, &#39; &#39;)</span>
+<span class="gi">+                yield token</span>
+<span class="gi">+                yield sql.Token(T.Whitespace, &#39; &#39;)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                yield token</span>
+
+
+<span class="w"> </span>class StripTrailingSemicolonFilter:
+<span class="gd">-    pass</span>
+<span class="gi">+    def process(self, stack, stream):</span>
+<span class="gi">+        tokens = list(stream)</span>
+<span class="gi">+        if tokens and tokens[-1].match(T.Punctuation, &#39;;&#39;):</span>
+<span class="gi">+            tokens = tokens[:-1]</span>
+<span class="gi">+        return tokens</span>
+
+
+<span class="w"> </span>class SerializerUnicode:
+<span class="gd">-    pass</span>
+<span class="gi">+    def process(self, stack, stream):</span>
+<span class="gi">+        for token in stream:</span>
+<span class="gi">+            value = token.value</span>
+<span class="gi">+            if isinstance(value, bytes):</span>
+<span class="gi">+                value = value.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+            yield sql.Token(token.ttype, value)</span>
+<span class="gh">diff --git a/sqlparse/filters/output.py b/sqlparse/filters/output.py</span>
+<span class="gh">index d7e0078..37e6f48 100644</span>
+<span class="gd">--- a/sqlparse/filters/output.py</span>
+<span class="gi">+++ b/sqlparse/filters/output.py</span>
+<span class="gu">@@ -10,8 +10,30 @@ class OutputFilter:</span>
+
+
+<span class="w"> </span>class OutputPythonFilter(OutputFilter):
+<span class="gd">-    pass</span>
+<span class="gi">+    def process(self, stream):</span>
+<span class="gi">+        for token in stream:</span>
+<span class="gi">+            if isinstance(token, sql.Statement):</span>
+<span class="gi">+                yield sql.Token(T.Literal, f&#39;{self.varname}{self.count} = &#39;)</span>
+<span class="gi">+                yield sql.Token(T.Literal, &#39;&quot;&#39;)</span>
+<span class="gi">+                yield from token</span>
+<span class="gi">+                yield sql.Token(T.Literal, &#39;&quot;&#39;)</span>
+<span class="gi">+                yield sql.Token(T.Whitespace, &#39;\n&#39;)</span>
+<span class="gi">+                self.count += 1</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                yield token</span>
+
+
+<span class="w"> </span>class OutputPHPFilter(OutputFilter):
+<span class="w"> </span>    varname_prefix = &#39;$&#39;
+<span class="gi">+</span>
+<span class="gi">+    def process(self, stream):</span>
+<span class="gi">+        for token in stream:</span>
+<span class="gi">+            if isinstance(token, sql.Statement):</span>
+<span class="gi">+                yield sql.Token(T.Literal, f&#39;{self.varname}{self.count} = &#39;)</span>
+<span class="gi">+                yield sql.Token(T.Literal, &#39;&quot;&#39;)</span>
+<span class="gi">+                yield from token</span>
+<span class="gi">+                yield sql.Token(T.Literal, &#39;&quot;;&#39;)</span>
+<span class="gi">+                yield sql.Token(T.Whitespace, &#39;\n&#39;)</span>
+<span class="gi">+                self.count += 1</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                yield token</span>
+<span class="gh">diff --git a/sqlparse/filters/reindent.py b/sqlparse/filters/reindent.py</span>
+<span class="gh">index cccce71..ec48bb0 100644</span>
+<span class="gd">--- a/sqlparse/filters/reindent.py</span>
+<span class="gi">+++ b/sqlparse/filters/reindent.py</span>
+<span class="gu">@@ -21,4 +21,7 @@ class ReindentFilter:</span>
+
+<span class="w"> </span>    def _flatten_up_to_token(self, token):
+<span class="w"> </span>        &quot;&quot;&quot;Yields all tokens up to token but excluding current.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for t in self._curr_stmt.flatten():</span>
+<span class="gi">+            if t == token:</span>
+<span class="gi">+                break</span>
+<span class="gi">+            yield t</span>
+<span class="gh">diff --git a/sqlparse/formatter.py b/sqlparse/formatter.py</span>
+<span class="gh">index 71775a6..3bb9f2d 100644</span>
+<span class="gd">--- a/sqlparse/formatter.py</span>
+<span class="gi">+++ b/sqlparse/formatter.py</span>
+<span class="gu">@@ -5,7 +5,18 @@ from sqlparse.exceptions import SQLParseError</span>
+
+<span class="w"> </span>def validate_options(options):
+<span class="w"> </span>    &quot;&quot;&quot;Validates options.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(options, dict):</span>
+<span class="gi">+        raise SQLParseError(&quot;Options must be a dictionary&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    valid_options = {</span>
+<span class="gi">+        &#39;keyword_case&#39;, &#39;identifier_case&#39;, &#39;strip_comments&#39;, &#39;reindent&#39;,</span>
+<span class="gi">+        &#39;reindent_aligned&#39;, &#39;use_space_around_operators&#39;, &#39;strip_whitespace&#39;,</span>
+<span class="gi">+        &#39;comma_first&#39;, &#39;wrap_after&#39;, &#39;right_margin&#39;</span>
+<span class="gi">+    }</span>
+<span class="gi">+    </span>
+<span class="gi">+    for key in options:</span>
+<span class="gi">+        if key not in valid_options:</span>
+<span class="gi">+            raise SQLParseError(f&quot;Invalid option: {key}&quot;)</span>
+
+
+<span class="w"> </span>def build_filter_stack(stack, options):
+<span class="gu">@@ -15,4 +26,50 @@ def build_filter_stack(stack, options):</span>
+<span class="w"> </span>      stack: :class:`~sqlparse.filters.FilterStack` instance
+<span class="w"> </span>      options: Dictionary with options validated by validate_options.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Keyword case</span>
+<span class="gi">+    if &#39;keyword_case&#39; in options:</span>
+<span class="gi">+        stack.preprocess.append(</span>
+<span class="gi">+            filters.KeywordCaseFilter(case=options[&#39;keyword_case&#39;]))</span>
+<span class="gi">+</span>
+<span class="gi">+    # Identifier case</span>
+<span class="gi">+    if &#39;identifier_case&#39; in options:</span>
+<span class="gi">+        stack.preprocess.append(</span>
+<span class="gi">+            filters.IdentifierCaseFilter(case=options[&#39;identifier_case&#39;]))</span>
+<span class="gi">+</span>
+<span class="gi">+    # Strip comments</span>
+<span class="gi">+    if options.get(&#39;strip_comments&#39;, False):</span>
+<span class="gi">+        stack.preprocess.append(filters.StripCommentsFilter())</span>
+<span class="gi">+</span>
+<span class="gi">+    # Reindent</span>
+<span class="gi">+    if options.get(&#39;reindent&#39;, False):</span>
+<span class="gi">+        stack.enable_grouping()</span>
+<span class="gi">+        stack.stmtprocess.append(</span>
+<span class="gi">+            filters.ReindentFilter(</span>
+<span class="gi">+                char=options.get(&#39;indent_char&#39;, &#39; &#39;),</span>
+<span class="gi">+                width=options.get(&#39;indent_width&#39;, 2),</span>
+<span class="gi">+                wrap_after=options.get(&#39;wrap_after&#39;, 0),</span>
+<span class="gi">+                comma_first=options.get(&#39;comma_first&#39;, False)</span>
+<span class="gi">+            )</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Reindent aligned</span>
+<span class="gi">+    if options.get(&#39;reindent_aligned&#39;, False):</span>
+<span class="gi">+        stack.enable_grouping()</span>
+<span class="gi">+        stack.stmtprocess.append(filters.AlignedIndentFilter())</span>
+<span class="gi">+</span>
+<span class="gi">+    # Use space around operators</span>
+<span class="gi">+    if options.get(&#39;use_space_around_operators&#39;, False):</span>
+<span class="gi">+        stack.enable_grouping()</span>
+<span class="gi">+        stack.stmtprocess.append(filters.SpacesAroundOperatorsFilter())</span>
+<span class="gi">+</span>
+<span class="gi">+    # Strip whitespace</span>
+<span class="gi">+    if options.get(&#39;strip_whitespace&#39;, False):</span>
+<span class="gi">+        stack.postprocess.append(filters.StripWhitespaceFilter())</span>
+<span class="gi">+</span>
+<span class="gi">+    # Right margin</span>
+<span class="gi">+    if &#39;right_margin&#39; in options:</span>
+<span class="gi">+        stack.enable_grouping()</span>
+<span class="gi">+        stack.stmtprocess.append(</span>
+<span class="gi">+            filters.RightMarginFilter(width=options[&#39;right_margin&#39;]))</span>
+<span class="gi">+</span>
+<span class="gi">+    return stack</span>
+<span class="gh">diff --git a/sqlparse/lexer.py b/sqlparse/lexer.py</span>
+<span class="gh">index cc76039..794625a 100644</span>
+<span class="gd">--- a/sqlparse/lexer.py</span>
+<span class="gi">+++ b/sqlparse/lexer.py</span>
+<span class="gu">@@ -16,28 +16,35 @@ class Lexer:</span>
+<span class="w"> </span>    def get_default_instance(cls):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the lexer instance used internally
+<span class="w"> </span>        by the sqlparse core functions.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        with cls._lock:</span>
+<span class="gi">+            if cls._default_instance is None:</span>
+<span class="gi">+                cls._default_instance = cls()</span>
+<span class="gi">+            return cls._default_instance</span>
+
+<span class="w"> </span>    def default_initialization(self):
+<span class="w"> </span>        &quot;&quot;&quot;Initialize the lexer with default dictionaries.
+<span class="w"> </span>        Useful if you need to revert custom syntax settings.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.clear()</span>
+<span class="gi">+        self.add_keywords(keywords.KEYWORDS)</span>
+<span class="gi">+        self.add_keywords(keywords.KEYWORDS_COMMON)</span>
+<span class="gi">+        self.add_keywords(keywords.KEYWORDS_ORACLE)</span>
+
+<span class="w"> </span>    def clear(self):
+<span class="w"> </span>        &quot;&quot;&quot;Clear all syntax configurations.
+<span class="w"> </span>        Useful if you want to load a reduced set of syntax configurations.
+<span class="w"> </span>        After this call, regexps and keyword dictionaries need to be loaded
+<span class="w"> </span>        to make the lexer functional again.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.keywords = {}</span>
+<span class="gi">+        self.SQL_REGEX = []</span>
+
+<span class="w"> </span>    def set_SQL_REGEX(self, SQL_REGEX):
+<span class="w"> </span>        &quot;&quot;&quot;Set the list of regex that will parse the SQL.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.SQL_REGEX = SQL_REGEX</span>
+
+<span class="w"> </span>    def add_keywords(self, keywords):
+<span class="w"> </span>        &quot;&quot;&quot;Add keyword dictionaries. Keywords are looked up in the same order
+<span class="w"> </span>        that dictionaries were added.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.keywords.update(keywords)</span>
+
+<span class="w"> </span>    def is_keyword(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;Checks for a keyword.
+<span class="gu">@@ -45,7 +52,10 @@ class Lexer:</span>
+<span class="w"> </span>        If the given value is in one of the KEYWORDS_* dictionary
+<span class="w"> </span>        it&#39;s considered a keyword. Otherwise, tokens.Name is returned.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        val = value.upper()</span>
+<span class="gi">+        if val in self.keywords:</span>
+<span class="gi">+            return self.keywords[val]</span>
+<span class="gi">+        return tokens.Name</span>
+
+<span class="w"> </span>    def get_tokens(self, text, encoding=None):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -60,7 +70,27 @@ class Lexer:</span>
+
+<span class="w"> </span>        ``stack`` is the initial stack (default: ``[&#39;root&#39;]``)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(text, TextIOBase):</span>
+<span class="gi">+            text = text.read()</span>
+<span class="gi">+</span>
+<span class="gi">+        if encoding is not None:</span>
+<span class="gi">+            if isinstance(text, str):</span>
+<span class="gi">+                text = text.encode(encoding)</span>
+<span class="gi">+            text = text.decode(encoding)</span>
+<span class="gi">+</span>
+<span class="gi">+        iterable = enumerate(text)</span>
+<span class="gi">+        for pos, char in iterable:</span>
+<span class="gi">+            for regex, token_type in self.SQL_REGEX:</span>
+<span class="gi">+                match = regex.match(text, pos)</span>
+<span class="gi">+                if match:</span>
+<span class="gi">+                    value = match.group()</span>
+<span class="gi">+                    if token_type is tokens.Name.Symbol:</span>
+<span class="gi">+                        token_type = self.is_keyword(value)</span>
+<span class="gi">+                    yield token_type, value</span>
+<span class="gi">+                    consume(iterable, len(value) - 1)</span>
+<span class="gi">+                    break</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                yield tokens.Error, char</span>
+
+
+<span class="w"> </span>def tokenize(sql, encoding=None):
+<span class="gu">@@ -69,4 +99,5 @@ def tokenize(sql, encoding=None):</span>
+<span class="w"> </span>    Tokenize *sql* using the :class:`Lexer` and return a 2-tuple stream
+<span class="w"> </span>    of ``(token type, value)`` items.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    lexer = Lexer.get_default_instance()</span>
+<span class="gi">+    return lexer.get_tokens(sql, encoding)</span>
+<span class="gh">diff --git a/sqlparse/sql.py b/sqlparse/sql.py</span>
+<span class="gh">index 44fef09..2fa139f 100644</span>
+<span class="gd">--- a/sqlparse/sql.py</span>
+<span class="gi">+++ b/sqlparse/sql.py</span>
+<span class="gu">@@ -10,11 +10,11 @@ class NameAliasMixin:</span>
+
+<span class="w"> </span>    def get_real_name(self):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the real name (object name) of this identifier.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.get_name()</span>
+
+<span class="w"> </span>    def get_alias(self):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the alias for this identifier or ``None``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return None</span>
+
+
+<span class="w"> </span>class Token:
+<span class="gu">@@ -50,7 +50,7 @@ class Token:</span>
+
+<span class="w"> </span>    def flatten(self):
+<span class="w"> </span>        &quot;&quot;&quot;Resolve subgroups.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        yield self</span>
+
+<span class="w"> </span>    def match(self, ttype, values, regex=False):
+<span class="w"> </span>        &quot;&quot;&quot;Checks whether the token matches the given arguments.
+<span class="gu">@@ -64,7 +64,17 @@ class Token:</span>
+<span class="w"> </span>        If *regex* is ``True`` (default is ``False``) the given values are
+<span class="w"> </span>        treated as regular expressions.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.ttype is not ttype:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+</span>
+<span class="gi">+        values = [values] if isinstance(values, str) else values</span>
+<span class="gi">+</span>
+<span class="gi">+        if regex:</span>
+<span class="gi">+            return any(re.search(val, self.value, re.IGNORECASE if self.is_keyword else 0) for val in values)</span>
+<span class="gi">+        elif self.is_keyword:</span>
+<span class="gi">+            return self.normalized in [v.upper() for v in values]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return self.value in values</span>
+
+<span class="w"> </span>    def within(self, group_cls):
+<span class="w"> </span>        &quot;&quot;&quot;Returns ``True`` if this token is within *group_cls*.
+<span class="gu">@@ -72,15 +82,25 @@ class Token:</span>
+<span class="w"> </span>        Use this method for example to check if an identifier is within
+<span class="w"> </span>        a function: ``t.within(sql.Function)``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        parent = self.parent</span>
+<span class="gi">+        while parent:</span>
+<span class="gi">+            if isinstance(parent, group_cls):</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            parent = parent.parent</span>
+<span class="gi">+        return False</span>
+
+<span class="w"> </span>    def is_child_of(self, other):
+<span class="w"> </span>        &quot;&quot;&quot;Returns ``True`` if this token is a direct child of *other*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.parent == other</span>
+
+<span class="w"> </span>    def has_ancestor(self, other):
+<span class="w"> </span>        &quot;&quot;&quot;Returns ``True`` if *other* is in this tokens ancestry.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        parent = self.parent</span>
+<span class="gi">+        while parent:</span>
+<span class="gi">+            if parent == other:</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            parent = parent.parent</span>
+<span class="gi">+        return False</span>
+
+
+<span class="w"> </span>class TokenList(Token):
+<span class="gu">@@ -108,22 +128,58 @@ class TokenList(Token):</span>
+
+<span class="w"> </span>    def _pprint_tree(self, max_depth=None, depth=0, f=None, _pre=&#39;&#39;):
+<span class="w"> </span>        &quot;&quot;&quot;Pretty-print the object tree.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if max_depth and depth &gt; max_depth:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        indent = &#39;  &#39; * depth</span>
+<span class="gi">+        if f is None:</span>
+<span class="gi">+            f = sys.stdout</span>
+<span class="gi">+</span>
+<span class="gi">+        f.write(f&#39;{_pre}{indent}{self.__class__.__name__} {self}\n&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        for token in self.tokens:</span>
+<span class="gi">+            if isinstance(token, TokenList):</span>
+<span class="gi">+                token._pprint_tree(max_depth, depth + 1, f)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                f.write(f&#39;{indent}  {token.__class__.__name__} {token}\n&#39;)</span>
+
+<span class="w"> </span>    def get_token_at_offset(self, offset):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the token that is on position offset.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        idx = 0</span>
+<span class="gi">+        for token in self.flatten():</span>
+<span class="gi">+            end = idx + len(token.value)</span>
+<span class="gi">+            if idx &lt;= offset &lt; end:</span>
+<span class="gi">+                return token</span>
+<span class="gi">+            idx = end</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def flatten(self):
+<span class="w"> </span>        &quot;&quot;&quot;Generator yielding ungrouped tokens.
+
+<span class="w"> </span>        This method is recursively called for all child tokens.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for token in self.tokens:</span>
+<span class="gi">+            if isinstance(token, TokenList):</span>
+<span class="gi">+                yield from token.flatten()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                yield token</span>
+
+<span class="w"> </span>    def _token_matching(self, funcs, start=0, end=None, reverse=False):
+<span class="w"> </span>        &quot;&quot;&quot;next token that match functions&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        funcs = [funcs] if not isinstance(funcs, (list, tuple)) else funcs</span>
+<span class="gi">+        end = end or len(self.tokens)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if reverse:</span>
+<span class="gi">+            indices = range(end - 1, start - 1, -1)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            indices = range(start, end)</span>
+<span class="gi">+        </span>
+<span class="gi">+        for idx in indices:</span>
+<span class="gi">+            token = self.tokens[idx]</span>
+<span class="gi">+            for func in funcs:</span>
+<span class="gi">+                if func(token):</span>
+<span class="gi">+                    return idx, token</span>
+<span class="gi">+        return None, None</span>
+
+<span class="w"> </span>    def token_first(self, skip_ws=True, skip_cm=False):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the first child token.
+<span class="gh">diff --git a/sqlparse/utils.py b/sqlparse/utils.py</span>
+<span class="gh">index a99ca61..b214be8 100644</span>
+<span class="gd">--- a/sqlparse/utils.py</span>
+<span class="gi">+++ b/sqlparse/utils.py</span>
+<span class="gu">@@ -23,12 +23,18 @@ def split_unquoted_newlines(stmt):</span>
+
+<span class="w"> </span>    Unlike str.splitlines(), this will ignore CR/LF/CR+LF if the requisite
+<span class="w"> </span>    character is inside of a string.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not stmt:</span>
+<span class="gi">+        return []</span>
+<span class="gi">+    </span>
+<span class="gi">+    parts = SPLIT_REGEX.split(stmt)</span>
+<span class="gi">+    return [part for part in parts if LINE_MATCH.match(part) is None]</span>
+
+
+<span class="w"> </span>def remove_quotes(val):
+<span class="w"> </span>    &quot;&quot;&quot;Helper that removes surrounding quotes from strings.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if val and len(val) &gt; 1 and val[0] == val[-1] and val[0] in (&quot;&#39;&quot;, &#39;&quot;&#39;):</span>
+<span class="gi">+        return val[1:-1]</span>
+<span class="gi">+    return val</span>
+
+
+<span class="w"> </span>def recurse(*cls):
+<span class="gu">@@ -37,7 +43,14 @@ def recurse(*cls):</span>
+<span class="w"> </span>    :param cls: Classes to not recurse over
+<span class="w"> </span>    :return: function
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def wrap(f):</span>
+<span class="gi">+        def wrapped(tlist):</span>
+<span class="gi">+            for token in tlist.tokens:</span>
+<span class="gi">+                if not isinstance(token, cls):</span>
+<span class="gi">+                    f(token)</span>
+<span class="gi">+            return tlist</span>
+<span class="gi">+        return wrapped</span>
+<span class="gi">+    return wrap</span>
+
+
+<span class="w"> </span>def imt(token, i=None, m=None, t=None):
+<span class="gu">@@ -48,9 +61,27 @@ def imt(token, i=None, m=None, t=None):</span>
+<span class="w"> </span>    :param t: TokenType or Tuple/List of TokenTypes
+<span class="w"> </span>    :return:  bool
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if i is not None:</span>
+<span class="gi">+        if isinstance(i, (list, tuple)):</span>
+<span class="gi">+            return isinstance(token, tuple(i))</span>
+<span class="gi">+        return isinstance(token, i)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if m is not None:</span>
+<span class="gi">+        if isinstance(m[0], (list, tuple)):</span>
+<span class="gi">+            return any(token.match(*_m) for _m in m)</span>
+<span class="gi">+        return token.match(*m)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if t is not None:</span>
+<span class="gi">+        if isinstance(t, (list, tuple)):</span>
+<span class="gi">+            return token.ttype in t</span>
+<span class="gi">+        return token.ttype is t</span>
+<span class="gi">+    </span>
+<span class="gi">+    return False</span>
+
+
+<span class="w"> </span>def consume(iterator, n):
+<span class="w"> </span>    &quot;&quot;&quot;Advance the iterator n-steps ahead. If n is none, consume entirely.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if n is None:</span>
+<span class="gi">+        deque(iterator, maxlen=0)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        next(itertools.islice(iterator, n, n), None)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

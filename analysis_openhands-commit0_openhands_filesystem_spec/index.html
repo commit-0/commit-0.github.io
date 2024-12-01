@@ -1,0 +1,1355 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands filesystem spec - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-filesystem_spec" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands filesystem spec
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-filesystem_spec"><strong>OpenHands</strong>: filesystem_spec</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Unknown failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/fsspec/compression.py b/fsspec/compression.py</span>
+<span class="gh">index 849bfaf..ff77beb 100644</span>
+<span class="gd">--- a/fsspec/compression.py</span>
+<span class="gi">+++ b/fsspec/compression.py</span>
+<span class="gu">@@ -2,6 +2,21 @@</span>
+<span class="w"> </span>from zipfile import ZipFile
+<span class="w"> </span>import fsspec.utils
+<span class="w"> </span>from fsspec.spec import AbstractBufferedFile
+<span class="gi">+</span>
+<span class="gi">+def noop_file(infile, mode, **kwargs):</span>
+<span class="gi">+    &quot;&quot;&quot;Return the input file without any compression/decompression&quot;&quot;&quot;</span>
+<span class="gi">+    return infile</span>
+<span class="gi">+</span>
+<span class="gi">+def unzip(infile, mode, **kwargs):</span>
+<span class="gi">+    &quot;&quot;&quot;Wrap ZipFile objects to make them more like file objects&quot;&quot;&quot;</span>
+<span class="gi">+    if &#39;r&#39; not in mode:</span>
+<span class="gi">+        raise ValueError(&quot;Write mode not supported for zip files&quot;)</span>
+<span class="gi">+    z = ZipFile(infile)</span>
+<span class="gi">+    if len(z.filelist) != 1:</span>
+<span class="gi">+        raise ValueError(&quot;Zip files containing multiple files are not supported&quot;)</span>
+<span class="gi">+    first = z.filelist[0]</span>
+<span class="gi">+    return z.open(first, mode)</span>
+<span class="gi">+</span>
+<span class="w"> </span>compr = {None: noop_file}
+
+<span class="w"> </span>def register_compression(name, callback, extensions, force=False):
+<span class="gh">diff --git a/fsspec/core.py b/fsspec/core.py</span>
+<span class="gh">index 1a4bf91..09261f2 100644</span>
+<span class="gd">--- a/fsspec/core.py</span>
+<span class="gi">+++ b/fsspec/core.py</span>
+<span class="gu">@@ -10,6 +10,40 @@ from fsspec.compression import compr</span>
+<span class="w"> </span>from fsspec.config import conf
+<span class="w"> </span>from fsspec.registry import filesystem, get_filesystem_class
+<span class="w"> </span>from fsspec.utils import _unstrip_protocol, build_name_function, infer_compression, stringify_path
+<span class="gi">+</span>
+<span class="gi">+def get_compression(path, compression):</span>
+<span class="gi">+    &quot;&quot;&quot;Determine compression from path or compression parameter&quot;&quot;&quot;</span>
+<span class="gi">+    if compression == &quot;infer&quot;:</span>
+<span class="gi">+        return infer_compression(path)</span>
+<span class="gi">+    return compression</span>
+<span class="gi">+</span>
+<span class="gi">+def _expand_paths(path, name_function=None, num=1):</span>
+<span class="gi">+    &quot;&quot;&quot;Expand paths containing ``*`` to match the number of files required</span>
+<span class="gi">+</span>
+<span class="gi">+    Parameters</span>
+<span class="gi">+    ----------</span>
+<span class="gi">+    path: str</span>
+<span class="gi">+        Path pattern to be expanded</span>
+<span class="gi">+    name_function: callable, optional</span>
+<span class="gi">+        If given, generates names from integer indices</span>
+<span class="gi">+    num: int</span>
+<span class="gi">+        If name_function is None, expands path to match this number of files</span>
+<span class="gi">+</span>
+<span class="gi">+    Returns</span>
+<span class="gi">+    -------</span>
+<span class="gi">+    list of str</span>
+<span class="gi">+        Expanded paths</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(path, (list, tuple)):</span>
+<span class="gi">+        return path</span>
+<span class="gi">+</span>
+<span class="gi">+    if name_function is None:</span>
+<span class="gi">+        name_function = build_name_function(num - 1)</span>
+<span class="gi">+</span>
+<span class="gi">+    if &quot;*&quot; not in path:</span>
+<span class="gi">+        return [path]</span>
+<span class="gi">+</span>
+<span class="gi">+    return [path.replace(&quot;*&quot;, name_function(i)) for i in range(num)]</span>
+<span class="w"> </span>logger = logging.getLogger(&#39;fsspec&#39;)
+
+<span class="w"> </span>class OpenFile:
+<span class="gh">diff --git a/fsspec/implementations/http.py b/fsspec/implementations/http.py</span>
+<span class="gh">index 41dd999..4c811cc 100644</span>
+<span class="gd">--- a/fsspec/implementations/http.py</span>
+<span class="gi">+++ b/fsspec/implementations/http.py</span>
+<span class="gu">@@ -12,6 +12,10 @@ from fsspec.callbacks import DEFAULT_CALLBACK</span>
+<span class="w"> </span>from fsspec.exceptions import FSTimeoutError
+<span class="w"> </span>from fsspec.spec import AbstractBufferedFile
+<span class="w"> </span>from fsspec.utils import DEFAULT_BLOCK_SIZE, glob_translate, isfilelike, nullcontext, tokenize
+<span class="gi">+</span>
+<span class="gi">+def get_client(**kwargs):</span>
+<span class="gi">+    &quot;&quot;&quot;Create an aiohttp.ClientSession with the given kwargs&quot;&quot;&quot;</span>
+<span class="gi">+    return aiohttp.ClientSession(**kwargs)</span>
+<span class="w"> </span>from ..caching import AllBytes
+<span class="w"> </span>ex = re.compile(&#39;&lt;(a|A)\\s+(?:[^&gt;]*?\\s+)?(href|HREF)=[&quot;\&#39;](?P&lt;url&gt;[^&quot;\&#39;]+)&#39;)
+<span class="w"> </span>ex2 = re.compile(&#39;(?P&lt;url&gt;http[s]?://[-a-zA-Z0-9@:%_+.~#?&amp;/=]+)&#39;)
+<span class="gu">@@ -78,6 +82,39 @@ class HTTPFileSystem(AsyncFileSystem):</span>
+<span class="w"> </span>    def _strip_protocol(cls, path):
+<span class="w"> </span>        &quot;&quot;&quot;For HTTP, we always want to keep the full URL&quot;&quot;&quot;
+<span class="w"> </span>        pass
+<span class="gi">+</span>
+<span class="gi">+    async def _ls(self, url, detail=True, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Get all files in a directory based on links in an HTML page&quot;&quot;&quot;</span>
+<span class="gi">+        session = await self.set_session()</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            async with session.get(self.encode_url(url), **self.kwargs) as r:</span>
+<span class="gi">+                self._raise_not_found_for_status(r, url)</span>
+<span class="gi">+                text = await r.text()</span>
+<span class="gi">+        except Exception as e:</span>
+<span class="gi">+            if detail:</span>
+<span class="gi">+                raise</span>
+<span class="gi">+            return []</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.simple_links:</span>
+<span class="gi">+            links = ex2.findall(text) + [u[2] for u in ex.findall(text)]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            links = [u[2] for u in ex.findall(text)]</span>
+<span class="gi">+</span>
+<span class="gi">+        out = set()</span>
+<span class="gi">+        parts = urlparse(url)</span>
+<span class="gi">+        for l in links:</span>
+<span class="gi">+            if l.startswith(&#39;/&#39;) and len(l) &gt; 1:</span>
+<span class="gi">+                # absolute URL on this server</span>
+<span class="gi">+                l = parts.scheme + &#39;://&#39; + parts.netloc + l</span>
+<span class="gi">+            if l.startswith(&#39;http&#39;):</span>
+<span class="gi">+                if self.same_schema and l.startswith(parts.scheme):</span>
+<span class="gi">+                    out.add(l)</span>
+<span class="gi">+                elif not self.same_schema:</span>
+<span class="gi">+                    out.add(l)</span>
+<span class="gi">+        if detail:</span>
+<span class="gi">+            return [await self._info(u) for u in out]</span>
+<span class="gi">+        return list(sorted(out))</span>
+<span class="gi">+</span>
+<span class="w"> </span>    ls = sync_wrapper(_ls)
+
+<span class="w"> </span>    def _raise_not_found_for_status(self, response, url):
+<span class="gu">@@ -222,6 +259,15 @@ class HTTPStreamFile(AbstractBufferedFile):</span>
+<span class="w"> </span>            return r
+<span class="w"> </span>        self.r = sync(self.loop, cor)
+<span class="w"> </span>        self.loop = fs.loop
+<span class="gi">+</span>
+<span class="gi">+    async def _read(self, length=-1):</span>
+<span class="gi">+        &quot;&quot;&quot;Read bytes from stream&quot;&quot;&quot;</span>
+<span class="gi">+        if length &lt; 0:</span>
+<span class="gi">+            out = await self.r.read()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            out = await self.r.read(length)</span>
+<span class="gi">+        return out</span>
+<span class="gi">+</span>
+<span class="w"> </span>    read = sync_wrapper(_read)
+
+<span class="w"> </span>    def __reduce__(self):
+<span class="gu">@@ -247,4 +293,13 @@ async def _file_info(url, session, size_policy=&#39;head&#39;, **kwargs):</span>
+<span class="w"> </span>    &#39;identity&#39; (no compression) to get the true size of the target.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    pass
+<span class="gi">+</span>
+<span class="gi">+async def _file_size(url, session=None, **kwargs):</span>
+<span class="gi">+    &quot;&quot;&quot;Return the size of a file by URL</span>
+<span class="gi">+</span>
+<span class="gi">+    Uses HTTP HEAD request by default</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    info = await _file_info(url, session=session, **kwargs)</span>
+<span class="gi">+    return info.get(&#39;size&#39;, None)</span>
+<span class="gi">+</span>
+<span class="w"> </span>file_size = sync_wrapper(_file_size)
+\ No newline at end of file
+<span class="gh">diff --git a/fsspec/implementations/memory.py b/fsspec/implementations/memory.py</span>
+<span class="gh">index 11e4cf3..acfffc1 100644</span>
+<span class="gd">--- a/fsspec/implementations/memory.py</span>
+<span class="gi">+++ b/fsspec/implementations/memory.py</span>
+<span class="gu">@@ -21,12 +21,115 @@ class MemoryFileSystem(AbstractFileSystem):</span>
+<span class="w"> </span>    protocol = &#39;memory&#39;
+<span class="w"> </span>    root_marker = &#39;/&#39;
+
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def _strip_protocol(cls, path):</span>
+<span class="gi">+        &quot;&quot;&quot;Remove protocol from path&quot;&quot;&quot;</span>
+<span class="gi">+        path = stringify_path(path)</span>
+<span class="gi">+        if path.startswith(&#39;memory://&#39;):</span>
+<span class="gi">+            path = path[9:]</span>
+<span class="gi">+        return path.lstrip(&#39;/&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def current(cls):</span>
+<span class="gi">+        &quot;&quot;&quot;Return the most recently instantiated instance&quot;&quot;&quot;</span>
+<span class="gi">+        if not cls._cache:</span>
+<span class="gi">+            return cls()</span>
+<span class="gi">+        return list(cls._cache.values())[-1]</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def pipe_file(self, path, value, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Set the bytes of given file
+
+<span class="w"> </span>        Avoids copies of the data if possible
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        path = self._strip_protocol(stringify_path(path))</span>
+<span class="gi">+        if isinstance(value, bytes):</span>
+<span class="gi">+            data = value</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            data = value.read()</span>
+<span class="gi">+        self.store[path] = MemoryFile(self, path, data)</span>
+<span class="gi">+</span>
+<span class="gi">+    def cat(self, path):</span>
+<span class="gi">+        &quot;&quot;&quot;Return contents of file as bytes&quot;&quot;&quot;</span>
+<span class="gi">+        path = self._strip_protocol(stringify_path(path))</span>
+<span class="gi">+        if path not in self.store:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        return self.store[path].getvalue()</span>
+<span class="gi">+</span>
+<span class="gi">+    def du(self, path, total=True, maxdepth=None, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Space used by files within a path&quot;&quot;&quot;</span>
+<span class="gi">+        path = self._strip_protocol(stringify_path(path))</span>
+<span class="gi">+        sizes = {}</span>
+<span class="gi">+        for p, f in self.store.items():</span>
+<span class="gi">+            if p.startswith(path):</span>
+<span class="gi">+                sizes[p] = len(f.getvalue())</span>
+<span class="gi">+        if total:</span>
+<span class="gi">+            return sum(sizes.values())</span>
+<span class="gi">+        return sizes</span>
+<span class="gi">+</span>
+<span class="gi">+    def open(self, path, mode=&#39;rb&#39;, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Open a file&quot;&quot;&quot;</span>
+<span class="gi">+        path = self._strip_protocol(stringify_path(path))</span>
+<span class="gi">+        if mode == &#39;rb&#39;:</span>
+<span class="gi">+            if path not in self.store:</span>
+<span class="gi">+                raise FileNotFoundError(path)</span>
+<span class="gi">+            return MemoryFile(self, path, self.store[path].getvalue())</span>
+<span class="gi">+        elif mode == &#39;wb&#39;:</span>
+<span class="gi">+            f = MemoryFile(self, path)</span>
+<span class="gi">+            self.store[path] = f</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise NotImplementedError(&quot;Mode %s not supported&quot; % mode)</span>
+<span class="gi">+</span>
+<span class="gi">+    def put(self, lpath, rpath, recursive=False, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Copy file(s) from local&quot;&quot;&quot;</span>
+<span class="gi">+        if recursive:</span>
+<span class="gi">+            for f in LocalFileSystem().find(lpath):</span>
+<span class="gi">+                data = open(f, &#39;rb&#39;).read()</span>
+<span class="gi">+                rp = rpath + &#39;/&#39; + os.path.relpath(f, lpath)</span>
+<span class="gi">+                self.pipe_file(rp, data)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            data = open(lpath, &#39;rb&#39;).read()</span>
+<span class="gi">+            self.pipe_file(rpath, data)</span>
+<span class="gi">+</span>
+<span class="gi">+    def get(self, rpath, lpath, recursive=False, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Copy file(s) to local&quot;&quot;&quot;</span>
+<span class="gi">+        if recursive:</span>
+<span class="gi">+            paths = self.find(rpath)</span>
+<span class="gi">+            for path in paths:</span>
+<span class="gi">+                data = self.cat(path)</span>
+<span class="gi">+                lp = os.path.join(lpath, os.path.relpath(path, rpath))</span>
+<span class="gi">+                os.makedirs(os.path.dirname(lp), exist_ok=True)</span>
+<span class="gi">+                with open(lp, &#39;wb&#39;) as f:</span>
+<span class="gi">+                    f.write(data)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            data = self.cat(rpath)</span>
+<span class="gi">+            with open(lpath, &#39;wb&#39;) as f:</span>
+<span class="gi">+                f.write(data)</span>
+<span class="gi">+</span>
+<span class="gi">+    def ls(self, path, detail=True, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;List objects at path&quot;&quot;&quot;</span>
+<span class="gi">+        path = self._strip_protocol(stringify_path(path))</span>
+<span class="gi">+        paths = []</span>
+<span class="gi">+        for p in self.store:</span>
+<span class="gi">+            if p.startswith(path):</span>
+<span class="gi">+                paths.append(p)</span>
+<span class="gi">+        if detail:</span>
+<span class="gi">+            return [self.info(p) for p in paths]</span>
+<span class="gi">+        return paths</span>
+<span class="gi">+</span>
+<span class="gi">+    def info(self, path, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Get info about file&quot;&quot;&quot;</span>
+<span class="gi">+        path = self._strip_protocol(stringify_path(path))</span>
+<span class="gi">+        if path not in self.store:</span>
+<span class="gi">+            raise FileNotFoundError(path)</span>
+<span class="gi">+        f = self.store[path]</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &#39;name&#39;: path,</span>
+<span class="gi">+            &#39;size&#39;: len(f.getvalue()),</span>
+<span class="gi">+            &#39;type&#39;: &#39;file&#39;,</span>
+<span class="gi">+            &#39;created&#39;: f.created,</span>
+<span class="gi">+            &#39;modified&#39;: f.modified</span>
+<span class="gi">+        }</span>
+
+<span class="w"> </span>class MemoryFile(BytesIO):
+<span class="w"> </span>    &quot;&quot;&quot;A BytesIO which can&#39;t close and works as a context manager
+<span class="gu">@@ -45,6 +148,18 @@ class MemoryFile(BytesIO):</span>
+<span class="w"> </span>        if data:
+<span class="w"> </span>            super().__init__(data)
+<span class="w"> </span>            self.seek(0)
+<span class="gi">+        else:</span>
+<span class="gi">+            super().__init__()</span>
+
+<span class="w"> </span>    def __enter__(self):
+<span class="gd">-        return self</span>
+\ No newline at end of file
+<span class="gi">+        return self</span>
+<span class="gi">+</span>
+<span class="gi">+    def __exit__(self, exc_type, exc_val, exc_tb):</span>
+<span class="gi">+        self.modified = datetime.now(tz=timezone.utc)</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self):</span>
+<span class="gi">+        pass  # BytesIO can&#39;t be closed in memory</span>
+<span class="gi">+</span>
+<span class="gi">+    def discard(self):</span>
+<span class="gi">+        pass  # BytesIO can&#39;t be discarded in memory</span>
+\ No newline at end of file
+<span class="gh">diff --git a/fsspec/registry.py b/fsspec/registry.py</span>
+<span class="gh">index 5121364..e5f26d5 100644</span>
+<span class="gd">--- a/fsspec/registry.py</span>
+<span class="gi">+++ b/fsspec/registry.py</span>
+<span class="gu">@@ -27,7 +27,14 @@ def register_implementation(name, cls, clobber=False, errtxt=None):</span>
+<span class="w"> </span>        If given, then a failure to import the given class will result in this
+<span class="w"> </span>        text being given.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(cls, str):</span>
+<span class="gi">+        if name in known_implementations and not clobber:</span>
+<span class="gi">+            raise ValueError(f&quot;Name {name} already in known_implementations&quot;)</span>
+<span class="gi">+        known_implementations[name] = {&quot;class&quot;: cls, &quot;err&quot;: errtxt}</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        if name in registry and not clobber:</span>
+<span class="gi">+            raise ValueError(f&quot;Name {name} already in registry&quot;)</span>
+<span class="gi">+        _registry[name] = cls</span>
+<span class="w"> </span>known_implementations = {&#39;abfs&#39;: {&#39;class&#39;: &#39;adlfs.AzureBlobFileSystem&#39;, &#39;err&#39;: &#39;Install adlfs to access Azure Datalake Gen2 and Azure Blob Storage&#39;}, &#39;adl&#39;: {&#39;class&#39;: &#39;adlfs.AzureDatalakeFileSystem&#39;, &#39;err&#39;: &#39;Install adlfs to access Azure Datalake Gen1&#39;}, &#39;arrow_hdfs&#39;: {&#39;class&#39;: &#39;fsspec.implementations.arrow.HadoopFileSystem&#39;, &#39;err&#39;: &#39;pyarrow and local java libraries required for HDFS&#39;}, &#39;asynclocal&#39;: {&#39;class&#39;: &#39;morefs.asyn_local.AsyncLocalFileSystem&#39;, &#39;err&#39;: &quot;Install &#39;morefs[asynclocalfs]&#39; to use AsyncLocalFileSystem&quot;}, &#39;az&#39;: {&#39;class&#39;: &#39;adlfs.AzureBlobFileSystem&#39;, &#39;err&#39;: &#39;Install adlfs to access Azure Datalake Gen2 and Azure Blob Storage&#39;}, &#39;blockcache&#39;: {&#39;class&#39;: &#39;fsspec.implementations.cached.CachingFileSystem&#39;}, &#39;box&#39;: {&#39;class&#39;: &#39;boxfs.BoxFileSystem&#39;, &#39;err&#39;: &#39;Please install boxfs to access BoxFileSystem&#39;}, &#39;cached&#39;: {&#39;class&#39;: &#39;fsspec.implementations.cached.CachingFileSystem&#39;}, &#39;dask&#39;: {&#39;class&#39;: &#39;fsspec.implementations.dask.DaskWorkerFileSystem&#39;, &#39;err&#39;: &#39;Install dask distributed to access worker file system&#39;}, &#39;data&#39;: {&#39;class&#39;: &#39;fsspec.implementations.data.DataFileSystem&#39;}, &#39;dbfs&#39;: {&#39;class&#39;: &#39;fsspec.implementations.dbfs.DatabricksFileSystem&#39;, &#39;err&#39;: &#39;Install the requests package to use the DatabricksFileSystem&#39;}, &#39;dir&#39;: {&#39;class&#39;: &#39;fsspec.implementations.dirfs.DirFileSystem&#39;}, &#39;dropbox&#39;: {&#39;class&#39;: &#39;dropboxdrivefs.DropboxDriveFileSystem&#39;, &#39;err&#39;: &#39;DropboxFileSystem requires &quot;dropboxdrivefs&quot;,&quot;requests&quot; and &quot;&quot;dropbox&quot; to be installed&#39;}, &#39;dvc&#39;: {&#39;class&#39;: &#39;dvc.api.DVCFileSystem&#39;, &#39;err&#39;: &#39;Install dvc to access DVCFileSystem&#39;}, &#39;file&#39;: {&#39;class&#39;: &#39;fsspec.implementations.local.LocalFileSystem&#39;}, &#39;filecache&#39;: {&#39;class&#39;: &#39;fsspec.implementations.cached.WholeFileCacheFileSystem&#39;}, &#39;ftp&#39;: {&#39;class&#39;: &#39;fsspec.implementations.ftp.FTPFileSystem&#39;}, &#39;gcs&#39;: {&#39;class&#39;: &#39;gcsfs.GCSFileSystem&#39;, &#39;err&#39;: &#39;Please install gcsfs to access Google Storage&#39;}, &#39;gdrive&#39;: {&#39;class&#39;: &#39;gdrivefs.GoogleDriveFileSystem&#39;, &#39;err&#39;: &#39;Please install gdrivefs for access to Google Drive&#39;}, &#39;generic&#39;: {&#39;class&#39;: &#39;fsspec.generic.GenericFileSystem&#39;}, &#39;git&#39;: {&#39;class&#39;: &#39;fsspec.implementations.git.GitFileSystem&#39;, &#39;err&#39;: &#39;Install pygit2 to browse local git repos&#39;}, &#39;github&#39;: {&#39;class&#39;: &#39;fsspec.implementations.github.GithubFileSystem&#39;, &#39;err&#39;: &#39;Install the requests package to use the github FS&#39;}, &#39;gs&#39;: {&#39;class&#39;: &#39;gcsfs.GCSFileSystem&#39;, &#39;err&#39;: &#39;Please install gcsfs to access Google Storage&#39;}, &#39;hdfs&#39;: {&#39;class&#39;: &#39;fsspec.implementations.arrow.HadoopFileSystem&#39;, &#39;err&#39;: &#39;pyarrow and local java libraries required for HDFS&#39;}, &#39;hf&#39;: {&#39;class&#39;: &#39;huggingface_hub.HfFileSystem&#39;, &#39;err&#39;: &#39;Install huggingface_hub to access HfFileSystem&#39;}, &#39;http&#39;: {&#39;class&#39;: &#39;fsspec.implementations.http.HTTPFileSystem&#39;, &#39;err&#39;: &#39;HTTPFileSystem requires &quot;requests&quot; and &quot;aiohttp&quot; to be installed&#39;}, &#39;https&#39;: {&#39;class&#39;: &#39;fsspec.implementations.http.HTTPFileSystem&#39;, &#39;err&#39;: &#39;HTTPFileSystem requires &quot;requests&quot; and &quot;aiohttp&quot; to be installed&#39;}, &#39;jlab&#39;: {&#39;class&#39;: &#39;fsspec.implementations.jupyter.JupyterFileSystem&#39;, &#39;err&#39;: &#39;Jupyter FS requires requests to be installed&#39;}, &#39;jupyter&#39;: {&#39;class&#39;: &#39;fsspec.implementations.jupyter.JupyterFileSystem&#39;, &#39;err&#39;: &#39;Jupyter FS requires requests to be installed&#39;}, &#39;lakefs&#39;: {&#39;class&#39;: &#39;lakefs_spec.LakeFSFileSystem&#39;, &#39;err&#39;: &#39;Please install lakefs-spec to access LakeFSFileSystem&#39;}, &#39;libarchive&#39;: {&#39;class&#39;: &#39;fsspec.implementations.libarchive.LibArchiveFileSystem&#39;, &#39;err&#39;: &#39;LibArchive requires to be installed&#39;}, &#39;local&#39;: {&#39;class&#39;: &#39;fsspec.implementations.local.LocalFileSystem&#39;}, &#39;memory&#39;: {&#39;class&#39;: &#39;fsspec.implementations.memory.MemoryFileSystem&#39;}, &#39;oci&#39;: {&#39;class&#39;: &#39;ocifs.OCIFileSystem&#39;, &#39;err&#39;: &#39;Install ocifs to access OCI Object Storage&#39;}, &#39;ocilake&#39;: {&#39;class&#39;: &#39;ocifs.OCIFileSystem&#39;, &#39;err&#39;: &#39;Install ocifs to access OCI Data Lake&#39;}, &#39;oss&#39;: {&#39;class&#39;: &#39;ossfs.OSSFileSystem&#39;, &#39;err&#39;: &#39;Install ossfs to access Alibaba Object Storage System&#39;}, &#39;reference&#39;: {&#39;class&#39;: &#39;fsspec.implementations.reference.ReferenceFileSystem&#39;}, &#39;root&#39;: {&#39;class&#39;: &#39;fsspec_xrootd.XRootDFileSystem&#39;, &#39;err&#39;: &quot;Install fsspec-xrootd to access xrootd storage system. Note: &#39;root&#39; is the protocol name for xrootd storage systems, not referring to root directories&quot;}, &#39;s3&#39;: {&#39;class&#39;: &#39;s3fs.S3FileSystem&#39;, &#39;err&#39;: &#39;Install s3fs to access S3&#39;}, &#39;s3a&#39;: {&#39;class&#39;: &#39;s3fs.S3FileSystem&#39;, &#39;err&#39;: &#39;Install s3fs to access S3&#39;}, &#39;sftp&#39;: {&#39;class&#39;: &#39;fsspec.implementations.sftp.SFTPFileSystem&#39;, &#39;err&#39;: &#39;SFTPFileSystem requires &quot;paramiko&quot; to be installed&#39;}, &#39;simplecache&#39;: {&#39;class&#39;: &#39;fsspec.implementations.cached.SimpleCacheFileSystem&#39;}, &#39;smb&#39;: {&#39;class&#39;: &#39;fsspec.implementations.smb.SMBFileSystem&#39;, &#39;err&#39;: &#39;SMB requires &quot;smbprotocol&quot; or &quot;smbprotocol[kerberos]&quot; installed&#39;}, &#39;ssh&#39;: {&#39;class&#39;: &#39;fsspec.implementations.sftp.SFTPFileSystem&#39;, &#39;err&#39;: &#39;SFTPFileSystem requires &quot;paramiko&quot; to be installed&#39;}, &#39;tar&#39;: {&#39;class&#39;: &#39;fsspec.implementations.tar.TarFileSystem&#39;}, &#39;wandb&#39;: {&#39;class&#39;: &#39;wandbfs.WandbFS&#39;, &#39;err&#39;: &#39;Install wandbfs to access wandb&#39;}, &#39;webdav&#39;: {&#39;class&#39;: &#39;webdav4.fsspec.WebdavFileSystem&#39;, &#39;err&#39;: &#39;Install webdav4 to access WebDAV&#39;}, &#39;webhdfs&#39;: {&#39;class&#39;: &#39;fsspec.implementations.webhdfs.WebHDFS&#39;, &#39;err&#39;: &#39;webHDFS access requires &quot;requests&quot; to be installed&#39;}, &#39;zip&#39;: {&#39;class&#39;: &#39;fsspec.implementations.zip.ZipFileSystem&#39;}}
+<span class="w"> </span>assert list(known_implementations) == sorted(known_implementations), &#39;Not in alphabetical order&#39;
+
+<span class="gu">@@ -43,7 +50,20 @@ def get_filesystem_class(protocol):</span>
+<span class="w"> </span>    import may fail. In this case, the string in the &quot;err&quot; field of the
+<span class="w"> </span>    ``known_implementations`` will be given as the error message.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if protocol in registry:</span>
+<span class="gi">+        return registry[protocol]</span>
+<span class="gi">+</span>
+<span class="gi">+    if protocol not in known_implementations:</span>
+<span class="gi">+        raise ValueError(f&quot;Protocol {protocol} not known&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        register_implementation(protocol, _import_class(known_implementations[protocol][&quot;class&quot;]))</span>
+<span class="gi">+    except ImportError as e:</span>
+<span class="gi">+        if known_implementations[protocol][&quot;err&quot;]:</span>
+<span class="gi">+            raise ImportError(known_implementations[protocol][&quot;err&quot;]) from e</span>
+<span class="gi">+        raise</span>
+<span class="gi">+</span>
+<span class="gi">+    return registry[protocol]</span>
+<span class="w"> </span>s3_msg = &#39;Your installed version of s3fs is very old and known to cause\nsevere performance issues, see also https://github.com/dask/dask/issues/10276\n\nTo fix, you should specify a lower version bound on s3fs, or\nupdate the current installation.\n&#39;
+
+<span class="w"> </span>def _import_class(fqp: str):
+<span class="gu">@@ -57,7 +77,20 @@ def _import_class(fqp: str):</span>
+<span class="w"> </span>    This can import arbitrary modules. Make sure you haven&#39;t installed any modules
+<span class="w"> </span>    that may execute malicious code at import time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if &quot;:&quot; in fqp:</span>
+<span class="gi">+        mod, name = fqp.rsplit(&quot;:&quot;, 1)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        mod, name = fqp.rsplit(&quot;.&quot;, 1)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        module = importlib.import_module(mod)</span>
+<span class="gi">+    except ImportError as e:</span>
+<span class="gi">+        raise ImportError(f&quot;Could not import module {mod}&quot;) from e</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return getattr(module, name)</span>
+<span class="gi">+    except AttributeError as e:</span>
+<span class="gi">+        raise ImportError(f&quot;Could not import {name} from module {mod}&quot;) from e</span>
+
+<span class="w"> </span>def filesystem(protocol, **storage_options):
+<span class="w"> </span>    &quot;&quot;&quot;Instantiate filesystems for given protocol and arguments
+<span class="gu">@@ -65,11 +98,12 @@ def filesystem(protocol, **storage_options):</span>
+<span class="w"> </span>    ``storage_options`` are specific to the protocol being chosen, and are
+<span class="w"> </span>    passed directly to the class.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    cls = get_filesystem_class(protocol)</span>
+<span class="gi">+    return cls(**storage_options)</span>
+
+<span class="w"> </span>def available_protocols():
+<span class="w"> </span>    &quot;&quot;&quot;Return a list of the implemented protocols.
+
+<span class="w"> </span>    Note that any given protocol may require extra packages to be importable.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    return list(known_implementations)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/fsspec/spec.py b/fsspec/spec.py</span>
+<span class="gh">index 30263ba..50d0251 100644</span>
+<span class="gd">--- a/fsspec/spec.py</span>
+<span class="gi">+++ b/fsspec/spec.py</span>
+<span class="gu">@@ -43,7 +43,7 @@ class _Cached(type):</span>
+<span class="w"> </span>        cls._pid = os.getpid()
+
+<span class="w"> </span>    def __call__(cls, *args, **kwargs):
+<span class="gd">-        kwargs = apply_config(cls, kwargs)</span>
+<span class="gi">+        kwargs = apply_config(cls, kwargs) or {}</span>
+<span class="w"> </span>        extra_tokens = tuple((getattr(cls, attr, None) for attr in cls._extra_tokenize_attributes))
+<span class="w"> </span>        token = tokenize(cls, cls._pid, threading.get_ident(), *args, *extra_tokens, **kwargs)
+<span class="w"> </span>        skip = kwargs.pop(&#39;skip_instance_cache&#39;, False)
+<span class="gu">@@ -129,7 +129,7 @@ class AbstractFileSystem(metaclass=_Cached):</span>
+<span class="w"> </span>        &quot;&quot;&quot;Persistent filesystem id that can be used to compare filesystems
+<span class="w"> </span>        across sessions.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return sha256(str((type(self), self.storage_args, self.storage_options)).encode()).hexdigest()</span>
+
+<span class="w"> </span>    def __dask_tokenize__(self):
+<span class="w"> </span>        return self._fs_token
+<span class="gu">@@ -149,11 +149,17 @@ class AbstractFileSystem(metaclass=_Cached):</span>
+
+<span class="w"> </span>        May require FS-specific handling, e.g., for relative paths or links.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        path = stringify_path(path)</span>
+<span class="gi">+        protos = (cls.protocol,) if isinstance(cls.protocol, str) else cls.protocol</span>
+<span class="gi">+        for protocol in protos:</span>
+<span class="gi">+            if path.startswith(protocol + &#39;://&#39;):</span>
+<span class="gi">+                path = path[len(protocol) + 3:]</span>
+<span class="gi">+                break</span>
+<span class="gi">+        return path</span>
+
+<span class="w"> </span>    def unstrip_protocol(self, name: str) -&gt; str:
+<span class="w"> </span>        &quot;&quot;&quot;Format FS-specific path to generic, including protocol&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return _unstrip_protocol(name)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _get_kwargs_from_urls(path):
+<span class="gu">@@ -165,7 +171,7 @@ class AbstractFileSystem(metaclass=_Cached):</span>
+<span class="w"> </span>        Examples may look like an sftp path &quot;sftp://user@host:/my/path&quot;, where
+<span class="w"> </span>        the user and host should become kwargs and later get stripped.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return {}</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def current(cls):
+<span class="gu">@@ -173,7 +179,9 @@ class AbstractFileSystem(metaclass=_Cached):</span>
+
+<span class="w"> </span>        If no instance has been created, then create one with defaults
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not cls._cache:</span>
+<span class="gi">+            return cls()</span>
+<span class="gi">+        return list(cls._cache.values())[-1]</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def transaction(self):
+<span class="gu">@@ -182,15 +190,17 @@ class AbstractFileSystem(metaclass=_Cached):</span>
+<span class="w"> </span>        Requires the file class to implement `.commit()` and `.discard()`
+<span class="w"> </span>        for the normal and exception cases.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.transaction_type(self)</span>
+
+<span class="w"> </span>    def start_transaction(self):
+<span class="w"> </span>        &quot;&quot;&quot;Begin write transaction for deferring files, non-context version&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._intrans = True</span>
+<span class="gi">+        self._transaction = self.transaction_type(self)</span>
+
+<span class="w"> </span>    def end_transaction(self):
+<span class="w"> </span>        &quot;&quot;&quot;Finish write transaction, non-context version&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._intrans = False</span>
+<span class="gi">+        self._transaction = None</span>
+
+<span class="w"> </span>    def invalidate_cache(self, path=None):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -202,7 +212,10 @@ class AbstractFileSystem(metaclass=_Cached):</span>
+<span class="w"> </span>            If None, clear all listings cached else listings at or under given
+<span class="w"> </span>            path.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._intrans:</span>
+<span class="gi">+            self._invalidated_caches_in_transaction.append(path)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self.dircache.clear(path)</span>
+
+<span class="w"> </span>    def mkdir(self, path, create_parents=True, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gh">diff --git a/fsspec/utils.py b/fsspec/utils.py</span>
+<span class="gh">index dc3c9ed..df76bf5 100644</span>
+<span class="gd">--- a/fsspec/utils.py</span>
+<span class="gi">+++ b/fsspec/utils.py</span>
+<span class="gu">@@ -12,6 +12,63 @@ from hashlib import md5</span>
+<span class="w"> </span>from importlib.metadata import version
+<span class="w"> </span>from typing import IO, TYPE_CHECKING, Any, Callable, Iterable, Iterator, Sequence, TypeVar
+<span class="w"> </span>from urllib.parse import urlsplit
+<span class="gi">+</span>
+<span class="gi">+def _unstrip_protocol(name: str) -&gt; str:</span>
+<span class="gi">+    &quot;&quot;&quot;Convert back to &quot;protocol://path&quot; format</span>
+<span class="gi">+</span>
+<span class="gi">+    Parameters</span>
+<span class="gi">+    ----------</span>
+<span class="gi">+    name : str</span>
+<span class="gi">+        Input path, like &quot;protocol://path&quot; or &quot;path&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    Returns</span>
+<span class="gi">+    -------</span>
+<span class="gi">+    str</span>
+<span class="gi">+        Path with protocol prefix</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if &quot;://&quot; in name:</span>
+<span class="gi">+        return name</span>
+<span class="gi">+    return &quot;file://&quot; + name</span>
+<span class="gi">+</span>
+<span class="gi">+def is_exception(obj: Any) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;Test if an object is an Exception or subclass&quot;&quot;&quot;</span>
+<span class="gi">+    return isinstance(obj, BaseException) or (isinstance(obj, type) and issubclass(obj, BaseException))</span>
+<span class="gi">+</span>
+<span class="gi">+def get_protocol(urlpath: str) -&gt; str | None:</span>
+<span class="gi">+    &quot;&quot;&quot;Return protocol from given URL or None if no protocol is found&quot;&quot;&quot;</span>
+<span class="gi">+    if &quot;://&quot; in urlpath:</span>
+<span class="gi">+        return urlpath.split(&quot;://&quot;)[0]</span>
+<span class="gi">+    return None</span>
+<span class="gi">+</span>
+<span class="gi">+def setup_logging(logger: logging.Logger | None=None, level: str | int=&quot;INFO&quot;) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Configure logging for fsspec</span>
+<span class="gi">+</span>
+<span class="gi">+    Parameters</span>
+<span class="gi">+    ----------</span>
+<span class="gi">+    logger: logging.Logger or None</span>
+<span class="gi">+        Logger to configure. If None, uses the root logger</span>
+<span class="gi">+    level: str or int</span>
+<span class="gi">+        Logging level, like &quot;INFO&quot; or logging.INFO</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if logger is None:</span>
+<span class="gi">+        logger = logging.getLogger()</span>
+<span class="gi">+    handler = logging.StreamHandler()</span>
+<span class="gi">+    formatter = logging.Formatter(&#39;%(asctime)s - %(name)s - %(levelname)s - %(message)s&#39;)</span>
+<span class="gi">+    handler.setFormatter(formatter)</span>
+<span class="gi">+    logger.addHandler(handler)</span>
+<span class="gi">+    logger.setLevel(level)</span>
+<span class="gi">+</span>
+<span class="gi">+@contextlib.contextmanager</span>
+<span class="gi">+def nullcontext(enter_result=None):</span>
+<span class="gi">+    &quot;&quot;&quot;Context manager that does nothing</span>
+<span class="gi">+</span>
+<span class="gi">+    Useful for conditional context manager usage where one branch does nothing.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    yield enter_result</span>
+<span class="gi">+</span>
+<span class="gi">+def isfilelike(obj: Any) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;Test if an object implements the file-like protocol (read/write/seek)&quot;&quot;&quot;</span>
+<span class="gi">+    return hasattr(obj, &quot;read&quot;) and hasattr(obj, &quot;seek&quot;) and hasattr(obj, &quot;write&quot;)</span>
+<span class="w"> </span>if TYPE_CHECKING:
+<span class="w"> </span>    from typing_extensions import TypeGuard
+<span class="w"> </span>    from fsspec.spec import AbstractFileSystem
+<span class="gu">@@ -46,7 +103,48 @@ def infer_storage_options(urlpath: str, inherit_storage_options: dict[str, Any]</span>
+<span class="w"> </span>    &quot;host&quot;: &quot;node&quot;, &quot;port&quot;: 123, &quot;path&quot;: &quot;/mnt/datasets/test.csv&quot;,
+<span class="w"> </span>    &quot;url_query&quot;: &quot;q=1&quot;, &quot;extra&quot;: &quot;value&quot;}
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = {}</span>
+<span class="gi">+    if inherit_storage_options:</span>
+<span class="gi">+        result.update(inherit_storage_options)</span>
+<span class="gi">+</span>
+<span class="gi">+    if not isinstance(urlpath, str):</span>
+<span class="gi">+        return result</span>
+<span class="gi">+</span>
+<span class="gi">+    parsed_path = urlsplit(urlpath)</span>
+<span class="gi">+    protocol = parsed_path.scheme or &#39;file&#39;</span>
+<span class="gi">+    result[&#39;protocol&#39;] = protocol</span>
+<span class="gi">+</span>
+<span class="gi">+    if protocol == &#39;file&#39;:</span>
+<span class="gi">+        result[&#39;path&#39;] = urlpath</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        path = parsed_path.path</span>
+<span class="gi">+        if parsed_path.netloc:</span>
+<span class="gi">+            if &#39;@&#39; in parsed_path.netloc:</span>
+<span class="gi">+                auth, netloc = parsed_path.netloc.split(&#39;@&#39;, 1)</span>
+<span class="gi">+                if &#39;:&#39; in auth:</span>
+<span class="gi">+                    result[&#39;username&#39;], result[&#39;password&#39;] = auth.split(&#39;:&#39;, 1)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    result[&#39;username&#39;] = auth</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                netloc = parsed_path.netloc</span>
+<span class="gi">+</span>
+<span class="gi">+            if &#39;:&#39; in netloc:</span>
+<span class="gi">+                host, port = netloc.split(&#39;:&#39;, 1)</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    port = int(port)</span>
+<span class="gi">+                except ValueError:</span>
+<span class="gi">+                    port = None</span>
+<span class="gi">+                result[&#39;host&#39;] = host</span>
+<span class="gi">+                if port:</span>
+<span class="gi">+                    result[&#39;port&#39;] = port</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                result[&#39;host&#39;] = netloc</span>
+<span class="gi">+</span>
+<span class="gi">+        result[&#39;path&#39;] = path or &#39;/&#39;</span>
+<span class="gi">+        if parsed_path.query:</span>
+<span class="gi">+            result[&#39;url_query&#39;] = parsed_path.query</span>
+<span class="gi">+</span>
+<span class="gi">+    return result</span>
+<span class="w"> </span>compressions: dict[str, str] = {}
+
+<span class="w"> </span>def infer_compression(filename: str) -&gt; str | None:
+<span class="gu">@@ -56,7 +154,12 @@ def infer_compression(filename: str) -&gt; str | None:</span>
+<span class="w"> </span>    extension. This includes builtin (gz, bz2, zip) compressions, as well as
+<span class="w"> </span>    optional compressions. See fsspec.compression.register_compression.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(filename, str):</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    for ext, comp in compressions.items():</span>
+<span class="gi">+        if filename.endswith(&#39;.&#39; + ext):</span>
+<span class="gi">+            return comp</span>
+<span class="gi">+    return None</span>
+
+<span class="w"> </span>def build_name_function(max_int: float) -&gt; Callable[[int], str]:
+<span class="w"> </span>    &quot;&quot;&quot;Returns a function that receives a single integer
+<span class="gu">@@ -76,7 +179,8 @@ def build_name_function(max_int: float) -&gt; Callable[[int], str]:</span>
+<span class="w"> </span>    &gt;&gt;&gt; build_name_function(0)(0)
+<span class="w"> </span>    &#39;0&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    width = len(str(int(max_int)))</span>
+<span class="gi">+    return lambda x: str(x).zfill(width)</span>
+
+<span class="w"> </span>def seek_delimiter(file: IO[bytes], delimiter: bytes, blocksize: int) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Seek current file to file start, file end, or byte after delimiter seq.
+<span class="gu">@@ -100,7 +204,22 @@ def seek_delimiter(file: IO[bytes], delimiter: bytes, blocksize: int) -&gt; bool:</span>
+<span class="w"> </span>    Returns True if a delimiter was found, False if at file start or end.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if file.tell() == 0:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    last = b&#39;&#39;</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        current = file.read(blocksize)</span>
+<span class="gi">+        if not current:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        full = last + current</span>
+<span class="gi">+        possible = full.find(delimiter)</span>
+<span class="gi">+        if possible &lt; 0:</span>
+<span class="gi">+            last = full[-len(delimiter):]</span>
+<span class="gi">+            file.seek(-(len(delimiter) - 1), 1)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            file.seek(-(len(full) - possible - len(delimiter)), 1)</span>
+<span class="gi">+            return True</span>
+
+<span class="w"> </span>def read_block(f: IO[bytes], offset: int, length: int | None, delimiter: bytes | None=None, split_before: bool=False) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Read a block of bytes from a file
+<span class="gu">@@ -139,7 +258,43 @@ def read_block(f: IO[bytes], offset: int, length: int | None, delimiter: bytes |</span>
+<span class="w"> </span>    &gt;&gt;&gt; read_block(f, 10, 10, delimiter=b&#39;\\n&#39;)  # doctest: +SKIP
+<span class="w"> </span>    b&#39;Bob, 200\\nCharlie, 300&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if offset &lt; 0:</span>
+<span class="gi">+        raise ValueError(&quot;Offset must be non-negative&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if delimiter and offset &gt; 0:</span>
+<span class="gi">+        f.seek(0)</span>
+<span class="gi">+        found = False</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            block = f.read(2**16)</span>
+<span class="gi">+            if not block:</span>
+<span class="gi">+                break</span>
+<span class="gi">+            if delimiter in block:</span>
+<span class="gi">+                found = True</span>
+<span class="gi">+                break</span>
+<span class="gi">+        if not found:</span>
+<span class="gi">+            raise ValueError(&quot;Delimiter not found&quot;)</span>
+<span class="gi">+        f.seek(offset)</span>
+<span class="gi">+</span>
+<span class="gi">+    if length is None:</span>
+<span class="gi">+        length = 2**30</span>
+<span class="gi">+</span>
+<span class="gi">+    f.seek(offset)</span>
+<span class="gi">+    bytes_read = f.read(length)</span>
+<span class="gi">+</span>
+<span class="gi">+    if delimiter:</span>
+<span class="gi">+        if split_before:</span>
+<span class="gi">+            if bytes_read.endswith(delimiter):</span>
+<span class="gi">+                bytes_read = bytes_read[:-len(delimiter)]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if not bytes_read.endswith(delimiter):</span>
+<span class="gi">+                bytes_read += f.read(len(delimiter))</span>
+<span class="gi">+                while not bytes_read.endswith(delimiter):</span>
+<span class="gi">+                    block = f.read(2**16)</span>
+<span class="gi">+                    if not block:</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    bytes_read += block</span>
+<span class="gi">+</span>
+<span class="gi">+    return bytes_read</span>
+
+<span class="w"> </span>def tokenize(*args: Any, **kwargs: Any) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Deterministic token
+<span class="gu">@@ -152,7 +307,11 @@ def tokenize(*args: Any, **kwargs: Any) -&gt; str:</span>
+<span class="w"> </span>    &gt;&gt;&gt; tokenize(&#39;Hello&#39;) == tokenize(&#39;Hello&#39;)
+<span class="w"> </span>    True
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if kwargs is None:</span>
+<span class="gi">+        kwargs = {}</span>
+<span class="gi">+    if kwargs:</span>
+<span class="gi">+        args = args + (sorted(kwargs.items()),)</span>
+<span class="gi">+    return md5(str(args).encode()).hexdigest()</span>
+
+<span class="w"> </span>def stringify_path(filepath: str | os.PathLike[str] | pathlib.Path) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Attempt to convert a path-like object to a string.
+<span class="gu">@@ -176,11 +335,31 @@ def stringify_path(filepath: str | os.PathLike[str] | pathlib.Path) -&gt; str:</span>
+<span class="w"> </span>    Any other object is passed through unchanged, which includes bytes,
+<span class="w"> </span>    strings, buffers, or anything else that&#39;s not even path-like.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(filepath, str):</span>
+<span class="gi">+        return filepath</span>
+<span class="gi">+    if hasattr(filepath, &#39;__fspath__&#39;):</span>
+<span class="gi">+        return filepath.__fspath__()</span>
+<span class="gi">+    if isinstance(filepath, pathlib.Path):</span>
+<span class="gi">+        return str(filepath)</span>
+<span class="gi">+    return filepath</span>
+
+<span class="w"> </span>def common_prefix(paths: Iterable[str]) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;For a list of paths, find the shortest prefix common to all&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    paths = list(paths)</span>
+<span class="gi">+    if not paths:</span>
+<span class="gi">+        return &#39;&#39;</span>
+<span class="gi">+    if len(paths) == 1:</span>
+<span class="gi">+        return paths[0]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Convert Windows paths to POSIX paths</span>
+<span class="gi">+    paths = [p.replace(&#39;\\&#39;, &#39;/&#39;) for p in paths]</span>
+<span class="gi">+</span>
+<span class="gi">+    s1 = min(paths)</span>
+<span class="gi">+    s2 = max(paths)</span>
+<span class="gi">+    for i, c in enumerate(s1):</span>
+<span class="gi">+        if c != s2[i]:</span>
+<span class="gi">+            return s1[:i]</span>
+<span class="gi">+    return s1</span>
+
+<span class="w"> </span>def other_paths(paths: list[str], path2: str | list[str], exists: bool=False, flatten: bool=False) -&gt; list[str]:
+<span class="w"> </span>    &quot;&quot;&quot;In bulk file operations, construct a new file tree from a list of files
+<span class="gu">@@ -203,11 +382,41 @@ def other_paths(paths: list[str], path2: str | list[str], exists: bool=False, fl</span>
+<span class="w"> </span>    -------
+<span class="w"> </span>    list of str
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(path2, str):</span>
+<span class="gi">+        path2 = path2.replace(&#39;\\&#39;, &#39;/&#39;)</span>
+<span class="gi">+        if path2.endswith(&#39;/&#39;):</span>
+<span class="gi">+            exists = True</span>
+<span class="gi">+        if not exists:</span>
+<span class="gi">+            path2 = path2.rstrip(&#39;/&#39;)</span>
+<span class="gi">+        if exists:</span>
+<span class="gi">+            if not path2.endswith(&#39;/&#39;):</span>
+<span class="gi">+                path2 = path2 + &#39;/&#39;</span>
+<span class="gi">+            if flatten:</span>
+<span class="gi">+                return [path2 + os.path.basename(p) for p in paths]</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                cp = common_prefix(paths)</span>
+<span class="gi">+                return [path2 + p[len(cp):].lstrip(&#39;/&#39;) for p in paths]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if len(paths) &gt; 1:</span>
+<span class="gi">+                raise ValueError(&quot;If not exists and str target, source must be single file&quot;)</span>
+<span class="gi">+            return [path2]</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        if len(paths) != len(path2):</span>
+<span class="gi">+            raise ValueError(&quot;Different lengths for source and destination&quot;)</span>
+<span class="gi">+        return path2</span>
+
+<span class="w"> </span>def can_be_local(path: str) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Can the given URL be used with open_local?&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(path, str):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    path = path.replace(&#39;\\&#39;, &#39;/&#39;)</span>
+<span class="gi">+    if path.startswith(&#39;file://&#39;):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    if &#39;://&#39; not in path:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    if path.startswith(&#39;simplecache::&#39;):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    return False</span>
+
+<span class="w"> </span>def get_package_version_without_import(name: str) -&gt; str | None:
+<span class="w"> </span>    &quot;&quot;&quot;For given package name, try to find the version without importing it
+<span class="gu">@@ -218,13 +427,26 @@ def get_package_version_without_import(name: str) -&gt; str | None:</span>
+<span class="w"> </span>    Returns either the version string, or None if the package
+<span class="w"> </span>    or the version was not readily  found.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return version(name)</span>
+<span class="gi">+    except Exception:</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>def mirror_from(origin_name: str, methods: Iterable[str]) -&gt; Callable[[type[T]], type[T]]:
+<span class="w"> </span>    &quot;&quot;&quot;Mirror attributes and methods from the given
+<span class="w"> </span>    origin_name attribute of the instance to the
+<span class="w"> </span>    decorated class&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def wrapper(cls: type[T]) -&gt; type[T]:</span>
+<span class="gi">+        def make_method(method: str) -&gt; Callable:</span>
+<span class="gi">+            def _method(self, *args, **kwargs):</span>
+<span class="gi">+                origin = getattr(self, origin_name)</span>
+<span class="gi">+                return getattr(origin, method)(*args, **kwargs)</span>
+<span class="gi">+            return _method</span>
+<span class="gi">+</span>
+<span class="gi">+        for method in methods:</span>
+<span class="gi">+            setattr(cls, method, make_method(method))</span>
+<span class="gi">+        return cls</span>
+<span class="gi">+    return wrapper</span>
+
+<span class="w"> </span>def merge_offset_ranges(paths: list[str], starts: list[int] | int, ends: list[int] | int, max_gap: int=0, max_block: int | None=None, sort: bool=True) -&gt; tuple[list[str], list[int], list[int]]:
+<span class="w"> </span>    &quot;&quot;&quot;Merge adjacent byte-offset ranges when the inter-range
+<span class="gu">@@ -234,11 +456,52 @@ def merge_offset_ranges(paths: list[str], starts: list[int] | int, ends: list[in</span>
+<span class="w"> </span>    order. If the user can guarantee that the inputs are already
+<span class="w"> </span>    sorted, passing `sort=False` will skip the re-ordering.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(starts, int):</span>
+<span class="gi">+        starts = [starts] * len(paths)</span>
+<span class="gi">+    if isinstance(ends, int):</span>
+<span class="gi">+        ends = [ends] * len(paths)</span>
+<span class="gi">+    if len(paths) != len(starts) or len(paths) != len(ends):</span>
+<span class="gi">+        raise ValueError(&quot;paths, starts, and ends must have same length&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if sort:</span>
+<span class="gi">+        # Sort by path and start position</span>
+<span class="gi">+        items = sorted(zip(paths, starts, ends))</span>
+<span class="gi">+        paths, starts, ends = zip(*items)</span>
+<span class="gi">+        paths, starts, ends = list(paths), list(starts), list(ends)</span>
+<span class="gi">+</span>
+<span class="gi">+    if not paths:</span>
+<span class="gi">+        return [], [], []</span>
+<span class="gi">+</span>
+<span class="gi">+    out_paths = [paths[0]]</span>
+<span class="gi">+    out_starts = [starts[0]]</span>
+<span class="gi">+    out_ends = [ends[0]]</span>
+<span class="gi">+</span>
+<span class="gi">+    for path, start, end in zip(paths[1:], starts[1:], ends[1:]):</span>
+<span class="gi">+        if (path == out_paths[-1] and</span>
+<span class="gi">+            (start - out_ends[-1] &lt;= max_gap) and</span>
+<span class="gi">+            (max_block is None or end - out_starts[-1] &lt;= max_block)):</span>
+<span class="gi">+            # Merge with previous range</span>
+<span class="gi">+            out_ends[-1] = end</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # Start new range</span>
+<span class="gi">+            out_paths.append(path)</span>
+<span class="gi">+            out_starts.append(start)</span>
+<span class="gi">+            out_ends.append(end)</span>
+<span class="gi">+</span>
+<span class="gi">+    return out_paths, out_starts, out_ends</span>
+
+<span class="w"> </span>def file_size(filelike: IO[bytes]) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Find length of any open read-mode file-like&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return filelike.seek(0, ESPIPE)</span>
+<span class="gi">+    except (IOError, AttributeError):</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="gi">+    pos = filelike.tell()</span>
+<span class="gi">+    filelike.seek(0, 2)</span>
+<span class="gi">+    size = filelike.tell()</span>
+<span class="gi">+    filelike.seek(pos)</span>
+<span class="gi">+    return size</span>
+
+<span class="w"> </span>@contextlib.contextmanager
+<span class="w"> </span>def atomic_write(path: str, mode: str=&#39;wb&#39;):
+<span class="gu">@@ -247,8 +510,82 @@ def atomic_write(path: str, mode: str=&#39;wb&#39;):</span>
+<span class="w"> </span>    replaces `path` with the temporary file, thereby updating `path`
+<span class="w"> </span>    atomically.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    dir_path = os.path.dirname(path) or &#39;.&#39;</span>
+<span class="gi">+    basename = os.path.basename(path)</span>
+<span class="gi">+    temp_path = None</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        with tempfile.NamedTemporaryFile(</span>
+<span class="gi">+            mode=mode, prefix=basename + &#39;.&#39;, suffix=&#39;.tmp&#39;,</span>
+<span class="gi">+            dir=dir_path, delete=False</span>
+<span class="gi">+        ) as f:</span>
+<span class="gi">+            temp_path = f.name</span>
+<span class="gi">+            yield f</span>
+<span class="gi">+</span>
+<span class="gi">+        # On Windows, we need to close the file before renaming</span>
+<span class="gi">+        os.replace(temp_path, path)</span>
+<span class="gi">+        temp_path = None</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        if temp_path:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                os.unlink(temp_path)</span>
+<span class="gi">+            except OSError:</span>
+<span class="gi">+                pass</span>
+
+<span class="w"> </span>def glob_translate(pat):
+<span class="w"> </span>    &quot;&quot;&quot;Translate a pathname with shell wildcards to a regular expression.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if not pat:</span>
+<span class="gi">+        return &#39;&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    # Convert Windows paths to POSIX paths</span>
+<span class="gi">+    pat = pat.replace(&#39;\\&#39;, &#39;/&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Special case for matching a literal &#39;*&#39;</span>
+<span class="gi">+    if pat == &#39;*&#39;:</span>
+<span class="gi">+        return &#39;[^/]*&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    # Special case for matching a literal &#39;**&#39;</span>
+<span class="gi">+    if pat == &#39;**&#39;:</span>
+<span class="gi">+        return &#39;.*&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    # Convert shell wildcards to regex</span>
+<span class="gi">+    i, n = 0, len(pat)</span>
+<span class="gi">+    res = []</span>
+<span class="gi">+    while i &lt; n:</span>
+<span class="gi">+        c = pat[i]</span>
+<span class="gi">+        i = i + 1</span>
+<span class="gi">+        if c == &#39;*&#39;:</span>
+<span class="gi">+            if i &lt; n and pat[i] == &#39;*&#39;:</span>
+<span class="gi">+                # Handle **</span>
+<span class="gi">+                i = i + 1</span>
+<span class="gi">+                if i &lt; n and pat[i] == &#39;/&#39;:</span>
+<span class="gi">+                    i = i + 1</span>
+<span class="gi">+                    res.append(&#39;(?:/.+)?&#39;)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    res.append(&#39;.*&#39;)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                # Handle *</span>
+<span class="gi">+                res.append(&#39;[^/]*&#39;)</span>
+<span class="gi">+        elif c == &#39;?&#39;:</span>
+<span class="gi">+            res.append(&#39;[^/]&#39;)</span>
+<span class="gi">+        elif c == &#39;[&#39;:</span>
+<span class="gi">+            j = i</span>
+<span class="gi">+            if j &lt; n and pat[j] == &#39;!&#39;:</span>
+<span class="gi">+                j = j + 1</span>
+<span class="gi">+            if j &lt; n and pat[j] == &#39;]&#39;:</span>
+<span class="gi">+                j = j + 1</span>
+<span class="gi">+            while j &lt; n and pat[j] != &#39;]&#39;:</span>
+<span class="gi">+                j = j + 1</span>
+<span class="gi">+            if j &gt;= n:</span>
+<span class="gi">+                res.append(&#39;\\[&#39;)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                stuff = pat[i:j].replace(&#39;\\&#39;, &#39;\\\\&#39;)</span>
+<span class="gi">+                i = j + 1</span>
+<span class="gi">+                if stuff[0] == &#39;!&#39;:</span>
+<span class="gi">+                    stuff = &#39;^&#39; + stuff[1:]</span>
+<span class="gi">+                elif stuff[0] == &#39;^&#39;:</span>
+<span class="gi">+                    stuff = &#39;\\&#39; + stuff</span>
+<span class="gi">+                res.append(&#39;[&#39; + stuff + &#39;]&#39;)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            res.append(re.escape(c))</span>
+<span class="gi">+    return &#39;&#39;.join(res)</span>
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands dnspython - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-dnspython" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands dnspython
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-dnspython"><strong>OpenHands</strong>: dnspython</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Unknown failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/dns/_features.py b/dns/_features.py</span>
+<span class="gh">index de4dcf5..7d624d3 100644</span>
+<span class="gd">--- a/dns/_features.py</span>
+<span class="gi">+++ b/dns/_features.py</span>
+<span class="gu">@@ -3,6 +3,26 @@ import itertools</span>
+<span class="w"> </span>import string
+<span class="w"> </span>from typing import Dict, List, Tuple
+
+<span class="gi">+def _tuple_from_text(text: str) -&gt; Tuple[int, ...]:</span>
+<span class="gi">+    &quot;&quot;&quot;Convert version text like &#39;1.2.3&#39; or &#39;1.2rc1&#39; to a tuple of integers.</span>
+<span class="gi">+    </span>
+<span class="gi">+    Only includes numeric components, so &#39;1.2rc1&#39; becomes (1, 2).</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if not text:</span>
+<span class="gi">+        return ()</span>
+<span class="gi">+    parts = []</span>
+<span class="gi">+    for part in text.split(&#39;.&#39;):</span>
+<span class="gi">+        # Extract leading digits</span>
+<span class="gi">+        digits = &#39;&#39;</span>
+<span class="gi">+        for c in part:</span>
+<span class="gi">+            if c.isdigit():</span>
+<span class="gi">+                digits += c</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                break</span>
+<span class="gi">+        if digits:</span>
+<span class="gi">+            parts.append(int(digits))</span>
+<span class="gi">+    return tuple(parts)</span>
+<span class="gi">+</span>
+<span class="w"> </span>def _version_check(requirement: str) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Is the requirement fulfilled?
+
+<span class="gu">@@ -10,7 +30,15 @@ def _version_check(requirement: str) -&gt; bool:</span>
+
+<span class="w"> </span>        package&gt;=version
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        package, version = requirement.split(&#39;&gt;=&#39;)</span>
+<span class="gi">+        installed_version = importlib.metadata.version(package)</span>
+<span class="gi">+        # Convert versions to tuples for comparison</span>
+<span class="gi">+        installed = tuple(int(x) for x in installed_version.split(&#39;.&#39;))</span>
+<span class="gi">+        required = tuple(int(x) for x in version.split(&#39;.&#39;))</span>
+<span class="gi">+        return installed &gt;= required</span>
+<span class="gi">+    except (importlib.metadata.PackageNotFoundError, ValueError):</span>
+<span class="gi">+        return False</span>
+<span class="w"> </span>_cache: Dict[str, bool] = {}
+
+<span class="w"> </span>def have(feature: str) -&gt; bool:
+<span class="gu">@@ -23,7 +51,13 @@ def have(feature: str) -&gt; bool:</span>
+<span class="w"> </span>    and ``False`` if it is not or if metadata is
+<span class="w"> </span>    missing.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if feature in _cache:</span>
+<span class="gi">+        return _cache[feature]</span>
+<span class="gi">+    if feature not in _requirements:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    result = all(_version_check(requirement) for requirement in _requirements[feature])</span>
+<span class="gi">+    _cache[feature] = result</span>
+<span class="gi">+    return result</span>
+
+<span class="w"> </span>def force(feature: str, enabled: bool) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Force the status of *feature* to be *enabled*.
+<span class="gu">@@ -31,5 +65,5 @@ def force(feature: str, enabled: bool) -&gt; None:</span>
+<span class="w"> </span>    This method is provided as a workaround for any cases
+<span class="w"> </span>    where importlib.metadata is ineffective, or for testing.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    _cache[feature] = enabled</span>
+<span class="w"> </span>_requirements: Dict[str, List[str]] = {&#39;dnssec&#39;: [&#39;cryptography&gt;=41&#39;], &#39;doh&#39;: [&#39;httpcore&gt;=1.0.0&#39;, &#39;httpx&gt;=0.26.0&#39;, &#39;h2&gt;=4.1.0&#39;], &#39;doq&#39;: [&#39;aioquic&gt;=0.9.25&#39;], &#39;idna&#39;: [&#39;idna&gt;=3.6&#39;], &#39;trio&#39;: [&#39;trio&gt;=0.23&#39;], &#39;wmi&#39;: [&#39;wmi&gt;=1.5.1&#39;]}
+\ No newline at end of file
+<span class="gh">diff --git a/dns/_immutable_ctx.py b/dns/_immutable_ctx.py</span>
+<span class="gh">index 2f94965..be8fd34 100644</span>
+<span class="gd">--- a/dns/_immutable_ctx.py</span>
+<span class="gi">+++ b/dns/_immutable_ctx.py</span>
+<span class="gu">@@ -16,4 +16,17 @@ class _Immutable:</span>
+<span class="w"> </span>        if _in__init__.get() is not self:
+<span class="w"> </span>            raise TypeError(&quot;object doesn&#39;t support attribute assignment&quot;)
+<span class="w"> </span>        else:
+<span class="gd">-            super().__delattr__(name)</span>
+\ No newline at end of file
+<span class="gi">+            super().__delattr__(name)</span>
+<span class="gi">+</span>
+<span class="gi">+def immutable(f):</span>
+<span class="gi">+    &quot;&quot;&quot;A decorator which makes the returned object immutable.</span>
+<span class="gi">+    </span>
+<span class="gi">+    The object has to inherit from the _Immutable class for this to work.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    def wrapped(self, *args, **kwargs):</span>
+<span class="gi">+        token = _in__init__.set(self)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return f(self, *args, **kwargs)</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            _in__init__.reset(token)</span>
+<span class="gi">+    return wrapped</span>
+\ No newline at end of file
+<span class="gh">diff --git a/dns/query.py b/dns/query.py</span>
+<span class="gh">index bad09ad..c030c7a 100644</span>
+<span class="gd">--- a/dns/query.py</span>
+<span class="gi">+++ b/dns/query.py</span>
+<span class="gu">@@ -72,6 +72,116 @@ except ImportError:</span>
+<span class="w"> </span>            pass
+<span class="w"> </span>socket_factory = socket.socket
+
+<span class="gi">+def _compute_times(timeout: Optional[float]) -&gt; Tuple[Optional[float], Optional[float]]:</span>
+<span class="gi">+    &quot;&quot;&quot;Return a tuple of the current time and the expiration time, based on</span>
+<span class="gi">+    the current time and the specified timeout.  If timeout is None, None is</span>
+<span class="gi">+    returned for the expiration time.</span>
+<span class="gi">+</span>
+<span class="gi">+    Returns a tuple of (float, float) or (float, None)</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    now = time.time()</span>
+<span class="gi">+    if timeout is not None:</span>
+<span class="gi">+        return (now, now + timeout)</span>
+<span class="gi">+    return (now, None)</span>
+<span class="gi">+</span>
+<span class="gi">+def _remaining(expiration: Optional[float]) -&gt; float:</span>
+<span class="gi">+    &quot;&quot;&quot;Return the amount of time remaining until the expiration time.</span>
+<span class="gi">+</span>
+<span class="gi">+    Returns a float or 0.0 if time has expired.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if expiration is None:</span>
+<span class="gi">+        return 0.0</span>
+<span class="gi">+    timeout = expiration - time.time()</span>
+<span class="gi">+    if timeout &lt;= 0.0:</span>
+<span class="gi">+        return 0.0</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return timeout</span>
+<span class="gi">+</span>
+<span class="gi">+def _matches_destination(af: socket.AddressFamily, from_address: Any, destination: Any, ignore_scope: bool=False) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;Is the address we got a response from the same address we sent to?</span>
+<span class="gi">+    </span>
+<span class="gi">+    Returns a bool.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if af == socket.AF_INET:</span>
+<span class="gi">+        # Destination is a tuple of (ip, port)</span>
+<span class="gi">+        return from_address[0] == destination[0]</span>
+<span class="gi">+    elif af == socket.AF_INET6:</span>
+<span class="gi">+        # Destination is a tuple of (ip, port, flow info, scope id)</span>
+<span class="gi">+        if ignore_scope:</span>
+<span class="gi">+            from_address = from_address[:3] + (0,)</span>
+<span class="gi">+            destination = destination[:3] + (0,)</span>
+<span class="gi">+        return from_address[0] == destination[0]</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+def _destination_and_source(where: str, port: int, source: Optional[str], source_port: int, where_must_be_address: bool=True) -&gt; Tuple[socket.AddressFamily, Any, Any]:</span>
+<span class="gi">+    &quot;&quot;&quot;Return a tuple of address family, destination, and source.</span>
+<span class="gi">+    </span>
+<span class="gi">+    Returns a tuple of (int, Any, Any)</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    af = None</span>
+<span class="gi">+    destination = None</span>
+<span class="gi">+    source_tuple = None</span>
+<span class="gi">+</span>
+<span class="gi">+    if where_must_be_address:</span>
+<span class="gi">+        af = dns.inet.af_for_address(where)</span>
+<span class="gi">+        destination = _lltuple((where, port))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        # We assume AF_INET if we don&#39;t know and are using a hostname</span>
+<span class="gi">+        af = socket.AF_INET</span>
+<span class="gi">+        destination = None</span>
+<span class="gi">+</span>
+<span class="gi">+    if source is not None:</span>
+<span class="gi">+        af = dns.inet.af_for_address(source)</span>
+<span class="gi">+        source_tuple = _lltuple((source, source_port))</span>
+<span class="gi">+    elif source_port:</span>
+<span class="gi">+        if af == socket.AF_INET:</span>
+<span class="gi">+            source_tuple = (&#39;0.0.0.0&#39;, source_port)</span>
+<span class="gi">+        elif af == socket.AF_INET6:</span>
+<span class="gi">+            source_tuple = (&#39;::&#39;, source_port, 0, 0)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(&#39;source_port specified but address family is unknown&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return (af, destination, source_tuple)</span>
+<span class="gi">+</span>
+<span class="gi">+def _make_dot_ssl_context(verify: Union[bool, str], server_hostname: Optional[str]=None) -&gt; ssl.SSLContext:</span>
+<span class="gi">+    &quot;&quot;&quot;Create an SSL context for DoT.</span>
+<span class="gi">+    </span>
+<span class="gi">+    *verify*, a ``bool`` or ``str``. If a ``True``, then TLS certificate verification</span>
+<span class="gi">+    of the server is done using the default CA bundle; if ``False``, then no</span>
+<span class="gi">+    verification is done; if a ``str`` then it specifies the path to a certificate</span>
+<span class="gi">+    file or directory which will be used for verification.</span>
+<span class="gi">+</span>
+<span class="gi">+    *server_hostname*, a ``str`` or ``None``, the server&#39;s hostname.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if verify is True:</span>
+<span class="gi">+        ctx = ssl.create_default_context()</span>
+<span class="gi">+        if server_hostname is None:</span>
+<span class="gi">+            ctx.check_hostname = False</span>
+<span class="gi">+    elif verify is False:</span>
+<span class="gi">+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS)</span>
+<span class="gi">+        ctx.verify_mode = ssl.CERT_NONE</span>
+<span class="gi">+    elif isinstance(verify, str):</span>
+<span class="gi">+        ctx = ssl.create_default_context(cafile=verify)</span>
+<span class="gi">+        if server_hostname is None:</span>
+<span class="gi">+            ctx.check_hostname = False</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise ValueError(&#39;verify must be True, False, or a string&#39;)</span>
+<span class="gi">+    return ctx</span>
+<span class="gi">+</span>
+<span class="gi">+socket_factory = socket.socket</span>
+<span class="gi">+</span>
+<span class="gi">+class UDPMode(enum.IntEnum):</span>
+<span class="gi">+    &quot;&quot;&quot;What transport to use.</span>
+<span class="gi">+</span>
+<span class="gi">+    NEVER means always use TCP.</span>
+<span class="gi">+    ONLY means always use UDP.</span>
+<span class="gi">+    FIRST means try UDP and fallback to TCP if needed.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    NEVER = 0</span>
+<span class="gi">+    ONLY = 1</span>
+<span class="gi">+    FIRST = 2</span>
+<span class="gi">+</span>
+<span class="w"> </span>class UnexpectedSource(dns.exception.DNSException):
+<span class="w"> </span>    &quot;&quot;&quot;A DNS query response came from an unexpected address or port.&quot;&quot;&quot;
+
+<span class="gu">@@ -149,14 +259,40 @@ def _udp_recv(sock, max_size, expiration):</span>
+<span class="w"> </span>    A Timeout exception will be raised if the operation is not completed
+<span class="w"> </span>    by the expiration time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        if expiration is not None:</span>
+<span class="gi">+            timeout = _remaining(expiration)</span>
+<span class="gi">+            if timeout &lt;= 0.0:</span>
+<span class="gi">+                raise dns.exception.Timeout</span>
+<span class="gi">+            sock.settimeout(timeout)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return sock.recvfrom(max_size)</span>
+<span class="gi">+        except socket.timeout:</span>
+<span class="gi">+            raise dns.exception.Timeout</span>
+<span class="gi">+        except socket.error as e:</span>
+<span class="gi">+            if e.args[0] == errno.EINTR:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            raise</span>
+
+<span class="w"> </span>def _udp_send(sock, data, destination, expiration):
+<span class="w"> </span>    &quot;&quot;&quot;Sends the specified datagram to destination over the socket.
+<span class="w"> </span>    A Timeout exception will be raised if the operation is not completed
+<span class="w"> </span>    by the expiration time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        if expiration is not None:</span>
+<span class="gi">+            timeout = _remaining(expiration)</span>
+<span class="gi">+            if timeout &lt;= 0.0:</span>
+<span class="gi">+                raise dns.exception.Timeout</span>
+<span class="gi">+            sock.settimeout(timeout)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return sock.sendto(data, destination)</span>
+<span class="gi">+        except socket.timeout:</span>
+<span class="gi">+            raise dns.exception.Timeout</span>
+<span class="gi">+        except socket.error as e:</span>
+<span class="gi">+            if e.args[0] == errno.EINTR:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            raise</span>
+
+<span class="w"> </span>def send_udp(sock: Any, what: Union[dns.message.Message, bytes], destination: Any, expiration: Optional[float]=None) -&gt; Tuple[int, float]:
+<span class="w"> </span>    &quot;&quot;&quot;Send a DNS message to the specified UDP socket.
+<span class="gu">@@ -174,7 +310,11 @@ def send_udp(sock: Any, what: Union[dns.message.Message, bytes], destination: An</span>
+
+<span class="w"> </span>    Returns an ``(int, float)`` tuple of bytes sent and the sent time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(what, dns.message.Message):</span>
+<span class="gi">+        what = what.to_wire()</span>
+<span class="gi">+    sent_time = time.time()</span>
+<span class="gi">+    n = _udp_send(sock, what, destination, expiration)</span>
+<span class="gi">+    return (n, sent_time)</span>
+
+<span class="w"> </span>def receive_udp(sock: Any, destination: Optional[Any]=None, expiration: Optional[float]=None, ignore_unexpected: bool=False, one_rr_per_rrset: bool=False, keyring: Optional[Dict[dns.name.Name, dns.tsig.Key]]=None, request_mac: Optional[bytes]=b&#39;&#39;, ignore_trailing: bool=False, raise_on_truncation: bool=False, ignore_errors: bool=False, query: Optional[dns.message.Message]=None) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;Read a DNS message from a UDP socket.
+<span class="gu">@@ -225,7 +365,40 @@ def receive_udp(sock: Any, destination: Optional[Any]=None, expiration: Optional</span>
+<span class="w"> </span>    *ignore_errors* is ``True``, check that the received message is a response
+<span class="w"> </span>    to this query, and if not keep listening for a valid response.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        wire = b&#39;&#39;</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            (wire, from_address) = _udp_recv(sock, 65535, expiration)</span>
+<span class="gi">+        except dns.exception.Timeout:</span>
+<span class="gi">+            raise</span>
+<span class="gi">+        received_time = time.time()</span>
+<span class="gi">+        if expiration is not None and received_time &gt; expiration:</span>
+<span class="gi">+            raise dns.exception.Timeout</span>
+<span class="gi">+        if destination:</span>
+<span class="gi">+            if not ignore_unexpected and not _matches_destination(sock.family, from_address, destination, True):</span>
+<span class="gi">+                if not ignore_errors:</span>
+<span class="gi">+                    raise UnexpectedSource(&#39;got a response from {} instead of {}&#39;.format(from_address, destination))</span>
+<span class="gi">+                continue</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            r = dns.message.from_wire(wire, keyring=keyring, request_mac=request_mac,</span>
+<span class="gi">+                                    one_rr_per_rrset=one_rr_per_rrset,</span>
+<span class="gi">+                                    ignore_trailing=ignore_trailing)</span>
+<span class="gi">+        except dns.message.TrailingJunk:</span>
+<span class="gi">+            if not ignore_errors:</span>
+<span class="gi">+                raise</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        except dns.exception.FormError:</span>
+<span class="gi">+            if not ignore_errors:</span>
+<span class="gi">+                raise</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if query is not None and query.id != r.id:</span>
+<span class="gi">+            if not ignore_errors:</span>
+<span class="gi">+                raise BadResponse</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if destination is None:</span>
+<span class="gi">+            return (r, received_time, from_address)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return (r, received_time)</span>
+
+<span class="w"> </span>def udp(q: dns.message.Message, where: str, timeout: Optional[float]=None, port: int=53, source: Optional[str]=None, source_port: int=0, ignore_unexpected: bool=False, one_rr_per_rrset: bool=False, ignore_trailing: bool=False, raise_on_truncation: bool=False, sock: Optional[Any]=None, ignore_errors: bool=False) -&gt; dns.message.Message:
+<span class="w"> </span>    &quot;&quot;&quot;Return the response obtained after sending a query via UDP.
+<span class="gu">@@ -323,14 +496,40 @@ def _net_read(sock, count, expiration):</span>
+<span class="w"> </span>    A Timeout exception will be raised if the operation is not completed
+<span class="w"> </span>    by the expiration time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    s = b&#39;&#39;</span>
+<span class="gi">+    while count &gt; 0:</span>
+<span class="gi">+        if expiration is not None:</span>
+<span class="gi">+            timeout = _remaining(expiration)</span>
+<span class="gi">+            if timeout &lt;= 0.0:</span>
+<span class="gi">+                raise dns.exception.Timeout</span>
+<span class="gi">+            sock.settimeout(timeout)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            n = sock.recv(count)</span>
+<span class="gi">+            if n == b&#39;&#39;:</span>
+<span class="gi">+                raise EOFError</span>
+<span class="gi">+            count = count - len(n)</span>
+<span class="gi">+            s = s + n</span>
+<span class="gi">+        except socket.timeout:</span>
+<span class="gi">+            raise dns.exception.Timeout</span>
+<span class="gi">+    return s</span>
+
+<span class="w"> </span>def _net_write(sock, data, expiration):
+<span class="w"> </span>    &quot;&quot;&quot;Write the specified data to the socket.
+<span class="w"> </span>    A Timeout exception will be raised if the operation is not completed
+<span class="w"> </span>    by the expiration time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    current = 0</span>
+<span class="gi">+    l = len(data)</span>
+<span class="gi">+    while current &lt; l:</span>
+<span class="gi">+        if expiration is not None:</span>
+<span class="gi">+            timeout = _remaining(expiration)</span>
+<span class="gi">+            if timeout &lt;= 0.0:</span>
+<span class="gi">+                raise dns.exception.Timeout</span>
+<span class="gi">+            sock.settimeout(timeout)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            current += sock.send(data[current:])</span>
+<span class="gi">+        except socket.timeout:</span>
+<span class="gi">+            raise dns.exception.Timeout</span>
+
+<span class="w"> </span>def send_tcp(sock: Any, what: Union[dns.message.Message, bytes], expiration: Optional[float]=None) -&gt; Tuple[int, float]:
+<span class="w"> </span>    &quot;&quot;&quot;Send a DNS message to the specified TCP socket.
+<span class="gu">@@ -345,7 +544,15 @@ def send_tcp(sock: Any, what: Union[dns.message.Message, bytes], expiration: Opt</span>
+
+<span class="w"> </span>    Returns an ``(int, float)`` tuple of bytes sent and the sent time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(what, dns.message.Message):</span>
+<span class="gi">+        what = what.to_wire()</span>
+<span class="gi">+    l = len(what)</span>
+<span class="gi">+    # Convert the 16-bit integer to network byte order</span>
+<span class="gi">+    header = struct.pack(&quot;!H&quot;, l)</span>
+<span class="gi">+    sent_time = time.time()</span>
+<span class="gi">+    _net_write(sock, header, expiration)</span>
+<span class="gi">+    _net_write(sock, what, expiration)</span>
+<span class="gi">+    return (l + 2, sent_time)</span>
+
+<span class="w"> </span>def receive_tcp(sock: Any, expiration: Optional[float]=None, one_rr_per_rrset: bool=False, keyring: Optional[Dict[dns.name.Name, dns.tsig.Key]]=None, request_mac: Optional[bytes]=b&#39;&#39;, ignore_trailing: bool=False) -&gt; Tuple[dns.message.Message, float]:
+<span class="w"> </span>    &quot;&quot;&quot;Read a DNS message from a TCP socket.
+<span class="gu">@@ -372,7 +579,14 @@ def receive_tcp(sock: Any, expiration: Optional[float]=None, one_rr_per_rrset: b</span>
+<span class="w"> </span>    Returns a ``(dns.message.Message, float)`` tuple of the received message
+<span class="w"> </span>    and the received time.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ldata = _net_read(sock, 2, expiration)</span>
+<span class="gi">+    (l,) = struct.unpack(&quot;!H&quot;, ldata)</span>
+<span class="gi">+    wire = _net_read(sock, l, expiration)</span>
+<span class="gi">+    received_time = time.time()</span>
+<span class="gi">+    r = dns.message.from_wire(wire, keyring=keyring, request_mac=request_mac,</span>
+<span class="gi">+                            one_rr_per_rrset=one_rr_per_rrset,</span>
+<span class="gi">+                            ignore_trailing=ignore_trailing)</span>
+<span class="gi">+    return (r, received_time)</span>
+
+<span class="w"> </span>def tcp(q: dns.message.Message, where: str, timeout: Optional[float]=None, port: int=53, source: Optional[str]=None, source_port: int=0, one_rr_per_rrset: bool=False, ignore_trailing: bool=False, sock: Optional[Any]=None) -&gt; dns.message.Message:
+<span class="w"> </span>    &quot;&quot;&quot;Return the response obtained after sending a query via TCP.
+<span class="gh">diff --git a/dns/rdata.py b/dns/rdata.py</span>
+<span class="gh">index 9da56a7..1a9844e 100644</span>
+<span class="gd">--- a/dns/rdata.py</span>
+<span class="gi">+++ b/dns/rdata.py</span>
+<span class="gu">@@ -31,37 +31,56 @@ def _wordbreak(data, chunksize=_chunksize, separator=b&#39; &#39;):</span>
+<span class="w"> </span>    &quot;&quot;&quot;Break a binary string into chunks of chunksize characters separated by
+<span class="w"> </span>    a space.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    chunks = []</span>
+<span class="gi">+    for i in range(0, len(data), chunksize):</span>
+<span class="gi">+        chunks.append(data[i:i + chunksize])</span>
+<span class="gi">+    return separator.join(chunks)</span>
+
+<span class="w"> </span>def _hexify(data, chunksize=_chunksize, separator=b&#39; &#39;, **kw):
+<span class="w"> </span>    &quot;&quot;&quot;Convert a binary string into its hex encoding, broken up into chunks
+<span class="w"> </span>    of chunksize characters separated by a separator.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    hex_data = binascii.hexlify(data)</span>
+<span class="gi">+    return _wordbreak(hex_data, chunksize, separator)</span>
+
+<span class="w"> </span>def _base64ify(data, chunksize=_chunksize, separator=b&#39; &#39;, **kw):
+<span class="w"> </span>    &quot;&quot;&quot;Convert a binary string into its base64 encoding, broken up into chunks
+<span class="w"> </span>    of chunksize characters separated by a separator.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    b64_data = base64.b64encode(data)</span>
+<span class="gi">+    return _wordbreak(b64_data, chunksize, separator)</span>
+<span class="w"> </span>__escaped = b&#39;&quot;\\&#39;
+
+<span class="w"> </span>def _escapify(qstring):
+<span class="w"> </span>    &quot;&quot;&quot;Escape the characters in a quoted string which need it.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(qstring, bytes):</span>
+<span class="gi">+        qstring = qstring.encode()</span>
+<span class="gi">+    </span>
+<span class="gi">+    text = &#39;&#39;</span>
+<span class="gi">+    for c in qstring:</span>
+<span class="gi">+        if c in __escaped:</span>
+<span class="gi">+            text += &#39;\\&#39; + chr(c)</span>
+<span class="gi">+        elif c &gt;= 0x20 and c &lt; 0x7F:</span>
+<span class="gi">+            text += chr(c)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            text += &#39;\\%03d&#39; % c</span>
+<span class="gi">+    return text</span>
+
+<span class="w"> </span>def _truncate_bitmap(what):
+<span class="w"> </span>    &quot;&quot;&quot;Determine the index of greatest byte that isn&#39;t all zeros, and
+<span class="w"> </span>    return the bitmap that contains all the bytes less than that index.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for i in range(len(what) - 1, -1, -1):</span>
+<span class="gi">+        if what[i] != 0:</span>
+<span class="gi">+            return what[0:i + 1]</span>
+<span class="gi">+    return what[0:1]</span>
+<span class="w"> </span>_constify = dns.immutable.constify
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class Rdata:
+<span class="w"> </span>    &quot;&quot;&quot;Base class for all DNS rdata types.&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;rdclass&#39;, &#39;rdtype&#39;, &#39;rdcomment&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype):
+<span class="w"> </span>        &quot;&quot;&quot;Initialize an rdata.
+
+<span class="gu">@@ -96,7 +115,7 @@ class Rdata:</span>
+
+<span class="w"> </span>        Returns a ``dns.rdatatype.RdataType``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return dns.rdatatype.NONE</span>
+
+<span class="w"> </span>    def extended_rdatatype(self) -&gt; int:
+<span class="w"> </span>        &quot;&quot;&quot;Return a 32-bit type value, the least significant 16 bits of
+<span class="gu">@@ -105,28 +124,32 @@ class Rdata:</span>
+
+<span class="w"> </span>        Returns an ``int``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.covers() &lt;&lt; 16 | self.rdtype</span>
+
+<span class="w"> </span>    def to_text(self, origin: Optional[dns.name.Name]=None, relativize: bool=True, **kw: Dict[str, Any]) -&gt; str:
+<span class="w"> </span>        &quot;&quot;&quot;Convert an rdata to text format.
+
+<span class="w"> </span>        Returns a ``str``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    def to_wire(self, file: Optional[Any]=None, compress: Optional[dns.name.CompressType]=None, origin: Optional[dns.name.Name]=None, canonicalize: bool=False) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Convert an rdata to wire format.
+
+<span class="w"> </span>        Returns a ``bytes`` or ``None``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    def to_generic(self, origin: Optional[dns.name.Name]=None) -&gt; &#39;dns.rdata.GenericRdata&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Creates a dns.rdata.GenericRdata equivalent of this rdata.
+
+<span class="w"> </span>        Returns a ``dns.rdata.GenericRdata``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # Get wire format data</span>
+<span class="gi">+        with io.BytesIO() as buffer:</span>
+<span class="gi">+            self.to_wire(buffer, None, origin)</span>
+<span class="gi">+            data = buffer.getvalue()</span>
+<span class="gi">+        return GenericRdata(self.rdclass, self.rdtype, data)</span>
+
+<span class="w"> </span>    def to_digestable(self, origin: Optional[dns.name.Name]=None) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Convert rdata to a format suitable for digesting in hashes.  This
+<span class="gu">@@ -134,7 +157,7 @@ class Rdata:</span>
+
+<span class="w"> </span>        Returns a ``bytes``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.to_wire(None, None, origin, True)</span>
+
+<span class="w"> </span>    def __repr__(self):
+<span class="w"> </span>        covers = self.covers()
+<span class="gu">@@ -163,7 +186,28 @@ class Rdata:</span>
+<span class="w"> </span>            In the future, all ordering comparisons for rdata with
+<span class="w"> </span>            relative names will be disallowed.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        our_relative = False</span>
+<span class="gi">+        their_relative = False</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            our = self.to_digestable()</span>
+<span class="gi">+        except dns.name.NeedAbsoluteNameOrOrigin:</span>
+<span class="gi">+            our = self.to_digestable(dns.name.root)</span>
+<span class="gi">+            our_relative = True</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            their = other.to_digestable()</span>
+<span class="gi">+        except dns.name.NeedAbsoluteNameOrOrigin:</span>
+<span class="gi">+            their = other.to_digestable(dns.name.root)</span>
+<span class="gi">+            their_relative = True</span>
+<span class="gi">+        if our_relative and not their_relative:</span>
+<span class="gi">+            return -1</span>
+<span class="gi">+        if their_relative and not our_relative:</span>
+<span class="gi">+            return 1</span>
+<span class="gi">+        if our &lt; their:</span>
+<span class="gi">+            return -1</span>
+<span class="gi">+        elif our &gt; their:</span>
+<span class="gi">+            return 1</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return 0</span>
+
+<span class="w"> </span>    def __eq__(self, other):
+<span class="w"> </span>        if not isinstance(other, Rdata):
+<span class="gu">@@ -227,9 +271,22 @@ class Rdata:</span>
+
+<span class="w"> </span>        Returns an instance of the same Rdata subclass as *self*.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # Get all slots from the class hierarchy</span>
+<span class="gi">+        slots = self._get_all_slots()</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Create a new instance with same rdclass and rdtype</span>
+<span class="gi">+        new_instance = self.__class__(self.rdclass, self.rdtype)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Copy all slot values from self to new instance, unless overridden in kwargs</span>
+<span class="gi">+        for slot in slots:</span>
+<span class="gi">+            if slot in kwargs:</span>
+<span class="gi">+                value = kwargs[slot]</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                value = getattr(self, slot)</span>
+<span class="gi">+            object.__setattr__(new_instance, slot, value)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return new_instance</span>
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class GenericRdata(Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;Generic Rdata Class
+
+<span class="gu">@@ -238,9 +295,19 @@ class GenericRdata(Rdata):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;data&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype, data):
+<span class="w"> </span>        super().__init__(rdclass, rdtype)
+<span class="w"> </span>        self.data = data
+<span class="gi">+</span>
+<span class="gi">+    def to_text(self, origin=None, relativize=True, **kw):</span>
+<span class="gi">+        return r&#39;\# %u %s&#39; % (len(self.data), str(_hexify(self.data).decode()))</span>
+<span class="gi">+</span>
+<span class="gi">+    def to_wire(self, file=None, compress=None, origin=None, canonicalize=False):</span>
+<span class="gi">+        if file:</span>
+<span class="gi">+            file.write(self.data)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return self.data</span>
+<span class="w"> </span>_rdata_classes: Dict[Tuple[dns.rdataclass.RdataClass, dns.rdatatype.RdataType], Any] = {}
+<span class="w"> </span>_module_prefix = &#39;dns.rdtypes&#39;
+
+<span class="gu">@@ -281,7 +348,34 @@ def from_text(rdclass: Union[dns.rdataclass.RdataClass, str], rdtype: Union[dns.</span>
+<span class="w"> </span>    Returns an instance of the chosen Rdata subclass.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    rdclass = dns.rdataclass.RdataClass.make(rdclass)</span>
+<span class="gi">+    rdtype = dns.rdatatype.RdataType.make(rdtype)</span>
+<span class="gi">+</span>
+<span class="gi">+    if isinstance(tok, str):</span>
+<span class="gi">+        tok = dns.tokenizer.Tokenizer(tok, idna_codec=idna_codec)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the class</span>
+<span class="gi">+    rdclass_text = dns.rdataclass.to_text(rdclass)</span>
+<span class="gi">+    rdtype_text = dns.rdatatype.to_text(rdtype)</span>
+<span class="gi">+    mod = None</span>
+<span class="gi">+    rdtype_cls = None</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        mod_name = f&quot;{_module_prefix}.{rdclass_text}.{rdtype_text}&quot;</span>
+<span class="gi">+        mod = import_module(mod_name)</span>
+<span class="gi">+        rdtype_cls = getattr(mod, rdtype_text)</span>
+<span class="gi">+    except (ImportError, AttributeError):</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            mod_name = f&quot;{_module_prefix}.ANY.{rdtype_text}&quot;</span>
+<span class="gi">+            mod = import_module(mod_name)</span>
+<span class="gi">+            rdtype_cls = getattr(mod, rdtype_text)</span>
+<span class="gi">+        except (ImportError, AttributeError):</span>
+<span class="gi">+            rdtype_cls = GenericRdata</span>
+<span class="gi">+</span>
+<span class="gi">+    # Call from_text() on the class</span>
+<span class="gi">+    if relativize_to is None:</span>
+<span class="gi">+        relativize_to = origin</span>
+<span class="gi">+    return rdtype_cls.from_text(rdclass, rdtype, tok, origin, relativize,</span>
+<span class="gi">+                               relativize_to)</span>
+
+<span class="w"> </span>def from_wire_parser(rdclass: Union[dns.rdataclass.RdataClass, str], rdtype: Union[dns.rdatatype.RdataType, str], parser: dns.wire.Parser, origin: Optional[dns.name.Name]=None) -&gt; Rdata:
+<span class="w"> </span>    &quot;&quot;&quot;Build an rdata object from wire format
+<span class="gu">@@ -306,7 +400,28 @@ def from_wire_parser(rdclass: Union[dns.rdataclass.RdataClass, str], rdtype: Uni</span>
+
+<span class="w"> </span>    Returns an instance of the chosen Rdata subclass.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    rdclass = dns.rdataclass.RdataClass.make(rdclass)</span>
+<span class="gi">+    rdtype = dns.rdatatype.RdataType.make(rdtype)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the class</span>
+<span class="gi">+    rdclass_text = dns.rdataclass.to_text(rdclass)</span>
+<span class="gi">+    rdtype_text = dns.rdatatype.to_text(rdtype)</span>
+<span class="gi">+    mod = None</span>
+<span class="gi">+    rdtype_cls = None</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        mod_name = f&quot;{_module_prefix}.{rdclass_text}.{rdtype_text}&quot;</span>
+<span class="gi">+        mod = import_module(mod_name)</span>
+<span class="gi">+        rdtype_cls = getattr(mod, rdtype_text)</span>
+<span class="gi">+    except (ImportError, AttributeError):</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            mod_name = f&quot;{_module_prefix}.ANY.{rdtype_text}&quot;</span>
+<span class="gi">+            mod = import_module(mod_name)</span>
+<span class="gi">+            rdtype_cls = getattr(mod, rdtype_text)</span>
+<span class="gi">+        except (ImportError, AttributeError):</span>
+<span class="gi">+            rdtype_cls = GenericRdata</span>
+<span class="gi">+</span>
+<span class="gi">+    # Call from_wire() on the class</span>
+<span class="gi">+    return rdtype_cls.from_wire_parser(rdclass, rdtype, parser, origin)</span>
+
+<span class="w"> </span>def from_wire(rdclass: Union[dns.rdataclass.RdataClass, str], rdtype: Union[dns.rdatatype.RdataType, str], wire: bytes, current: int, rdlen: int, origin: Optional[dns.name.Name]=None) -&gt; Rdata:
+<span class="w"> </span>    &quot;&quot;&quot;Build an rdata object from wire format
+<span class="gu">@@ -335,7 +450,9 @@ def from_wire(rdclass: Union[dns.rdataclass.RdataClass, str], rdtype: Union[dns.</span>
+
+<span class="w"> </span>    Returns an instance of the chosen Rdata subclass.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    parser = dns.wire.Parser(wire, current)</span>
+<span class="gi">+    with parser.restrict_to(rdlen):</span>
+<span class="gi">+        return from_wire_parser(rdclass, rdtype, parser, origin)</span>
+
+<span class="w"> </span>class RdatatypeExists(dns.exception.DNSException):
+<span class="w"> </span>    &quot;&quot;&quot;DNS rdatatype already exists.&quot;&quot;&quot;
+<span class="gu">@@ -358,4 +475,7 @@ def register_type(implementation: Any, rdtype: int, rdtype_text: str, is_singlet</span>
+<span class="w"> </span>    *rdclass*, the rdataclass of the type, or ``dns.rdataclass.ANY`` if
+<span class="w"> </span>    it applies to all classes.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    existing_cls = _rdata_classes.get((rdclass, rdtype))</span>
+<span class="gi">+    if existing_cls is not None:</span>
+<span class="gi">+        raise RdatatypeExists(rdclass=rdclass, rdtype=rdtype)</span>
+<span class="gi">+    _rdata_classes[(rdclass, rdtype)] = implementation</span>
+\ No newline at end of file
+<span class="gh">diff --git a/dns/rdtypes/ANY/CDNSKEY.py b/dns/rdtypes/ANY/CDNSKEY.py</span>
+<span class="gh">index e722829..32c824c 100644</span>
+<span class="gd">--- a/dns/rdtypes/ANY/CDNSKEY.py</span>
+<span class="gi">+++ b/dns/rdtypes/ANY/CDNSKEY.py</span>
+<span class="gu">@@ -2,6 +2,5 @@ import dns.immutable</span>
+<span class="w"> </span>import dns.rdtypes.dnskeybase
+<span class="w"> </span>from dns.rdtypes.dnskeybase import REVOKE, SEP, ZONE
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class CDNSKEY(dns.rdtypes.dnskeybase.DNSKEYBase):
+<span class="w"> </span>    &quot;&quot;&quot;CDNSKEY record&quot;&quot;&quot;
+\ No newline at end of file
+<span class="gh">diff --git a/dns/rdtypes/ANY/DNSKEY.py b/dns/rdtypes/ANY/DNSKEY.py</span>
+<span class="gh">index bc52d7c..eca6b51 100644</span>
+<span class="gd">--- a/dns/rdtypes/ANY/DNSKEY.py</span>
+<span class="gi">+++ b/dns/rdtypes/ANY/DNSKEY.py</span>
+<span class="gu">@@ -2,6 +2,5 @@ import dns.immutable</span>
+<span class="w"> </span>import dns.rdtypes.dnskeybase
+<span class="w"> </span>from dns.rdtypes.dnskeybase import REVOKE, SEP, ZONE
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class DNSKEY(dns.rdtypes.dnskeybase.DNSKEYBase):
+<span class="w"> </span>    &quot;&quot;&quot;DNSKEY record&quot;&quot;&quot;
+\ No newline at end of file
+<span class="gh">diff --git a/dns/rdtypes/ANY/EUI48.py b/dns/rdtypes/ANY/EUI48.py</span>
+<span class="gh">index 65820f7..321cc48 100644</span>
+<span class="gd">--- a/dns/rdtypes/ANY/EUI48.py</span>
+<span class="gi">+++ b/dns/rdtypes/ANY/EUI48.py</span>
+<span class="gu">@@ -1,7 +1,6 @@</span>
+<span class="w"> </span>import dns.immutable
+<span class="w"> </span>import dns.rdtypes.euibase
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class EUI48(dns.rdtypes.euibase.EUIBase):
+<span class="w"> </span>    &quot;&quot;&quot;EUI48 record&quot;&quot;&quot;
+<span class="w"> </span>    byte_len = 6
+<span class="gh">diff --git a/dns/rdtypes/ANY/TXT.py b/dns/rdtypes/ANY/TXT.py</span>
+<span class="gh">index eae71e0..aff2103 100644</span>
+<span class="gd">--- a/dns/rdtypes/ANY/TXT.py</span>
+<span class="gi">+++ b/dns/rdtypes/ANY/TXT.py</span>
+<span class="gu">@@ -1,6 +1,5 @@</span>
+<span class="w"> </span>import dns.immutable
+<span class="w"> </span>import dns.rdtypes.txtbase
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class TXT(dns.rdtypes.txtbase.TXTBase):
+<span class="w"> </span>    &quot;&quot;&quot;TXT record&quot;&quot;&quot;
+\ No newline at end of file
+<span class="gh">diff --git a/dns/rdtypes/dnskeybase.py b/dns/rdtypes/dnskeybase.py</span>
+<span class="gh">index bfb691a..2c1e562 100644</span>
+<span class="gd">--- a/dns/rdtypes/dnskeybase.py</span>
+<span class="gi">+++ b/dns/rdtypes/dnskeybase.py</span>
+<span class="gu">@@ -12,11 +12,11 @@ class Flag(enum.IntFlag):</span>
+<span class="w"> </span>    REVOKE = 128
+<span class="w"> </span>    ZONE = 256
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class DNSKEYBase(dns.rdata.Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for rdata that is like a DNSKEY record&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;flags&#39;, &#39;protocol&#39;, &#39;algorithm&#39;, &#39;key&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype, flags, protocol, algorithm, key):
+<span class="w"> </span>        super().__init__(rdclass, rdtype)
+<span class="w"> </span>        self.flags = Flag(self._as_uint16(flags))
+<span class="gh">diff --git a/dns/rdtypes/dsbase.py b/dns/rdtypes/dsbase.py</span>
+<span class="gh">index 0b37fde..76a4f14 100644</span>
+<span class="gd">--- a/dns/rdtypes/dsbase.py</span>
+<span class="gi">+++ b/dns/rdtypes/dsbase.py</span>
+<span class="gu">@@ -5,12 +5,12 @@ import dns.immutable</span>
+<span class="w"> </span>import dns.rdata
+<span class="w"> </span>import dns.rdatatype
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class DSBase(dns.rdata.Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for rdata that is like a DS record&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;key_tag&#39;, &#39;algorithm&#39;, &#39;digest_type&#39;, &#39;digest&#39;]
+<span class="w"> </span>    _digest_length_by_type = {1: 20, 2: 32, 3: 32, 4: 48}
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype, key_tag, algorithm, digest_type, digest):
+<span class="w"> </span>        super().__init__(rdclass, rdtype)
+<span class="w"> </span>        self.key_tag = self._as_uint16(key_tag)
+<span class="gh">diff --git a/dns/rdtypes/euibase.py b/dns/rdtypes/euibase.py</span>
+<span class="gh">index 3056722..74c247f 100644</span>
+<span class="gd">--- a/dns/rdtypes/euibase.py</span>
+<span class="gi">+++ b/dns/rdtypes/euibase.py</span>
+<span class="gu">@@ -2,11 +2,11 @@ import binascii</span>
+<span class="w"> </span>import dns.immutable
+<span class="w"> </span>import dns.rdata
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class EUIBase(dns.rdata.Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;EUIxx record&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;eui&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype, eui):
+<span class="w"> </span>        super().__init__(rdclass, rdtype)
+<span class="w"> </span>        self.eui = self._as_bytes(eui)
+<span class="gh">diff --git a/dns/rdtypes/nsbase.py b/dns/rdtypes/nsbase.py</span>
+<span class="gh">index f8a63f9..d98bdea 100644</span>
+<span class="gd">--- a/dns/rdtypes/nsbase.py</span>
+<span class="gi">+++ b/dns/rdtypes/nsbase.py</span>
+<span class="gu">@@ -4,16 +4,15 @@ import dns.immutable</span>
+<span class="w"> </span>import dns.name
+<span class="w"> </span>import dns.rdata
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class NSBase(dns.rdata.Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for rdata that is like an NS record.&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;target&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype, target):
+<span class="w"> </span>        super().__init__(rdclass, rdtype)
+<span class="w"> </span>        self.target = self._as_name(target)
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class UncompressedNS(NSBase):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for rdata that is like an NS record, but whose name
+<span class="w"> </span>    is not compressed when convert to DNS wire format, and whose
+<span class="gh">diff --git a/dns/rdtypes/svcbbase.py b/dns/rdtypes/svcbbase.py</span>
+<span class="gh">index 5031566..eb267d5 100644</span>
+<span class="gd">--- a/dns/rdtypes/svcbbase.py</span>
+<span class="gi">+++ b/dns/rdtypes/svcbbase.py</span>
+<span class="gu">@@ -33,20 +33,19 @@ class Emptiness(enum.IntEnum):</span>
+<span class="w"> </span>    ALLOWED = 2
+<span class="w"> </span>_escaped = b&#39;&quot;,\\&#39;
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class Param:
+<span class="w"> </span>    &quot;&quot;&quot;Abstract base class for SVCB parameters&quot;&quot;&quot;
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class GenericParam(Param):
+<span class="w"> </span>    &quot;&quot;&quot;Generic SVCB parameter&quot;&quot;&quot;
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, value):
+<span class="w"> </span>        self.value = dns.rdata.Rdata._as_bytes(value, True)
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class MandatoryParam(Param):
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, keys):
+<span class="w"> </span>        keys = sorted([_validate_key(key)[0] for key in keys])
+<span class="w"> </span>        prior_k = None
+<span class="gu">@@ -58,46 +57,45 @@ class MandatoryParam(Param):</span>
+<span class="w"> </span>                raise ValueError(&#39;listed the mandatory key as mandatory&#39;)
+<span class="w"> </span>        self.keys = tuple(keys)
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class ALPNParam(Param):
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, ids):
+<span class="w"> </span>        self.ids = dns.rdata.Rdata._as_tuple(ids, lambda x: dns.rdata.Rdata._as_bytes(x, True, 255, False))
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class NoDefaultALPNParam(Param):
+<span class="w"> </span>    pass
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class PortParam(Param):
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, port):
+<span class="w"> </span>        self.port = dns.rdata.Rdata._as_uint16(port)
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class IPv4HintParam(Param):
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, addresses):
+<span class="w"> </span>        self.addresses = dns.rdata.Rdata._as_tuple(addresses, dns.rdata.Rdata._as_ipv4_address)
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class IPv6HintParam(Param):
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, addresses):
+<span class="w"> </span>        self.addresses = dns.rdata.Rdata._as_tuple(addresses, dns.rdata.Rdata._as_ipv6_address)
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class ECHParam(Param):
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, ech):
+<span class="w"> </span>        self.ech = dns.rdata.Rdata._as_bytes(ech, True)
+<span class="w"> </span>_class_for_key = {ParamKey.MANDATORY: MandatoryParam, ParamKey.ALPN: ALPNParam, ParamKey.NO_DEFAULT_ALPN: NoDefaultALPNParam, ParamKey.PORT: PortParam, ParamKey.IPV4HINT: IPv4HintParam, ParamKey.ECH: ECHParam, ParamKey.IPV6HINT: IPv6HintParam}
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class SVCBBase(dns.rdata.Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for SVCB-like records&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;priority&#39;, &#39;target&#39;, &#39;params&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass, rdtype, priority, target, params):
+<span class="w"> </span>        super().__init__(rdclass, rdtype)
+<span class="w"> </span>        self.priority = self._as_uint16(priority)
+<span class="gh">diff --git a/dns/rdtypes/txtbase.py b/dns/rdtypes/txtbase.py</span>
+<span class="gh">index 271bb72..04487be 100644</span>
+<span class="gd">--- a/dns/rdtypes/txtbase.py</span>
+<span class="gi">+++ b/dns/rdtypes/txtbase.py</span>
+<span class="gu">@@ -6,11 +6,11 @@ import dns.rdata</span>
+<span class="w"> </span>import dns.renderer
+<span class="w"> </span>import dns.tokenizer
+
+<span class="gd">-@dns.immutable.immutable</span>
+<span class="w"> </span>class TXTBase(dns.rdata.Rdata):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for rdata that is like a TXT record (see RFC 1035).&quot;&quot;&quot;
+<span class="w"> </span>    __slots__ = [&#39;strings&#39;]
+
+<span class="gi">+    @dns.immutable.immutable</span>
+<span class="w"> </span>    def __init__(self, rdclass: dns.rdataclass.RdataClass, rdtype: dns.rdatatype.RdataType, strings: Iterable[Union[bytes, str]]):
+<span class="w"> </span>        &quot;&quot;&quot;Initialize a TXT-like rdata.
+
+<span class="gh">diff --git a/dns/resolver.py b/dns/resolver.py</span>
+<span class="gh">index 1d1d63b..3424bb4 100644</span>
+<span class="gd">--- a/dns/resolver.py</span>
+<span class="gi">+++ b/dns/resolver.py</span>
+<span class="gu">@@ -447,7 +447,34 @@ class BaseResolver:</span>
+
+<span class="w"> </span>    def reset(self) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Reset all resolver configuration to the defaults.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.domain = dns.name.empty</span>
+<span class="gi">+        self.nameserver_ports = {}</span>
+<span class="gi">+        self.port = 53</span>
+<span class="gi">+        self.search = []</span>
+<span class="gi">+        self.use_search_by_default = True</span>
+<span class="gi">+        self.timeout = 2.0</span>
+<span class="gi">+        self.lifetime = 5.0</span>
+<span class="gi">+        self.keyring = None</span>
+<span class="gi">+        self.keyname = None</span>
+<span class="gi">+        self.keyalgorithm = dns.name.from_text(&#39;HMAC-MD5.SIG-ALG.REG.INT&#39;)</span>
+<span class="gi">+        self.edns = -1</span>
+<span class="gi">+        self.ednsflags = 0</span>
+<span class="gi">+        self.ednsoptions = None</span>
+<span class="gi">+        self.payload = dns.message.DEFAULT_EDNS_PAYLOAD</span>
+<span class="gi">+        self.cache = None</span>
+<span class="gi">+        self.flags = None</span>
+<span class="gi">+        self.retry_servfail = False</span>
+<span class="gi">+        self.rotate = False</span>
+<span class="gi">+        self.ndots = None</span>
+<span class="gi">+        self._nameservers = []</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def nameservers(self) -&gt; Sequence[Union[str, dns.nameserver.Nameserver]]:</span>
+<span class="gi">+        &quot;&quot;&quot;The nameservers to use for queries.</span>
+<span class="gi">+</span>
+<span class="gi">+        Raises ValueError if no nameservers are configured.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        return self._nameservers</span>
+
+<span class="w"> </span>    def read_resolv_conf(self, f: Any) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Process *f* as a file in the /etc/resolv.conf format.  If f is
+<span class="gu">@@ -507,14 +534,16 @@ class BaseResolver:</span>
+
+<span class="w"> </span>    @nameservers.setter
+<span class="w"> </span>    def nameservers(self, nameservers: Sequence[Union[str, dns.nameserver.Nameserver]]) -&gt; None:
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gi">+        &quot;&quot;&quot;Set the nameservers to use for queries.</span>
+<span class="gi">+</span>
+<span class="w"> </span>        *nameservers*, a ``list`` of nameservers, where a nameserver is either
+<span class="gd">-        a string interpretable as a nameserver, or a ``dns.nameserver.Nameserver``</span>
+<span class="gd">-        instance.</span>
+<span class="gi">+        a string containing an IPv4 or IPv6 address, or a ``dns.nameserver.Nameserver``.</span>
+
+<span class="w"> </span>        Raises ``ValueError`` if *nameservers* is not a list of nameservers.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._nameservers = list(nameservers)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class Resolver(BaseResolver):
+<span class="w"> </span>    &quot;&quot;&quot;DNS stub resolver.&quot;&quot;&quot;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

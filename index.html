@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="setup/">
+        <link rel="next" href="setupdist/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -18,7 +18,7 @@
     
     
       
-        <title></title>
+        <title>Commit-0</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+    <a href="." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
       
   <img src="logo2.webp" alt="logo">
 
@@ -91,7 +91,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            
+            Commit-0
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -172,12 +172,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+    <a href="." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
       
   <img src="logo2.webp" alt="logo">
 
     </a>
-    
+    Commit-0
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -198,6 +198,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -208,6 +219,52 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -219,11 +276,11 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/" class="md-nav__link">
+      <a href="setupdist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setup
+    Commit0
   </span>
   
 
@@ -239,11 +296,11 @@
   
   
     <li class="md-nav__item">
-      <a href="repos/" class="md-nav__link">
+      <a href="agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Extending
+    Agent
   </span>
   
 
@@ -259,11 +316,11 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    About
+    API
   </span>
   
 
@@ -283,7 +340,7 @@
         
   
   <span class="md-ellipsis">
-    Submission Analysis
+    Leaderboard
   </span>
   
 
@@ -312,6 +369,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -327,21 +419,31 @@
 
 <p><img alt="" src="logo.webp" /></p>
 <h1 id="_1"></h1>
-<p>Commit-0 is a real-world AI coding challenge.
-Can your agent generate a working library from commit 0?</p>
-<p>The benchmark consists of 57 core Python libraries.
-Libraries are selected based on:</p>
+<h2 id="overview">Overview</h2>
+<p>Commit-0 is a from scratch AI coding challenge.
+Can you create a library from commit 0?</p>
+<p>The benchmark consists of 54 core Python libraries.
+The challenge is to rebuild these libraries and
+pass their unit tests.  All libraries have:</p>
 <ul>
-<li>Significant unit-test coverage</li>
+<li>Significant test coverage</li>
 <li>Detailed specification and documentation</li>
 <li>Lint and type checking</li>
 </ul>
-<p>The <a href="setup">commit0 tool</a> allows you to:</p>
+<p>Commit-0 is an interactive environment that makes it easy
+to design and test new agents. You can:</p>
 <ul>
-<li>Efficiently run interactive tests in isolated environemnts</li>
+<li>Efficiently run tests in isolated environments</li>
 <li>Distribute testing and development across cloud systems</li>
 <li>Track and log all changes made throughout.</li>
 </ul>
+<p>To install run:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>commit0
+</code></pre></div>
+<h2 id="architecture">Architecture</h2>
+<p><img alt="" src="arch.png" /></p>
+<p><img alt="" src="commit0.gif" /></p>
+<h2 id="libraries">Libraries</h2>
 <table>
 <thead>
 <tr>
@@ -854,6 +956,10 @@ Libraries are selected based on:</p>
     
     
       <script src="assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="javascripts/tablesort.js"></script>
       
     
   </body>

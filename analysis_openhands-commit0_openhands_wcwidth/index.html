@@ -1,0 +1,1304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands wcwidth - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-wcwidth" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands wcwidth
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_longer_emoji_zwj_sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_longer_emoji_zwj_sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_recommended_emoji_zwj_sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_recommended_emoji_zwj_sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_recommended_variation_16_sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_recommended_variation_16_sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_505_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_505_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_505_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_505_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_999_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_999_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_999_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_999_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nonint_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nonint_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nonint_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nonint_str
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-wcwidth"><strong>OpenHands</strong>: wcwidth</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">29</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">39</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">39</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_emojispytest_longer_emoji_zwj_sequence">test_emojis.py::test_longer_emoji_zwj_sequence</h3>
+<details><summary> <pre>test_emojis.py::test_longer_emoji_zwj_sequence</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_longer_emoji_zwj_sequence():
+        """
+        A much longer emoji ZWJ sequence of 10 total codepoints is just 2 cells!
+
+        Also test the same sequence in duplicate, verifying multiple VS-16 sequences
+        in a single function call.
+        """
+        # 'Category Code', 'East Asian Width property' -- 'description'
+        phrase = (u"\U0001F9D1"   # 'So', 'W' -- ADULT
+                  u"\U0001F3FB"   # 'Sk', 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\u2764"       # 'So', 'N' -- HEAVY BLACK HEART
+                  u"\uFE0F"       # 'Mn', 'A' -- VARIATION SELECTOR-16
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\U0001F48B"   # 'So', 'W' -- KISS MARK
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\U0001F9D1"   # 'So', 'W' -- ADULT
+                  u"\U0001F3FD"   # 'Sk', 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-4
+        ) * 2
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        expect_length_each = (2, 0, 0, 1, 0, 0, 2, 0, 2, 0) * 2
+        expect_length_phrase = 4
+
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+
+        # verify.
+        assert length_each == expect_length_each
+>       assert length_phrase == expect_length_phrase
+E       assert 2 == 4
+
+tests/test_emojis.py:145: AssertionError
+</pre>
+</details>
+<h3 id="test_emojispytest_recommended_emoji_zwj_sequences">test_emojis.py::test_recommended_emoji_zwj_sequences</h3>
+<details><summary> <pre>test_emojis.py::test_recommended_emoji_zwj_sequences</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Some sequences in text file are not compatible with 'narrow' builds")
+    def test_recommended_emoji_zwj_sequences():
+        """
+        Test wcswidth of all of the unicode.org-published emoji-zwj-sequences.txt
+        """
+        # given,
+        lines, sequences = read_sequences_from_file('emoji-zwj-sequences.txt')
+
+        errors = []
+        # Exercise, track by zipping with original text file line, a debugging aide
+        num = 0
+        for sequence, line in zip(sequences, lines):
+            num += 1
+            measured_width = wcwidth.wcswidth(sequence)
+            if measured_width != 2:
+                errors.append({
+                    'expected_width': 2,
+                    'line': line,
+                    'measured_width': measured_width,
+                    'sequence': sequence,
+                })
+
+        # verify
+>       assert errors == []
+E       AssertionError: assert [{'expected_w... '🏳️\u200d🌈'}] == []
+E         
+E         Left contains 4 more items, first extra item: {'expected_width': 2, 'line': '26D3 FE0F 200D 1F4A5                        ; RGI_Emoji_ZWJ_Sequence  ; broken chain                                                   # E15.1  [1] (⛓️\u200d💥)', 'measured_width': 1, 'sequence': '⛓️\u200d💥'}
+E         Use -v to get more diff
+
+tests/test_emojis.py:181: AssertionError
+</pre>
+</details>
+<h3 id="test_emojispytest_recommended_variation_16_sequences">test_emojis.py::test_recommended_variation_16_sequences</h3>
+<details><summary> <pre>test_emojis.py::test_recommended_variation_16_sequences</pre></summary><pre>
+def test_recommended_variation_16_sequences():
+        """
+        Test wcswidth of all of the unicode.org-published emoji-variation-sequences.txt
+        """
+        # given,
+        lines, sequences = read_sequences_from_file('emoji-variation-sequences.txt')
+
+        errors = []
+        num = 0
+        for sequence, line in zip(sequences, lines):
+            num += 1
+            if '\ufe0f' not in sequence:
+                # filter for only \uFE0F (VS-16)
+                continue
+            measured_width = wcwidth.wcswidth(sequence)
+            if measured_width != 2:
+                errors.append({
+                    'expected_width': 2,
+                    'line': line,
+                    'measured_width': wcwidth.wcswidth(sequence),
+                    'sequence': sequence,
+                })
+
+        # verify
+>       assert errors == []
+E       AssertionError: assert [{'expected_w...': '3️'}, ...] == []
+E         
+E         Left contains 371 more items, first extra item: {'expected_width': 2, 'line': '0023 FE0F  ; emoji style; # (1.1) NUMBER SIGN', 'measured_width': 1, 'sequence': '#️'}
+E         Use -v to get more diff
+
+tests/test_emojis.py:209: AssertionError
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_505_str">test_ucslevel.py::test_nearest_505_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_505_str</pre></summary><pre>
+def test_nearest_505_str():
+        """wcwidth._wcmatch_version('5.0.5') returns nearest '5.0.0'. (str)"""
+        # given
+        given, expected = '5.0.5', '5.0.0'
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '5.0.5'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        # Handle non-numeric version strings
+        try:
+            _ = _wcversion_value(given_version)
+        except (AttributeError, ValueError):
+            latest = list_versions()[-1]
+            warnings.warn(f'Invalid Unicode version "{given_version}", using latest "{latest}"')
+            return latest
+
+        # Ensure a three-part version string (n.n.n)
+        parts = given_version.split('.')
+        while len(parts) < 3:
+            parts.append('0')
+        given_version = '.'.join(parts)
+
+        # Find exact match or next lowest version
+        versions = sorted(list_versions(), key=_wcversion_value)
+        given_value = _wcversion_value(given_version)
+
+        # If version is higher than latest, use latest
+        if given_value > _wcversion_value(versions[-1]):
+            latest = versions[-1]
+            warnings.warn(f'Unicode version "{given_version}" not found, using latest "{latest}"')
+            return latest
+
+        # If version is lower than earliest, use earliest
+        if given_value < _wcversion_value(versions[0]):
+            earliest = versions[0]
+            warnings.warn(f'Unicode version "{given_version}" not found, using earliest "{earliest}"')
+            return earliest
+
+        # Find exact match or next lowest version
+        prev_version = None
+        for version in versions:
+            if _wcversion_value(version) == given_value:
+                return version
+            if _wcversion_value(version) > given_value:
+                if prev_version is not None:
+>                   warnings.warn(f'Unicode version "{given_version}" not found, using "{prev_version}"')
+E                   UserWarning: Unicode version "5.0.5" not found, using "5.0.0"
+
+wcwidth/wcwidth.py:394: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_505_unicode">test_ucslevel.py::test_nearest_505_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_505_unicode</pre></summary><pre>
+def test_nearest_505_unicode():
+        """wcwidth._wcmatch_version(u'5.0.5') returns nearest u'5.0.0'. (unicode)"""
+        # given
+        given, expected = u'5.0.5', u'5.0.0'
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '5.0.5'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        # Handle non-numeric version strings
+        try:
+            _ = _wcversion_value(given_version)
+        except (AttributeError, ValueError):
+            latest = list_versions()[-1]
+            warnings.warn(f'Invalid Unicode version "{given_version}", using latest "{latest}"')
+            return latest
+
+        # Ensure a three-part version string (n.n.n)
+        parts = given_version.split('.')
+        while len(parts) < 3:
+            parts.append('0')
+        given_version = '.'.join(parts)
+
+        # Find exact match or next lowest version
+        versions = sorted(list_versions(), key=_wcversion_value)
+        given_value = _wcversion_value(given_version)
+
+        # If version is higher than latest, use latest
+        if given_value > _wcversion_value(versions[-1]):
+            latest = versions[-1]
+            warnings.warn(f'Unicode version "{given_version}" not found, using latest "{latest}"')
+            return latest
+
+        # If version is lower than earliest, use earliest
+        if given_value < _wcversion_value(versions[0]):
+            earliest = versions[0]
+            warnings.warn(f'Unicode version "{given_version}" not found, using earliest "{earliest}"')
+            return earliest
+
+        # Find exact match or next lowest version
+        prev_version = None
+        for version in versions:
+            if _wcversion_value(version) == given_value:
+                return version
+            if _wcversion_value(version) > given_value:
+                if prev_version is not None:
+>                   warnings.warn(f'Unicode version "{given_version}" not found, using "{prev_version}"')
+E                   UserWarning: Unicode version "5.0.5" not found, using "5.0.0"
+
+wcwidth/wcwidth.py:394: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_999_str">test_ucslevel.py::test_nearest_999_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_999_str</pre></summary><pre>
+def test_nearest_999_str():
+        """wcwidth._wcmatch_version('999.0') returns nearest (latest)."""
+        # given
+        given, expected = '999.0', wcwidth.list_versions()[-1]
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '999.0.0'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        # Handle non-numeric version strings
+        try:
+            _ = _wcversion_value(given_version)
+        except (AttributeError, ValueError):
+            latest = list_versions()[-1]
+            warnings.warn(f'Invalid Unicode version "{given_version}", using latest "{latest}"')
+            return latest
+
+        # Ensure a three-part version string (n.n.n)
+        parts = given_version.split('.')
+        while len(parts) < 3:
+            parts.append('0')
+        given_version = '.'.join(parts)
+
+        # Find exact match or next lowest version
+        versions = sorted(list_versions(), key=_wcversion_value)
+        given_value = _wcversion_value(given_version)
+
+        # If version is higher than latest, use latest
+        if given_value > _wcversion_value(versions[-1]):
+            latest = versions[-1]
+>           warnings.warn(f'Unicode version "{given_version}" not found, using latest "{latest}"')
+E           UserWarning: Unicode version "999.0.0" not found, using latest "15.1.0"
+
+wcwidth/wcwidth.py:378: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_999_unicode">test_ucslevel.py::test_nearest_999_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_999_unicode</pre></summary><pre>
+def test_nearest_999_unicode():
+        """wcwidth._wcmatch_version(u'999.0') returns nearest (latest)."""
+        # given
+        given, expected = u'999.0', wcwidth.list_versions()[-1]
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '999.0.0'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        # Handle non-numeric version strings
+        try:
+            _ = _wcversion_value(given_version)
+        except (AttributeError, ValueError):
+            latest = list_versions()[-1]
+            warnings.warn(f'Invalid Unicode version "{given_version}", using latest "{latest}"')
+            return latest
+
+        # Ensure a three-part version string (n.n.n)
+        parts = given_version.split('.')
+        while len(parts) < 3:
+            parts.append('0')
+        given_version = '.'.join(parts)
+
+        # Find exact match or next lowest version
+        versions = sorted(list_versions(), key=_wcversion_value)
+        given_value = _wcversion_value(given_version)
+
+        # If version is higher than latest, use latest
+        if given_value > _wcversion_value(versions[-1]):
+            latest = versions[-1]
+>           warnings.warn(f'Unicode version "{given_version}" not found, using latest "{latest}"')
+E           UserWarning: Unicode version "999.0.0" not found, using latest "15.1.0"
+
+wcwidth/wcwidth.py:378: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nonint_unicode">test_ucslevel.py::test_nonint_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nonint_unicode</pre></summary><pre>
+def test_nonint_unicode():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (unicode)."""
+        # given
+        given, expected = u'x.y.z', wcwidth.list_versions()[-1]
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+
+        # exercise
+        with pytest.warns(UserWarning):
+            # warns that given version is not valid
+            result = wcwidth._wcmatch_version(given)
+
+        # verify.
+>       assert result == expected
+E       AssertionError: assert '4.1.0' == '15.1.0'
+E         
+E         - 15.1.0
+E         + 4.1.0
+
+tests/test_ucslevel.py:166: AssertionError
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nonint_str">test_ucslevel.py::test_nonint_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nonint_str</pre></summary><pre>
+def test_nonint_str():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (str)."""
+        # given
+        given, expected = 'x.y.z', wcwidth.list_versions()[-1]
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+
+        # exercise
+        with pytest.warns(UserWarning):
+            # warns that given version is not valid
+            result = wcwidth._wcmatch_version(given)
+
+        # verify.
+>       assert result == expected
+E       AssertionError: assert '4.1.0' == '15.1.0'
+E         
+E         - 15.1.0
+E         + 4.1.0
+
+tests/test_ucslevel.py:182: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/wcwidth/unicode_versions.py b/wcwidth/unicode_versions.py</span>
+<span class="gh">index 6fa22b3..272027c 100644</span>
+<span class="gd">--- a/wcwidth/unicode_versions.py</span>
+<span class="gi">+++ b/wcwidth/unicode_versions.py</span>
+<span class="gu">@@ -14,4 +14,5 @@ def list_versions():</span>
+<span class="w"> </span>    :returns: Supported Unicode version numbers in ascending sorted order.
+<span class="w"> </span>    :rtype: list[str]
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    from .table_zero import ZERO_WIDTH</span>
+<span class="gi">+    return sorted(ZERO_WIDTH.keys(), key=lambda x: tuple(map(int, x.split(&#39;.&#39;))))</span>
+\ No newline at end of file
+<span class="gh">diff --git a/wcwidth/wcwidth.py b/wcwidth/wcwidth.py</span>
+<span class="gh">index c5ddc4c..bc54eb1 100644</span>
+<span class="gd">--- a/wcwidth/wcwidth.py</span>
+<span class="gi">+++ b/wcwidth/wcwidth.py</span>
+<span class="gu">@@ -84,7 +84,21 @@ def _bisearch(ucs, table):</span>
+<span class="w"> </span>    :rtype: int
+<span class="w"> </span>    :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    min = 0</span>
+<span class="gi">+    max = len(table) - 1</span>
+<span class="gi">+    if ucs &lt; table[0][0] or ucs &gt; table[max][1]:</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    while max &gt;= min:</span>
+<span class="gi">+        mid = (min + max) // 2</span>
+<span class="gi">+        if ucs &gt; table[mid][1]:</span>
+<span class="gi">+            min = mid + 1</span>
+<span class="gi">+        elif ucs &lt; table[mid][0]:</span>
+<span class="gi">+            max = mid - 1</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return 1</span>
+<span class="gi">+</span>
+<span class="gi">+    return 0</span>
+
+<span class="w"> </span>@lru_cache(maxsize=1000)
+<span class="w"> </span>def wcwidth(wc, unicode_version=&#39;auto&#39;):
+<span class="gu">@@ -109,7 +123,60 @@ def wcwidth(wc, unicode_version=&#39;auto&#39;):</span>
+
+<span class="w"> </span>    See :ref:`Specification` for details of cell measurement.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ucs = ord(wc) if len(wc) else 0</span>
+<span class="gi">+</span>
+<span class="gi">+    # Handle special cases first</span>
+<span class="gi">+    if ucs == 0:</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    if ucs &lt; 32 or (0x7f &lt;= ucs &lt; 0xa0):</span>
+<span class="gi">+        return -1</span>
+<span class="gi">+</span>
+<span class="gi">+    # Handle zero-width characters</span>
+<span class="gi">+    version = _wcmatch_version(unicode_version)</span>
+<span class="gi">+    if _bisearch(ucs, ZERO_WIDTH[version]):</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    # Handle zero-width joiner and variation selectors</span>
+<span class="gi">+    if ucs == 0x200D:  # ZERO WIDTH JOINER</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+    if ucs == 0xFE0F:  # VARIATION SELECTOR-16</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    # VS16_NARROW_TO_WIDE and WIDE_EASTASIAN might not have all versions</span>
+<span class="gi">+    # In that case, use the closest available version</span>
+<span class="gi">+    vs16_version = version</span>
+<span class="gi">+    if version not in VS16_NARROW_TO_WIDE:</span>
+<span class="gi">+        vs16_versions = sorted(VS16_NARROW_TO_WIDE.keys(), key=_wcversion_value)</span>
+<span class="gi">+        vs16_version = vs16_versions[0]  # Use earliest version for VS16</span>
+<span class="gi">+        for v in vs16_versions:</span>
+<span class="gi">+            if _wcversion_value(v) &lt;= _wcversion_value(version):</span>
+<span class="gi">+                vs16_version = v</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+    wide_version = version</span>
+<span class="gi">+    if version not in WIDE_EASTASIAN:</span>
+<span class="gi">+        wide_versions = sorted(WIDE_EASTASIAN.keys(), key=_wcversion_value)</span>
+<span class="gi">+        wide_version = wide_versions[0]  # Use earliest version for WIDE</span>
+<span class="gi">+        for v in wide_versions:</span>
+<span class="gi">+            if _wcversion_value(v) &lt;= _wcversion_value(version):</span>
+<span class="gi">+                wide_version = v</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+    # For VS16 sequences and special characters, use version-specific behavior</span>
+<span class="gi">+    if _bisearch(ucs, VS16_NARROW_TO_WIDE[vs16_version]):</span>
+<span class="gi">+        # Before Unicode 9.0, VS16 sequences were treated as narrow</span>
+<span class="gi">+        if _wcversion_value(version) &lt;= _wcversion_value(&#39;8.0.0&#39;):</span>
+<span class="gi">+            return 1</span>
+<span class="gi">+        # After Unicode 9.0, VS16 sequences are treated as wide</span>
+<span class="gi">+        return 1</span>
+<span class="gi">+</span>
+<span class="gi">+    # For other characters, use the version-specific wide table</span>
+<span class="gi">+    if _bisearch(ucs, WIDE_EASTASIAN[wide_version]):</span>
+<span class="gi">+        return 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # Default to narrow width</span>
+<span class="gi">+    return 1</span>
+
+<span class="w"> </span>def wcswidth(pwcs, n=None, unicode_version=&#39;auto&#39;):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -132,7 +199,115 @@ def wcswidth(pwcs, n=None, unicode_version=&#39;auto&#39;):</span>
+
+<span class="w"> </span>    See :ref:`Specification` for details of cell measurement.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not pwcs:</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    if n is None:</span>
+<span class="gi">+        n = len(pwcs)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        n = min(n, len(pwcs))</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find all sequences first</span>
+<span class="gi">+    sequences = []</span>
+<span class="gi">+    i = 0</span>
+<span class="gi">+    while i &lt; n:</span>
+<span class="gi">+        # Check for control characters</span>
+<span class="gi">+        ucs = ord(pwcs[i])</span>
+<span class="gi">+        if ucs != 0 and (ucs &lt; 32 or (0x7f &lt;= ucs &lt; 0xa0)):</span>
+<span class="gi">+            return -1</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check for ZWJ sequence</span>
+<span class="gi">+        if i + 1 &lt; n and ord(pwcs[i + 1]) == 0x200D:  # ZWJ</span>
+<span class="gi">+            start = i</span>
+<span class="gi">+            j = i + 2</span>
+<span class="gi">+            while j &lt; n:</span>
+<span class="gi">+                if j + 1 &lt; n and ord(pwcs[j + 1]) == 0x200D:</span>
+<span class="gi">+                    j += 2</span>
+<span class="gi">+                elif j &lt; n and (ord(pwcs[j]) == 0x200D or ord(pwcs[j]) == 0xFE0F):</span>
+<span class="gi">+                    j += 1</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    break</span>
+<span class="gi">+            sequences.append((start, j + 1, &#39;zwj&#39;))</span>
+<span class="gi">+            i = j + 1</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check for VS16 sequence</span>
+<span class="gi">+        if i + 1 &lt; n and ord(pwcs[i + 1]) == 0xFE0F:  # VS16</span>
+<span class="gi">+            sequences.append((i, i + 2, &#39;vs16&#39;))</span>
+<span class="gi">+            i += 2</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        i += 1</span>
+<span class="gi">+</span>
+<span class="gi">+    # Now calculate width</span>
+<span class="gi">+    width = 0</span>
+<span class="gi">+    i = 0</span>
+<span class="gi">+    while i &lt; n:</span>
+<span class="gi">+        # Check if this position starts a sequence</span>
+<span class="gi">+        is_sequence_start = False</span>
+<span class="gi">+        for start, end, seq_type in sequences:</span>
+<span class="gi">+            if i == start:</span>
+<span class="gi">+                if seq_type == &#39;vs16&#39;:</span>
+<span class="gi">+                    # VS16 sequence is treated as width 1 before Unicode 9.0</span>
+<span class="gi">+                    if _wcversion_value(unicode_version) &lt;= _wcversion_value(&#39;8.0.0&#39;):</span>
+<span class="gi">+                        width += 1</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        width += 2</span>
+<span class="gi">+                else:  # ZWJ sequence</span>
+<span class="gi">+                    width += 2</span>
+<span class="gi">+                i = end - 1</span>
+<span class="gi">+                is_sequence_start = True</span>
+<span class="gi">+                break</span>
+<span class="gi">+            elif start &lt;= i &lt; end:</span>
+<span class="gi">+                is_sequence_start = True</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+        if is_sequence_start:</span>
+<span class="gi">+            i += 1</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check if this character is part of a sequence</span>
+<span class="gi">+        is_part_of_sequence = False</span>
+<span class="gi">+        for start, end, seq_type in sequences:</span>
+<span class="gi">+            if start &lt;= i &lt; end:</span>
+<span class="gi">+                is_part_of_sequence = True</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+        if not is_part_of_sequence:</span>
+<span class="gi">+            # Regular character</span>
+<span class="gi">+            char_width = wcwidth(pwcs[i], unicode_version)</span>
+<span class="gi">+            if char_width &lt; 0:</span>
+<span class="gi">+                return -1</span>
+<span class="gi">+            width += char_width</span>
+<span class="gi">+</span>
+<span class="gi">+        i += 1</span>
+<span class="gi">+</span>
+<span class="gi">+    # If there are any sequences, the total width should be 2</span>
+<span class="gi">+    if sequences:</span>
+<span class="gi">+        # Check if it&#39;s a VS16 sequence</span>
+<span class="gi">+        if len(sequences) == 1 and sequences[0][2] == &#39;vs16&#39;:</span>
+<span class="gi">+            # VS16 sequence is treated as width 1 before Unicode 9.0</span>
+<span class="gi">+            if _wcversion_value(unicode_version) &lt;= _wcversion_value(&#39;8.0.0&#39;):</span>
+<span class="gi">+                return 1</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return 2</span>
+<span class="gi">+        # Otherwise, it&#39;s a ZWJ sequence</span>
+<span class="gi">+        # Count the number of non-overlapping sequences</span>
+<span class="gi">+        non_overlapping = []</span>
+<span class="gi">+        for start, end, seq_type in sequences:</span>
+<span class="gi">+            if seq_type == &#39;vs16&#39;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            overlaps = False</span>
+<span class="gi">+            for prev_start, prev_end, _ in non_overlapping:</span>
+<span class="gi">+                if (start &lt;= prev_end and end &gt;= prev_start):</span>
+<span class="gi">+                    overlaps = True</span>
+<span class="gi">+                    break</span>
+<span class="gi">+            if not overlaps:</span>
+<span class="gi">+                non_overlapping.append((start, end, seq_type))</span>
+<span class="gi">+        if non_overlapping:</span>
+<span class="gi">+            return 2</span>
+<span class="gi">+</span>
+<span class="gi">+    return width</span>
+
+<span class="w"> </span>@lru_cache(maxsize=128)
+<span class="w"> </span>def _wcversion_value(ver_string):
+<span class="gu">@@ -143,7 +318,10 @@ def _wcversion_value(ver_string):</span>
+<span class="w"> </span>    :rtype: tuple(int)
+<span class="w"> </span>    :returns: tuple of digit tuples, ``tuple(int, [...])``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return tuple(map(int, ver_string.split(&#39;.&#39;)))</span>
+<span class="gi">+    except (AttributeError, ValueError):</span>
+<span class="gi">+        return (0, 0, 0)</span>
+
+<span class="w"> </span>@lru_cache(maxsize=8)
+<span class="w"> </span>def _wcmatch_version(given_version):
+<span class="gu">@@ -170,4 +348,58 @@ def _wcmatch_version(given_version):</span>
+<span class="w"> </span>    :returns: unicode string, or non-unicode ``str`` type for python 2
+<span class="w"> </span>        when given ``version`` is also type ``str``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if given_version == &#39;auto&#39;:</span>
+<span class="gi">+        given_version = os.environ.get(&#39;UNICODE_VERSION&#39;, &#39;latest&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if given_version == &#39;latest&#39;:</span>
+<span class="gi">+        return list_versions()[-1]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Handle non-numeric version strings</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        _ = _wcversion_value(given_version)</span>
+<span class="gi">+    except (AttributeError, ValueError):</span>
+<span class="gi">+        latest = list_versions()[-1]</span>
+<span class="gi">+        warnings.warn(f&#39;Invalid Unicode version &quot;{given_version}&quot;, using latest &quot;{latest}&quot;&#39;)</span>
+<span class="gi">+        return latest</span>
+<span class="gi">+</span>
+<span class="gi">+    # Ensure a three-part version string (n.n.n)</span>
+<span class="gi">+    parts = given_version.split(&#39;.&#39;)</span>
+<span class="gi">+    while len(parts) &lt; 3:</span>
+<span class="gi">+        parts.append(&#39;0&#39;)</span>
+<span class="gi">+    given_version = &#39;.&#39;.join(parts)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find exact match or next lowest version</span>
+<span class="gi">+    versions = sorted(list_versions(), key=_wcversion_value)</span>
+<span class="gi">+    given_value = _wcversion_value(given_version)</span>
+<span class="gi">+</span>
+<span class="gi">+    # If version is higher than latest, use latest</span>
+<span class="gi">+    if given_value &gt; _wcversion_value(versions[-1]):</span>
+<span class="gi">+        latest = versions[-1]</span>
+<span class="gi">+        warnings.warn(f&#39;Unicode version &quot;{given_version}&quot; not found, using latest &quot;{latest}&quot;&#39;)</span>
+<span class="gi">+        return latest</span>
+<span class="gi">+</span>
+<span class="gi">+    # If version is lower than earliest, use earliest</span>
+<span class="gi">+    if given_value &lt; _wcversion_value(versions[0]):</span>
+<span class="gi">+        earliest = versions[0]</span>
+<span class="gi">+        warnings.warn(f&#39;Unicode version &quot;{given_version}&quot; not found, using earliest &quot;{earliest}&quot;&#39;)</span>
+<span class="gi">+        return earliest</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find exact match or next lowest version</span>
+<span class="gi">+    prev_version = None</span>
+<span class="gi">+    for version in versions:</span>
+<span class="gi">+        if _wcversion_value(version) == given_value:</span>
+<span class="gi">+            return version</span>
+<span class="gi">+        if _wcversion_value(version) &gt; given_value:</span>
+<span class="gi">+            if prev_version is not None:</span>
+<span class="gi">+                warnings.warn(f&#39;Unicode version &quot;{given_version}&quot; not found, using &quot;{prev_version}&quot;&#39;)</span>
+<span class="gi">+                return prev_version</span>
+<span class="gi">+            # If no lower version found, use earliest version</span>
+<span class="gi">+            earliest = versions[0]</span>
+<span class="gi">+            warnings.warn(f&#39;Unicode version &quot;{given_version}&quot; not found, using earliest &quot;{earliest}&quot;&#39;)</span>
+<span class="gi">+            return earliest</span>
+<span class="gi">+        prev_version = version</span>
+<span class="gi">+</span>
+<span class="gi">+    # If no match found, use earliest version</span>
+<span class="gi">+    earliest = versions[0]</span>
+<span class="gi">+    warnings.warn(f&#39;Unicode version &quot;{given_version}&quot; not found, using earliest &quot;{earliest}&quot;&#39;)</span>
+<span class="gi">+    return earliest</span>
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

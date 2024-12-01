@@ -1,0 +1,1764 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin pexpect - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-pexpect" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin pexpect
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-pexpect"><strong>Claude Sonnet 3.5 - Fill-in</strong>: pexpect</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/pexpect/ANSI.py b/pexpect/ANSI.py</span>
+<span class="gh">index df126d4..eb81388 100644</span>
+<span class="gd">--- a/pexpect/ANSI.py</span>
+<span class="gi">+++ b/pexpect/ANSI.py</span>
+<span class="gu">@@ -114,27 +114,45 @@ class ANSI(term):</span>
+
+<span class="w"> </span>    def process(self, c):
+<span class="w"> </span>        &quot;&quot;&quot;Process a single character. Called by :meth:`write`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.state.process(c)</span>
+
+<span class="w"> </span>    def write(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;Process text, writing it to the virtual screen while handling
+<span class="w"> </span>        ANSI escape codes.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for c in s:</span>
+<span class="gi">+            self.process(c)</span>
+
+<span class="w"> </span>    def write_ch(self, ch):
+<span class="w"> </span>        &quot;&quot;&quot;This puts a character at the current cursor position. The cursor
+<span class="w"> </span>        position is moved forward with wrap-around, but no scrolling is done if
+<span class="w"> </span>        the cursor hits the lower-right corner of the screen. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        r, c = self.cur_r, self.cur_c</span>
+<span class="gi">+        self.put_abs(r, c, ch)</span>
+<span class="gi">+        self.cursor_forward()</span>
+
+<span class="w"> </span>    def do_sgr(self, fsm):
+<span class="w"> </span>        &quot;&quot;&quot;Select Graphic Rendition, e.g. color. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for code in fsm.memory:</span>
+<span class="gi">+            if code == 0:</span>
+<span class="gi">+                self.attr = 0</span>
+<span class="gi">+            elif code in range(30, 38):</span>
+<span class="gi">+                self.attr = (self.attr &amp; 0xfff0) | (code - 30)</span>
+<span class="gi">+            elif code in range(40, 48):</span>
+<span class="gi">+                self.attr = (self.attr &amp; 0xff0f) | ((code - 40) &lt;&lt; 4)</span>
+<span class="gi">+            elif code == 1:</span>
+<span class="gi">+                self.attr = self.attr | 0x0100</span>
+<span class="gi">+            elif code == 4:</span>
+<span class="gi">+                self.attr = self.attr | 0x0200</span>
+<span class="gi">+            elif code == 7:</span>
+<span class="gi">+                self.attr = self.attr | 0x0400</span>
+
+<span class="w"> </span>    def do_decsca(self, fsm):
+<span class="w"> </span>        &quot;&quot;&quot;Select character protection attribute. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if fsm.memory and fsm.memory[0] == 1:</span>
+<span class="gi">+            self.attr = self.attr | 0x0800</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self.attr = self.attr &amp; ~0x0800</span>
+
+<span class="w"> </span>    def do_modecrap(self, fsm):
+<span class="w"> </span>        &quot;&quot;&quot;Handler for [?&lt;number&gt;h and [?&lt;number&gt;l. If anyone
+<span class="gh">diff --git a/pexpect/FSM.py b/pexpect/FSM.py</span>
+<span class="gh">index 5fc4095..26d5d05 100644</span>
+<span class="gd">--- a/pexpect/FSM.py</span>
+<span class="gi">+++ b/pexpect/FSM.py</span>
+<span class="gu">@@ -116,7 +116,8 @@ class FSM:</span>
+<span class="w"> </span>        &quot;&quot;&quot;This sets the current_state to the initial_state and sets
+<span class="w"> </span>        input_symbol to None. The initial state was set by the constructor
+<span class="w"> </span>        __init__(). &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.current_state = self.initial_state</span>
+<span class="gi">+        self.input_symbol = None</span>
+
+<span class="w"> </span>    def add_transition(self, input_symbol, state, action=None, next_state=None
+<span class="w"> </span>        ):
+<span class="gu">@@ -130,7 +131,9 @@ class FSM:</span>
+
+<span class="w"> </span>        You can also set transitions for a list of symbols by using
+<span class="w"> </span>        add_transition_list(). &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if next_state is None:</span>
+<span class="gi">+            next_state = state</span>
+<span class="gi">+        self.state_transitions[(input_symbol, state)] = (action, next_state)</span>
+
+<span class="w"> </span>    def add_transition_list(self, list_input_symbols, state, action=None,
+<span class="w"> </span>        next_state=None):
+<span class="gu">@@ -142,7 +145,8 @@ class FSM:</span>
+<span class="w"> </span>        The action may be set to None in which case the process() method will
+<span class="w"> </span>        ignore the action and only set the next_state. The next_state may be
+<span class="w"> </span>        set to None in which case the current state will be unchanged. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for input_symbol in list_input_symbols:</span>
+<span class="gi">+            self.add_transition(input_symbol, state, action, next_state)</span>
+
+<span class="w"> </span>    def add_transition_any(self, state, action=None, next_state=None):
+<span class="w"> </span>        &quot;&quot;&quot;This adds a transition that associates:
+<span class="gu">@@ -156,7 +160,9 @@ class FSM:</span>
+<span class="w"> </span>        The action may be set to None in which case the process() method will
+<span class="w"> </span>        ignore the action and only set the next_state. The next_state may be
+<span class="w"> </span>        set to None in which case the current state will be unchanged. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if next_state is None:</span>
+<span class="gi">+            next_state = state</span>
+<span class="gi">+        self.state_transitions_any[state] = (action, next_state)</span>
+
+<span class="w"> </span>    def set_default_transition(self, action, next_state):
+<span class="w"> </span>        &quot;&quot;&quot;This sets the default transition. This defines an action and
+<span class="gu">@@ -167,7 +173,7 @@ class FSM:</span>
+
+<span class="w"> </span>        The default transition can be removed by setting the attribute
+<span class="w"> </span>        default_transition to None. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.default_transition = (action, next_state)</span>
+
+<span class="w"> </span>    def get_transition(self, input_symbol, state):
+<span class="w"> </span>        &quot;&quot;&quot;This returns (action, next state) given an input_symbol and state.
+<span class="gu">@@ -190,7 +196,15 @@ class FSM:</span>
+
+<span class="w"> </span>        4. No transition was defined. If we get here then raise an exception.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if (input_symbol, state) in self.state_transitions:</span>
+<span class="gi">+            return self.state_transitions[(input_symbol, state)]</span>
+<span class="gi">+        elif state in self.state_transitions_any:</span>
+<span class="gi">+            return self.state_transitions_any[state]</span>
+<span class="gi">+        elif self.default_transition is not None:</span>
+<span class="gi">+            return self.default_transition</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ExceptionFSM(&#39;Transition is undefined: (%s, %s).&#39; %</span>
+<span class="gi">+                               (str(input_symbol), str(state)))</span>
+
+<span class="w"> </span>    def process(self, input_symbol):
+<span class="w"> </span>        &quot;&quot;&quot;This is the main method that you call to process input. This may
+<span class="gu">@@ -200,12 +214,18 @@ class FSM:</span>
+<span class="w"> </span>        is not called and only the current state is changed. This method
+<span class="w"> </span>        processes one complete input symbol. You can process a list of symbols
+<span class="w"> </span>        (or a string) by calling process_list(). &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.input_symbol = input_symbol</span>
+<span class="gi">+        (self.action, self.next_state) = self.get_transition(self.input_symbol, self.current_state)</span>
+<span class="gi">+        if self.action is not None:</span>
+<span class="gi">+            self.action(self)</span>
+<span class="gi">+        self.current_state = self.next_state</span>
+<span class="gi">+        self.next_state = None</span>
+
+<span class="w"> </span>    def process_list(self, input_symbols):
+<span class="w"> </span>        &quot;&quot;&quot;This takes a list and sends each element to process(). The list may
+<span class="w"> </span>        be a string or any iterable object. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for s in input_symbols:</span>
+<span class="gi">+            self.process(s)</span>
+
+
+<span class="w"> </span>import sys
+<span class="gu">@@ -217,7 +237,27 @@ def main():</span>
+<span class="w"> </span>    &quot;&quot;&quot;This is where the example starts and the FSM state transitions are
+<span class="w"> </span>    defined. Note that states are strings (such as &#39;INIT&#39;). This is not
+<span class="w"> </span>    necessary, but it makes the example easier to read. &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Example usage of the FSM class</span>
+<span class="gi">+    fsm = FSM(&#39;INIT&#39;)</span>
+<span class="gi">+    fsm.add_transition(&#39;a&#39;, &#39;INIT&#39;, None, &#39;A&#39;)</span>
+<span class="gi">+    fsm.add_transition(&#39;b&#39;, &#39;A&#39;, None, &#39;B&#39;)</span>
+<span class="gi">+    fsm.add_transition(&#39;c&#39;, &#39;B&#39;, None, &#39;C&#39;)</span>
+<span class="gi">+    fsm.add_transition_any(&#39;C&#39;, None, &#39;INIT&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;Initial state:&quot;, fsm.current_state)</span>
+<span class="gi">+    fsm.process(&#39;a&#39;)</span>
+<span class="gi">+    print(&quot;After processing &#39;a&#39;:&quot;, fsm.current_state)</span>
+<span class="gi">+    fsm.process(&#39;b&#39;)</span>
+<span class="gi">+    print(&quot;After processing &#39;b&#39;:&quot;, fsm.current_state)</span>
+<span class="gi">+    fsm.process(&#39;c&#39;)</span>
+<span class="gi">+    print(&quot;After processing &#39;c&#39;:&quot;, fsm.current_state)</span>
+<span class="gi">+    fsm.process(&#39;d&#39;)</span>
+<span class="gi">+    print(&quot;After processing &#39;d&#39;:&quot;, fsm.current_state)</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;\nProcessing a list of inputs:&quot;)</span>
+<span class="gi">+    fsm.reset()</span>
+<span class="gi">+    fsm.process_list(&#39;abcd&#39;)</span>
+<span class="gi">+    print(&quot;Final state:&quot;, fsm.current_state)</span>
+
+
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="gh">diff --git a/pexpect/exceptions.py b/pexpect/exceptions.py</span>
+<span class="gh">index c66fe77..36e31dc 100644</span>
+<span class="gd">--- a/pexpect/exceptions.py</span>
+<span class="gi">+++ b/pexpect/exceptions.py</span>
+<span class="gu">@@ -18,7 +18,13 @@ class ExceptionPexpect(Exception):</span>
+<span class="w"> </span>        &quot;&quot;&quot;This returns an abbreviated stack trace with lines that only concern
+<span class="w"> </span>        the caller. In other words, the stack trace inside the Pexpect module
+<span class="w"> </span>        is not included. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        tblist = traceback.extract_tb(sys.exc_info()[2])</span>
+<span class="gi">+        tblist = [item for item in tblist if self.__filter_not_pexpect(item[0])]</span>
+<span class="gi">+        return &#39;&#39;.join(traceback.format_list(tblist))</span>
+<span class="gi">+</span>
+<span class="gi">+    def __filter_not_pexpect(self, filename):</span>
+<span class="gi">+        &quot;&quot;&quot;Return True if the filename is not in the pexpect module&quot;&quot;&quot;</span>
+<span class="gi">+        return &#39;pexpect&#39; not in filename.lower()</span>
+
+
+<span class="w"> </span>class EOF(ExceptionPexpect):
+<span class="gh">diff --git a/pexpect/expect.py b/pexpect/expect.py</span>
+<span class="gh">index dabbe22..82529e5 100644</span>
+<span class="gd">--- a/pexpect/expect.py</span>
+<span class="gi">+++ b/pexpect/expect.py</span>
+<span class="gu">@@ -16,7 +16,24 @@ class Expecter(object):</span>
+
+<span class="w"> </span>    def expect_loop(self, timeout=-1):
+<span class="w"> </span>        &quot;&quot;&quot;Blocking expect&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout is not None:</span>
+<span class="gi">+            end_time = time.time() + timeout</span>
+<span class="gi">+</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            idx = self.searcher.search(self.spawn.buffer, len(self.spawn.buffer))</span>
+<span class="gi">+            if idx &gt;= 0:</span>
+<span class="gi">+                return idx</span>
+<span class="gi">+</span>
+<span class="gi">+            # No match</span>
+<span class="gi">+            if timeout is not None and time.time() &gt; end_time:</span>
+<span class="gi">+                return self.searcher.timeout_index</span>
+<span class="gi">+</span>
+<span class="gi">+            # Read more data</span>
+<span class="gi">+            incoming = self.spawn.read_nonblocking(self.spawn.maxread, timeout)</span>
+<span class="gi">+            if incoming == b&#39;&#39;:</span>
+<span class="gi">+                return self.searcher.eof_index</span>
+<span class="gi">+</span>
+<span class="gi">+            self.spawn.buffer += incoming</span>
+
+
+<span class="w"> </span>class searcher_string(object):
+<span class="gu">@@ -80,7 +97,25 @@ class searcher_string(object):</span>
+
+<span class="w"> </span>        If there is a match this returns the index of that string, and sets
+<span class="w"> </span>        &#39;start&#39;, &#39;end&#39; and &#39;match&#39;. Otherwise, this returns -1. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        absend = len(buffer)</span>
+<span class="gi">+        abstart = absend - freshlen</span>
+<span class="gi">+</span>
+<span class="gi">+        if searchwindowsize is None:</span>
+<span class="gi">+            searchstart = abstart</span>
+<span class="gi">+            searchend = absend</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            searchstart = max(0, absend - searchwindowsize)</span>
+<span class="gi">+            searchend = absend</span>
+<span class="gi">+</span>
+<span class="gi">+        for index, s in self._strings:</span>
+<span class="gi">+            pos = buffer.find(s, searchstart, searchend)</span>
+<span class="gi">+            if pos &gt;= 0:</span>
+<span class="gi">+                self.match = s</span>
+<span class="gi">+                self.start = pos</span>
+<span class="gi">+                self.end = pos + len(s)</span>
+<span class="gi">+                return index</span>
+<span class="gi">+</span>
+<span class="gi">+        return -1</span>
+
+
+<span class="w"> </span>class searcher_re(object):
+<span class="gu">@@ -143,4 +178,22 @@ class searcher_re(object):</span>
+
+<span class="w"> </span>        If there is a match this returns the index of that string, and sets
+<span class="w"> </span>        &#39;start&#39;, &#39;end&#39; and &#39;match&#39;. Otherwise, returns -1.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        absend = len(buffer)</span>
+<span class="gi">+        abstart = absend - freshlen</span>
+<span class="gi">+</span>
+<span class="gi">+        if searchwindowsize is None:</span>
+<span class="gi">+            searchstart = abstart</span>
+<span class="gi">+            searchend = absend</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            searchstart = max(0, absend - searchwindowsize)</span>
+<span class="gi">+            searchend = absend</span>
+<span class="gi">+</span>
+<span class="gi">+        for index, s in self._searches:</span>
+<span class="gi">+            match = s.search(buffer, searchstart, searchend)</span>
+<span class="gi">+            if match is not None:</span>
+<span class="gi">+                self.match = match</span>
+<span class="gi">+                self.start = match.start()</span>
+<span class="gi">+                self.end = match.end()</span>
+<span class="gi">+                return index</span>
+<span class="gi">+</span>
+<span class="gi">+        return -1</span>
+<span class="gh">diff --git a/pexpect/fdpexpect.py b/pexpect/fdpexpect.py</span>
+<span class="gh">index 4f4c4d9..124b5b2 100644</span>
+<span class="gd">--- a/pexpect/fdpexpect.py</span>
+<span class="gi">+++ b/pexpect/fdpexpect.py</span>
+<span class="gu">@@ -69,32 +69,47 @@ class fdspawn(SpawnBase):</span>
+<span class="w"> </span>        Calling this method a second time does nothing, but if the file
+<span class="w"> </span>        descriptor was closed elsewhere, :class:`OSError` will be raised.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.closed:</span>
+<span class="gi">+            os.close(self.child_fd)</span>
+<span class="gi">+            self.closed = True</span>
+
+<span class="w"> </span>    def isalive(self):
+<span class="w"> </span>        &quot;&quot;&quot;This checks if the file descriptor is still valid. If :func:`os.fstat`
+<span class="w"> </span>        does not raise an exception then we assume it is alive. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.closed:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            os.fstat(self.child_fd)</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        except OSError:</span>
+<span class="gi">+            return False</span>
+
+<span class="w"> </span>    def terminate(self, force=False):
+<span class="w"> </span>        &quot;&quot;&quot;Deprecated and invalid. Just raises an exception.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise ExceptionPexpect(&#39;This method is not valid for file descriptors.&#39;)</span>
+
+<span class="w"> </span>    def send(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;Write to fd, return number of bytes written&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        s = self._coerce_send_string(s)</span>
+<span class="gi">+        self._log(s, &#39;send&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        b = self._encoder.encode(s, final=False)</span>
+<span class="gi">+        return os.write(self.child_fd, b)</span>
+
+<span class="w"> </span>    def sendline(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;Write to fd with trailing newline, return number of bytes written&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        n = self.send(s)</span>
+<span class="gi">+        n += self.send(self.linesep)</span>
+<span class="gi">+        return n</span>
+
+<span class="w"> </span>    def write(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;Write to fd, return None&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.send(s)</span>
+
+<span class="w"> </span>    def writelines(self, sequence):
+<span class="w"> </span>        &quot;&quot;&quot;Call self.write() for each item in sequence&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for s in sequence:</span>
+<span class="gi">+            self.write(s)</span>
+
+<span class="w"> </span>    def read_nonblocking(self, size=1, timeout=-1):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -112,4 +127,34 @@ class fdspawn(SpawnBase):</span>
+<span class="w"> </span>            ready to read. When -1 (default), use self.timeout. When 0, poll.
+<span class="w"> </span>        :return: String containing the bytes read
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout == -1:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self.use_poll:</span>
+<span class="gi">+            rfd = poll_ignore_interrupts([self.child_fd], timeout)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            rfd = select_ignore_interrupts([self.child_fd], [], [], timeout)[0]</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not rfd:</span>
+<span class="gi">+            raise TIMEOUT(&#39;Timeout exceeded.&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self.closed:</span>
+<span class="gi">+            raise OSError(&#39;File descriptor %d is closed.&#39; % self.child_fd)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            s = os.read(self.child_fd, size)</span>
+<span class="gi">+        except OSError as err:</span>
+<span class="gi">+            if err.args[0] == errno.EIO:</span>
+<span class="gi">+                # Linux-style EOF</span>
+<span class="gi">+                self.flag_eof = True</span>
+<span class="gi">+                raise EOF(&#39;End Of File (EOF).&#39;)</span>
+<span class="gi">+            raise</span>
+<span class="gi">+</span>
+<span class="gi">+        if s == b&#39;&#39;:</span>
+<span class="gi">+            # BSD-style EOF</span>
+<span class="gi">+            self.flag_eof = True</span>
+<span class="gi">+            raise EOF(&#39;End Of File (EOF).&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        s = self._decoder.decode(s, final=False)</span>
+<span class="gi">+        self._log(s, &#39;read&#39;)</span>
+<span class="gi">+        return s</span>
+<span class="gh">diff --git a/pexpect/popen_spawn.py b/pexpect/popen_spawn.py</span>
+<span class="gh">index 5f7d56a..540115b 100644</span>
+<span class="gd">--- a/pexpect/popen_spawn.py</span>
+<span class="gi">+++ b/pexpect/popen_spawn.py</span>
+<span class="gu">@@ -50,12 +50,24 @@ class PopenSpawn(SpawnBase):</span>
+
+<span class="w"> </span>    def _read_incoming(self):
+<span class="w"> </span>        &quot;&quot;&quot;Run in a thread to move output from a pipe to a queue.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                data = os.read(self.proc.stdout.fileno(), 1024)</span>
+<span class="gi">+            except OSError:</span>
+<span class="gi">+                # This happens when the fd is closed</span>
+<span class="gi">+                break</span>
+<span class="gi">+            if data == b&#39;&#39;:</span>
+<span class="gi">+                self._read_reached_eof = True</span>
+<span class="gi">+                break</span>
+<span class="gi">+            self._read_queue.put(data)</span>
+
+<span class="w"> </span>    def write(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;This is similar to send() except that there is no return value.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(s, bytes):</span>
+<span class="gi">+            s = s.encode(self.encoding, errors=self.codec_errors)</span>
+<span class="gi">+        self.proc.stdin.write(s)</span>
+<span class="gi">+        self.proc.stdin.flush()</span>
+
+<span class="w"> </span>    def writelines(self, sequence):
+<span class="w"> </span>        &quot;&quot;&quot;This calls write() for each element in the sequence.
+<span class="gu">@@ -64,34 +76,51 @@ class PopenSpawn(SpawnBase):</span>
+<span class="w"> </span>        list of strings. This does not add line separators. There is no return
+<span class="w"> </span>        value.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for s in sequence:</span>
+<span class="gi">+            self.write(s)</span>
+
+<span class="w"> </span>    def send(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;Send data to the subprocess&#39; stdin.
+
+<span class="w"> </span>        Returns the number of bytes written.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(s, bytes):</span>
+<span class="gi">+            s = s.encode(self.encoding, errors=self.codec_errors)</span>
+<span class="gi">+        self.proc.stdin.write(s)</span>
+<span class="gi">+        self.proc.stdin.flush()</span>
+<span class="gi">+        return len(s)</span>
+
+<span class="w"> </span>    def sendline(self, s=&#39;&#39;):
+<span class="w"> </span>        &quot;&quot;&quot;Wraps send(), sending string ``s`` to child process, with os.linesep
+<span class="w"> </span>        automatically appended. Returns number of bytes written. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        n = self.send(s)</span>
+<span class="gi">+        n += self.send(self.crlf)</span>
+<span class="gi">+        return n</span>
+
+<span class="w"> </span>    def wait(self):
+<span class="w"> </span>        &quot;&quot;&quot;Wait for the subprocess to finish.
+
+<span class="w"> </span>        Returns the exit code.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.proc.wait()</span>
+
+<span class="w"> </span>    def kill(self, sig):
+<span class="w"> </span>        &quot;&quot;&quot;Sends a Unix signal to the subprocess.
+
+<span class="w"> </span>        Use constants from the :mod:`signal` module to specify which signal.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if sys.platform != &#39;win32&#39;:</span>
+<span class="gi">+            os.kill(self.proc.pid, sig)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if sig == signal.SIGTERM:</span>
+<span class="gi">+                self.proc.terminate()</span>
+<span class="gi">+            elif sig == signal.CTRL_C_EVENT:</span>
+<span class="gi">+                os.kill(self.proc.pid, signal.CTRL_C_EVENT)</span>
+<span class="gi">+            elif sig == signal.CTRL_BREAK_EVENT:</span>
+<span class="gi">+                os.kill(self.proc.pid, signal.CTRL_BREAK_EVENT)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise ValueError(&quot;Unsupported signal on Windows: {}&quot;.format(sig))</span>
+
+<span class="w"> </span>    def sendeof(self):
+<span class="w"> </span>        &quot;&quot;&quot;Closes the stdin pipe from the writing end.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.proc.stdin.close()</span>
+<span class="gh">diff --git a/pexpect/pty_spawn.py b/pexpect/pty_spawn.py</span>
+<span class="gh">index 4fc030b..74de295 100644</span>
+<span class="gd">--- a/pexpect/pty_spawn.py</span>
+<span class="gi">+++ b/pexpect/pty_spawn.py</span>
+<span class="gu">@@ -237,11 +237,43 @@ class spawn(SpawnBase):</span>
+<span class="w"> </span>        fork/exec type of stuff for a pty. This is called by __init__. If args
+<span class="w"> </span>        is empty then command will be parsed (split on spaces) and args will be
+<span class="w"> </span>        set to parsed arguments. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(args, list):</span>
+<span class="gi">+            args = [args]</span>
+<span class="gi">+</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            self.args = split_command_line(command)</span>
+<span class="gi">+            self.command = self.args[0]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self.args = [command] + args</span>
+<span class="gi">+            self.command = command</span>
+<span class="gi">+</span>
+<span class="gi">+        command_with_path = which(self.command)</span>
+<span class="gi">+        if command_with_path is None:</span>
+<span class="gi">+            raise ExceptionPexpect(&#39;The command was not found or was not executable: %s.&#39; % self.command)</span>
+<span class="gi">+</span>
+<span class="gi">+        self.command = command_with_path</span>
+<span class="gi">+        self.args[0] = self.command</span>
+<span class="gi">+</span>
+<span class="gi">+        self.name = &#39;&lt;&#39; + &#39; &#39;.join(self.args) + &#39;&gt;&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        assert self.pid is None, &#39;The pid member should be None.&#39;</span>
+<span class="gi">+        assert self.command is not None, &#39;The command member should not be None.&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        kwargs = {&#39;echo&#39;: self.echo, &#39;preexec_fn&#39;: preexec_fn}</span>
+<span class="gi">+        if dimensions is not None:</span>
+<span class="gi">+            kwargs[&#39;dimensions&#39;] = dimensions</span>
+<span class="gi">+</span>
+<span class="gi">+        self.ptyproc = self._spawnpty(self.args, env=self.env, cwd=self.cwd, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        self.pid = self.ptyproc.pid</span>
+<span class="gi">+        self.child_fd = self.ptyproc.fd</span>
+<span class="gi">+</span>
+<span class="gi">+        self.terminated = False</span>
+<span class="gi">+        self.closed = False</span>
+
+<span class="w"> </span>    def _spawnpty(self, args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Spawn a pty and return an instance of PtyProcess.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return ptyprocess.PtyProcess.spawn(args, **kwargs)</span>
+
+<span class="w"> </span>    def close(self, force=True):
+<span class="w"> </span>        &quot;&quot;&quot;This closes the connection with the child application. Note that
+<span class="gu">@@ -249,7 +281,12 @@ class spawn(SpawnBase):</span>
+<span class="w"> </span>        behavior with files. Set force to True if you want to make sure that
+<span class="w"> </span>        the child is terminated (SIGKILL is sent if the child ignores SIGHUP
+<span class="w"> </span>        and SIGINT). &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.closed:</span>
+<span class="gi">+            self.flush()</span>
+<span class="gi">+            self.ptyproc.close(force=force)</span>
+<span class="gi">+            self.isalive()  # Update exit status</span>
+<span class="gi">+            self.child_fd = -1</span>
+<span class="gi">+            self.closed = True</span>
+
+<span class="w"> </span>    def isatty(self):
+<span class="w"> </span>        &quot;&quot;&quot;This returns True if the file descriptor is open and connected to a
+<span class="gu">@@ -259,7 +296,7 @@ class spawn(SpawnBase):</span>
+<span class="w"> </span>        the child pty may not appear as a terminal device.  This means
+<span class="w"> </span>        methods such as setecho(), setwinsize(), getwinsize() may raise an
+<span class="w"> </span>        IOError. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return os.isatty(self.child_fd)</span>
+
+<span class="w"> </span>    def waitnoecho(self, timeout=-1):
+<span class="w"> </span>        &quot;&quot;&quot;This waits until the terminal ECHO flag is set False. This returns
+<span class="gu">@@ -277,7 +314,16 @@ class spawn(SpawnBase):</span>
+<span class="w"> </span>        If timeout==-1 then this method will use the value in self.timeout.
+<span class="w"> </span>        If timeout==None then this method to block until ECHO flag is False.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout == -1:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        if timeout is not None:</span>
+<span class="gi">+            end_time = time.time() + timeout</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            if not self.getecho():</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            if timeout is not None and time.time() &gt; end_time:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+            time.sleep(0.1)</span>
+
+<span class="w"> </span>    def getecho(self):
+<span class="w"> </span>        &quot;&quot;&quot;This returns the terminal echo mode. This returns True if echo is
+<span class="gu">@@ -285,7 +331,9 @@ class spawn(SpawnBase):</span>
+<span class="w"> </span>        to enter a password often set ECHO False. See waitnoecho().
+
+<span class="w"> </span>        Not supported on platforms where ``isatty()`` returns False.  &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.isatty():</span>
+<span class="gi">+            raise IOError(&#39;getecho() failed: device is not a tty&#39;)</span>
+<span class="gi">+        return self.ptyproc.getecho()</span>
+
+<span class="w"> </span>    def setecho(self, state):
+<span class="w"> </span>        &quot;&quot;&quot;This sets the terminal echo mode on or off. Note that anything the
+<span class="gu">@@ -319,7 +367,9 @@ class spawn(SpawnBase):</span>
+
+<span class="w"> </span>        Not supported on platforms where ``isatty()`` returns False.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.isatty():</span>
+<span class="gi">+            raise IOError(&#39;setecho() failed: device is not a tty&#39;)</span>
+<span class="gi">+        self.ptyproc.setecho(state)</span>
+
+<span class="w"> </span>    def read_nonblocking(self, size=1, timeout=-1):
+<span class="w"> </span>        &quot;&quot;&quot;This reads at most size characters from the child application. It
+<span class="gu">@@ -346,7 +396,26 @@ class spawn(SpawnBase):</span>
+
+<span class="w"> </span>        This is a wrapper around os.read(). It uses select.select() or
+<span class="w"> </span>        select.poll() to implement the timeout. &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout == -1:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not self.isalive():</span>
+<span class="gi">+            raise EOF(&#39;End Of File (EOF). Child process has exited.&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.use_poll:</span>
+<span class="gi">+            poller = poll_ignore_interrupts()</span>
+<span class="gi">+            poller.register(self.child_fd, POLLIN)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            poller = None</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            s, _ = self._read_nonblocking_impl(size, timeout, poller)</span>
+<span class="gi">+        except TIMEOUT:</span>
+<span class="gi">+            self.flag_eof = True</span>
+<span class="gi">+            raise</span>
+<span class="gi">+</span>
+<span class="gi">+        self._log(s, &#39;read&#39;)</span>
+<span class="gi">+        return s</span>
+
+<span class="w"> </span>    def write(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;This is similar to send() except that there is no return value.
+<span class="gh">diff --git a/pexpect/pxssh.py b/pexpect/pxssh.py</span>
+<span class="gh">index b1c2a86..cde1ca1 100644</span>
+<span class="gd">--- a/pexpect/pxssh.py</span>
+<span class="gi">+++ b/pexpect/pxssh.py</span>
+<span class="gu">@@ -130,7 +130,20 @@ class pxssh(spawn):</span>
+<span class="w"> </span>    def levenshtein_distance(self, a, b):
+<span class="w"> </span>        &quot;&quot;&quot;This calculates the Levenshtein distance between a and b.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if len(a) &lt; len(b):</span>
+<span class="gi">+            return self.levenshtein_distance(b, a)</span>
+<span class="gi">+        if len(b) == 0:</span>
+<span class="gi">+            return len(a)</span>
+<span class="gi">+        previous_row = range(len(b) + 1)</span>
+<span class="gi">+        for i, column1 in enumerate(a):</span>
+<span class="gi">+            current_row = [i + 1]</span>
+<span class="gi">+            for j, column2 in enumerate(b):</span>
+<span class="gi">+                insertions = previous_row[j + 1] + 1</span>
+<span class="gi">+                deletions = current_row[j] + 1</span>
+<span class="gi">+                substitutions = previous_row[j] + (column1 != column2)</span>
+<span class="gi">+                current_row.append(min(insertions, deletions, substitutions))</span>
+<span class="gi">+            previous_row = current_row</span>
+<span class="gi">+        return previous_row[-1]</span>
+
+<span class="w"> </span>    def try_read_prompt(self, timeout_multiplier):
+<span class="w"> </span>        &quot;&quot;&quot;This facilitates using communication timeouts to perform
+<span class="gu">@@ -139,7 +152,20 @@ class pxssh(spawn):</span>
+<span class="w"> </span>        should be read almost immediately. Worst case performance for this
+<span class="w"> </span>        method is timeout_multiplier * 3 seconds.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        timeout = self.timeout</span>
+<span class="gi">+        pause = 0.1</span>
+<span class="gi">+        max_attempts = 30</span>
+<span class="gi">+        self.timeout = 0.1</span>
+<span class="gi">+        for _ in range(int(max_attempts * timeout_multiplier)):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                self.read_nonblocking(size=1024, timeout=pause)</span>
+<span class="gi">+                return True</span>
+<span class="gi">+            except TIMEOUT:</span>
+<span class="gi">+                time.sleep(pause)</span>
+<span class="gi">+            except EOF:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+        self.timeout = timeout</span>
+<span class="gi">+        return False</span>
+
+<span class="w"> </span>    def sync_original_prompt(self, sync_multiplier=1.0):
+<span class="w"> </span>        &quot;&quot;&quot;This attempts to find the prompt. Basically, press enter and record
+<span class="gu">@@ -205,14 +231,69 @@ class pxssh(spawn):</span>
+<span class="w"> </span>        namespaces. For example ```cmd=&quot;ip netns exec vlan2 ssh&quot;``` to execute the ssh in
+<span class="w"> </span>        network namespace named ```vlan```.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not spawn_local_ssh:</span>
+<span class="gi">+            raise NotImplementedError(&quot;Non-local SSH spawning is not implemented&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        ssh_options = &#39;&#39;</span>
+<span class="gi">+        if ssh_key:</span>
+<span class="gi">+            if isinstance(ssh_key, str):</span>
+<span class="gi">+                ssh_options += f&#39; -i {ssh_key}&#39;</span>
+<span class="gi">+            elif ssh_key is True:</span>
+<span class="gi">+                ssh_options += &#39; -A&#39;</span>
+<span class="gi">+        </span>
+<span class="gi">+        if ssh_config:</span>
+<span class="gi">+            ssh_options += f&#39; -F {ssh_config}&#39;</span>
+<span class="gi">+        </span>
+<span class="gi">+        if port is not None:</span>
+<span class="gi">+            ssh_options += f&#39; -p {port}&#39;</span>
+<span class="gi">+        </span>
+<span class="gi">+        if username is not None:</span>
+<span class="gi">+            server = f&#39;{username}@{server}&#39;</span>
+<span class="gi">+        </span>
+<span class="gi">+        cmd = f&#39;{cmd}{ssh_options} {server}&#39;</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self.debug_command_string:</span>
+<span class="gi">+            return cmd</span>
+<span class="gi">+</span>
+<span class="gi">+        spawn.__init__(self, cmd, timeout=login_timeout)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not self.sync_original_prompt(sync_multiplier):</span>
+<span class="gi">+            self.close()</span>
+<span class="gi">+            raise ExceptionPxssh(&#39;Could not synchronize with original prompt&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if auto_prompt_reset:</span>
+<span class="gi">+            if not self.set_unique_prompt():</span>
+<span class="gi">+                self.close()</span>
+<span class="gi">+                raise ExceptionPxssh(&#39;Could not set shell prompt&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if password:</span>
+<span class="gi">+            self.waitnoecho()</span>
+<span class="gi">+            self.sendline(password)</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                i = self.expect([original_prompt, password_regex, TIMEOUT], timeout=login_timeout)</span>
+<span class="gi">+                if i == 1:</span>
+<span class="gi">+                    self.close()</span>
+<span class="gi">+                    raise ExceptionPxssh(&#39;Password refused&#39;)</span>
+<span class="gi">+                elif i == 2:</span>
+<span class="gi">+                    self.close()</span>
+<span class="gi">+                    raise ExceptionPxssh(&#39;Login timed out&#39;)</span>
+<span class="gi">+            except EOF:</span>
+<span class="gi">+                self.close()</span>
+<span class="gi">+                raise ExceptionPxssh(&#39;Unexpected EOF&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return True</span>
+
+<span class="w"> </span>    def logout(self):
+<span class="w"> </span>        &quot;&quot;&quot;Sends exit to the remote shell.
+
+<span class="w"> </span>        If there are stopped jobs then this automatically sends exit twice.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.sendline(&quot;exit&quot;)</span>
+<span class="gi">+        index = self.expect([EOF, &quot;(?i)there are stopped jobs&quot;])</span>
+<span class="gi">+        if index == 1:</span>
+<span class="gi">+            self.sendline(&quot;exit&quot;)</span>
+<span class="gi">+            self.expect(EOF)</span>
+<span class="gi">+        self.close()</span>
+
+<span class="w"> </span>    def prompt(self, timeout=-1):
+<span class="w"> </span>        &quot;&quot;&quot;Match the next shell prompt.
+<span class="gu">@@ -230,7 +311,13 @@ class pxssh(spawn):</span>
+<span class="w"> </span>        :return: True if the shell prompt was matched, False if the timeout was
+<span class="w"> </span>                 reached.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout == -1:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        i = self.expect([self.PROMPT, TIMEOUT], timeout=timeout)</span>
+<span class="gi">+        if i == 0:</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return False</span>
+
+<span class="w"> </span>    def set_unique_prompt(self):
+<span class="w"> </span>        &quot;&quot;&quot;This sets the remote prompt to something more unique than ``#`` or ``$``.
+<span class="gu">@@ -247,4 +334,14 @@ class pxssh(spawn):</span>
+<span class="w"> </span>        :attr:`PROMPT` attribute to a regular expression. After that, the
+<span class="w"> </span>        :meth:`prompt` method will try to match your prompt pattern.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.sendline(self.PROMPT_SET_SH)  # sh style</span>
+<span class="gi">+        i = self.expect([TIMEOUT, self.PROMPT], timeout=10)</span>
+<span class="gi">+        if i == 0:  # timeout</span>
+<span class="gi">+            self.sendline(self.PROMPT_SET_CSH)  # csh style</span>
+<span class="gi">+            i = self.expect([TIMEOUT, self.PROMPT], timeout=10)</span>
+<span class="gi">+            if i == 0:  # timeout</span>
+<span class="gi">+                self.sendline(self.PROMPT_SET_ZSH)  # zsh style</span>
+<span class="gi">+                i = self.expect([TIMEOUT, self.PROMPT], timeout=10)</span>
+<span class="gi">+                if i == 0:  # timeout</span>
+<span class="gi">+                    return False</span>
+<span class="gi">+        return True</span>
+<span class="gh">diff --git a/pexpect/replwrap.py b/pexpect/replwrap.py</span>
+<span class="gh">index 07a3d64..feb9375 100644</span>
+<span class="gd">--- a/pexpect/replwrap.py</span>
+<span class="gi">+++ b/pexpect/replwrap.py</span>
+<span class="gu">@@ -65,19 +65,45 @@ class REPLWrapper(object):</span>
+<span class="w"> </span>          :mod:`asyncio` Future, which you can yield from to get the same
+<span class="w"> </span>          result that this method would normally give directly.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if async_:</span>
+<span class="gi">+            import asyncio</span>
+<span class="gi">+            return asyncio.ensure_future(self._run_command_async(command, timeout))</span>
+<span class="gi">+        </span>
+<span class="gi">+        self.child.sendline(command)</span>
+<span class="gi">+        self._expect_prompt(timeout=timeout)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Remove the echoed command and the final prompt</span>
+<span class="gi">+        return self.child.before.strip()</span>
+<span class="gi">+</span>
+<span class="gi">+    async def _run_command_async(self, command, timeout):</span>
+<span class="gi">+        self.child.sendline(command)</span>
+<span class="gi">+        await self._expect_prompt_async(timeout=timeout)</span>
+<span class="gi">+        return self.child.before.strip()</span>
+<span class="gi">+</span>
+<span class="gi">+    def _expect_prompt(self, timeout=-1):</span>
+<span class="gi">+        return self.child.expect([self.prompt, self.continuation_prompt], timeout=timeout)</span>
+<span class="gi">+</span>
+<span class="gi">+    async def _expect_prompt_async(self, timeout=-1):</span>
+<span class="gi">+        return await self.child.expect_async([self.prompt, self.continuation_prompt], timeout=timeout)</span>
+
+
+<span class="w"> </span>def python(command=sys.executable):
+<span class="w"> </span>    &quot;&quot;&quot;Start a Python shell and return a :class:`REPLWrapper` object.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    orig_prompt = &#39;&gt;&gt;&gt;&#39;</span>
+<span class="gi">+    prompt_change = &#39;import sys; sys.ps1={0!r}; sys.ps2={1!r}&#39;</span>
+<span class="gi">+    return REPLWrapper(command, orig_prompt, prompt_change)</span>
+
+
+<span class="w"> </span>def bash(command=&#39;bash&#39;):
+<span class="w"> </span>    &quot;&quot;&quot;Start a bash shell and return a :class:`REPLWrapper` object.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    orig_prompt = r&#39;[$#] &#39;</span>
+<span class="gi">+    prompt_change = &quot;PS1=&#39;{0}&#39;; PS2=&#39;{1}&#39;&quot;</span>
+<span class="gi">+    return REPLWrapper(command, orig_prompt, prompt_change)</span>
+
+
+<span class="w"> </span>def zsh(command=&#39;zsh&#39;, args=(&#39;--no-rcs&#39;, &#39;-V&#39;, &#39;+Z&#39;)):
+<span class="w"> </span>    &quot;&quot;&quot;Start a zsh shell and return a :class:`REPLWrapper` object.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    orig_prompt = r&#39;[%#] &#39;</span>
+<span class="gi">+    prompt_change = &quot;PROMPT=&#39;{0}&#39;; PROMPT2=&#39;{1}&#39;&quot;</span>
+<span class="gi">+    cmd = [command] + list(args)</span>
+<span class="gi">+    return REPLWrapper(&#39; &#39;.join(cmd), orig_prompt, prompt_change)</span>
+<span class="gh">diff --git a/pexpect/run.py b/pexpect/run.py</span>
+<span class="gh">index 8710741..c519007 100644</span>
+<span class="gd">--- a/pexpect/run.py</span>
+<span class="gi">+++ b/pexpect/run.py</span>
+<span class="gu">@@ -91,11 +91,63 @@ def run(command, timeout=30, withexitstatus=False, events=None, extra_args=</span>
+<span class="w"> </span>    instead of bytes. You can pass *codec_errors* to control how errors in
+<span class="w"> </span>    encoding and decoding are handled.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    child = spawn(command, timeout=timeout, maxread=2000, logfile=logfile, cwd=cwd, env=env, **kwargs)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if events is None:</span>
+<span class="gi">+        events = {}</span>
+<span class="gi">+    if extra_args is None:</span>
+<span class="gi">+        extra_args = {}</span>
+<span class="gi">+    </span>
+<span class="gi">+    output = []</span>
+<span class="gi">+    event_count = 0</span>
+<span class="gi">+    </span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            index = child.expect(list(events.keys()) + [EOF, TIMEOUT], timeout=timeout)</span>
+<span class="gi">+        except EOF:</span>
+<span class="gi">+            output.append(child.before)</span>
+<span class="gi">+            break</span>
+<span class="gi">+        except TIMEOUT:</span>
+<span class="gi">+            output.append(child.before)</span>
+<span class="gi">+            break</span>
+<span class="gi">+        </span>
+<span class="gi">+        output.append(child.before)</span>
+<span class="gi">+        event_count += 1</span>
+<span class="gi">+        </span>
+<span class="gi">+        if index &lt; len(events):</span>
+<span class="gi">+            event = list(events.values())[index]</span>
+<span class="gi">+            if isinstance(event, str):</span>
+<span class="gi">+                child.sendline(event)</span>
+<span class="gi">+            elif callable(event):</span>
+<span class="gi">+                callback_result = event({</span>
+<span class="gi">+                    &#39;child&#39;: child,</span>
+<span class="gi">+                    &#39;event_count&#39;: event_count,</span>
+<span class="gi">+                    &#39;extra_args&#39;: extra_args</span>
+<span class="gi">+                })</span>
+<span class="gi">+                if callback_result is True:</span>
+<span class="gi">+                    break</span>
+<span class="gi">+                elif isinstance(callback_result, str):</span>
+<span class="gi">+                    child.sendline(callback_result)</span>
+<span class="gi">+    </span>
+<span class="gi">+    child.close()</span>
+<span class="gi">+    exitstatus = child.exitstatus</span>
+<span class="gi">+    </span>
+<span class="gi">+    output = &#39;&#39;.join(output)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if withexitstatus:</span>
+<span class="gi">+        return (output, exitstatus)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return output</span>
+
+
+<span class="w"> </span>def runu(command, timeout=30, withexitstatus=False, events=None, extra_args
+<span class="w"> </span>    =None, logfile=None, cwd=None, env=None, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Deprecated: pass encoding to run() instead.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import warnings</span>
+<span class="gi">+    warnings.warn(&quot;runu() is deprecated. Use run() with encoding=&#39;utf-8&#39; instead.&quot;,</span>
+<span class="gi">+                  DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+    </span>
+<span class="gi">+    kwargs[&#39;encoding&#39;] = kwargs.get(&#39;encoding&#39;, &#39;utf-8&#39;)</span>
+<span class="gi">+    return run(command, timeout, withexitstatus, events, extra_args,</span>
+<span class="gi">+               logfile, cwd, env, **kwargs)</span>
+<span class="gh">diff --git a/pexpect/screen.py b/pexpect/screen.py</span>
+<span class="gh">index c1cb2a3..c87bd63 100644</span>
+<span class="gd">--- a/pexpect/screen.py</span>
+<span class="gi">+++ b/pexpect/screen.py</span>
+<span class="gu">@@ -54,7 +54,7 @@ if PY3:</span>
+
+<span class="w"> </span>def constrain(n, min, max):
+<span class="w"> </span>    &quot;&quot;&quot;This returns a number, n constrained to the min and max bounds. &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return min if n &lt; min else max if n &gt; max else n</span>
+
+
+<span class="w"> </span>class screen:
+<span class="gu">@@ -96,13 +96,15 @@ class screen:</span>
+<span class="w"> </span>    def _decode(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;This converts from the external coding system (as passed to
+<span class="w"> </span>        the constructor) to the internal one (unicode). &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.decoder is None:</span>
+<span class="gi">+            return s</span>
+<span class="gi">+        return self.decoder.decode(s)</span>
+
+<span class="w"> </span>    def _unicode(self):
+<span class="w"> </span>        &quot;&quot;&quot;This returns a printable representation of the screen as a unicode
+<span class="w"> </span>        string (which, under Python 3.x, is the same as &#39;str&#39;). The end of each
+<span class="w"> </span>        screen line is terminated by a newline.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return &#39;\n&#39;.join([&#39;&#39;.join(row) for row in self.w])</span>
+<span class="w"> </span>    if PY3:
+<span class="w"> </span>        __str__ = _unicode
+<span class="w"> </span>    else:
+<span class="gu">@@ -118,137 +120,181 @@ class screen:</span>
+<span class="w"> </span>        &quot;&quot;&quot;This returns a copy of the screen as a unicode string. This is similar to
+<span class="w"> </span>        __str__/__unicode__ except that lines are not terminated with line
+<span class="w"> </span>        feeds.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return &#39;&#39;.join([&#39;&#39;.join(row) for row in self.w])</span>
+
+<span class="w"> </span>    def pretty(self):
+<span class="w"> </span>        &quot;&quot;&quot;This returns a copy of the screen as a unicode string with an ASCII
+<span class="w"> </span>        text box around the screen border. This is similar to
+<span class="w"> </span>        __str__/__unicode__ except that it adds a box.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        top_border = &#39;+&#39; + &#39;-&#39; * self.cols + &#39;+\n&#39;</span>
+<span class="gi">+        bottom_border = &#39;\n+&#39; + &#39;-&#39; * self.cols + &#39;+&#39;</span>
+<span class="gi">+        screen_content = &#39;\n&#39;.join([&#39;|&#39; + &#39;&#39;.join(row) + &#39;|&#39; for row in self.w])</span>
+<span class="gi">+        return top_border + screen_content + bottom_border</span>
+
+<span class="w"> </span>    def cr(self):
+<span class="w"> </span>        &quot;&quot;&quot;This moves the cursor to the beginning (col 1) of the current row.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cur_c = 1</span>
+
+<span class="w"> </span>    def lf(self):
+<span class="w"> </span>        &quot;&quot;&quot;This moves the cursor down with scrolling.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.cur_r == self.scroll_row_end:</span>
+<span class="gi">+            self.scroll_up()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self.cur_r = constrain(self.cur_r + 1, 1, self.rows)</span>
+
+<span class="w"> </span>    def crlf(self):
+<span class="w"> </span>        &quot;&quot;&quot;This advances the cursor with CRLF properties.
+<span class="w"> </span>        The cursor will line wrap and the screen may scroll.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cr()</span>
+<span class="gi">+        self.lf()</span>
+
+<span class="w"> </span>    def newline(self):
+<span class="w"> </span>        &quot;&quot;&quot;This is an alias for crlf().
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.crlf()</span>
+
+<span class="w"> </span>    def put_abs(self, r, c, ch):
+<span class="w"> </span>        &quot;&quot;&quot;Screen array starts at 1 index.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        r = constrain(r, 1, self.rows)</span>
+<span class="gi">+        c = constrain(c, 1, self.cols)</span>
+<span class="gi">+        self.w[r-1][c-1] = ch</span>
+
+<span class="w"> </span>    def put(self, ch):
+<span class="w"> </span>        &quot;&quot;&quot;This puts a characters at the current cursor position.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.put_abs(self.cur_r, self.cur_c, ch)</span>
+<span class="gi">+        self.cur_c = constrain(self.cur_c + 1, 1, self.cols)</span>
+<span class="gi">+        if self.cur_c == 1:</span>
+<span class="gi">+            self.lf()</span>
+
+<span class="w"> </span>    def insert_abs(self, r, c, ch):
+<span class="w"> </span>        &quot;&quot;&quot;This inserts a character at (r,c). Everything under
+<span class="w"> </span>        and to the right is shifted right one character.
+<span class="w"> </span>        The last character of the line is lost.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        r = constrain(r, 1, self.rows)</span>
+<span class="gi">+        c = constrain(c, 1, self.cols)</span>
+<span class="gi">+        self.w[r-1] = self.w[r-1][:c-1] + [ch] + self.w[r-1][c-1:-1]</span>
+
+<span class="w"> </span>    def get_region(self, rs, cs, re, ce):
+<span class="w"> </span>        &quot;&quot;&quot;This returns a list of lines representing the region.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rs = constrain(rs, 1, self.rows)</span>
+<span class="gi">+        re = constrain(re, 1, self.rows)</span>
+<span class="gi">+        cs = constrain(cs, 1, self.cols)</span>
+<span class="gi">+        ce = constrain(ce, 1, self.cols)</span>
+<span class="gi">+        return [&#39;&#39;.join(row[cs-1:ce]) for row in self.w[rs-1:re]]</span>
+
+<span class="w"> </span>    def cursor_constrain(self):
+<span class="w"> </span>        &quot;&quot;&quot;This keeps the cursor within the screen area.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cur_r = constrain(self.cur_r, 1, self.rows)</span>
+<span class="gi">+        self.cur_c = constrain(self.cur_c, 1, self.cols)</span>
+
+<span class="w"> </span>    def cursor_force_position(self, r, c):
+<span class="w"> </span>        &quot;&quot;&quot;Identical to Cursor Home.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cur_r = constrain(r, 1, self.rows)</span>
+<span class="gi">+        self.cur_c = constrain(c, 1, self.cols)</span>
+
+<span class="w"> </span>    def cursor_save(self):
+<span class="w"> </span>        &quot;&quot;&quot;Save current cursor position.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cur_saved_r = self.cur_r</span>
+<span class="gi">+        self.cur_saved_c = self.cur_c</span>
+
+<span class="w"> </span>    def cursor_unsave(self):
+<span class="w"> </span>        &quot;&quot;&quot;Restores cursor position after a Save Cursor.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cur_r = self.cur_saved_r</span>
+<span class="gi">+        self.cur_c = self.cur_saved_c</span>
+
+<span class="w"> </span>    def cursor_save_attrs(self):
+<span class="w"> </span>        &quot;&quot;&quot;Save current cursor position.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cursor_save()</span>
+
+<span class="w"> </span>    def cursor_restore_attrs(self):
+<span class="w"> </span>        &quot;&quot;&quot;Restores cursor position after a Save Cursor.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.cursor_unsave()</span>
+
+<span class="w"> </span>    def scroll_constrain(self):
+<span class="w"> </span>        &quot;&quot;&quot;This keeps the scroll region within the screen region.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.scroll_row_start = constrain(self.scroll_row_start, 1, self.rows)</span>
+<span class="gi">+        self.scroll_row_end = constrain(self.scroll_row_end, 1, self.rows)</span>
+<span class="gi">+        if self.scroll_row_start &gt; self.scroll_row_end:</span>
+<span class="gi">+            self.scroll_row_start, self.scroll_row_end = self.scroll_row_end, self.scroll_row_start</span>
+
+<span class="w"> </span>    def scroll_screen(self):
+<span class="w"> </span>        &quot;&quot;&quot;Enable scrolling for entire display.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.scroll_row_start = 1</span>
+<span class="gi">+        self.scroll_row_end = self.rows</span>
+
+<span class="w"> </span>    def scroll_screen_rows(self, rs, re):
+<span class="w"> </span>        &quot;&quot;&quot;Enable scrolling from row {start} to row {end}.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.scroll_row_start = constrain(rs, 1, self.rows)</span>
+<span class="gi">+        self.scroll_row_end = constrain(re, 1, self.rows)</span>
+<span class="gi">+        self.scroll_constrain()</span>
+
+<span class="w"> </span>    def scroll_down(self):
+<span class="w"> </span>        &quot;&quot;&quot;Scroll display down one line.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        s = self.scroll_row_start - 1</span>
+<span class="gi">+        e = self.scroll_row_end</span>
+<span class="gi">+        self.w[s+1:e] = self.w[s:e-1]</span>
+<span class="gi">+        self.w[s] = [SPACE] * self.cols</span>
+
+<span class="w"> </span>    def scroll_up(self):
+<span class="w"> </span>        &quot;&quot;&quot;Scroll display up one line.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        s = self.scroll_row_start - 1</span>
+<span class="gi">+        e = self.scroll_row_end</span>
+<span class="gi">+        self.w[s:e-1] = self.w[s+1:e]</span>
+<span class="gi">+        self.w[e-1] = [SPACE] * self.cols</span>
+
+<span class="w"> </span>    def erase_end_of_line(self):
+<span class="w"> </span>        &quot;&quot;&quot;Erases from the current cursor position to the end of the current
+<span class="w"> </span>        line.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.w[self.cur_r-1][self.cur_c-1:] = [SPACE] * (self.cols - self.cur_c + 1)</span>
+
+<span class="w"> </span>    def erase_start_of_line(self):
+<span class="w"> </span>        &quot;&quot;&quot;Erases from the current cursor position to the start of the current
+<span class="w"> </span>        line.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.w[self.cur_r-1][:self.cur_c] = [SPACE] * self.cur_c</span>
+
+<span class="w"> </span>    def erase_line(self):
+<span class="w"> </span>        &quot;&quot;&quot;Erases the entire current line.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.w[self.cur_r-1] = [SPACE] * self.cols</span>
+
+<span class="w"> </span>    def erase_down(self):
+<span class="w"> </span>        &quot;&quot;&quot;Erases the screen from the current line down to the bottom of the
+<span class="w"> </span>        screen.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.erase_end_of_line()</span>
+<span class="gi">+        for r in range(self.cur_r, self.rows):</span>
+<span class="gi">+            self.w[r] = [SPACE] * self.cols</span>
+
+<span class="w"> </span>    def erase_up(self):
+<span class="w"> </span>        &quot;&quot;&quot;Erases the screen from the current line up to the top of the
+<span class="w"> </span>        screen.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.erase_start_of_line()</span>
+<span class="gi">+        for r in range(self.cur_r-1):</span>
+<span class="gi">+            self.w[r] = [SPACE] * self.cols</span>
+
+<span class="w"> </span>    def erase_screen(self):
+<span class="w"> </span>        &quot;&quot;&quot;Erases the screen with the background color.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.w = [[SPACE] * self.cols for _ in range(self.rows)]</span>
+
+<span class="w"> </span>    def set_tab(self):
+<span class="w"> </span>        &quot;&quot;&quot;Sets a tab at the current position.&quot;&quot;&quot;
+<span class="gi">+        # This method is not implemented in the original code</span>
+<span class="gi">+        # and would require additional state to track tab positions</span>
+<span class="w"> </span>        pass
+
+<span class="w"> </span>    def clear_tab(self):
+<span class="w"> </span>        &quot;&quot;&quot;Clears tab at the current position.&quot;&quot;&quot;
+<span class="gi">+        # This method is not implemented in the original code</span>
+<span class="gi">+        # and would require additional state to track tab positions</span>
+<span class="w"> </span>        pass
+
+<span class="w"> </span>    def clear_all_tabs(self):
+<span class="w"> </span>        &quot;&quot;&quot;Clears all tabs.&quot;&quot;&quot;
+<span class="gi">+        # This method is not implemented in the original code</span>
+<span class="gi">+        # and would require additional state to track tab positions</span>
+<span class="w"> </span>        pass
+<span class="gh">diff --git a/pexpect/socket_pexpect.py b/pexpect/socket_pexpect.py</span>
+<span class="gh">index 5d7ca43..2014681 100644</span>
+<span class="gd">--- a/pexpect/socket_pexpect.py</span>
+<span class="gi">+++ b/pexpect/socket_pexpect.py</span>
+<span class="gu">@@ -51,27 +51,36 @@ class SocketSpawn(SpawnBase):</span>
+<span class="w"> </span>        Calling this method a second time does nothing, but if the file
+<span class="w"> </span>        descriptor was closed elsewhere, :class:`OSError` will be raised.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.closed:</span>
+<span class="gi">+            self.socket.close()</span>
+<span class="gi">+            self.closed = True</span>
+
+<span class="w"> </span>    def isalive(self):
+<span class="w"> </span>        &quot;&quot;&quot; Alive if the fileno is valid &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return not self.closed and self.socket.fileno() != -1</span>
+
+<span class="w"> </span>    def send(self, s) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Write to socket, return number of bytes written&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(s, str):</span>
+<span class="gi">+            s = s.encode(self.encoding)</span>
+<span class="gi">+        return self.socket.send(s)</span>
+
+<span class="w"> </span>    def sendline(self, s) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Write to socket with trailing newline, return number of bytes written&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(s, str):</span>
+<span class="gi">+            s = s.encode(self.encoding)</span>
+<span class="gi">+        return self.socket.send(s + b&#39;\n&#39;)</span>
+
+<span class="w"> </span>    def write(self, s):
+<span class="w"> </span>        &quot;&quot;&quot;Write to socket, return None&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(s, str):</span>
+<span class="gi">+            s = s.encode(self.encoding)</span>
+<span class="gi">+        self.socket.sendall(s)</span>
+
+<span class="w"> </span>    def writelines(self, sequence):
+<span class="w"> </span>        &quot;&quot;&quot;Call self.write() for each item in sequence&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for item in sequence:</span>
+<span class="gi">+            self.write(item)</span>
+
+<span class="w"> </span>    def read_nonblocking(self, size=1, timeout=-1):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -89,4 +98,20 @@ class SocketSpawn(SpawnBase):</span>
+<span class="w"> </span>            ready to read. When -1 (default), use self.timeout. When 0, poll.
+<span class="w"> </span>        :return: String containing the bytes read
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        import select</span>
+<span class="gi">+</span>
+<span class="gi">+        if timeout == -1:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            ready, _, _ = select.select([self.socket], [], [], timeout)</span>
+<span class="gi">+            if not ready:</span>
+<span class="gi">+                raise TIMEOUT(&#39;Timeout exceeded&#39;)</span>
+<span class="gi">+            </span>
+<span class="gi">+            data = self.socket.recv(size)</span>
+<span class="gi">+            if not data:</span>
+<span class="gi">+                raise EOF(&#39;End of file&#39;)</span>
+<span class="gi">+            </span>
+<span class="gi">+            return self.decoder.decode(data, final=False)</span>
+<span class="gi">+        except socket.error as e:</span>
+<span class="gi">+            raise EOF(&#39;Connection closed: %s&#39; % str(e))</span>
+<span class="gh">diff --git a/pexpect/spawnbase.py b/pexpect/spawnbase.py</span>
+<span class="gh">index abe78e6..1402d45 100644</span>
+<span class="gd">--- a/pexpect/spawnbase.py</span>
+<span class="gi">+++ b/pexpect/spawnbase.py</span>
+<span class="gu">@@ -101,7 +101,12 @@ class SpawnBase(object):</span>
+
+<span class="w"> </span>        The timeout parameter is ignored.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return os.read(self.child_fd, size)</span>
+<span class="gi">+        except OSError as e:</span>
+<span class="gi">+            if e.errno == errno.EAGAIN:</span>
+<span class="gi">+                return None</span>
+<span class="gi">+            raise</span>
+
+<span class="w"> </span>    def compile_pattern_list(self, patterns):
+<span class="w"> </span>        &quot;&quot;&quot;This compiles a pattern-string or a list of pattern-strings.
+<span class="gu">@@ -126,7 +131,25 @@ class SpawnBase(object):</span>
+<span class="w"> </span>                i = self.expect_list(cpl, timeout)
+<span class="w"> </span>                ...
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if patterns is None:</span>
+<span class="gi">+            return []</span>
+<span class="gi">+        if not isinstance(patterns, list):</span>
+<span class="gi">+            patterns = [patterns]</span>
+<span class="gi">+</span>
+<span class="gi">+        compiled_pattern_list = []</span>
+<span class="gi">+        for p in patterns:</span>
+<span class="gi">+            if isinstance(p, (str, bytes)):</span>
+<span class="gi">+                compiled_pattern_list.append(re.compile(p, re.DOTALL))</span>
+<span class="gi">+            elif p is EOF:</span>
+<span class="gi">+                compiled_pattern_list.append(EOF)</span>
+<span class="gi">+            elif p is TIMEOUT:</span>
+<span class="gi">+                compiled_pattern_list.append(TIMEOUT)</span>
+<span class="gi">+            elif isinstance(p, type(re.compile(&#39;&#39;))):</span>
+<span class="gi">+                compiled_pattern_list.append(p)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise TypeError(&#39;Unsupported pattern type: %s&#39; % type(p))</span>
+<span class="gi">+</span>
+<span class="gi">+        return compiled_pattern_list</span>
+
+<span class="w"> </span>    def expect(self, pattern, timeout=-1, searchwindowsize=-1, async_=False,
+<span class="w"> </span>        **kw):
+<span class="gu">@@ -223,7 +246,12 @@ class SpawnBase(object):</span>
+
+<span class="w"> </span>            index = yield from p.expect(patterns, async_=True)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        compiled_pattern_list = self.compile_pattern_list(pattern)</span>
+<span class="gi">+        return self.expect_list(compiled_pattern_list,</span>
+<span class="gi">+                                timeout=timeout,</span>
+<span class="gi">+                                searchwindowsize=searchwindowsize,</span>
+<span class="gi">+                                async_=async_,</span>
+<span class="gi">+                                **kw)</span>
+
+<span class="w"> </span>    def expect_list(self, pattern_list, timeout=-1, searchwindowsize=-1,
+<span class="w"> </span>        async_=False, **kw):
+<span class="gu">@@ -239,7 +267,16 @@ class SpawnBase(object):</span>
+<span class="w"> </span>        Like :meth:`expect`, passing ``async_=True`` will make this return an
+<span class="w"> </span>        asyncio coroutine.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout == -1:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        if searchwindowsize == -1:</span>
+<span class="gi">+            searchwindowsize = self.searchwindowsize</span>
+<span class="gi">+</span>
+<span class="gi">+        exp = Expecter(self, searcher_re(pattern_list), searchwindowsize)</span>
+<span class="gi">+        if async_:</span>
+<span class="gi">+            return exp.expect_async(timeout, **kw)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return exp.expect_loop(timeout)</span>
+
+<span class="w"> </span>    def expect_exact(self, pattern_list, timeout=-1, searchwindowsize=-1,
+<span class="w"> </span>        async_=False, **kw):
+<span class="gh">diff --git a/pexpect/utils.py b/pexpect/utils.py</span>
+<span class="gh">index 960e622..4aad058 100644</span>
+<span class="gd">--- a/pexpect/utils.py</span>
+<span class="gi">+++ b/pexpect/utils.py</span>
+<span class="gu">@@ -19,14 +19,22 @@ def is_executable_file(path):</span>
+
+<span class="w"> </span>    This is roughly ``os.path isfile(path) and os.access(path, os.X_OK)``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return os.path.isfile(path) and os.access(path, os.X_OK)</span>
+
+
+<span class="w"> </span>def which(filename, env=None):
+<span class="w"> </span>    &quot;&quot;&quot;This takes a given filename; tries to find it in the environment path;
+<span class="w"> </span>    then checks if it is executable. This returns the full path to the filename
+<span class="w"> </span>    if found and executable. Otherwise this returns None.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if env is None:</span>
+<span class="gi">+        env = os.environ</span>
+<span class="gi">+    </span>
+<span class="gi">+    path = env.get(&#39;PATH&#39;, &#39;&#39;)</span>
+<span class="gi">+    for directory in path.split(os.pathsep):</span>
+<span class="gi">+        full_path = os.path.join(directory, filename)</span>
+<span class="gi">+        if is_executable_file(full_path):</span>
+<span class="gi">+            return full_path</span>
+<span class="gi">+    return None</span>
+
+
+<span class="w"> </span>def split_command_line(command_line):
+<span class="gu">@@ -34,7 +42,37 @@ def split_command_line(command_line):</span>
+<span class="w"> </span>    on spaces, but handles embedded quotes, doublequotes, and escaped
+<span class="w"> </span>    characters. It&#39;s impossible to do this with a regular expression, so I
+<span class="w"> </span>    wrote a little state machine to parse the command line. &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    args = []</span>
+<span class="gi">+    current_arg = &#39;&#39;</span>
+<span class="gi">+    state = &#39;normal&#39;</span>
+<span class="gi">+    quote_char = None</span>
+<span class="gi">+    </span>
+<span class="gi">+    for char in command_line:</span>
+<span class="gi">+        if state == &#39;normal&#39;:</span>
+<span class="gi">+            if char.isspace():</span>
+<span class="gi">+                if current_arg:</span>
+<span class="gi">+                    args.append(current_arg)</span>
+<span class="gi">+                    current_arg = &#39;&#39;</span>
+<span class="gi">+            elif char in (&#39;&quot;&#39;, &quot;&#39;&quot;):</span>
+<span class="gi">+                state = &#39;in_quote&#39;</span>
+<span class="gi">+                quote_char = char</span>
+<span class="gi">+            elif char == &#39;\\&#39;:</span>
+<span class="gi">+                state = &#39;escaped&#39;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                current_arg += char</span>
+<span class="gi">+        elif state == &#39;in_quote&#39;:</span>
+<span class="gi">+            if char == quote_char:</span>
+<span class="gi">+                state = &#39;normal&#39;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                current_arg += char</span>
+<span class="gi">+        elif state == &#39;escaped&#39;:</span>
+<span class="gi">+            current_arg += char</span>
+<span class="gi">+            state = &#39;normal&#39;</span>
+<span class="gi">+    </span>
+<span class="gi">+    if current_arg:</span>
+<span class="gi">+        args.append(current_arg)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return args</span>
+
+
+<span class="w"> </span>def select_ignore_interrupts(iwtd, owtd, ewtd, timeout=None):
+<span class="gu">@@ -42,10 +80,24 @@ def select_ignore_interrupts(iwtd, owtd, ewtd, timeout=None):</span>
+<span class="w"> </span>    select.select raises a select.error exception and errno is an EINTR
+<span class="w"> </span>    error then it is ignored. Mainly this is used to ignore sigwinch
+<span class="w"> </span>    (terminal resize). &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return select.select(iwtd, owtd, ewtd, timeout)</span>
+<span class="gi">+        except (select.error, InterruptedError) as e:</span>
+<span class="gi">+            if e.args[0] != errno.EINTR:</span>
+<span class="gi">+                raise</span>
+
+
+<span class="w"> </span>def poll_ignore_interrupts(fds, timeout=None):
+<span class="w"> </span>    &quot;&quot;&quot;Simple wrapper around poll to register file descriptors and
+<span class="w"> </span>    ignore signals.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    p = select.poll()</span>
+<span class="gi">+    for fd in fds:</span>
+<span class="gi">+        p.register(fd, select.POLLIN)</span>
+<span class="gi">+    </span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return p.poll(timeout)</span>
+<span class="gi">+        except (select.error, InterruptedError) as e:</span>
+<span class="gi">+            if e.args[0] != errno.EINTR:</span>
+<span class="gi">+                raise</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

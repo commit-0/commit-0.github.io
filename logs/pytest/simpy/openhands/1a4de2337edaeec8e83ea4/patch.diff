@@ -1,0 +1,587 @@
+diff --git a/src/simpy/core.py b/src/simpy/core.py
+index c0b90a6..66330d7 100644
+--- a/src/simpy/core.py
++++ b/src/simpy/core.py
+@@ -32,7 +32,14 @@ class BoundClass(Generic[T]):
+     def bind_early(instance: object) -> None:
+         """Bind all :class:`BoundClass` attributes of the *instance's* class
+         to the instance itself to increase performance."""
+-        pass
++        cls = type(instance)
++        for name, obj in cls.__dict__.items():
++            if isinstance(obj, BoundClass):
++                bound_class = getattr(instance, name)
++                if not hasattr(instance, '_bound_classes'):
++                    instance._bound_classes = {}
++                instance._bound_classes[name] = bound_class
++                setattr(instance, name, bound_class)
+ 
+ class EmptySchedule(Exception):
+     """Thrown by an :class:`Environment` if there are no further events to be
+@@ -61,21 +68,33 @@ class Environment:
+     """
+ 
+     def __init__(self, initial_time: SimTime=0):
+-        self._now = initial_time
++        self._now = float(initial_time)
+         self._queue: List[Tuple[SimTime, EventPriority, int, Event]] = []
+         self._eid = count()
+         self._active_proc: Optional[Process] = None
++        self._bound_classes = {}
++        self._bound_classes['event'] = Event
++        self._bound_classes['timeout'] = Timeout
++        self._bound_classes['process'] = Process
++        self._bound_classes['all_of'] = AllOf
++        self._bound_classes['any_of'] = AnyOf
++        self.event = BoundClass(Event)
++        self.timeout = BoundClass(Timeout)
++        self.process = BoundClass(Process)
++        self.all_of = BoundClass(AllOf)
++        self.any_of = BoundClass(AnyOf)
++        self._active_proc = Process(self, lambda: (yield None))
+         BoundClass.bind_early(self)
+ 
+     @property
+     def now(self) -> SimTime:
+         """The current simulation time."""
+-        pass
++        return self._now
+ 
+     @property
+     def active_process(self) -> Optional[Process]:
+         """The currently active process of the environment."""
+-        pass
++        return self._active_proc
+     if TYPE_CHECKING:
+ 
+         def process(self, generator: ProcessGenerator) -> Process:
+@@ -112,12 +131,15 @@ class Environment:
+ 
+     def schedule(self, event: Event, priority: EventPriority=NORMAL, delay: SimTime=0) -> None:
+         """Schedule an *event* with a given *priority* and a *delay*."""
+-        pass
++        heappush(self._queue, (self._now + delay, priority, next(self._eid), event))
+ 
+     def peek(self) -> SimTime:
+         """Get the time of the next scheduled event. Return
+         :data:`~simpy.core.Infinity` if there is no further event."""
+-        pass
++        try:
++            return self._queue[0][0]
++        except IndexError:
++            return Infinity
+ 
+     def step(self) -> None:
+         """Process the next event.
+@@ -125,7 +147,20 @@ class Environment:
+         Raise an :exc:`EmptySchedule` if no further events are available.
+ 
+         """
+-        pass
++        try:
++            self._now, _, _, event = heappop(self._queue)
++        except IndexError:
++            raise EmptySchedule()
++
++        # Process callbacks of the event
++        callbacks, event.callbacks = event.callbacks, None
++        for callback in callbacks:
++            callback(event)
++
++        if not event.defused and not event.ok:
++            # The event has failed and has not been defused. Crash the
++            # environment.
++            raise event.value
+ 
+     def run(self, until: Optional[Union[SimTime, Event]]=None) -> Optional[Any]:
+         """Executes :meth:`step()` until the given criterion *until* is met.
+@@ -142,4 +177,38 @@ class Environment:
+           until the environment's time reaches *until*.
+ 
+         """
+-        pass
+\ No newline at end of file
++        if until is not None:
++            if isinstance(until, str):
++                try:
++                    until = float(until)
++                except ValueError:
++                    raise ValueError(f'Expected "until" to be a number, got {until}')
++
++            if not isinstance(until, (int, float, Event)):
++                raise ValueError(f'Expected "until" to be an Event, number or None, got {type(until)}')
++
++            if isinstance(until, (int, float)):
++                until_num = float(until)
++                if until_num <= self.now:
++                    raise ValueError('until must be greater than the current simulation time')
++                # Schedule a dummy event to stop the simulation
++                until = self.event()
++                until._ok = True
++                until._value = None
++                self.schedule(until, NORMAL, until_num - self.now)
++
++        try:
++            while True:
++                self.step()
++                if until is not None and until.triggered:
++                    if isinstance(until, Event):
++                        return until.value
++                    else:
++                        return None
++                if until is not None and isinstance(until, Event) and not until.triggered:
++                    if not self._queue:
++                        raise RuntimeError(f'No scheduled events left but "until" event was not triggered: {until}')
++        except EmptySchedule:
++            if until is not None and not until.triggered:
++                raise RuntimeError(f'No scheduled events left but "until" event was not triggered: {until}')
++            return None
+\ No newline at end of file
+diff --git a/src/simpy/events.py b/src/simpy/events.py
+index 93df18c..2f86374 100644
+--- a/src/simpy/events.py
++++ b/src/simpy/events.py
+@@ -66,6 +66,12 @@ class Event:
+         'The :class:`~simpy.core.Environment` the event lives in.'
+         self.callbacks: EventCallbacks = []
+         'List of functions that are called when the event is processed.'
++        self._value = PENDING
++        self._ok = True
++        self._defused = False
++        self._target = None
++        self._generator = None
++        self._parent = env.active_process
+ 
+     def __repr__(self) -> str:
+         """Return the description of the event (see :meth:`_desc`) with the id
+@@ -74,19 +80,19 @@ class Event:
+ 
+     def _desc(self) -> str:
+         """Return a string *Event()*."""
+-        pass
++        return 'Event()'
+ 
+     @property
+     def triggered(self) -> bool:
+         """Becomes ``True`` if the event has been triggered and its callbacks
+         are about to be invoked."""
+-        pass
++        return self._value is not PENDING
+ 
+     @property
+     def processed(self) -> bool:
+         """Becomes ``True`` if the event has been processed (e.g., its
+         callbacks have been invoked)."""
+-        pass
++        return self.callbacks is None
+ 
+     @property
+     def ok(self) -> bool:
+@@ -97,7 +103,9 @@ class Event:
+         :raises AttributeError: if accessed before the event is triggered.
+ 
+         """
+-        pass
++        if not self.triggered:
++            raise AttributeError('Value of ok is not yet available')
++        return self._ok
+ 
+     @property
+     def defused(self) -> bool:
+@@ -114,7 +122,7 @@ class Event:
+         processed by the :class:`~simpy.core.Environment`.
+ 
+         """
+-        pass
++        return hasattr(self, '_defused') and self._defused
+ 
+     @property
+     def value(self) -> Optional[Any]:
+@@ -125,9 +133,11 @@ class Event:
+         Raises :exc:`AttributeError` if the value is not yet available.
+ 
+         """
+-        pass
++        if self._value is PENDING:
++            raise AttributeError('Value not yet available')
++        return self._value
+ 
+-    def trigger(self, event: Event) -> None:
++    def trigger(self, event: Event) -> Event:
+         """Trigger the event with the state and value of the provided *event*.
+         Return *self* (this event instance).
+ 
+@@ -135,7 +145,19 @@ class Event:
+         chain reactions.
+ 
+         """
+-        pass
++        if self.triggered:
++            raise RuntimeError('Event has already been triggered')
++
++        self._ok = event.ok
++        self._value = event.value
++        if not self._ok:
++            self._defused = event.defused
++            if not self._defused:
++                raise event.value
++        if self.callbacks is not None:
++            self.env._active_proc = self._parent
++            self.env.schedule(self)
++        return self
+ 
+     def succeed(self, value: Optional[Any]=None) -> Event:
+         """Set the event's value, mark it as successful and schedule it for
+@@ -144,7 +166,16 @@ class Event:
+         Raises :exc:`RuntimeError` if this event has already been triggerd.
+ 
+         """
+-        pass
++        if self.triggered:
++            raise RuntimeError('Event has already been triggered')
++
++        self._ok = True
++        self._value = value
++        self._defused = False
++        if self.callbacks is not None:
++            self.env._active_proc = self._parent
++            self.env.schedule(self)
++        return self
+ 
+     def fail(self, exception: Exception) -> Event:
+         """Set *exception* as the events value, mark it as failed and schedule
+@@ -155,7 +186,19 @@ class Event:
+         Raises :exc:`RuntimeError` if this event has already been triggered.
+ 
+         """
+-        pass
++        if not isinstance(exception, Exception):
++            raise TypeError('Value of fail() must be an exception, not %s' %
++                          type(exception))
++        if self.triggered:
++            raise RuntimeError('Event has already been triggered')
++
++        self._ok = False
++        self._value = exception
++        self._defused = False
++        if self.callbacks is not None:
++            self.env._active_proc = self._parent
++            self.env.schedule(self)
++        return self
+ 
+     def __and__(self, other: Event) -> Condition:
+         """Return a :class:`~simpy.events.Condition` that will be triggered if
+@@ -181,18 +224,23 @@ class Timeout(Event):
+     """
+ 
+     def __init__(self, env: Environment, delay: SimTime, value: Optional[Any]=None):
+-        if delay < 0:
+-            raise ValueError(f'Negative delay {delay}')
++        try:
++            delay_num = float(delay)
++            if delay_num < 0:
++                raise ValueError(f'Negative delay {delay}')
++        except (TypeError, ValueError):
++            raise ValueError(f'Expected delay to be a number, got {delay}')
+         self.env = env
+         self.callbacks: EventCallbacks = []
+         self._value = value
+-        self._delay = delay
++        self._delay = delay_num
+         self._ok = True
+-        env.schedule(self, NORMAL, delay)
++        self._defused = False
++        env.schedule(self, NORMAL, delay_num)
+ 
+     def _desc(self) -> str:
+         """Return a string *Timeout(delay[, value=value])*."""
+-        pass
++        return f'Timeout({self._delay}' + (f', value={self._value}' if self._value is not None else '') + ')'
+ 
+ class Initialize(Event):
+     """Initializes a process. Only used internally by :class:`Process`.
+@@ -206,6 +254,10 @@ class Initialize(Event):
+         self.callbacks: EventCallbacks = [process._resume]
+         self._value: Any = None
+         self._ok = True
++        self._defused = False
++        process._target = self
++        self._target = None
++        self._parent = env.active_process
+         env.schedule(self, URGENT)
+ 
+ class Interruption(Event):
+@@ -217,16 +269,19 @@ class Interruption(Event):
+     """
+ 
+     def __init__(self, process: Process, cause: Optional[Any]):
++        if process._value is not PENDING:
++            raise RuntimeError(f'{process} has terminated and cannot be interrupted.')
++        if process is process.env.active_process:
++            raise RuntimeError('A process is not allowed to interrupt itself.')
+         self.env = process.env
+-        self.callbacks: EventCallbacks = [self._interrupt]
++        self.callbacks: EventCallbacks = [process._resume]
+         self._value = Interrupt(cause)
+         self._ok = False
+         self._defused = True
+-        if process._value is not PENDING:
+-            raise RuntimeError(f'{process} has terminated and cannot be interrupted.')
+-        if process is self.env.active_process:
+-            raise RuntimeError('A process is not allowed to interrupt itself.')
+         self.process = process
++        process._target = self
++        self._target = None
++        self._parent = self.env.active_process
+         self.env.schedule(self, URGENT)
+ ProcessGenerator = Generator[Event, Any, Any]
+ 
+@@ -252,11 +307,16 @@ class Process(Event):
+         self.env = env
+         self.callbacks: EventCallbacks = []
+         self._generator = generator
+-        self._target: Event = Initialize(env, self)
++        self._value = PENDING
++        self._ok = True
++        self._defused = False
++        self._target: Event = None
++        self._parent = env.active_process
++        Initialize(env, self)
+ 
+     def _desc(self) -> str:
+         """Return a string *Process(process_func_name)*."""
+-        pass
++        return f'Process({self.name})'
+ 
+     @property
+     def target(self) -> Event:
+@@ -266,17 +326,20 @@ class Process(Event):
+         interrupted.
+ 
+         """
+-        pass
++        return self._target
+ 
+     @property
+     def name(self) -> str:
+         """Name of the function used to start the process."""
+-        pass
++        try:
++            return self._generator.__name__
++        except AttributeError:
++            return str(self._generator)
+ 
+     @property
+     def is_alive(self) -> bool:
+         """``True`` until the process generator exits."""
+-        pass
++        return self._value is PENDING
+ 
+     def interrupt(self, cause: Optional[Any]=None) -> None:
+         """Interrupt this process optionally providing a *cause*.
+@@ -286,13 +349,81 @@ class Process(Event):
+         cases.
+ 
+         """
+-        pass
++        Interruption(self, cause)
+ 
+     def _resume(self, event: Event) -> None:
+         """Resumes the execution of the process with the value of *event*. If
+         the process generator exits, the process itself will get triggered with
+         the return value or the exception of the generator."""
+-        pass
++        # Handle interrupts that occurred while the process was suspended
++        if isinstance(event, Interruption):
++            event = event._value
++            self._target = None
++            try:
++                # Send the interrupt to the generator
++                event = self._generator.throw(event)
++            except StopIteration as e:
++                # Process has terminated
++                self._ok = True
++                self._value = getattr(e, 'value', None)
++                self.env.schedule(self)
++                return
++            except BaseException as e:
++                # Process has failed
++                self._ok = False
++                self._value = e
++                self._defused = False
++                self.env.schedule(self)
++                return
++
++        # Get next event from process
++        try:
++            old_proc = self.env._active_proc
++            self.env._active_proc = self
++            if event is None:
++                event = next(self._generator)
++            else:
++                event = self._generator.send(event._value)
++        except StopIteration as e:
++            # Process has terminated
++            self._ok = True
++            self._value = getattr(e, 'value', None)
++            self.env.schedule(self)
++            return
++        except BaseException as e:
++            # Process has failed
++            self._ok = False
++            self._value = e
++            self._defused = False
++            self.env.schedule(self)
++            return
++        finally:
++            self.env._active_proc = old_proc
++
++        if event is not None:
++            # Process returned another event to wait upon
++            try:
++                # Create wrapper for the event if it belongs to a foreign
++                # environment
++                if event.env != self.env:
++                    event = type(event)(self.env, event)
++
++                self._target = event
++                if event.callbacks is None:
++                    # Event has already been triggered
++                    self._resume(event)
++                else:
++                    event.callbacks.append(self._resume)
++            except AttributeError:
++                # "event" is not an event object
++                raise ValueError(f'{event} is not an event.')
++            return
++        else:
++            # Process yielded None
++            self._ok = True
++            self._value = None
++            self.env.schedule(self)
++            return
+ 
+ class ConditionValue:
+     """Result of a :class:`~simpy.events.Condition`. It supports convenient
+@@ -352,7 +483,10 @@ class Condition(Event):
+         self._events = tuple(events)
+         self._count = 0
+         if not self._events:
+-            self.succeed(ConditionValue())
++            value = ConditionValue()
++            self._ok = True
++            self._value = value
++            self.env.schedule(self)
+             return
+         for event in self._events:
+             if self.env != event.env:
+@@ -364,19 +498,37 @@ class Condition(Event):
+                 event.callbacks.append(self._check)
+         assert isinstance(self.callbacks, list)
+         self.callbacks.append(self._build_value)
++        # Check if all events are already triggered
++        if all(event.triggered for event in self._events):
++            value = ConditionValue()
++            self._populate_value(value)
++            self._ok = True
++            self._value = value
++            self.env._active_proc = self._parent
++            self.env.schedule(self)
+ 
+     def _desc(self) -> str:
+         """Return a string *Condition(evaluate, [events])*."""
+-        pass
++        return f'Condition({self._evaluate.__name__}, {self._events})'
+ 
+     def _populate_value(self, value: ConditionValue) -> None:
+         """Populate the *value* by recursively visiting all nested
+         conditions."""
+-        pass
++        for event in self._events:
++            if isinstance(event, Condition):
++                event._populate_value(value)
++            elif event.callbacks is None:
++                value.events.append(event)
+ 
+     def _build_value(self, event: Event) -> None:
+         """Build the value of this condition."""
+-        pass
++        if event is not self:
++            return
++
++        self._remove_check_callbacks()
++        value = ConditionValue()
++        self._populate_value(value)
++        self._value = value
+ 
+     def _remove_check_callbacks(self) -> None:
+         """Remove _check() callbacks from events recursively.
+@@ -387,24 +539,52 @@ class Condition(Event):
+         untriggered events.
+ 
+         """
+-        pass
++        for event in self._events:
++            if isinstance(event, Condition):
++                event._remove_check_callbacks()
++            elif event.callbacks is not None and self._check in event.callbacks:
++                event.callbacks.remove(self._check)
+ 
+     def _check(self, event: Event) -> None:
+         """Check if the condition was already met and schedule the *event* if
+         so."""
+-        pass
++        if event not in self._events:
++            return
++
++        if not event.triggered:
++            return
++
++        if event.ok:
++            self._count += 1
++        else:
++            # Abort if the event has failed
++            self.fail(event._value)
++            self._defused = event.defused
++            self._remove_check_callbacks()
++            return
++
++        if self._evaluate(self._events, self._count):
++            value = ConditionValue()
++            self._populate_value(value)
++            self._ok = True
++            self._value = value
++            self._remove_check_callbacks()
++            if self.callbacks is not None:
++                self.env._active_proc = self._parent
++                self.env.schedule(self)
++            return
+ 
+     @staticmethod
+     def all_events(events: Tuple[Event, ...], count: int) -> bool:
+         """An evaluation function that returns ``True`` if all *events* have
+         been triggered."""
+-        pass
++        return len(events) == count
+ 
+     @staticmethod
+     def any_events(events: Tuple[Event, ...], count: int) -> bool:
+         """An evaluation function that returns ``True`` if at least one of
+         *events* has been triggered."""
+-        pass
++        return count > 0
+ 
+ class AllOf(Condition):
+     """A :class:`~simpy.events.Condition` event that is triggered if all of
+@@ -428,4 +608,7 @@ class AnyOf(Condition):
+ 
+ def _describe_frame(frame: FrameType) -> str:
+     """Print filename, line number and function name of a stack frame."""
+-    pass
+\ No newline at end of file
++    filename = frame.f_code.co_filename
++    lineno = frame.f_lineno
++    funcname = frame.f_code.co_name
++    return f'{filename}:{lineno} in {funcname}()'
+\ No newline at end of file
+

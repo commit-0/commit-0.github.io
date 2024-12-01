@@ -1,0 +1,2142 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin loguru - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-loguru" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin loguru
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-loguru"><strong>Claude Sonnet 3.5 - Fill-in</strong>: loguru</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:19: in &lt;module&gt;
+    import loguru
+loguru/__init__.py:9: in &lt;module&gt;
+    from . import _defaults
+loguru/_defaults.py:2: in &lt;module&gt;
+    LOGURU_AUTOINIT = env(&#39;LOGURU_AUTOINIT&#39;, bool, True)
+E   NameError: name &#39;env&#39; is not defined
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/loguru/_colorizer.py b/loguru/_colorizer.py</span>
+<span class="gh">index b5aa9a1..7b64b23 100644</span>
+<span class="gd">--- a/loguru/_colorizer.py</span>
+<span class="gi">+++ b/loguru/_colorizer.py</span>
+<span class="gu">@@ -102,10 +102,72 @@ class AnsiParser:</span>
+<span class="w"> </span>        self._tags = []
+<span class="w"> </span>        self._color_tokens = []
+
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def strip(tokens):</span>
+<span class="gi">+        return &#39;&#39;.join(token for token, token_type in tokens if token_type == TokenType.TEXT)</span>
+<span class="gi">+</span>
+<span class="gi">+    def parse(self, text):</span>
+<span class="gi">+        self._tokens = []</span>
+<span class="gi">+        self._tags = []</span>
+<span class="gi">+        self._color_tokens = []</span>
+<span class="gi">+        </span>
+<span class="gi">+        for match in self._regex_tag.finditer(text):</span>
+<span class="gi">+            start, end = match.span()</span>
+<span class="gi">+            if start &gt; 0:</span>
+<span class="gi">+                self._tokens.append((text[:start], TokenType.TEXT))</span>
+<span class="gi">+            </span>
+<span class="gi">+            tag = match.group(1)</span>
+<span class="gi">+            if tag.startswith(&#39;/&#39;):</span>
+<span class="gi">+                self._tokens.append((match.group(), TokenType.CLOSING))</span>
+<span class="gi">+                self._tags.pop()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                self._tokens.append((match.group(), TokenType.LEVEL))</span>
+<span class="gi">+                self._tags.append(tag)</span>
+<span class="gi">+            </span>
+<span class="gi">+            text = text[end:]</span>
+<span class="gi">+        </span>
+<span class="gi">+        if text:</span>
+<span class="gi">+            self._tokens.append((text, TokenType.TEXT))</span>
+<span class="gi">+        </span>
+<span class="gi">+        return self._tokens</span>
+<span class="gi">+</span>
+<span class="gi">+    def colorize(self, tokens):</span>
+<span class="gi">+        self._color_tokens = []</span>
+<span class="gi">+        for token, token_type in tokens:</span>
+<span class="gi">+            if token_type == TokenType.TEXT:</span>
+<span class="gi">+                self._color_tokens.append((token, TokenType.TEXT))</span>
+<span class="gi">+            elif token_type == TokenType.LEVEL:</span>
+<span class="gi">+                ansi_codes = self._get_ansi_codes(token[1:-1])</span>
+<span class="gi">+                self._color_tokens.append((f&quot;\033[{&#39;;&#39;.join(map(str, ansi_codes))}m&quot;, TokenType.ANSI))</span>
+<span class="gi">+            elif token_type == TokenType.CLOSING:</span>
+<span class="gi">+                self._color_tokens.append((&quot;\033[0m&quot;, TokenType.ANSI))</span>
+<span class="gi">+        return self._color_tokens</span>
+<span class="gi">+</span>
+<span class="gi">+    def _get_ansi_codes(self, tag):</span>
+<span class="gi">+        ansi_codes = []</span>
+<span class="gi">+        if tag.startswith(&#39;fg &#39;):</span>
+<span class="gi">+            color = self._foreground.get(tag[3:])</span>
+<span class="gi">+            if color:</span>
+<span class="gi">+                ansi_codes.append(color)</span>
+<span class="gi">+        elif tag.startswith(&#39;bg &#39;):</span>
+<span class="gi">+            color = self._background.get(tag[3:])</span>
+<span class="gi">+            if color:</span>
+<span class="gi">+                ansi_codes.append(color)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            style = self._style.get(tag)</span>
+<span class="gi">+            if style:</span>
+<span class="gi">+                ansi_codes.append(style)</span>
+<span class="gi">+        return ansi_codes</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class ColoringMessage(str):
+<span class="w"> </span>    __fields__ = &#39;_messages&#39;,
+
+<span class="gi">+    def __new__(cls, message, messages):</span>
+<span class="gi">+        obj = str.__new__(cls, message)</span>
+<span class="gi">+        obj._messages = iter(messages)</span>
+<span class="gi">+        return obj</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __format__(self, spec):
+<span class="w"> </span>        return next(self._messages).__format__(spec)
+
+<span class="gu">@@ -116,6 +178,18 @@ class ColoredMessage:</span>
+<span class="w"> </span>        self.tokens = tokens
+<span class="w"> </span>        self.stripped = AnsiParser.strip(tokens)
+
+<span class="gi">+    def __str__(self):</span>
+<span class="gi">+        return &#39;&#39;.join(token for token, _ in self.tokens)</span>
+<span class="gi">+</span>
+<span class="gi">+    def __len__(self):</span>
+<span class="gi">+        return len(self.stripped)</span>
+<span class="gi">+</span>
+<span class="gi">+    def __getitem__(self, index):</span>
+<span class="gi">+        return ColoredMessage([(self.stripped[index], TokenType.TEXT)])</span>
+<span class="gi">+</span>
+<span class="gi">+    def __iter__(self):</span>
+<span class="gi">+        return iter(self.stripped)</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class ColoredFormat:
+
+<span class="gu">@@ -123,6 +197,39 @@ class ColoredFormat:</span>
+<span class="w"> </span>        self._tokens = tokens
+<span class="w"> </span>        self._messages_color_tokens = messages_color_tokens
+
+<span class="gi">+    def __format__(self, spec):</span>
+<span class="gi">+        result = []</span>
+<span class="gi">+        for token, token_type in self._tokens:</span>
+<span class="gi">+            if token_type == TokenType.TEXT:</span>
+<span class="gi">+                result.append(token)</span>
+<span class="gi">+            elif token_type == TokenType.ANSI:</span>
+<span class="gi">+                result.append(token)</span>
+<span class="gi">+            elif token_type == TokenType.LEVEL:</span>
+<span class="gi">+                message_tokens = next(self._messages_color_tokens)</span>
+<span class="gi">+                result.extend(token for token, _ in message_tokens)</span>
+<span class="gi">+        return &#39;&#39;.join(result)</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>class Colorizer:
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self):</span>
+<span class="gi">+        self._ansi_parser = AnsiParser()</span>
+<span class="gi">+</span>
+<span class="gi">+    def colorize(self, message):</span>
+<span class="gi">+        tokens = self._ansi_parser.parse(message)</span>
+<span class="gi">+        color_tokens = self._ansi_parser.colorize(tokens)</span>
+<span class="gi">+        return ColoredMessage(color_tokens)</span>
+<span class="gi">+</span>
+<span class="gi">+    def format(self, format_string, *args, **kwargs):</span>
+<span class="gi">+        tokens = self._ansi_parser.parse(format_string)</span>
+<span class="gi">+        messages_color_tokens = []</span>
+<span class="gi">+        for arg in args:</span>
+<span class="gi">+            if isinstance(arg, ColoredMessage):</span>
+<span class="gi">+                messages_color_tokens.append(arg.tokens)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                messages_color_tokens.append(self.colorize(str(arg)).tokens)</span>
+<span class="gi">+        for arg in kwargs.values():</span>
+<span class="gi">+            if isinstance(arg, ColoredMessage):</span>
+<span class="gi">+                messages_color_tokens.append(arg.tokens)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                messages_color_tokens.append(self.colorize(str(arg)).tokens)</span>
+<span class="gi">+        return ColoredFormat(tokens, iter(messages_color_tokens))</span>
+<span class="gh">diff --git a/loguru/_file_sink.py b/loguru/_file_sink.py</span>
+<span class="gh">index 8053660..e58222c 100644</span>
+<span class="gd">--- a/loguru/_file_sink.py</span>
+<span class="gi">+++ b/loguru/_file_sink.py</span>
+<span class="gu">@@ -24,15 +24,27 @@ class FileDateFormatter:</span>
+
+
+<span class="w"> </span>class Compression:
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, compression_function):</span>
+<span class="gi">+        self.compression_function = compression_function</span>
+<span class="gi">+</span>
+<span class="gi">+    def __call__(self, file):</span>
+<span class="gi">+        return self.compression_function(file)</span>
+
+
+<span class="w"> </span>class Retention:
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, retention_function):</span>
+<span class="gi">+        self.retention_function = retention_function</span>
+<span class="gi">+</span>
+<span class="gi">+    def __call__(self, files):</span>
+<span class="gi">+        return self.retention_function(files)</span>
+
+
+<span class="w"> </span>class Rotation:
+<span class="gi">+    def __init__(self, rotation_function):</span>
+<span class="gi">+        self.rotation_function = rotation_function</span>
+
+<span class="gi">+    def __call__(self, message, file):</span>
+<span class="gi">+        return self.rotation_function(message, file)</span>
+
+<span class="w"> </span>    class RotationTime:
+
+<span class="gu">@@ -97,3 +109,82 @@ class FileSink:</span>
+<span class="w"> </span>            path = self._create_path()
+<span class="w"> </span>            self._create_dirs(path)
+<span class="w"> </span>            self._create_file(path)
+<span class="gi">+</span>
+<span class="gi">+    def _make_glob_patterns(self, path):</span>
+<span class="gi">+        return [path.replace(&#39;{&#39;, &#39;[&#39;).replace(&#39;}&#39;, &#39;]&#39;)]</span>
+<span class="gi">+</span>
+<span class="gi">+    def _make_rotation_function(self, rotation):</span>
+<span class="gi">+        if rotation is None:</span>
+<span class="gi">+            return lambda message, file: False</span>
+<span class="gi">+        if isinstance(rotation, Rotation):</span>
+<span class="gi">+            return rotation</span>
+<span class="gi">+        return Rotation(rotation)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _make_retention_function(self, retention):</span>
+<span class="gi">+        if retention is None:</span>
+<span class="gi">+            return lambda files: files</span>
+<span class="gi">+        if isinstance(retention, Retention):</span>
+<span class="gi">+            return retention</span>
+<span class="gi">+        return Retention(retention)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _make_compression_function(self, compression):</span>
+<span class="gi">+        if compression is None:</span>
+<span class="gi">+            return lambda file: None</span>
+<span class="gi">+        if isinstance(compression, Compression):</span>
+<span class="gi">+            return compression</span>
+<span class="gi">+        return Compression(compression)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _create_path(self):</span>
+<span class="gi">+        return self._path.format_map(FileDateFormatter())</span>
+<span class="gi">+</span>
+<span class="gi">+    def _create_dirs(self, path):</span>
+<span class="gi">+        os.makedirs(os.path.dirname(path), exist_ok=True)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _create_file(self, path):</span>
+<span class="gi">+        self._file = open(path, **self._kwargs)</span>
+<span class="gi">+        self._file_path = path</span>
+<span class="gi">+        self._update_file_info()</span>
+<span class="gi">+</span>
+<span class="gi">+    def _update_file_info(self):</span>
+<span class="gi">+        if self._watch:</span>
+<span class="gi">+            stat = os.fstat(self._file.fileno())</span>
+<span class="gi">+            self._file_dev, self._file_ino = stat[ST_DEV], stat[ST_INO]</span>
+<span class="gi">+</span>
+<span class="gi">+    def write(self, message):</span>
+<span class="gi">+        if self._file is None:</span>
+<span class="gi">+            path = self._create_path()</span>
+<span class="gi">+            self._create_dirs(path)</span>
+<span class="gi">+            self._create_file(path)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self._should_rotate(message):</span>
+<span class="gi">+            self._rotate(message)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._file.write(message)</span>
+<span class="gi">+        self._file.flush()</span>
+<span class="gi">+</span>
+<span class="gi">+    def _should_rotate(self, message):</span>
+<span class="gi">+        return self._rotation_function(message, self._file)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _rotate(self, message):</span>
+<span class="gi">+        self._file.close()</span>
+<span class="gi">+        new_path = self._create_path()</span>
+<span class="gi">+        self._compression_function(self._file_path)</span>
+<span class="gi">+        self._create_file(new_path)</span>
+<span class="gi">+        self._apply_retention()</span>
+<span class="gi">+</span>
+<span class="gi">+    def _apply_retention(self):</span>
+<span class="gi">+        files = self._get_log_files()</span>
+<span class="gi">+        files = self._retention_function(files)</span>
+<span class="gi">+        for file in files:</span>
+<span class="gi">+            os.remove(file)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _get_log_files(self):</span>
+<span class="gi">+        files = []</span>
+<span class="gi">+        for pattern in self._glob_patterns:</span>
+<span class="gi">+            files.extend(glob.glob(pattern))</span>
+<span class="gi">+        return sorted(files)</span>
+<span class="gi">+</span>
+<span class="gi">+    def stop(self):</span>
+<span class="gi">+        if self._file is not None:</span>
+<span class="gi">+            self._file.close()</span>
+<span class="gi">+            self._file = None</span>
+<span class="gh">diff --git a/loguru/_handler.py b/loguru/_handler.py</span>
+<span class="gh">index cbb5940..1cb0c3e 100644</span>
+<span class="gd">--- a/loguru/_handler.py</span>
+<span class="gi">+++ b/loguru/_handler.py</span>
+<span class="gu">@@ -78,7 +78,15 @@ class Handler:</span>
+<span class="w"> </span>    @contextmanager
+<span class="w"> </span>    def _protected_lock(self):
+<span class="w"> </span>        &quot;&quot;&quot;Acquire the lock, but fail fast if its already acquired by the current thread.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if getattr(self._lock_acquired, &#39;value&#39;, False):</span>
+<span class="gi">+            raise RuntimeError(&quot;Handler lock already acquired by this thread&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        with self._lock:</span>
+<span class="gi">+            self._lock_acquired.value = True</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                yield</span>
+<span class="gi">+            finally:</span>
+<span class="gi">+                self._lock_acquired.value = False</span>
+
+<span class="w"> </span>    def __getstate__(self):
+<span class="w"> </span>        state = self.__dict__.copy()
+<span class="gh">diff --git a/loguru/_logger.py b/loguru/_logger.py</span>
+<span class="gh">index 8812d5c..e58fe03 100644</span>
+<span class="gd">--- a/loguru/_logger.py</span>
+<span class="gi">+++ b/loguru/_logger.py</span>
+<span class="gu">@@ -196,1162 +196,286 @@ class Logger:</span>
+<span class="w"> </span>        _defaults.LOGURU_BACKTRACE, diagnose=_defaults.LOGURU_DIAGNOSE,
+<span class="w"> </span>        enqueue=_defaults.LOGURU_ENQUEUE, context=_defaults.LOGURU_CONTEXT,
+<span class="w"> </span>        catch=_defaults.LOGURU_CATCH, **kwargs):
+<span class="gd">-        &quot;&quot;&quot;Add a handler sending log messages to a sink adequately configured.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        sink : |file-like object|_, |str|, |Path|, |callable|_, |coroutine function|_ or |Handler|</span>
+<span class="gd">-            An object in charge of receiving formatted logging messages and propagating them to an</span>
+<span class="gd">-            appropriate endpoint.</span>
+<span class="gd">-        level : |int| or |str|, optional</span>
+<span class="gd">-            The minimum severity level from which logged messages should be sent to the sink.</span>
+<span class="gd">-        format : |str| or |callable|_, optional</span>
+<span class="gd">-            The template used to format logged messages before being sent to the sink.</span>
+<span class="gd">-        filter : |callable|_, |str| or |dict|, optional</span>
+<span class="gd">-            A directive optionally used to decide for each logged message whether it should be sent</span>
+<span class="gd">-            to the sink or not.</span>
+<span class="gd">-        colorize : |bool|, optional</span>
+<span class="gd">-            Whether the color markups contained in the formatted message should be converted to ansi</span>
+<span class="gd">-            codes for terminal coloration, or stripped otherwise. If ``None``, the choice is</span>
+<span class="gd">-            automatically made based on the sink being a tty or not.</span>
+<span class="gd">-        serialize : |bool|, optional</span>
+<span class="gd">-            Whether the logged message and its records should be first converted to a JSON string</span>
+<span class="gd">-            before being sent to the sink.</span>
+<span class="gd">-        backtrace : |bool|, optional</span>
+<span class="gd">-            Whether the exception trace formatted should be extended upward, beyond the catching</span>
+<span class="gd">-            point, to show the full stacktrace which generated the error.</span>
+<span class="gd">-        diagnose : |bool|, optional</span>
+<span class="gd">-            Whether the exception trace should display the variables values to eases the debugging.</span>
+<span class="gd">-            This should be set to ``False`` in production to avoid leaking sensitive data.</span>
+<span class="gd">-        enqueue : |bool|, optional</span>
+<span class="gd">-            Whether the messages to be logged should first pass through a multiprocessing-safe queue</span>
+<span class="gd">-            before reaching the sink. This is useful while logging to a file through multiple</span>
+<span class="gd">-            processes. This also has the advantage of making logging calls non-blocking.</span>
+<span class="gd">-        context : |multiprocessing.Context| or |str|, optional</span>
+<span class="gd">-            A context object or name that will be used for all tasks involving internally the</span>
+<span class="gd">-            |multiprocessing| module, in particular when ``enqueue=True``. If ``None``, the default</span>
+<span class="gd">-            context is used.</span>
+<span class="gd">-        catch : |bool|, optional</span>
+<span class="gd">-            Whether errors occurring while sink handles logs messages should be automatically</span>
+<span class="gd">-            caught. If ``True``, an exception message is displayed on |sys.stderr| but the exception</span>
+<span class="gd">-            is not propagated to the caller, preventing your app to crash.</span>
+<span class="gd">-        **kwargs</span>
+<span class="gd">-            Additional parameters that are only valid to configure a coroutine or file sink (see</span>
+<span class="gd">-            below).</span>
+<span class="gd">-</span>
+<span class="gd">-</span>
+<span class="gd">-        If and only if the sink is a coroutine function, the following parameter applies:</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        loop : |AbstractEventLoop|, optional</span>
+<span class="gd">-            The event loop in which the asynchronous logging task will be scheduled and executed. If</span>
+<span class="gd">-            ``None``, the loop used is the one returned by |asyncio.get_running_loop| at the time of</span>
+<span class="gd">-            the logging call (task is discarded if there is no loop currently running).</span>
+<span class="gd">-</span>
+<span class="gd">-</span>
+<span class="gd">-        If and only if the sink is a file path, the following parameters apply:</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        rotation : |str|, |int|, |time|, |timedelta| or |callable|_, optional</span>
+<span class="gd">-            A condition indicating whenever the current logged file should be closed and a new one</span>
+<span class="gd">-            started.</span>
+<span class="gd">-        retention : |str|, |int|, |timedelta| or |callable|_, optional</span>
+<span class="gd">-            A directive filtering old files that should be removed during rotation or end of</span>
+<span class="gd">-            program.</span>
+<span class="gd">-        compression : |str| or |callable|_, optional</span>
+<span class="gd">-            A compression or archive format to which log files should be converted at closure.</span>
+<span class="gd">-        delay : |bool|, optional</span>
+<span class="gd">-            Whether the file should be created as soon as the sink is configured, or delayed until</span>
+<span class="gd">-            first logged message. It defaults to ``False``.</span>
+<span class="gd">-        watch : |bool|, optional</span>
+<span class="gd">-            Whether or not the file should be watched and re-opened when deleted or changed (based</span>
+<span class="gd">-            on its device and inode properties) by an external program. It defaults to ``False``.</span>
+<span class="gd">-        mode : |str|, optional</span>
+<span class="gd">-            The opening mode as for built-in |open| function. It defaults to ``&quot;a&quot;`` (open the</span>
+<span class="gd">-            file in appending mode).</span>
+<span class="gd">-        buffering : |int|, optional</span>
+<span class="gd">-            The buffering policy as for built-in |open| function. It defaults to ``1`` (line</span>
+<span class="gd">-            buffered file).</span>
+<span class="gd">-        encoding : |str|, optional</span>
+<span class="gd">-            The file encoding as for built-in |open| function. It defaults to ``&quot;utf8&quot;``.</span>
+<span class="gd">-        **kwargs</span>
+<span class="gd">-            Others parameters are passed to the built-in |open| function.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :class:`int`</span>
+<span class="gd">-            An identifier associated with the added sink and which should be used to</span>
+<span class="gd">-            |remove| it.</span>
+<span class="gd">-</span>
+<span class="gd">-        Raises</span>
+<span class="gd">-        ------</span>
+<span class="gd">-        ValueError</span>
+<span class="gd">-            If any of the arguments passed to configure the sink is invalid.</span>
+<span class="gd">-</span>
+<span class="gd">-        Notes</span>
+<span class="gd">-        -----</span>
+<span class="gd">-        Extended summary follows.</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _sink:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The sink parameter</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``sink`` handles incoming log messages and proceed to their writing somewhere and</span>
+<span class="gd">-        somehow. A sink can take many forms:</span>
+<span class="gd">-</span>
+<span class="gd">-        - A |file-like object|_ like ``sys.stderr`` or ``open(&quot;file.log&quot;, &quot;w&quot;)``. Anything with</span>
+<span class="gd">-          a ``.write()`` method is considered as a file-like object. Custom handlers may also</span>
+<span class="gd">-          implement ``flush()`` (called after each logged message), ``stop()`` (called at sink</span>
+<span class="gd">-          termination) and ``complete()`` (awaited by the eponymous method).</span>
+<span class="gd">-        - A file path as |str| or |Path|. It can be parametrized with some additional parameters,</span>
+<span class="gd">-          see below.</span>
+<span class="gd">-        - A |callable|_ (such as a simple function) like ``lambda msg: print(msg)``. This</span>
+<span class="gd">-          allows for logging procedure entirely defined by user preferences and needs.</span>
+<span class="gd">-        - A asynchronous |coroutine function|_ defined with the ``async def`` statement. The</span>
+<span class="gd">-          coroutine object returned by such function will be added to the event loop using</span>
+<span class="gd">-          |loop.create_task|. The tasks should be awaited before ending the loop by using</span>
+<span class="gd">-          |complete|.</span>
+<span class="gd">-        - A built-in |Handler| like ``logging.StreamHandler``. In such a case, the `Loguru` records</span>
+<span class="gd">-          are automatically converted to the structure expected by the |logging| module.</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that the logging functions are not `reentrant`_. This means you should avoid using</span>
+<span class="gd">-        the ``logger`` inside any of your sinks or from within |signal| handlers. Otherwise, you</span>
+<span class="gd">-        may face deadlock if the module&#39;s sink was not explicitly disabled.</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _message:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The logged message</span>
+<span class="gd">-</span>
+<span class="gd">-        The logged message passed to all added sinks is nothing more than a string of the</span>
+<span class="gd">-        formatted log, to which a special attribute is associated: the ``.record`` which is a dict</span>
+<span class="gd">-        containing all contextual information possibly needed (see below).</span>
+<span class="gd">-</span>
+<span class="gd">-        Logged messages are formatted according to the ``format`` of the added sink. This format</span>
+<span class="gd">-        is usually a string containing braces fields to display attributes from the record dict.</span>
+<span class="gd">-</span>
+<span class="gd">-        If fine-grained control is needed, the ``format`` can also be a function which takes the</span>
+<span class="gd">-        record as parameter and return the format template string. However, note that in such a</span>
+<span class="gd">-        case, you should take care of appending the line ending and exception field to the returned</span>
+<span class="gd">-        format, while ``&quot;\\n{exception}&quot;`` is automatically appended for convenience if ``format`` is</span>
+<span class="gd">-        a string.</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``filter`` attribute can be used to control which messages are effectively passed to the</span>
+<span class="gd">-        sink and which one are ignored. A function can be used, accepting the record as an</span>
+<span class="gd">-        argument, and returning ``True`` if the message should be logged, ``False`` otherwise. If</span>
+<span class="gd">-        a string is used, only the records with the same ``name`` and its children will be allowed.</span>
+<span class="gd">-        One can also pass a ``dict`` mapping module names to minimum required level. In such case,</span>
+<span class="gd">-        each log record will search for it&#39;s closest parent in the ``dict`` and use the associated</span>
+<span class="gd">-        level as the filter. The ``dict`` values can be ``int`` severity, ``str`` level name or</span>
+<span class="gd">-        ``True`` and ``False`` to respectively authorize and discard all module logs</span>
+<span class="gd">-        unconditionally. In order to set a default level, the ``&quot;&quot;`` module name should be used as</span>
+<span class="gd">-        it is the parent of all modules (it does not suppress global ``level`` threshold, though).</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that while calling a logging method, the keyword arguments (if any) are automatically</span>
+<span class="gd">-        added to the ``extra`` dict for convenient contextualization (in addition to being used for</span>
+<span class="gd">-        formatting).</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _levels:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The severity levels</span>
+<span class="gd">-</span>
+<span class="gd">-        Each logged message is associated with a severity level. These levels make it possible to</span>
+<span class="gd">-        prioritize messages and to choose the verbosity of the logs according to usages. For</span>
+<span class="gd">-        example, it allows to display some debugging information to a developer, while hiding it to</span>
+<span class="gd">-        the end user running the application.</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``level`` attribute of every added sink controls the minimum threshold from which log</span>
+<span class="gd">-        messages are allowed to be emitted. While using the ``logger``, you are in charge of</span>
+<span class="gd">-        configuring the appropriate granularity of your logs. It is possible to add even more custom</span>
+<span class="gd">-        levels by using the |level| method.</span>
+<span class="gd">-</span>
+<span class="gd">-        Here are the standard levels with their default severity value, each one is associated with</span>
+<span class="gd">-        a logging method of the same name:</span>
+<span class="gd">-</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | Level name           | Severity value         | Logger method          |</span>
+<span class="gd">-        +======================+========================+========================+</span>
+<span class="gd">-        | ``TRACE``            | 5                      | |logger.trace|         |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | ``DEBUG``            | 10                     | |logger.debug|         |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | ``INFO``             | 20                     | |logger.info|          |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | ``SUCCESS``          | 25                     | |logger.success|       |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | ``WARNING``          | 30                     | |logger.warning|       |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | ``ERROR``            | 40                     | |logger.error|         |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-        | ``CRITICAL``         | 50                     | |logger.critical|      |</span>
+<span class="gd">-        +----------------------+------------------------+------------------------+</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _record:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The record dict</span>
+<span class="gd">-</span>
+<span class="gd">-        The record is just a Python dict, accessible from sinks by ``message.record``. It contains</span>
+<span class="gd">-        all contextual information of the logging call (time, function, file, line, level, etc.).</span>
+<span class="gd">-</span>
+<span class="gd">-        Each of the record keys can be used in the handler&#39;s ``format`` so the corresponding value</span>
+<span class="gd">-        is properly displayed in the logged message (e.g. ``&quot;{level}&quot;`` will return ``&quot;INFO&quot;``).</span>
+<span class="gd">-        Some records&#39; values are objects with two or more attributes. These can be formatted with</span>
+<span class="gd">-        ``&quot;{key.attr}&quot;`` (``&quot;{key}&quot;`` would display one by default).</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that you can use any `formatting directives`_ available in Python&#39;s ``str.format()``</span>
+<span class="gd">-        method (e.g. ``&quot;{key: &gt;3}&quot;`` will right-align and pad to a width of 3 characters). This is</span>
+<span class="gd">-        particularly useful for time formatting (see below).</span>
+<span class="gd">-</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | Key        | Description                     | Attributes                 |</span>
+<span class="gd">-        +============+=================================+============================+</span>
+<span class="gd">-        | elapsed    | The time elapsed since the      | See |timedelta|            |</span>
+<span class="gd">-        |            | start of the program            |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | exception  | The formatted exception if any, | ``type``, ``value``,       |</span>
+<span class="gd">-        |            | ``None`` otherwise              | ``traceback``              |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | extra      | The dict of attributes          | None                       |</span>
+<span class="gd">-        |            | bound by the user (see |bind|)  |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | file       | The file where the logging call | ``name`` (default),        |</span>
+<span class="gd">-        |            | was made                        | ``path``                   |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | function   | The function from which the     | None                       |</span>
+<span class="gd">-        |            | logging call was made           |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | level      | The severity used to log the    | ``name`` (default),        |</span>
+<span class="gd">-        |            | message                         | ``no``, ``icon``           |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | line       | The line number in the source   | None                       |</span>
+<span class="gd">-        |            | code                            |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | message    | The logged message (not yet     | None                       |</span>
+<span class="gd">-        |            | formatted)                      |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | module     | The module where the logging    | None                       |</span>
+<span class="gd">-        |            | call was made                   |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | name       | The ``__name__`` where the      | None                       |</span>
+<span class="gd">-        |            | logging call was made           |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | process    | The process in which the        | ``name``, ``id`` (default) |</span>
+<span class="gd">-        |            | logging call was made           |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | thread     | The thread in which the         | ``name``, ``id`` (default) |</span>
+<span class="gd">-        |            | logging call was made           |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-        | time       | The aware local time when the   | See |datetime|             |</span>
+<span class="gd">-        |            | logging call was made           |                            |</span>
+<span class="gd">-        +------------+---------------------------------+----------------------------+</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _time:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The time formatting</span>
+<span class="gd">-</span>
+<span class="gd">-        To use your favorite time representation, you can set it directly in the time formatter</span>
+<span class="gd">-        specifier of your handler format, like for example ``format=&quot;{time:HH:mm:ss} {message}&quot;``.</span>
+<span class="gd">-        Note that this datetime represents your local time, and it is also made timezone-aware,</span>
+<span class="gd">-        so you can display the UTC offset to avoid ambiguities.</span>
+<span class="gd">-</span>
+<span class="gd">-        The time field can be formatted using more human-friendly tokens. These constitute a subset</span>
+<span class="gd">-        of the one used by the `Pendulum`_ library of `@sdispater`_. To escape a token, just add</span>
+<span class="gd">-        square brackets around it, for example ``&quot;[YY]&quot;`` would display literally ``&quot;YY&quot;``.</span>
+<span class="gd">-</span>
+<span class="gd">-        If you prefer to display UTC rather than local time, you can add ``&quot;!UTC&quot;`` at the very end</span>
+<span class="gd">-        of the time format, like ``{time:HH:mm:ss!UTC}``. Doing so will convert the ``datetime``</span>
+<span class="gd">-        to UTC before formatting.</span>
+<span class="gd">-</span>
+<span class="gd">-        If no time formatter specifier is used, like for example if ``format=&quot;{time} {message}&quot;``,</span>
+<span class="gd">-        the default one will use ISO 8601.</span>
+<span class="gd">-</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        |                        | Token   | Output                                 |</span>
+<span class="gd">-        +========================+=========+========================================+</span>
+<span class="gd">-        | Year                   | YYYY    | 2000, 2001, 2002 ... 2012, 2013        |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | YY      | 00, 01, 02 ... 12, 13                  |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Quarter                | Q       | 1 2 3 4                                |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Month                  | MMMM    | January, February, March ...           |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | MMM     | Jan, Feb, Mar ...                      |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | MM      | 01, 02, 03 ... 11, 12                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | M       | 1, 2, 3 ... 11, 12                     |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Day of Year            | DDDD    | 001, 002, 003 ... 364, 365             |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | DDD     | 1, 2, 3 ... 364, 365                   |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Day of Month           | DD      | 01, 02, 03 ... 30, 31                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | D       | 1, 2, 3 ... 30, 31                     |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Day of Week            | dddd    | Monday, Tuesday, Wednesday ...         |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | ddd     | Mon, Tue, Wed ...                      |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | d       | 0, 1, 2 ... 6                          |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Days of ISO Week       | E       | 1, 2, 3 ... 7                          |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Hour                   | HH      | 00, 01, 02 ... 23, 24                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | H       | 0, 1, 2 ... 23, 24                     |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | hh      | 01, 02, 03 ... 11, 12                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | h       | 1, 2, 3 ... 11, 12                     |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Minute                 | mm      | 00, 01, 02 ... 58, 59                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | m       | 0, 1, 2 ... 58, 59                     |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Second                 | ss      | 00, 01, 02 ... 58, 59                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | s       | 0, 1, 2 ... 58, 59                     |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Fractional Second      | S       | 0 1 ... 8 9                            |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | SS      | 00, 01, 02 ... 98, 99                  |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | SSS     | 000 001 ... 998 999                    |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | SSSS... | 000[0..] 001[0..] ... 998[0..] 999[0..]|</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | SSSSSS  | 000000 000001 ... 999998 999999        |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | AM / PM                | A       | AM, PM                                 |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Timezone               | Z       | -07:00, -06:00 ... +06:00, +07:00      |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | ZZ      | -0700, -0600 ... +0600, +0700          |</span>
+<span class="gd">-        |                        +---------+----------------------------------------+</span>
+<span class="gd">-        |                        | zz      | EST CST ... MST PST                    |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Seconds timestamp      | X       | 1381685817, 1234567890.123             |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-        | Microseconds timestamp | x       | 1234567890123                          |</span>
+<span class="gd">-        +------------------------+---------+----------------------------------------+</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _file:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The file sinks</span>
+<span class="gd">-</span>
+<span class="gd">-        If the sink is a |str| or a |Path|, the corresponding file will be opened for writing logs.</span>
+<span class="gd">-        The path can also contain a special ``&quot;{time}&quot;`` field that will be formatted with the</span>
+<span class="gd">-        current date at file creation. The file is closed at sink stop, i.e. when the application</span>
+<span class="gd">-        ends or the handler is removed.</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``rotation`` check is made before logging each message. If there is already an existing</span>
+<span class="gd">-        file with the same name that the file to be created, then the existing file is renamed by</span>
+<span class="gd">-        appending the date to its basename to prevent file overwriting. This parameter accepts:</span>
+<span class="gd">-</span>
+<span class="gd">-        - an |int| which corresponds to the maximum file size in bytes before that the current</span>
+<span class="gd">-          logged file is closed and a new one started over.</span>
+<span class="gd">-        - a |timedelta| which indicates the frequency of each new rotation.</span>
+<span class="gd">-        - a |time| which specifies the hour when the daily rotation should occur.</span>
+<span class="gd">-        - a |str| for human-friendly parametrization of one of the previously enumerated types.</span>
+<span class="gd">-          Examples: ``&quot;100 MB&quot;``, ``&quot;0.5 GB&quot;``, ``&quot;1 month 2 weeks&quot;``, ``&quot;4 days&quot;``, ``&quot;10h&quot;``,</span>
+<span class="gd">-          ``&quot;monthly&quot;``, ``&quot;18:00&quot;``, ``&quot;sunday&quot;``, ``&quot;w0&quot;``, ``&quot;monday at 12:00&quot;``, ...</span>
+<span class="gd">-        - a |callable|_ which will be invoked before logging. It should accept two arguments: the</span>
+<span class="gd">-          logged message and the file object, and it should return ``True`` if the rotation should</span>
+<span class="gd">-          happen now, ``False`` otherwise.</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``retention`` occurs at rotation or at sink stop if rotation is ``None``. Files</span>
+<span class="gd">-        resulting from previous sessions or rotations are automatically collected from disk. A file</span>
+<span class="gd">-        is selected if it matches the pattern ``&quot;basename(.*).ext(.*)&quot;`` (possible time fields are</span>
+<span class="gd">-        beforehand replaced with ``.*``) based on the configured sink. Afterwards, the list is</span>
+<span class="gd">-        processed to determine files to be retained. This parameter accepts:</span>
+<span class="gd">-</span>
+<span class="gd">-        - an |int| which indicates the number of log files to keep, while older files are deleted.</span>
+<span class="gd">-        - a |timedelta| which specifies the maximum age of files to keep.</span>
+<span class="gd">-        - a |str| for human-friendly parametrization of the maximum age of files to keep.</span>
+<span class="gd">-          Examples: ``&quot;1 week, 3 days&quot;``, ``&quot;2 months&quot;``, ...</span>
+<span class="gd">-        - a |callable|_ which will be invoked before the retention process. It should accept the</span>
+<span class="gd">-          list of log files as argument and process to whatever it wants (moving files, removing</span>
+<span class="gd">-          them, etc.).</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``compression`` happens at rotation or at sink stop if rotation is ``None``. This</span>
+<span class="gd">-        parameter accepts:</span>
+<span class="gd">-</span>
+<span class="gd">-        - a |str| which corresponds to the compressed or archived file extension. This can be one</span>
+<span class="gd">-          of: ``&quot;gz&quot;``, ``&quot;bz2&quot;``, ``&quot;xz&quot;``, ``&quot;lzma&quot;``, ``&quot;tar&quot;``, ``&quot;tar.gz&quot;``, ``&quot;tar.bz2&quot;``,</span>
+<span class="gd">-          ``&quot;tar.xz&quot;``, ``&quot;zip&quot;``.</span>
+<span class="gd">-        - a |callable|_ which will be invoked before file termination. It should accept the path of</span>
+<span class="gd">-          the log file as argument and process to whatever it wants (custom compression, network</span>
+<span class="gd">-          sending, removing it, etc.).</span>
+<span class="gd">-</span>
+<span class="gd">-        Either way, if you use a custom function designed according to your preferences, you must be</span>
+<span class="gd">-        very careful not to use the ``logger`` within your function. Otherwise, there is a risk that</span>
+<span class="gd">-        your program hang because of a deadlock.</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _color:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The color markups</span>
+<span class="gd">-</span>
+<span class="gd">-        To add colors to your logs, you just have to enclose your format string with the appropriate</span>
+<span class="gd">-        tags (e.g. ``&lt;red&gt;some message&lt;/red&gt;``). These tags are automatically removed if the sink</span>
+<span class="gd">-        doesn&#39;t support ansi codes. For convenience, you can use ``&lt;/&gt;`` to close the last opening</span>
+<span class="gd">-        tag without repeating its name (e.g. ``&lt;red&gt;another message&lt;/&gt;``).</span>
+<span class="gd">-</span>
+<span class="gd">-        The special tag ``&lt;level&gt;`` (abbreviated with ``&lt;lvl&gt;``) is transformed according to</span>
+<span class="gd">-        the configured color of the logged message level.</span>
+<span class="gd">-</span>
+<span class="gd">-        Tags which are not recognized will raise an exception during parsing, to inform you about</span>
+<span class="gd">-        possible misuse. If you wish to display a markup tag literally, you can escape it by</span>
+<span class="gd">-        prepending a ``\\`` like for example ``\\&lt;blue&gt;``. If, for some reason, you need to escape a</span>
+<span class="gd">-        string programmatically, note that the regex used internally to parse markup tags is</span>
+<span class="gd">-        ``r&quot;\\\\?&lt;/?((?:[fb]g\\s)?[^&lt;&gt;\\s]*)&gt;&quot;``.</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that when logging a message with ``opt(colors=True)``, color tags present in the</span>
+<span class="gd">-        formatting arguments (``args`` and ``kwargs``) are completely ignored. This is important if</span>
+<span class="gd">-        you need to log strings containing markups that might interfere with the color tags (in this</span>
+<span class="gd">-        case, do not use f-string).</span>
+<span class="gd">-</span>
+<span class="gd">-        Here are the available tags (note that compatibility may vary depending on terminal):</span>
+<span class="gd">-</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Color (abbr)                       | Styles (abbr)                        |</span>
+<span class="gd">-        +====================================+======================================+</span>
+<span class="gd">-        | Black (k)                          | Bold (b)                             |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Blue (e)                           | Dim (d)                              |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Cyan (c)                           | Normal (n)                           |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Green (g)                          | Italic (i)                           |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Magenta (m)                        | Underline (u)                        |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Red (r)                            | Strike (s)                           |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | White (w)                          | Reverse (v)                          |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        | Yellow (y)                         | Blink (l)                            |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-        |                                    | Hide (h)                             |</span>
+<span class="gd">-        +------------------------------------+--------------------------------------+</span>
+<span class="gd">-</span>
+<span class="gd">-        Usage:</span>
+<span class="gd">-</span>
+<span class="gd">-        +-----------------+-------------------------------------------------------------------+</span>
+<span class="gd">-        | Description     | Examples                                                          |</span>
+<span class="gd">-        |                 +---------------------------------+---------------------------------+</span>
+<span class="gd">-        |                 | Foreground                      | Background                      |</span>
+<span class="gd">-        +=================+=================================+=================================+</span>
+<span class="gd">-        | Basic colors    | ``&lt;red&gt;``, ``&lt;r&gt;``              | ``&lt;GREEN&gt;``, ``&lt;G&gt;``            |</span>
+<span class="gd">-        +-----------------+---------------------------------+---------------------------------+</span>
+<span class="gd">-        | Light colors    | ``&lt;light-blue&gt;``, ``&lt;le&gt;``      | ``&lt;LIGHT-CYAN&gt;``, ``&lt;LC&gt;``      |</span>
+<span class="gd">-        +-----------------+---------------------------------+---------------------------------+</span>
+<span class="gd">-        | 8-bit colors    | ``&lt;fg 86&gt;``, ``&lt;fg 255&gt;``       | ``&lt;bg 42&gt;``, ``&lt;bg 9&gt;``         |</span>
+<span class="gd">-        +-----------------+---------------------------------+---------------------------------+</span>
+<span class="gd">-        | Hex colors      | ``&lt;fg #00005f&gt;``, ``&lt;fg #EE1&gt;`` | ``&lt;bg #AF5FD7&gt;``, ``&lt;bg #fff&gt;`` |</span>
+<span class="gd">-        +-----------------+---------------------------------+---------------------------------+</span>
+<span class="gd">-        | RGB colors      | ``&lt;fg 0,95,0&gt;``                 | ``&lt;bg 72,119,65&gt;``              |</span>
+<span class="gd">-        +-----------------+---------------------------------+---------------------------------+</span>
+<span class="gd">-        | Stylizing       | ``&lt;bold&gt;``, ``&lt;b&gt;``,  ``&lt;underline&gt;``, ``&lt;u&gt;``                    |</span>
+<span class="gd">-        +-----------------+-------------------------------------------------------------------+</span>
+<span class="gd">-</span>
+<span class="gd">-        .. _env:</span>
+<span class="gd">-</span>
+<span class="gd">-        .. rubric:: The environment variables</span>
+<span class="gd">-</span>
+<span class="gd">-        The default values of sink parameters can be entirely customized. This is particularly</span>
+<span class="gd">-        useful if you don&#39;t like the log format of the pre-configured sink.</span>
+<span class="gd">-</span>
+<span class="gd">-        Each of the |add| default parameter can be modified by setting the ``LOGURU_[PARAM]``</span>
+<span class="gd">-        environment variable. For example on Linux: ``export LOGURU_FORMAT=&quot;{time} - {message}&quot;``</span>
+<span class="gd">-        or ``export LOGURU_DIAGNOSE=NO``.</span>
+<span class="gd">-</span>
+<span class="gd">-        The default levels&#39; attributes can also be modified by setting the ``LOGURU_[LEVEL]_[ATTR]``</span>
+<span class="gd">-        environment variable. For example, on Windows: ``setx LOGURU_DEBUG_COLOR &quot;&lt;blue&gt;&quot;``</span>
+<span class="gd">-        or ``setx LOGURU_TRACE_ICON &quot;🚀&quot;``. If you use the ``set`` command, do not include quotes</span>
+<span class="gd">-        but escape special symbol as needed, e.g. ``set LOGURU_DEBUG_COLOR=^&lt;blue^&gt;``.</span>
+<span class="gd">-</span>
+<span class="gd">-        If you want to disable the pre-configured sink, you can set the ``LOGURU_AUTOINIT``</span>
+<span class="gd">-        variable to ``False``.</span>
+<span class="gd">-</span>
+<span class="gd">-        On Linux, you will probably need to edit the ``~/.profile`` file to make this persistent. On</span>
+<span class="gd">-        Windows, don&#39;t forget to restart your terminal for the change to be taken into account.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stdout, format=&quot;{time} - {level} - {message}&quot;, filter=&quot;sub.module&quot;)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(&quot;file_{time}.log&quot;, level=&quot;TRACE&quot;, rotation=&quot;100 MB&quot;)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def debug_only(record):</span>
+<span class="gd">-        ...     return record[&quot;level&quot;].name == &quot;DEBUG&quot;</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(&quot;debug.log&quot;, filter=debug_only)  # Other levels are filtered out</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def my_sink(message):</span>
+<span class="gd">-        ...     record = message.record</span>
+<span class="gd">-        ...     update_db(message, time=record[&quot;time&quot;], level=record[&quot;level&quot;])</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(my_sink)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; level_per_module = {</span>
+<span class="gd">-        ...     &quot;&quot;: &quot;DEBUG&quot;,</span>
+<span class="gd">-        ...     &quot;third.lib&quot;: &quot;WARNING&quot;,</span>
+<span class="gd">-        ...     &quot;anotherlib&quot;: False</span>
+<span class="gd">-        ... }</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(lambda m: print(m, end=&quot;&quot;), filter=level_per_module, level=0)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; async def publish(message):</span>
+<span class="gd">-        ...     await api.post(message)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(publish, serialize=True)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; from logging import StreamHandler</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(StreamHandler(sys.stderr), format=&quot;{message}&quot;)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; class RandomStream:</span>
+<span class="gd">-        ...     def __init__(self, seed, threshold):</span>
+<span class="gd">-        ...         self.threshold = threshold</span>
+<span class="gd">-        ...         random.seed(seed)</span>
+<span class="gd">-        ...     def write(self, message):</span>
+<span class="gd">-        ...         if random.random() &gt; self.threshold:</span>
+<span class="gd">-        ...             print(message)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; stream_object = RandomStream(seed=12345, threshold=0.25)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(stream_object, level=&quot;INFO&quot;)</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Add a handler sending log messages to a sink adequately configured.&quot;&quot;&quot;</span>
+<span class="gi">+        handler = Handler(sink, level, format, filter, colorize, serialize,</span>
+<span class="gi">+                          backtrace, diagnose, enqueue, context, catch, **kwargs)</span>
+<span class="gi">+        self._core.handlers_count += 1</span>
+<span class="gi">+        handler_id = self._core.handlers_count</span>
+<span class="gi">+        self._core.handlers[handler_id] = handler</span>
+<span class="gi">+        return handler_id</span>
+
+<span class="w"> </span>    def remove(self, handler_id=None):
+<span class="gd">-        &quot;&quot;&quot;Remove a previously added handler and stop sending logs to its sink.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        handler_id : |int| or ``None``</span>
+<span class="gd">-            The id of the sink to remove, as it was returned by the |add| method. If ``None``, all</span>
+<span class="gd">-            handlers are removed. The pre-configured handler is guaranteed to have the index ``0``.</span>
+<span class="gd">-</span>
+<span class="gd">-        Raises</span>
+<span class="gd">-        ------</span>
+<span class="gd">-        ValueError</span>
+<span class="gd">-            If ``handler_id`` is not ``None`` but there is no active handler with such id.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; i = logger.add(sys.stderr, format=&quot;{message}&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;Logging&quot;)</span>
+<span class="gd">-        Logging</span>
+<span class="gd">-        &gt;&gt;&gt; logger.remove(i)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;No longer logging&quot;)</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Remove a previously added handler and stop sending logs to its sink.&quot;&quot;&quot;</span>
+<span class="gi">+        if handler_id is None:</span>
+<span class="gi">+            self._core.handlers.clear()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                handler = self._core.handlers.pop(handler_id)</span>
+<span class="gi">+                handler.stop()</span>
+<span class="gi">+            except KeyError:</span>
+<span class="gi">+                raise ValueError(f&quot;There is no existing handler with id &#39;{handler_id}&#39;&quot;) from None</span>
+
+<span class="w"> </span>    def complete(self):
+<span class="gd">-        &quot;&quot;&quot;Wait for the end of enqueued messages and asynchronous tasks scheduled by handlers.</span>
+<span class="gd">-</span>
+<span class="gd">-        This method proceeds in two steps: first it waits for all logging messages added to handlers</span>
+<span class="gd">-        with ``enqueue=True`` to be processed, then it returns an object that can be awaited to</span>
+<span class="gd">-        finalize all logging tasks added to the event loop by coroutine sinks.</span>
+<span class="gd">-</span>
+<span class="gd">-        It can be called from non-asynchronous code. This is especially recommended when the</span>
+<span class="gd">-        ``logger`` is utilized with ``multiprocessing`` to ensure messages put to the internal</span>
+<span class="gd">-        queue have been properly transmitted before leaving a child process.</span>
+<span class="gd">-</span>
+<span class="gd">-        The returned object should be awaited before the end of a coroutine executed by</span>
+<span class="gd">-        |asyncio.run| or |loop.run_until_complete| to ensure all asynchronous logging messages are</span>
+<span class="gd">-        processed. The function |asyncio.get_running_loop| is called beforehand, only tasks</span>
+<span class="gd">-        scheduled in the same loop that the current one will be awaited by the method.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :term:`awaitable`</span>
+<span class="gd">-            An awaitable object which ensures all asynchronous logging calls are completed when</span>
+<span class="gd">-            awaited.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; async def sink(message):</span>
+<span class="gd">-        ...     await asyncio.sleep(0.1)  # IO processing...</span>
+<span class="gd">-        ...     print(message, end=&quot;&quot;)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; async def work():</span>
+<span class="gd">-        ...     logger.info(&quot;Start&quot;)</span>
+<span class="gd">-        ...     logger.info(&quot;End&quot;)</span>
+<span class="gd">-        ...     await logger.complete()</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sink)</span>
+<span class="gd">-        1</span>
+<span class="gd">-        &gt;&gt;&gt; asyncio.run(work())</span>
+<span class="gd">-        Start</span>
+<span class="gd">-        End</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def process():</span>
+<span class="gd">-        ...     logger.info(&quot;Message sent from the child&quot;)</span>
+<span class="gd">-        ...     logger.complete()</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stderr, enqueue=True)</span>
+<span class="gd">-        1</span>
+<span class="gd">-        &gt;&gt;&gt; process = multiprocessing.Process(target=process)</span>
+<span class="gd">-        &gt;&gt;&gt; process.start()</span>
+<span class="gd">-        &gt;&gt;&gt; process.join()</span>
+<span class="gd">-        Message sent from the child</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Wait for the end of enqueued messages and asynchronous tasks scheduled by handlers.&quot;&quot;&quot;</span>
+<span class="gi">+        for handler in self._core.handlers.values():</span>
+<span class="gi">+            handler.complete()</span>
+<span class="gi">+        return _asyncio_loop.complete()</span>
+
+<span class="w"> </span>    def catch(self, exception=Exception, *, level=&#39;ERROR&#39;, reraise=False,
+<span class="w"> </span>        onerror=None, exclude=None, default=None, message=
+<span class="w"> </span>        &quot;An error has been caught in function &#39;{record[function]}&#39;, process &#39;{record[process].name}&#39; ({record[process].id}), thread &#39;{record[thread].name}&#39; ({record[thread].id}):&quot;
+<span class="w"> </span>        ):
+<span class="gd">-        &quot;&quot;&quot;Return a decorator to automatically log possibly caught error in wrapped function.</span>
+<span class="gd">-</span>
+<span class="gd">-        This is useful to ensure unexpected exceptions are logged, the entire program can be</span>
+<span class="gd">-        wrapped by this method. This is also very useful to decorate |Thread.run| methods while</span>
+<span class="gd">-        using threads to propagate errors to the main logger thread.</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that the visibility of variables values (which uses the great |better_exceptions|_</span>
+<span class="gd">-        library from `@Qix-`_) depends on the ``diagnose`` option of each configured sink.</span>
+<span class="gd">-</span>
+<span class="gd">-        The returned object can also be used as a context manager.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        exception : |Exception|, optional</span>
+<span class="gd">-            The type of exception to intercept. If several types should be caught, a tuple of</span>
+<span class="gd">-            exceptions can be used too.</span>
+<span class="gd">-        level : |str| or |int|, optional</span>
+<span class="gd">-            The level name or severity with which the message should be logged.</span>
+<span class="gd">-        reraise : |bool|, optional</span>
+<span class="gd">-            Whether the exception should be raised again and hence propagated to the caller.</span>
+<span class="gd">-        onerror : |callable|_, optional</span>
+<span class="gd">-            A function that will be called if an error occurs, once the message has been logged.</span>
+<span class="gd">-            It should accept the exception instance as it sole argument.</span>
+<span class="gd">-        exclude : |Exception|, optional</span>
+<span class="gd">-            A type of exception (or a tuple of types) that will be purposely ignored and hence</span>
+<span class="gd">-            propagated to the caller without being logged.</span>
+<span class="gd">-        default : |Any|, optional</span>
+<span class="gd">-            The value to be returned by the decorated function if an error occurred without being</span>
+<span class="gd">-            re-raised.</span>
+<span class="gd">-        message : |str|, optional</span>
+<span class="gd">-            The message that will be automatically logged if an exception occurs. Note that it will</span>
+<span class="gd">-            be formatted with the ``record`` attribute.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :term:`decorator` / :term:`context manager`</span>
+<span class="gd">-            An object that can be used to decorate a function or as a context manager to log</span>
+<span class="gd">-            exceptions possibly caught.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; @logger.catch</span>
+<span class="gd">-        ... def f(x):</span>
+<span class="gd">-        ...     100 / x</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; def g():</span>
+<span class="gd">-        ...     f(10)</span>
+<span class="gd">-        ...     f(0)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; g()</span>
+<span class="gd">-        ERROR - An error has been caught in function &#39;g&#39;, process &#39;Main&#39; (367), thread &#39;ch1&#39; (1398):</span>
+<span class="gd">-        Traceback (most recent call last):</span>
+<span class="gd">-          File &quot;program.py&quot;, line 12, in &lt;module&gt;</span>
+<span class="gd">-            g()</span>
+<span class="gd">-            └ &lt;function g at 0x7f225fe2bc80&gt;</span>
+<span class="gd">-        &gt; File &quot;program.py&quot;, line 10, in g</span>
+<span class="gd">-            f(0)</span>
+<span class="gd">-            └ &lt;function f at 0x7f225fe2b9d8&gt;</span>
+<span class="gd">-          File &quot;program.py&quot;, line 6, in f</span>
+<span class="gd">-            100 / x</span>
+<span class="gd">-                  └ 0</span>
+<span class="gd">-        ZeroDivisionError: division by zero</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; with logger.catch(message=&quot;Because we never know...&quot;):</span>
+<span class="gd">-        ...    main()  # No exception, no logs</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; # Use &#39;onerror&#39; to prevent the program exit code to be 0 (if &#39;reraise=False&#39;) while</span>
+<span class="gd">-        &gt;&gt;&gt; # also avoiding the stacktrace to be duplicated on stderr (if &#39;reraise=True&#39;).</span>
+<span class="gd">-        &gt;&gt;&gt; @logger.catch(onerror=lambda _: sys.exit(1))</span>
+<span class="gd">-        ... def main():</span>
+<span class="gd">-        ...     1 / 0</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Return a decorator to automatically log possibly caught error in wrapped function.&quot;&quot;&quot;</span>
+<span class="gi">+        def decorator(func):</span>
+<span class="gi">+            @functools.wraps(func)</span>
+<span class="gi">+            def wrapper(*args, **kwargs):</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    return func(*args, **kwargs)</span>
+<span class="gi">+                except exclude or ():</span>
+<span class="gi">+                    raise</span>
+<span class="gi">+                except exception as e:</span>
+<span class="gi">+                    self.opt(exception=e).log(level, message)</span>
+<span class="gi">+                    if onerror:</span>
+<span class="gi">+                        onerror(e)</span>
+<span class="gi">+                    if reraise:</span>
+<span class="gi">+                        raise</span>
+<span class="gi">+                    return default</span>
+<span class="gi">+            return wrapper</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    def opt(self, *, exception=None, record=False, lazy=False, colors=False,
+<span class="w"> </span>        raw=False, capture=True, depth=0, ansi=False):
+<span class="gd">-        &quot;&quot;&quot;Parametrize a logging call to slightly change generated log message.</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that it&#39;s not possible to chain |opt| calls, the last one takes precedence over the</span>
+<span class="gd">-        others as it will &quot;reset&quot; the options to their default values.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        exception : |bool|, |tuple| or |Exception|, optional</span>
+<span class="gd">-            If it does not evaluate as ``False``, the passed exception is formatted and added to the</span>
+<span class="gd">-            log message. It could be an |Exception| object or a ``(type, value, traceback)`` tuple,</span>
+<span class="gd">-            otherwise the exception information is retrieved from |sys.exc_info|.</span>
+<span class="gd">-        record : |bool|, optional</span>
+<span class="gd">-            If ``True``, the record dict contextualizing the logging call can be used to format the</span>
+<span class="gd">-            message by using ``{record[key]}`` in the log message.</span>
+<span class="gd">-        lazy : |bool|, optional</span>
+<span class="gd">-            If ``True``, the logging call attribute to format the message should be functions which</span>
+<span class="gd">-            will be called only if the level is high enough. This can be used to avoid expensive</span>
+<span class="gd">-            functions if not necessary.</span>
+<span class="gd">-        colors : |bool|, optional</span>
+<span class="gd">-            If ``True``, logged message will be colorized according to the markups it possibly</span>
+<span class="gd">-            contains.</span>
+<span class="gd">-        raw : |bool|, optional</span>
+<span class="gd">-            If ``True``, the formatting of each sink will be bypassed and the message will be sent</span>
+<span class="gd">-            as is.</span>
+<span class="gd">-        capture : |bool|, optional</span>
+<span class="gd">-            If ``False``, the ``**kwargs`` of logged message will not automatically populate</span>
+<span class="gd">-            the ``extra`` dict (although they are still used for formatting).</span>
+<span class="gd">-        depth : |int|, optional</span>
+<span class="gd">-            Specify which stacktrace should be used to contextualize the logged message. This is</span>
+<span class="gd">-            useful while using the logger from inside a wrapped function to retrieve worthwhile</span>
+<span class="gd">-            information.</span>
+<span class="gd">-        ansi : |bool|, optional</span>
+<span class="gd">-            Deprecated since version 0.4.1: the ``ansi`` parameter will be removed in Loguru 1.0.0,</span>
+<span class="gd">-            it is replaced by ``colors`` which is a more appropriate name.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :class:`~Logger`</span>
+<span class="gd">-            A logger wrapping the core logger, but transforming logged message adequately before</span>
+<span class="gd">-            sending.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; try:</span>
+<span class="gd">-        ...     1 / 0</span>
+<span class="gd">-        ... except ZeroDivisionError:</span>
+<span class="gd">-        ...    logger.opt(exception=True).debug(&quot;Exception logged with debug level:&quot;)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        [18:10:02] DEBUG in &#39;&lt;module&gt;&#39; - Exception logged with debug level:</span>
+<span class="gd">-        Traceback (most recent call last, catch point marked):</span>
+<span class="gd">-        &gt; File &quot;&lt;stdin&gt;&quot;, line 2, in &lt;module&gt;</span>
+<span class="gd">-        ZeroDivisionError: division by zero</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; logger.opt(record=True).info(&quot;Current line is: {record[line]}&quot;)</span>
+<span class="gd">-        [18:10:33] INFO in &#39;&lt;module&gt;&#39; - Current line is: 1</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; logger.opt(lazy=True).debug(&quot;If sink &lt;= DEBUG: {x}&quot;, x=lambda: math.factorial(2**5))</span>
+<span class="gd">-        [18:11:19] DEBUG in &#39;&lt;module&gt;&#39; - If sink &lt;= DEBUG: 263130836933693530167218012160000000</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; logger.opt(colors=True).warning(&quot;We got a &lt;red&gt;BIG&lt;/red&gt; problem&quot;)</span>
+<span class="gd">-        [18:11:30] WARNING in &#39;&lt;module&gt;&#39; - We got a BIG problem</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; logger.opt(raw=True).debug(&quot;No formatting\\n&quot;)</span>
+<span class="gd">-        No formatting</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; logger.opt(capture=False).info(&quot;Displayed but not captured: {value}&quot;, value=123)</span>
+<span class="gd">-        [18:11:41] Displayed but not captured: 123</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def wrapped():</span>
+<span class="gd">-        ...     logger.opt(depth=1).info(&quot;Get parent context&quot;)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; def func():</span>
+<span class="gd">-        ...     wrapped()</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; func()</span>
+<span class="gd">-        [18:11:54] DEBUG in &#39;func&#39; - Get parent context</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Parametrize a logging call to slightly change generated log message.&quot;&quot;&quot;</span>
+<span class="gi">+        options = {</span>
+<span class="gi">+            &#39;exception&#39;: exception,</span>
+<span class="gi">+            &#39;record&#39;: record,</span>
+<span class="gi">+            &#39;lazy&#39;: lazy,</span>
+<span class="gi">+            &#39;colors&#39;: colors or ansi,</span>
+<span class="gi">+            &#39;raw&#39;: raw,</span>
+<span class="gi">+            &#39;capture&#39;: capture,</span>
+<span class="gi">+            &#39;depth&#39;: depth</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return Logger(self._core, **options)</span>
+
+<span class="w"> </span>    def bind(__self, **kwargs):
+<span class="gd">-        &quot;&quot;&quot;Bind attributes to the ``extra`` dict of each logged message record.</span>
+<span class="gd">-</span>
+<span class="gd">-        This is used to add custom context to each logging call.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        **kwargs</span>
+<span class="gd">-            Mapping between keys and values that will be added to the ``extra`` dict.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :class:`~Logger`</span>
+<span class="gd">-            A logger wrapping the core logger, but which sends record with the customized ``extra``</span>
+<span class="gd">-            dict.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stderr, format=&quot;{extra[ip]} - {message}&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; class Server:</span>
+<span class="gd">-        ...     def __init__(self, ip):</span>
+<span class="gd">-        ...         self.ip = ip</span>
+<span class="gd">-        ...         self.logger = logger.bind(ip=ip)</span>
+<span class="gd">-        ...     def call(self, message):</span>
+<span class="gd">-        ...         self.logger.info(message)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; instance_1 = Server(&quot;192.168.0.200&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; instance_2 = Server(&quot;127.0.0.1&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; instance_1.call(&quot;First instance&quot;)</span>
+<span class="gd">-        192.168.0.200 - First instance</span>
+<span class="gd">-        &gt;&gt;&gt; instance_2.call(&quot;Second instance&quot;)</span>
+<span class="gd">-        127.0.0.1 - Second instance</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Bind attributes to the ``extra`` dict of each logged message record.&quot;&quot;&quot;</span>
+<span class="gi">+        return Logger(__self._core, extra={**__self._core.extra, **kwargs})</span>
+
+<span class="w"> </span>    @contextlib.contextmanager
+<span class="w"> </span>    def contextualize(__self, **kwargs):
+<span class="gd">-        &quot;&quot;&quot;Bind attributes to the context-local ``extra`` dict while inside the ``with`` block.</span>
+<span class="gd">-</span>
+<span class="gd">-        Contrary to |bind| there is no ``logger`` returned, the ``extra`` dict is modified in-place</span>
+<span class="gd">-        and updated globally. Most importantly, it uses |contextvars| which means that</span>
+<span class="gd">-        contextualized values are unique to each threads and asynchronous tasks.</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``extra`` dict will retrieve its initial state once the context manager is exited.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        **kwargs</span>
+<span class="gd">-            Mapping between keys and values that will be added to the context-local ``extra`` dict.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :term:`context manager` / :term:`decorator`</span>
+<span class="gd">-            A context manager (usable as a decorator too) that will bind the attributes once entered</span>
+<span class="gd">-            and restore the initial state of the ``extra`` dict while exited.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stderr, format=&quot;{message} | {extra}&quot;)</span>
+<span class="gd">-        1</span>
+<span class="gd">-        &gt;&gt;&gt; def task():</span>
+<span class="gd">-        ...     logger.info(&quot;Processing!&quot;)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; with logger.contextualize(task_id=123):</span>
+<span class="gd">-        ...     task()</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        Processing! | {&#39;task_id&#39;: 123}</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;Done.&quot;)</span>
+<span class="gd">-        Done. | {}</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Bind attributes to the context-local ``extra`` dict while inside the ``with`` block.&quot;&quot;&quot;</span>
+<span class="gi">+        token = context.set({**context.get(), **kwargs})</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            yield</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            context.reset(token)</span>
+
+<span class="w"> </span>    def patch(self, patcher):
+<span class="gd">-        &quot;&quot;&quot;Attach a function to modify the record dict created by each logging call.</span>
+<span class="gd">-</span>
+<span class="gd">-        The ``patcher`` may be used to update the record on-the-fly before it&#39;s propagated to the</span>
+<span class="gd">-        handlers. This allows the &quot;extra&quot; dict to be populated with dynamic values and also permits</span>
+<span class="gd">-        advanced modifications of the record emitted while logging a message. The function is called</span>
+<span class="gd">-        once before sending the log message to the different handlers.</span>
+<span class="gd">-</span>
+<span class="gd">-        It is recommended to apply modification on the ``record[&quot;extra&quot;]`` dict rather than on the</span>
+<span class="gd">-        ``record`` dict itself, as some values are used internally by `Loguru`, and modify them may</span>
+<span class="gd">-        produce unexpected results.</span>
+<span class="gd">-</span>
+<span class="gd">-        The logger can be patched multiple times. In this case, the functions are called in the</span>
+<span class="gd">-        same order as they are added.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        patcher: |callable|_</span>
+<span class="gd">-            The function to which the record dict will be passed as the sole argument. This function</span>
+<span class="gd">-            is in charge of updating the record in-place, the function does not need to return any</span>
+<span class="gd">-            value, the modified record object will be re-used.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :class:`~Logger`</span>
+<span class="gd">-            A logger wrapping the core logger, but which records are passed through the ``patcher``</span>
+<span class="gd">-            function before being sent to the added handlers.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stderr, format=&quot;{extra[utc]} {message}&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger = logger.patch(lambda record: record[&quot;extra&quot;].update(utc=datetime.utcnow())</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;That&#39;s way, you can log messages with time displayed in UTC&quot;)</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def wrapper(func):</span>
+<span class="gd">-        ...     @functools.wraps(func)</span>
+<span class="gd">-        ...     def wrapped(*args, **kwargs):</span>
+<span class="gd">-        ...         logger.patch(lambda r: r.update(function=func.__name__)).info(&quot;Wrapped!&quot;)</span>
+<span class="gd">-        ...         return func(*args, **kwargs)</span>
+<span class="gd">-        ...     return wrapped</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def recv_record_from_network(pipe):</span>
+<span class="gd">-        ...     record = pickle.loads(pipe.read())</span>
+<span class="gd">-        ...     level, message = record[&quot;level&quot;], record[&quot;message&quot;]</span>
+<span class="gd">-        ...     logger.patch(lambda r: r.update(record)).log(level, message)</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Attach a function to modify the record dict created by each logging call.&quot;&quot;&quot;</span>
+<span class="gi">+        if self._core.patcher:</span>
+<span class="gi">+            old_patcher = self._core.patcher</span>
+<span class="gi">+            self._core.patcher = lambda record: patcher(old_patcher(record))</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._core.patcher = patcher</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    def level(self, name, no=None, color=None, icon=None):
+<span class="gd">-        &quot;&quot;&quot;Add, update or retrieve a logging level.</span>
+<span class="gd">-</span>
+<span class="gd">-        Logging levels are defined by their ``name`` to which a severity ``no``, an ansi ``color``</span>
+<span class="gd">-        tag and an ``icon`` are associated and possibly modified at run-time. To |log| to a custom</span>
+<span class="gd">-        level, you should necessarily use its name, the severity number is not linked back to levels</span>
+<span class="gd">-        name (this implies that several levels can share the same severity).</span>
+<span class="gd">-</span>
+<span class="gd">-        To add a new level, its ``name`` and its ``no`` are required. A ``color`` and an ``icon``</span>
+<span class="gd">-        can also be specified or will be empty by default.</span>
+<span class="gd">-</span>
+<span class="gd">-        To update an existing level, pass its ``name`` with the parameters to be changed. It is not</span>
+<span class="gd">-        possible to modify the ``no`` of a level once it has been added.</span>
+<span class="gd">-</span>
+<span class="gd">-        To retrieve level information, the ``name`` solely suffices.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        name : |str|</span>
+<span class="gd">-            The name of the logging level.</span>
+<span class="gd">-        no : |int|</span>
+<span class="gd">-            The severity of the level to be added or updated.</span>
+<span class="gd">-        color : |str|</span>
+<span class="gd">-            The color markup of the level to be added or updated.</span>
+<span class="gd">-        icon : |str|</span>
+<span class="gd">-            The icon of the level to be added or updated.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        ``Level``</span>
+<span class="gd">-            A |namedtuple| containing information about the level.</span>
+<span class="gd">-</span>
+<span class="gd">-        Raises</span>
+<span class="gd">-        ------</span>
+<span class="gd">-        ValueError</span>
+<span class="gd">-            If there is no level registered with such ``name``.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; level = logger.level(&quot;ERROR&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; print(level)</span>
+<span class="gd">-        Level(name=&#39;ERROR&#39;, no=40, color=&#39;&lt;red&gt;&lt;bold&gt;&#39;, icon=&#39;❌&#39;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stderr, format=&quot;{level.no} {level.icon} {message}&quot;)</span>
+<span class="gd">-        1</span>
+<span class="gd">-        &gt;&gt;&gt; logger.level(&quot;CUSTOM&quot;, no=15, color=&quot;&lt;blue&gt;&quot;, icon=&quot;@&quot;)</span>
+<span class="gd">-        Level(name=&#39;CUSTOM&#39;, no=15, color=&#39;&lt;blue&gt;&#39;, icon=&#39;@&#39;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.log(&quot;CUSTOM&quot;, &quot;Logging...&quot;)</span>
+<span class="gd">-        15 @ Logging...</span>
+<span class="gd">-        &gt;&gt;&gt; logger.level(&quot;WARNING&quot;, icon=r&quot;/!\\&quot;)</span>
+<span class="gd">-        Level(name=&#39;WARNING&#39;, no=30, color=&#39;&lt;yellow&gt;&lt;bold&gt;&#39;, icon=&#39;/!\\\\&#39;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.warning(&quot;Updated!&quot;)</span>
+<span class="gd">-        30 /!\\ Updated!</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Add, update or retrieve a logging level.&quot;&quot;&quot;</span>
+<span class="gi">+        if no is None and color is None and icon is None:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                return self._core.levels[name]</span>
+<span class="gi">+            except KeyError:</span>
+<span class="gi">+                raise ValueError(f&quot;Level &#39;{name}&#39; does not exist&quot;) from None</span>
+<span class="gi">+</span>
+<span class="gi">+        level = self._core.levels.get(name)</span>
+<span class="gi">+        if level is None:</span>
+<span class="gi">+            if no is None:</span>
+<span class="gi">+                raise ValueError(&quot;Level &#39;{name}&#39; does not exist, you have to create it by specifying its severity number&quot;)</span>
+<span class="gi">+            level = Level(name, no, color or &quot;&quot;, icon or &quot;&quot;)</span>
+<span class="gi">+            self._core.levels[name] = level</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if no is not None and no != level.no:</span>
+<span class="gi">+                raise ValueError(f&quot;Level &#39;{name}&#39; already exists with number &#39;{level.no}&#39;, you can&#39;t modify it&quot;)</span>
+<span class="gi">+            level = level._replace(color=color if color is not None else level.color,</span>
+<span class="gi">+                                   icon=icon if icon is not None else level.icon)</span>
+<span class="gi">+            self._core.levels[name] = level</span>
+<span class="gi">+</span>
+<span class="gi">+        return level</span>
+
+<span class="w"> </span>    def disable(self, name):
+<span class="gd">-        &quot;&quot;&quot;Disable logging of messages coming from ``name`` module and its children.</span>
+<span class="gi">+        &quot;&quot;&quot;Disable logging of messages coming from ``name`` module and its children.&quot;&quot;&quot;</span>
+<span class="gi">+        self._core.activation_list.append((name, False))</span>
+<span class="gi">+        self._core.activation_none = False</span>
+
+<span class="gd">-        Developers of library using `Loguru` should absolutely disable it to avoid disrupting</span>
+<span class="gd">-        users with unrelated logs messages.</span>
+<span class="gd">-</span>
+<span class="gd">-        Note that in some rare circumstances, it is not possible for `Loguru` to</span>
+<span class="gd">-        determine the module&#39;s ``__name__`` value. In such situation, ``record[&quot;name&quot;]`` will be</span>
+<span class="gd">-        equal to ``None``, this is why ``None`` is also a valid argument.</span>
+<span class="gi">+    def enable(self, name):</span>
+<span class="gi">+        &quot;&quot;&quot;Enable logging of messages coming from ``name`` module and its children.&quot;&quot;&quot;</span>
+<span class="gi">+        self._core.activation_list.append((name, True))</span>
+<span class="gi">+        self._core.activation_none = False</span>
+
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        name : |str| or ``None``</span>
+<span class="gd">-            The name of the parent module to disable.</span>
+<span class="gi">+    def configure(self, *, handlers=None, levels=None, extra=None, patcher=</span>
+<span class="gi">+        None, activation=None):</span>
+<span class="gi">+        &quot;&quot;&quot;Configure the core logger.&quot;&quot;&quot;</span>
+<span class="gi">+        if handlers is not None:</span>
+<span class="gi">+            self.remove()</span>
+<span class="gi">+            for handler in handlers:</span>
+<span class="gi">+                self.add(**handler)</span>
+
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;Allowed message by default&quot;)</span>
+<span class="gd">-        [22:21:55] Allowed message by default</span>
+<span class="gd">-        &gt;&gt;&gt; logger.disable(&quot;my_library&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;While publishing a library, don&#39;t forget to disable logging&quot;)</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        if levels is not None:</span>
+<span class="gi">+            for level in levels:</span>
+<span class="gi">+                self.level(**level)</span>
+
+<span class="gd">-    def enable(self, name):</span>
+<span class="gd">-        &quot;&quot;&quot;Enable logging of messages coming from ``name`` module and its children.</span>
+<span class="gi">+        if extra is not None:</span>
+<span class="gi">+            self._core.extra = extra</span>
+
+<span class="gd">-        Logging is generally disabled by imported library using `Loguru`, hence this function</span>
+<span class="gd">-        allows users to receive these messages anyway.</span>
+<span class="gi">+        if patcher is not None:</span>
+<span class="gi">+            self._core.patcher = patcher</span>
+
+<span class="gd">-        To enable all logs regardless of the module they are coming from, an empty string ``&quot;&quot;`` can</span>
+<span class="gd">-        be passed.</span>
+<span class="gi">+        if activation is not None:</span>
+<span class="gi">+            self._core.activation_list = list(activation)</span>
+<span class="gi">+            self._core.activation_none = not activation</span>
+
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        name : |str| or ``None``</span>
+<span class="gd">-            The name of the parent module to re-allow.</span>
+<span class="gi">+        return list(self._core.handlers.keys())</span>
+
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.disable(&quot;__main__&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;Disabled, so nothing is logged.&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.enable(&quot;__main__&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;Re-enabled, messages are logged.&quot;)</span>
+<span class="gd">-        [22:46:12] Re-enabled, messages are logged.</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def parse(file, pattern, *, cast={}, chunk=2 ** 16):</span>
+<span class="gi">+        &quot;&quot;&quot;Parse raw logs and extract each entry as a |dict|.&quot;&quot;&quot;</span>
+<span class="gi">+        if isinstance(file, (str, PathLike)):</span>
+<span class="gi">+            with open(file, &#39;r&#39;) as f:</span>
+<span class="gi">+                yield from Logger._parse(f, pattern, cast, chunk)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            yield from Logger._parse(file, pattern, cast, chunk)</span>
+
+<span class="gd">-    def configure(self, *, handlers=None, levels=None, extra=None, patcher=</span>
+<span class="gd">-        None, activation=None):</span>
+<span class="gd">-        &quot;&quot;&quot;Configure the core logger.</span>
+<span class="gd">-</span>
+<span class="gd">-        It should be noted that ``extra`` values set using this function are available across all</span>
+<span class="gd">-        modules, so this is the best way to set overall default values.</span>
+<span class="gd">-</span>
+<span class="gd">-        To load the configuration directly from a file, such as JSON or YAML, it is also possible to</span>
+<span class="gd">-        use the |loguru-config|_ library developed by `@erezinman`_.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        handlers : |list| of |dict|, optional</span>
+<span class="gd">-            A list of each handler to be added. The list should contain dicts of params passed to</span>
+<span class="gd">-            the |add| function as keyword arguments. If not ``None``, all previously added</span>
+<span class="gd">-            handlers are first removed.</span>
+<span class="gd">-        levels : |list| of |dict|, optional</span>
+<span class="gd">-            A list of each level to be added or updated. The list should contain dicts of params</span>
+<span class="gd">-            passed to the |level| function as keyword arguments. This will never remove previously</span>
+<span class="gd">-            created levels.</span>
+<span class="gd">-        extra : |dict|, optional</span>
+<span class="gd">-            A dict containing additional parameters bound to the core logger, useful to share</span>
+<span class="gd">-            common properties if you call |bind| in several of your files modules. If not ``None``,</span>
+<span class="gd">-            this will remove previously configured ``extra`` dict.</span>
+<span class="gd">-        patcher : |callable|_, optional</span>
+<span class="gd">-            A function that will be applied to the record dict of each logged messages across all</span>
+<span class="gd">-            modules using the logger. It should modify the dict in-place without returning anything.</span>
+<span class="gd">-            The function is executed prior to the one possibly added by the |patch| method. If not</span>
+<span class="gd">-            ``None``, this will replace previously configured ``patcher`` function.</span>
+<span class="gd">-        activation : |list| of |tuple|, optional</span>
+<span class="gd">-            A list of ``(name, state)`` tuples which denotes which loggers should be enabled (if</span>
+<span class="gd">-            ``state`` is ``True``) or disabled (if ``state`` is ``False``). The calls to |enable|</span>
+<span class="gd">-            and |disable| are made accordingly to the list order. This will not modify previously</span>
+<span class="gd">-            activated loggers, so if you need a fresh start prepend your list with ``(&quot;&quot;, False)``</span>
+<span class="gd">-            or ``(&quot;&quot;, True)``.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns</span>
+<span class="gd">-        -------</span>
+<span class="gd">-        :class:`list` of :class:`int`</span>
+<span class="gd">-            A list containing the identifiers of added sinks (if any).</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; logger.configure(</span>
+<span class="gd">-        ...     handlers=[</span>
+<span class="gd">-        ...         dict(sink=sys.stderr, format=&quot;[{time}] {message}&quot;),</span>
+<span class="gd">-        ...         dict(sink=&quot;file.log&quot;, enqueue=True, serialize=True),</span>
+<span class="gd">-        ...     ],</span>
+<span class="gd">-        ...     levels=[dict(name=&quot;NEW&quot;, no=13, icon=&quot;¤&quot;, color=&quot;&quot;)],</span>
+<span class="gd">-        ...     extra={&quot;common_to_all&quot;: &quot;default&quot;},</span>
+<span class="gd">-        ...     patcher=lambda record: record[&quot;extra&quot;].update(some_value=42),</span>
+<span class="gd">-        ...     activation=[(&quot;my_module.secret&quot;, False), (&quot;another_library.module&quot;, True)],</span>
+<span class="gd">-        ... )</span>
+<span class="gd">-        [1, 2]</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; # Set a default &quot;extra&quot; dict to logger across all modules, without &quot;bind()&quot;</span>
+<span class="gd">-        &gt;&gt;&gt; extra = {&quot;context&quot;: &quot;foo&quot;}</span>
+<span class="gd">-        &gt;&gt;&gt; logger.configure(extra=extra)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.add(sys.stderr, format=&quot;{extra[context]} - {message}&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; logger.info(&quot;Context without bind&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; # =&gt; &quot;foo - Context without bind&quot;</span>
+<span class="gd">-        &gt;&gt;&gt; logger.bind(context=&quot;bar&quot;).info(&quot;Suppress global context&quot;)</span>
+<span class="gd">-        &gt;&gt;&gt; # =&gt; &quot;bar - Suppress global context&quot;</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def _parse(file, pattern, cast, chunk):</span>
+<span class="gi">+        regex = re.compile(pattern)</span>
+<span class="gi">+        buffer = &quot;&quot;</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            new_content = file.read(chunk)</span>
+<span class="gi">+            if not new_content:</span>
+<span class="gi">+                if buffer:</span>
+<span class="gi">+                    match = regex.match(buffer)</span>
+<span class="gi">+                    if match:</span>
+<span class="gi">+                        parsed = match.groupdict()</span>
+<span class="gi">+                        Logger._cast(parsed, cast)</span>
+<span class="gi">+                        yield parsed</span>
+<span class="gi">+                break</span>
+<span class="gi">+            buffer += new_content</span>
+<span class="gi">+            lines = buffer.splitlines(True)</span>
+<span class="gi">+            for line in lines:</span>
+<span class="gi">+                if line[-1] != &#39;\n&#39;:</span>
+<span class="gi">+                    buffer = line</span>
+<span class="gi">+                    break</span>
+<span class="gi">+                match = regex.match(line)</span>
+<span class="gi">+                if match:</span>
+<span class="gi">+                    parsed = match.groupdict()</span>
+<span class="gi">+                    Logger._cast(parsed, cast)</span>
+<span class="gi">+                    yield parsed</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                buffer = &quot;&quot;</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="gd">-    def parse(file, pattern, *, cast={}, chunk=2 ** 16):</span>
+<span class="gd">-        &quot;&quot;&quot;Parse raw logs and extract each entry as a |dict|.</span>
+<span class="gd">-</span>
+<span class="gd">-        The logging format has to be specified as the regex ``pattern``, it will then be</span>
+<span class="gd">-        used to parse the ``file`` and retrieve each entry based on the named groups present</span>
+<span class="gd">-        in the regex.</span>
+<span class="gd">-</span>
+<span class="gd">-        Parameters</span>
+<span class="gd">-        ----------</span>
+<span class="gd">-        file : |str|, |Path| or |file-like object|_</span>
+<span class="gd">-            The path of the log file to be parsed, or an already opened file object.</span>
+<span class="gd">-        pattern : |str| or |re.Pattern|_</span>
+<span class="gd">-            The regex to use for logs parsing, it should contain named groups which will be included</span>
+<span class="gd">-            in the returned dict.</span>
+<span class="gd">-        cast : |callable|_ or |dict|, optional</span>
+<span class="gd">-            A function that should convert in-place the regex groups parsed (a dict of string</span>
+<span class="gd">-            values) to more appropriate types. If a dict is passed, it should be a mapping between</span>
+<span class="gd">-            keys of parsed log dict and the function that should be used to convert the associated</span>
+<span class="gd">-            value.</span>
+<span class="gd">-        chunk : |int|, optional</span>
+<span class="gd">-            The number of bytes read while iterating through the logs, this avoids having to load</span>
+<span class="gd">-            the whole file in memory.</span>
+<span class="gd">-</span>
+<span class="gd">-        Yields</span>
+<span class="gd">-        ------</span>
+<span class="gd">-        :class:`dict`</span>
+<span class="gd">-            The dict mapping regex named groups to matched values, as returned by |match.groupdict|</span>
+<span class="gd">-            and optionally converted according to ``cast`` argument.</span>
+<span class="gd">-</span>
+<span class="gd">-        Examples</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        &gt;&gt;&gt; reg = r&quot;(?P&lt;lvl&gt;[0-9]+): (?P&lt;msg&gt;.*)&quot;    # If log format is &quot;{level.no} - {message}&quot;</span>
+<span class="gd">-        &gt;&gt;&gt; for e in logger.parse(&quot;file.log&quot;, reg):  # A file line could be &quot;10 - A debug message&quot;</span>
+<span class="gd">-        ...     print(e)                             # =&gt; {&#39;lvl&#39;: &#39;10&#39;, &#39;msg&#39;: &#39;A debug message&#39;}</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; caster = dict(lvl=int)                   # Parse &#39;lvl&#39; key as an integer</span>
+<span class="gd">-        &gt;&gt;&gt; for e in logger.parse(&quot;file.log&quot;, reg, cast=caster):</span>
+<span class="gd">-        ...     print(e)                             # =&gt; {&#39;lvl&#39;: 10, &#39;msg&#39;: &#39;A debug message&#39;}</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; def cast(groups):</span>
+<span class="gd">-        ...     if &quot;date&quot; in groups:</span>
+<span class="gd">-        ...         groups[&quot;date&quot;] = datetime.strptime(groups[&quot;date&quot;], &quot;%Y-%m-%d %H:%M:%S&quot;)</span>
+<span class="gd">-        ...</span>
+<span class="gd">-        &gt;&gt;&gt; with open(&quot;file.log&quot;) as file:</span>
+<span class="gd">-        ...     for log in logger.parse(file, reg, cast=cast):</span>
+<span class="gd">-        ...         print(log[&quot;date&quot;], log[&quot;something_else&quot;])</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+    def _cast(parsed, cast):</span>
+<span class="gi">+        if callable(cast):</span>
+<span class="gi">+            cast(parsed)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            for key, converter in cast.items():</span>
+<span class="gi">+                if key in parsed:</span>
+<span class="gi">+                    parsed[key] = converter(parsed[key])</span>
+
+<span class="w"> </span>    def trace(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;TRACE&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;TRACE&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def debug(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;DEBUG&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;DEBUG&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def info(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;INFO&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;INFO&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def success(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;SUCCESS&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;SUCCESS&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def warning(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;WARNING&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;WARNING&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def error(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;ERROR&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;ERROR&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def critical(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``&#39;CRITICAL&#39;``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.log(&#39;CRITICAL&#39;, __message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def exception(__self, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Convenience method for logging an ``&#39;ERROR&#39;`` with exception information.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        __self.opt(exception=True).error(__message, *args, **kwargs)</span>
+
+<span class="w"> </span>    def log(__self, __level, __message, *args, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;Log ``message.format(*args, **kwargs)`` with severity ``level``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        level = __self._core.levels_lookup.get(__level)</span>
+<span class="gi">+        if level is None:</span>
+<span class="gi">+            raise ValueError(&quot;Level &#39;{0}&#39; does not exist&quot;.format(__level))</span>
+<span class="gi">+</span>
+<span class="gi">+        frame = get_frame(__self._options.get(&#39;depth&#39;, 0) + 1)</span>
+<span class="gi">+        name = frame.f_globals.get(&#39;__name__&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not __self._core.enabled.get(name, __self._core.activation_none):</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        if level[2] &lt; __self._core.min_level:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        if __self._options.get(&#39;lazy&#39;, False):</span>
+<span class="gi">+            args = [arg() if callable(arg) else arg for arg in args]</span>
+<span class="gi">+            kwargs = {key: value() if callable(value) else value for key, value in kwargs.items()}</span>
+<span class="gi">+</span>
+<span class="gi">+        record = {</span>
+<span class="gi">+            &#39;elapsed&#39;: aware_now() - start_time,</span>
+<span class="gi">+            &#39;exception&#39;: None,</span>
+<span class="gi">+            &#39;extra&#39;: {**__self._core.extra, **context.get(), **(__self._options.get(&#39;extra&#39;, {}) or {})},</span>
+<span class="gi">+            &#39;file&#39;: RecordFile(frame),</span>
+<span class="gi">+            &#39;function&#39;: frame.f_code.co_name,</span>
+<span class="gi">+            &#39;level&#39;: RecordLevel(*level),</span>
+<span class="gi">+            &#39;line&#39;: frame.f_lineno,</span>
+<span class="gi">+            &#39;message&#39;: __message,</span>
+<span class="gi">+            &#39;module&#39;: splitext(basename(frame.f_code.co_filename))[0],</span>
+<span class="gi">+            &#39;name&#39;: name,</span>
+<span class="gi">+            &#39;process&#39;: RecordProcess(current_process()),</span>
+<span class="gi">+            &#39;thread&#39;: RecordThread(current_thread()),</span>
+<span class="gi">+            &#39;time&#39;: aware_now(),</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+        if __self._options.get(&#39;record&#39;, False):</span>
+<span class="gi">+            record[&#39;message&#39;] = record[&#39;message&#39;].format(*args, record=record, **kwargs)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            record[&#39;message&#39;] = record[&#39;message&#39;].format(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        exception = __self._options.get(&#39;exception&#39;)</span>
+<span class="gi">+        if exception:</span>
+<span class="gi">+            if isinstance(exception, BaseException):</span>
+<span class="gi">+                type_, value, traceback = type(exception), exception, exception.__traceback__</span>
+<span class="gi">+            elif isinstance(exception, tuple):</span>
+<span class="gi">+                type_, value, traceback = exception</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                type_, value, traceback = sys.exc_info()</span>
+<span class="gi">+            record[&#39;exception&#39;] = RecordException(type_, value, traceback)</span>
+<span class="gi">+</span>
+<span class="gi">+        if __self._core.patcher:</span>
+<span class="gi">+            __self._core.patcher(record)</span>
+<span class="gi">+</span>
+<span class="gi">+        for handler in __self._core.handlers.values():</span>
+<span class="gi">+            handler.emit(record, __self._options.get(&#39;raw&#39;, False), __self._options.get(&#39;colors&#39;, False))</span>
+
+<span class="w"> </span>    def start(self, *args, **kwargs):
+<span class="gd">-        &quot;&quot;&quot;Deprecated function to |add| a new handler.</span>
+<span class="gd">-</span>
+<span class="gd">-        Warnings</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        .. deprecated:: 0.2.2</span>
+<span class="gd">-          ``start()`` will be removed in Loguru 1.0.0, it is replaced by ``add()`` which is a less</span>
+<span class="gd">-          confusing name.</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Deprecated function to |add| a new handler.&quot;&quot;&quot;</span>
+<span class="gi">+        warnings.warn(&quot;The &#39;start()&#39; method is deprecated, use &#39;add()&#39; instead&quot;, DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+        return self.add(*args, **kwargs)</span>
+
+<span class="w"> </span>    def stop(self, *args, **kwargs):
+<span class="gd">-        &quot;&quot;&quot;Deprecated function to |remove| an existing handler.</span>
+<span class="gd">-</span>
+<span class="gd">-        Warnings</span>
+<span class="gd">-        --------</span>
+<span class="gd">-        .. deprecated:: 0.2.2</span>
+<span class="gd">-          ``stop()`` will be removed in Loguru 1.0.0, it is replaced by ``remove()`` which is a less</span>
+<span class="gd">-          confusing name.</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Deprecated function to |remove| an existing handler.&quot;&quot;&quot;</span>
+<span class="gi">+        warnings.warn(&quot;The &#39;stop()&#39; method is deprecated, use &#39;remove()&#39; instead&quot;, DeprecationWarning, stacklevel=2)</span>
+<span class="gi">+        return self.remove(*args, **kwargs)</span>
+<span class="gh">diff --git a/loguru/_string_parsers.py b/loguru/_string_parsers.py</span>
+<span class="gh">index 520211d..a46b518 100644</span>
+<span class="gd">--- a/loguru/_string_parsers.py</span>
+<span class="gi">+++ b/loguru/_string_parsers.py</span>
+<span class="gu">@@ -3,4 +3,63 @@ import re</span>
+
+
+<span class="w"> </span>class Frequencies:
+<span class="gd">-    pass</span>
+<span class="gi">+    DAILY = &quot;daily&quot;</span>
+<span class="gi">+    WEEKLY = &quot;weekly&quot;</span>
+<span class="gi">+    MONTHLY = &quot;monthly&quot;</span>
+<span class="gi">+    YEARLY = &quot;yearly&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def parse_frequency(frequency):</span>
+<span class="gi">+    &quot;&quot;&quot;Parse a frequency string into a timedelta object.&quot;&quot;&quot;</span>
+<span class="gi">+    if frequency == Frequencies.DAILY:</span>
+<span class="gi">+        return datetime.timedelta(days=1)</span>
+<span class="gi">+    elif frequency == Frequencies.WEEKLY:</span>
+<span class="gi">+        return datetime.timedelta(weeks=1)</span>
+<span class="gi">+    elif frequency == Frequencies.MONTHLY:</span>
+<span class="gi">+        return datetime.timedelta(days=30)  # Approximation</span>
+<span class="gi">+    elif frequency == Frequencies.YEARLY:</span>
+<span class="gi">+        return datetime.timedelta(days=365)  # Approximation</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise ValueError(f&quot;Invalid frequency: {frequency}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def parse_size(size):</span>
+<span class="gi">+    &quot;&quot;&quot;Parse a size string (e.g., &#39;5 MB&#39;) into bytes.&quot;&quot;&quot;</span>
+<span class="gi">+    units = {</span>
+<span class="gi">+        &#39;B&#39;: 1,</span>
+<span class="gi">+        &#39;KB&#39;: 1024,</span>
+<span class="gi">+        &#39;MB&#39;: 1024 * 1024,</span>
+<span class="gi">+        &#39;GB&#39;: 1024 * 1024 * 1024,</span>
+<span class="gi">+        &#39;TB&#39;: 1024 * 1024 * 1024 * 1024</span>
+<span class="gi">+    }</span>
+<span class="gi">+    </span>
+<span class="gi">+    match = re.match(r&#39;^(\d+(?:\.\d+)?)\s*([BKMGT]B)$&#39;, size.strip(), re.IGNORECASE)</span>
+<span class="gi">+    if not match:</span>
+<span class="gi">+        raise ValueError(f&quot;Invalid size format: {size}&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    value, unit = match.groups()</span>
+<span class="gi">+    return int(float(value) * units[unit.upper()])</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def parse_duration(duration):</span>
+<span class="gi">+    &quot;&quot;&quot;Parse a duration string (e.g., &#39;1h 30m&#39;) into a timedelta object.&quot;&quot;&quot;</span>
+<span class="gi">+    total_seconds = 0</span>
+<span class="gi">+    pattern = r&#39;(\d+)\s*([dhms])&#39;</span>
+<span class="gi">+    </span>
+<span class="gi">+    for match in re.finditer(pattern, duration, re.IGNORECASE):</span>
+<span class="gi">+        value, unit = match.groups()</span>
+<span class="gi">+        value = int(value)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if unit.lower() == &#39;d&#39;:</span>
+<span class="gi">+            total_seconds += value * 86400</span>
+<span class="gi">+        elif unit.lower() == &#39;h&#39;:</span>
+<span class="gi">+            total_seconds += value * 3600</span>
+<span class="gi">+        elif unit.lower() == &#39;m&#39;:</span>
+<span class="gi">+            total_seconds += value * 60</span>
+<span class="gi">+        elif unit.lower() == &#39;s&#39;:</span>
+<span class="gi">+            total_seconds += value</span>
+<span class="gi">+    </span>
+<span class="gi">+    if total_seconds == 0:</span>
+<span class="gi">+        raise ValueError(f&quot;Invalid duration format: {duration}&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return datetime.timedelta(seconds=total_seconds)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

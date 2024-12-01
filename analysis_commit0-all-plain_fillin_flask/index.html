@@ -1,0 +1,2629 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin flask - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-flask" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin flask
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-flask"><strong>Claude Sonnet 3.5 - Fill-in</strong>: flask</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:8: in &lt;module&gt;
+    from flask import Flask
+src/flask/__init__.py:5: in &lt;module&gt;
+    from . import json as json
+src/flask/json/__init__.py:7: in &lt;module&gt;
+    from .provider import _default
+src/flask/json/provider.py:112: in &lt;module&gt;
+    class DefaultJSONProvider(JSONProvider):
+src/flask/json/provider.py:125: in DefaultJSONProvider
+    default: t.Callable[[t.Any], t.Any] = staticmethod(_default)
+E   NameError: name &#39;_default&#39; is not defined
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/flask/app.py b/src/flask/app.py</span>
+<span class="gh">index 3e76b0ba..45fe946c 100644</span>
+<span class="gd">--- a/src/flask/app.py</span>
+<span class="gi">+++ b/src/flask/app.py</span>
+<span class="gu">@@ -215,7 +215,7 @@ class Flask(App):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.9
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.config[&#39;SEND_FILE_MAX_AGE_DEFAULT&#39;]</span>
+
+<span class="w"> </span>    def send_static_file(self, filename: str) -&gt;Response:
+<span class="w"> </span>        &quot;&quot;&quot;The view function used to serve files from
+<span class="gu">@@ -229,7 +229,9 @@ class Flask(App):</span>
+<span class="w"> </span>        .. versionadded:: 0.5
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.has_static_folder:</span>
+<span class="gi">+            raise RuntimeError(&#39;No static folder for this object&#39;)</span>
+<span class="gi">+        return send_from_directory(self.static_folder, filename)</span>
+
+<span class="w"> </span>    def open_resource(self, resource: str, mode: str=&#39;rb&#39;) -&gt;t.IO[t.AnyStr]:
+<span class="w"> </span>        &quot;&quot;&quot;Open a resource file relative to :attr:`root_path` for
+<span class="gu">@@ -253,7 +255,9 @@ class Flask(App):</span>
+<span class="w"> </span>        class.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if mode not in (&#39;r&#39;, &#39;rt&#39;, &#39;rb&#39;):</span>
+<span class="gi">+            raise ValueError(&#39;Resources can only be opened for reading&#39;)</span>
+<span class="gi">+        return open(os.path.join(self.root_path, resource), mode)</span>
+
+<span class="w"> </span>    def open_instance_resource(self, resource: str, mode: str=&#39;rb&#39;) -&gt;t.IO[t
+<span class="w"> </span>        .AnyStr]:
+<span class="gu">@@ -266,7 +270,7 @@ class Flask(App):</span>
+<span class="w"> </span>                         subfolders use forward slashes as separator.
+<span class="w"> </span>        :param mode: resource file opening mode, default is &#39;rb&#39;.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return open(os.path.join(self.instance_path, resource), mode)</span>
+
+<span class="w"> </span>    def create_jinja_environment(self) -&gt;Environment:
+<span class="w"> </span>        &quot;&quot;&quot;Create the Jinja environment based on :attr:`jinja_options`
+<span class="gu">@@ -280,7 +284,22 @@ class Flask(App):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.5
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        options = dict(self.jinja_options)</span>
+<span class="gi">+        if &#39;autoescape&#39; not in options:</span>
+<span class="gi">+            options[&#39;autoescape&#39;] = self.select_jinja_autoescape</span>
+<span class="gi">+        if &#39;auto_reload&#39; not in options:</span>
+<span class="gi">+            options[&#39;auto_reload&#39;] = self.config[&#39;TEMPLATES_AUTO_RELOAD&#39;]</span>
+<span class="gi">+        rv = self.jinja_environment(self, **options)</span>
+<span class="gi">+        rv.globals.update(</span>
+<span class="gi">+            url_for=url_for,</span>
+<span class="gi">+            get_flashed_messages=get_flashed_messages,</span>
+<span class="gi">+            config=self.config,</span>
+<span class="gi">+            request=request,</span>
+<span class="gi">+            session=session,</span>
+<span class="gi">+            g=g</span>
+<span class="gi">+        )</span>
+<span class="gi">+        rv.filters[&#39;tojson&#39;] = json.tojson_filter</span>
+<span class="gi">+        return rv</span>
+
+<span class="w"> </span>    def create_url_adapter(self, request: (Request | None)) -&gt;(MapAdapter |
+<span class="w"> </span>        None):
+<span class="gu">@@ -298,7 +317,18 @@ class Flask(App):</span>
+<span class="w"> </span>            :data:`SERVER_NAME` no longer implicitly enables subdomain
+<span class="w"> </span>            matching. Use :attr:`subdomain_matching` instead.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if request is not None:</span>
+<span class="gi">+            return self.url_map.bind_to_environ(</span>
+<span class="gi">+                request.environ,</span>
+<span class="gi">+                server_name=self.config[&#39;SERVER_NAME&#39;]</span>
+<span class="gi">+            )</span>
+<span class="gi">+        if self.config[&#39;SERVER_NAME&#39;] is not None:</span>
+<span class="gi">+            return self.url_map.bind(</span>
+<span class="gi">+                self.config[&#39;SERVER_NAME&#39;],</span>
+<span class="gi">+                script_name=self.config[&#39;APPLICATION_ROOT&#39;],</span>
+<span class="gi">+                url_scheme=self.config[&#39;PREFERRED_URL_SCHEME&#39;]</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def raise_routing_exception(self, request: Request) -&gt;t.NoReturn:
+<span class="w"> </span>        &quot;&quot;&quot;Intercept routing exceptions and possibly do something else.
+<span class="gu">@@ -316,7 +346,11 @@ class Flask(App):</span>
+<span class="w"> </span>        :meta private:
+<span class="w"> </span>        :internal:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.debug or not isinstance(request.routing_exception, RequestRedirect):</span>
+<span class="gi">+            raise request.routing_exception</span>
+<span class="gi">+</span>
+<span class="gi">+        from .debughelpers import FormDataRoutingRedirect</span>
+<span class="gi">+        raise FormDataRoutingRedirect(request)</span>
+
+<span class="w"> </span>    def update_template_context(self, context: dict[str, t.Any]) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Update the template context with some commonly used variables.
+<span class="gu">@@ -329,7 +363,10 @@ class Flask(App):</span>
+<span class="w"> </span>        :param context: the context as a dictionary that is updated in place
+<span class="w"> </span>                        to add extra variables.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        names = (&#39;request&#39;, &#39;session&#39;, &#39;config&#39;, &#39;g&#39;)</span>
+<span class="gi">+        context.update((name, getattr(self, name, None)) for name in names)</span>
+<span class="gi">+        for func in self.template_context_processors:</span>
+<span class="gi">+            context.update(func())</span>
+
+<span class="w"> </span>    def make_shell_context(self) -&gt;dict[str, t.Any]:
+<span class="w"> </span>        &quot;&quot;&quot;Returns the shell context for an interactive shell for this
+<span class="gu">@@ -338,7 +375,10 @@ class Flask(App):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.11
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        context = {&#39;app&#39;: self, &#39;g&#39;: g}</span>
+<span class="gi">+        for processor in self.shell_context_processors:</span>
+<span class="gi">+            context.update(processor())</span>
+<span class="gi">+        return context</span>
+
+<span class="w"> </span>    def run(self, host: (str | None)=None, port: (int | None)=None, debug:
+<span class="w"> </span>        (bool | None)=None, load_dotenv: bool=True, **options: t.Any) -&gt;None:
+<span class="gh">diff --git a/src/flask/blueprints.py b/src/flask/blueprints.py</span>
+<span class="gh">index 446e7185..162d3921 100644</span>
+<span class="gd">--- a/src/flask/blueprints.py</span>
+<span class="gi">+++ b/src/flask/blueprints.py</span>
+<span class="gu">@@ -43,7 +43,7 @@ class Blueprint(SansioBlueprint):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.9
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return current_app.get_send_file_max_age(filename)</span>
+
+<span class="w"> </span>    def send_static_file(self, filename: str) -&gt;Response:
+<span class="w"> </span>        &quot;&quot;&quot;The view function used to serve files from
+<span class="gu">@@ -57,7 +57,15 @@ class Blueprint(SansioBlueprint):</span>
+<span class="w"> </span>        .. versionadded:: 0.5
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.has_static_folder:</span>
+<span class="gi">+            raise RuntimeError(&quot;No static folder for this blueprint&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Ensure cache_timeout is set</span>
+<span class="gi">+        cache_timeout = self.get_send_file_max_age(filename)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return send_from_directory(</span>
+<span class="gi">+            self.static_folder, filename, cache_timeout=cache_timeout</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def open_resource(self, resource: str, mode: str=&#39;rb&#39;) -&gt;t.IO[t.AnyStr]:
+<span class="w"> </span>        &quot;&quot;&quot;Open a resource file relative to :attr:`root_path` for
+<span class="gu">@@ -81,4 +89,7 @@ class Blueprint(SansioBlueprint):</span>
+<span class="w"> </span>        class.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if mode not in (&#39;r&#39;, &#39;rt&#39;, &#39;rb&#39;):</span>
+<span class="gi">+            raise ValueError(&quot;Resources can only be opened for reading&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return open(os.path.join(self.root_path, resource), mode)</span>
+<span class="gh">diff --git a/src/flask/cli.py b/src/flask/cli.py</span>
+<span class="gh">index f98c3984..347c5b77 100644</span>
+<span class="gd">--- a/src/flask/cli.py</span>
+<span class="gi">+++ b/src/flask/cli.py</span>
+<span class="gu">@@ -36,7 +36,27 @@ def find_best_app(module: ModuleType) -&gt;Flask:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Given a module instance this tries to find the best possible
+<span class="w"> </span>    application in the module or raises an exception.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from flask import Flask</span>
+<span class="gi">+</span>
+<span class="gi">+    # Try to get an app instance directly</span>
+<span class="gi">+    if hasattr(module, &#39;app&#39;) and isinstance(module.app, Flask):</span>
+<span class="gi">+        return module.app</span>
+<span class="gi">+</span>
+<span class="gi">+    # Look for &#39;create_app&#39; or &#39;make_app&#39; factory functions</span>
+<span class="gi">+    for app_factory in (&#39;create_app&#39;, &#39;make_app&#39;):</span>
+<span class="gi">+        app_factory = getattr(module, app_factory, None)</span>
+<span class="gi">+        if app_factory and callable(app_factory):</span>
+<span class="gi">+            app = app_factory()</span>
+<span class="gi">+            if isinstance(app, Flask):</span>
+<span class="gi">+                return app</span>
+<span class="gi">+</span>
+<span class="gi">+    # Look for any Flask instance in the module</span>
+<span class="gi">+    for name in dir(module):</span>
+<span class="gi">+        attr = getattr(module, name)</span>
+<span class="gi">+        if isinstance(attr, Flask):</span>
+<span class="gi">+            return attr</span>
+<span class="gi">+</span>
+<span class="gi">+    raise NoAppException(&#39;Failed to find Flask application or factory function.&#39;)</span>
+
+
+<span class="w"> </span>def _called_with_wrong_args(f: t.Callable[..., Flask]) -&gt;bool:
+<span class="gu">@@ -47,21 +67,64 @@ def _called_with_wrong_args(f: t.Callable[..., Flask]) -&gt;bool:</span>
+<span class="w"> </span>    :param f: The function that was called.
+<span class="w"> </span>    :return: ``True`` if the call failed.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        f()</span>
+<span class="gi">+    except TypeError as e:</span>
+<span class="gi">+        tb = traceback.extract_tb(sys.exc_info()[2])</span>
+<span class="gi">+        if len(tb) == 1:</span>
+<span class="gi">+            return True  # The exception was raised at the function call</span>
+<span class="gi">+        return False  # The exception was raised inside the function</span>
+<span class="gi">+    except Exception:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    return False</span>
+
+
+<span class="w"> </span>def find_app_by_string(module: ModuleType, app_name: str) -&gt;Flask:
+<span class="w"> </span>    &quot;&quot;&quot;Check if the given string is a variable name or a function. Call
+<span class="w"> </span>    a function to get the app instance, or return the variable directly.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from flask import Flask</span>
+<span class="gi">+</span>
+<span class="gi">+    # Check if app_name refers to a variable</span>
+<span class="gi">+    if hasattr(module, app_name):</span>
+<span class="gi">+        app = getattr(module, app_name)</span>
+<span class="gi">+        if isinstance(app, Flask):</span>
+<span class="gi">+            return app</span>
+<span class="gi">+        elif callable(app):</span>
+<span class="gi">+            app = app()</span>
+<span class="gi">+            if isinstance(app, Flask):</span>
+<span class="gi">+                return app</span>
+<span class="gi">+</span>
+<span class="gi">+    # If not found or not a Flask instance, raise an exception</span>
+<span class="gi">+    raise NoAppException(f&#39;Failed to find application in &quot;{app_name}&quot;.&#39;)</span>
+
+
+<span class="w"> </span>def prepare_import(path: str) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Given a filename this will try to calculate the python path, add it
+<span class="w"> </span>    to the search path and return the actual module name that is expected.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    path = os.path.realpath(path)</span>
+<span class="gi">+</span>
+<span class="gi">+    if os.path.splitext(path)[1] == &#39;.py&#39;:</span>
+<span class="gi">+        path = os.path.splitext(path)[0]</span>
+<span class="gi">+</span>
+<span class="gi">+    if os.path.basename(path) == &#39;__init__&#39;:</span>
+<span class="gi">+        path = os.path.dirname(path)</span>
+<span class="gi">+</span>
+<span class="gi">+    module_name = []</span>
+<span class="gi">+</span>
+<span class="gi">+    # move up until outside package structure (no __init__.py)</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        path, name = os.path.split(path)</span>
+<span class="gi">+        module_name.append(name)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not os.path.exists(os.path.join(path, &#39;__init__.py&#39;)):</span>
+<span class="gi">+            break</span>
+<span class="gi">+</span>
+<span class="gi">+    if sys.path[0] != path:</span>
+<span class="gi">+        sys.path.insert(0, path)</span>
+<span class="gi">+</span>
+<span class="gi">+    return &#39;.&#39;.join(module_name[::-1])</span>
+
+
+<span class="w"> </span>version_option = click.Option([&#39;--version&#39;], help=&#39;Show the Flask version.&#39;,
+<span class="gu">@@ -90,7 +153,36 @@ class ScriptInfo:</span>
+<span class="w"> </span>        this multiple times will just result in the already loaded app to
+<span class="w"> </span>        be returned.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._loaded_app is not None:</span>
+<span class="gi">+            return self._loaded_app</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.create_app is not None:</span>
+<span class="gi">+            app = self.create_app()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if self.app_import_path:</span>
+<span class="gi">+                path, name = (self.app_import_path.split(&#39;:&#39;, 1) + [None])[:2]</span>
+<span class="gi">+                import_name = prepare_import(path)</span>
+<span class="gi">+                app = locate_app(import_name, name)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                for path in (&#39;wsgi.py&#39;, &#39;app.py&#39;):</span>
+<span class="gi">+                    import_name = prepare_import(path)</span>
+<span class="gi">+                    app = locate_app(import_name)</span>
+<span class="gi">+                    if app:</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise NoAppException(</span>
+<span class="gi">+                        &#39;Could not locate a Flask application. You did not provide &#39;</span>
+<span class="gi">+                        &#39;the &quot;FLASK_APP&quot; environment variable, and a &quot;wsgi.py&quot; or &#39;</span>
+<span class="gi">+                        &#39;&quot;app.py&quot; module was not found in the current directory.&#39;</span>
+<span class="gi">+                    )</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.set_debug_flag:</span>
+<span class="gi">+            # Update the app&#39;s debug flag through the descriptor so that</span>
+<span class="gi">+            # other values repopulate as well.</span>
+<span class="gi">+            app.debug = get_debug_flag()</span>
+<span class="gi">+</span>
+<span class="gi">+        self._loaded_app = app</span>
+<span class="gi">+        return app</span>
+
+
+<span class="w"> </span>pass_script_info = click.make_pass_decorator(ScriptInfo, ensure=True)
+<span class="gu">@@ -110,7 +202,11 @@ def with_appcontext(f: F) -&gt;F:</span>
+<span class="w"> </span>        decorated callback. The app context is always available to
+<span class="w"> </span>        ``app.cli`` command and parameter callbacks.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    @click.pass_context</span>
+<span class="gi">+    def decorator(__ctx: click.Context, *args: t.Any, **kwargs: t.Any) -&gt; t.Any:</span>
+<span class="gi">+        with __ctx.ensure_object(ScriptInfo).load_app().app_context():</span>
+<span class="gi">+            return __ctx.invoke(f, *args, **kwargs)</span>
+<span class="gi">+    return update_wrapper(t.cast(F, decorator), f)</span>
+
+
+<span class="w"> </span>class AppGroup(click.Group):
+<span class="gu">@@ -127,7 +223,14 @@ class AppGroup(click.Group):</span>
+<span class="w"> </span>        :class:`click.Group` but it wraps callbacks in :func:`with_appcontext`
+<span class="w"> </span>        unless it&#39;s disabled by passing ``with_appcontext=False``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        wrap_for_ctx = kwargs.pop(&quot;with_appcontext&quot;, True)</span>
+<span class="gi">+</span>
+<span class="gi">+        def decorator(f):</span>
+<span class="gi">+            if wrap_for_ctx:</span>
+<span class="gi">+                f = with_appcontext(f)</span>
+<span class="gi">+            return click.Group.command(self, *args, **kwargs)(f)</span>
+<span class="gi">+</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    def group(self, *args: t.Any, **kwargs: t.Any) -&gt;t.Callable[[t.Callable
+<span class="w"> </span>        [..., t.Any]], click.Group]:
+<span class="gu">@@ -135,7 +238,8 @@ class AppGroup(click.Group):</span>
+<span class="w"> </span>        :class:`click.Group` but it defaults the group class to
+<span class="w"> </span>        :class:`AppGroup`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        kwargs.setdefault(&#39;cls&#39;, AppGroup)</span>
+<span class="gi">+        return super().group(*args, **kwargs)</span>
+
+
+<span class="w"> </span>_app_option = click.Option([&#39;-A&#39;, &#39;--app&#39;], metavar=&#39;IMPORT&#39;, help=
+<span class="gu">@@ -204,7 +308,11 @@ def _path_is_ancestor(path: str, other: str) -&gt;bool:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Take ``other`` and remove the length of ``path`` from it. Then join it
+<span class="w"> </span>    to ``path``. If it is the original value, ``path`` is an ancestor of
+<span class="w"> </span>    ``other``.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    path = os.path.normpath(path)</span>
+<span class="gi">+    other = os.path.normpath(other)</span>
+<span class="gi">+    if other.startswith(path):</span>
+<span class="gi">+        return os.path.join(path, other[len(path):].lstrip(os.sep)) == other</span>
+<span class="gi">+    return False</span>
+
+
+<span class="w"> </span>def load_dotenv(path: (str | os.PathLike[str] | None)=None) -&gt;bool:
+<span class="gu">@@ -233,14 +341,50 @@ def load_dotenv(path: (str | os.PathLike[str] | None)=None) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 1.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        import dotenv</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        if path or os.path.isfile(&#39;.env&#39;) or os.path.isfile(&#39;.flaskenv&#39;):</span>
+<span class="gi">+            click.secho(</span>
+<span class="gi">+                &#39; * Tip: There are .env or .flaskenv files present.&#39;</span>
+<span class="gi">+                &#39; Do &quot;pip install python-dotenv&quot; to use them.&#39;,</span>
+<span class="gi">+                fg=&#39;yellow&#39;,</span>
+<span class="gi">+                err=True,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    if path is not None:</span>
+<span class="gi">+        if os.path.isfile(path):</span>
+<span class="gi">+            return dotenv.load_dotenv(path, encoding=&#39;utf-8&#39;)</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    new_dir = None</span>
+<span class="gi">+</span>
+<span class="gi">+    for name in (&#39;.env&#39;, &#39;.flaskenv&#39;):</span>
+<span class="gi">+        path = dotenv.find_dotenv(name, usecwd=True)</span>
+<span class="gi">+        if not path:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if new_dir is None:</span>
+<span class="gi">+            new_dir = os.path.dirname(path)</span>
+<span class="gi">+        dotenv.load_dotenv(path, encoding=&#39;utf-8&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return new_dir is not None</span>
+
+
+<span class="w"> </span>def show_server_banner(debug: bool, app_import_path: (str | None)) -&gt;None:
+<span class="w"> </span>    &quot;&quot;&quot;Show extra startup messages the first time the server is run,
+<span class="w"> </span>    ignoring the reloader.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if is_running_from_reloader():</span>
+<span class="gi">+        return</span>
+<span class="gi">+</span>
+<span class="gi">+    if app_import_path is not None:</span>
+<span class="gi">+        message = f&quot; * Serving Flask app &#39;{app_import_path}&#39;&quot;</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        message = &quot; * Serving Flask app&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    click.echo(message)</span>
+<span class="gi">+    click.echo(f&quot; * Debug mode: {&#39;on&#39; if debug else &#39;off&#39;}&quot;)</span>
+
+
+<span class="w"> </span>class CertParamType(click.ParamType):
+<span class="gu">@@ -260,7 +404,18 @@ def _validate_key(ctx: click.Context, param: click.Parameter, value: t.Any</span>
+<span class="w"> </span>    &quot;&quot;&quot;The ``--key`` option must be specified when ``--cert`` is a file.
+<span class="w"> </span>    Modifies the ``cert`` param to be a ``(cert, key)`` pair if needed.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    cert = ctx.params.get(&quot;cert&quot;)</span>
+<span class="gi">+    if cert and not ctx.params.get(&quot;key&quot;):</span>
+<span class="gi">+        raise click.BadParameter(</span>
+<span class="gi">+            &#39;When &quot;--cert&quot; is a file, &quot;--key&quot; is required.&#39;,</span>
+<span class="gi">+            ctx=ctx,</span>
+<span class="gi">+            param=param,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    if cert and value:</span>
+<span class="gi">+        ctx.params[&quot;cert&quot;] = cert, value</span>
+<span class="gi">+</span>
+<span class="gi">+    return value</span>
+
+
+<span class="w"> </span>class SeparatedPathType(click.Path):
+<span class="gu">@@ -308,7 +463,31 @@ def run_command(info: ScriptInfo, host: str, port: int, reload: bool,</span>
+<span class="w"> </span>    The reloader and debugger are enabled by default with the &#39;--debug&#39;
+<span class="w"> </span>    option.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    debug = get_debug_flag()</span>
+<span class="gi">+</span>
+<span class="gi">+    if reload is None:</span>
+<span class="gi">+        reload = debug</span>
+<span class="gi">+</span>
+<span class="gi">+    if debugger is None:</span>
+<span class="gi">+        debugger = debug</span>
+<span class="gi">+</span>
+<span class="gi">+    show_server_banner(debug, info.app_import_path)</span>
+<span class="gi">+</span>
+<span class="gi">+    app = DispatchingApp(info.load_app, use_eager_loading=True)</span>
+<span class="gi">+</span>
+<span class="gi">+    from werkzeug.serving import run_simple</span>
+<span class="gi">+</span>
+<span class="gi">+    run_simple(</span>
+<span class="gi">+        host,</span>
+<span class="gi">+        port,</span>
+<span class="gi">+        app,</span>
+<span class="gi">+        use_reloader=reload,</span>
+<span class="gi">+        use_debugger=debugger,</span>
+<span class="gi">+        threaded=with_threads,</span>
+<span class="gi">+        ssl_context=cert,</span>
+<span class="gi">+        extra_files=extra_files,</span>
+<span class="gi">+        exclude_patterns=exclude_patterns,</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>run_command.params.insert(0, _debug_option)
+<span class="gu">@@ -324,7 +503,23 @@ def shell_command() -&gt;None:</span>
+<span class="w"> </span>    This is useful for executing small snippets of management code
+<span class="w"> </span>    without having to manually configure the application.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import code</span>
+<span class="gi">+    from flask.globals import _app_ctx_stack</span>
+<span class="gi">+</span>
+<span class="gi">+    app = _app_ctx_stack.top.app</span>
+<span class="gi">+    banner = f&quot;Python {sys.version} on {sys.platform}\nApp: {app.import_name}\nInstance: {app.instance_path}&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    ctx = {}</span>
+<span class="gi">+</span>
+<span class="gi">+    # Support the regular Python interpreter startup script</span>
+<span class="gi">+    startup = os.environ.get(&quot;PYTHONSTARTUP&quot;)</span>
+<span class="gi">+    if startup and os.path.isfile(startup):</span>
+<span class="gi">+        with open(startup, &quot;r&quot;) as f:</span>
+<span class="gi">+            eval(compile(f.read(), startup, &quot;exec&quot;), ctx)</span>
+<span class="gi">+</span>
+<span class="gi">+    ctx.update(app.make_shell_context())</span>
+<span class="gi">+</span>
+<span class="gi">+    code.interact(banner=banner, local=ctx)</span>
+
+
+<span class="w"> </span>@click.command(&#39;routes&#39;, short_help=&#39;Show the routes for the app.&#39;)
+<span class="gu">@@ -337,7 +532,36 @@ def shell_command() -&gt;None:</span>
+<span class="w"> </span>@with_appcontext
+<span class="w"> </span>def routes_command(sort: str, all_methods: bool) -&gt;None:
+<span class="w"> </span>    &quot;&quot;&quot;Show all registered routes with endpoints and methods.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from flask import current_app</span>
+<span class="gi">+</span>
+<span class="gi">+    rules = list(current_app.url_map.iter_rules())</span>
+<span class="gi">+    if not rules:</span>
+<span class="gi">+        click.echo(&quot;No routes were registered.&quot;)</span>
+<span class="gi">+        return</span>
+<span class="gi">+</span>
+<span class="gi">+    ignored_methods = set(() if all_methods else (&quot;HEAD&quot;, &quot;OPTIONS&quot;))</span>
+<span class="gi">+</span>
+<span class="gi">+    if sort in (&quot;endpoint&quot;, &quot;rule&quot;):</span>
+<span class="gi">+        rules = sorted(rules, key=attrgetter(sort))</span>
+<span class="gi">+    elif sort == &quot;methods&quot;:</span>
+<span class="gi">+        rules = sorted(rules, key=lambda rule: sorted(rule.methods))</span>
+<span class="gi">+</span>
+<span class="gi">+    rule_methods = [&quot;, &quot;.join(sorted(rule.methods - ignored_methods)) for rule in rules]</span>
+<span class="gi">+</span>
+<span class="gi">+    headers = (&quot;Endpoint&quot;, &quot;Methods&quot;, &quot;Rule&quot;)</span>
+<span class="gi">+    widths = (</span>
+<span class="gi">+        max(len(rule.endpoint) for rule in rules),</span>
+<span class="gi">+        max(len(methods) for methods in rule_methods),</span>
+<span class="gi">+        max(len(rule.rule) for rule in rules),</span>
+<span class="gi">+    )</span>
+<span class="gi">+    widths = [max(len(h), w) for h, w in zip(headers, widths)]</span>
+<span class="gi">+    row = &quot;{{0:&lt;{0}}}  {{1:&lt;{1}}}  {{2:&lt;{2}}}&quot;.format(*widths)</span>
+<span class="gi">+</span>
+<span class="gi">+    click.echo(row.format(*headers).strip())</span>
+<span class="gi">+    click.echo(row.format(*(&quot;-&quot; * width for width in widths)))</span>
+<span class="gi">+</span>
+<span class="gi">+    for rule, methods in zip(rules, rule_methods):</span>
+<span class="gi">+        click.echo(row.format(rule.endpoint, methods, rule.rule).rstrip())</span>
+
+
+<span class="w"> </span>cli = FlaskGroup(name=&#39;flask&#39;, help=
+<span class="gh">diff --git a/src/flask/config.py b/src/flask/config.py</span>
+<span class="gh">index 917b25e6..08b7f428 100644</span>
+<span class="gd">--- a/src/flask/config.py</span>
+<span class="gi">+++ b/src/flask/config.py</span>
+<span class="gu">@@ -101,7 +101,17 @@ class Config(dict):</span>
+<span class="w"> </span>                       files.
+<span class="w"> </span>        :return: ``True`` if the file was loaded successfully.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rv = os.environ.get(variable_name)</span>
+<span class="gi">+        if not rv:</span>
+<span class="gi">+            if silent:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+            raise RuntimeError(</span>
+<span class="gi">+                f&quot;The environment variable {variable_name!r} is not set &quot;</span>
+<span class="gi">+                &quot;and as such configuration could not be loaded. Set &quot;</span>
+<span class="gi">+                &quot;this variable and make it point to a configuration &quot;</span>
+<span class="gi">+                &quot;file&quot;</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return self.from_pyfile(rv, silent=silent)</span>
+
+<span class="w"> </span>    def from_prefixed_env(self, prefix: str=&#39;FLASK&#39;, *, loads: t.Callable[[
+<span class="w"> </span>        str], t.Any]=json.loads) -&gt;bool:
+<span class="gu">@@ -128,7 +138,32 @@ class Config(dict):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.1
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        prefix = f&quot;{prefix}_&quot;</span>
+<span class="gi">+        env_vars = {</span>
+<span class="gi">+            key[len(prefix):]: value</span>
+<span class="gi">+            for key, value in os.environ.items()</span>
+<span class="gi">+            if key.startswith(prefix)</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+        for key in sorted(env_vars):</span>
+<span class="gi">+            value = env_vars[key]</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                value = loads(value)</span>
+<span class="gi">+            except Exception:</span>
+<span class="gi">+                pass</span>
+<span class="gi">+</span>
+<span class="gi">+            if &quot;__&quot; in key:</span>
+<span class="gi">+                parts = key.split(&quot;__&quot;)</span>
+<span class="gi">+                current = self</span>
+<span class="gi">+                for part in parts[:-1]:</span>
+<span class="gi">+                    if part not in current:</span>
+<span class="gi">+                        current[part] = {}</span>
+<span class="gi">+                    current = current[part]</span>
+<span class="gi">+                current[parts[-1]] = value</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                self[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+        return True</span>
+
+<span class="w"> </span>    def from_pyfile(self, filename: (str | os.PathLike[str]), silent: bool=
+<span class="w"> </span>        False) -&gt;bool:
+<span class="gu">@@ -146,7 +181,19 @@ class Config(dict):</span>
+<span class="w"> </span>        .. versionadded:: 0.7
+<span class="w"> </span>           `silent` parameter.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        filename = os.path.join(self.root_path, filename)</span>
+<span class="gi">+        d = types.ModuleType(&#39;config&#39;)</span>
+<span class="gi">+        d.__file__ = filename</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            with open(filename, mode=&#39;rb&#39;) as config_file:</span>
+<span class="gi">+                exec(compile(config_file.read(), filename, &#39;exec&#39;), d.__dict__)</span>
+<span class="gi">+        except IOError as e:</span>
+<span class="gi">+            if silent and e.errno in (errno.ENOENT, errno.EISDIR, errno.ENOTDIR):</span>
+<span class="gi">+                return False</span>
+<span class="gi">+            e.strerror = f&#39;Unable to load configuration file ({e.strerror})&#39;</span>
+<span class="gi">+            raise</span>
+<span class="gi">+        self.from_object(d)</span>
+<span class="gi">+        return True</span>
+
+<span class="w"> </span>    def from_object(self, obj: (object | str)) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Updates the values from the given object.  An object can be of one
+<span class="gu">@@ -180,7 +227,11 @@ class Config(dict):</span>
+
+<span class="w"> </span>        :param obj: an import name or object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(obj, str):</span>
+<span class="gi">+            obj = import_string(obj)</span>
+<span class="gi">+        for key in dir(obj):</span>
+<span class="gi">+            if key.isupper():</span>
+<span class="gi">+                self[key] = getattr(obj, key)</span>
+
+<span class="w"> </span>    def from_file(self, filename: (str | os.PathLike[str]), load: t.
+<span class="w"> </span>        Callable[[t.IO[t.Any]], t.Mapping[str, t.Any]], silent: bool=False,
+<span class="gu">@@ -212,7 +263,18 @@ class Config(dict):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        filename = os.path.join(self.root_path, filename)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            with open(filename, &#39;r&#39; if text else &#39;rb&#39;) as f:</span>
+<span class="gi">+                obj = load(f)</span>
+<span class="gi">+        except OSError as e:</span>
+<span class="gi">+            if silent and e.errno in (errno.ENOENT, errno.EISDIR):</span>
+<span class="gi">+                return False</span>
+<span class="gi">+            e.strerror = f&#39;Unable to load configuration file ({e.strerror})&#39;</span>
+<span class="gi">+            raise</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.from_mapping(obj)</span>
+
+<span class="w"> </span>    def from_mapping(self, mapping: (t.Mapping[str, t.Any] | None)=None, **
+<span class="w"> </span>        kwargs: t.Any) -&gt;bool:
+<span class="gu">@@ -223,7 +285,14 @@ class Config(dict):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.11
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        mappings: dict[str, t.Any] = {}</span>
+<span class="gi">+        if mapping is not None:</span>
+<span class="gi">+            mappings.update(mapping)</span>
+<span class="gi">+        mappings.update(kwargs)</span>
+<span class="gi">+        for key, value in mappings.items():</span>
+<span class="gi">+            if key.isupper():</span>
+<span class="gi">+                self[key] = value</span>
+<span class="gi">+        return True</span>
+
+<span class="w"> </span>    def get_namespace(self, namespace: str, lowercase: bool=True,
+<span class="w"> </span>        trim_namespace: bool=True) -&gt;dict[str, t.Any]:
+<span class="gu">@@ -254,7 +323,18 @@ class Config(dict):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.11
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rv = {}</span>
+<span class="gi">+        for k, v in self.items():</span>
+<span class="gi">+            if not k.startswith(namespace):</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if trim_namespace:</span>
+<span class="gi">+                key = k[len(namespace):]</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                key = k</span>
+<span class="gi">+            if lowercase:</span>
+<span class="gi">+                key = key.lower()</span>
+<span class="gi">+            rv[key] = v</span>
+<span class="gi">+        return rv</span>
+
+<span class="w"> </span>    def __repr__(self) -&gt;str:
+<span class="w"> </span>        return f&#39;&lt;{type(self).__name__} {dict.__repr__(self)}&gt;&#39;
+<span class="gh">diff --git a/src/flask/ctx.py b/src/flask/ctx.py</span>
+<span class="gh">index ce2683ae..63548900 100644</span>
+<span class="gd">--- a/src/flask/ctx.py</span>
+<span class="gi">+++ b/src/flask/ctx.py</span>
+<span class="gu">@@ -62,7 +62,7 @@ class _AppCtxGlobals:</span>
+
+<span class="w"> </span>        .. versionadded:: 0.10
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.__dict__.get(name, default)</span>
+
+<span class="w"> </span>    def pop(self, name: str, default: t.Any=_sentinel) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Get and remove an attribute by name. Like :meth:`dict.pop`.
+<span class="gu">@@ -73,7 +73,9 @@ class _AppCtxGlobals:</span>
+
+<span class="w"> </span>        .. versionadded:: 0.11
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if default is _sentinel:</span>
+<span class="gi">+            return self.__dict__.pop(name)</span>
+<span class="gi">+        return self.__dict__.pop(name, default)</span>
+
+<span class="w"> </span>    def setdefault(self, name: str, default: t.Any=None) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Get the value of an attribute if it is present, otherwise
+<span class="gu">@@ -85,7 +87,7 @@ class _AppCtxGlobals:</span>
+
+<span class="w"> </span>        .. versionadded:: 0.11
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.__dict__.setdefault(name, default)</span>
+
+<span class="w"> </span>    def __contains__(self, item: str) -&gt;bool:
+<span class="w"> </span>        return item in self.__dict__
+<span class="gu">@@ -122,7 +124,8 @@ def after_this_request(f: ft.AfterRequestCallable[t.Any]</span>
+
+<span class="w"> </span>    .. versionadded:: 0.9
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    _request_ctx_stack.top._after_request_functions.append(f)</span>
+<span class="gi">+    return f</span>
+
+
+<span class="w"> </span>F = t.TypeVar(&#39;F&#39;, bound=t.Callable[..., t.Any])
+<span class="gu">@@ -152,7 +155,16 @@ def copy_current_request_context(f: F) -&gt;F:</span>
+
+<span class="w"> </span>    .. versionadded:: 0.10
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    top = _request_ctx_stack.top</span>
+<span class="gi">+    if top is None:</span>
+<span class="gi">+        raise RuntimeError(&#39;This decorator can only be used at local scopes &#39;</span>
+<span class="gi">+                           &#39;when a request context is on the stack.  &#39;</span>
+<span class="gi">+                           &#39;For instance within view functions.&#39;)</span>
+<span class="gi">+    reqctx = top.copy()</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        with reqctx:</span>
+<span class="gi">+            return f(*args, **kwargs)</span>
+<span class="gi">+    return update_wrapper(wrapper, f)</span>
+
+
+<span class="w"> </span>def has_request_context() -&gt;bool:
+<span class="gu">@@ -184,7 +196,7 @@ def has_request_context() -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 0.7
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _request_ctx_stack.top is not None</span>
+
+
+<span class="w"> </span>def has_app_context() -&gt;bool:
+<span class="gu">@@ -194,7 +206,7 @@ def has_app_context() -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 0.9
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return _app_ctx_stack.top is not None</span>
+
+
+<span class="w"> </span>class AppContext:
+<span class="gu">@@ -212,11 +224,19 @@ class AppContext:</span>
+
+<span class="w"> </span>    def push(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Binds the app context to the current context.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._cv_tokens.append(_cv_app.set(self))</span>
+<span class="gi">+        appcontext_pushed.send(self.app)</span>
+
+<span class="w"> </span>    def pop(self, exc: (BaseException | None)=_sentinel) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Pops the app context.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            if exc is _sentinel:</span>
+<span class="gi">+                exc = sys.exc_info()[1]</span>
+<span class="gi">+            self.app.do_teardown_appcontext(exc)</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            token = self._cv_tokens.pop()</span>
+<span class="gi">+            _cv_app.reset(token)</span>
+<span class="gi">+        appcontext_popped.send(self.app)</span>
+
+<span class="w"> </span>    def __enter__(self) -&gt;AppContext:
+<span class="w"> </span>        self.push()
+<span class="gu">@@ -281,13 +301,22 @@ class RequestContext:</span>
+<span class="w"> </span>           The current session object is used instead of reloading the original
+<span class="w"> </span>           data. This prevents `flask.session` pointing to an out-of-date object.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return RequestContext(</span>
+<span class="gi">+            self.app,</span>
+<span class="gi">+            self.request.environ,</span>
+<span class="gi">+            self.request,</span>
+<span class="gi">+            self.session</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def match_request(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Can be overridden by a subclass to hook into the matching
+<span class="w"> </span>        of the request.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            result = self.url_adapter.match(return_rule=True)</span>
+<span class="gi">+            self.request.url_rule, self.request.view_args = result</span>
+<span class="gi">+        except HTTPException as e:</span>
+<span class="gi">+            self.request.routing_exception = e</span>
+
+<span class="w"> </span>    def pop(self, exc: (BaseException | None)=_sentinel) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Pops the request context and unbinds it by doing that.  This will
+<span class="gu">@@ -297,7 +326,17 @@ class RequestContext:</span>
+<span class="w"> </span>        .. versionchanged:: 0.9
+<span class="w"> </span>           Added the `exc` argument.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        app_ctx = self._cv_tokens.pop()[1]</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            if exc is _sentinel:</span>
+<span class="gi">+                exc = sys.exc_info()[1]</span>
+<span class="gi">+            self.app.do_teardown_request(exc)</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            token = self._cv_tokens.pop()</span>
+<span class="gi">+            _cv_request.reset(token)</span>
+<span class="gi">+            if app_ctx is not None:</span>
+<span class="gi">+                app_ctx.pop(exc)</span>
+
+<span class="w"> </span>    def __enter__(self) -&gt;RequestContext:
+<span class="w"> </span>        self.push()
+<span class="gh">diff --git a/src/flask/debughelpers.py b/src/flask/debughelpers.py</span>
+<span class="gh">index ac217f75..f3615010 100644</span>
+<span class="gd">--- a/src/flask/debughelpers.py</span>
+<span class="gi">+++ b/src/flask/debughelpers.py</span>
+<span class="gu">@@ -71,11 +71,38 @@ def attach_enctype_error_multidict(request: Request) -&gt;None:</span>
+<span class="w"> </span>    :param request: The request to patch.
+<span class="w"> </span>    :meta private:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def __getitem__(key):</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return request.files.storage[key]</span>
+<span class="gi">+        except KeyError:</span>
+<span class="gi">+            raise DebugFilesKeyError(request, key)</span>
+<span class="gi">+</span>
+<span class="gi">+    request.files.__getitem__ = __getitem__</span>
+
+
+<span class="w"> </span>def explain_template_loading_attempts(app: App, template: str, attempts:
+<span class="w"> </span>    list[tuple[BaseLoader, Scaffold, tuple[str, str | None, t.Callable[[],
+<span class="w"> </span>    bool] | None] | None]]) -&gt;None:
+<span class="w"> </span>    &quot;&quot;&quot;This should help developers understand what failed&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from .templating import DispatchingJinjaLoader</span>
+<span class="gi">+</span>
+<span class="gi">+    info = []</span>
+<span class="gi">+    for idx, (loader, blueprint, triple) in enumerate(attempts):</span>
+<span class="gi">+        if isinstance(loader, DispatchingJinjaLoader):</span>
+<span class="gi">+            detail = f&quot;Loader: {type(loader).__name__}&quot;</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            detail = f&quot;Loader: {type(loader).__name__} (Blueprint: {blueprint.name})&quot; if blueprint else f&quot;Loader: {type(loader).__name__}&quot;</span>
+<span class="gi">+        </span>
+<span class="gi">+        if triple is None:</span>
+<span class="gi">+            info.append(f&quot;{idx + 1}: {detail} - loader did not return a triple&quot;)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            template_name, filename, uptodate = triple</span>
+<span class="gi">+            if filename is None:</span>
+<span class="gi">+                info.append(f&quot;{idx + 1}: {detail} - template not found&quot;)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                info.append(f&quot;{idx + 1}: {detail} - template found: {filename}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if info:</span>
+<span class="gi">+        app.logger.debug(&quot;Template loading attempts:\n%s&quot;, &quot;\n&quot;.join(info))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        app.logger.debug(&quot;No template loading attempts were made.&quot;)</span>
+<span class="gh">diff --git a/src/flask/helpers.py b/src/flask/helpers.py</span>
+<span class="gh">index 2061dbf3..14d4654b 100644</span>
+<span class="gd">--- a/src/flask/helpers.py</span>
+<span class="gi">+++ b/src/flask/helpers.py</span>
+<span class="gu">@@ -24,7 +24,7 @@ def get_debug_flag() -&gt;bool:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Get whether debug mode should be enabled for the app, indicated by the
+<span class="w"> </span>    :envvar:`FLASK_DEBUG` environment variable. The default is ``False``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return os.environ.get(&#39;FLASK_DEBUG&#39;, &#39;&#39;).lower() in (&#39;1&#39;, &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;)</span>
+
+
+<span class="w"> </span>def get_load_dotenv(default: bool=True) -&gt;bool:
+<span class="gu">@@ -34,7 +34,8 @@ def get_load_dotenv(default: bool=True) -&gt;bool:</span>
+
+<span class="w"> </span>    :param default: What to return if the env var isn&#39;t set.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    skip_dotenv = os.environ.get(&quot;FLASK_SKIP_DOTENV&quot;, &quot;&quot;).lower()</span>
+<span class="gi">+    return not (skip_dotenv in (&#39;1&#39;, &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;)) if skip_dotenv else default</span>
+
+
+<span class="w"> </span>def stream_with_context(generator_or_function: (t.Iterator[t.AnyStr] | t.
+<span class="gu">@@ -72,7 +73,34 @@ def stream_with_context(generator_or_function: (t.Iterator[t.AnyStr] | t.</span>
+
+<span class="w"> </span>    .. versionadded:: 0.9
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        gen = iter(generator_or_function)</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        gen = generator_or_function()</span>
+<span class="gi">+</span>
+<span class="gi">+    def generator():</span>
+<span class="gi">+        ctx = _cv_request.get(None)</span>
+<span class="gi">+        if ctx is None:</span>
+<span class="gi">+            raise RuntimeError(&#39;No request context found.&#39;)</span>
+<span class="gi">+        with ctx:</span>
+<span class="gi">+            # Dummy sentinel.  Has to be inside the context block or we&#39;re</span>
+<span class="gi">+            # unable to emit the deprecation warning if the user uses</span>
+<span class="gi">+            # the deprecated functionality.</span>
+<span class="gi">+            yield None</span>
+<span class="gi">+</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                yield from gen</span>
+<span class="gi">+            finally:</span>
+<span class="gi">+                if hasattr(gen, &#39;close&#39;):</span>
+<span class="gi">+                    gen.close()</span>
+<span class="gi">+</span>
+<span class="gi">+    # The trick is to start the generator.  Then the code execution runs until</span>
+<span class="gi">+    # the first dummy None is yielded at which point the context was already</span>
+<span class="gi">+    # pushed.  This item is discarded.  Then when the iteration continues the</span>
+<span class="gi">+    # real generator is executed.</span>
+<span class="gi">+    wrapped_g = generator()</span>
+<span class="gi">+    next(wrapped_g)</span>
+<span class="gi">+    return wrapped_g</span>
+
+
+<span class="w"> </span>def make_response(*args: t.Any) -&gt;Response:
+<span class="gu">@@ -117,7 +145,11 @@ def make_response(*args: t.Any) -&gt;Response:</span>
+
+<span class="w"> </span>    .. versionadded:: 0.6
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not args:</span>
+<span class="gi">+        return current_app.response_class()</span>
+<span class="gi">+    if len(args) == 1:</span>
+<span class="gi">+        args = args[0]</span>
+<span class="gi">+    return current_app.make_response(args)</span>
+
+
+<span class="w"> </span>def url_for(endpoint: str, *, _anchor: (str | None)=None, _method: (str |
+<span class="gu">@@ -158,7 +190,14 @@ def url_for(endpoint: str, *, _anchor: (str | None)=None, _method: (str |</span>
+<span class="w"> </span>    .. versionchanged:: 0.9
+<span class="w"> </span>       Calls ``app.handle_url_build_error`` on build errors.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return current_app.url_for(</span>
+<span class="gi">+        endpoint,</span>
+<span class="gi">+        _anchor=_anchor,</span>
+<span class="gi">+        _method=_method,</span>
+<span class="gi">+        _scheme=_scheme,</span>
+<span class="gi">+        _external=_external,</span>
+<span class="gi">+        **values</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def redirect(location: str, code: int=302, Response: (type[BaseResponse] |
+<span class="gh">diff --git a/src/flask/json/provider.py b/src/flask/json/provider.py</span>
+<span class="gh">index e9123cb0..c39cbf9f 100644</span>
+<span class="gd">--- a/src/flask/json/provider.py</span>
+<span class="gi">+++ b/src/flask/json/provider.py</span>
+<span class="gu">@@ -40,7 +40,7 @@ class JSONProvider:</span>
+<span class="w"> </span>        :param obj: The data to serialize.
+<span class="w"> </span>        :param kwargs: May be passed to the underlying JSON library.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return json.dumps(obj, **kwargs)</span>
+
+<span class="w"> </span>    def dump(self, obj: t.Any, fp: t.IO[str], **kwargs: t.Any) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Serialize data as JSON and write to a file.
+<span class="gu">@@ -50,7 +50,7 @@ class JSONProvider:</span>
+<span class="w"> </span>            encoding to be valid JSON.
+<span class="w"> </span>        :param kwargs: May be passed to the underlying JSON library.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        json.dump(obj, fp, **kwargs)</span>
+
+<span class="w"> </span>    def loads(self, s: (str | bytes), **kwargs: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Deserialize data as JSON.
+<span class="gu">@@ -58,7 +58,9 @@ class JSONProvider:</span>
+<span class="w"> </span>        :param s: Text or UTF-8 bytes.
+<span class="w"> </span>        :param kwargs: May be passed to the underlying JSON library.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(s, bytes):</span>
+<span class="gi">+            s = s.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+        return json.loads(s, **kwargs)</span>
+
+<span class="w"> </span>    def load(self, fp: t.IO[t.AnyStr], **kwargs: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Deserialize data as JSON read from a file.
+<span class="gu">@@ -66,7 +68,7 @@ class JSONProvider:</span>
+<span class="w"> </span>        :param fp: A file opened for reading text or UTF-8 bytes.
+<span class="w"> </span>        :param kwargs: May be passed to the underlying JSON library.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return json.load(fp, **kwargs)</span>
+
+<span class="w"> </span>    def response(self, *args: t.Any, **kwargs: t.Any) -&gt;Response:
+<span class="w"> </span>        &quot;&quot;&quot;Serialize the given arguments as JSON, and return a
+<span class="gu">@@ -83,7 +85,28 @@ class JSONProvider:</span>
+<span class="w"> </span>            treat as a list to serialize.
+<span class="w"> </span>        :param kwargs: Treat as a dict to serialize.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        from flask import current_app, Response</span>
+<span class="gi">+</span>
+<span class="gi">+        if args and kwargs:</span>
+<span class="gi">+            raise TypeError(&quot;Cannot pass both args and kwargs.&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not args and not kwargs:</span>
+<span class="gi">+            data = None</span>
+<span class="gi">+        elif len(args) == 1:</span>
+<span class="gi">+            data = args[0]</span>
+<span class="gi">+        elif len(args) &gt; 1:</span>
+<span class="gi">+            data = list(args)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            data = kwargs</span>
+<span class="gi">+</span>
+<span class="gi">+        indent = None</span>
+<span class="gi">+        separators = (&#39;,&#39;, &#39;:&#39;)</span>
+<span class="gi">+        if current_app.config[&#39;JSONIFY_PRETTYPRINT_REGULAR&#39;] or current_app.debug:</span>
+<span class="gi">+            indent = 2</span>
+<span class="gi">+            separators = (&#39;, &#39;, &#39;: &#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        dumped = self.dumps(data, indent=indent, separators=separators)</span>
+<span class="gi">+        return Response(dumped, mimetype=self.mimetype)</span>
+
+
+<span class="w"> </span>class DefaultJSONProvider(JSONProvider):
+<span class="gu">@@ -133,7 +156,10 @@ class DefaultJSONProvider(JSONProvider):</span>
+<span class="w"> </span>        :param obj: The data to serialize.
+<span class="w"> </span>        :param kwargs: Passed to :func:`json.dumps`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        kwargs.setdefault(&#39;default&#39;, self.default)</span>
+<span class="gi">+        kwargs.setdefault(&#39;ensure_ascii&#39;, self.ensure_ascii)</span>
+<span class="gi">+        kwargs.setdefault(&#39;sort_keys&#39;, self.sort_keys)</span>
+<span class="gi">+        return json.dumps(obj, **kwargs)</span>
+
+<span class="w"> </span>    def loads(self, s: (str | bytes), **kwargs: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Deserialize data as JSON from a string or bytes.
+<span class="gu">@@ -141,7 +167,9 @@ class DefaultJSONProvider(JSONProvider):</span>
+<span class="w"> </span>        :param s: Text or UTF-8 bytes.
+<span class="w"> </span>        :param kwargs: Passed to :func:`json.loads`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(s, bytes):</span>
+<span class="gi">+            s = s.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+        return json.loads(s, **kwargs)</span>
+
+<span class="w"> </span>    def response(self, *args: t.Any, **kwargs: t.Any) -&gt;Response:
+<span class="w"> </span>        &quot;&quot;&quot;Serialize the given arguments as JSON, and return a
+<span class="gu">@@ -159,4 +187,25 @@ class DefaultJSONProvider(JSONProvider):</span>
+<span class="w"> </span>            treat as a list to serialize.
+<span class="w"> </span>        :param kwargs: Treat as a dict to serialize.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        from flask import current_app, Response</span>
+<span class="gi">+</span>
+<span class="gi">+        if args and kwargs:</span>
+<span class="gi">+            raise TypeError(&quot;Cannot pass both args and kwargs.&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not args and not kwargs:</span>
+<span class="gi">+            data = None</span>
+<span class="gi">+        elif len(args) == 1:</span>
+<span class="gi">+            data = args[0]</span>
+<span class="gi">+        elif len(args) &gt; 1:</span>
+<span class="gi">+            data = list(args)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            data = kwargs</span>
+<span class="gi">+</span>
+<span class="gi">+        indent = None</span>
+<span class="gi">+        separators = (&#39;,&#39;, &#39;:&#39;)</span>
+<span class="gi">+        if self.compact is False or (self.compact is None and current_app.debug):</span>
+<span class="gi">+            indent = 2</span>
+<span class="gi">+            separators = (&#39;, &#39;, &#39;: &#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        dumped = self.dumps(data, indent=indent, separators=separators)</span>
+<span class="gi">+        return Response(dumped, mimetype=self.mimetype)</span>
+<span class="gh">diff --git a/src/flask/json/tag.py b/src/flask/json/tag.py</span>
+<span class="gh">index ded094b2..d2929ee3 100644</span>
+<span class="gd">--- a/src/flask/json/tag.py</span>
+<span class="gi">+++ b/src/flask/json/tag.py</span>
+<span class="gu">@@ -64,22 +64,22 @@ class JSONTag:</span>
+
+<span class="w"> </span>    def check(self, value: t.Any) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Check if the given value should be tagged by this tag.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    def to_json(self, value: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Convert the Python object to an object that is a valid JSON type.
+<span class="w"> </span>        The tag will be added later.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    def to_python(self, value: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Convert the JSON representation back to the correct type. The tag
+<span class="w"> </span>        will already be removed.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError</span>
+
+<span class="w"> </span>    def tag(self, value: t.Any) -&gt;dict[str, t.Any]:
+<span class="w"> </span>        &quot;&quot;&quot;Convert the value to a valid JSON type and add the tag structure
+<span class="w"> </span>        around it.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return {self.key: self.to_json(value)}</span>
+
+
+<span class="w"> </span>class TagDict(JSONTag):
+<span class="gu">@@ -169,20 +169,38 @@ class TaggedJSONSerializer:</span>
+<span class="w"> </span>        :raise KeyError: if the tag key is already registered and ``force`` is
+<span class="w"> </span>            not true.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        tag = tag_class(self)</span>
+<span class="gi">+        key = tag.key</span>
+<span class="gi">+</span>
+<span class="gi">+        if key in self.tags and not force:</span>
+<span class="gi">+            raise KeyError(f&quot;Tag &#39;{key}&#39; is already registered.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        self.tags[key] = tag</span>
+<span class="gi">+</span>
+<span class="gi">+        if index is None:</span>
+<span class="gi">+            self.order.append(tag)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self.order.insert(index, tag)</span>
+
+<span class="w"> </span>    def tag(self, value: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Convert a value to a tagged representation if necessary.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for tag in self.order:</span>
+<span class="gi">+            if tag.check(value):</span>
+<span class="gi">+                return tag.tag(value)</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def untag(self, value: dict[str, t.Any]) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Convert a tagged representation back to the original type.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(value, dict) and len(value) == 1:</span>
+<span class="gi">+            key = next(iter(value))</span>
+<span class="gi">+            if key in self.tags:</span>
+<span class="gi">+                return self.tags[key].to_python(value[key])</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def dumps(self, value: t.Any) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Tag the value and dump it to a compact JSON string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return dumps(self.tag(value), separators=(&#39;,&#39;, &#39;:&#39;))</span>
+
+<span class="w"> </span>    def loads(self, value: str) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Load data from a JSON string and deserialized any tagged objects.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.untag(loads(value))</span>
+<span class="gh">diff --git a/src/flask/logging.py b/src/flask/logging.py</span>
+<span class="gh">index 6fe6f650..f8361fee 100644</span>
+<span class="gd">--- a/src/flask/logging.py</span>
+<span class="gi">+++ b/src/flask/logging.py</span>
+<span class="gu">@@ -18,14 +18,24 @@ def wsgi_errors_stream() -&gt;t.TextIO:</span>
+<span class="w"> </span>    can&#39;t import this directly, you can refer to it as
+<span class="w"> </span>    ``ext://flask.logging.wsgi_errors_stream``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return request.environ[&#39;wsgi.errors&#39;] if request else sys.stderr</span>
+
+
+<span class="w"> </span>def has_level_handler(logger: logging.Logger) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if there is a handler in the logging chain that will handle the
+<span class="w"> </span>    given logger&#39;s :meth:`effective level &lt;~logging.Logger.getEffectiveLevel&gt;`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    level = logger.getEffectiveLevel()</span>
+<span class="gi">+    current = logger</span>
+<span class="gi">+</span>
+<span class="gi">+    while current:</span>
+<span class="gi">+        if any(handler.level &lt;= level for handler in current.handlers):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        if not current.propagate:</span>
+<span class="gi">+            break</span>
+<span class="gi">+        current = current.parent</span>
+<span class="gi">+</span>
+<span class="gi">+    return False</span>
+
+
+<span class="w"> </span>default_handler = logging.StreamHandler(wsgi_errors_stream)
+<span class="gu">@@ -46,4 +56,12 @@ def create_logger(app: App) -&gt;logging.Logger:</span>
+<span class="w"> </span>    :class:`~logging.StreamHandler` for
+<span class="w"> </span>    :func:`~flask.logging.wsgi_errors_stream` with a basic format.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    logger = logging.getLogger(app.name)</span>
+<span class="gi">+</span>
+<span class="gi">+    if app.debug and logger.level == logging.NOTSET:</span>
+<span class="gi">+        logger.setLevel(logging.DEBUG)</span>
+<span class="gi">+</span>
+<span class="gi">+    if not has_level_handler(logger):</span>
+<span class="gi">+        logger.addHandler(default_handler)</span>
+<span class="gi">+</span>
+<span class="gi">+    return logger</span>
+<span class="gh">diff --git a/src/flask/sansio/app.py b/src/flask/sansio/app.py</span>
+<span class="gh">index 2424fb7f..4b4c7b51 100644</span>
+<span class="gd">--- a/src/flask/sansio/app.py</span>
+<span class="gi">+++ b/src/flask/sansio/app.py</span>
+<span class="gu">@@ -221,7 +221,12 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.8
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.import_name == &#39;__main__&#39;:</span>
+<span class="gi">+            fn = getattr(sys.modules[&#39;__main__&#39;], &#39;__file__&#39;, None)</span>
+<span class="gi">+            if fn is None:</span>
+<span class="gi">+                return &#39;__main__&#39;</span>
+<span class="gi">+            return os.path.splitext(os.path.basename(fn))[0]</span>
+<span class="gi">+        return self.import_name</span>
+
+<span class="w"> </span>    @cached_property
+<span class="w"> </span>    def logger(self) -&gt;logging.Logger:
+<span class="gu">@@ -248,7 +253,7 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.3
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return create_logger(self)</span>
+
+<span class="w"> </span>    @cached_property
+<span class="w"> </span>    def jinja_env(self) -&gt;Environment:
+<span class="gu">@@ -258,7 +263,7 @@ class App(Scaffold):</span>
+<span class="w"> </span>        accessed. Changing :attr:`jinja_options` after that will have no
+<span class="w"> </span>        effect.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.create_jinja_environment()</span>
+
+<span class="w"> </span>    def make_config(self, instance_relative: bool=False) -&gt;Config:
+<span class="w"> </span>        &quot;&quot;&quot;Used to create the config attribute by the Flask constructor.
+<span class="gu">@@ -269,7 +274,10 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.8
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        root_path = self.root_path</span>
+<span class="gi">+        if instance_relative:</span>
+<span class="gi">+            root_path = self.instance_path</span>
+<span class="gi">+        return self.config_class(root_path, self.default_config)</span>
+
+<span class="w"> </span>    def make_aborter(self) -&gt;Aborter:
+<span class="w"> </span>        &quot;&quot;&quot;Create the object to assign to :attr:`aborter`. That object
+<span class="gu">@@ -281,7 +289,7 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.2
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.aborter_class(self.make_aborter_map())</span>
+
+<span class="w"> </span>    def auto_find_instance_path(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Tries to locate the instance path if it was not provided to the
+<span class="gu">@@ -291,7 +299,10 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.8
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        prefix, package_path = find_package(self.import_name)</span>
+<span class="gi">+        if prefix is None:</span>
+<span class="gi">+            return os.path.join(package_path, &#39;instance&#39;)</span>
+<span class="gi">+        return os.path.join(prefix, &#39;var&#39;, self.name + &#39;-instance&#39;)</span>
+
+<span class="w"> </span>    def create_global_jinja_loader(self) -&gt;DispatchingJinjaLoader:
+<span class="w"> </span>        &quot;&quot;&quot;Creates the loader for the Jinja2 environment.  Can be used to
+<span class="gu">@@ -304,7 +315,7 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.7
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return DispatchingJinjaLoader(self)</span>
+
+<span class="w"> </span>    def select_jinja_autoescape(self, filename: str) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Returns ``True`` if autoescaping should be active for the given
+<span class="gu">@@ -315,7 +326,9 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.5
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if filename is None:</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        return filename.endswith((&#39;.html&#39;, &#39;.htm&#39;, &#39;.xml&#39;, &#39;.xhtml&#39;, &#39;.svg&#39;))</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def debug(self) -&gt;bool:
+<span class="gu">@@ -328,7 +341,7 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        Default: ``False``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.config[&#39;DEBUG&#39;]</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def register_blueprint(self, blueprint: Blueprint, **options: t.Any
+<span class="gu">@@ -509,7 +522,20 @@ class App(Scaffold):</span>
+<span class="w"> </span>        blueprint handler for an exception class, app handler for an exception
+<span class="w"> </span>        class, or ``None`` if a suitable handler is not found.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        exc_class, code = self._get_exc_class_and_code(e)</span>
+<span class="gi">+</span>
+<span class="gi">+        for src in chain(blueprints, [None]):</span>
+<span class="gi">+            handler = self.error_handler_spec.get(src, {}).get(code)</span>
+<span class="gi">+            if handler is not None:</span>
+<span class="gi">+                return handler</span>
+<span class="gi">+</span>
+<span class="gi">+        for src in chain(blueprints, [None]):</span>
+<span class="gi">+            for cls in exc_class.__mro__:</span>
+<span class="gi">+                handler = self.error_handler_spec.get(src, {}).get(cls)</span>
+<span class="gi">+                if handler is not None:</span>
+<span class="gi">+                    return handler</span>
+<span class="gi">+</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def trap_http_exception(self, e: Exception) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Checks if an HTTP exception should be trapped or not.  By default
+<span class="gu">@@ -528,7 +554,17 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.8
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.config[&#39;TRAP_HTTP_EXCEPTIONS&#39;]:</span>
+<span class="gi">+            return True</span>
+<span class="gi">+</span>
+<span class="gi">+        trap_bad_request = self.config[&#39;TRAP_BAD_REQUEST_ERRORS&#39;]</span>
+<span class="gi">+</span>
+<span class="gi">+        if trap_bad_request and isinstance(e, BadRequestKeyError):</span>
+<span class="gi">+            if self.debug:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+            return True</span>
+<span class="gi">+</span>
+<span class="gi">+        return False</span>
+
+<span class="w"> </span>    def should_ignore_error(self, error: (BaseException | None)) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;This is called to figure out if an error should be ignored
+<span class="gu">@@ -538,7 +574,7 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.10
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return False</span>
+
+<span class="w"> </span>    def redirect(self, location: str, code: int=302) -&gt;BaseResponse:
+<span class="w"> </span>        &quot;&quot;&quot;Create a redirect response object.
+<span class="gu">@@ -552,7 +588,7 @@ class App(Scaffold):</span>
+<span class="w"> </span>        .. versionadded:: 2.2
+<span class="w"> </span>            Moved from ``flask.redirect``, which calls this method.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return _wz_redirect(location, code=code, Response=self.response_class)</span>
+
+<span class="w"> </span>    def inject_url_defaults(self, endpoint: str, values: dict[str, t.Any]
+<span class="w"> </span>        ) -&gt;None:
+<span class="gu">@@ -562,7 +598,12 @@ class App(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 0.7
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        funcs = self.url_default_functions.get(None, ())</span>
+<span class="gi">+        if &#39;.&#39; in endpoint:</span>
+<span class="gi">+            bp = endpoint.rsplit(&#39;.&#39;, 1)[0]</span>
+<span class="gi">+            funcs = chain(funcs, self.url_default_functions.get(bp, ()))</span>
+<span class="gi">+        for func in funcs:</span>
+<span class="gi">+            func(endpoint, values)</span>
+
+<span class="w"> </span>    def handle_url_build_error(self, error: BuildError, endpoint: str,
+<span class="w"> </span>        values: dict[str, t.Any]) -&gt;str:
+<span class="gu">@@ -580,4 +621,18 @@ class App(Scaffold):</span>
+<span class="w"> </span>        :param endpoint: The endpoint being built.
+<span class="w"> </span>        :param values: The keyword arguments passed to ``url_for``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for handler in self.url_build_error_handlers:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                rv = handler(error, endpoint, values)</span>
+<span class="gi">+            except BuildError as e:</span>
+<span class="gi">+                # make error available outside except block</span>
+<span class="gi">+                error = e</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if rv is not None:</span>
+<span class="gi">+                    return rv</span>
+<span class="gi">+</span>
+<span class="gi">+        # Re-raise if called with an active exception, otherwise raise</span>
+<span class="gi">+        # the passed in exception.</span>
+<span class="gi">+        if error is sys.exc_info()[1]:</span>
+<span class="gi">+            raise</span>
+<span class="gi">+        raise error</span>
+<span class="gh">diff --git a/src/flask/sansio/blueprints.py b/src/flask/sansio/blueprints.py</span>
+<span class="gh">index bd3b9de9..d4f74dcd 100644</span>
+<span class="gd">--- a/src/flask/sansio/blueprints.py</span>
+<span class="gi">+++ b/src/flask/sansio/blueprints.py</span>
+<span class="gu">@@ -61,7 +61,19 @@ class BlueprintSetupState:</span>
+<span class="w"> </span>        to the application.  The endpoint is automatically prefixed with the
+<span class="w"> </span>        blueprint&#39;s name.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.url_prefix is not None:</span>
+<span class="gi">+            if rule:</span>
+<span class="gi">+                rule = f&quot;{self.url_prefix}{rule}&quot;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                rule = self.url_prefix</span>
+<span class="gi">+        options.setdefault(&quot;subdomain&quot;, self.subdomain)</span>
+<span class="gi">+        if endpoint is None:</span>
+<span class="gi">+            endpoint = _endpoint_from_view_func(view_func)</span>
+<span class="gi">+        defaults = self.url_defaults</span>
+<span class="gi">+        if &quot;defaults&quot; in options:</span>
+<span class="gi">+            defaults = dict(defaults, **options.pop(&quot;defaults&quot;))</span>
+<span class="gi">+        self.app.add_url_rule(rule, f&quot;{self.name}.{endpoint}&quot;,</span>
+<span class="gi">+                              view_func, defaults=defaults, **options)</span>
+
+
+<span class="w"> </span>class Blueprint(Scaffold):
+<span class="gu">@@ -148,7 +160,7 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        state as argument as returned by the :meth:`make_setup_state`
+<span class="w"> </span>        method.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.deferred_functions.append(func)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def record_once(self, func: DeferredSetupFunction) -&gt;None:
+<span class="gu">@@ -157,7 +169,10 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        blueprint is registered a second time on the application, the
+<span class="w"> </span>        function passed is not called.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def wrapper(state: BlueprintSetupState) -&gt; None:</span>
+<span class="gi">+            if state.first_registration:</span>
+<span class="gi">+                func(state)</span>
+<span class="gi">+        return self.record(update_wrapper(wrapper, func))</span>
+
+<span class="w"> </span>    def make_setup_state(self, app: App, options: dict[str, t.Any],
+<span class="w"> </span>        first_registration: bool=False) -&gt;BlueprintSetupState:
+<span class="gu">@@ -165,7 +180,7 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        object that is later passed to the register callback functions.
+<span class="w"> </span>        Subclasses can override this to return a subclass of the setup state.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return BlueprintSetupState(self, app, options, first_registration)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def register_blueprint(self, blueprint: Blueprint, **options: t.Any
+<span class="gu">@@ -182,7 +197,7 @@ class Blueprint(Scaffold):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._blueprints.append((blueprint, options))</span>
+
+<span class="w"> </span>    def register(self, app: App, options: dict[str, t.Any]) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Called by :meth:`Flask.register_blueprint` to register all
+<span class="gu">@@ -213,7 +228,29 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>            blueprint to be registered multiple times with unique names
+<span class="w"> </span>            for ``url_for``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        first_registration = not self._got_registered_once</span>
+<span class="gi">+        if first_registration:</span>
+<span class="gi">+            self._got_registered_once = True</span>
+<span class="gi">+</span>
+<span class="gi">+        if options.get(&quot;name&quot;) and options[&quot;name&quot;] in app.blueprints:</span>
+<span class="gi">+            raise ValueError(f&quot;Blueprint name &#39;{options[&#39;name&#39;]}&#39; is already registered.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._validate_blueprint_name(app)</span>
+<span class="gi">+</span>
+<span class="gi">+        state = self.make_setup_state(app, options, first_registration)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.has_static_folder:</span>
+<span class="gi">+            state.add_url_rule(</span>
+<span class="gi">+                f&quot;{self.static_url_path}/&lt;path:filename&gt;&quot;,</span>
+<span class="gi">+                view_func=self.send_static_file,</span>
+<span class="gi">+                endpoint=&quot;static&quot;,</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        for deferred in self.deferred_functions:</span>
+<span class="gi">+            deferred(state)</span>
+<span class="gi">+</span>
+<span class="gi">+        for blueprint, blueprint_options in self._blueprints:</span>
+<span class="gi">+            blueprint.register(app, dict(blueprint_options, **options))</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def add_url_rule(self, rule: str, endpoint: (str | None)=None,
+<span class="gu">@@ -226,7 +263,8 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        The URL rule is prefixed with the blueprint&#39;s URL prefix. The endpoint name,
+<span class="w"> </span>        used with :func:`url_for`, is prefixed with the blueprint&#39;s name.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record(lambda s: s.add_url_rule(rule, endpoint, view_func,</span>
+<span class="gi">+                                             provide_automatic_options, **options))</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_template_filter(self, name: (str | None)=None) -&gt;t.Callable[[
+<span class="gu">@@ -237,7 +275,10 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        :param name: the optional name of the filter, otherwise the
+<span class="w"> </span>                     function name will be used.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(f: T_template_filter) -&gt; T_template_filter:</span>
+<span class="gi">+            self.add_app_template_filter(f, name=name)</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def add_app_template_filter(self, f: ft.TemplateFilterCallable, name: (
+<span class="gu">@@ -249,7 +290,7 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        :param name: the optional name of the filter, otherwise the
+<span class="w"> </span>                     function name will be used.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record(lambda s: s.app.add_template_filter(f, name))</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_template_test(self, name: (str | None)=None) -&gt;t.Callable[[
+<span class="gu">@@ -262,7 +303,10 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        :param name: the optional name of the test, otherwise the
+<span class="w"> </span>                     function name will be used.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(f: T_template_test) -&gt; T_template_test:</span>
+<span class="gi">+            self.add_app_template_test(f, name=name)</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def add_app_template_test(self, f: ft.TemplateTestCallable, name: (str |
+<span class="gu">@@ -276,7 +320,7 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        :param name: the optional name of the test, otherwise the
+<span class="w"> </span>                     function name will be used.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record(lambda s: s.app.add_template_test(f, name))</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_template_global(self, name: (str | None)=None) -&gt;t.Callable[[
+<span class="gu">@@ -289,7 +333,10 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        :param name: the optional name of the global, otherwise the
+<span class="w"> </span>                     function name will be used.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(f: T_template_global) -&gt; T_template_global:</span>
+<span class="gi">+            self.add_app_template_global(f, name=name)</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def add_app_template_global(self, f: ft.TemplateGlobalCallable, name: (
+<span class="gu">@@ -303,28 +350,31 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        :param name: the optional name of the global, otherwise the
+<span class="w"> </span>                     function name will be used.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record(lambda s: s.app.add_template_global(f, name))</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def before_app_request(self, f: T_before_request) -&gt;T_before_request:
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`before_request`, but before every request, not only those handled
+<span class="w"> </span>        by the blueprint. Equivalent to :meth:`.Flask.before_request`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record_once(lambda s: s.app.before_request(f))</span>
+<span class="gi">+        return f</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def after_app_request(self, f: T_after_request) -&gt;T_after_request:
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`after_request`, but after every request, not only those handled
+<span class="w"> </span>        by the blueprint. Equivalent to :meth:`.Flask.after_request`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record_once(lambda s: s.app.after_request(f))</span>
+<span class="gi">+        return f</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def teardown_app_request(self, f: T_teardown) -&gt;T_teardown:
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`teardown_request`, but after every request, not only those
+<span class="w"> </span>        handled by the blueprint. Equivalent to :meth:`.Flask.teardown_request`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record_once(lambda s: s.app.teardown_request(f))</span>
+<span class="gi">+        return f</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_context_processor(self, f: T_template_context_processor
+<span class="gu">@@ -332,7 +382,8 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`context_processor`, but for templates rendered by every view, not
+<span class="w"> </span>        only by the blueprint. Equivalent to :meth:`.Flask.context_processor`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record_once(lambda s: s.app.context_processor(f))</span>
+<span class="gi">+        return f</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_errorhandler(self, code: (type[Exception] | int)) -&gt;t.Callable[
+<span class="gu">@@ -340,7 +391,10 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`errorhandler`, but for every request, not only those handled by
+<span class="w"> </span>        the blueprint. Equivalent to :meth:`.Flask.errorhandler`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(f: T_error_handler) -&gt; T_error_handler:</span>
+<span class="gi">+            self.record_once(lambda s: s.app.errorhandler(code)(f))</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_url_value_preprocessor(self, f: T_url_value_preprocessor
+<span class="gu">@@ -348,11 +402,13 @@ class Blueprint(Scaffold):</span>
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`url_value_preprocessor`, but for every request, not only those
+<span class="w"> </span>        handled by the blueprint. Equivalent to :meth:`.Flask.url_value_preprocessor`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record_once(lambda s: s.app.url_value_preprocessor(f))</span>
+<span class="gi">+        return f</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def app_url_defaults(self, f: T_url_defaults) -&gt;T_url_defaults:
+<span class="w"> </span>        &quot;&quot;&quot;Like :meth:`url_defaults`, but for every request, not only those handled by
+<span class="w"> </span>        the blueprint. Equivalent to :meth:`.Flask.url_defaults`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.record_once(lambda s: s.app.url_defaults(f))</span>
+<span class="gi">+        return f</span>
+<span class="gh">diff --git a/src/flask/sansio/scaffold.py b/src/flask/sansio/scaffold.py</span>
+<span class="gh">index e35f461d..1f1b673d 100644</span>
+<span class="gd">--- a/src/flask/sansio/scaffold.py</span>
+<span class="gi">+++ b/src/flask/sansio/scaffold.py</span>
+<span class="gu">@@ -91,7 +91,9 @@ class Scaffold:</span>
+<span class="w"> </span>        &quot;&quot;&quot;The absolute path to the configured static folder. ``None``
+<span class="w"> </span>        if no static folder is set.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._static_folder is not None:</span>
+<span class="gi">+            return os.path.join(self.root_path, self._static_folder)</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def has_static_folder(self) -&gt;bool:
+<span class="gu">@@ -99,7 +101,7 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 0.5
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._static_folder is not None</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def static_url_path(self) -&gt;(str | None):
+<span class="gu">@@ -108,7 +110,11 @@ class Scaffold:</span>
+<span class="w"> </span>        If it was not configured during init, it is derived from
+<span class="w"> </span>        :attr:`static_folder`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._static_url_path is not None:</span>
+<span class="gi">+            return self._static_url_path</span>
+<span class="gi">+        if self.static_folder is not None:</span>
+<span class="gi">+            return &#39;/&#39; + os.path.basename(self.static_folder)</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    @cached_property
+<span class="w"> </span>    def jinja_loader(self) -&gt;(BaseLoader | None):
+<span class="gu">@@ -118,7 +124,9 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 0.5
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.template_folder is not None:</span>
+<span class="gi">+            return FileSystemLoader(os.path.join(self.root_path, self.template_folder))</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def get(self, rule: str, **options: t.Any) -&gt;t.Callable[[T_route], T_route
+<span class="gu">@@ -127,7 +135,7 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.route(rule, methods=[&quot;GET&quot;], **options)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def post(self, rule: str, **options: t.Any) -&gt;t.Callable[[T_route], T_route
+<span class="gu">@@ -136,7 +144,7 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.route(rule, methods=[&quot;POST&quot;], **options)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def put(self, rule: str, **options: t.Any) -&gt;t.Callable[[T_route], T_route
+<span class="gu">@@ -145,7 +153,7 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.route(rule, methods=[&quot;PUT&quot;], **options)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def delete(self, rule: str, **options: t.Any) -&gt;t.Callable[[T_route],
+<span class="gu">@@ -154,7 +162,7 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.route(rule, methods=[&quot;DELETE&quot;], **options)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def patch(self, rule: str, **options: t.Any) -&gt;t.Callable[[T_route],
+<span class="gu">@@ -163,7 +171,7 @@ class Scaffold:</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.route(rule, methods=[&quot;PATCH&quot;], **options)</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def route(self, rule: str, **options: t.Any) -&gt;t.Callable[[T_route],
+<span class="gu">@@ -190,7 +198,11 @@ class Scaffold:</span>
+<span class="w"> </span>        :param options: Extra options passed to the
+<span class="w"> </span>            :class:`~werkzeug.routing.Rule` object.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(f: T_route) -&gt; T_route:</span>
+<span class="gi">+            endpoint = options.pop(&quot;endpoint&quot;, None)</span>
+<span class="gi">+            self.add_url_rule(rule, endpoint, f, **options)</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def add_url_rule(self, rule: str, endpoint: (str | None)=None,
+<span class="gu">@@ -254,7 +266,38 @@ class Scaffold:</span>
+<span class="w"> </span>        :param options: Extra options passed to the
+<span class="w"> </span>            :class:`~werkzeug.routing.Rule` object.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if endpoint is None and view_func is not None:</span>
+<span class="gi">+            endpoint = view_func.__name__</span>
+<span class="gi">+        </span>
+<span class="gi">+        methods = options.pop(&quot;methods&quot;, None)</span>
+<span class="gi">+        if methods is None:</span>
+<span class="gi">+            methods = getattr(view_func, &quot;methods&quot;, None) or (&quot;GET&quot;,)</span>
+<span class="gi">+        if isinstance(methods, str):</span>
+<span class="gi">+            methods = [methods]</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Add &quot;HEAD&quot; if &quot;GET&quot; is present</span>
+<span class="gi">+        if &quot;GET&quot; in methods:</span>
+<span class="gi">+            methods = set(methods)</span>
+<span class="gi">+            methods.add(&quot;HEAD&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Add automatic OPTIONS method handling</span>
+<span class="gi">+        if provide_automatic_options is None:</span>
+<span class="gi">+            provide_automatic_options = getattr(view_func, &quot;provide_automatic_options&quot;, None)</span>
+<span class="gi">+        if provide_automatic_options is None:</span>
+<span class="gi">+            provide_automatic_options = True</span>
+<span class="gi">+        if provide_automatic_options:</span>
+<span class="gi">+            methods = set(methods)</span>
+<span class="gi">+            methods.add(&quot;OPTIONS&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        options[&quot;methods&quot;] = methods</span>
+<span class="gi">+        </span>
+<span class="gi">+        rule = self.url_rule_class(rule, endpoint=endpoint, **options)</span>
+<span class="gi">+        self.url_map.add(rule)</span>
+<span class="gi">+        if view_func is not None:</span>
+<span class="gi">+            old_func = self.view_functions.get(endpoint)</span>
+<span class="gi">+            if old_func is not None and old_func != view_func:</span>
+<span class="gi">+                raise AssertionError(f&quot;View function mapping is overwriting an existing endpoint function: {endpoint}&quot;)</span>
+<span class="gi">+            self.view_functions[endpoint] = view_func</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def endpoint(self, endpoint: str) -&gt;t.Callable[[F], F]:
+<span class="gu">@@ -273,7 +316,10 @@ class Scaffold:</span>
+<span class="w"> </span>        :param endpoint: The endpoint name to associate with the view
+<span class="w"> </span>            function.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(f: F) -&gt; F:</span>
+<span class="gi">+            self.view_functions[endpoint] = f</span>
+<span class="gi">+            return f</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    @setupmethod
+<span class="w"> </span>    def before_request(self, f: T_before_request) -&gt;T_before_request:
+<span class="gu">@@ -462,19 +508,35 @@ class Scaffold:</span>
+<span class="w"> </span>        :param exc_class_or_code: Any exception class, or an HTTP status
+<span class="w"> </span>            code as an integer.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(exc_class_or_code, int):</span>
+<span class="gi">+            exc_class = default_exceptions.get(exc_class_or_code)</span>
+<span class="gi">+            if exc_class is None:</span>
+<span class="gi">+                raise ValueError(f&quot;&#39;{exc_class_or_code}&#39; is not a valid HTTP error code.&quot;)</span>
+<span class="gi">+            return exc_class, exc_class_or_code</span>
+<span class="gi">+        </span>
+<span class="gi">+        if isinstance(exc_class_or_code, type) and issubclass(exc_class_or_code, Exception):</span>
+<span class="gi">+            if issubclass(exc_class_or_code, HTTPException):</span>
+<span class="gi">+                return exc_class_or_code, exc_class_or_code.code</span>
+<span class="gi">+            return exc_class_or_code, None</span>
+<span class="gi">+        </span>
+<span class="gi">+        raise ValueError(f&quot;&#39;{exc_class_or_code}&#39; is neither an exception class nor an HTTP status code.&quot;)</span>
+
+
+<span class="w"> </span>def _endpoint_from_view_func(view_func: ft.RouteCallable) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Internal helper that returns the default endpoint for a given
+<span class="w"> </span>    function.  This always is the function name.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return view_func.__name__</span>
+
+
+<span class="w"> </span>def _find_package_path(import_name: str) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Find the path that contains the package or module.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    module = importlib.util.find_spec(import_name)</span>
+<span class="gi">+    if module is None:</span>
+<span class="gi">+        raise ValueError(f&quot;Could not find package or module &#39;{import_name}&#39;&quot;)</span>
+<span class="gi">+    if module.submodule_search_locations:</span>
+<span class="gi">+        return os.path.dirname(os.path.dirname(module.origin))</span>
+<span class="gi">+    return os.path.dirname(module.origin)</span>
+
+
+<span class="w"> </span>def find_package(import_name: str) -&gt;tuple[str | None, str]:
+<span class="gu">@@ -490,4 +552,25 @@ def find_package(import_name: str) -&gt;tuple[str | None, str]:</span>
+<span class="w"> </span>    for import. If the package is not installed, it&#39;s assumed that the
+<span class="w"> </span>    package was imported from the current working directory.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    root_mod_name = import_name.split(&#39;.&#39;)[0]</span>
+<span class="gi">+    module = importlib.util.find_spec(root_mod_name)</span>
+<span class="gi">+    if module is None:</span>
+<span class="gi">+        return None, os.getcwd()</span>
+<span class="gi">+    </span>
+<span class="gi">+    package_path = _find_package_path(root_mod_name)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Check if it&#39;s installed in site-packages</span>
+<span class="gi">+    site_parent = os.path.abspath(os.path.join(package_path, &#39;..&#39;))</span>
+<span class="gi">+    site_folder = os.path.basename(site_parent)</span>
+<span class="gi">+    if site_folder.lower() == &#39;site-packages&#39;:</span>
+<span class="gi">+        parent = os.path.dirname(site_parent)</span>
+<span class="gi">+        if os.path.basename(parent) == &#39;Lib&#39;:</span>
+<span class="gi">+            prefix = os.path.dirname(parent)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            prefix = parent</span>
+<span class="gi">+    elif package_path.lower().endswith(&#39;lib&#39; + os.sep + root_mod_name):</span>
+<span class="gi">+        prefix = package_path[:package_path.lower().rindex(&#39;lib&#39; + os.sep + root_mod_name)]</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        prefix = None</span>
+<span class="gi">+    </span>
+<span class="gi">+    return prefix, package_path</span>
+<span class="gh">diff --git a/src/flask/sessions.py b/src/flask/sessions.py</span>
+<span class="gh">index 5ed091cb..42950cd8 100644</span>
+<span class="gd">--- a/src/flask/sessions.py</span>
+<span class="gi">+++ b/src/flask/sessions.py</span>
+<span class="gu">@@ -21,7 +21,7 @@ class SessionMixin(MutableMapping):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def permanent(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;This reflects the ``&#39;_permanent&#39;`` key in the dict.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.get(&#39;_permanent&#39;, False)</span>
+<span class="w"> </span>    new = False
+<span class="w"> </span>    modified = True
+<span class="w"> </span>    accessed = True
+<span class="gu">@@ -109,7 +109,7 @@ class SessionInterface:</span>
+
+<span class="w"> </span>        This creates an instance of :attr:`null_session_class` by default.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.null_session_class()</span>
+
+<span class="w"> </span>    def is_null_session(self, obj: object) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Checks if a given object is a null session.  Null sessions are
+<span class="gu">@@ -118,11 +118,11 @@ class SessionInterface:</span>
+<span class="w"> </span>        This checks if the object is an instance of :attr:`null_session_class`
+<span class="w"> </span>        by default.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return isinstance(obj, self.null_session_class)</span>
+
+<span class="w"> </span>    def get_cookie_name(self, app: Flask) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;The name of the session cookie. Uses``app.config[&quot;SESSION_COOKIE_NAME&quot;]``.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return app.config[&quot;SESSION_COOKIE_NAME&quot;]</span>
+
+<span class="w"> </span>    def get_cookie_domain(self, app: Flask) -&gt;(str | None):
+<span class="w"> </span>        &quot;&quot;&quot;The value of the ``Domain`` parameter on the session cookie. If not set,
+<span class="gu">@@ -134,7 +134,7 @@ class SessionInterface:</span>
+<span class="w"> </span>        .. versionchanged:: 2.3
+<span class="w"> </span>            Not set by default, does not fall back to ``SERVER_NAME``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return app.config.get(&quot;SESSION_COOKIE_DOMAIN&quot;)</span>
+
+<span class="w"> </span>    def get_cookie_path(self, app: Flask) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Returns the path for which the cookie should be valid.  The
+<span class="gu">@@ -142,27 +142,27 @@ class SessionInterface:</span>
+<span class="w"> </span>        config var if it&#39;s set, and falls back to ``APPLICATION_ROOT`` or
+<span class="w"> </span>        uses ``/`` if it&#39;s ``None``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return app.config.get(&quot;SESSION_COOKIE_PATH&quot;) or app.config.get(&quot;APPLICATION_ROOT&quot;) or &quot;/&quot;</span>
+
+<span class="w"> </span>    def get_cookie_httponly(self, app: Flask) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Returns True if the session cookie should be httponly.  This
+<span class="w"> </span>        currently just returns the value of the ``SESSION_COOKIE_HTTPONLY``
+<span class="w"> </span>        config var.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return app.config.get(&quot;SESSION_COOKIE_HTTPONLY&quot;, True)</span>
+
+<span class="w"> </span>    def get_cookie_secure(self, app: Flask) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Returns True if the cookie should be secure.  This currently
+<span class="w"> </span>        just returns the value of the ``SESSION_COOKIE_SECURE`` setting.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return app.config.get(&quot;SESSION_COOKIE_SECURE&quot;, False)</span>
+
+<span class="w"> </span>    def get_cookie_samesite(self, app: Flask) -&gt;(str | None):
+<span class="w"> </span>        &quot;&quot;&quot;Return ``&#39;Strict&#39;`` or ``&#39;Lax&#39;`` if the cookie should use the
+<span class="w"> </span>        ``SameSite`` attribute. This currently just returns the value of
+<span class="w"> </span>        the :data:`SESSION_COOKIE_SAMESITE` setting.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return app.config.get(&quot;SESSION_COOKIE_SAMESITE&quot;)</span>
+
+<span class="w"> </span>    def get_expiration_time(self, app: Flask, session: SessionMixin) -&gt;(
+<span class="w"> </span>        datetime | None):
+<span class="gu">@@ -171,7 +171,9 @@ class SessionInterface:</span>
+<span class="w"> </span>        default implementation returns now + the permanent session
+<span class="w"> </span>        lifetime configured on the application.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if session.permanent:</span>
+<span class="gi">+            return datetime.now(timezone.utc) + app.permanent_session_lifetime</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def should_set_cookie(self, app: Flask, session: SessionMixin) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Used by session backends to determine if a ``Set-Cookie`` header
+<span class="gu">@@ -184,7 +186,9 @@ class SessionInterface:</span>
+
+<span class="w"> </span>        .. versionadded:: 0.11
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return session.modified or (</span>
+<span class="gi">+            session.permanent and app.config.get(&#39;SESSION_REFRESH_EACH_REQUEST&#39;, False)</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def open_session(self, app: Flask, request: Request) -&gt;(SessionMixin | None
+<span class="w"> </span>        ):
+<span class="gu">@@ -199,7 +203,7 @@ class SessionInterface:</span>
+<span class="w"> </span>        context will fall back to using :meth:`make_null_session`
+<span class="w"> </span>        in this case.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def save_session(self, app: Flask, session: SessionMixin, response:
+<span class="w"> </span>        Response) -&gt;None:
+<span class="gu">@@ -207,7 +211,8 @@ class SessionInterface:</span>
+<span class="w"> </span>        a response, before removing the request context. It is skipped
+<span class="w"> </span>        if :meth:`is_null_session` returns ``True``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.is_null_session(session):</span>
+<span class="gi">+            return</span>
+
+
+<span class="w"> </span>session_json_serializer = TaggedJSONSerializer()
+<span class="gu">@@ -218,7 +223,7 @@ def _lazy_sha1(string: bytes=b&#39;&#39;) -&gt;t.Any:</span>
+<span class="w"> </span>    SHA-1, in which case the import and use as a default would fail before the
+<span class="w"> </span>    developer can configure something else.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return hashlib.sha1(string)</span>
+
+
+<span class="w"> </span>class SecureCookieSessionInterface(SessionInterface):
+<span class="gh">diff --git a/src/flask/templating.py b/src/flask/templating.py</span>
+<span class="gh">index 861e328e..a86be9e0 100644</span>
+<span class="gd">--- a/src/flask/templating.py</span>
+<span class="gi">+++ b/src/flask/templating.py</span>
+<span class="gu">@@ -21,7 +21,12 @@ def _default_template_ctx_processor() -&gt;dict[str, t.Any]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Default template context processor.  Injects `request`,
+<span class="w"> </span>    `session` and `g`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from .globals import g, session</span>
+<span class="gi">+    return {</span>
+<span class="gi">+        &#39;request&#39;: _cv_request.get(None),</span>
+<span class="gi">+        &#39;session&#39;: session,</span>
+<span class="gi">+        &#39;g&#39;: g,</span>
+<span class="gi">+    }</span>
+
+
+<span class="w"> </span>class Environment(BaseEnvironment):
+<span class="gu">@@ -54,7 +59,17 @@ def render_template(template_name_or_list: (str | Template | list[str |</span>
+<span class="w"> </span>        a list is given, the first name to exist will be rendered.
+<span class="w"> </span>    :param context: The variables to make available in the template.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ctx = _cv_app.get(current_app)._get_current_object()</span>
+<span class="gi">+    ctx.update(context)</span>
+<span class="gi">+    before_render_template.send(current_app._get_current_object(),</span>
+<span class="gi">+                                template=template_name_or_list,</span>
+<span class="gi">+                                context=ctx)</span>
+<span class="gi">+    template = current_app.jinja_env.get_or_select_template(template_name_or_list)</span>
+<span class="gi">+    rv = template.render(ctx)</span>
+<span class="gi">+    template_rendered.send(current_app._get_current_object(),</span>
+<span class="gi">+                           template=template,</span>
+<span class="gi">+                           context=ctx)</span>
+<span class="gi">+    return rv</span>
+
+
+<span class="w"> </span>def render_template_string(source: str, **context: t.Any) -&gt;str:
+<span class="gu">@@ -64,7 +79,17 @@ def render_template_string(source: str, **context: t.Any) -&gt;str:</span>
+<span class="w"> </span>    :param source: The source code of the template to render.
+<span class="w"> </span>    :param context: The variables to make available in the template.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ctx = _cv_app.get(current_app)._get_current_object()</span>
+<span class="gi">+    ctx.update(context)</span>
+<span class="gi">+    before_render_template.send(current_app._get_current_object(),</span>
+<span class="gi">+                                template=source,</span>
+<span class="gi">+                                context=ctx)</span>
+<span class="gi">+    template = current_app.jinja_env.from_string(source)</span>
+<span class="gi">+    rv = template.render(ctx)</span>
+<span class="gi">+    template_rendered.send(current_app._get_current_object(),</span>
+<span class="gi">+                           template=template,</span>
+<span class="gi">+                           context=ctx)</span>
+<span class="gi">+    return rv</span>
+
+
+<span class="w"> </span>def stream_template(template_name_or_list: (str | Template | list[str |
+<span class="gu">@@ -79,7 +104,19 @@ def stream_template(template_name_or_list: (str | Template | list[str |</span>
+
+<span class="w"> </span>    .. versionadded:: 2.2
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    app = _cv_app.get(current_app)</span>
+<span class="gi">+    ctx = app._get_current_object()</span>
+<span class="gi">+    ctx.update(context)</span>
+<span class="gi">+    before_render_template.send(app._get_current_object(),</span>
+<span class="gi">+                                template=template_name_or_list,</span>
+<span class="gi">+                                context=ctx)</span>
+<span class="gi">+    template = app.jinja_env.get_or_select_template(template_name_or_list)</span>
+<span class="gi">+    rv = template.stream(ctx)</span>
+<span class="gi">+    rv = stream_with_context(rv)</span>
+<span class="gi">+    template_rendered.send(app._get_current_object(),</span>
+<span class="gi">+                           template=template,</span>
+<span class="gi">+                           context=ctx)</span>
+<span class="gi">+    return rv</span>
+
+
+<span class="w"> </span>def stream_template_string(source: str, **context: t.Any) -&gt;t.Iterator[str]:
+<span class="gu">@@ -92,4 +129,16 @@ def stream_template_string(source: str, **context: t.Any) -&gt;t.Iterator[str]:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.2
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    app = _cv_app.get(current_app)</span>
+<span class="gi">+    ctx = app._get_current_object()</span>
+<span class="gi">+    ctx.update(context)</span>
+<span class="gi">+    before_render_template.send(app._get_current_object(),</span>
+<span class="gi">+                                template=source,</span>
+<span class="gi">+                                context=ctx)</span>
+<span class="gi">+    template = app.jinja_env.from_string(source)</span>
+<span class="gi">+    rv = template.stream(ctx)</span>
+<span class="gi">+    rv = stream_with_context(rv)</span>
+<span class="gi">+    template_rendered.send(app._get_current_object(),</span>
+<span class="gi">+                           template=template,</span>
+<span class="gi">+                           context=ctx)</span>
+<span class="gi">+    return rv</span>
+<span class="gh">diff --git a/src/flask/testing.py b/src/flask/testing.py</span>
+<span class="gh">index 7c533f33..daff8a9b 100644</span>
+<span class="gd">--- a/src/flask/testing.py</span>
+<span class="gi">+++ b/src/flask/testing.py</span>
+<span class="gu">@@ -70,7 +70,7 @@ class EnvironBuilder(werkzeug.test.EnvironBuilder):</span>
+<span class="w"> </span>        The serialization will be configured according to the config associated
+<span class="w"> </span>        with this EnvironBuilder&#39;s ``app``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.app.json.dumps(obj, **kwargs)</span>
+
+
+<span class="w"> </span>_werkzeug_version = &#39;&#39;
+<span class="gu">@@ -118,7 +118,31 @@ class FlaskClient(Client):</span>
+<span class="w"> </span>        :meth:`~flask.Flask.test_request_context` which are directly
+<span class="w"> </span>        passed through.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.cookie_jar is None:</span>
+<span class="gi">+            raise RuntimeError(&quot;Session transactions only make sense with cookies enabled.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        app = self.application</span>
+<span class="gi">+        environ_overrides = kwargs.setdefault(&quot;environ_overrides&quot;, {})</span>
+<span class="gi">+        self.cookie_jar.inject_wsgi(environ_overrides)</span>
+<span class="gi">+        outer_reqctx = app.request_context(environ_overrides)</span>
+<span class="gi">+        outer_reqctx.push()</span>
+<span class="gi">+</span>
+<span class="gi">+        session_interface = app.session_interface</span>
+<span class="gi">+        session = session_interface.open_session(app, outer_reqctx.request)</span>
+<span class="gi">+</span>
+<span class="gi">+        if session is None:</span>
+<span class="gi">+            raise RuntimeError(&quot;Session backend did not open a session.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            yield session</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            resp = app.response_class()</span>
+<span class="gi">+            if not session_interface.is_null_session(session):</span>
+<span class="gi">+                session_interface.save_session(app, session, resp)</span>
+<span class="gi">+            headers = resp.get_wsgi_headers(outer_reqctx.request.environ)</span>
+<span class="gi">+            self.cookie_jar.extract_wsgi(headers)</span>
+<span class="gi">+</span>
+<span class="gi">+        outer_reqctx.pop()</span>
+
+<span class="w"> </span>    def __enter__(self) -&gt;FlaskClient:
+<span class="w"> </span>        if self.preserve_context:
+<span class="gu">@@ -158,4 +182,10 @@ class FlaskCliRunner(CliRunner):</span>
+
+<span class="w"> </span>        :return: a :class:`~click.testing.Result` object.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if cli is None:</span>
+<span class="gi">+            cli = self.app.cli</span>
+<span class="gi">+</span>
+<span class="gi">+        if &quot;obj&quot; not in kwargs:</span>
+<span class="gi">+            kwargs[&quot;obj&quot;] = ScriptInfo(create_app=lambda: self.app)</span>
+<span class="gi">+</span>
+<span class="gi">+        return super().invoke(cli, args, **kwargs)</span>
+<span class="gh">diff --git a/src/flask/views.py b/src/flask/views.py</span>
+<span class="gh">index 25272f32..a1e006e3 100644</span>
+<span class="gd">--- a/src/flask/views.py</span>
+<span class="gi">+++ b/src/flask/views.py</span>
+<span class="gu">@@ -49,7 +49,9 @@ class View:</span>
+<span class="w"> </span>        this and return a valid response. Any variables from the URL
+<span class="w"> </span>        rule are passed as keyword arguments.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(</span>
+<span class="gi">+            f&quot;{self.__class__.__name__} must implement dispatch_request method.&quot;</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def as_view(cls, name: str, *class_args: t.Any, **class_kwargs: t.Any
+<span class="gu">@@ -69,7 +71,24 @@ class View:</span>
+<span class="w"> </span>        .. versionchanged:: 2.2
+<span class="w"> </span>            Added the ``init_every_request`` class attribute.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def view(*args: t.Any, **kwargs: t.Any) -&gt;ft.ResponseReturnValue:</span>
+<span class="gi">+            self = view.view_class(*class_args, **class_kwargs)</span>
+<span class="gi">+            return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        if cls.decorators:</span>
+<span class="gi">+            view.__name__ = name</span>
+<span class="gi">+            view.__module__ = cls.__module__</span>
+<span class="gi">+            for decorator in cls.decorators:</span>
+<span class="gi">+                view = decorator(view)</span>
+<span class="gi">+</span>
+<span class="gi">+        view.view_class = cls</span>
+<span class="gi">+        view.__name__ = name</span>
+<span class="gi">+        view.__doc__ = cls.__doc__</span>
+<span class="gi">+        view.__module__ = cls.__module__</span>
+<span class="gi">+        view.methods = cls.methods</span>
+<span class="gi">+        view.provide_automatic_options = cls.provide_automatic_options</span>
+<span class="gi">+</span>
+<span class="gi">+        return view</span>
+
+
+<span class="w"> </span>class MethodView(View):
+<span class="gh">diff --git a/src/flask/wrappers.py b/src/flask/wrappers.py</span>
+<span class="gh">index e086f271..61243c33 100644</span>
+<span class="gd">--- a/src/flask/wrappers.py</span>
+<span class="gi">+++ b/src/flask/wrappers.py</span>
+<span class="gu">@@ -31,7 +31,7 @@ class Request(RequestBase):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def max_content_length(self) -&gt;(int | None):
+<span class="w"> </span>        &quot;&quot;&quot;Read-only view of the ``MAX_CONTENT_LENGTH`` config key.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return current_app.config.get(&#39;MAX_CONTENT_LENGTH&#39;)</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def endpoint(self) -&gt;(str | None):
+<span class="gu">@@ -43,7 +43,9 @@ class Request(RequestBase):</span>
+<span class="w"> </span>        This in combination with :attr:`view_args` can be used to
+<span class="w"> </span>        reconstruct the same URL or a modified URL.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.url_rule is not None:</span>
+<span class="gi">+            return self.url_rule.endpoint</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def blueprint(self) -&gt;(str | None):
+<span class="gu">@@ -57,7 +59,9 @@ class Request(RequestBase):</span>
+<span class="w"> </span>        created with. It may have been nested, or registered with a
+<span class="w"> </span>        different name.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.endpoint is not None:</span>
+<span class="gi">+            return _split_blueprint_path(self.endpoint)[0]</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def blueprints(self) -&gt;list[str]:
+<span class="gu">@@ -69,7 +73,9 @@ class Request(RequestBase):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0.1
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.endpoint is not None:</span>
+<span class="gi">+            return _split_blueprint_path(self.endpoint)[1]</span>
+<span class="gi">+        return []</span>
+
+
+<span class="w"> </span>class Response(ResponseBase):
+<span class="gu">@@ -100,4 +106,4 @@ class Response(ResponseBase):</span>
+<span class="w"> </span>        See :attr:`~werkzeug.wrappers.Response.max_cookie_size` in
+<span class="w"> </span>        Werkzeug&#39;s docs.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return current_app.config.get(&#39;MAX_COOKIE_SIZE&#39;, 4093)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

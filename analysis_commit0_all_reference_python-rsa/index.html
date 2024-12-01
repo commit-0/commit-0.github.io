@@ -1,0 +1,3274 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all reference python rsa - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reference-gold-python-rsa" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all reference python rsa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_mypypymypyrunnertesttest_run_mypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_mypy.py::MypyRunnerTest::test_run_mypy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0_all_reference">back to Reference (Gold) summary</a></p>
+<h1 id="reference-gold-python-rsa"><strong>Reference (Gold)</strong>: python-rsa</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">86</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">87</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">87</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_mypypymypyrunnertesttest_run_mypy">test_mypy.py::MypyRunnerTest::test_run_mypy</h3>
+<details><summary> <pre>test_mypy.py::MypyRunnerTest::test_run_mypy</pre></summary><pre>
+self = <tests.test_mypy.MypyRunnerTest testMethod=test_run_mypy>
+
+    def test_run_mypy(self):
+        proj_root = pathlib.Path(__file__).parent.parent
+        args = [
+            "--incremental",
+            "--ignore-missing-imports",
+            f"--python-version={sys.version_info.major}.{sys.version_info.minor}",
+        ] + [str(proj_root / dirname) for dirname in test_modules]
+
+        result = mypy.api.run(args)
+
+        stdout, stderr, status = result
+
+        messages = []
+        if stderr:
+            messages.append(stderr)
+        if stdout:
+            messages.append(stdout)
+        if status:
+            messages.append("Mypy failed with status %d" % status)
+        if messages and not all("Success" in message for message in messages):
+>           self.fail("\n".join(["Mypy errors:"] + messages))
+E           AssertionError: Mypy errors:
+E           setup.cfg: [mypy]: python_version: Python 3.7 is not supported (must be 3.8 or higher)
+E           
+E           rsa/key.py:68: error: Missing return statement  [empty-body]
+E           rsa/key.py:80: error: Missing return statement  [empty-body]
+E           rsa/key.py:91: error: Missing return statement  [empty-body]
+E           rsa/key.py:98: error: Missing return statement  [empty-body]
+E           Found 4 errors in 1 file (checked 28 source files)
+E           
+E           Mypy failed with status 1
+
+tests/test_mypy.py:31: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/rsa/asn1.py b/rsa/asn1.py</span>
+<span class="gh">index 02e5a82..4cc4dd3 100644</span>
+<span class="gd">--- a/rsa/asn1.py</span>
+<span class="gi">+++ b/rsa/asn1.py</span>
+<span class="gu">@@ -1,19 +1,41 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;ASN.1 definitions.
+
+<span class="w"> </span>Not all ASN.1-handling code use these definitions, but when it does, they should be here.
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>from pyasn1.type import univ, namedtype, tag
+
+
+<span class="w"> </span>class PubKeyHeader(univ.Sequence):
+<span class="gd">-    componentType = namedtype.NamedTypes(namedtype.NamedType(&#39;oid&#39;, univ.</span>
+<span class="gd">-        ObjectIdentifier()), namedtype.NamedType(&#39;parameters&#39;, univ.Null()))</span>
+<span class="gi">+    componentType = namedtype.NamedTypes(</span>
+<span class="gi">+        namedtype.NamedType(&quot;oid&quot;, univ.ObjectIdentifier()),</span>
+<span class="gi">+        namedtype.NamedType(&quot;parameters&quot;, univ.Null()),</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>class OpenSSLPubKey(univ.Sequence):
+<span class="gd">-    componentType = namedtype.NamedTypes(namedtype.NamedType(&#39;header&#39;,</span>
+<span class="gd">-        PubKeyHeader()), namedtype.NamedType(&#39;key&#39;, univ.OctetString().</span>
+<span class="gd">-        subtype(implicitTag=tag.Tag(tagClass=0, tagFormat=0, tagId=3))))</span>
+<span class="gi">+    componentType = namedtype.NamedTypes(</span>
+<span class="gi">+        namedtype.NamedType(&quot;header&quot;, PubKeyHeader()),</span>
+<span class="gi">+        # This little hack (the implicit tag) allows us to get a Bit String as Octet String</span>
+<span class="gi">+        namedtype.NamedType(</span>
+<span class="gi">+            &quot;key&quot;,</span>
+<span class="gi">+            univ.OctetString().subtype(implicitTag=tag.Tag(tagClass=0, tagFormat=0, tagId=3)),</span>
+<span class="gi">+        ),</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>class AsnPubKey(univ.Sequence):
+<span class="gu">@@ -23,5 +45,8 @@ class AsnPubKey(univ.Sequence):</span>
+<span class="w"> </span>         modulus           INTEGER,  -- n
+<span class="w"> </span>         publicExponent    INTEGER,  -- e
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    componentType = namedtype.NamedTypes(namedtype.NamedType(&#39;modulus&#39;,</span>
+<span class="gd">-        univ.Integer()), namedtype.NamedType(&#39;publicExponent&#39;, univ.Integer()))</span>
+<span class="gi">+</span>
+<span class="gi">+    componentType = namedtype.NamedTypes(</span>
+<span class="gi">+        namedtype.NamedType(&quot;modulus&quot;, univ.Integer()),</span>
+<span class="gi">+        namedtype.NamedType(&quot;publicExponent&quot;, univ.Integer()),</span>
+<span class="gi">+    )</span>
+<span class="gh">diff --git a/rsa/cli.py b/rsa/cli.py</span>
+<span class="gh">index 4449a1f..4db3f0b 100644</span>
+<span class="gd">--- a/rsa/cli.py</span>
+<span class="gi">+++ b/rsa/cli.py</span>
+<span class="gu">@@ -1,160 +1,318 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Commandline scripts.
+
+<span class="w"> </span>These scripts are called by the executables defined in setup.py.
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import abc
+<span class="w"> </span>import sys
+<span class="w"> </span>import typing
+<span class="w"> </span>import optparse
+<span class="gi">+</span>
+<span class="w"> </span>import rsa
+<span class="w"> </span>import rsa.key
+<span class="w"> </span>import rsa.pkcs1
+<span class="gi">+</span>
+<span class="w"> </span>HASH_METHODS = sorted(rsa.pkcs1.HASH_METHODS.keys())
+<span class="w"> </span>Indexable = typing.Union[typing.Tuple, typing.List[str]]
+
+
+<span class="gd">-def keygen() -&gt;None:</span>
+<span class="gi">+def keygen() -&gt; None:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Key generator.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    # Parse the CLI options</span>
+<span class="gi">+    parser = optparse.OptionParser(</span>
+<span class="gi">+        usage=&quot;usage: %prog [options] keysize&quot;,</span>
+<span class="gi">+        description=&#39;Generates a new RSA key pair of &quot;keysize&quot; bits.&#39;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;--pubout&quot;,</span>
+<span class="gi">+        type=&quot;string&quot;,</span>
+<span class="gi">+        help=&quot;Output filename for the public key. The public key is &quot;</span>
+<span class="gi">+        &quot;not saved if this option is not present. You can use &quot;</span>
+<span class="gi">+        &quot;pyrsa-priv2pub to create the public key file later.&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;-o&quot;,</span>
+<span class="gi">+        &quot;--out&quot;,</span>
+<span class="gi">+        type=&quot;string&quot;,</span>
+<span class="gi">+        help=&quot;Output filename for the private key. The key is &quot;</span>
+<span class="gi">+        &quot;written to stdout if this option is not present.&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;--form&quot;,</span>
+<span class="gi">+        help=&quot;key format of the private and public keys - default PEM&quot;,</span>
+<span class="gi">+        choices=(&quot;PEM&quot;, &quot;DER&quot;),</span>
+<span class="gi">+        default=&quot;PEM&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    (cli, cli_args) = parser.parse_args(sys.argv[1:])</span>
+<span class="gi">+</span>
+<span class="gi">+    if len(cli_args) != 1:</span>
+<span class="gi">+        parser.print_help()</span>
+<span class="gi">+        raise SystemExit(1)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        keysize = int(cli_args[0])</span>
+<span class="gi">+    except ValueError as ex:</span>
+<span class="gi">+        parser.print_help()</span>
+<span class="gi">+        print(&quot;Not a valid number: %s&quot; % cli_args[0], file=sys.stderr)</span>
+<span class="gi">+        raise SystemExit(1) from ex</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;Generating %i-bit key&quot; % keysize, file=sys.stderr)</span>
+<span class="gi">+    (pub_key, priv_key) = rsa.newkeys(keysize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Save public key</span>
+<span class="gi">+    if cli.pubout:</span>
+<span class="gi">+        print(&quot;Writing public key to %s&quot; % cli.pubout, file=sys.stderr)</span>
+<span class="gi">+        data = pub_key.save_pkcs1(format=cli.form)</span>
+<span class="gi">+        with open(cli.pubout, &quot;wb&quot;) as outfile:</span>
+<span class="gi">+            outfile.write(data)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Save private key</span>
+<span class="gi">+    data = priv_key.save_pkcs1(format=cli.form)</span>
+<span class="gi">+</span>
+<span class="gi">+    if cli.out:</span>
+<span class="gi">+        print(&quot;Writing private key to %s&quot; % cli.out, file=sys.stderr)</span>
+<span class="gi">+        with open(cli.out, &quot;wb&quot;) as outfile:</span>
+<span class="gi">+            outfile.write(data)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        print(&quot;Writing private key to stdout&quot;, file=sys.stderr)</span>
+<span class="gi">+        sys.stdout.buffer.write(data)</span>
+
+
+<span class="w"> </span>class CryptoOperation(metaclass=abc.ABCMeta):
+<span class="w"> </span>    &quot;&quot;&quot;CLI callable that operates with input, output, and a key.&quot;&quot;&quot;
+<span class="gd">-    keyname = &#39;public&#39;</span>
+<span class="gd">-    usage = &#39;usage: %%prog [options] %(keyname)s_key&#39;</span>
+<span class="gd">-    description = &#39;&#39;</span>
+<span class="gd">-    operation = &#39;decrypt&#39;</span>
+<span class="gd">-    operation_past = &#39;decrypted&#39;</span>
+<span class="gd">-    operation_progressive = &#39;decrypting&#39;</span>
+<span class="gd">-    input_help = (</span>
+<span class="gd">-        &#39;Name of the file to %(operation)s. Reads from stdin if not specified.&#39;</span>
+<span class="gd">-        )</span>
+<span class="gi">+</span>
+<span class="gi">+    keyname = &quot;public&quot;  # or &#39;private&#39;</span>
+<span class="gi">+    usage = &quot;usage: %%prog [options] %(keyname)s_key&quot;</span>
+<span class="gi">+    description = &quot;&quot;</span>
+<span class="gi">+    operation = &quot;decrypt&quot;</span>
+<span class="gi">+    operation_past = &quot;decrypted&quot;</span>
+<span class="gi">+    operation_progressive = &quot;decrypting&quot;</span>
+<span class="gi">+    input_help = &quot;Name of the file to %(operation)s. Reads from stdin if &quot; &quot;not specified.&quot;</span>
+<span class="w"> </span>    output_help = (
+<span class="gd">-        &#39;Name of the file to write the %(operation_past)s file to. Written to stdout if this option is not present.&#39;</span>
+<span class="gd">-        )</span>
+<span class="gi">+        &quot;Name of the file to write the %(operation_past)s file &quot;</span>
+<span class="gi">+        &quot;to. Written to stdout if this option is not present.&quot;</span>
+<span class="gi">+    )</span>
+<span class="w"> </span>    expected_cli_args = 1
+<span class="w"> </span>    has_output = True
+<span class="gd">-    key_class = rsa.PublicKey</span>
+
+<span class="gd">-    def __init__(self) -&gt;None:</span>
+<span class="gi">+    key_class = rsa.PublicKey  # type: typing.Type[rsa.key.AbstractKey]</span>
+<span class="gi">+</span>
+<span class="gi">+    def __init__(self) -&gt; None:</span>
+<span class="w"> </span>        self.usage = self.usage % self.__class__.__dict__
+<span class="w"> </span>        self.input_help = self.input_help % self.__class__.__dict__
+<span class="w"> </span>        self.output_help = self.output_help % self.__class__.__dict__
+
+<span class="w"> </span>    @abc.abstractmethod
+<span class="gd">-    def perform_operation(self, indata: bytes, key: rsa.key.AbstractKey,</span>
+<span class="gd">-        cli_args: Indexable) -&gt;typing.Any:</span>
+<span class="gi">+    def perform_operation(</span>
+<span class="gi">+        self, indata: bytes, key: rsa.key.AbstractKey, cli_args: Indexable</span>
+<span class="gi">+    ) -&gt; typing.Any:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Performs the program&#39;s operation.
+
+<span class="w"> </span>        Implement in a subclass.
+
+<span class="w"> </span>        :returns: the data to write to the output.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def __call__(self) -&gt;None:</span>
+<span class="gi">+    def __call__(self) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Runs the program.&quot;&quot;&quot;
+<span class="gd">-        cli, cli_args = self.parse_cli()</span>
+<span class="gi">+</span>
+<span class="gi">+        (cli, cli_args) = self.parse_cli()</span>
+<span class="gi">+</span>
+<span class="w"> </span>        key = self.read_key(cli_args[0], cli.keyform)
+<span class="gi">+</span>
+<span class="w"> </span>        indata = self.read_infile(cli.input)
+<span class="gi">+</span>
+<span class="w"> </span>        print(self.operation_progressive.title(), file=sys.stderr)
+<span class="w"> </span>        outdata = self.perform_operation(indata, key, cli_args)
+<span class="gi">+</span>
+<span class="w"> </span>        if self.has_output:
+<span class="w"> </span>            self.write_outfile(outdata, cli.output)
+
+<span class="gd">-    def parse_cli(self) -&gt;typing.Tuple[optparse.Values, typing.List[str]]:</span>
+<span class="gi">+    def parse_cli(self) -&gt; typing.Tuple[optparse.Values, typing.List[str]]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Parse the CLI options
+
+<span class="w"> </span>        :returns: (cli_opts, cli_args)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def read_key(self, filename: str, keyform: str) -&gt;rsa.key.AbstractKey:</span>
+<span class="gi">+        parser = optparse.OptionParser(usage=self.usage, description=self.description)</span>
+<span class="gi">+</span>
+<span class="gi">+        parser.add_option(&quot;-i&quot;, &quot;--input&quot;, type=&quot;string&quot;, help=self.input_help)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.has_output:</span>
+<span class="gi">+            parser.add_option(&quot;-o&quot;, &quot;--output&quot;, type=&quot;string&quot;, help=self.output_help)</span>
+<span class="gi">+</span>
+<span class="gi">+        parser.add_option(</span>
+<span class="gi">+            &quot;--keyform&quot;,</span>
+<span class="gi">+            help=&quot;Key format of the %s key - default PEM&quot; % self.keyname,</span>
+<span class="gi">+            choices=(&quot;PEM&quot;, &quot;DER&quot;),</span>
+<span class="gi">+            default=&quot;PEM&quot;,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        (cli, cli_args) = parser.parse_args(sys.argv[1:])</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(cli_args) != self.expected_cli_args:</span>
+<span class="gi">+            parser.print_help()</span>
+<span class="gi">+            raise SystemExit(1)</span>
+<span class="gi">+</span>
+<span class="gi">+        return cli, cli_args</span>
+<span class="gi">+</span>
+<span class="gi">+    def read_key(self, filename: str, keyform: str) -&gt; rsa.key.AbstractKey:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Reads a public or private key.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def read_infile(self, inname: str) -&gt;bytes:</span>
+<span class="gi">+        print(&quot;Reading %s key from %s&quot; % (self.keyname, filename), file=sys.stderr)</span>
+<span class="gi">+        with open(filename, &quot;rb&quot;) as keyfile:</span>
+<span class="gi">+            keydata = keyfile.read()</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.key_class.load_pkcs1(keydata, keyform)</span>
+<span class="gi">+</span>
+<span class="gi">+    def read_infile(self, inname: str) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Read the input file&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def write_outfile(self, outdata: bytes, outname: str) -&gt;None:</span>
+<span class="gi">+        if inname:</span>
+<span class="gi">+            print(&quot;Reading input from %s&quot; % inname, file=sys.stderr)</span>
+<span class="gi">+            with open(inname, &quot;rb&quot;) as infile:</span>
+<span class="gi">+                return infile.read()</span>
+<span class="gi">+</span>
+<span class="gi">+        print(&quot;Reading input from stdin&quot;, file=sys.stderr)</span>
+<span class="gi">+        return sys.stdin.buffer.read()</span>
+<span class="gi">+</span>
+<span class="gi">+    def write_outfile(self, outdata: bytes, outname: str) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Write the output file&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        if outname:</span>
+<span class="gi">+            print(&quot;Writing output to %s&quot; % outname, file=sys.stderr)</span>
+<span class="gi">+            with open(outname, &quot;wb&quot;) as outfile:</span>
+<span class="gi">+                outfile.write(outdata)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            print(&quot;Writing output to stdout&quot;, file=sys.stderr)</span>
+<span class="gi">+            sys.stdout.buffer.write(outdata)</span>
+
+
+<span class="w"> </span>class EncryptOperation(CryptoOperation):
+<span class="w"> </span>    &quot;&quot;&quot;Encrypts a file.&quot;&quot;&quot;
+<span class="gd">-    keyname = &#39;public&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    keyname = &quot;public&quot;</span>
+<span class="w"> </span>    description = (
+<span class="gd">-        &#39;Encrypts a file. The file must be shorter than the key length in order to be encrypted.&#39;</span>
+<span class="gd">-        )</span>
+<span class="gd">-    operation = &#39;encrypt&#39;</span>
+<span class="gd">-    operation_past = &#39;encrypted&#39;</span>
+<span class="gd">-    operation_progressive = &#39;encrypting&#39;</span>
+<span class="gi">+        &quot;Encrypts a file. The file must be shorter than the key &quot; &quot;length in order to be encrypted.&quot;</span>
+<span class="gi">+    )</span>
+<span class="gi">+    operation = &quot;encrypt&quot;</span>
+<span class="gi">+    operation_past = &quot;encrypted&quot;</span>
+<span class="gi">+    operation_progressive = &quot;encrypting&quot;</span>
+
+<span class="gd">-    def perform_operation(self, indata: bytes, pub_key: rsa.key.AbstractKey,</span>
+<span class="gd">-        cli_args: Indexable=()) -&gt;bytes:</span>
+<span class="gi">+    def perform_operation(</span>
+<span class="gi">+        self, indata: bytes, pub_key: rsa.key.AbstractKey, cli_args: Indexable = ()</span>
+<span class="gi">+    ) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Encrypts files.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        assert isinstance(pub_key, rsa.key.PublicKey)</span>
+<span class="gi">+        return rsa.encrypt(indata, pub_key)</span>
+
+
+<span class="w"> </span>class DecryptOperation(CryptoOperation):
+<span class="w"> </span>    &quot;&quot;&quot;Decrypts a file.&quot;&quot;&quot;
+<span class="gd">-    keyname = &#39;private&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    keyname = &quot;private&quot;</span>
+<span class="w"> </span>    description = (
+<span class="gd">-        &#39;Decrypts a file. The original file must be shorter than the key length in order to have been encrypted.&#39;</span>
+<span class="gd">-        )</span>
+<span class="gd">-    operation = &#39;decrypt&#39;</span>
+<span class="gd">-    operation_past = &#39;decrypted&#39;</span>
+<span class="gd">-    operation_progressive = &#39;decrypting&#39;</span>
+<span class="gi">+        &quot;Decrypts a file. The original file must be shorter than &quot;</span>
+<span class="gi">+        &quot;the key length in order to have been encrypted.&quot;</span>
+<span class="gi">+    )</span>
+<span class="gi">+    operation = &quot;decrypt&quot;</span>
+<span class="gi">+    operation_past = &quot;decrypted&quot;</span>
+<span class="gi">+    operation_progressive = &quot;decrypting&quot;</span>
+<span class="w"> </span>    key_class = rsa.PrivateKey
+
+<span class="gd">-    def perform_operation(self, indata: bytes, priv_key: rsa.key.</span>
+<span class="gd">-        AbstractKey, cli_args: Indexable=()) -&gt;bytes:</span>
+<span class="gi">+    def perform_operation(</span>
+<span class="gi">+        self, indata: bytes, priv_key: rsa.key.AbstractKey, cli_args: Indexable = ()</span>
+<span class="gi">+    ) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Decrypts files.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        assert isinstance(priv_key, rsa.key.PrivateKey)</span>
+<span class="gi">+        return rsa.decrypt(indata, priv_key)</span>
+
+
+<span class="w"> </span>class SignOperation(CryptoOperation):
+<span class="w"> </span>    &quot;&quot;&quot;Signs a file.&quot;&quot;&quot;
+<span class="gd">-    keyname = &#39;private&#39;</span>
+<span class="gd">-    usage = &#39;usage: %%prog [options] private_key hash_method&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    keyname = &quot;private&quot;</span>
+<span class="gi">+    usage = &quot;usage: %%prog [options] private_key hash_method&quot;</span>
+<span class="w"> </span>    description = (
+<span class="gd">-        &#39;Signs a file, outputs the signature. Choose the hash method from %s&#39; %</span>
+<span class="gd">-        &#39;, &#39;.join(HASH_METHODS))</span>
+<span class="gd">-    operation = &#39;sign&#39;</span>
+<span class="gd">-    operation_past = &#39;signature&#39;</span>
+<span class="gd">-    operation_progressive = &#39;Signing&#39;</span>
+<span class="gi">+        &quot;Signs a file, outputs the signature. Choose the hash &quot;</span>
+<span class="gi">+        &quot;method from %s&quot; % &quot;, &quot;.join(HASH_METHODS)</span>
+<span class="gi">+    )</span>
+<span class="gi">+    operation = &quot;sign&quot;</span>
+<span class="gi">+    operation_past = &quot;signature&quot;</span>
+<span class="gi">+    operation_progressive = &quot;Signing&quot;</span>
+<span class="w"> </span>    key_class = rsa.PrivateKey
+<span class="w"> </span>    expected_cli_args = 2
+<span class="gi">+</span>
+<span class="w"> </span>    output_help = (
+<span class="gd">-        &#39;Name of the file to write the signature to. Written to stdout if this option is not present.&#39;</span>
+<span class="gd">-        )</span>
+<span class="gi">+        &quot;Name of the file to write the signature to. Written &quot;</span>
+<span class="gi">+        &quot;to stdout if this option is not present.&quot;</span>
+<span class="gi">+    )</span>
+
+<span class="gd">-    def perform_operation(self, indata: bytes, priv_key: rsa.key.</span>
+<span class="gd">-        AbstractKey, cli_args: Indexable) -&gt;bytes:</span>
+<span class="gi">+    def perform_operation(</span>
+<span class="gi">+        self, indata: bytes, priv_key: rsa.key.AbstractKey, cli_args: Indexable</span>
+<span class="gi">+    ) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Signs files.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        assert isinstance(priv_key, rsa.key.PrivateKey)</span>
+<span class="gi">+</span>
+<span class="gi">+        hash_method = cli_args[1]</span>
+<span class="gi">+        if hash_method not in HASH_METHODS:</span>
+<span class="gi">+            raise SystemExit(&quot;Invalid hash method, choose one of %s&quot; % &quot;, &quot;.join(HASH_METHODS))</span>
+<span class="gi">+</span>
+<span class="gi">+        return rsa.sign(indata, priv_key, hash_method)</span>
+
+
+<span class="w"> </span>class VerifyOperation(CryptoOperation):
+<span class="w"> </span>    &quot;&quot;&quot;Verify a signature.&quot;&quot;&quot;
+<span class="gd">-    keyname = &#39;public&#39;</span>
+<span class="gd">-    usage = &#39;usage: %%prog [options] public_key signature_file&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    keyname = &quot;public&quot;</span>
+<span class="gi">+    usage = &quot;usage: %%prog [options] public_key signature_file&quot;</span>
+<span class="w"> </span>    description = (
+<span class="gd">-        &#39;Verifies a signature, exits with status 0 upon success, prints an error message and exits with status 1 upon error.&#39;</span>
+<span class="gd">-        )</span>
+<span class="gd">-    operation = &#39;verify&#39;</span>
+<span class="gd">-    operation_past = &#39;verified&#39;</span>
+<span class="gd">-    operation_progressive = &#39;Verifying&#39;</span>
+<span class="gi">+        &quot;Verifies a signature, exits with status 0 upon success, &quot;</span>
+<span class="gi">+        &quot;prints an error message and exits with status 1 upon error.&quot;</span>
+<span class="gi">+    )</span>
+<span class="gi">+    operation = &quot;verify&quot;</span>
+<span class="gi">+    operation_past = &quot;verified&quot;</span>
+<span class="gi">+    operation_progressive = &quot;Verifying&quot;</span>
+<span class="w"> </span>    key_class = rsa.PublicKey
+<span class="w"> </span>    expected_cli_args = 2
+<span class="w"> </span>    has_output = False
+
+<span class="gd">-    def perform_operation(self, indata: bytes, pub_key: rsa.key.AbstractKey,</span>
+<span class="gd">-        cli_args: Indexable) -&gt;None:</span>
+<span class="gi">+    def perform_operation(</span>
+<span class="gi">+        self, indata: bytes, pub_key: rsa.key.AbstractKey, cli_args: Indexable</span>
+<span class="gi">+    ) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Verifies files.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        assert isinstance(pub_key, rsa.key.PublicKey)</span>
+<span class="gi">+</span>
+<span class="gi">+        signature_file = cli_args[1]</span>
+<span class="gi">+</span>
+<span class="gi">+        with open(signature_file, &quot;rb&quot;) as sigfile:</span>
+<span class="gi">+            signature = sigfile.read()</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            rsa.verify(indata, signature, pub_key)</span>
+<span class="gi">+        except rsa.VerificationError as ex:</span>
+<span class="gi">+            raise SystemExit(&quot;Verification failed.&quot;) from ex</span>
+<span class="gi">+</span>
+<span class="gi">+        print(&quot;Verification OK&quot;, file=sys.stderr)</span>
+
+
+<span class="w"> </span>encrypt = EncryptOperation()
+<span class="gh">diff --git a/rsa/common.py b/rsa/common.py</span>
+<span class="gh">index 2f4bc71..ca732e5 100644</span>
+<span class="gd">--- a/rsa/common.py</span>
+<span class="gi">+++ b/rsa/common.py</span>
+<span class="gu">@@ -1,18 +1,31 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Common functionality shared by several modules.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import typing
+
+
+<span class="w"> </span>class NotRelativePrimeError(ValueError):
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self, a: int, b: int, d: int, msg: str=&#39;&#39;) -&gt;None:</span>
+<span class="gd">-        super().__init__(msg or </span>
+<span class="gd">-            &#39;%d and %d are not relatively prime, divider=%i&#39; % (a, b, d))</span>
+<span class="gi">+    def __init__(self, a: int, b: int, d: int, msg: str = &quot;&quot;) -&gt; None:</span>
+<span class="gi">+        super().__init__(msg or &quot;%d and %d are not relatively prime, divider=%i&quot; % (a, b, d))</span>
+<span class="w"> </span>        self.a = a
+<span class="w"> </span>        self.b = b
+<span class="w"> </span>        self.d = d
+
+
+<span class="gd">-def bit_size(num: int) -&gt;int:</span>
+<span class="gi">+def bit_size(num: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Number of bits needed to represent a integer excluding any prefix
+<span class="w"> </span>    0 bits.
+<span class="gu">@@ -33,10 +46,14 @@ def bit_size(num: int) -&gt;int:</span>
+<span class="w"> </span>    :returns:
+<span class="w"> </span>        Returns the number of bits in the integer.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return num.bit_length()</span>
+<span class="gi">+    except AttributeError as ex:</span>
+<span class="gi">+        raise TypeError(&quot;bit_size(num) only supports integers, not %r&quot; % type(num)) from ex</span>
+
+
+<span class="gd">-def byte_size(number: int) -&gt;int:</span>
+<span class="gi">+def byte_size(number: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns the number of bytes required to hold a specific long number.
+
+<span class="gu">@@ -56,10 +73,12 @@ def byte_size(number: int) -&gt;int:</span>
+<span class="w"> </span>    :returns:
+<span class="w"> </span>        The number of bytes required to hold a specific long number.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if number == 0:</span>
+<span class="gi">+        return 1</span>
+<span class="gi">+    return ceil_div(bit_size(number), 8)</span>
+
+
+<span class="gd">-def ceil_div(num: int, div: int) -&gt;int:</span>
+<span class="gi">+def ceil_div(num: int, div: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns the ceiling function of a division between `num` and `div`.
+
+<span class="gu">@@ -77,15 +96,37 @@ def ceil_div(num: int, div: int) -&gt;int:</span>
+
+<span class="w"> </span>    :return: Rounded up result of the division between the parameters.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    quanta, mod = divmod(num, div)</span>
+<span class="gi">+    if mod:</span>
+<span class="gi">+        quanta += 1</span>
+<span class="gi">+    return quanta</span>
+
+
+<span class="gd">-def extended_gcd(a: int, b: int) -&gt;typing.Tuple[int, int, int]:</span>
+<span class="gi">+def extended_gcd(a: int, b: int) -&gt; typing.Tuple[int, int, int]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns a tuple (r, i, j) such that r = gcd(a, b) = ia + jb&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gd">-</span>
+<span class="gd">-</span>
+<span class="gd">-def inverse(x: int, n: int) -&gt;int:</span>
+<span class="gi">+    # r = gcd(a,b) i = multiplicitive inverse of a mod b</span>
+<span class="gi">+    #      or      j = multiplicitive inverse of b mod a</span>
+<span class="gi">+    # Neg return values for i or j are made positive mod b or a respectively</span>
+<span class="gi">+    # Iterateive Version is faster and uses much less stack space</span>
+<span class="gi">+    x = 0</span>
+<span class="gi">+    y = 1</span>
+<span class="gi">+    lx = 1</span>
+<span class="gi">+    ly = 0</span>
+<span class="gi">+    oa = a  # Remember original a/b to remove</span>
+<span class="gi">+    ob = b  # negative values from return results</span>
+<span class="gi">+    while b != 0:</span>
+<span class="gi">+        q = a // b</span>
+<span class="gi">+        (a, b) = (b, a % b)</span>
+<span class="gi">+        (x, lx) = ((lx - (q * x)), x)</span>
+<span class="gi">+        (y, ly) = ((ly - (q * y)), y)</span>
+<span class="gi">+    if lx &lt; 0:</span>
+<span class="gi">+        lx += ob  # If neg wrap modulo original b</span>
+<span class="gi">+    if ly &lt; 0:</span>
+<span class="gi">+        ly += oa  # If neg wrap modulo original a</span>
+<span class="gi">+    return a, lx, ly  # Return only positive values</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def inverse(x: int, n: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns the inverse of x % n under multiplication, a.k.a x^-1 (mod n)
+
+<span class="w"> </span>    &gt;&gt;&gt; inverse(7, 4)
+<span class="gu">@@ -93,11 +134,16 @@ def inverse(x: int, n: int) -&gt;int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; (inverse(143, 4) * 143) % 4
+<span class="w"> </span>    1
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    (divider, inv, _) = extended_gcd(x, n)</span>
+<span class="gi">+</span>
+<span class="gi">+    if divider != 1:</span>
+<span class="gi">+        raise NotRelativePrimeError(x, n, divider)</span>
+<span class="gi">+</span>
+<span class="gi">+    return inv</span>
+
+<span class="gd">-def crt(a_values: typing.Iterable[int], modulo_values: typing.Iterable[int]</span>
+<span class="gd">-    ) -&gt;int:</span>
+<span class="gi">+</span>
+<span class="gi">+def crt(a_values: typing.Iterable[int], modulo_values: typing.Iterable[int]) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Chinese Remainder Theorem.
+
+<span class="w"> </span>    Calculates x such that x = a[i] (mod m[i]) for each i.
+<span class="gu">@@ -116,9 +162,23 @@ def crt(a_values: typing.Iterable[int], modulo_values: typing.Iterable[int]</span>
+<span class="w"> </span>    &gt;&gt;&gt; crt([2, 3, 0], [7, 11, 15])
+<span class="w"> </span>    135
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    m = 1</span>
+<span class="gi">+    x = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    for modulo in modulo_values:</span>
+<span class="gi">+        m *= modulo</span>
+<span class="gi">+</span>
+<span class="gi">+    for (m_i, a_i) in zip(modulo_values, a_values):</span>
+<span class="gi">+        M_i = m // m_i</span>
+<span class="gi">+        inv = inverse(M_i, m_i)</span>
+<span class="gi">+</span>
+<span class="gi">+        x = (x + a_i * M_i * inv) % m</span>
+
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gi">+    return x</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    doctest.testmod()
+<span class="gh">diff --git a/rsa/core.py b/rsa/core.py</span>
+<span class="gh">index e7dba89..84ed3f8 100644</span>
+<span class="gd">--- a/rsa/core.py</span>
+<span class="gi">+++ b/rsa/core.py</span>
+<span class="gu">@@ -1,3 +1,17 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Core mathematical operations.
+
+<span class="w"> </span>This is the actual core RSA implementation, which is only defined
+<span class="gu">@@ -5,11 +19,35 @@ mathematically on integers.</span>
+<span class="w"> </span>&quot;&quot;&quot;
+
+
+<span class="gd">-def encrypt_int(message: int, ekey: int, n: int) -&gt;int:</span>
+<span class="gi">+def assert_int(var: int, name: str) -&gt; None:</span>
+<span class="gi">+    if isinstance(var, int):</span>
+<span class="gi">+        return</span>
+<span class="gi">+</span>
+<span class="gi">+    raise TypeError(&quot;%s should be an integer, not %s&quot; % (name, var.__class__))</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def encrypt_int(message: int, ekey: int, n: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Encrypts a message using encryption key &#39;ekey&#39;, working modulo n&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    assert_int(message, &quot;message&quot;)</span>
+<span class="gi">+    assert_int(ekey, &quot;ekey&quot;)</span>
+<span class="gi">+    assert_int(n, &quot;n&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if message &lt; 0:</span>
+<span class="gi">+        raise ValueError(&quot;Only non-negative numbers are supported&quot;)</span>
+
+<span class="gd">-def decrypt_int(cyphertext: int, dkey: int, n: int) -&gt;int:</span>
+<span class="gi">+    if message &gt; n:</span>
+<span class="gi">+        raise OverflowError(&quot;The message %i is too long for n=%i&quot; % (message, n))</span>
+<span class="gi">+</span>
+<span class="gi">+    return pow(message, ekey, n)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def decrypt_int(cyphertext: int, dkey: int, n: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Decrypts a cypher text using the decryption key &#39;dkey&#39;, working modulo n&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    assert_int(cyphertext, &quot;cyphertext&quot;)</span>
+<span class="gi">+    assert_int(dkey, &quot;dkey&quot;)</span>
+<span class="gi">+    assert_int(n, &quot;n&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    message = pow(cyphertext, dkey, n)</span>
+<span class="gi">+    return message</span>
+<span class="gh">diff --git a/rsa/key.py b/rsa/key.py</span>
+<span class="gh">index c42592d..f800644 100644</span>
+<span class="gd">--- a/rsa/key.py</span>
+<span class="gi">+++ b/rsa/key.py</span>
+<span class="gu">@@ -1,3 +1,17 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;RSA key generation code.
+
+<span class="w"> </span>Create new keys with the newkeys() function. It will give you a PublicKey and a
+<span class="gu">@@ -16,30 +30,42 @@ of pyasn1.</span>
+<span class="w"> </span>    or unauthenticated source.
+
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import threading
+<span class="w"> </span>import typing
+<span class="w"> </span>import warnings
+<span class="gi">+</span>
+<span class="w"> </span>import rsa.prime
+<span class="w"> </span>import rsa.pem
+<span class="w"> </span>import rsa.common
+<span class="w"> </span>import rsa.randnum
+<span class="w"> </span>import rsa.core
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>DEFAULT_EXPONENT = 65537
+<span class="gd">-T = typing.TypeVar(&#39;T&#39;, bound=&#39;AbstractKey&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+T = typing.TypeVar(&quot;T&quot;, bound=&quot;AbstractKey&quot;)</span>
+
+
+<span class="w"> </span>class AbstractKey:
+<span class="w"> </span>    &quot;&quot;&quot;Abstract superclass for private and public keys.&quot;&quot;&quot;
+<span class="gd">-    __slots__ = &#39;n&#39;, &#39;e&#39;, &#39;blindfac&#39;, &#39;blindfac_inverse&#39;, &#39;mutex&#39;</span>
+
+<span class="gd">-    def __init__(self, n: int, e: int) -&gt;None:</span>
+<span class="gi">+    __slots__ = (&quot;n&quot;, &quot;e&quot;, &quot;blindfac&quot;, &quot;blindfac_inverse&quot;, &quot;mutex&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def __init__(self, n: int, e: int) -&gt; None:</span>
+<span class="w"> </span>        self.n = n
+<span class="w"> </span>        self.e = e
+<span class="gi">+</span>
+<span class="gi">+        # These will be computed properly on the first call to blind().</span>
+<span class="w"> </span>        self.blindfac = self.blindfac_inverse = -1
+<span class="gi">+</span>
+<span class="gi">+        # Used to protect updates to the blinding factor in multi-threaded</span>
+<span class="gi">+        # environments.</span>
+<span class="w"> </span>        self.mutex = threading.Lock()
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def _load_pkcs1_pem(cls: typing.Type[T], keyfile: bytes) -&gt;T:</span>
+<span class="gi">+    def _load_pkcs1_pem(cls: typing.Type[T], keyfile: bytes) -&gt; T:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a key in PKCS#1 PEM format, implement in a subclass.
+
+<span class="w"> </span>        :param keyfile: contents of a PEM-encoded file that contains
+<span class="gu">@@ -49,10 +75,9 @@ class AbstractKey:</span>
+<span class="w"> </span>        :return: the loaded key
+<span class="w"> </span>        :rtype: AbstractKey
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def _load_pkcs1_der(cls: typing.Type[T], keyfile: bytes) -&gt;T:</span>
+<span class="gi">+    def _load_pkcs1_der(cls: typing.Type[T], keyfile: bytes) -&gt; T:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a key in PKCS#1 PEM format, implement in a subclass.
+
+<span class="w"> </span>        :param keyfile: contents of a DER-encoded file that contains
+<span class="gu">@@ -62,26 +87,23 @@ class AbstractKey:</span>
+<span class="w"> </span>        :return: the loaded key
+<span class="w"> </span>        :rtype: AbstractKey
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def _save_pkcs1_pem(self) -&gt;bytes:</span>
+<span class="gi">+    def _save_pkcs1_pem(self) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves the key in PKCS#1 PEM format, implement in a subclass.
+
+<span class="w"> </span>        :returns: the PEM-encoded key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def _save_pkcs1_der(self) -&gt;bytes:</span>
+<span class="gi">+    def _save_pkcs1_der(self) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves the key in PKCS#1 DER format, implement in a subclass.
+
+<span class="w"> </span>        :returns: the DER-encoded key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def load_pkcs1(cls: typing.Type[T], keyfile: bytes, format: str=&#39;PEM&#39;) -&gt;T:</span>
+<span class="gi">+    def load_pkcs1(cls: typing.Type[T], keyfile: bytes, format: str = &quot;PEM&quot;) -&gt; T:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a key in PKCS#1 DER or PEM format.
+
+<span class="w"> </span>        :param keyfile: contents of a DER- or PEM-encoded file that contains
+<span class="gu">@@ -93,15 +115,30 @@ class AbstractKey:</span>
+<span class="w"> </span>        :return: the loaded key
+<span class="w"> </span>        :rtype: AbstractKey
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        methods = {</span>
+<span class="gi">+            &quot;PEM&quot;: cls._load_pkcs1_pem,</span>
+<span class="gi">+            &quot;DER&quot;: cls._load_pkcs1_der,</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+        method = cls._assert_format_exists(format, methods)</span>
+<span class="gi">+        return method(keyfile)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="gd">-    def _assert_format_exists(file_format: str, methods: typing.Mapping[str,</span>
+<span class="gd">-        typing.Callable]) -&gt;typing.Callable:</span>
+<span class="gi">+    def _assert_format_exists(</span>
+<span class="gi">+        file_format: str, methods: typing.Mapping[str, typing.Callable]</span>
+<span class="gi">+    ) -&gt; typing.Callable:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Checks whether the given file format exists in &#39;methods&#39;.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def save_pkcs1(self, format: str=&#39;PEM&#39;) -&gt;bytes:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return methods[file_format]</span>
+<span class="gi">+        except KeyError as ex:</span>
+<span class="gi">+            formats = &quot;, &quot;.join(sorted(methods.keys()))</span>
+<span class="gi">+            raise ValueError(</span>
+<span class="gi">+                &quot;Unsupported format: %r, try one of %s&quot; % (file_format, formats)</span>
+<span class="gi">+            ) from ex</span>
+<span class="gi">+</span>
+<span class="gi">+    def save_pkcs1(self, format: str = &quot;PEM&quot;) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves the key in PKCS#1 DER or PEM format.
+
+<span class="w"> </span>        :param format: the format to save; &#39;PEM&#39; or &#39;DER&#39;
+<span class="gu">@@ -109,9 +146,16 @@ class AbstractKey:</span>
+<span class="w"> </span>        :returns: the DER- or PEM-encoded key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def blind(self, message: int) -&gt;typing.Tuple[int, int]:</span>
+<span class="gi">+        methods = {</span>
+<span class="gi">+            &quot;PEM&quot;: self._save_pkcs1_pem,</span>
+<span class="gi">+            &quot;DER&quot;: self._save_pkcs1_der,</span>
+<span class="gi">+        }</span>
+<span class="gi">+</span>
+<span class="gi">+        method = self._assert_format_exists(format, methods)</span>
+<span class="gi">+        return method()</span>
+<span class="gi">+</span>
+<span class="gi">+    def blind(self, message: int) -&gt; typing.Tuple[int, int]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Performs blinding on the message.
+
+<span class="w"> </span>        :param message: the message, as integer, to blind.
+<span class="gu">@@ -122,9 +166,11 @@ class AbstractKey:</span>
+
+<span class="w"> </span>        See https://en.wikipedia.org/wiki/Blinding_%28cryptography%29
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        blindfac, blindfac_inverse = self._update_blinding_factor()</span>
+<span class="gi">+        blinded = (message * pow(blindfac, self.e, self.n)) % self.n</span>
+<span class="gi">+        return blinded, blindfac_inverse</span>
+
+<span class="gd">-    def unblind(self, blinded: int, blindfac_inverse: int) -&gt;int:</span>
+<span class="gi">+    def unblind(self, blinded: int, blindfac_inverse: int) -&gt; int:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Performs blinding on the message using random number &#39;blindfac_inverse&#39;.
+
+<span class="w"> </span>        :param blinded: the blinded message, as integer, to unblind.
+<span class="gu">@@ -135,9 +181,16 @@ class AbstractKey:</span>
+
+<span class="w"> </span>        See https://en.wikipedia.org/wiki/Blinding_%28cryptography%29
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return (blindfac_inverse * blinded) % self.n</span>
+<span class="gi">+</span>
+<span class="gi">+    def _initial_blinding_factor(self) -&gt; int:</span>
+<span class="gi">+        for _ in range(1000):</span>
+<span class="gi">+            blind_r = rsa.randnum.randint(self.n - 1)</span>
+<span class="gi">+            if rsa.prime.are_relatively_prime(self.n, blind_r):</span>
+<span class="gi">+                return blind_r</span>
+<span class="gi">+        raise RuntimeError(&quot;unable to find blinding factor&quot;)</span>
+
+<span class="gd">-    def _update_blinding_factor(self) -&gt;typing.Tuple[int, int]:</span>
+<span class="gi">+    def _update_blinding_factor(self) -&gt; typing.Tuple[int, int]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Update blinding factors.
+
+<span class="w"> </span>        Computing a blinding factor is expensive, so instead this function
+<span class="gu">@@ -148,7 +201,18 @@ class AbstractKey:</span>
+
+<span class="w"> </span>        :return: the new blinding factor and its inverse.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        with self.mutex:</span>
+<span class="gi">+            if self.blindfac &lt; 0:</span>
+<span class="gi">+                # Compute initial blinding factor, which is rather slow to do.</span>
+<span class="gi">+                self.blindfac = self._initial_blinding_factor()</span>
+<span class="gi">+                self.blindfac_inverse = rsa.common.inverse(self.blindfac, self.n)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                # Reuse previous blinding factor.</span>
+<span class="gi">+                self.blindfac = pow(self.blindfac, 2, self.n)</span>
+<span class="gi">+                self.blindfac_inverse = pow(self.blindfac_inverse, 2, self.n)</span>
+<span class="gi">+</span>
+<span class="gi">+            return self.blindfac, self.blindfac_inverse</span>
+
+
+<span class="w"> </span>class PublicKey(AbstractKey):
+<span class="gu">@@ -174,38 +238,41 @@ class PublicKey(AbstractKey):</span>
+<span class="w"> </span>    3
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>    __slots__ = ()
+
+<span class="gd">-    def __getitem__(self, key: str) -&gt;int:</span>
+<span class="gi">+    def __getitem__(self, key: str) -&gt; int:</span>
+<span class="w"> </span>        return getattr(self, key)
+
+<span class="gd">-    def __repr__(self) -&gt;str:</span>
+<span class="gd">-        return &#39;PublicKey(%i, %i)&#39; % (self.n, self.e)</span>
+<span class="gi">+    def __repr__(self) -&gt; str:</span>
+<span class="gi">+        return &quot;PublicKey(%i, %i)&quot; % (self.n, self.e)</span>
+
+<span class="gd">-    def __getstate__(self) -&gt;typing.Tuple[int, int]:</span>
+<span class="gi">+    def __getstate__(self) -&gt; typing.Tuple[int, int]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Returns the key as tuple for pickling.&quot;&quot;&quot;
+<span class="w"> </span>        return self.n, self.e
+
+<span class="gd">-    def __setstate__(self, state: typing.Tuple[int, int]) -&gt;None:</span>
+<span class="gi">+    def __setstate__(self, state: typing.Tuple[int, int]) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Sets the key from tuple.&quot;&quot;&quot;
+<span class="w"> </span>        self.n, self.e = state
+<span class="w"> </span>        AbstractKey.__init__(self, self.n, self.e)
+
+<span class="gd">-    def __eq__(self, other: typing.Any) -&gt;bool:</span>
+<span class="gi">+    def __eq__(self, other: typing.Any) -&gt; bool:</span>
+<span class="w"> </span>        if other is None:
+<span class="w"> </span>            return False
+<span class="gi">+</span>
+<span class="w"> </span>        if not isinstance(other, PublicKey):
+<span class="w"> </span>            return False
+<span class="gi">+</span>
+<span class="w"> </span>        return self.n == other.n and self.e == other.e
+
+<span class="gd">-    def __ne__(self, other: typing.Any) -&gt;bool:</span>
+<span class="gd">-        return not self == other</span>
+<span class="gi">+    def __ne__(self, other: typing.Any) -&gt; bool:</span>
+<span class="gi">+        return not (self == other)</span>
+
+<span class="gd">-    def __hash__(self) -&gt;int:</span>
+<span class="gi">+    def __hash__(self) -&gt; int:</span>
+<span class="w"> </span>        return hash((self.n, self.e))
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def _load_pkcs1_der(cls, keyfile: bytes) -&gt;&#39;PublicKey&#39;:</span>
+<span class="gi">+    def _load_pkcs1_der(cls, keyfile: bytes) -&gt; &quot;PublicKey&quot;:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a key in PKCS#1 DER format.
+
+<span class="w"> </span>        :param keyfile: contents of a DER-encoded file that contains the public
+<span class="gu">@@ -224,18 +291,32 @@ class PublicKey(AbstractKey):</span>
+<span class="w"> </span>        PublicKey(2367317549, 65537)
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def _save_pkcs1_der(self) -&gt;bytes:</span>
+<span class="gi">+        from pyasn1.codec.der import decoder</span>
+<span class="gi">+        from rsa.asn1 import AsnPubKey</span>
+<span class="gi">+</span>
+<span class="gi">+        (priv, _) = decoder.decode(keyfile, asn1Spec=AsnPubKey())</span>
+<span class="gi">+        return cls(n=int(priv[&quot;modulus&quot;]), e=int(priv[&quot;publicExponent&quot;]))</span>
+<span class="gi">+</span>
+<span class="gi">+    def _save_pkcs1_der(self) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves the public key in PKCS#1 DER format.
+
+<span class="w"> </span>        :returns: the DER-encoded public key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        from pyasn1.codec.der import encoder</span>
+<span class="gi">+        from rsa.asn1 import AsnPubKey</span>
+<span class="gi">+</span>
+<span class="gi">+        # Create the ASN object</span>
+<span class="gi">+        asn_key = AsnPubKey()</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;modulus&quot;, self.n)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;publicExponent&quot;, self.e)</span>
+<span class="gi">+</span>
+<span class="gi">+        return encoder.encode(asn_key)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def _load_pkcs1_pem(cls, keyfile: bytes) -&gt;&#39;PublicKey&#39;:</span>
+<span class="gi">+    def _load_pkcs1_pem(cls, keyfile: bytes) -&gt; &quot;PublicKey&quot;:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a PKCS#1 PEM-encoded public key file.
+
+<span class="w"> </span>        The contents of the file before the &quot;-----BEGIN RSA PUBLIC KEY-----&quot; and
+<span class="gu">@@ -245,18 +326,22 @@ class PublicKey(AbstractKey):</span>
+<span class="w"> </span>            key.
+<span class="w"> </span>        :return: a PublicKey object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def _save_pkcs1_pem(self) -&gt;bytes:</span>
+<span class="gi">+        der = rsa.pem.load_pem(keyfile, &quot;RSA PUBLIC KEY&quot;)</span>
+<span class="gi">+        return cls._load_pkcs1_der(der)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _save_pkcs1_pem(self) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves a PKCS#1 PEM-encoded public key file.
+
+<span class="w"> </span>        :return: contents of a PEM-encoded file that contains the public key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        der = self._save_pkcs1_der()</span>
+<span class="gi">+        return rsa.pem.save_pem(der, &quot;RSA PUBLIC KEY&quot;)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def load_pkcs1_openssl_pem(cls, keyfile: bytes) -&gt;&#39;PublicKey&#39;:</span>
+<span class="gi">+    def load_pkcs1_openssl_pem(cls, keyfile: bytes) -&gt; &quot;PublicKey&quot;:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a PKCS#1.5 PEM-encoded public key file from OpenSSL.
+
+<span class="w"> </span>        These files can be recognised in that they start with BEGIN PUBLIC KEY
+<span class="gu">@@ -270,17 +355,29 @@ class PublicKey(AbstractKey):</span>
+<span class="w"> </span>        :type keyfile: bytes
+<span class="w"> </span>        :return: a PublicKey object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        der = rsa.pem.load_pem(keyfile, &quot;PUBLIC KEY&quot;)</span>
+<span class="gi">+        return cls.load_pkcs1_openssl_der(der)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def load_pkcs1_openssl_der(cls, keyfile: bytes) -&gt;&#39;PublicKey&#39;:</span>
+<span class="gi">+    def load_pkcs1_openssl_der(cls, keyfile: bytes) -&gt; &quot;PublicKey&quot;:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a PKCS#1 DER-encoded public key file from OpenSSL.
+
+<span class="w"> </span>        :param keyfile: contents of a DER-encoded file that contains the public
+<span class="w"> </span>            key, from OpenSSL.
+<span class="w"> </span>        :return: a PublicKey object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        from rsa.asn1 import OpenSSLPubKey</span>
+<span class="gi">+        from pyasn1.codec.der import decoder</span>
+<span class="gi">+        from pyasn1.type import univ</span>
+<span class="gi">+</span>
+<span class="gi">+        (keyinfo, _) = decoder.decode(keyfile, asn1Spec=OpenSSLPubKey())</span>
+<span class="gi">+</span>
+<span class="gi">+        if keyinfo[&quot;header&quot;][&quot;oid&quot;] != univ.ObjectIdentifier(&quot;1.2.840.113549.1.1.1&quot;):</span>
+<span class="gi">+            raise TypeError(&quot;This is not a DER-encoded OpenSSL-compatible public key&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return cls._load_pkcs1_der(keyinfo[&quot;key&quot;][1:])</span>
+
+
+<span class="w"> </span>class PrivateKey(AbstractKey):
+<span class="gu">@@ -306,54 +403,66 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>    50797
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    __slots__ = &#39;d&#39;, &#39;p&#39;, &#39;q&#39;, &#39;exp1&#39;, &#39;exp2&#39;, &#39;coef&#39;</span>
+
+<span class="gd">-    def __init__(self, n: int, e: int, d: int, p: int, q: int) -&gt;None:</span>
+<span class="gi">+    __slots__ = (&quot;d&quot;, &quot;p&quot;, &quot;q&quot;, &quot;exp1&quot;, &quot;exp2&quot;, &quot;coef&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def __init__(self, n: int, e: int, d: int, p: int, q: int) -&gt; None:</span>
+<span class="w"> </span>        AbstractKey.__init__(self, n, e)
+<span class="w"> </span>        self.d = d
+<span class="w"> </span>        self.p = p
+<span class="w"> </span>        self.q = q
+<span class="gi">+</span>
+<span class="gi">+        # Calculate exponents and coefficient.</span>
+<span class="w"> </span>        self.exp1 = int(d % (p - 1))
+<span class="w"> </span>        self.exp2 = int(d % (q - 1))
+<span class="w"> </span>        self.coef = rsa.common.inverse(q, p)
+
+<span class="gd">-    def __getitem__(self, key: str) -&gt;int:</span>
+<span class="gi">+    def __getitem__(self, key: str) -&gt; int:</span>
+<span class="w"> </span>        return getattr(self, key)
+
+<span class="gd">-    def __repr__(self) -&gt;str:</span>
+<span class="gd">-        return &#39;PrivateKey(%i, %i, %i, %i, %i)&#39; % (self.n, self.e, self.d,</span>
+<span class="gd">-            self.p, self.q)</span>
+<span class="gi">+    def __repr__(self) -&gt; str:</span>
+<span class="gi">+        return &quot;PrivateKey(%i, %i, %i, %i, %i)&quot; % (</span>
+<span class="gi">+            self.n,</span>
+<span class="gi">+            self.e,</span>
+<span class="gi">+            self.d,</span>
+<span class="gi">+            self.p,</span>
+<span class="gi">+            self.q,</span>
+<span class="gi">+        )</span>
+
+<span class="gd">-    def __getstate__(self) -&gt;typing.Tuple[int, int, int, int, int, int, int,</span>
+<span class="gd">-        int]:</span>
+<span class="gi">+    def __getstate__(self) -&gt; typing.Tuple[int, int, int, int, int, int, int, int]:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Returns the key as tuple for pickling.&quot;&quot;&quot;
+<span class="gd">-        return (self.n, self.e, self.d, self.p, self.q, self.exp1, self.</span>
+<span class="gd">-            exp2, self.coef)</span>
+<span class="gi">+        return self.n, self.e, self.d, self.p, self.q, self.exp1, self.exp2, self.coef</span>
+
+<span class="gd">-    def __setstate__(self, state: typing.Tuple[int, int, int, int, int, int,</span>
+<span class="gd">-        int, int]) -&gt;None:</span>
+<span class="gi">+    def __setstate__(self, state: typing.Tuple[int, int, int, int, int, int, int, int]) -&gt; None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Sets the key from tuple.&quot;&quot;&quot;
+<span class="gd">-        (self.n, self.e, self.d, self.p, self.q, self.exp1, self.exp2, self</span>
+<span class="gd">-            .coef) = state</span>
+<span class="gi">+        self.n, self.e, self.d, self.p, self.q, self.exp1, self.exp2, self.coef = state</span>
+<span class="w"> </span>        AbstractKey.__init__(self, self.n, self.e)
+
+<span class="gd">-    def __eq__(self, other: typing.Any) -&gt;bool:</span>
+<span class="gi">+    def __eq__(self, other: typing.Any) -&gt; bool:</span>
+<span class="w"> </span>        if other is None:
+<span class="w"> </span>            return False
+<span class="gi">+</span>
+<span class="w"> </span>        if not isinstance(other, PrivateKey):
+<span class="w"> </span>            return False
+<span class="gd">-        return (self.n == other.n and self.e == other.e and self.d == other</span>
+<span class="gd">-            .d and self.p == other.p and self.q == other.q and self.exp1 ==</span>
+<span class="gd">-            other.exp1 and self.exp2 == other.exp2 and self.coef == other.coef)</span>
+
+<span class="gd">-    def __ne__(self, other: typing.Any) -&gt;bool:</span>
+<span class="gd">-        return not self == other</span>
+<span class="gi">+        return (</span>
+<span class="gi">+            self.n == other.n</span>
+<span class="gi">+            and self.e == other.e</span>
+<span class="gi">+            and self.d == other.d</span>
+<span class="gi">+            and self.p == other.p</span>
+<span class="gi">+            and self.q == other.q</span>
+<span class="gi">+            and self.exp1 == other.exp1</span>
+<span class="gi">+            and self.exp2 == other.exp2</span>
+<span class="gi">+            and self.coef == other.coef</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    def __ne__(self, other: typing.Any) -&gt; bool:</span>
+<span class="gi">+        return not (self == other)</span>
+
+<span class="gd">-    def __hash__(self) -&gt;int:</span>
+<span class="gd">-        return hash((self.n, self.e, self.d, self.p, self.q, self.exp1,</span>
+<span class="gd">-            self.exp2, self.coef))</span>
+<span class="gi">+    def __hash__(self) -&gt; int:</span>
+<span class="gi">+        return hash((self.n, self.e, self.d, self.p, self.q, self.exp1, self.exp2, self.coef))</span>
+
+<span class="gd">-    def blinded_decrypt(self, encrypted: int) -&gt;int:</span>
+<span class="gi">+    def blinded_decrypt(self, encrypted: int) -&gt; int:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Decrypts the message using blinding to prevent side-channel attacks.
+
+<span class="w"> </span>        :param encrypted: the encrypted message
+<span class="gu">@@ -362,9 +471,22 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>        :returns: the decrypted message
+<span class="w"> </span>        :rtype: int
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def blinded_encrypt(self, message: int) -&gt;int:</span>
+<span class="gi">+        # Blinding and un-blinding should be using the same factor</span>
+<span class="gi">+        blinded, blindfac_inverse = self.blind(encrypted)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Instead of using the core functionality, use the Chinese Remainder</span>
+<span class="gi">+        # Theorem and be 2-4x faster. This the same as:</span>
+<span class="gi">+        #</span>
+<span class="gi">+        # decrypted = rsa.core.decrypt_int(blinded, self.d, self.n)</span>
+<span class="gi">+        s1 = pow(blinded, self.exp1, self.p)</span>
+<span class="gi">+        s2 = pow(blinded, self.exp2, self.q)</span>
+<span class="gi">+        h = ((s1 - s2) * self.coef) % self.p</span>
+<span class="gi">+        decrypted = s2 + self.q * h</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.unblind(decrypted, blindfac_inverse)</span>
+<span class="gi">+</span>
+<span class="gi">+    def blinded_encrypt(self, message: int) -&gt; int:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Encrypts the message using blinding to prevent side-channel attacks.
+
+<span class="w"> </span>        :param message: the message to encrypt
+<span class="gu">@@ -373,10 +495,13 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>        :returns: the encrypted message
+<span class="w"> </span>        :rtype: int
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        blinded, blindfac_inverse = self.blind(message)</span>
+<span class="gi">+        encrypted = rsa.core.encrypt_int(blinded, self.d, self.n)</span>
+<span class="gi">+        return self.unblind(encrypted, blindfac_inverse)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def _load_pkcs1_der(cls, keyfile: bytes) -&gt;&#39;PrivateKey&#39;:</span>
+<span class="gi">+    def _load_pkcs1_der(cls, keyfile: bytes) -&gt; &quot;PrivateKey&quot;:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a key in PKCS#1 DER format.
+
+<span class="w"> </span>        :param keyfile: contents of a DER-encoded file that contains the private
+<span class="gu">@@ -396,18 +521,83 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>        PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def _save_pkcs1_der(self) -&gt;bytes:</span>
+<span class="gi">+        from pyasn1.codec.der import decoder</span>
+<span class="gi">+</span>
+<span class="gi">+        (priv, _) = decoder.decode(keyfile)</span>
+<span class="gi">+</span>
+<span class="gi">+        # ASN.1 contents of DER encoded private key:</span>
+<span class="gi">+        #</span>
+<span class="gi">+        # RSAPrivateKey ::= SEQUENCE {</span>
+<span class="gi">+        #     version           Version,</span>
+<span class="gi">+        #     modulus           INTEGER,  -- n</span>
+<span class="gi">+        #     publicExponent    INTEGER,  -- e</span>
+<span class="gi">+        #     privateExponent   INTEGER,  -- d</span>
+<span class="gi">+        #     prime1            INTEGER,  -- p</span>
+<span class="gi">+        #     prime2            INTEGER,  -- q</span>
+<span class="gi">+        #     exponent1         INTEGER,  -- d mod (p-1)</span>
+<span class="gi">+        #     exponent2         INTEGER,  -- d mod (q-1)</span>
+<span class="gi">+        #     coefficient       INTEGER,  -- (inverse of q) mod p</span>
+<span class="gi">+        #     otherPrimeInfos   OtherPrimeInfos OPTIONAL</span>
+<span class="gi">+        # }</span>
+<span class="gi">+</span>
+<span class="gi">+        if priv[0] != 0:</span>
+<span class="gi">+            raise ValueError(&quot;Unable to read this file, version %s != 0&quot; % priv[0])</span>
+<span class="gi">+</span>
+<span class="gi">+        as_ints = map(int, priv[1:6])</span>
+<span class="gi">+        key = cls(*as_ints)</span>
+<span class="gi">+</span>
+<span class="gi">+        exp1, exp2, coef = map(int, priv[6:9])</span>
+<span class="gi">+</span>
+<span class="gi">+        if (key.exp1, key.exp2, key.coef) != (exp1, exp2, coef):</span>
+<span class="gi">+            warnings.warn(</span>
+<span class="gi">+                &quot;You have provided a malformed keyfile. Either the exponents &quot;</span>
+<span class="gi">+                &quot;or the coefficient are incorrect. Using the correct values &quot;</span>
+<span class="gi">+                &quot;instead.&quot;,</span>
+<span class="gi">+                UserWarning,</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        return key</span>
+<span class="gi">+</span>
+<span class="gi">+    def _save_pkcs1_der(self) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves the private key in PKCS#1 DER format.
+
+<span class="w"> </span>        :returns: the DER-encoded private key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+</span>
+<span class="gi">+        from pyasn1.type import univ, namedtype</span>
+<span class="gi">+        from pyasn1.codec.der import encoder</span>
+<span class="gi">+</span>
+<span class="gi">+        class AsnPrivKey(univ.Sequence):</span>
+<span class="gi">+            componentType = namedtype.NamedTypes(</span>
+<span class="gi">+                namedtype.NamedType(&quot;version&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;modulus&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;publicExponent&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;privateExponent&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;prime1&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;prime2&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;exponent1&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;exponent2&quot;, univ.Integer()),</span>
+<span class="gi">+                namedtype.NamedType(&quot;coefficient&quot;, univ.Integer()),</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        # Create the ASN object</span>
+<span class="gi">+        asn_key = AsnPrivKey()</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;version&quot;, 0)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;modulus&quot;, self.n)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;publicExponent&quot;, self.e)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;privateExponent&quot;, self.d)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;prime1&quot;, self.p)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;prime2&quot;, self.q)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;exponent1&quot;, self.exp1)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;exponent2&quot;, self.exp2)</span>
+<span class="gi">+        asn_key.setComponentByName(&quot;coefficient&quot;, self.coef)</span>
+<span class="gi">+</span>
+<span class="gi">+        return encoder.encode(asn_key)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="gd">-    def _load_pkcs1_pem(cls, keyfile: bytes) -&gt;&#39;PrivateKey&#39;:</span>
+<span class="gi">+    def _load_pkcs1_pem(cls, keyfile: bytes) -&gt; &quot;PrivateKey&quot;:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Loads a PKCS#1 PEM-encoded private key file.
+
+<span class="w"> </span>        The contents of the file before the &quot;-----BEGIN RSA PRIVATE KEY-----&quot; and
+<span class="gu">@@ -418,19 +608,26 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>        :type keyfile: bytes
+<span class="w"> </span>        :return: a PrivateKey object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gd">-    def _save_pkcs1_pem(self) -&gt;bytes:</span>
+<span class="gi">+        der = rsa.pem.load_pem(keyfile, b&quot;RSA PRIVATE KEY&quot;)</span>
+<span class="gi">+        return cls._load_pkcs1_der(der)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _save_pkcs1_pem(self) -&gt; bytes:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Saves a PKCS#1 PEM-encoded private key file.
+
+<span class="w"> </span>        :return: contents of a PEM-encoded file that contains the private key.
+<span class="w"> </span>        :rtype: bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+
+<span class="gi">+        der = self._save_pkcs1_der()</span>
+<span class="gi">+        return rsa.pem.save_pem(der, b&quot;RSA PRIVATE KEY&quot;)</span>
+
+<span class="gd">-def find_p_q(nbits: int, getprime_func: typing.Callable[[int], int]=rsa.</span>
+<span class="gd">-    prime.getprime, accurate: bool=True) -&gt;typing.Tuple[int, int]:</span>
+<span class="gi">+</span>
+<span class="gi">+def find_p_q(</span>
+<span class="gi">+    nbits: int,</span>
+<span class="gi">+    getprime_func: typing.Callable[[int], int] = rsa.prime.getprime,</span>
+<span class="gi">+    accurate: bool = True,</span>
+<span class="gi">+) -&gt; typing.Tuple[int, int]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns a tuple of two different primes of nbits bits each.
+
+<span class="w"> </span>    The resulting p * q has exactly 2 * nbits bits, and the returned p and q
+<span class="gu">@@ -460,11 +657,53 @@ def find_p_q(nbits: int, getprime_func: typing.Callable[[int], int]=rsa.</span>
+<span class="w"> </span>    True
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    total_bits = nbits * 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # Make sure that p and q aren&#39;t too close or the factoring programs can</span>
+<span class="gi">+    # factor n.</span>
+<span class="gi">+    shift = nbits // 16</span>
+<span class="gi">+    pbits = nbits + shift</span>
+<span class="gi">+    qbits = nbits - shift</span>
+<span class="gi">+</span>
+<span class="gi">+    # Choose the two initial primes</span>
+<span class="gi">+    p = getprime_func(pbits)</span>
+<span class="gi">+    q = getprime_func(qbits)</span>
+<span class="gi">+</span>
+<span class="gi">+    def is_acceptable(p: int, q: int) -&gt; bool:</span>
+<span class="gi">+        &quot;&quot;&quot;Returns True iff p and q are acceptable:</span>
+<span class="gi">+</span>
+<span class="gi">+        - p and q differ</span>
+<span class="gi">+        - (p * q) has the right nr of bits (when accurate=True)</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+        if p == q:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+</span>
+<span class="gi">+        if not accurate:</span>
+<span class="gi">+            return True</span>
+<span class="gi">+</span>
+<span class="gi">+        # Make sure we have just the right amount of bits</span>
+<span class="gi">+        found_size = rsa.common.bit_size(p * q)</span>
+<span class="gi">+        return total_bits == found_size</span>
+<span class="gi">+</span>
+<span class="gi">+    # Keep choosing other primes until they match our requirements.</span>
+<span class="gi">+    change_p = False</span>
+<span class="gi">+    while not is_acceptable(p, q):</span>
+<span class="gi">+        # Change p on one iteration and q on the other</span>
+<span class="gi">+        if change_p:</span>
+<span class="gi">+            p = getprime_func(pbits)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            q = getprime_func(qbits)</span>
+<span class="gi">+</span>
+<span class="gi">+        change_p = not change_p</span>
+
+<span class="gd">-def calculate_keys_custom_exponent(p: int, q: int, exponent: int</span>
+<span class="gd">-    ) -&gt;typing.Tuple[int, int]:</span>
+<span class="gi">+    # We want p &gt; q as described on</span>
+<span class="gi">+    # http://www.di-mgt.com.au/rsa_alg.html#crt</span>
+<span class="gi">+    return max(p, q), min(p, q)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def calculate_keys_custom_exponent(p: int, q: int, exponent: int) -&gt; typing.Tuple[int, int]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Calculates an encryption and a decryption key given p, q and an exponent,
+<span class="w"> </span>    and returns them as a tuple (e, d)
+
+<span class="gu">@@ -476,10 +715,29 @@ def calculate_keys_custom_exponent(p: int, q: int, exponent: int</span>
+<span class="w"> </span>    :type exponent: int
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    phi_n = (p - 1) * (q - 1)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        d = rsa.common.inverse(exponent, phi_n)</span>
+<span class="gi">+    except rsa.common.NotRelativePrimeError as ex:</span>
+<span class="gi">+        raise rsa.common.NotRelativePrimeError(</span>
+<span class="gi">+            exponent,</span>
+<span class="gi">+            phi_n,</span>
+<span class="gi">+            ex.d,</span>
+<span class="gi">+            msg=&quot;e (%d) and phi_n (%d) are not relatively prime (divider=%i)&quot;</span>
+<span class="gi">+            % (exponent, phi_n, ex.d),</span>
+<span class="gi">+        ) from ex</span>
+<span class="gi">+</span>
+<span class="gi">+    if (exponent * d) % phi_n != 1:</span>
+<span class="gi">+        raise ValueError(</span>
+<span class="gi">+            &quot;e (%d) and d (%d) are not mult. inv. modulo &quot; &quot;phi_n (%d)&quot; % (exponent, d, phi_n)</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    return exponent, d</span>
+
+<span class="gd">-def calculate_keys(p: int, q: int) -&gt;typing.Tuple[int, int]:</span>
+<span class="gi">+</span>
+<span class="gi">+def calculate_keys(p: int, q: int) -&gt; typing.Tuple[int, int]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Calculates an encryption and a decryption key given p and q, and
+<span class="w"> </span>    returns them as a tuple (e, d)
+
+<span class="gu">@@ -488,12 +746,16 @@ def calculate_keys(p: int, q: int) -&gt;typing.Tuple[int, int]:</span>
+
+<span class="w"> </span>    :return: tuple (e, d) with the encryption and decryption exponents.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    return calculate_keys_custom_exponent(p, q, DEFAULT_EXPONENT)</span>
+
+
+<span class="gd">-def gen_keys(nbits: int, getprime_func: typing.Callable[[int], int],</span>
+<span class="gd">-    accurate: bool=True, exponent: int=DEFAULT_EXPONENT) -&gt;typing.Tuple[int,</span>
+<span class="gd">-    int, int, int]:</span>
+<span class="gi">+def gen_keys(</span>
+<span class="gi">+    nbits: int,</span>
+<span class="gi">+    getprime_func: typing.Callable[[int], int],</span>
+<span class="gi">+    accurate: bool = True,</span>
+<span class="gi">+    exponent: int = DEFAULT_EXPONENT,</span>
+<span class="gi">+) -&gt; typing.Tuple[int, int, int, int]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Generate RSA keys of nbits bits. Returns (p, q, e, d).
+
+<span class="w"> </span>    Note: this can take a long time, depending on the key size.
+<span class="gu">@@ -507,11 +769,26 @@ def gen_keys(nbits: int, getprime_func: typing.Callable[[int], int],</span>
+<span class="w"> </span>        private key can be cracked. A very common choice for e is 65537.
+<span class="w"> </span>    :type exponent: int
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gd">-</span>
+
+<span class="gd">-def newkeys(nbits: int, accurate: bool=True, poolsize: int=1, exponent: int</span>
+<span class="gd">-    =DEFAULT_EXPONENT) -&gt;typing.Tuple[PublicKey, PrivateKey]:</span>
+<span class="gi">+    # Regenerate p and q values, until calculate_keys doesn&#39;t raise a</span>
+<span class="gi">+    # ValueError.</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        (p, q) = find_p_q(nbits // 2, getprime_func, accurate)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            (e, d) = calculate_keys_custom_exponent(p, q, exponent=exponent)</span>
+<span class="gi">+            break</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            pass</span>
+<span class="gi">+</span>
+<span class="gi">+    return p, q, e, d</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def newkeys(</span>
+<span class="gi">+    nbits: int,</span>
+<span class="gi">+    accurate: bool = True,</span>
+<span class="gi">+    poolsize: int = 1,</span>
+<span class="gi">+    exponent: int = DEFAULT_EXPONENT,</span>
+<span class="gi">+) -&gt; typing.Tuple[PublicKey, PrivateKey]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Generates public and private keys, and returns them as (pub, priv).
+
+<span class="w"> </span>    The public key is also known as the &#39;encryption key&#39;, and is a
+<span class="gu">@@ -536,20 +813,46 @@ def newkeys(nbits: int, accurate: bool=True, poolsize: int=1, exponent: int</span>
+<span class="w"> </span>    Python 2.6 or newer.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    if nbits &lt; 16:</span>
+<span class="gi">+        raise ValueError(&quot;Key too small&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if poolsize &lt; 1:</span>
+<span class="gi">+        raise ValueError(&quot;Pool size (%i) should be &gt;= 1&quot; % poolsize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Determine which getprime function to use</span>
+<span class="gi">+    if poolsize &gt; 1:</span>
+<span class="gi">+        from rsa import parallel</span>
+
+<span class="gd">-__all__ = [&#39;PublicKey&#39;, &#39;PrivateKey&#39;, &#39;newkeys&#39;]</span>
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gi">+        def getprime_func(nbits: int) -&gt; int:</span>
+<span class="gi">+            return parallel.getprime(nbits, poolsize=poolsize)</span>
+<span class="gi">+</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        getprime_func = rsa.prime.getprime</span>
+<span class="gi">+</span>
+<span class="gi">+    # Generate the key components</span>
+<span class="gi">+    (p, q, e, d) = gen_keys(nbits, getprime_func, accurate=accurate, exponent=exponent)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create the key objects</span>
+<span class="gi">+    n = p * q</span>
+<span class="gi">+</span>
+<span class="gi">+    return (PublicKey(n, e), PrivateKey(n, e, d, p, q))</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = [&quot;PublicKey&quot;, &quot;PrivateKey&quot;, &quot;newkeys&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    try:
+<span class="w"> </span>        for count in range(100):
+<span class="gd">-            failures, tests = doctest.testmod()</span>
+<span class="gi">+            (failures, tests) = doctest.testmod()</span>
+<span class="w"> </span>            if failures:
+<span class="w"> </span>                break
+<span class="gd">-            if count % 10 == 0 and count or count == 1:</span>
+<span class="gd">-                print(&#39;%i times&#39; % count)</span>
+<span class="gi">+</span>
+<span class="gi">+            if (count % 10 == 0 and count) or count == 1:</span>
+<span class="gi">+                print(&quot;%i times&quot; % count)</span>
+<span class="w"> </span>    except KeyboardInterrupt:
+<span class="gd">-        print(&#39;Aborted&#39;)</span>
+<span class="gi">+        print(&quot;Aborted&quot;)</span>
+<span class="w"> </span>    else:
+<span class="gd">-        print(&#39;Doctests done&#39;)</span>
+<span class="gi">+        print(&quot;Doctests done&quot;)</span>
+<span class="gh">diff --git a/rsa/parallel.py b/rsa/parallel.py</span>
+<span class="gh">index 0d3a4f8..5020edb 100644</span>
+<span class="gd">--- a/rsa/parallel.py</span>
+<span class="gi">+++ b/rsa/parallel.py</span>
+<span class="gu">@@ -1,3 +1,17 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Functions for parallel computation on multiple cores.
+
+<span class="w"> </span>Introduced in Python-RSA 3.1.
+<span class="gu">@@ -7,13 +21,25 @@ Introduced in Python-RSA 3.1.</span>
+<span class="w"> </span>    Requires Python 2.6 or newer.
+
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import multiprocessing as mp
+<span class="w"> </span>from multiprocessing.connection import Connection
+<span class="gi">+</span>
+<span class="w"> </span>import rsa.prime
+<span class="w"> </span>import rsa.randnum
+
+
+<span class="gd">-def getprime(nbits: int, poolsize: int) -&gt;int:</span>
+<span class="gi">+def _find_prime(nbits: int, pipe: Connection) -&gt; None:</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        integer = rsa.randnum.read_random_odd_int(nbits)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Test for primeness</span>
+<span class="gi">+        if rsa.prime.is_prime(integer):</span>
+<span class="gi">+            pipe.send(integer)</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def getprime(nbits: int, poolsize: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns a prime number that can be stored in &#39;nbits&#39; bits.
+
+<span class="w"> </span>    Works in multiple threads at the same time.
+<span class="gu">@@ -31,17 +57,40 @@ def getprime(nbits: int, poolsize: int) -&gt;int:</span>
+<span class="w"> </span>    True
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    (pipe_recv, pipe_send) = mp.Pipe(duplex=False)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create processes</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        procs = [mp.Process(target=_find_prime, args=(nbits, pipe_send)) for _ in range(poolsize)]</span>
+<span class="gi">+        # Start processes</span>
+<span class="gi">+        for p in procs:</span>
+<span class="gi">+            p.start()</span>
+<span class="gi">+</span>
+<span class="gi">+        result = pipe_recv.recv()</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        pipe_recv.close()</span>
+<span class="gi">+        pipe_send.close()</span>
+
+<span class="gd">-__all__ = [&#39;getprime&#39;]</span>
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gd">-    print(&#39;Running doctests 1000x or until failure&#39;)</span>
+<span class="gi">+    # Terminate processes</span>
+<span class="gi">+    for p in procs:</span>
+<span class="gi">+        p.terminate()</span>
+<span class="gi">+</span>
+<span class="gi">+    return result</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = [&quot;getprime&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="gi">+    print(&quot;Running doctests 1000x or until failure&quot;)</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    for count in range(100):
+<span class="gd">-        failures, tests = doctest.testmod()</span>
+<span class="gi">+        (failures, tests) = doctest.testmod()</span>
+<span class="w"> </span>        if failures:
+<span class="w"> </span>            break
+<span class="gi">+</span>
+<span class="w"> </span>        if count % 10 == 0 and count:
+<span class="gd">-            print(&#39;%i times&#39; % count)</span>
+<span class="gd">-    print(&#39;Doctests done&#39;)</span>
+<span class="gi">+            print(&quot;%i times&quot; % count)</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;Doctests done&quot;)</span>
+<span class="gh">diff --git a/rsa/pem.py b/rsa/pem.py</span>
+<span class="gh">index b2b919a..5d26e6e 100644</span>
+<span class="gd">--- a/rsa/pem.py</span>
+<span class="gi">+++ b/rsa/pem.py</span>
+<span class="gu">@@ -1,23 +1,86 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Functions that load and write PEM-encoded files.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import base64
+<span class="w"> </span>import typing
+<span class="gi">+</span>
+<span class="gi">+# Should either be ASCII strings or bytes.</span>
+<span class="w"> </span>FlexiText = typing.Union[str, bytes]
+
+
+<span class="gd">-def _markers(pem_marker: FlexiText) -&gt;typing.Tuple[bytes, bytes]:</span>
+<span class="gi">+def _markers(pem_marker: FlexiText) -&gt; typing.Tuple[bytes, bytes]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns the start and end PEM markers, as bytes.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    if not isinstance(pem_marker, bytes):</span>
+<span class="gi">+        pem_marker = pem_marker.encode(&quot;ascii&quot;)</span>
+
+<span class="gd">-def _pem_lines(contents: bytes, pem_start: bytes, pem_end: bytes</span>
+<span class="gd">-    ) -&gt;typing.Iterator[bytes]:</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        b&quot;-----BEGIN &quot; + pem_marker + b&quot;-----&quot;,</span>
+<span class="gi">+        b&quot;-----END &quot; + pem_marker + b&quot;-----&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def _pem_lines(contents: bytes, pem_start: bytes, pem_end: bytes) -&gt; typing.Iterator[bytes]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Generator over PEM lines between pem_start and pem_end.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    in_pem_part = False</span>
+<span class="gi">+    seen_pem_start = False</span>
+<span class="gi">+</span>
+<span class="gi">+    for line in contents.splitlines():</span>
+<span class="gi">+        line = line.strip()</span>
+<span class="gi">+</span>
+<span class="gi">+        # Skip empty lines</span>
+<span class="gi">+        if not line:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle start marker</span>
+<span class="gi">+        if line == pem_start:</span>
+<span class="gi">+            if in_pem_part:</span>
+<span class="gi">+                raise ValueError(&#39;Seen start marker &quot;%r&quot; twice&#39; % pem_start)</span>
+<span class="gi">+</span>
+<span class="gi">+            in_pem_part = True</span>
+<span class="gi">+            seen_pem_start = True</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Skip stuff before first marker</span>
+<span class="gi">+        if not in_pem_part:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle end marker</span>
+<span class="gi">+        if in_pem_part and line == pem_end:</span>
+<span class="gi">+            in_pem_part = False</span>
+<span class="gi">+            break</span>
+<span class="gi">+</span>
+<span class="gi">+        # Load fields</span>
+<span class="gi">+        if b&quot;:&quot; in line:</span>
+<span class="gi">+            continue</span>
+
+<span class="gd">-def load_pem(contents: FlexiText, pem_marker: FlexiText) -&gt;bytes:</span>
+<span class="gi">+        yield line</span>
+<span class="gi">+</span>
+<span class="gi">+    # Do some sanity checks</span>
+<span class="gi">+    if not seen_pem_start:</span>
+<span class="gi">+        raise ValueError(&#39;No PEM start marker &quot;%r&quot; found&#39; % pem_start)</span>
+<span class="gi">+</span>
+<span class="gi">+    if in_pem_part:</span>
+<span class="gi">+        raise ValueError(&#39;No PEM end marker &quot;%r&quot; found&#39; % pem_end)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def load_pem(contents: FlexiText, pem_marker: FlexiText) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Loads a PEM file.
+
+<span class="w"> </span>    :param contents: the contents of the file to interpret
+<span class="gu">@@ -31,10 +94,20 @@ def load_pem(contents: FlexiText, pem_marker: FlexiText) -&gt;bytes:</span>
+<span class="w"> </span>        marker cannot be found.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    # We want bytes, not text. If it&#39;s text, it can be converted to ASCII bytes.</span>
+<span class="gi">+    if not isinstance(contents, bytes):</span>
+<span class="gi">+        contents = contents.encode(&quot;ascii&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    (pem_start, pem_end) = _markers(pem_marker)</span>
+<span class="gi">+    pem_lines = [line for line in _pem_lines(contents, pem_start, pem_end)]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Base64-decode the contents</span>
+<span class="gi">+    pem = b&quot;&quot;.join(pem_lines)</span>
+<span class="gi">+    return base64.standard_b64decode(pem)</span>
+
+<span class="gd">-def save_pem(contents: bytes, pem_marker: FlexiText) -&gt;bytes:</span>
+<span class="gi">+</span>
+<span class="gi">+def save_pem(contents: bytes, pem_marker: FlexiText) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Saves a PEM file.
+
+<span class="w"> </span>    :param contents: the contents to encode in PEM format
+<span class="gu">@@ -45,4 +118,17 @@ def save_pem(contents: bytes, pem_marker: FlexiText) -&gt;bytes:</span>
+<span class="w"> </span>    :return: the base64-encoded content between the start and end markers, as bytes.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    (pem_start, pem_end) = _markers(pem_marker)</span>
+<span class="gi">+</span>
+<span class="gi">+    b64 = base64.standard_b64encode(contents).replace(b&quot;\n&quot;, b&quot;&quot;)</span>
+<span class="gi">+    pem_lines = [pem_start]</span>
+<span class="gi">+</span>
+<span class="gi">+    for block_start in range(0, len(b64), 64):</span>
+<span class="gi">+        block = b64[block_start : block_start + 64]</span>
+<span class="gi">+        pem_lines.append(block)</span>
+<span class="gi">+</span>
+<span class="gi">+    pem_lines.append(pem_end)</span>
+<span class="gi">+    pem_lines.append(b&quot;&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return b&quot;\n&quot;.join(pem_lines)</span>
+<span class="gh">diff --git a/rsa/pkcs1.py b/rsa/pkcs1.py</span>
+<span class="gh">index 5359be7..ec6998e 100644</span>
+<span class="gd">--- a/rsa/pkcs1.py</span>
+<span class="gi">+++ b/rsa/pkcs1.py</span>
+<span class="gu">@@ -1,3 +1,17 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Functions for PKCS#1 version 1.5 encryption and signing
+
+<span class="w"> </span>This module implements certain functionality from PKCS#1 version 1.5. For a
+<span class="gu">@@ -11,35 +25,58 @@ that are raised contain the Python traceback information, which can be used to</span>
+<span class="w"> </span>deduce where in the process the failure occurred. DO NOT PASS SUCH INFORMATION
+<span class="w"> </span>to your users.
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import hashlib
+<span class="w"> </span>import os
+<span class="w"> </span>import sys
+<span class="w"> </span>import typing
+<span class="w"> </span>from hmac import compare_digest
+<span class="gi">+</span>
+<span class="w"> </span>from . import common, transform, core, key
+<span class="gi">+</span>
+<span class="w"> </span>if typing.TYPE_CHECKING:
+<span class="w"> </span>    HashType = hashlib._Hash
+<span class="w"> </span>else:
+<span class="w"> </span>    HashType = typing.Any
+<span class="gd">-HASH_ASN1 = {&#39;MD5&#39;:</span>
+<span class="gd">-    b&#39;0 0\x0c\x06\x08*\x86H\x86\xf7\r\x02\x05\x05\x00\x04\x10&#39;, &#39;SHA-1&#39;:</span>
+<span class="gd">-    b&#39;0!0\t\x06\x05+\x0e\x03\x02\x1a\x05\x00\x04\x14&#39;, &#39;SHA-224&#39;:</span>
+<span class="gd">-    b&#39;0-0\r\x06\t`\x86H\x01e\x03\x04\x02\x04\x05\x00\x04\x1c&#39;, &#39;SHA-256&#39;:</span>
+<span class="gd">-    b&#39;010\r\x06\t`\x86H\x01e\x03\x04\x02\x01\x05\x00\x04 &#39;, &#39;SHA-384&#39;:</span>
+<span class="gd">-    b&#39;0A0\r\x06\t`\x86H\x01e\x03\x04\x02\x02\x05\x00\x040&#39;, &#39;SHA-512&#39;:</span>
+<span class="gd">-    b&#39;0Q0\r\x06\t`\x86H\x01e\x03\x04\x02\x03\x05\x00\x04@&#39;}</span>
+<span class="gd">-HASH_METHODS: typing.Dict[str, typing.Callable[[], HashType]] = {&#39;MD5&#39;:</span>
+<span class="gd">-    hashlib.md5, &#39;SHA-1&#39;: hashlib.sha1, &#39;SHA-224&#39;: hashlib.sha224,</span>
+<span class="gd">-    &#39;SHA-256&#39;: hashlib.sha256, &#39;SHA-384&#39;: hashlib.sha384, &#39;SHA-512&#39;:</span>
+<span class="gd">-    hashlib.sha512}</span>
+<span class="gi">+</span>
+<span class="gi">+# ASN.1 codes that describe the hash algorithm used.</span>
+<span class="gi">+HASH_ASN1 = {</span>
+<span class="gi">+    &quot;MD5&quot;: b&quot;\x30\x20\x30\x0c\x06\x08\x2a\x86\x48\x86\xf7\x0d\x02\x05\x05\x00\x04\x10&quot;,</span>
+<span class="gi">+    &quot;SHA-1&quot;: b&quot;\x30\x21\x30\x09\x06\x05\x2b\x0e\x03\x02\x1a\x05\x00\x04\x14&quot;,</span>
+<span class="gi">+    &quot;SHA-224&quot;: b&quot;\x30\x2d\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x04\x05\x00\x04\x1c&quot;,</span>
+<span class="gi">+    &quot;SHA-256&quot;: b&quot;\x30\x31\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x01\x05\x00\x04\x20&quot;,</span>
+<span class="gi">+    &quot;SHA-384&quot;: b&quot;\x30\x41\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x02\x05\x00\x04\x30&quot;,</span>
+<span class="gi">+    &quot;SHA-512&quot;: b&quot;\x30\x51\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x03\x05\x00\x04\x40&quot;,</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+HASH_METHODS: typing.Dict[str, typing.Callable[[], HashType]] = {</span>
+<span class="gi">+    &quot;MD5&quot;: hashlib.md5,</span>
+<span class="gi">+    &quot;SHA-1&quot;: hashlib.sha1,</span>
+<span class="gi">+    &quot;SHA-224&quot;: hashlib.sha224,</span>
+<span class="gi">+    &quot;SHA-256&quot;: hashlib.sha256,</span>
+<span class="gi">+    &quot;SHA-384&quot;: hashlib.sha384,</span>
+<span class="gi">+    &quot;SHA-512&quot;: hashlib.sha512,</span>
+<span class="gi">+}</span>
+<span class="w"> </span>&quot;&quot;&quot;Hash methods supported by this library.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>if sys.version_info &gt;= (3, 6):
+<span class="gd">-    HASH_ASN1.update({&#39;SHA3-256&#39;:</span>
+<span class="gd">-        b&#39;010\r\x06\t`\x86H\x01e\x03\x04\x02\x08\x05\x00\x04 &#39;, &#39;SHA3-384&#39;:</span>
+<span class="gd">-        b&#39;0A0\r\x06\t`\x86H\x01e\x03\x04\x02\t\x05\x00\x040&#39;, &#39;SHA3-512&#39;:</span>
+<span class="gd">-        b&#39;0Q0\r\x06\t`\x86H\x01e\x03\x04\x02\n\x05\x00\x04@&#39;})</span>
+<span class="gd">-    HASH_METHODS.update({&#39;SHA3-256&#39;: hashlib.sha3_256, &#39;SHA3-384&#39;: hashlib.</span>
+<span class="gd">-        sha3_384, &#39;SHA3-512&#39;: hashlib.sha3_512})</span>
+<span class="gi">+    # Python 3.6 introduced SHA3 support.</span>
+<span class="gi">+    HASH_ASN1.update(</span>
+<span class="gi">+        {</span>
+<span class="gi">+            &quot;SHA3-256&quot;: b&quot;\x30\x31\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x08\x05\x00\x04\x20&quot;,</span>
+<span class="gi">+            &quot;SHA3-384&quot;: b&quot;\x30\x41\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x09\x05\x00\x04\x30&quot;,</span>
+<span class="gi">+            &quot;SHA3-512&quot;: b&quot;\x30\x51\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x0a\x05\x00\x04\x40&quot;,</span>
+<span class="gi">+        }</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    HASH_METHODS.update(</span>
+<span class="gi">+        {</span>
+<span class="gi">+            &quot;SHA3-256&quot;: hashlib.sha3_256,</span>
+<span class="gi">+            &quot;SHA3-384&quot;: hashlib.sha3_384,</span>
+<span class="gi">+            &quot;SHA3-512&quot;: hashlib.sha3_512,</span>
+<span class="gi">+        }</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>class CryptoError(Exception):
+<span class="gu">@@ -54,8 +91,8 @@ class VerificationError(CryptoError):</span>
+<span class="w"> </span>    &quot;&quot;&quot;Raised when verification fails.&quot;&quot;&quot;
+
+
+<span class="gd">-def _pad_for_encryption(message: bytes, target_length: int) -&gt;bytes:</span>
+<span class="gd">-    &quot;&quot;&quot;Pads the message for encryption, returning the padded message.</span>
+<span class="gi">+def _pad_for_encryption(message: bytes, target_length: int) -&gt; bytes:</span>
+<span class="gi">+    r&quot;&quot;&quot;Pads the message for encryption, returning the padded message.</span>
+
+<span class="w"> </span>    :return: 00 02 RANDOM_DATA 00 MESSAGE
+
+<span class="gu">@@ -63,16 +100,44 @@ def _pad_for_encryption(message: bytes, target_length: int) -&gt;bytes:</span>
+<span class="w"> </span>    &gt;&gt;&gt; len(block)
+<span class="w"> </span>    16
+<span class="w"> </span>    &gt;&gt;&gt; block[0:2]
+<span class="gd">-    b&#39;\\x00\\x02&#39;</span>
+<span class="gi">+    b&#39;\x00\x02&#39;</span>
+<span class="w"> </span>    &gt;&gt;&gt; block[-6:]
+<span class="gd">-    b&#39;\\x00hello&#39;</span>
+<span class="gi">+    b&#39;\x00hello&#39;</span>
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    max_msglength = target_length - 11</span>
+<span class="gi">+    msglength = len(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    if msglength &gt; max_msglength:</span>
+<span class="gi">+        raise OverflowError(</span>
+<span class="gi">+            &quot;%i bytes needed for message, but there is only&quot;</span>
+<span class="gi">+            &quot; space for %i&quot; % (msglength, max_msglength)</span>
+<span class="gi">+        )</span>
+
+<span class="gd">-def _pad_for_signing(message: bytes, target_length: int) -&gt;bytes:</span>
+<span class="gd">-    &quot;&quot;&quot;Pads the message for signing, returning the padded message.</span>
+<span class="gi">+    # Get random padding</span>
+<span class="gi">+    padding = b&quot;&quot;</span>
+<span class="gi">+    padding_length = target_length - msglength - 3</span>
+<span class="gi">+</span>
+<span class="gi">+    # We remove 0-bytes, so we&#39;ll end up with less padding than we&#39;ve asked for,</span>
+<span class="gi">+    # so keep adding data until we&#39;re at the correct length.</span>
+<span class="gi">+    while len(padding) &lt; padding_length:</span>
+<span class="gi">+        needed_bytes = padding_length - len(padding)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Always read at least 8 bytes more than we need, and trim off the rest</span>
+<span class="gi">+        # after removing the 0-bytes. This increases the chance of getting</span>
+<span class="gi">+        # enough bytes, especially when needed_bytes is small</span>
+<span class="gi">+        new_padding = os.urandom(needed_bytes + 5)</span>
+<span class="gi">+        new_padding = new_padding.replace(b&quot;\x00&quot;, b&quot;&quot;)</span>
+<span class="gi">+        padding = padding + new_padding[:needed_bytes]</span>
+<span class="gi">+</span>
+<span class="gi">+    assert len(padding) == padding_length</span>
+<span class="gi">+</span>
+<span class="gi">+    return b&quot;&quot;.join([b&quot;\x00\x02&quot;, padding, b&quot;\x00&quot;, message])</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def _pad_for_signing(message: bytes, target_length: int) -&gt; bytes:</span>
+<span class="gi">+    r&quot;&quot;&quot;Pads the message for signing, returning the padded message.</span>
+
+<span class="w"> </span>    The padding is always a repetition of FF bytes.
+
+<span class="gu">@@ -82,17 +147,29 @@ def _pad_for_signing(message: bytes, target_length: int) -&gt;bytes:</span>
+<span class="w"> </span>    &gt;&gt;&gt; len(block)
+<span class="w"> </span>    16
+<span class="w"> </span>    &gt;&gt;&gt; block[0:2]
+<span class="gd">-    b&#39;\\x00\\x01&#39;</span>
+<span class="gi">+    b&#39;\x00\x01&#39;</span>
+<span class="w"> </span>    &gt;&gt;&gt; block[-6:]
+<span class="gd">-    b&#39;\\x00hello&#39;</span>
+<span class="gi">+    b&#39;\x00hello&#39;</span>
+<span class="w"> </span>    &gt;&gt;&gt; block[2:-6]
+<span class="gd">-    b&#39;\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xff&#39;</span>
+<span class="gi">+    b&#39;\xff\xff\xff\xff\xff\xff\xff\xff&#39;</span>
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    max_msglength = target_length - 11</span>
+<span class="gi">+    msglength = len(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    if msglength &gt; max_msglength:</span>
+<span class="gi">+        raise OverflowError(</span>
+<span class="gi">+            &quot;%i bytes needed for message, but there is only&quot;</span>
+<span class="gi">+            &quot; space for %i&quot; % (msglength, max_msglength)</span>
+<span class="gi">+        )</span>
+
+<span class="gd">-def encrypt(message: bytes, pub_key: key.PublicKey) -&gt;bytes:</span>
+<span class="gi">+    padding_length = target_length - msglength - 3</span>
+<span class="gi">+</span>
+<span class="gi">+    return b&quot;&quot;.join([b&quot;\x00\x01&quot;, padding_length * b&quot;\xff&quot;, b&quot;\x00&quot;, message])</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def encrypt(message: bytes, pub_key: key.PublicKey) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Encrypts the given message using PKCS#1 v1.5
+
+<span class="w"> </span>    :param message: the message to encrypt. Must be a byte string no longer than
+<span class="gu">@@ -113,11 +190,19 @@ def encrypt(message: bytes, pub_key: key.PublicKey) -&gt;bytes:</span>
+<span class="w"> </span>    True
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    keylength = common.byte_size(pub_key.n)</span>
+<span class="gi">+    padded = _pad_for_encryption(message, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    payload = transform.bytes2int(padded)</span>
+<span class="gi">+    encrypted = core.encrypt_int(payload, pub_key.e, pub_key.n)</span>
+<span class="gi">+    block = transform.int2bytes(encrypted, keylength)</span>
+
+<span class="gd">-def decrypt(crypto: bytes, priv_key: key.PrivateKey) -&gt;bytes:</span>
+<span class="gd">-    &quot;&quot;&quot;Decrypts the given message using PKCS#1 v1.5</span>
+<span class="gi">+    return block</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def decrypt(crypto: bytes, priv_key: key.PrivateKey) -&gt; bytes:</span>
+<span class="gi">+    r&quot;&quot;&quot;Decrypts the given message using PKCS#1 v1.5</span>
+
+<span class="w"> </span>    The decryption is considered &#39;failed&#39; when the resulting cleartext doesn&#39;t
+<span class="w"> </span>    start with the bytes 00 02, or when the 00 byte between the padding and
+<span class="gu">@@ -141,9 +226,9 @@ def decrypt(crypto: bytes, priv_key: key.PrivateKey) -&gt;bytes:</span>
+
+<span class="w"> </span>    And with binary data:
+
+<span class="gd">-    &gt;&gt;&gt; crypto = encrypt(b&#39;\\x00\\x00\\x00\\x00\\x01&#39;, pub_key)</span>
+<span class="gi">+    &gt;&gt;&gt; crypto = encrypt(b&#39;\x00\x00\x00\x00\x01&#39;, pub_key)</span>
+<span class="w"> </span>    &gt;&gt;&gt; decrypt(crypto, priv_key)
+<span class="gd">-    b&#39;\\x00\\x00\\x00\\x00\\x01&#39;</span>
+<span class="gi">+    b&#39;\x00\x00\x00\x00\x01&#39;</span>
+
+<span class="w"> </span>    Altering the encrypted information will *likely* cause a
+<span class="w"> </span>    :py:class:`rsa.pkcs1.DecryptionError`. If you want to be *sure*, use
+<span class="gu">@@ -166,11 +251,40 @@ def decrypt(crypto: bytes, priv_key: key.PrivateKey) -&gt;bytes:</span>
+<span class="w"> </span>    rsa.pkcs1.DecryptionError: Decryption failed
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    blocksize = common.byte_size(priv_key.n)</span>
+<span class="gi">+    encrypted = transform.bytes2int(crypto)</span>
+<span class="gi">+    decrypted = priv_key.blinded_decrypt(encrypted)</span>
+<span class="gi">+    cleartext = transform.int2bytes(decrypted, blocksize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Detect leading zeroes in the crypto. These are not reflected in the</span>
+<span class="gi">+    # encrypted value (as leading zeroes do not influence the value of an</span>
+<span class="gi">+    # integer). This fixes CVE-2020-13757.</span>
+<span class="gi">+    if len(crypto) &gt; blocksize:</span>
+<span class="gi">+        # This is operating on public information, so doesn&#39;t need to be constant-time.</span>
+<span class="gi">+        raise DecryptionError(&quot;Decryption failed&quot;)</span>
+
+<span class="gd">-def sign_hash(hash_value: bytes, priv_key: key.PrivateKey, hash_method: str</span>
+<span class="gd">-    ) -&gt;bytes:</span>
+<span class="gi">+    # If we can&#39;t find the cleartext marker, decryption failed.</span>
+<span class="gi">+    cleartext_marker_bad = not compare_digest(cleartext[:2], b&quot;\x00\x02&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find the 00 separator between the padding and the message</span>
+<span class="gi">+    sep_idx = cleartext.find(b&quot;\x00&quot;, 2)</span>
+<span class="gi">+</span>
+<span class="gi">+    # sep_idx indicates the position of the `\x00` separator that separates the</span>
+<span class="gi">+    # padding from the actual message. The padding should be at least 8 bytes</span>
+<span class="gi">+    # long (see https://tools.ietf.org/html/rfc8017#section-7.2.2 step 3), which</span>
+<span class="gi">+    # means the separator should be at least at index 10 (because of the</span>
+<span class="gi">+    # `\x00\x02` marker that precedes it).</span>
+<span class="gi">+    sep_idx_bad = sep_idx &lt; 10</span>
+<span class="gi">+</span>
+<span class="gi">+    anything_bad = cleartext_marker_bad | sep_idx_bad</span>
+<span class="gi">+    if anything_bad:</span>
+<span class="gi">+        raise DecryptionError(&quot;Decryption failed&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return cleartext[sep_idx + 1 :]</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def sign_hash(hash_value: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Signs a precomputed hash with the private key.
+
+<span class="w"> </span>    Hashes the message, then signs the hash with the given key. This is known
+<span class="gu">@@ -185,10 +299,25 @@ def sign_hash(hash_value: bytes, priv_key: key.PrivateKey, hash_method: str</span>
+<span class="w"> </span>        requested hash.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    # Get the ASN1 code for this hash method</span>
+<span class="gi">+    if hash_method not in HASH_ASN1:</span>
+<span class="gi">+        raise ValueError(&quot;Invalid hash method: %s&quot; % hash_method)</span>
+<span class="gi">+    asn1code = HASH_ASN1[hash_method]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Encrypt the hash with the private key</span>
+<span class="gi">+    cleartext = asn1code + hash_value</span>
+<span class="gi">+    keylength = common.byte_size(priv_key.n)</span>
+<span class="gi">+    padded = _pad_for_signing(cleartext, keylength)</span>
+
+<span class="gd">-def sign(message: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt;bytes:</span>
+<span class="gi">+    payload = transform.bytes2int(padded)</span>
+<span class="gi">+    encrypted = priv_key.blinded_encrypt(payload)</span>
+<span class="gi">+    block = transform.int2bytes(encrypted, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    return block</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def sign(message: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Signs the message with the private key.
+
+<span class="w"> </span>    Hashes the message, then signs the hash with the given key. This is known
+<span class="gu">@@ -205,10 +334,12 @@ def sign(message: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt;bytes:</span>
+<span class="w"> </span>        requested hash.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    msg_hash = compute_hash(message, hash_method)</span>
+<span class="gi">+    return sign_hash(msg_hash, priv_key, hash_method)</span>
+
+
+<span class="gd">-def verify(message: bytes, signature: bytes, pub_key: key.PublicKey) -&gt;str:</span>
+<span class="gi">+def verify(message: bytes, signature: bytes, pub_key: key.PublicKey) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Verifies that the signature matches the message.
+
+<span class="w"> </span>    The hash method is detected automatically from the signature.
+<span class="gu">@@ -222,10 +353,31 @@ def verify(message: bytes, signature: bytes, pub_key: key.PublicKey) -&gt;str:</span>
+<span class="w"> </span>    :returns: the name of the used hash.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    keylength = common.byte_size(pub_key.n)</span>
+<span class="gi">+    encrypted = transform.bytes2int(signature)</span>
+<span class="gi">+    decrypted = core.decrypt_int(encrypted, pub_key.e, pub_key.n)</span>
+<span class="gi">+    clearsig = transform.int2bytes(decrypted, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the hash method</span>
+<span class="gi">+    method_name = _find_method_hash(clearsig)</span>
+<span class="gi">+    message_hash = compute_hash(message, method_name)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Reconstruct the expected padded hash</span>
+<span class="gi">+    cleartext = HASH_ASN1[method_name] + message_hash</span>
+<span class="gi">+    expected = _pad_for_signing(cleartext, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    if len(signature) != keylength:</span>
+<span class="gi">+        raise VerificationError(&quot;Verification failed&quot;)</span>
+
+<span class="gd">-def find_signature_hash(signature: bytes, pub_key: key.PublicKey) -&gt;str:</span>
+<span class="gi">+    # Compare with the signed one</span>
+<span class="gi">+    if expected != clearsig:</span>
+<span class="gi">+        raise VerificationError(&quot;Verification failed&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return method_name</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def find_signature_hash(signature: bytes, pub_key: key.PublicKey) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns the hash name detected from the signature.
+
+<span class="w"> </span>    If you also want to verify the message, use :py:func:`rsa.verify()` instead.
+<span class="gu">@@ -235,22 +387,37 @@ def find_signature_hash(signature: bytes, pub_key: key.PublicKey) -&gt;str:</span>
+<span class="w"> </span>    :param pub_key: the :py:class:`rsa.PublicKey` of the person signing the message.
+<span class="w"> </span>    :returns: the name of the used hash.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    keylength = common.byte_size(pub_key.n)</span>
+<span class="gi">+    encrypted = transform.bytes2int(signature)</span>
+<span class="gi">+    decrypted = core.decrypt_int(encrypted, pub_key.e, pub_key.n)</span>
+<span class="gi">+    clearsig = transform.int2bytes(decrypted, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    return _find_method_hash(clearsig)</span>
+
+<span class="gd">-def yield_fixedblocks(infile: typing.BinaryIO, blocksize: int</span>
+<span class="gd">-    ) -&gt;typing.Iterator[bytes]:</span>
+<span class="gi">+</span>
+<span class="gi">+def yield_fixedblocks(infile: typing.BinaryIO, blocksize: int) -&gt; typing.Iterator[bytes]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Generator, yields each block of ``blocksize`` bytes in the input file.
+
+<span class="w"> </span>    :param infile: file to read and separate in blocks.
+<span class="w"> </span>    :param blocksize: block size in bytes.
+<span class="w"> </span>    :returns: a generator that yields the contents of each block
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        block = infile.read(blocksize)</span>
+<span class="gi">+</span>
+<span class="gi">+        read_bytes = len(block)</span>
+<span class="gi">+        if read_bytes == 0:</span>
+<span class="gi">+            break</span>
+<span class="gi">+</span>
+<span class="gi">+        yield block</span>
+<span class="gi">+</span>
+<span class="gi">+        if read_bytes &lt; blocksize:</span>
+<span class="gi">+            break</span>
+
+
+<span class="gd">-def compute_hash(message: typing.Union[bytes, typing.BinaryIO], method_name:</span>
+<span class="gd">-    str) -&gt;bytes:</span>
+<span class="gi">+def compute_hash(message: typing.Union[bytes, typing.BinaryIO], method_name: str) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns the message digest.
+
+<span class="w"> </span>    :param message: the signed message. Can be an 8-bit string or a file-like
+<span class="gu">@@ -260,28 +427,59 @@ def compute_hash(message: typing.Union[bytes, typing.BinaryIO], method_name:</span>
+<span class="w"> </span>        :py:const:`rsa.pkcs1.HASH_METHODS`.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    if method_name not in HASH_METHODS:</span>
+<span class="gi">+        raise ValueError(&quot;Invalid hash method: %s&quot; % method_name)</span>
+<span class="gi">+</span>
+<span class="gi">+    method = HASH_METHODS[method_name]</span>
+<span class="gi">+    hasher = method()</span>
+<span class="gi">+</span>
+<span class="gi">+    if isinstance(message, bytes):</span>
+<span class="gi">+        hasher.update(message)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        assert hasattr(message, &quot;read&quot;) and hasattr(message.read, &quot;__call__&quot;)</span>
+<span class="gi">+        # read as 1K blocks</span>
+<span class="gi">+        for block in yield_fixedblocks(message, 1024):</span>
+<span class="gi">+            hasher.update(block)</span>
+<span class="gi">+</span>
+<span class="gi">+    return hasher.digest()</span>
+
+<span class="gd">-def _find_method_hash(clearsig: bytes) -&gt;str:</span>
+<span class="gi">+</span>
+<span class="gi">+def _find_method_hash(clearsig: bytes) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Finds the hash method.
+
+<span class="w"> </span>    :param clearsig: full padded ASN1 and hash.
+<span class="w"> </span>    :return: the used hash method.
+<span class="w"> </span>    :raise VerificationFailed: when the hash method cannot be found
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    for (hashname, asn1code) in HASH_ASN1.items():</span>
+<span class="gi">+        if asn1code in clearsig:</span>
+<span class="gi">+            return hashname</span>
+<span class="gi">+</span>
+<span class="gi">+    raise VerificationError(&quot;Verification failed&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = [</span>
+<span class="gi">+    &quot;encrypt&quot;,</span>
+<span class="gi">+    &quot;decrypt&quot;,</span>
+<span class="gi">+    &quot;sign&quot;,</span>
+<span class="gi">+    &quot;verify&quot;,</span>
+<span class="gi">+    &quot;DecryptionError&quot;,</span>
+<span class="gi">+    &quot;VerificationError&quot;,</span>
+<span class="gi">+    &quot;CryptoError&quot;,</span>
+<span class="gi">+]</span>
+
+<span class="gd">-__all__ = [&#39;encrypt&#39;, &#39;decrypt&#39;, &#39;sign&#39;, &#39;verify&#39;, &#39;DecryptionError&#39;,</span>
+<span class="gd">-    &#39;VerificationError&#39;, &#39;CryptoError&#39;]</span>
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gd">-    print(&#39;Running doctests 1000x or until failure&#39;)</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="gi">+    print(&quot;Running doctests 1000x or until failure&quot;)</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    for count in range(1000):
+<span class="gd">-        failures, tests = doctest.testmod()</span>
+<span class="gi">+        (failures, tests) = doctest.testmod()</span>
+<span class="w"> </span>        if failures:
+<span class="w"> </span>            break
+<span class="gi">+</span>
+<span class="w"> </span>        if count % 100 == 0 and count:
+<span class="gd">-            print(&#39;%i times&#39; % count)</span>
+<span class="gd">-    print(&#39;Doctests done&#39;)</span>
+<span class="gi">+            print(&quot;%i times&quot; % count)</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;Doctests done&quot;)</span>
+<span class="gh">diff --git a/rsa/pkcs1_v2.py b/rsa/pkcs1_v2.py</span>
+<span class="gh">index e6d2e23..d68b907 100644</span>
+<span class="gd">--- a/rsa/pkcs1_v2.py</span>
+<span class="gi">+++ b/rsa/pkcs1_v2.py</span>
+<span class="gu">@@ -1,12 +1,31 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Functions for PKCS#1 version 2 encryption and signing
+
+<span class="w"> </span>This module implements certain functionality from PKCS#1 version 2. Main
+<span class="w"> </span>documentation is RFC 2437: https://tools.ietf.org/html/rfc2437
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gd">-from rsa import common, pkcs1, transform</span>
+<span class="gi">+</span>
+<span class="gi">+from rsa import (</span>
+<span class="gi">+    common,</span>
+<span class="gi">+    pkcs1,</span>
+<span class="gi">+    transform,</span>
+<span class="gi">+)</span>
+
+
+<span class="gd">-def mgf1(seed: bytes, length: int, hasher: str=&#39;SHA-1&#39;) -&gt;bytes:</span>
+<span class="gi">+def mgf1(seed: bytes, length: int, hasher: str = &quot;SHA-1&quot;) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    MGF1 is a Mask Generation Function based on a hash function.
+
+<span class="gu">@@ -27,17 +46,55 @@ def mgf1(seed: bytes, length: int, hasher: str=&#39;SHA-1&#39;) -&gt;bytes:</span>
+<span class="w"> </span>    :raise OverflowError: when `length` is too large for the specified `hasher`
+<span class="w"> </span>    :raise ValueError: when specified `hasher` is invalid
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    try:</span>
+<span class="gi">+        hash_length = pkcs1.HASH_METHODS[hasher]().digest_size</span>
+<span class="gi">+    except KeyError as ex:</span>
+<span class="gi">+        raise ValueError(</span>
+<span class="gi">+            &quot;Invalid `hasher` specified. Please select one of: {hash_list}&quot;.format(</span>
+<span class="gi">+                hash_list=&quot;, &quot;.join(sorted(pkcs1.HASH_METHODS.keys()))</span>
+<span class="gi">+            )</span>
+<span class="gi">+        ) from ex</span>
+<span class="gi">+</span>
+<span class="gi">+    # If l &gt; 2^32(hLen), output &quot;mask too long&quot; and stop.</span>
+<span class="gi">+    if length &gt; (2 ** 32 * hash_length):</span>
+<span class="gi">+        raise OverflowError(</span>
+<span class="gi">+            &quot;Desired length should be at most 2**32 times the hasher&#39;s output &quot;</span>
+<span class="gi">+            &quot;length ({hash_length} for {hasher} function)&quot;.format(</span>
+<span class="gi">+                hash_length=hash_length,</span>
+<span class="gi">+                hasher=hasher,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Looping `counter` from 0 to ceil(l / hLen)-1, build `output` based on the</span>
+<span class="gi">+    # hashes formed by (`seed` + C), being `C` an octet string of length 4</span>
+<span class="gi">+    # generated by converting `counter` with the primitive I2OSP</span>
+<span class="gi">+    output = b&quot;&quot;.join(</span>
+<span class="gi">+        pkcs1.compute_hash(</span>
+<span class="gi">+            seed + transform.int2bytes(counter, fill_size=4),</span>
+<span class="gi">+            method_name=hasher,</span>
+<span class="gi">+        )</span>
+<span class="gi">+        for counter in range(common.ceil_div(length, hash_length) + 1)</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Output the leading `length` octets of `output` as the octet string mask.</span>
+<span class="gi">+    return output[:length]</span>
+
+<span class="gd">-__all__ = [&#39;mgf1&#39;]</span>
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gd">-    print(&#39;Running doctests 1000x or until failure&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = [</span>
+<span class="gi">+    &quot;mgf1&quot;,</span>
+<span class="gi">+]</span>
+<span class="gi">+</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="gi">+    print(&quot;Running doctests 1000x or until failure&quot;)</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    for count in range(1000):
+<span class="gd">-        failures, tests = doctest.testmod()</span>
+<span class="gi">+        (failures, tests) = doctest.testmod()</span>
+<span class="w"> </span>        if failures:
+<span class="w"> </span>            break
+<span class="gi">+</span>
+<span class="w"> </span>        if count % 100 == 0 and count:
+<span class="gd">-            print(&#39;%i times&#39; % count)</span>
+<span class="gd">-    print(&#39;Doctests done&#39;)</span>
+<span class="gi">+            print(&quot;%i times&quot; % count)</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;Doctests done&quot;)</span>
+<span class="gh">diff --git a/rsa/prime.py b/rsa/prime.py</span>
+<span class="gh">index 07ae2c5..ec486bc 100644</span>
+<span class="gd">--- a/rsa/prime.py</span>
+<span class="gi">+++ b/rsa/prime.py</span>
+<span class="gu">@@ -1,23 +1,42 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Numerical functions related to primes.
+
+<span class="w"> </span>Implementation based on the book Algorithm Design by Michael T. Goodrich and
+<span class="w"> </span>Roberto Tamassia, 2002.
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import rsa.common
+<span class="w"> </span>import rsa.randnum
+<span class="gd">-__all__ = [&#39;getprime&#39;, &#39;are_relatively_prime&#39;]</span>
+<span class="gi">+</span>
+<span class="gi">+__all__ = [&quot;getprime&quot;, &quot;are_relatively_prime&quot;]</span>
+
+
+<span class="gd">-def gcd(p: int, q: int) -&gt;int:</span>
+<span class="gi">+def gcd(p: int, q: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns the greatest common divisor of p and q
+
+<span class="w"> </span>    &gt;&gt;&gt; gcd(48, 180)
+<span class="w"> </span>    12
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    while q != 0:</span>
+<span class="gi">+        (p, q) = (q, p % q)</span>
+<span class="gi">+    return p</span>
+
+<span class="gd">-def get_primality_testing_rounds(number: int) -&gt;int:</span>
+<span class="gi">+</span>
+<span class="gi">+def get_primality_testing_rounds(number: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns minimum number of rounds for Miller-Rabing primality testing,
+<span class="w"> </span>    based on number bitsize.
+
+<span class="gu">@@ -29,10 +48,21 @@ def get_primality_testing_rounds(number: int) -&gt;int:</span>
+<span class="w"> </span>      * p, q bitsize: 1536; rounds: 3
+<span class="w"> </span>    See: http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    # Calculate number bitsize.</span>
+<span class="gi">+    bitsize = rsa.common.bit_size(number)</span>
+<span class="gi">+    # Set number of rounds.</span>
+<span class="gi">+    if bitsize &gt;= 1536:</span>
+<span class="gi">+        return 3</span>
+<span class="gi">+    if bitsize &gt;= 1024:</span>
+<span class="gi">+        return 4</span>
+<span class="gi">+    if bitsize &gt;= 512:</span>
+<span class="gi">+        return 7</span>
+<span class="gi">+    # For smaller bitsizes, set arbitrary number of rounds.</span>
+<span class="gi">+    return 10</span>
+
+
+<span class="gd">-def miller_rabin_primality_testing(n: int, k: int) -&gt;bool:</span>
+<span class="gi">+def miller_rabin_primality_testing(n: int, k: int) -&gt; bool:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Calculates whether n is composite (which is always correct) or prime
+<span class="w"> </span>    (which theoretically is incorrect with error probability 4**-k), by
+<span class="w"> </span>    applying Miller-Rabin primality testing.
+<span class="gu">@@ -47,10 +77,45 @@ def miller_rabin_primality_testing(n: int, k: int) -&gt;bool:</span>
+<span class="w"> </span>    :return: False if the number is composite, True if it&#39;s probably prime.
+<span class="w"> </span>    :rtype: bool
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    # prevent potential infinite loop when d = 0</span>
+<span class="gi">+    if n &lt; 2:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    # Decompose (n - 1) to write it as (2 ** r) * d</span>
+<span class="gi">+    # While d is even, divide it by 2 and increase the exponent.</span>
+<span class="gi">+    d = n - 1</span>
+<span class="gi">+    r = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    while not (d &amp; 1):</span>
+<span class="gi">+        r += 1</span>
+<span class="gi">+        d &gt;&gt;= 1</span>
+<span class="gi">+</span>
+<span class="gi">+    # Test k witnesses.</span>
+<span class="gi">+    for _ in range(k):</span>
+<span class="gi">+        # Generate random integer a, where 2 &lt;= a &lt;= (n - 2)</span>
+<span class="gi">+        a = rsa.randnum.randint(n - 3) + 1</span>
+<span class="gi">+</span>
+<span class="gi">+        x = pow(a, d, n)</span>
+<span class="gi">+        if x == 1 or x == n - 1:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        for _ in range(r - 1):</span>
+<span class="gi">+            x = pow(x, 2, n)</span>
+<span class="gi">+            if x == 1:</span>
+<span class="gi">+                # n is composite.</span>
+<span class="gi">+                return False</span>
+<span class="gi">+            if x == n - 1:</span>
+<span class="gi">+                # Exit inner loop and continue with next witness.</span>
+<span class="gi">+                break</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # If loop doesn&#39;t break, n is composite.</span>
+<span class="gi">+            return False</span>
+<span class="gi">+</span>
+<span class="gi">+    return True</span>
+
+
+<span class="gd">-def is_prime(number: int) -&gt;bool:</span>
+<span class="gi">+def is_prime(number: int) -&gt; bool:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns True if the number is prime, and False otherwise.
+
+<span class="w"> </span>    &gt;&gt;&gt; is_prime(2)
+<span class="gu">@@ -60,10 +125,23 @@ def is_prime(number: int) -&gt;bool:</span>
+<span class="w"> </span>    &gt;&gt;&gt; is_prime(41)
+<span class="w"> </span>    True
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    # Check for small numbers.</span>
+<span class="gi">+    if number &lt; 10:</span>
+<span class="gi">+        return number in {2, 3, 5, 7}</span>
+
+<span class="gd">-def getprime(nbits: int) -&gt;int:</span>
+<span class="gi">+    # Check for even numbers.</span>
+<span class="gi">+    if not (number &amp; 1):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    # Calculate minimum number of rounds.</span>
+<span class="gi">+    k = get_primality_testing_rounds(number)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Run primality testing with (minimum + 1) rounds.</span>
+<span class="gi">+    return miller_rabin_primality_testing(number, k + 1)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def getprime(nbits: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns a prime number that can be stored in &#39;nbits&#39; bits.
+
+<span class="w"> </span>    &gt;&gt;&gt; p = getprime(128)
+<span class="gu">@@ -78,10 +156,20 @@ def getprime(nbits: int) -&gt;int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; common.bit_size(p) == 128
+<span class="w"> </span>    True
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    assert nbits &gt; 3  # the loop will hang on too small numbers</span>
+<span class="gi">+</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        integer = rsa.randnum.read_random_odd_int(nbits)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Test for primeness</span>
+<span class="gi">+        if is_prime(integer):</span>
+<span class="gi">+            return integer</span>
+
+<span class="gd">-def are_relatively_prime(a: int, b: int) -&gt;bool:</span>
+<span class="gi">+            # Retry if not prime</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def are_relatively_prime(a: int, b: int) -&gt; bool:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns True if a and b are relatively prime, and False if they
+<span class="w"> </span>    are not.
+
+<span class="gu">@@ -90,16 +178,21 @@ def are_relatively_prime(a: int, b: int) -&gt;bool:</span>
+<span class="w"> </span>    &gt;&gt;&gt; are_relatively_prime(2, 4)
+<span class="w"> </span>    False
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    d = gcd(a, b)</span>
+<span class="gi">+    return d == 1</span>
+
+
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gd">-    print(&#39;Running doctests 1000x or until failure&#39;)</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="gi">+    print(&quot;Running doctests 1000x or until failure&quot;)</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    for count in range(1000):
+<span class="gd">-        failures, tests = doctest.testmod()</span>
+<span class="gi">+        (failures, tests) = doctest.testmod()</span>
+<span class="w"> </span>        if failures:
+<span class="w"> </span>            break
+<span class="gi">+</span>
+<span class="w"> </span>        if count % 100 == 0 and count:
+<span class="gd">-            print(&#39;%i times&#39; % count)</span>
+<span class="gd">-    print(&#39;Doctests done&#39;)</span>
+<span class="gi">+            print(&quot;%i times&quot; % count)</span>
+<span class="gi">+</span>
+<span class="gi">+    print(&quot;Doctests done&quot;)</span>
+<span class="gh">diff --git a/rsa/randnum.py b/rsa/randnum.py</span>
+<span class="gh">index 24066b9..c65facd 100644</span>
+<span class="gd">--- a/rsa/randnum.py</span>
+<span class="gi">+++ b/rsa/randnum.py</span>
+<span class="gu">@@ -1,37 +1,95 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Functions for generating random numbers.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="gi">+# Source inspired by code by Yesudeep Mangalapilly &lt;yesudeep@gmail.com&gt;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import os
+<span class="w"> </span>import struct
+<span class="gi">+</span>
+<span class="w"> </span>from rsa import common, transform
+
+
+<span class="gd">-def read_random_bits(nbits: int) -&gt;bytes:</span>
+<span class="gi">+def read_random_bits(nbits: int) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Reads &#39;nbits&#39; random bits.
+
+<span class="w"> </span>    If nbits isn&#39;t a whole number of bytes, an extra byte will be appended with
+<span class="w"> </span>    only the lower bits set.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    nbytes, rbits = divmod(nbits, 8)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the random bytes</span>
+<span class="gi">+    randomdata = os.urandom(nbytes)</span>
+
+<span class="gd">-def read_random_int(nbits: int) -&gt;int:</span>
+<span class="gi">+    # Add the remaining random bits</span>
+<span class="gi">+    if rbits &gt; 0:</span>
+<span class="gi">+        randomvalue = ord(os.urandom(1))</span>
+<span class="gi">+        randomvalue &gt;&gt;= 8 - rbits</span>
+<span class="gi">+        randomdata = struct.pack(&quot;B&quot;, randomvalue) + randomdata</span>
+<span class="gi">+</span>
+<span class="gi">+    return randomdata</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def read_random_int(nbits: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Reads a random integer of approximately nbits bits.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    randomdata = read_random_bits(nbits)</span>
+<span class="gi">+    value = transform.bytes2int(randomdata)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Ensure that the number is large enough to just fill out the required</span>
+<span class="gi">+    # number of bits.</span>
+<span class="gi">+    value |= 1 &lt;&lt; (nbits - 1)</span>
+
+<span class="gd">-def read_random_odd_int(nbits: int) -&gt;int:</span>
+<span class="gi">+    return value</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+def read_random_odd_int(nbits: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Reads a random odd integer of approximately nbits bits.
+
+<span class="w"> </span>    &gt;&gt;&gt; read_random_odd_int(512) &amp; 1
+<span class="w"> </span>    1
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    value = read_random_int(nbits)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Make sure it&#39;s odd</span>
+<span class="gi">+    return value | 1</span>
+
+
+<span class="gd">-def randint(maxvalue: int) -&gt;int:</span>
+<span class="gi">+def randint(maxvalue: int) -&gt; int:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns a random integer x with 1 &lt;= x &lt;= maxvalue
+
+<span class="w"> </span>    May take a very long time in specific situations. If maxvalue needs N bits
+<span class="w"> </span>    to store, the closer maxvalue is to (2 ** N) - 1, the faster this function
+<span class="w"> </span>    is.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    bit_size = common.bit_size(maxvalue)</span>
+<span class="gi">+</span>
+<span class="gi">+    tries = 0</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        value = read_random_int(bit_size)</span>
+<span class="gi">+        if value &lt;= maxvalue:</span>
+<span class="gi">+            break</span>
+<span class="gi">+</span>
+<span class="gi">+        if tries % 10 == 0 and tries:</span>
+<span class="gi">+            # After a lot of tries to get the right number of bits but still</span>
+<span class="gi">+            # smaller than maxvalue, decrease the number of bits by 1. That&#39;ll</span>
+<span class="gi">+            # dramatically increase the chances to get a large enough number.</span>
+<span class="gi">+            bit_size -= 1</span>
+<span class="gi">+        tries += 1</span>
+<span class="gi">+</span>
+<span class="gi">+    return value</span>
+<span class="gh">diff --git a/rsa/transform.py b/rsa/transform.py</span>
+<span class="gh">index 0601701..c609b65 100644</span>
+<span class="gd">--- a/rsa/transform.py</span>
+<span class="gi">+++ b/rsa/transform.py</span>
+<span class="gu">@@ -1,25 +1,40 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Data transformation functions.
+
+<span class="w"> </span>From bytes to a number, number to bytes, etc.
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import math
+
+
+<span class="gd">-def bytes2int(raw_bytes: bytes) -&gt;int:</span>
+<span class="gd">-    &quot;&quot;&quot;Converts a list of bytes or an 8-bit string to an integer.</span>
+<span class="gi">+def bytes2int(raw_bytes: bytes) -&gt; int:</span>
+<span class="gi">+    r&quot;&quot;&quot;Converts a list of bytes or an 8-bit string to an integer.</span>
+
+<span class="w"> </span>    When using unicode strings, encode it to some encoding like UTF8 first.
+
+<span class="w"> </span>    &gt;&gt;&gt; (((128 * 256) + 64) * 256) + 15
+<span class="w"> </span>    8405007
+<span class="gd">-    &gt;&gt;&gt; bytes2int(b&#39;\\x80@\\x0f&#39;)</span>
+<span class="gi">+    &gt;&gt;&gt; bytes2int(b&#39;\x80@\x0f&#39;)</span>
+<span class="w"> </span>    8405007
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return int.from_bytes(raw_bytes, &quot;big&quot;, signed=False)</span>
+
+
+<span class="gd">-def int2bytes(number: int, fill_size: int=0) -&gt;bytes:</span>
+<span class="gi">+def int2bytes(number: int, fill_size: int = 0) -&gt; bytes:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Convert an unsigned integer to bytes (big-endian)::
+
+<span class="gu">@@ -39,9 +54,19 @@ def int2bytes(number: int, fill_size: int=0) -&gt;bytes:</span>
+<span class="w"> </span>        argument to this function to be set to ``False`` otherwise, no
+<span class="w"> </span>        error will be raised.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+
+<span class="gi">+    if number &lt; 0:</span>
+<span class="gi">+        raise ValueError(&quot;Number must be an unsigned integer: %d&quot; % number)</span>
+<span class="gi">+</span>
+<span class="gi">+    bytes_required = max(1, math.ceil(number.bit_length() / 8))</span>
+<span class="gi">+</span>
+<span class="gi">+    if fill_size &gt; 0:</span>
+<span class="gi">+        return number.to_bytes(fill_size, &quot;big&quot;)</span>
+
+<span class="gd">-if __name__ == &#39;__main__&#39;:</span>
+<span class="gi">+    return number.to_bytes(bytes_required, &quot;big&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+if __name__ == &quot;__main__&quot;:</span>
+<span class="w"> </span>    import doctest
+<span class="gi">+</span>
+<span class="w"> </span>    doctest.testmod()
+<span class="gh">diff --git a/rsa/util.py b/rsa/util.py</span>
+<span class="gh">index efc0a3b..087caf8 100644</span>
+<span class="gd">--- a/rsa/util.py</span>
+<span class="gi">+++ b/rsa/util.py</span>
+<span class="gu">@@ -1,9 +1,97 @@</span>
+<span class="gi">+#  Copyright 2011 Sybren A. Stüvel &lt;sybren@stuvel.eu&gt;</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="gi">+#  you may not use this file except in compliance with the License.</span>
+<span class="gi">+#  You may obtain a copy of the License at</span>
+<span class="gi">+#</span>
+<span class="gi">+#      https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="gi">+#</span>
+<span class="gi">+#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="gi">+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="gi">+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="gi">+#  See the License for the specific language governing permissions and</span>
+<span class="gi">+#  limitations under the License.</span>
+<span class="gi">+</span>
+<span class="w"> </span>&quot;&quot;&quot;Utility functions.&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="w"> </span>import sys
+<span class="w"> </span>from optparse import OptionParser
+<span class="gi">+</span>
+<span class="w"> </span>import rsa.key
+
+
+<span class="gd">-def private_to_public() -&gt;None:</span>
+<span class="gi">+def private_to_public() -&gt; None:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Reads a private key and outputs the corresponding public key.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+</span>
+<span class="gi">+    # Parse the CLI options</span>
+<span class="gi">+    parser = OptionParser(</span>
+<span class="gi">+        usage=&quot;usage: %prog [options]&quot;,</span>
+<span class="gi">+        description=&quot;Reads a private key and outputs the &quot;</span>
+<span class="gi">+        &quot;corresponding public key. Both private and public keys use &quot;</span>
+<span class="gi">+        &quot;the format described in PKCS#1 v1.5&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;-i&quot;,</span>
+<span class="gi">+        &quot;--input&quot;,</span>
+<span class="gi">+        dest=&quot;infilename&quot;,</span>
+<span class="gi">+        type=&quot;string&quot;,</span>
+<span class="gi">+        help=&quot;Input filename. Reads from stdin if not specified&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;-o&quot;,</span>
+<span class="gi">+        &quot;--output&quot;,</span>
+<span class="gi">+        dest=&quot;outfilename&quot;,</span>
+<span class="gi">+        type=&quot;string&quot;,</span>
+<span class="gi">+        help=&quot;Output filename. Writes to stdout of not specified&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;--inform&quot;,</span>
+<span class="gi">+        dest=&quot;inform&quot;,</span>
+<span class="gi">+        help=&quot;key format of input - default PEM&quot;,</span>
+<span class="gi">+        choices=(&quot;PEM&quot;, &quot;DER&quot;),</span>
+<span class="gi">+        default=&quot;PEM&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    parser.add_option(</span>
+<span class="gi">+        &quot;--outform&quot;,</span>
+<span class="gi">+        dest=&quot;outform&quot;,</span>
+<span class="gi">+        help=&quot;key format of output - default PEM&quot;,</span>
+<span class="gi">+        choices=(&quot;PEM&quot;, &quot;DER&quot;),</span>
+<span class="gi">+        default=&quot;PEM&quot;,</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    (cli, cli_args) = parser.parse_args(sys.argv)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Read the input data</span>
+<span class="gi">+    if cli.infilename:</span>
+<span class="gi">+        print(</span>
+<span class="gi">+            &quot;Reading private key from %s in %s format&quot; % (cli.infilename, cli.inform),</span>
+<span class="gi">+            file=sys.stderr,</span>
+<span class="gi">+        )</span>
+<span class="gi">+        with open(cli.infilename, &quot;rb&quot;) as infile:</span>
+<span class="gi">+            in_data = infile.read()</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        print(&quot;Reading private key from stdin in %s format&quot; % cli.inform, file=sys.stderr)</span>
+<span class="gi">+        in_data = sys.stdin.read().encode(&quot;ascii&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    assert type(in_data) == bytes, type(in_data)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Take the public fields and create a public key</span>
+<span class="gi">+    priv_key = rsa.key.PrivateKey.load_pkcs1(in_data, cli.inform)</span>
+<span class="gi">+    pub_key = rsa.key.PublicKey(priv_key.n, priv_key.e)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Save to the output file</span>
+<span class="gi">+    out_data = pub_key.save_pkcs1(cli.outform)</span>
+<span class="gi">+</span>
+<span class="gi">+    if cli.outfilename:</span>
+<span class="gi">+        print(</span>
+<span class="gi">+            &quot;Writing public key to %s in %s format&quot; % (cli.outfilename, cli.outform),</span>
+<span class="gi">+            file=sys.stderr,</span>
+<span class="gi">+        )</span>
+<span class="gi">+        with open(cli.outfilename, &quot;wb&quot;) as outfile:</span>
+<span class="gi">+            outfile.write(out_data)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        print(&quot;Writing public key to stdout in %s format&quot; % cli.outform, file=sys.stderr)</span>
+<span class="gi">+        sys.stdout.write(out_data.decode(&quot;ascii&quot;))</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2477 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 lite plain fillin wcwidth - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-wcwidth" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 lite plain fillin wcwidth
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_empty_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_empty_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_hello_jp" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_hello_jp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_wcswidth_substr" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_wcswidth_substr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_null_width_0" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_null_width_0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_control_c0_width_negative_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_control_c0_width_negative_1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_combining_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_combining_width
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_combining_cafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_combining_cafe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_combining_enclosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_combining_enclosing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_balinese_script" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_balinese_script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_kr_jamo" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_kr_jamo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_kr_jamo_filler" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_kr_jamo_filler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_devanagari_script" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_devanagari_script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_tamil_script" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_tamil_script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_kannada_script" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_kannada_script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_kannada_script_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_kannada_script_2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_corepytest_zero_wide_conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_core.py::test_zero_wide_conflict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_unfinished_zwj_sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_unfinished_zwj_sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_non_recommended_zwj_sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_non_recommended_zwj_sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_another_emoji_zwj_sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_another_emoji_zwj_sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_longer_emoji_zwj_sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_longer_emoji_zwj_sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_recommended_emoji_zwj_sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_recommended_emoji_zwj_sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_recommended_variation_16_sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_recommended_variation_16_sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_unicode_9_vs16" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_unicode_9_vs16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_emojispytest_unicode_8_vs16" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_emojis.py::test_unicode_8_vs16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_505_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_505_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_505_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_505_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_800_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_800_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_800_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_800_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_999_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_999_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nearest_999_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nearest_999_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nonint_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nonint_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ucslevelpytest_nonint_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ucslevel.py::test_nonint_str
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-lite-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-wcwidth"><strong>Claude Sonnet 3.5 - Fill-in</strong>: wcwidth</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">39</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">39</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_corepytest_empty_string">test_core.py::test_empty_string</h3>
+<details><summary> <pre>test_core.py::test_empty_string</pre></summary><pre>
+def test_empty_string():
+        """
+        Test empty string is OK.
+
+        https://github.com/jquast/wcwidth/issues/24
+        """
+        phrase = ""
+        expect_length_each = 0
+        expect_length_phrase = 0
+
+        # exercise,
+>       length_each = wcwidth.wcwidth(phrase)
+
+tests/test_core.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+wc = '', unicode_version = 'auto'
+
+    @lru_cache(maxsize=1000)
+    def wcwidth(wc, unicode_version='auto'):
+        """
+        Given one Unicode character, return its printable length on a terminal.
+
+        :param str wc: A single Unicode character.
+        :param str unicode_version: A Unicode version number, such as
+            ``'6.0.0'``. A list of version levels suported by wcwidth
+            is returned by :func:`list_versions`.
+
+            Any version string may be specified without error -- the nearest
+            matching version is selected.  When ``latest`` (default), the
+            highest Unicode version level is used.
+        :return: The width, in cells, necessary to display the character of
+            Unicode string character, ``wc``.  Returns 0 if the ``wc`` argument has
+            no printable effect on a terminal (such as NUL '\\0'), -1 if ``wc`` is
+            not printable, or has an indeterminate effect on the terminal, such as
+            a control character.  Otherwise, the number of column positions the
+            character occupies on a graphic terminal (1 or 2) is returned.
+        :rtype: int
+
+        See :ref:`Specification` for details of cell measurement.
+        """
+>       ucs = ord(wc) if isinstance(wc, str) else wc
+E       TypeError: ord() expected a character, but string of length 0 found
+
+wcwidth/wcwidth.py:129: TypeError
+</pre>
+</details>
+<h3 id="test_corepytest_hello_jp">test_core.py::test_hello_jp</h3>
+<details><summary> <pre>test_core.py::test_hello_jp</pre></summary><pre>
+def test_hello_jp():
+        u"""
+        Width of Japanese phrase: コンニチハ, セカイ!
+
+        Given a phrase of 5 and 3 Katakana ideographs, joined with
+        3 English-ASCII punctuation characters, totaling 11, this
+        phrase consumes 19 cells of a terminal emulator.
+        """
+        # given,
+        phrase = u'コンニチハ, セカイ!'
+        expect_length_each = (2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 1)
+        expect_length_phrase = sum(expect_length_each)
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 12467
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_wcswidth_substr">test_core.py::test_wcswidth_substr</h3>
+<details><summary> <pre>test_core.py::test_wcswidth_substr</pre></summary><pre>
+def test_wcswidth_substr():
+        """
+        Test wcswidth() optional 2nd parameter, ``n``.
+
+        ``n`` determines at which position of the string
+        to stop counting length.
+        """
+        # given,
+        phrase = u'コンニチハ, セカイ!'
+        end = 7
+        expect_length_each = (2, 2, 2, 2, 2, 1, 1,)
+        expect_length_phrase = sum(expect_length_each)
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))[:end]
+
+tests/test_core.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 12467
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_null_width_0">test_core.py::test_null_width_0</h3>
+<details><summary> <pre>test_core.py::test_null_width_0</pre></summary><pre>
+def test_null_width_0():
+        """NULL (0) reports width 0."""
+        # given,
+        phrase = u'abc\x00def'
+        expect_length_each = (1, 1, 1, 0, 1, 1, 1)
+        expect_length_phrase = sum(expect_length_each)
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 97
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_control_c0_width_negative_1">test_core.py::test_control_c0_width_negative_1</h3>
+<details><summary> <pre>test_core.py::test_control_c0_width_negative_1</pre></summary><pre>
+def test_control_c0_width_negative_1():
+        """How the API reacts to CSI (Control sequence initiate).
+
+        An example of bad fortune, this terminal sequence is a width of 0
+        on all terminals, but wcwidth doesn't parse Control-Sequence-Inducer
+        (CSI) sequences.
+
+        Also the "legacy" posix functions wcwidth and wcswidth return -1 for
+        any string containing the C1 control character \x1b (ESC).
+        """
+        # given,
+        phrase = u'\x1b[0m'
+        expect_length_each = (-1, 1, 1, 1)
+        expect_length_phrase = -1
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 91
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_combining_width">test_core.py::test_combining_width</h3>
+<details><summary> <pre>test_core.py::test_combining_width</pre></summary><pre>
+def test_combining_width():
+        """Simple test combining reports total width of 4."""
+        # given,
+        phrase = u'--\u05bf--'
+        expect_length_each = (1, 1, 0, 1, 1)
+        expect_length_phrase = 4
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 45
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_combining_cafe">test_core.py::test_combining_cafe</h3>
+<details><summary> <pre>test_core.py::test_combining_cafe</pre></summary><pre>
+def test_combining_cafe():
+        u"""Phrase cafe + COMBINING ACUTE ACCENT is café of length 4."""
+        phrase = u"cafe\u0301"
+        expect_length_each = (1, 1, 1, 1, 0)
+        expect_length_phrase = 4
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 99
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_combining_enclosing">test_core.py::test_combining_enclosing</h3>
+<details><summary> <pre>test_core.py::test_combining_enclosing</pre></summary><pre>
+def test_combining_enclosing():
+        u"""CYRILLIC CAPITAL LETTER A + COMBINING CYRILLIC HUNDRED THOUSANDS SIGN is of length 1."""
+        phrase = u"\u0410\u0488"
+        expect_length_each = (1, 0)
+        expect_length_phrase = 1
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:194: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 1040
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_balinese_script">test_core.py::test_balinese_script</h3>
+<details><summary> <pre>test_core.py::test_balinese_script</pre></summary><pre>
+def test_balinese_script():
+        u"""
+        Balinese kapal (ship) is length 3.
+
+        This may be an example that is not yet correctly rendered by any terminal so
+        far, like devanagari.
+        """
+        phrase = (u"\u1B13"    # Category 'Lo', EAW 'N' -- BALINESE LETTER KA
+                  u"\u1B28"    # Category 'Lo', EAW 'N' -- BALINESE LETTER PA KAPAL
+                  u"\u1B2E"    # Category 'Lo', EAW 'N' -- BALINESE LETTER LA
+                  u"\u1B44")   # Category 'Mc', EAW 'N' -- BALINESE ADEG ADEG
+        expect_length_each = (1, 1, 1, 0)
+        expect_length_phrase = 3
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:217: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 6931
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_kr_jamo">test_core.py::test_kr_jamo</h3>
+<details><summary> <pre>test_core.py::test_kr_jamo</pre></summary><pre>
+def test_kr_jamo():
+        """
+        Test basic combining of HANGUL CHOSEONG and JUNGSEONG
+
+        Example and from Raymond Chen's blog post,
+        https://devblogs.microsoft.com/oldnewthing/20201009-00/?p=104351
+        """
+        # This is an example where both characters are "wide" when displayed alone.
+        #
+        # But JUNGSEONG (vowel) is designed for combination with a CHOSEONG (consonant).
+        #
+        # This wcwidth library understands their width only when combination,
+        # and not by independent display, like other zero-width characters that may
+        # only combine with an appropriate preceding character.
+        phrase = (
+            u"\u1100"  # ᄀ HANGUL CHOSEONG KIYEOK (consonant)
+            u"\u1161"  # ᅡ HANGUL JUNGSEONG A (vowel)
+        )
+        expect_length_each = (2, 0)
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:247: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 4352
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_kr_jamo_filler">test_core.py::test_kr_jamo_filler</h3>
+<details><summary> <pre>test_core.py::test_kr_jamo_filler</pre></summary><pre>
+def test_kr_jamo_filler():
+        u"""
+        Jamo filler is 0 width.
+
+        Example from https://www.unicode.org/L2/L2006/06310-hangul-decompose9.pdf
+        """
+        phrase = (
+            u"\u1100"  # HANGUL CHOSEONG KIYEOK (consonant)
+            u"\u1160"  # HANGUL JUNGSEONG FILLER (vowel)
+        )
+        expect_length_each = (2, 0)
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:269: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 4352
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_devanagari_script">test_core.py::test_devanagari_script</h3>
+<details><summary> <pre>test_core.py::test_devanagari_script</pre></summary><pre>
+def test_devanagari_script():
+        """
+        Attempt to test the measurement width of Devanagari script.
+
+        I believe this 'phrase' should be length 3.
+
+        This is a difficult problem, and this library does not yet get it right,
+        because we interpret the unicode data files programmatically, but they do
+        not correctly describe how their terminal width is measured.
+
+        There are very few Terminals that do!
+
+        As of 2023,
+
+        - iTerm2: correct length but individual characters are out of order and
+                  horizaontally misplaced as to be unreadable in its language when
+                  using 'Noto Sans' font.
+        - mlterm: mixed results, it offers several options in the configuration
+                  dialog, "Xft", "Cario", and "Variable Column Width" have some
+                  effect, but with neither 'Noto Sans' or 'unifont', it is not
+                  recognizable as the Devanagari script it is meant to display.
+
+        Previous testing with Devanagari documented at address https://benizi.com/vim/devanagari/
+
+        See also, https://askubuntu.com/questions/8437/is-there-a-good-mono-spaced-font-for-devanagari-script-in-the-terminal
+        """
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        # please note that document correctly points out that the final width cannot be determined
+        # as a sum of each individual width, as this library currently performs with exception of
+        # ZWJ, but I think it incorrectly gestures what a stateless call to wcwidth.wcwidth of
+        # each codepoint *should* return.
+        phrase = (u"\u0915"    # Akhand, Category 'Lo', East Asian Width property 'N' -- DEVANAGARI LETTER KA
+                  u"\u094D"    # Joiner, Category 'Mn', East Asian Width property 'N' -- DEVANAGARI SIGN VIRAMA
+                  u"\u0937"    # Fused, Category 'Lo', East Asian Width property 'N' -- DEVANAGARI LETTER SSA
+                  u"\u093F")   # MatraL, Category 'Mc', East Asian Width property 'N' -- DEVANAGARI VOWEL SIGN I
+        # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (2, 0, 0, 1)
+        expect_length_each = (1, 0, 1, 0)
+        # I believe the final width *should* be 3.
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:318: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 2325
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_tamil_script">test_core.py::test_tamil_script</h3>
+<details><summary> <pre>test_core.py::test_tamil_script</pre></summary><pre>
+def test_tamil_script():
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        phrase = (u"\u0b95"    # Akhand, Category 'Lo', East Asian Width property 'N' -- TAMIL LETTER KA
+                  u"\u0bcd"    # Joiner, Category 'Mn', East Asian Width property 'N' -- TAMIL SIGN VIRAMA
+                  u"\u0bb7"    # Fused, Category 'Lo', East Asian Width property 'N' -- TAMIL LETTER SSA
+                  u"\u0bcc")   # MatraLR, Category 'Mc', East Asian Width property 'N' -- TAMIL VOWEL SIGN AU
+        # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (3, 0, 0, 4)
+        expect_length_each = (1, 0, 1, 0)
+
+        # I believe the final width should be about 5 or 6.
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:339: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 2965
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_kannada_script">test_core.py::test_kannada_script</h3>
+<details><summary> <pre>test_core.py::test_kannada_script</pre></summary><pre>
+def test_kannada_script():
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        # |ರ್ಝೈ|
+        # |123|
+        phrase = (u"\u0cb0"    # Repha, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER RA
+                  u"\u0ccd"    # Joiner, Category 'Mn', East Asian Width property 'N' -- KANNADA SIGN VIRAMA
+                  u"\u0c9d"    # Base, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER JHA
+                  u"\u0cc8")   # MatraUR, Category 'Mc', East Asian Width property 'N' -- KANNADA VOWEL SIGN AI
+        # 23107-terminal-suppt.pdf suggests should be (2, 0, 3, 1)
+        expect_length_each = (1, 0, 1, 0)
+        # I believe the correct final width *should* be 3 or 4.
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 3248
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_kannada_script_2">test_core.py::test_kannada_script_2</h3>
+<details><summary> <pre>test_core.py::test_kannada_script_2</pre></summary><pre>
+def test_kannada_script_2():
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        # |ರ಼್ಚ|
+        # |12|
+        phrase = (u"\u0cb0"    # Base, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER RA
+                  u"\u0cbc"    # Nukta, Category 'Mn', East Asian Width property 'N' -- KANNADA SIGN NUKTA
+                  u"\u0ccd"    # Joiner, Category 'Lo', East Asian Width property 'N' -- KANNADA SIGN VIRAMA
+                  u"\u0c9a")   # Subjoin, Category 'Mc', East Asian Width property 'N' -- KANNADA LETTER CA
+        # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (2, 0, 0, 1)
+        expect_length_each = (1, 0, 0, 1)
+        # I believe the final width is correct, but maybe for the wrong reasons!
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_core.py:383: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 3248
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_corepytest_zero_wide_conflict">test_core.py::test_zero_wide_conflict</h3>
+<details><summary> <pre>test_core.py::test_zero_wide_conflict</pre></summary><pre>
+def test_zero_wide_conflict():
+        # Test characters considered both "wide" and "zero" width
+        # -  (0x03000, 0x0303e,),  # Ideographic Space       ..Ideographic Variation In
+        # +  (0x03000, 0x03029,),  # Ideographic Space       ..Hangzhou Numeral Nine
+>       assert wcwidth.wcwidth(unichr(0x03029), unicode_version='4.1.0') == 2
+
+tests/test_core.py:395: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 12329
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_unfinished_zwj_sequence">test_emojis.py::test_unfinished_zwj_sequence</h3>
+<details><summary> <pre>test_emojis.py::test_unfinished_zwj_sequence</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_unfinished_zwj_sequence():
+        u"""
+        Ensure index-out-of-bounds does not occur for zero-width joiner without any following character
+        """
+        phrase = (u"\U0001f469"   # Base, Category So, East Asian Width property 'W' -- WOMAN
+                  u"\U0001f3fb"   # Modifier, Category Sk, East Asian Width property 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d")      # Joiner, Category Cf, East Asian Width property 'N'  -- ZERO WIDTH JOINER
+        expect_length_each = (2, 0, 0)
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_emojis.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 128105
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_non_recommended_zwj_sequence">test_emojis.py::test_non_recommended_zwj_sequence</h3>
+<details><summary> <pre>test_emojis.py::test_non_recommended_zwj_sequence</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_non_recommended_zwj_sequence():
+        """
+        Verify ZWJ is measured as though successful with characters that cannot be joined, wcwidth does not verify
+        """
+        phrase = (u"\U0001f469"   # Base, Category So, East Asian Width property 'W' -- WOMAN
+                  u"\U0001f3fb"   # Modifier, Category Sk, East Asian Width property 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d")      # Joiner, Category Cf, East Asian Width property 'N'  -- ZERO WIDTH JOINER
+        expect_length_each = (2, 0, 0)
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_emojis.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 128105
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_another_emoji_zwj_sequence">test_emojis.py::test_another_emoji_zwj_sequence</h3>
+<details><summary> <pre>test_emojis.py::test_another_emoji_zwj_sequence</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_another_emoji_zwj_sequence():
+        phrase = (
+            u"\u26F9"        # PERSON WITH BALL
+            u"\U0001F3FB"    # EMOJI MODIFIER FITZPATRICK TYPE-1-2
+            u"\u200D"        # ZERO WIDTH JOINER
+            u"\u2640"        # FEMALE SIGN
+            u"\uFE0F")       # VARIATION SELECTOR-16
+        expect_length_each = (1, 0, 0, 1, 0)
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_emojis.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 9977
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_longer_emoji_zwj_sequence">test_emojis.py::test_longer_emoji_zwj_sequence</h3>
+<details><summary> <pre>test_emojis.py::test_longer_emoji_zwj_sequence</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_longer_emoji_zwj_sequence():
+        """
+        A much longer emoji ZWJ sequence of 10 total codepoints is just 2 cells!
+
+        Also test the same sequence in duplicate, verifying multiple VS-16 sequences
+        in a single function call.
+        """
+        # 'Category Code', 'East Asian Width property' -- 'description'
+        phrase = (u"\U0001F9D1"   # 'So', 'W' -- ADULT
+                  u"\U0001F3FB"   # 'Sk', 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\u2764"       # 'So', 'N' -- HEAVY BLACK HEART
+                  u"\uFE0F"       # 'Mn', 'A' -- VARIATION SELECTOR-16
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\U0001F48B"   # 'So', 'W' -- KISS MARK
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\U0001F9D1"   # 'So', 'W' -- ADULT
+                  u"\U0001F3FD"   # 'Sk', 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-4
+        ) * 2
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        expect_length_each = (2, 0, 0, 1, 0, 0, 2, 0, 2, 0) * 2
+        expect_length_phrase = 4
+
+        # exercise,
+>       length_each = tuple(map(wcwidth.wcwidth, phrase))
+
+tests/test_emojis.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 129489
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_recommended_emoji_zwj_sequences">test_emojis.py::test_recommended_emoji_zwj_sequences</h3>
+<details><summary> <pre>test_emojis.py::test_recommended_emoji_zwj_sequences</pre></summary><pre>
+@pytest.mark.skipif(NARROW_ONLY, reason="Some sequences in text file are not compatible with 'narrow' builds")
+    def test_recommended_emoji_zwj_sequences():
+        """
+        Test wcswidth of all of the unicode.org-published emoji-zwj-sequences.txt
+        """
+        # given,
+        lines, sequences = read_sequences_from_file('emoji-zwj-sequences.txt')
+
+        errors = []
+        # Exercise, track by zipping with original text file line, a debugging aide
+        num = 0
+        for sequence, line in zip(sequences, lines):
+            num += 1
+>           measured_width = wcwidth.wcswidth(sequence)
+
+tests/test_emojis.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:182: in wcswidth
+    char_width = wcwidth(char, unicode_version)
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 128104
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_recommended_variation_16_sequences">test_emojis.py::test_recommended_variation_16_sequences</h3>
+<details><summary> <pre>test_emojis.py::test_recommended_variation_16_sequences</pre></summary><pre>
+def test_recommended_variation_16_sequences():
+        """
+        Test wcswidth of all of the unicode.org-published emoji-variation-sequences.txt
+        """
+        # given,
+        lines, sequences = read_sequences_from_file('emoji-variation-sequences.txt')
+
+        errors = []
+        num = 0
+        for sequence, line in zip(sequences, lines):
+            num += 1
+            if '\ufe0f' not in sequence:
+                # filter for only \uFE0F (VS-16)
+                continue
+>           measured_width = wcwidth.wcswidth(sequence)
+
+tests/test_emojis.py:199: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:182: in wcswidth
+    char_width = wcwidth(char, unicode_version)
+wcwidth/wcwidth.py:137: in wcwidth
+    if _bisearch(ucs, ZERO_WIDTH):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ucs = 35
+table = {'10.0.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), '11.0.0': ((0, 0), (173, 1...9), (1471, 1471), ...), '12.1.0': ((0, 0), (173, 173), (768, 879), (1155, 1161), (1425, 1469), (1471, 1471), ...), ...}
+
+    def _bisearch(ucs, table):
+        """
+        Auxiliary function for binary search in interval table.
+
+        :arg int ucs: Ordinal value of unicode character.
+        :arg list table: List of starting and ending ranges of ordinal values,
+            in form of ``[(start, end), ...]``.
+        :rtype: int
+        :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+        """
+        lbound = 0
+        ubound = len(table) - 1
+
+>       if ucs < table[0][0] or ucs > table[-1][1]:
+E       KeyError: 0
+
+wcwidth/wcwidth.py:91: KeyError
+</pre>
+</details>
+<h3 id="test_emojispytest_unicode_9_vs16">test_emojis.py::test_unicode_9_vs16</h3>
+<details><summary> <pre>test_emojis.py::test_unicode_9_vs16</pre></summary><pre>
+def test_unicode_9_vs16():
+        """Verify effect of VS-16 on unicode_version 9.0 and later"""
+        phrase = (u"\u2640"        # FEMALE SIGN
+                  u"\uFE0F")       # VARIATION SELECTOR-16
+
+        expect_length_each = (1, 0)
+        expect_length_phrase = 2
+
+        # exercise,
+>       length_each = tuple(wcwidth.wcwidth(w_char, unicode_version='9.0') for w_char in phrase)
+
+tests/test_emojis.py:222: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_emojis.py:222: in <genexpr>
+    length_each = tuple(wcwidth.wcwidth(w_char, unicode_version='9.0') for w_char in phrase)
+wcwidth/wcwidth.py:130: in wcwidth
+    unicode_version = _wcmatch_version(unicode_version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '9.0'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 9.0 not found, using 8.0.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_emojispytest_unicode_8_vs16">test_emojis.py::test_unicode_8_vs16</h3>
+<details><summary> <pre>test_emojis.py::test_unicode_8_vs16</pre></summary><pre>
+def test_unicode_8_vs16():
+        """Verify that VS-16 has no effect on unicode_version 8.0 and earler"""
+        phrase = (u"\u2640"        # FEMALE SIGN
+                  u"\uFE0F")       # VARIATION SELECTOR-16
+
+        expect_length_each = (1, 0)
+        expect_length_phrase = 1
+
+        # exercise,
+>       length_each = tuple(wcwidth.wcwidth(w_char, unicode_version='8.0') for w_char in phrase)
+
+tests/test_emojis.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_emojis.py:238: in <genexpr>
+    length_each = tuple(wcwidth.wcwidth(w_char, unicode_version='8.0') for w_char in phrase)
+wcwidth/wcwidth.py:130: in wcwidth
+    unicode_version = _wcmatch_version(unicode_version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '8.0'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 8.0 not found, using 7.0.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_505_str">test_ucslevel.py::test_nearest_505_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_505_str</pre></summary><pre>
+def test_nearest_505_str():
+        """wcwidth._wcmatch_version('5.0.5') returns nearest '5.0.0'. (str)"""
+        # given
+        given, expected = '5.0.5', '5.0.0'
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '5.0.5'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 5.0.5 not found, using 5.0.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_505_unicode">test_ucslevel.py::test_nearest_505_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_505_unicode</pre></summary><pre>
+def test_nearest_505_unicode():
+        """wcwidth._wcmatch_version(u'5.0.5') returns nearest u'5.0.0'. (unicode)"""
+        # given
+        given, expected = u'5.0.5', u'5.0.0'
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '5.0.5'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 5.0.5 not found, using 5.0.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_800_str">test_ucslevel.py::test_nearest_800_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_800_str</pre></summary><pre>
+def test_nearest_800_str():
+        """wcwidth._wcmatch_version('8') returns nearest '8.0.0'."""
+        # given
+        given, expected = '8', '8.0.0'
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '8'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 8 not found, using 7.0.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_800_unicode">test_ucslevel.py::test_nearest_800_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_800_unicode</pre></summary><pre>
+def test_nearest_800_unicode():
+        """wcwidth._wcmatch_version(u'8') returns nearest u'8.0.0'."""
+        # given
+        given, expected = u'8', u'8.0.0'
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '8'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 8 not found, using 7.0.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_999_str">test_ucslevel.py::test_nearest_999_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_999_str</pre></summary><pre>
+def test_nearest_999_str():
+        """wcwidth._wcmatch_version('999.0') returns nearest (latest)."""
+        # given
+        given, expected = '999.0', wcwidth.list_versions()[-1]
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '999.0'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 999.0 not found, using 15.1.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nearest_999_unicode">test_ucslevel.py::test_nearest_999_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nearest_999_unicode</pre></summary><pre>
+def test_nearest_999_unicode():
+        """wcwidth._wcmatch_version(u'999.0') returns nearest (latest)."""
+        # given
+        given, expected = u'999.0', wcwidth.list_versions()[-1]
+
+        # exercise
+>       result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+given_version = '999.0'
+
+    @lru_cache(maxsize=8)
+    def _wcmatch_version(given_version):
+        """
+        Return nearest matching supported Unicode version level.
+
+        If an exact match is not determined, the nearest lowest version level is
+        returned after a warning is emitted.  For example, given supported levels
+        ``4.1.0`` and ``5.0.0``, and a version string of ``4.9.9``, then ``4.1.0``
+        is selected and returned:
+
+        >>> _wcmatch_version('4.9.9')
+        '4.1.0'
+        >>> _wcmatch_version('8.0')
+        '8.0.0'
+        >>> _wcmatch_version('1')
+        '4.1.0'
+
+        :param str given_version: given version for compare, may be ``auto``
+            (default), to select Unicode Version from Environment Variable,
+            ``UNICODE_VERSION``. If the environment variable is not set, then the
+            latest is used.
+        :rtype: str
+        :returns: unicode string, or non-unicode ``str`` type for python 2
+            when given ``version`` is also type ``str``.
+        """
+        if given_version == 'auto':
+            given_version = os.environ.get('UNICODE_VERSION', 'latest')
+
+        if given_version == 'latest':
+            return list_versions()[-1]
+
+        supported_versions = list_versions()
+        given_value = _wcversion_value(given_version)
+
+        for version in reversed(supported_versions):
+            if _wcversion_value(version) <= given_value:
+                if version != given_version:
+>                   warnings.warn(f"Unicode version {given_version} not found, using {version}")
+E                   UserWarning: Unicode version 999.0 not found, using 15.1.0
+
+wcwidth/wcwidth.py:239: UserWarning
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nonint_unicode">test_ucslevel.py::test_nonint_unicode</h3>
+<details><summary> <pre>test_ucslevel.py::test_nonint_unicode</pre></summary><pre>
+def test_nonint_unicode():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (unicode)."""
+        # given
+        given, expected = u'x.y.z', wcwidth.list_versions()[-1]
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+
+        # exercise
+        with pytest.warns(UserWarning):
+            # warns that given version is not valid
+>           result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:234: in _wcmatch_version
+    given_value = _wcversion_value(given_version)
+wcwidth/wcwidth.py:199: in _wcversion_value
+    return tuple(int(n) for n in ver_string.split('.'))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f07449f89d0>
+
+>   return tuple(int(n) for n in ver_string.split('.'))
+E   ValueError: invalid literal for int() with base 10: 'x'
+
+wcwidth/wcwidth.py:199: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_nonint_unicode():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (unicode)."""
+        # given
+        given, expected = u'x.y.z', wcwidth.list_versions()[-1]
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+
+        # exercise
+>       with pytest.warns(UserWarning):
+E       Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+tests/test_ucslevel.py:161: Failed
+</pre>
+</details>
+<h3 id="test_ucslevelpytest_nonint_str">test_ucslevel.py::test_nonint_str</h3>
+<details><summary> <pre>test_ucslevel.py::test_nonint_str</pre></summary><pre>
+def test_nonint_str():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (str)."""
+        # given
+        given, expected = 'x.y.z', wcwidth.list_versions()[-1]
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+
+        # exercise
+        with pytest.warns(UserWarning):
+            # warns that given version is not valid
+>           result = wcwidth._wcmatch_version(given)
+
+tests/test_ucslevel.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+wcwidth/wcwidth.py:234: in _wcmatch_version
+    given_value = _wcversion_value(given_version)
+wcwidth/wcwidth.py:199: in _wcversion_value
+    return tuple(int(n) for n in ver_string.split('.'))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f074467b9d0>
+
+>   return tuple(int(n) for n in ver_string.split('.'))
+E   ValueError: invalid literal for int() with base 10: 'x'
+
+wcwidth/wcwidth.py:199: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_nonint_str():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (str)."""
+        # given
+        given, expected = 'x.y.z', wcwidth.list_versions()[-1]
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+
+        # exercise
+>       with pytest.warns(UserWarning):
+E       Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+tests/test_ucslevel.py:177: Failed
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/wcwidth/unicode_versions.py b/wcwidth/unicode_versions.py</span>
+<span class="gh">index cc437d7..a99f4fc 100644</span>
+<span class="gd">--- a/wcwidth/unicode_versions.py</span>
+<span class="gi">+++ b/wcwidth/unicode_versions.py</span>
+<span class="gu">@@ -15,4 +15,24 @@ def list_versions():</span>
+<span class="w"> </span>    :returns: Supported Unicode version numbers in ascending sorted order.
+<span class="w"> </span>    :rtype: list[str]
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return [</span>
+<span class="gi">+        &#39;4.1.0&#39;,</span>
+<span class="gi">+        &#39;5.0.0&#39;,</span>
+<span class="gi">+        &#39;5.1.0&#39;,</span>
+<span class="gi">+        &#39;5.2.0&#39;,</span>
+<span class="gi">+        &#39;6.0.0&#39;,</span>
+<span class="gi">+        &#39;6.1.0&#39;,</span>
+<span class="gi">+        &#39;6.2.0&#39;,</span>
+<span class="gi">+        &#39;6.3.0&#39;,</span>
+<span class="gi">+        &#39;7.0.0&#39;,</span>
+<span class="gi">+        &#39;8.0.0&#39;,</span>
+<span class="gi">+        &#39;9.0.0&#39;,</span>
+<span class="gi">+        &#39;10.0.0&#39;,</span>
+<span class="gi">+        &#39;11.0.0&#39;,</span>
+<span class="gi">+        &#39;12.0.0&#39;,</span>
+<span class="gi">+        &#39;12.1.0&#39;,</span>
+<span class="gi">+        &#39;13.0.0&#39;,</span>
+<span class="gi">+        &#39;14.0.0&#39;,</span>
+<span class="gi">+        &#39;15.0.0&#39;,</span>
+<span class="gi">+        &#39;15.1.0&#39;,</span>
+<span class="gi">+    ]</span>
+<span class="gh">diff --git a/wcwidth/wcwidth.py b/wcwidth/wcwidth.py</span>
+<span class="gh">index 6d93a59..f091ff1 100644</span>
+<span class="gd">--- a/wcwidth/wcwidth.py</span>
+<span class="gi">+++ b/wcwidth/wcwidth.py</span>
+<span class="gu">@@ -85,7 +85,22 @@ def _bisearch(ucs, table):</span>
+<span class="w"> </span>    :rtype: int
+<span class="w"> </span>    :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    lbound = 0</span>
+<span class="gi">+    ubound = len(table) - 1</span>
+<span class="gi">+</span>
+<span class="gi">+    if ucs &lt; table[0][0] or ucs &gt; table[-1][1]:</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    while ubound &gt;= lbound:</span>
+<span class="gi">+        mid = (lbound + ubound) // 2</span>
+<span class="gi">+        if ucs &gt; table[mid][1]:</span>
+<span class="gi">+            lbound = mid + 1</span>
+<span class="gi">+        elif ucs &lt; table[mid][0]:</span>
+<span class="gi">+            ubound = mid - 1</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return 1</span>
+<span class="gi">+</span>
+<span class="gi">+    return 0</span>
+
+
+<span class="w"> </span>@lru_cache(maxsize=1000)
+<span class="gu">@@ -111,7 +126,31 @@ def wcwidth(wc, unicode_version=&#39;auto&#39;):</span>
+
+<span class="w"> </span>    See :ref:`Specification` for details of cell measurement.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ucs = ord(wc) if isinstance(wc, str) else wc</span>
+<span class="gi">+    unicode_version = _wcmatch_version(unicode_version)</span>
+<span class="gi">+</span>
+<span class="gi">+    # C0/C1 control characters</span>
+<span class="gi">+    if ucs &lt; 32 or 0x07F &lt;= ucs &lt; 0x0A0:</span>
+<span class="gi">+        return -1</span>
+<span class="gi">+</span>
+<span class="gi">+    # check for zero width characters</span>
+<span class="gi">+    if _bisearch(ucs, ZERO_WIDTH):</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    # check for wide characters</span>
+<span class="gi">+    if _bisearch(ucs, WIDE_EASTASIAN):</span>
+<span class="gi">+        return 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # check for variation selectors</span>
+<span class="gi">+    if 0xfe00 &lt;= ucs &lt;= 0xfe0f:</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+</span>
+<span class="gi">+    # check for special wide characters in VS16 table</span>
+<span class="gi">+    if ucs in VS16_NARROW_TO_WIDE:</span>
+<span class="gi">+        return 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # all others are considered single width</span>
+<span class="gi">+    return 1</span>
+
+
+<span class="w"> </span>def wcswidth(pwcs, n=None, unicode_version=&#39;auto&#39;):
+<span class="gu">@@ -135,7 +174,17 @@ def wcswidth(pwcs, n=None, unicode_version=&#39;auto&#39;):</span>
+
+<span class="w"> </span>    See :ref:`Specification` for details of cell measurement.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if n is None:</span>
+<span class="gi">+        n = len(pwcs)</span>
+<span class="gi">+    </span>
+<span class="gi">+    width = 0</span>
+<span class="gi">+    for char in pwcs[:n]:</span>
+<span class="gi">+        char_width = wcwidth(char, unicode_version)</span>
+<span class="gi">+        if char_width &lt; 0:</span>
+<span class="gi">+            return -1</span>
+<span class="gi">+        width += char_width</span>
+<span class="gi">+    </span>
+<span class="gi">+    return width</span>
+
+
+<span class="w"> </span>@lru_cache(maxsize=128)
+<span class="gu">@@ -147,7 +196,7 @@ def _wcversion_value(ver_string):</span>
+<span class="w"> </span>    :rtype: tuple(int)
+<span class="w"> </span>    :returns: tuple of digit tuples, ``tuple(int, [...])``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return tuple(int(n) for n in ver_string.split(&#39;.&#39;))</span>
+
+
+<span class="w"> </span>@lru_cache(maxsize=8)
+<span class="gu">@@ -175,4 +224,21 @@ def _wcmatch_version(given_version):</span>
+<span class="w"> </span>    :returns: unicode string, or non-unicode ``str`` type for python 2
+<span class="w"> </span>        when given ``version`` is also type ``str``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if given_version == &#39;auto&#39;:</span>
+<span class="gi">+        given_version = os.environ.get(&#39;UNICODE_VERSION&#39;, &#39;latest&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if given_version == &#39;latest&#39;:</span>
+<span class="gi">+        return list_versions()[-1]</span>
+<span class="gi">+    </span>
+<span class="gi">+    supported_versions = list_versions()</span>
+<span class="gi">+    given_value = _wcversion_value(given_version)</span>
+<span class="gi">+    </span>
+<span class="gi">+    for version in reversed(supported_versions):</span>
+<span class="gi">+        if _wcversion_value(version) &lt;= given_value:</span>
+<span class="gi">+            if version != given_version:</span>
+<span class="gi">+                warnings.warn(f&quot;Unicode version {given_version} not found, using {version}&quot;)</span>
+<span class="gi">+            return version</span>
+<span class="gi">+    </span>
+<span class="gi">+    # If no suitable version found, return the earliest supported version</span>
+<span class="gi">+    warnings.warn(f&quot;Unicode version {given_version} not found, using {supported_versions[0]}&quot;)</span>
+<span class="gi">+    return supported_versions[0]</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

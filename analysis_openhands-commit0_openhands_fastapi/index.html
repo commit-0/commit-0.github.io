@@ -1,0 +1,680 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands fastapi - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-fastapi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands fastapi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-fastapi"><strong>OpenHands</strong>: fastapi</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/fastapi/_compat.py b/fastapi/_compat.py</span>
+<span class="gh">index 0e3afa8e..cd89bba3 100644</span>
+<span class="gd">--- a/fastapi/_compat.py</span>
+<span class="gi">+++ b/fastapi/_compat.py</span>
+<span class="gu">@@ -9,8 +9,97 @@ from pydantic import BaseModel, create_model</span>
+<span class="w"> </span>from pydantic.version import VERSION as P_VERSION
+<span class="w"> </span>from starlette.datastructures import UploadFile
+<span class="w"> </span>from typing_extensions import Annotated, Literal, get_args, get_origin
+<span class="gi">+from pydantic.v1.utils import update_not_none</span>
+<span class="w"> </span>PYDANTIC_VERSION = P_VERSION
+<span class="w"> </span>PYDANTIC_V2 = PYDANTIC_VERSION.startswith(&#39;2.&#39;)
+<span class="gi">+</span>
+<span class="gi">+def _model_rebuild(cls: Type[BaseModel]) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Rebuild a pydantic model, updating its configuration.</span>
+<span class="gi">+    </span>
+<span class="gi">+    This is a compatibility function for Pydantic v2 that mimics the behavior of</span>
+<span class="gi">+    the original _model_rebuild function from Pydantic v1.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if not PYDANTIC_V2:</span>
+<span class="gi">+        from pydantic.main import _model_rebuild as v1_model_rebuild</span>
+<span class="gi">+        return v1_model_rebuild(cls)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # For Pydantic v2, we need to force model rebuild by clearing caches</span>
+<span class="gi">+    if hasattr(cls, &#39;__pydantic_validator__&#39;):</span>
+<span class="gi">+        delattr(cls, &#39;__pydantic_validator__&#39;)</span>
+<span class="gi">+    if hasattr(cls, &#39;__pydantic_serializer__&#39;):</span>
+<span class="gi">+        delattr(cls, &#39;__pydantic_serializer__&#39;)</span>
+<span class="gi">+    if hasattr(cls, &#39;__pydantic_core_schema__&#39;):</span>
+<span class="gi">+        delattr(cls, &#39;__pydantic_core_schema__&#39;)</span>
+<span class="gi">+    cls.__pydantic_complete__ = False</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Use Pydantic v1 model rebuild to handle circular references</span>
+<span class="gi">+    from pydantic.v1.main import _model_rebuild as v1_model_rebuild</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Create a new model with the same configuration</span>
+<span class="gi">+    from pydantic.v1.main import create_model</span>
+<span class="gi">+    new_model = create_model(</span>
+<span class="gi">+        cls.__name__,</span>
+<span class="gi">+        __base__=cls,</span>
+<span class="gi">+        __module__=cls.__module__,</span>
+<span class="gi">+        __validators__=cls.__dict__.get(&#39;__validators__&#39;, {}),</span>
+<span class="gi">+        __cls_kwargs__=cls.__dict__.get(&#39;__cls_kwargs__&#39;, {}),</span>
+<span class="gi">+    )</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Rebuild the model using Pydantic v1</span>
+<span class="gi">+    v1_model_rebuild(new_model)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Copy the rebuilt model&#39;s attributes back to the original class</span>
+<span class="gi">+    for attr in (&#39;__fields__&#39;, &#39;__validators__&#39;, &#39;__pre_root_validators__&#39;, &#39;__post_root_validators__&#39;,</span>
+<span class="gi">+                &#39;__config__&#39;, &#39;__schema_cache__&#39;, &#39;__json_encoder__&#39;, &#39;__custom_root_type__&#39;,</span>
+<span class="gi">+                &#39;__private_attributes__&#39;, &#39;__slots__&#39;, &#39;__class_vars__&#39;, &#39;__fields_set__&#39;):</span>
+<span class="gi">+        if hasattr(new_model, attr):</span>
+<span class="gi">+            setattr(cls, attr, getattr(new_model, attr))</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Add model validators to handle circular references</span>
+<span class="gi">+    from pydantic import model_validator</span>
+<span class="gi">+    </span>
+<span class="gi">+    @model_validator(mode=&#39;before&#39;)</span>
+<span class="gi">+    def validate_refs(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:</span>
+<span class="gi">+        if not isinstance(values, dict):</span>
+<span class="gi">+            return values</span>
+<span class="gi">+        for field_name, field_value in values.items():</span>
+<span class="gi">+            if isinstance(field_value, dict):</span>
+<span class="gi">+                if &#39;$ref&#39; in field_value:</span>
+<span class="gi">+                    from fastapi.openapi.models import Reference</span>
+<span class="gi">+                    values[field_name] = Reference(**field_value)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    # Check if the field is a reference to another model</span>
+<span class="gi">+                    from fastapi.openapi.models import Schema, Operation, Encoding, RequestBody, Response, PathItem, Header</span>
+<span class="gi">+                    if field_name in (&#39;schema&#39;, &#39;schema_&#39;, &#39;items&#39;, &#39;contains&#39;, &#39;additionalProperties&#39;, &#39;propertyNames&#39;, &#39;unevaluatedItems&#39;, &#39;unevaluatedProperties&#39;, &#39;contentSchema&#39;):</span>
+<span class="gi">+                        values[field_name] = Schema(**field_value)</span>
+<span class="gi">+                    elif field_name == &#39;requestBody&#39;:</span>
+<span class="gi">+                        values[field_name] = RequestBody(**field_value)</span>
+<span class="gi">+                    elif field_name == &#39;responses&#39;:</span>
+<span class="gi">+                        values[field_name] = {k: Response(**v) for k, v in field_value.items()}</span>
+<span class="gi">+                    elif field_name == &#39;callbacks&#39;:</span>
+<span class="gi">+                        values[field_name] = {k: {url: PathItem(**item) for url, item in v.items()} for k, v in field_value.items()}</span>
+<span class="gi">+                    elif field_name == &#39;headers&#39;:</span>
+<span class="gi">+                        values[field_name] = {k: Header(**v) for k, v in field_value.items()}</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        values[field_name] = cls(**field_value)</span>
+<span class="gi">+            elif isinstance(field_value, list):</span>
+<span class="gi">+                values[field_name] = [</span>
+<span class="gi">+                    Reference(**v) if isinstance(v, dict) and &#39;$ref&#39; in v else cls(**v) if isinstance(v, dict) else v</span>
+<span class="gi">+                    for v in field_value</span>
+<span class="gi">+                ]</span>
+<span class="gi">+        return values</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Add the validator to the model</span>
+<span class="gi">+    if not hasattr(cls, &#39;model_validators&#39;):</span>
+<span class="gi">+        cls.model_validators = []</span>
+<span class="gi">+    if validate_refs not in cls.model_validators:</span>
+<span class="gi">+        cls.model_validators.append(validate_refs)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Force model rebuild</span>
+<span class="gi">+    from pydantic.v1.main import _model_rebuild as v1_model_rebuild</span>
+<span class="gi">+    v1_model_rebuild(cls)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return cls</span>
+<span class="w"> </span>sequence_annotation_to_type = {Sequence: list, List: list, list: list, Tuple: tuple, tuple: tuple, Set: set, set: set, FrozenSet: frozenset, frozenset: frozenset, Deque: deque, deque: deque}
+<span class="w"> </span>sequence_types = tuple(sequence_annotation_to_type.keys())
+<span class="w"> </span>if PYDANTIC_V2:
+<span class="gu">@@ -20,6 +109,7 @@ if PYDANTIC_V2:</span>
+<span class="w"> </span>    from pydantic._internal._schema_generation_shared import GetJsonSchemaHandler as GetJsonSchemaHandler
+<span class="w"> </span>    from pydantic._internal._typing_extra import eval_type_lenient
+<span class="w"> </span>    from pydantic._internal._utils import lenient_issubclass as lenient_issubclass
+<span class="gi">+    from pydantic._internal._model_construction import _model_rebuild</span>
+<span class="w"> </span>    from pydantic.fields import FieldInfo
+<span class="w"> </span>    from pydantic.json_schema import GenerateJsonSchema as GenerateJsonSchema
+<span class="w"> </span>    from pydantic.json_schema import JsonSchemaValue as JsonSchemaValue
+<span class="gh">diff --git a/fastapi/openapi/models.py b/fastapi/openapi/models.py</span>
+<span class="gh">index 1507fa7f..4bbd8590 100644</span>
+<span class="gd">--- a/fastapi/openapi/models.py</span>
+<span class="gi">+++ b/fastapi/openapi/models.py</span>
+<span class="gu">@@ -1,10 +1,14 @@</span>
+<span class="w"> </span>from enum import Enum
+<span class="w"> </span>from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+<span class="gd">-from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function</span>
+<span class="gi">+from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, with_info_plain_validator_function</span>
+<span class="w"> </span>from fastapi.logger import logger
+<span class="gd">-from pydantic import AnyUrl, BaseModel, Field</span>
+<span class="gi">+from pydantic import AnyUrl, BaseModel, Field, model_validator</span>
+<span class="w"> </span>from typing_extensions import Annotated, Literal, TypedDict
+<span class="w"> </span>from typing_extensions import deprecated as typing_deprecated
+<span class="gi">+from pydantic.v1.utils import update_not_none</span>
+<span class="gi">+from pydantic.v1.main import ModelMetaclass</span>
+<span class="gi">+from pydantic.v1.main import create_model</span>
+<span class="gi">+from pydantic.v1.main import _model_rebuild</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    import email_validator
+<span class="w"> </span>    assert email_validator
+<span class="gu">@@ -330,6 +334,137 @@ class OpenAPI(BaseModelWithConfig):</span>
+<span class="w"> </span>    security: Optional[List[Dict[str, List[str]]]] = None
+<span class="w"> </span>    tags: Optional[List[Tag]] = None
+<span class="w"> </span>    externalDocs: Optional[ExternalDocumentation] = None
+<span class="gd">-_model_rebuild(Schema)</span>
+<span class="gd">-_model_rebuild(Operation)</span>
+<span class="gd">-_model_rebuild(Encoding)</span>
+\ No newline at end of file
+<span class="gi">+# Handle circular references using model validators</span>
+<span class="gi">+@model_validator(mode=&#39;before&#39;)</span>
+<span class="gi">+def validate_schema_refs(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:</span>
+<span class="gi">+    if not isinstance(values, dict):</span>
+<span class="gi">+        return values</span>
+<span class="gi">+    if &#39;allOf&#39; in values:</span>
+<span class="gi">+        values[&#39;allOf&#39;] = [v if isinstance(v, bool) else Schema(**v) for v in values[&#39;allOf&#39;]]</span>
+<span class="gi">+    if &#39;anyOf&#39; in values:</span>
+<span class="gi">+        values[&#39;anyOf&#39;] = [v if isinstance(v, bool) else Schema(**v) for v in values[&#39;anyOf&#39;]]</span>
+<span class="gi">+    if &#39;oneOf&#39; in values:</span>
+<span class="gi">+        values[&#39;oneOf&#39;] = [v if isinstance(v, bool) else Schema(**v) for v in values[&#39;oneOf&#39;]]</span>
+<span class="gi">+    if &#39;not_&#39; in values:</span>
+<span class="gi">+        values[&#39;not_&#39;] = values[&#39;not_&#39;] if isinstance(values[&#39;not_&#39;], bool) else Schema(**values[&#39;not_&#39;])</span>
+<span class="gi">+    if &#39;if_&#39; in values:</span>
+<span class="gi">+        values[&#39;if_&#39;] = values[&#39;if_&#39;] if isinstance(values[&#39;if_&#39;], bool) else Schema(**values[&#39;if_&#39;])</span>
+<span class="gi">+    if &#39;then&#39; in values:</span>
+<span class="gi">+        values[&#39;then&#39;] = values[&#39;then&#39;] if isinstance(values[&#39;then&#39;], bool) else Schema(**values[&#39;then&#39;])</span>
+<span class="gi">+    if &#39;else_&#39; in values:</span>
+<span class="gi">+        values[&#39;else_&#39;] = values[&#39;else_&#39;] if isinstance(values[&#39;else_&#39;], bool) else Schema(**values[&#39;else_&#39;])</span>
+<span class="gi">+    if &#39;dependentSchemas&#39; in values:</span>
+<span class="gi">+        values[&#39;dependentSchemas&#39;] = {k: v if isinstance(v, bool) else Schema(**v) for k, v in values[&#39;dependentSchemas&#39;].items()}</span>
+<span class="gi">+    if &#39;prefixItems&#39; in values:</span>
+<span class="gi">+        values[&#39;prefixItems&#39;] = [v if isinstance(v, bool) else Schema(**v) for v in values[&#39;prefixItems&#39;]]</span>
+<span class="gi">+    if &#39;items&#39; in values:</span>
+<span class="gi">+        if isinstance(values[&#39;items&#39;], list):</span>
+<span class="gi">+            values[&#39;items&#39;] = [v if isinstance(v, bool) else Schema(**v) for v in values[&#39;items&#39;]]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            values[&#39;items&#39;] = values[&#39;items&#39;] if isinstance(values[&#39;items&#39;], bool) else Schema(**values[&#39;items&#39;])</span>
+<span class="gi">+    if &#39;contains&#39; in values:</span>
+<span class="gi">+        values[&#39;contains&#39;] = values[&#39;contains&#39;] if isinstance(values[&#39;contains&#39;], bool) else Schema(**values[&#39;contains&#39;])</span>
+<span class="gi">+    if &#39;properties&#39; in values:</span>
+<span class="gi">+        values[&#39;properties&#39;] = {k: v if isinstance(v, bool) else Schema(**v) for k, v in values[&#39;properties&#39;].items()}</span>
+<span class="gi">+    if &#39;patternProperties&#39; in values:</span>
+<span class="gi">+        values[&#39;patternProperties&#39;] = {k: v if isinstance(v, bool) else Schema(**v) for k, v in values[&#39;patternProperties&#39;].items()}</span>
+<span class="gi">+    if &#39;additionalProperties&#39; in values:</span>
+<span class="gi">+        values[&#39;additionalProperties&#39;] = values[&#39;additionalProperties&#39;] if isinstance(values[&#39;additionalProperties&#39;], bool) else Schema(**values[&#39;additionalProperties&#39;])</span>
+<span class="gi">+    if &#39;propertyNames&#39; in values:</span>
+<span class="gi">+        values[&#39;propertyNames&#39;] = values[&#39;propertyNames&#39;] if isinstance(values[&#39;propertyNames&#39;], bool) else Schema(**values[&#39;propertyNames&#39;])</span>
+<span class="gi">+    if &#39;unevaluatedItems&#39; in values:</span>
+<span class="gi">+        values[&#39;unevaluatedItems&#39;] = values[&#39;unevaluatedItems&#39;] if isinstance(values[&#39;unevaluatedItems&#39;], bool) else Schema(**values[&#39;unevaluatedItems&#39;])</span>
+<span class="gi">+    if &#39;unevaluatedProperties&#39; in values:</span>
+<span class="gi">+        values[&#39;unevaluatedProperties&#39;] = values[&#39;unevaluatedProperties&#39;] if isinstance(values[&#39;unevaluatedProperties&#39;], bool) else Schema(**values[&#39;unevaluatedProperties&#39;])</span>
+<span class="gi">+    if &#39;contentSchema&#39; in values:</span>
+<span class="gi">+        values[&#39;contentSchema&#39;] = values[&#39;contentSchema&#39;] if isinstance(values[&#39;contentSchema&#39;], bool) else Schema(**values[&#39;contentSchema&#39;])</span>
+<span class="gi">+    return values</span>
+<span class="gi">+</span>
+<span class="gi">+@model_validator(mode=&#39;before&#39;)</span>
+<span class="gi">+def validate_operation_refs(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:</span>
+<span class="gi">+    if not isinstance(values, dict):</span>
+<span class="gi">+        return values</span>
+<span class="gi">+    if &#39;requestBody&#39; in values:</span>
+<span class="gi">+        values[&#39;requestBody&#39;] = Reference(**values[&#39;requestBody&#39;]) if &#39;$ref&#39; in values[&#39;requestBody&#39;] else RequestBody(**values[&#39;requestBody&#39;])</span>
+<span class="gi">+    if &#39;responses&#39; in values:</span>
+<span class="gi">+        values[&#39;responses&#39;] = {k: Reference(**v) if &#39;$ref&#39; in v else Response(**v) for k, v in values[&#39;responses&#39;].items()}</span>
+<span class="gi">+    if &#39;callbacks&#39; in values:</span>
+<span class="gi">+        values[&#39;callbacks&#39;] = {k: Reference(**v) if &#39;$ref&#39; in v else {url: PathItem(**item) for url, item in v.items()} for k, v in values[&#39;callbacks&#39;].items()}</span>
+<span class="gi">+    return values</span>
+<span class="gi">+</span>
+<span class="gi">+@model_validator(mode=&#39;before&#39;)</span>
+<span class="gi">+def validate_encoding_refs(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:</span>
+<span class="gi">+    if not isinstance(values, dict):</span>
+<span class="gi">+        return values</span>
+<span class="gi">+    if &#39;headers&#39; in values:</span>
+<span class="gi">+        values[&#39;headers&#39;] = {k: Reference(**v) if &#39;$ref&#39; in v else Header(**v) for k, v in values[&#39;headers&#39;].items()}</span>
+<span class="gi">+    return values</span>
+<span class="gi">+</span>
+<span class="gi">+# Handle circular references using model validators</span>
+<span class="gi">+if PYDANTIC_V2:</span>
+<span class="gi">+    # Create new models with the same configuration</span>
+<span class="gi">+    Schema = create_model(</span>
+<span class="gi">+        &#39;Schema&#39;,</span>
+<span class="gi">+        __base__=Schema,</span>
+<span class="gi">+        __module__=Schema.__module__,</span>
+<span class="gi">+        __validators__=Schema.__dict__.get(&#39;__validators__&#39;, {}),</span>
+<span class="gi">+        __cls_kwargs__=Schema.__dict__.get(&#39;__cls_kwargs__&#39;, {}),</span>
+<span class="gi">+    )</span>
+<span class="gi">+    Operation = create_model(</span>
+<span class="gi">+        &#39;Operation&#39;,</span>
+<span class="gi">+        __base__=Operation,</span>
+<span class="gi">+        __module__=Operation.__module__,</span>
+<span class="gi">+        __validators__=Operation.__dict__.get(&#39;__validators__&#39;, {}),</span>
+<span class="gi">+        __cls_kwargs__=Operation.__dict__.get(&#39;__cls_kwargs__&#39;, {}),</span>
+<span class="gi">+    )</span>
+<span class="gi">+    Encoding = create_model(</span>
+<span class="gi">+        &#39;Encoding&#39;,</span>
+<span class="gi">+        __base__=Encoding,</span>
+<span class="gi">+        __module__=Encoding.__module__,</span>
+<span class="gi">+        __validators__=Encoding.__dict__.get(&#39;__validators__&#39;, {}),</span>
+<span class="gi">+        __cls_kwargs__=Encoding.__dict__.get(&#39;__cls_kwargs__&#39;, {}),</span>
+<span class="gi">+    )</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Add model validators to handle circular references</span>
+<span class="gi">+    @model_validator(mode=&#39;before&#39;)</span>
+<span class="gi">+    def validate_refs(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:</span>
+<span class="gi">+        if not isinstance(values, dict):</span>
+<span class="gi">+            return values</span>
+<span class="gi">+        for field_name, field_value in values.items():</span>
+<span class="gi">+            if isinstance(field_value, dict):</span>
+<span class="gi">+                if &#39;$ref&#39; in field_value:</span>
+<span class="gi">+                    values[field_name] = Reference(**field_value)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    # Check if the field is a reference to another model</span>
+<span class="gi">+                    if field_name in (&#39;schema&#39;, &#39;schema_&#39;, &#39;items&#39;, &#39;contains&#39;, &#39;additionalProperties&#39;, &#39;propertyNames&#39;, &#39;unevaluatedItems&#39;, &#39;unevaluatedProperties&#39;, &#39;contentSchema&#39;):</span>
+<span class="gi">+                        values[field_name] = Schema(**field_value)</span>
+<span class="gi">+                    elif field_name == &#39;requestBody&#39;:</span>
+<span class="gi">+                        values[field_name] = RequestBody(**field_value)</span>
+<span class="gi">+                    elif field_name == &#39;responses&#39;:</span>
+<span class="gi">+                        values[field_name] = {k: Response(**v) for k, v in field_value.items()}</span>
+<span class="gi">+                    elif field_name == &#39;callbacks&#39;:</span>
+<span class="gi">+                        values[field_name] = {k: {url: PathItem(**item) for url, item in v.items()} for k, v in field_value.items()}</span>
+<span class="gi">+                    elif field_name == &#39;headers&#39;:</span>
+<span class="gi">+                        values[field_name] = {k: Header(**v) for k, v in field_value.items()}</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        values[field_name] = cls(**field_value)</span>
+<span class="gi">+            elif isinstance(field_value, list):</span>
+<span class="gi">+                values[field_name] = [</span>
+<span class="gi">+                    Reference(**v) if isinstance(v, dict) and &#39;$ref&#39; in v else cls(**v) if isinstance(v, dict) else v</span>
+<span class="gi">+                    for v in field_value</span>
+<span class="gi">+                ]</span>
+<span class="gi">+        return values</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Add the validator to the models</span>
+<span class="gi">+    for model in (Schema, Operation, Encoding):</span>
+<span class="gi">+        if not hasattr(model, &#39;model_validators&#39;):</span>
+<span class="gi">+            model.model_validators = []</span>
+<span class="gi">+        if validate_refs not in model.model_validators:</span>
+<span class="gi">+            model.model_validators.append(validate_refs)</span>
+<span class="gi">+        # Force model rebuild</span>
+<span class="gi">+        _model_rebuild(model)</span>
+<span class="gi">+else:</span>
+<span class="gi">+    # Use Pydantic v1 model rebuild to handle circular references</span>
+<span class="gi">+    _model_rebuild(Schema)</span>
+<span class="gi">+    _model_rebuild(Operation)</span>
+<span class="gi">+    _model_rebuild(Encoding)</span>
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

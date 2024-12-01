@@ -1,0 +1,2115 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin jinja - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-jinja" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin jinja
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-jinja"><strong>Claude Sonnet 3.5 - Fill-in</strong>: jinja</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:5: in &lt;module&gt;
+    from jinja2 import loaders
+src/jinja2/__init__.py:9: in &lt;module&gt;
+    from .environment import Environment as Environment
+src/jinja2/environment.py:14: in &lt;module&gt;
+    from . import nodes
+src/jinja2/nodes.py:798: in &lt;module&gt;
+    NodeType.__new__ = staticmethod(_failing_new)
+E   NameError: name &#39;_failing_new&#39; is not defined
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/jinja2/bccache.py b/src/jinja2/bccache.py</span>
+<span class="gh">index ae575a3..f289af9 100644</span>
+<span class="gd">--- a/src/jinja2/bccache.py</span>
+<span class="gi">+++ b/src/jinja2/bccache.py</span>
+<span class="gu">@@ -47,23 +47,28 @@ class Bucket:</span>
+
+<span class="w"> </span>    def reset(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Resets the bucket (unloads the bytecode).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.code = None</span>
+
+<span class="w"> </span>    def load_bytecode(self, f: t.BinaryIO) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Loads bytecode from a file or file like object.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        code = marshal.load(f)</span>
+<span class="gi">+        if isinstance(code, CodeType):</span>
+<span class="gi">+            self.code = code</span>
+
+<span class="w"> </span>    def write_bytecode(self, f: t.IO[bytes]) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Dump the bytecode into the file or file like object passed.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.code is not None:</span>
+<span class="gi">+            marshal.dump(self.code, f)</span>
+
+<span class="w"> </span>    def bytecode_from_string(self, string: bytes) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Load bytecode from bytes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.load_bytecode(BytesIO(string))</span>
+
+<span class="w"> </span>    def bytecode_to_string(self) -&gt;bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Return the bytecode as bytes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        out = BytesIO()</span>
+<span class="gi">+        self.write_bytecode(out)</span>
+<span class="gi">+        return out.getvalue()</span>
+
+
+<span class="w"> </span>class BytecodeCache:
+<span class="gu">@@ -100,44 +105,75 @@ class BytecodeCache:</span>
+<span class="w"> </span>        bucket.  If they are not able to find code in the cache for the
+<span class="w"> </span>        bucket, it must not do anything.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError()</span>
+
+<span class="w"> </span>    def dump_bytecode(self, bucket: Bucket) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Subclasses have to override this method to write the bytecode
+<span class="w"> </span>        from a bucket back to the cache.  If it unable to do so it must not
+<span class="w"> </span>        fail silently but raise an exception.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError()</span>
+
+<span class="w"> </span>    def clear(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Clears the cache.  This method is not used by Jinja but should be
+<span class="w"> </span>        implemented to allow applications to clear the bytecode cache used
+<span class="w"> </span>        by a particular environment.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError()</span>
+
+<span class="w"> </span>    def get_cache_key(self, name: str, filename: t.Optional[t.Union[str]]=None
+<span class="w"> </span>        ) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Returns the unique hash key for this template name.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return sha1(f&quot;{name}|{filename}&quot;.encode(&quot;utf-8&quot;)).hexdigest()</span>
+
+<span class="w"> </span>    def get_source_checksum(self, source: str) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Returns a checksum for the source.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return sha1(source.encode(&quot;utf-8&quot;)).hexdigest()</span>
+
+<span class="w"> </span>    def get_bucket(self, environment: &#39;Environment&#39;, name: str, filename: t
+<span class="w"> </span>        .Optional[str], source: str) -&gt;Bucket:
+<span class="w"> </span>        &quot;&quot;&quot;Return a cache bucket for the given template.  All arguments are
+<span class="w"> </span>        mandatory but filename may be `None`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        key = self.get_cache_key(name, filename)</span>
+<span class="gi">+        checksum = self.get_source_checksum(source)</span>
+<span class="gi">+        bucket = Bucket(environment, key, checksum)</span>
+<span class="gi">+        self.load_bytecode(bucket)</span>
+<span class="gi">+        return bucket</span>
+
+<span class="w"> </span>    def set_bucket(self, bucket: Bucket) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Put the bucket into the cache.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.dump_bytecode(bucket)</span>
+
+
+<span class="w"> </span>class FileSystemBytecodeCache(BytecodeCache):
+<span class="gi">+</span>
+<span class="gi">+    def _get_cache_filename(self, bucket: Bucket) -&gt;str:</span>
+<span class="gi">+        return os.path.join(self.directory, self.pattern % bucket.key)</span>
+<span class="gi">+</span>
+<span class="gi">+    def load_bytecode(self, bucket: Bucket) -&gt;None:</span>
+<span class="gi">+        filename = self._get_cache_filename(bucket)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            with open(filename, &#39;rb&#39;) as f:</span>
+<span class="gi">+                bucket.load_bytecode(f)</span>
+<span class="gi">+        except OSError:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+    def dump_bytecode(self, bucket: Bucket) -&gt;None:</span>
+<span class="gi">+        filename = self._get_cache_filename(bucket)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            with open(filename, &#39;wb&#39;) as f:</span>
+<span class="gi">+                bucket.write_bytecode(f)</span>
+<span class="gi">+        except OSError as e:</span>
+<span class="gi">+            raise RuntimeError(f&quot;Unable to write bytecode file: {e}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def clear(self) -&gt;None:</span>
+<span class="gi">+        for filename in os.listdir(self.directory):</span>
+<span class="gi">+            if fnmatch.fnmatch(filename, self.pattern % &#39;*&#39;):</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    os.remove(os.path.join(self.directory, filename))</span>
+<span class="gi">+                except OSError:</span>
+<span class="gi">+                    pass</span>
+<span class="w"> </span>    &quot;&quot;&quot;A bytecode cache that stores bytecode on the filesystem.  It accepts
+<span class="w"> </span>    two arguments: The directory where the cache items are stored and a
+<span class="w"> </span>    pattern string that is used to build the filename.
+<span class="gu">@@ -161,6 +197,18 @@ class FileSystemBytecodeCache(BytecodeCache):</span>
+<span class="w"> </span>            directory = self._get_default_cache_dir()
+<span class="w"> </span>        self.directory = directory
+<span class="w"> </span>        self.pattern = pattern
+<span class="gi">+        </span>
+<span class="gi">+        try:</span>
+<span class="gi">+            os.makedirs(self.directory)</span>
+<span class="gi">+        except OSError as e:</span>
+<span class="gi">+            if e.errno != errno.EEXIST:</span>
+<span class="gi">+                raise</span>
+<span class="gi">+</span>
+<span class="gi">+    def _get_default_cache_dir(self) -&gt;str:</span>
+<span class="gi">+        if sys.platform == &#39;win32&#39;:</span>
+<span class="gi">+            return os.path.join(tempfile.gettempdir(), &#39;jinja2_cache&#39;)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return os.path.join(tempfile.gettempdir(), f&#39;jinja2_cache_{os.getuid()}&#39;)</span>
+
+
+<span class="w"> </span>class MemcachedBytecodeCache(BytecodeCache):
+<span class="gh">diff --git a/src/jinja2/compiler.py b/src/jinja2/compiler.py</span>
+<span class="gh">index 32df45a..7b0a4c3 100644</span>
+<span class="gd">--- a/src/jinja2/compiler.py</span>
+<span class="gi">+++ b/src/jinja2/compiler.py</span>
+<span class="gu">@@ -31,12 +31,16 @@ def generate(node: nodes.Template, environment: &#39;Environment&#39;, name: t.</span>
+<span class="w"> </span>    Optional[str], filename: t.Optional[str], stream: t.Optional[t.TextIO]=
+<span class="w"> </span>    None, defer_init: bool=False, optimized: bool=True) -&gt;t.Optional[str]:
+<span class="w"> </span>    &quot;&quot;&quot;Generate the python source for a node tree.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    codegen = CodeGenerator(environment, name, filename, stream, defer_init, optimized)</span>
+<span class="gi">+    codegen.visit(node)</span>
+<span class="gi">+    if stream is None:</span>
+<span class="gi">+        return codegen.stream.getvalue()</span>
+<span class="gi">+    return None</span>
+
+
+<span class="w"> </span>def has_safe_repr(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Does the node have a safe representation?&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, (bool, int, float, str, tuple, frozenset))</span>
+
+
+<span class="w"> </span>def find_undeclared(nodes: t.Iterable[nodes.Node], names: t.Iterable[str]
+<span class="gu">@@ -44,7 +48,13 @@ def find_undeclared(nodes: t.Iterable[nodes.Node], names: t.Iterable[str]</span>
+<span class="w"> </span>    &quot;&quot;&quot;Check if the names passed are accessed undeclared.  The return value
+<span class="w"> </span>    is a set of all the undeclared names from the sequence of names found.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    visitor = UndeclaredNameVisitor(names)</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        for node in nodes:</span>
+<span class="gi">+            visitor.visit(node)</span>
+<span class="gi">+    except VisitorExit:</span>
+<span class="gi">+        pass</span>
+<span class="gi">+    return visitor.undeclared</span>
+
+
+<span class="w"> </span>class MacroRef:
+<span class="gu">@@ -81,11 +91,21 @@ class Frame:</span>
+
+<span class="w"> </span>    def copy(self) -&gt;&#39;Frame&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Create a copy of the current one.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rv = object.__new__(self.__class__)</span>
+<span class="gi">+        rv.__dict__.update(self.__dict__)</span>
+<span class="gi">+        rv.symbols = self.symbols.copy()</span>
+<span class="gi">+        return rv</span>
+
+<span class="w"> </span>    def inner(self, isolated: bool=False) -&gt;&#39;Frame&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Return an inner frame.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rv = self.copy()</span>
+<span class="gi">+        if isolated:</span>
+<span class="gi">+            rv.symbols = Symbols(parent=rv.symbols)</span>
+<span class="gi">+        rv.block_frame = False</span>
+<span class="gi">+        rv.loop_frame = False</span>
+<span class="gi">+        rv.toplevel = False</span>
+<span class="gi">+        rv.rootlevel = False</span>
+<span class="gi">+        return rv</span>
+
+<span class="w"> </span>    def soft(self) -&gt;&#39;Frame&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Return a soft frame.  A soft frame may not be modified as
+<span class="gu">@@ -95,7 +115,11 @@ class Frame:</span>
+<span class="w"> </span>        This is only used to implement if-statements and conditional
+<span class="w"> </span>        expressions.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rv = self.copy()</span>
+<span class="gi">+        rv.toplevel = False</span>
+<span class="gi">+        rv.rootlevel = False</span>
+<span class="gi">+        rv.soft_frame = True</span>
+<span class="gi">+        return rv</span>
+<span class="w"> </span>    __copy__ = copy
+
+
+<span class="gu">@@ -112,8 +136,7 @@ class DependencyFinderVisitor(NodeVisitor):</span>
+
+<span class="w"> </span>    def visit_Block(self, node: nodes.Block) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Stop visiting at blocks.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gi">+        return</span>
+
+<span class="w"> </span>class UndeclaredNameVisitor(NodeVisitor):
+<span class="w"> </span>    &quot;&quot;&quot;A visitor that checks if a name is accessed without being
+<span class="gu">@@ -125,9 +148,15 @@ class UndeclaredNameVisitor(NodeVisitor):</span>
+<span class="w"> </span>        self.names = set(names)
+<span class="w"> </span>        self.undeclared: t.Set[str] = set()
+
+<span class="gi">+    def visit_Name(self, node: nodes.Name) -&gt;None:</span>
+<span class="gi">+        if node.name in self.names:</span>
+<span class="gi">+            self.undeclared.add(node.name)</span>
+<span class="gi">+            if len(self.undeclared) == len(self.names):</span>
+<span class="gi">+                raise VisitorExit()</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def visit_Block(self, node: nodes.Block) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Stop visiting a blocks.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return</span>
+
+
+<span class="w"> </span>class CompilerExit(Exception):
+<span class="gh">diff --git a/src/jinja2/debug.py b/src/jinja2/debug.py</span>
+<span class="gh">index 412f2c2..25c184f 100644</span>
+<span class="gd">--- a/src/jinja2/debug.py</span>
+<span class="gi">+++ b/src/jinja2/debug.py</span>
+<span class="gu">@@ -20,7 +20,37 @@ def rewrite_traceback_stack(source: t.Optional[str]=None) -&gt;BaseException:</span>
+<span class="w"> </span>        known.
+<span class="w"> </span>    :return: The original exception with the rewritten traceback.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    exc_type, exc_value, tb = sys.exc_info()</span>
+<span class="gi">+    if exc_type is None:</span>
+<span class="gi">+        raise RuntimeError(&quot;No exception is currently being handled&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if isinstance(exc_value, TemplateSyntaxError) and source is not None:</span>
+<span class="gi">+        exc_value.source = source</span>
+<span class="gi">+</span>
+<span class="gi">+    new_tb = None</span>
+<span class="gi">+    template_frame = None</span>
+<span class="gi">+</span>
+<span class="gi">+    for frame in reversed(list(iter_tb(tb))):</span>
+<span class="gi">+        if internal_code(frame.tb_frame.f_code):</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        if template_frame is None:</span>
+<span class="gi">+            template_frame = frame</span>
+<span class="gi">+</span>
+<span class="gi">+        new_tb = fake_traceback(</span>
+<span class="gi">+            exc_value,</span>
+<span class="gi">+            frame,</span>
+<span class="gi">+            frame.tb_frame.f_code.co_filename,</span>
+<span class="gi">+            frame.tb_frame.f_lineno,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    if new_tb is None:</span>
+<span class="gi">+        return exc_value</span>
+<span class="gi">+</span>
+<span class="gi">+    if template_frame is not None:</span>
+<span class="gi">+        exc_value.__traceback__ = new_tb</span>
+<span class="gi">+</span>
+<span class="gi">+    return exc_value</span>
+
+
+<span class="w"> </span>def fake_traceback(exc_value: BaseException, tb: t.Optional[TracebackType],
+<span class="gu">@@ -37,7 +67,43 @@ def fake_traceback(exc_value: BaseException, tb: t.Optional[TracebackType],</span>
+<span class="w"> </span>    :param filename: The template filename.
+<span class="w"> </span>    :param lineno: The line number in the template source.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if tb is None:</span>
+<span class="gi">+        raise exc_value</span>
+<span class="gi">+</span>
+<span class="gi">+    code = tb.tb_frame.f_code</span>
+<span class="gi">+    locals = get_template_locals(tb.tb_frame.f_locals)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create a new code object with the template filename and line number</span>
+<span class="gi">+    new_code = CodeType(</span>
+<span class="gi">+        code.co_argcount,</span>
+<span class="gi">+        code.co_kwonlyargcount,</span>
+<span class="gi">+        code.co_nlocals,</span>
+<span class="gi">+        code.co_stacksize,</span>
+<span class="gi">+        code.co_flags,</span>
+<span class="gi">+        code.co_code,</span>
+<span class="gi">+        code.co_consts,</span>
+<span class="gi">+        code.co_names,</span>
+<span class="gi">+        code.co_varnames,</span>
+<span class="gi">+        filename,</span>
+<span class="gi">+        code.co_name,</span>
+<span class="gi">+        lineno,</span>
+<span class="gi">+        code.co_lnotab,</span>
+<span class="gi">+        code.co_freevars,</span>
+<span class="gi">+        code.co_cellvars</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create a new frame with the new code object and locals</span>
+<span class="gi">+    fake_frame = tb.tb_frame.__class__(new_code, tb.tb_frame.f_globals, locals)</span>
+<span class="gi">+    fake_frame.f_lineno = lineno</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create a new traceback object</span>
+<span class="gi">+    return TracebackType(</span>
+<span class="gi">+        tb=None,</span>
+<span class="gi">+        tb_next=tb.tb_next,</span>
+<span class="gi">+        tb_frame=fake_frame,</span>
+<span class="gi">+        tb_lasti=tb.tb_lasti,</span>
+<span class="gi">+        tb_lineno=lineno</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def get_template_locals(real_locals: t.Mapping[str, t.Any]) -&gt;t.Dict[str, t.Any
+<span class="gu">@@ -45,4 +111,13 @@ def get_template_locals(real_locals: t.Mapping[str, t.Any]) -&gt;t.Dict[str, t.Any</span>
+<span class="w"> </span>    &quot;&quot;&quot;Based on the runtime locals, get the context that would be
+<span class="w"> </span>    available at that point in the template.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ctx = real_locals.get(&#39;context&#39;)</span>
+<span class="gi">+    if ctx is None or not isinstance(ctx, Context):</span>
+<span class="gi">+        return {}</span>
+<span class="gi">+</span>
+<span class="gi">+    locals = {}</span>
+<span class="gi">+    for key, value in ctx.items():</span>
+<span class="gi">+        if not key.startswith(&#39;_&#39;):</span>
+<span class="gi">+            locals[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+    return locals</span>
+<span class="gh">diff --git a/src/jinja2/environment.py b/src/jinja2/environment.py</span>
+<span class="gh">index aae9f98..f21e599 100644</span>
+<span class="gd">--- a/src/jinja2/environment.py</span>
+<span class="gi">+++ b/src/jinja2/environment.py</span>
+<span class="gu">@@ -68,19 +68,28 @@ def get_spontaneous_environment(cls: t.Type[_env_bound], *args: t.Any</span>
+<span class="w"> </span>    :param cls: Environment class to create.
+<span class="w"> </span>    :param args: Positional arguments passed to environment.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return cls(*args)</span>
+
+
+<span class="w"> </span>def create_cache(size: int) -&gt;t.Optional[t.MutableMapping[t.Tuple[
+<span class="w"> </span>    &#39;weakref.ref[t.Any]&#39;, str], &#39;Template&#39;]]:
+<span class="w"> </span>    &quot;&quot;&quot;Return the cache class for the given size.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if size == 0:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    if size &lt; 0:</span>
+<span class="gi">+        return {}</span>
+<span class="gi">+    return LRUCache(size)</span>
+
+
+<span class="w"> </span>def copy_cache(cache: t.Optional[t.MutableMapping[t.Any, t.Any]]) -&gt;t.Optional[
+<span class="w"> </span>    t.MutableMapping[t.Tuple[&#39;weakref.ref[t.Any]&#39;, str], &#39;Template&#39;]]:
+<span class="w"> </span>    &quot;&quot;&quot;Create an empty copy of the given cache.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if cache is None:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    elif isinstance(cache, LRUCache):</span>
+<span class="gi">+        return LRUCache(cache.capacity)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return {}</span>
+
+
+<span class="w"> </span>def load_extensions(environment: &#39;Environment&#39;, extensions: t.Sequence[t.
+<span class="gu">@@ -88,12 +97,39 @@ def load_extensions(environment: &#39;Environment&#39;, extensions: t.Sequence[t.</span>
+<span class="w"> </span>    &quot;&quot;&quot;Load the extensions from the list and bind it to the environment.
+<span class="w"> </span>    Returns a dict of instantiated extensions.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = {}</span>
+<span class="gi">+    for extension in extensions:</span>
+<span class="gi">+        if isinstance(extension, str):</span>
+<span class="gi">+            extension = import_string(extension)</span>
+<span class="gi">+        if isinstance(extension, type):</span>
+<span class="gi">+            extension = extension(environment)</span>
+<span class="gi">+        result[extension.identifier] = extension</span>
+<span class="gi">+    return result</span>
+
+
+<span class="w"> </span>def _environment_config_check(environment: &#39;Environment&#39;) -&gt;&#39;Environment&#39;:
+<span class="w"> </span>    &quot;&quot;&quot;Perform a sanity check on the environment.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(environment.block_start_string, str):</span>
+<span class="gi">+        raise TypeError(&#39;block_start_string must be a string&#39;)</span>
+<span class="gi">+    if not isinstance(environment.block_end_string, str):</span>
+<span class="gi">+        raise TypeError(&#39;block_end_string must be a string&#39;)</span>
+<span class="gi">+    if not isinstance(environment.variable_start_string, str):</span>
+<span class="gi">+        raise TypeError(&#39;variable_start_string must be a string&#39;)</span>
+<span class="gi">+    if not isinstance(environment.variable_end_string, str):</span>
+<span class="gi">+        raise TypeError(&#39;variable_end_string must be a string&#39;)</span>
+<span class="gi">+    if not isinstance(environment.comment_start_string, str):</span>
+<span class="gi">+        raise TypeError(&#39;comment_start_string must be a string&#39;)</span>
+<span class="gi">+    if not isinstance(environment.comment_end_string, str):</span>
+<span class="gi">+        raise TypeError(&#39;comment_end_string must be a string&#39;)</span>
+<span class="gi">+    if not isinstance(environment.line_statement_prefix, (str, type(None))):</span>
+<span class="gi">+        raise TypeError(&#39;line_statement_prefix must be a string or None&#39;)</span>
+<span class="gi">+    if not isinstance(environment.line_comment_prefix, (str, type(None))):</span>
+<span class="gi">+        raise TypeError(&#39;line_comment_prefix must be a string or None&#39;)</span>
+<span class="gi">+    if not isinstance(environment.trim_blocks, bool):</span>
+<span class="gi">+        raise TypeError(&#39;trim_blocks must be a boolean&#39;)</span>
+<span class="gi">+    if not isinstance(environment.lstrip_blocks, bool):</span>
+<span class="gi">+        raise TypeError(&#39;lstrip_blocks must be a boolean&#39;)</span>
+<span class="gi">+    return environment</span>
+
+
+<span class="w"> </span>class Environment:
+<span class="gh">diff --git a/src/jinja2/ext.py b/src/jinja2/ext.py</span>
+<span class="gh">index 337f30c..b196010 100644</span>
+<span class="gd">--- a/src/jinja2/ext.py</span>
+<span class="gi">+++ b/src/jinja2/ext.py</span>
+<span class="gu">@@ -62,7 +62,9 @@ class Extension:</span>
+
+<span class="w"> </span>    def bind(self, environment: Environment) -&gt;&#39;Extension&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Create a copy of this extension bound to another environment.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        new_ext = type(self)(environment)</span>
+<span class="gi">+        new_ext.__dict__.update(self.__dict__)</span>
+<span class="gi">+        return new_ext</span>
+
+<span class="w"> </span>    def preprocess(self, source: str, name: t.Optional[str], filename: t.
+<span class="w"> </span>        Optional[str]=None) -&gt;str:
+<span class="gu">@@ -70,7 +72,7 @@ class Extension:</span>
+<span class="w"> </span>        preprocess the source.  The `filename` is optional.  The return value
+<span class="w"> </span>        must be the preprocessed source.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return source</span>
+
+<span class="w"> </span>    def filter_stream(self, stream: &#39;TokenStream&#39;) -&gt;t.Union[&#39;TokenStream&#39;,
+<span class="w"> </span>        t.Iterable[&#39;Token&#39;]]:
+<span class="gu">@@ -79,7 +81,7 @@ class Extension:</span>
+<span class="w"> </span>        :class:`~jinja2.lexer.Token`\\s, but it doesn&#39;t have to return a
+<span class="w"> </span>        :class:`~jinja2.lexer.TokenStream`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return stream</span>
+
+<span class="w"> </span>    def parse(self, parser: &#39;Parser&#39;) -&gt;t.Union[nodes.Node, t.List[nodes.Node]
+<span class="w"> </span>        ]:
+<span class="gu">@@ -88,7 +90,7 @@ class Extension:</span>
+<span class="w"> </span>        is the name token that matched.  This method has to return one or a
+<span class="w"> </span>        list of multiple nodes.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError(f&quot;parse method not implemented for {self.__class__.__name__}&quot;)</span>
+
+<span class="w"> </span>    def attr(self, name: str, lineno: t.Optional[int]=None
+<span class="w"> </span>        ) -&gt;nodes.ExtensionAttribute:
+<span class="gu">@@ -99,7 +101,7 @@ class Extension:</span>
+
+<span class="w"> </span>            self.attr(&#39;_my_attribute&#39;, lineno=lineno)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return nodes.ExtensionAttribute(self.identifier, name, lineno=lineno)</span>
+
+<span class="w"> </span>    def call_method(self, name: str, args: t.Optional[t.List[nodes.Expr]]=
+<span class="w"> </span>        None, kwargs: t.Optional[t.List[nodes.Keyword]]=None, dyn_args: t.
+<span class="gu">@@ -108,7 +110,12 @@ class Extension:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Call a method of the extension.  This is a shortcut for
+<span class="w"> </span>        :meth:`attr` + :class:`jinja2.nodes.Call`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if args is None:</span>
+<span class="gi">+            args = []</span>
+<span class="gi">+        if kwargs is None:</span>
+<span class="gi">+            kwargs = []</span>
+<span class="gi">+        return nodes.Call(self.attr(name, lineno=lineno), args, kwargs,</span>
+<span class="gi">+                          dyn_args, dyn_kwargs, lineno=lineno)</span>
+
+
+<span class="w"> </span>class InternationalizationExtension(Extension):
+<span class="gu">@@ -132,14 +139,61 @@ class InternationalizationExtension(Extension):</span>
+<span class="w"> </span>    def _parse_block(self, parser: &#39;Parser&#39;, allow_pluralize: bool) -&gt;t.Tuple[
+<span class="w"> </span>        t.List[str], str]:
+<span class="w"> </span>        &quot;&quot;&quot;Parse until the next block tag with a given name.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        plural = None</span>
+<span class="gi">+        variables = []</span>
+<span class="gi">+        while parser.stream.current.type != &#39;block_end&#39;:</span>
+<span class="gi">+            if parser.stream.current.type == &#39;name&#39; and \</span>
+<span class="gi">+               parser.stream.current.value in (&#39;plural&#39;, &#39;context&#39;):</span>
+<span class="gi">+                next(parser.stream)</span>
+<span class="gi">+                if parser.stream.current.value == &#39;plural&#39;:</span>
+<span class="gi">+                    if allow_pluralize:</span>
+<span class="gi">+                        plural = parser.parse_expression()</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        parser.fail(&#39;plural not allowed here&#39;, parser.stream.current.lineno)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    variables.append(parser.parse_expression())</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                variables.append(parser.parse_expression())</span>
+<span class="gi">+        return variables, plural</span>
+
+<span class="w"> </span>    def _make_node(self, singular: str, plural: t.Optional[str], context: t
+<span class="w"> </span>        .Optional[str], variables: t.Dict[str, nodes.Expr], plural_expr: t.
+<span class="w"> </span>        Optional[nodes.Expr], vars_referenced: bool, num_called_num: bool
+<span class="w"> </span>        ) -&gt;nodes.Output:
+<span class="w"> </span>        &quot;&quot;&quot;Generates a useful node from the data provided.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        func_name = &#39;gettext&#39; if plural is None else &#39;ngettext&#39;</span>
+<span class="gi">+        if context is not None:</span>
+<span class="gi">+            func_name = &#39;p&#39; + func_name</span>
+<span class="gi">+        </span>
+<span class="gi">+        gettext_node = nodes.Call(</span>
+<span class="gi">+            nodes.Name(func_name, &#39;load&#39;),</span>
+<span class="gi">+            [nodes.Const(singular)],</span>
+<span class="gi">+            [],</span>
+<span class="gi">+            None,</span>
+<span class="gi">+            None</span>
+<span class="gi">+        )</span>
+<span class="gi">+        </span>
+<span class="gi">+        if plural is not None:</span>
+<span class="gi">+            gettext_node.args.append(nodes.Const(plural))</span>
+<span class="gi">+        if context is not None:</span>
+<span class="gi">+            gettext_node.args.insert(0, nodes.Const(context))</span>
+<span class="gi">+        if plural_expr is not None:</span>
+<span class="gi">+            gettext_node.args.append(plural_expr)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not vars_referenced:</span>
+<span class="gi">+            return nodes.Output([gettext_node])</span>
+<span class="gi">+        </span>
+<span class="gi">+        result = []</span>
+<span class="gi">+        for key, value in variables.items():</span>
+<span class="gi">+            result.append(nodes.Assign(nodes.Name(key, &#39;store&#39;), value))</span>
+<span class="gi">+        </span>
+<span class="gi">+        if plural_expr is not None:</span>
+<span class="gi">+            result.append(nodes.Assign(nodes.Name(&#39;num&#39;, &#39;store&#39;), plural_expr))</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            result.append(nodes.Assign(nodes.Name(&#39;num&#39;, &#39;store&#39;), nodes.Const(1)))</span>
+<span class="gi">+        </span>
+<span class="gi">+        result.append(nodes.Output([gettext_node]))</span>
+<span class="gi">+        return nodes.Node(result)</span>
+
+
+<span class="w"> </span>class ExprStmtExtension(Extension):
+<span class="gh">diff --git a/src/jinja2/filters.py b/src/jinja2/filters.py</span>
+<span class="gh">index 9498dc3..65e08df 100644</span>
+<span class="gd">--- a/src/jinja2/filters.py</span>
+<span class="gi">+++ b/src/jinja2/filters.py</span>
+<span class="gu">@@ -43,7 +43,9 @@ V = t.TypeVar(&#39;V&#39;)</span>
+<span class="w"> </span>def ignore_case(value: V) -&gt;V:
+<span class="w"> </span>    &quot;&quot;&quot;For use as a postprocessor for :func:`make_attrgetter`. Converts strings
+<span class="w"> </span>    to lowercase and returns other types as-is.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(value, str):</span>
+<span class="gi">+        return value.lower()</span>
+<span class="gi">+    return value</span>
+
+
+<span class="w"> </span>def make_attrgetter(environment: &#39;Environment&#39;, attribute: t.Optional[t.
+<span class="gu">@@ -54,7 +56,21 @@ def make_attrgetter(environment: &#39;Environment&#39;, attribute: t.Optional[t.</span>
+<span class="w"> </span>    to access attributes of attributes.  Integer parts in paths are
+<span class="w"> </span>    looked up as integers.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if attribute is None:</span>
+<span class="gi">+        return lambda x: x</span>
+<span class="gi">+    if isinstance(attribute, int):</span>
+<span class="gi">+        return lambda x: environment.getitem(x, attribute)</span>
+<span class="gi">+    if &#39;.&#39; not in attribute:</span>
+<span class="gi">+        return lambda x: environment.getattr(x, attribute, default)</span>
+<span class="gi">+    </span>
+<span class="gi">+    def getter(x):</span>
+<span class="gi">+        for part in attribute.split(&#39;.&#39;):</span>
+<span class="gi">+            if part.isdigit():</span>
+<span class="gi">+                x = environment.getitem(x, int(part))</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                x = environment.getattr(x, part, default)</span>
+<span class="gi">+        return x if postprocess is None else postprocess(x)</span>
+<span class="gi">+    return getter</span>
+
+
+<span class="w"> </span>def make_multi_attrgetter(environment: &#39;Environment&#39;, attribute: t.Optional
+<span class="gu">@@ -70,12 +86,22 @@ def make_multi_attrgetter(environment: &#39;Environment&#39;, attribute: t.Optional</span>
+
+<span class="w"> </span>    Examples of attribute: &quot;attr1,attr2&quot;, &quot;attr1.inner1.0,attr2.inner2.0&quot;, etc.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if attribute is None:</span>
+<span class="gi">+        return lambda x: [x]</span>
+<span class="gi">+    </span>
+<span class="gi">+    getters = [make_attrgetter(environment, attr.strip(), postprocess)</span>
+<span class="gi">+               for attr in attribute.split(&#39;,&#39;)]</span>
+<span class="gi">+    </span>
+<span class="gi">+    def getter(x):</span>
+<span class="gi">+        return [g(x) for g in getters]</span>
+<span class="gi">+    return getter</span>
+
+
+<span class="w"> </span>def do_forceescape(value: &#39;t.Union[str, HasHTML]&#39;) -&gt;Markup:
+<span class="w"> </span>    &quot;&quot;&quot;Enforce HTML escaping.  This will probably double escape variables.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if hasattr(value, &#39;__html__&#39;):</span>
+<span class="gi">+        value = value.__html__()</span>
+<span class="gi">+    return Markup(escape(str(value)))</span>
+
+
+<span class="w"> </span>def do_urlencode(value: t.Union[str, t.Mapping[str, t.Any], t.Iterable[t.
+<span class="gu">@@ -95,7 +121,16 @@ def do_urlencode(value: t.Union[str, t.Mapping[str, t.Any], t.Iterable[t.</span>
+
+<span class="w"> </span>    .. versionadded:: 2.7
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import urllib.parse</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(value, str):</span>
+<span class="gi">+        return urllib.parse.quote(value, safe=&#39;/&#39;)</span>
+<span class="gi">+    elif isinstance(value, t.Mapping):</span>
+<span class="gi">+        return urllib.parse.urlencode(value)</span>
+<span class="gi">+    elif isinstance(value, t.Iterable):</span>
+<span class="gi">+        return urllib.parse.urlencode(list(value))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(&quot;Expected string, mapping, or iterable&quot;)</span>
+
+
+<span class="w"> </span>@pass_eval_context
+<span class="gh">diff --git a/src/jinja2/idtracking.py b/src/jinja2/idtracking.py</span>
+<span class="gh">index a1d69ca..0f1a9ff 100644</span>
+<span class="gd">--- a/src/jinja2/idtracking.py</span>
+<span class="gi">+++ b/src/jinja2/idtracking.py</span>
+<span class="gu">@@ -45,32 +45,40 @@ class FrameSymbolVisitor(NodeVisitor):</span>
+<span class="w"> </span>    def visit_Name(self, node: nodes.Name, store_as_param: bool=False, **
+<span class="w"> </span>        kwargs: t.Any) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;All assignments to names go through this function.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if node.ctx == &#39;store&#39;:</span>
+<span class="gi">+            if store_as_param:</span>
+<span class="gi">+                self.symbols.loads[node.name] = VAR_LOAD_PARAMETER</span>
+<span class="gi">+            self.symbols.stores.add(node.name)</span>
+<span class="gi">+        elif node.ctx == &#39;load&#39;:</span>
+<span class="gi">+            self.symbols.refs[node.name] = self.symbols.loads.get(node.name, VAR_LOAD_UNDEFINED)</span>
+
+<span class="w"> </span>    def visit_Assign(self, node: nodes.Assign, **kwargs: t.Any) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Visit assignments in the correct order.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.visit(node.node, **kwargs)</span>
+<span class="gi">+        for target in node.target:</span>
+<span class="gi">+            self.visit(target, **kwargs)</span>
+
+<span class="w"> </span>    def visit_For(self, node: nodes.For, **kwargs: t.Any) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Visiting stops at for blocks.  However the block sequence
+<span class="w"> </span>        is visited as part of the outer scope.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.visit(node.iter, **kwargs)</span>
+<span class="gi">+        self.visit(node.target, store_as_param=True, **kwargs)</span>
+
+<span class="w"> </span>    def visit_AssignBlock(self, node: nodes.AssignBlock, **kwargs: t.Any
+<span class="w"> </span>        ) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Stop visiting at block assigns.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.visit(node.target, **kwargs)</span>
+
+<span class="w"> </span>    def visit_Scope(self, node: nodes.Scope, **kwargs: t.Any) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Stop visiting at scopes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # We don&#39;t need to do anything here, as we&#39;re stopping at scopes</span>
+
+<span class="w"> </span>    def visit_Block(self, node: nodes.Block, **kwargs: t.Any) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Stop visiting at blocks.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # We don&#39;t need to do anything here, as we&#39;re stopping at blocks</span>
+
+<span class="w"> </span>    def visit_OverlayScope(self, node: nodes.OverlayScope, **kwargs: t.Any
+<span class="w"> </span>        ) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Do not visit into overlay scopes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # We don&#39;t need to do anything here, as we&#39;re not visiting into overlay scopes</span>
+<span class="gh">diff --git a/src/jinja2/lexer.py b/src/jinja2/lexer.py</span>
+<span class="gh">index 2281b7e..1d7e812 100644</span>
+<span class="gd">--- a/src/jinja2/lexer.py</span>
+<span class="gi">+++ b/src/jinja2/lexer.py</span>
+<span class="gu">@@ -117,24 +117,39 @@ ignore_if_empty = frozenset([TOKEN_WHITESPACE, TOKEN_DATA, TOKEN_COMMENT,</span>
+
+<span class="w"> </span>def describe_token(token: &#39;Token&#39;) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Returns a description of the token.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if token.type == &#39;name&#39;:</span>
+<span class="gi">+        return token.value</span>
+<span class="gi">+    return f&#39;{token.type}&#39;</span>
+
+
+<span class="w"> </span>def describe_token_expr(expr: str) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Like `describe_token` but for token expressions.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if &#39;:&#39; in expr:</span>
+<span class="gi">+        type, value = expr.split(&#39;:&#39;, 1)</span>
+<span class="gi">+        if type == &#39;name&#39;:</span>
+<span class="gi">+            return value</span>
+<span class="gi">+        return f&#39;{type}({value})&#39;</span>
+<span class="gi">+    return expr</span>
+
+
+<span class="w"> </span>def count_newlines(value: str) -&gt;int:
+<span class="w"> </span>    &quot;&quot;&quot;Count the number of newline characters in the string.  This is
+<span class="w"> </span>    useful for extensions that filter a stream.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return len(newline_re.findall(value))</span>
+
+
+<span class="w"> </span>def compile_rules(environment: &#39;Environment&#39;) -&gt;t.List[t.Tuple[str, str]]:
+<span class="w"> </span>    &quot;&quot;&quot;Compiles all the rules from the environment into a list of rules.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    e = re.escape</span>
+<span class="gi">+    rules = [</span>
+<span class="gi">+        (&#39;comment&#39;, e(environment.comment_start_string)),</span>
+<span class="gi">+        (&#39;block&#39;, e(environment.block_start_string)),</span>
+<span class="gi">+        (&#39;variable&#39;, e(environment.variable_start_string)),</span>
+<span class="gi">+        (&#39;linestatement&#39;, e(environment.line_statement_prefix) if environment.line_statement_prefix else &#39;&#39;),</span>
+<span class="gi">+        (&#39;linecomment&#39;, e(environment.line_comment_prefix) if environment.line_comment_prefix else &#39;&#39;),</span>
+<span class="gi">+    ]</span>
+<span class="gi">+    return [(k, v) for k, v in rules if v]</span>
+
+
+<span class="w"> </span>class Failure:
+<span class="gh">diff --git a/src/jinja2/meta.py b/src/jinja2/meta.py</span>
+<span class="gh">index 37016c7..6f69091 100644</span>
+<span class="gd">--- a/src/jinja2/meta.py</span>
+<span class="gi">+++ b/src/jinja2/meta.py</span>
+<span class="gu">@@ -22,7 +22,7 @@ class TrackingCodeGenerator(CodeGenerator):</span>
+
+<span class="w"> </span>    def enter_frame(self, frame: Frame) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Remember all undeclared identifiers.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.undeclared_identifiers.update(frame.identifiers.undeclared)</span>
+
+
+<span class="w"> </span>def find_undeclared_variables(ast: nodes.Template) -&gt;t.Set[str]:
+<span class="gu">@@ -44,7 +44,9 @@ def find_undeclared_variables(ast: nodes.Template) -&gt;t.Set[str]:</span>
+<span class="w"> </span>       :exc:`TemplateAssertionError` during compilation and as a matter of
+<span class="w"> </span>       fact this function can currently raise that exception as well.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    codegen = TrackingCodeGenerator(ast.environment)</span>
+<span class="gi">+    codegen.visit(ast)</span>
+<span class="gi">+    return codegen.undeclared_identifiers</span>
+
+
+<span class="w"> </span>_ref_types = nodes.Extends, nodes.FromImport, nodes.Import, nodes.Include
+<span class="gu">@@ -68,4 +70,13 @@ def find_referenced_templates(ast: nodes.Template) -&gt;t.Iterator[t.Optional[str]</span>
+<span class="w"> </span>    This function is useful for dependency tracking.  For example if you want
+<span class="w"> </span>    to rebuild parts of the website after a layout template has changed.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def _visit(node):</span>
+<span class="gi">+        if isinstance(node, _ref_types):</span>
+<span class="gi">+            if isinstance(node.template, nodes.Const):</span>
+<span class="gi">+                yield node.template.value</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                yield None</span>
+<span class="gi">+        for child in node.iter_child_nodes():</span>
+<span class="gi">+            yield from _visit(child)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return _visit(ast)</span>
+<span class="gh">diff --git a/src/jinja2/nativetypes.py b/src/jinja2/nativetypes.py</span>
+<span class="gh">index 9eae726..6d65c49 100644</span>
+<span class="gd">--- a/src/jinja2/nativetypes.py</span>
+<span class="gi">+++ b/src/jinja2/nativetypes.py</span>
+<span class="gu">@@ -1,4 +1,5 @@</span>
+<span class="w"> </span>import typing as t
+<span class="gi">+import sys</span>
+<span class="w"> </span>from ast import literal_eval
+<span class="w"> </span>from ast import parse
+<span class="w"> </span>from itertools import chain
+<span class="gu">@@ -21,7 +22,16 @@ def native_concat(values: t.Iterable[t.Any]) -&gt;t.Optional[t.Any]:</span>
+
+<span class="w"> </span>    :param values: Iterable of outputs to concatenate.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = list(values)</span>
+<span class="gi">+    if not result:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    if len(result) == 1:</span>
+<span class="gi">+        return result[0]</span>
+<span class="gi">+    </span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return literal_eval(&#39;&#39;.join(str(v) for v in result))</span>
+<span class="gi">+    except (ValueError, SyntaxError):</span>
+<span class="gi">+        return &#39;&#39;.join(str(v) for v in result)</span>
+
+
+<span class="w"> </span>class NativeCodeGenerator(CodeGenerator):
+<span class="gu">@@ -46,7 +56,12 @@ class NativeTemplate(Template):</span>
+<span class="w"> </span>        with :func:`ast.literal_eval`, the parsed value is returned.
+<span class="w"> </span>        Otherwise, the string is returned.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        ctx = self.new_context(dict(*args, **kwargs))</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self.environment.concat(self.root_render_func(ctx))</span>
+<span class="gi">+        except Exception:</span>
+<span class="gi">+            exc_info = sys.exc_info()</span>
+<span class="gi">+            return self.environment.handle_exception(exc_info, True)</span>
+
+
+<span class="w"> </span>NativeEnvironment.template_class = NativeTemplate
+<span class="gh">diff --git a/src/jinja2/nodes.py b/src/jinja2/nodes.py</span>
+<span class="gh">index 4ec1d17..b444e6f 100644</span>
+<span class="gd">--- a/src/jinja2/nodes.py</span>
+<span class="gi">+++ b/src/jinja2/nodes.py</span>
+<span class="gu">@@ -107,7 +107,9 @@ class Node(metaclass=NodeType):</span>
+<span class="w"> </span>        parameter or to exclude some using the `exclude` parameter.  Both
+<span class="w"> </span>        should be sets or tuples of field names.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for name in self.fields:</span>
+<span class="gi">+            if (exclude is None or name not in exclude) and (only is None or name in only):</span>
+<span class="gi">+                yield name, getattr(self, name)</span>
+
+<span class="w"> </span>    def iter_child_nodes(self, exclude: t.Optional[t.Container[str]]=None,
+<span class="w"> </span>        only: t.Optional[t.Container[str]]=None) -&gt;t.Iterator[&#39;Node&#39;]:
+<span class="gu">@@ -115,20 +117,35 @@ class Node(metaclass=NodeType):</span>
+<span class="w"> </span>        over all fields and yields the values of they are nodes.  If the value
+<span class="w"> </span>        of a field is a list all the nodes in that list are returned.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for field, item in self.iter_fields(exclude, only):</span>
+<span class="gi">+            if isinstance(item, Node):</span>
+<span class="gi">+                yield item</span>
+<span class="gi">+            elif isinstance(item, list):</span>
+<span class="gi">+                for n in item:</span>
+<span class="gi">+                    if isinstance(n, Node):</span>
+<span class="gi">+                        yield n</span>
+
+<span class="w"> </span>    def find(self, node_type: t.Type[_NodeBound]) -&gt;t.Optional[_NodeBound]:
+<span class="w"> </span>        &quot;&quot;&quot;Find the first node of a given type.  If no such node exists the
+<span class="w"> </span>        return value is `None`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for child in self.iter_child_nodes():</span>
+<span class="gi">+            if isinstance(child, node_type):</span>
+<span class="gi">+                return child</span>
+<span class="gi">+            result = child.find(node_type)</span>
+<span class="gi">+            if result is not None:</span>
+<span class="gi">+                return result</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def find_all(self, node_type: t.Union[t.Type[_NodeBound], t.Tuple[t.
+<span class="w"> </span>        Type[_NodeBound], ...]]) -&gt;t.Iterator[_NodeBound]:
+<span class="w"> </span>        &quot;&quot;&quot;Find all the nodes of a given type.  If the type is a tuple,
+<span class="w"> </span>        the check is performed for any of the tuple items.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for child in self.iter_child_nodes():</span>
+<span class="gi">+            if isinstance(child, node_type):</span>
+<span class="gi">+                yield child</span>
+<span class="gi">+            yield from child.find_all(node_type)</span>
+
+<span class="w"> </span>    def set_ctx(self, ctx: str) -&gt;&#39;Node&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Reset the context of a node and all child nodes.  Per default the
+<span class="gu">@@ -136,15 +153,26 @@ class Node(metaclass=NodeType):</span>
+<span class="w"> </span>        most common one.  This method is used in the parser to set assignment
+<span class="w"> </span>        targets and other nodes to a store context.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if hasattr(self, &#39;ctx&#39;):</span>
+<span class="gi">+            self.ctx = ctx</span>
+<span class="gi">+        for child in self.iter_child_nodes():</span>
+<span class="gi">+            child.set_ctx(ctx)</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    def set_lineno(self, lineno: int, override: bool=False) -&gt;&#39;Node&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Set the line numbers of the node and children.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.lineno or override:</span>
+<span class="gi">+            self.lineno = lineno</span>
+<span class="gi">+        for child in self.iter_child_nodes():</span>
+<span class="gi">+            child.set_lineno(lineno, override)</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    def set_environment(self, environment: &#39;Environment&#39;) -&gt;&#39;Node&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Set the environment for all nodes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self.environment = environment</span>
+<span class="gi">+        for child in self.iter_child_nodes():</span>
+<span class="gi">+            child.set_environment(environment)</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    def __eq__(self, other: t.Any) -&gt;bool:
+<span class="w"> </span>        if type(self) is not type(other):
+<span class="gh">diff --git a/src/jinja2/optimizer.py b/src/jinja2/optimizer.py</span>
+<span class="gh">index 53d50e4..ab86a53 100644</span>
+<span class="gd">--- a/src/jinja2/optimizer.py</span>
+<span class="gi">+++ b/src/jinja2/optimizer.py</span>
+<span class="gu">@@ -17,10 +17,83 @@ if t.TYPE_CHECKING:</span>
+<span class="w"> </span>def optimize(node: nodes.Node, environment: &#39;Environment&#39;) -&gt;nodes.Node:
+<span class="w"> </span>    &quot;&quot;&quot;The context hint can be used to perform an static optimization
+<span class="w"> </span>    based on the context given.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    optimizer = Optimizer(environment)</span>
+<span class="gi">+    return optimizer.visit(node)</span>
+
+
+<span class="w"> </span>class Optimizer(NodeTransformer):
+
+<span class="w"> </span>    def __init__(self, environment: &#39;t.Optional[Environment]&#39;) -&gt;None:
+<span class="w"> </span>        self.environment = environment
+<span class="gi">+</span>
+<span class="gi">+    def visit_Const(self, node: nodes.Const) -&gt;nodes.Node:</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def visit_List(self, node: nodes.List) -&gt;nodes.Node:</span>
+<span class="gi">+        for idx, item in enumerate(node.items):</span>
+<span class="gi">+            node.items[idx] = self.visit(item)</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def visit_Dict(self, node: nodes.Dict) -&gt;nodes.Node:</span>
+<span class="gi">+        for idx, (key, value) in enumerate(node.items):</span>
+<span class="gi">+            node.items[idx] = (self.visit(key), self.visit(value))</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def visit_BinExpr(self, node: nodes.BinExpr) -&gt;nodes.Node:</span>
+<span class="gi">+        node.left = self.visit(node.left)</span>
+<span class="gi">+        node.right = self.visit(node.right)</span>
+<span class="gi">+        if isinstance(node.left, nodes.Const) and isinstance(node.right, nodes.Const):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if node.op == &#39;add&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value + node.right.value)</span>
+<span class="gi">+                elif node.op == &#39;sub&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value - node.right.value)</span>
+<span class="gi">+                elif node.op == &#39;mul&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value * node.right.value)</span>
+<span class="gi">+                elif node.op == &#39;div&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value / node.right.value)</span>
+<span class="gi">+                elif node.op == &#39;floordiv&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value // node.right.value)</span>
+<span class="gi">+                elif node.op == &#39;mod&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value % node.right.value)</span>
+<span class="gi">+                elif node.op == &#39;pow&#39;:</span>
+<span class="gi">+                    return nodes.Const(node.left.value ** node.right.value)</span>
+<span class="gi">+            except:</span>
+<span class="gi">+                pass</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def visit_UnaryExpr(self, node: nodes.UnaryExpr) -&gt;nodes.Node:</span>
+<span class="gi">+        node.node = self.visit(node.node)</span>
+<span class="gi">+        if isinstance(node.node, nodes.Const):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                if node.op == &#39;not&#39;:</span>
+<span class="gi">+                    return nodes.Const(not node.node.value)</span>
+<span class="gi">+                elif node.op == &#39;neg&#39;:</span>
+<span class="gi">+                    return nodes.Const(-node.node.value)</span>
+<span class="gi">+                elif node.op == &#39;pos&#39;:</span>
+<span class="gi">+                    return nodes.Const(+node.node.value)</span>
+<span class="gi">+            except:</span>
+<span class="gi">+                pass</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def visit_CondExpr(self, node: nodes.CondExpr) -&gt;nodes.Node:</span>
+<span class="gi">+        node.test = self.visit(node.test)</span>
+<span class="gi">+        node.expr1 = self.visit(node.expr1)</span>
+<span class="gi">+        node.expr2 = self.visit(node.expr2)</span>
+<span class="gi">+        if isinstance(node.test, nodes.Const):</span>
+<span class="gi">+            if node.test.value:</span>
+<span class="gi">+                return node.expr1</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return node.expr2</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def visit_Filter(self, node: nodes.Filter) -&gt;nodes.Node:</span>
+<span class="gi">+        node.node = self.visit(node.node)</span>
+<span class="gi">+        for idx, arg in enumerate(node.args):</span>
+<span class="gi">+            node.args[idx] = self.visit(arg)</span>
+<span class="gi">+        for idx, (key, value) in enumerate(node.kwargs):</span>
+<span class="gi">+            node.kwargs[idx] = (key, self.visit(value))</span>
+<span class="gi">+        return node</span>
+<span class="gi">+</span>
+<span class="gi">+    def generic_visit(self, node: nodes.Node) -&gt;nodes.Node:</span>
+<span class="gi">+        return super().generic_visit(node)</span>
+<span class="gh">diff --git a/src/jinja2/parser.py b/src/jinja2/parser.py</span>
+<span class="gh">index 05ce33d..79113a2 100644</span>
+<span class="gd">--- a/src/jinja2/parser.py</span>
+<span class="gi">+++ b/src/jinja2/parser.py</span>
+<span class="gu">@@ -47,7 +47,9 @@ class Parser:</span>
+<span class="w"> </span>        line number or last line number as well as the current name and
+<span class="w"> </span>        filename.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if lineno is None:</span>
+<span class="gi">+            lineno = self.stream.current.lineno</span>
+<span class="gi">+        raise exc(msg, lineno, self.name, self.filename)</span>
+
+<span class="w"> </span>    def fail_unknown_tag(self, name: str, lineno: t.Optional[int]=None
+<span class="w"> </span>        ) -&gt;&#39;te.NoReturn&#39;:
+<span class="gu">@@ -55,26 +57,83 @@ class Parser:</span>
+<span class="w"> </span>        with a human readable error message that could help to identify
+<span class="w"> </span>        the problem.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if lineno is None:</span>
+<span class="gi">+            lineno = self.stream.current.lineno</span>
+<span class="gi">+        if self._tag_stack:</span>
+<span class="gi">+            expected = f&#39;Encountered unknown tag {name!r}. Jinja was looking for the following tags: {&quot;, &quot;.join(reversed(self._tag_stack))}.&#39;</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            expected = f&#39;Encountered unknown tag {name!r}.&#39;</span>
+<span class="gi">+        self.fail(expected, lineno)</span>
+
+<span class="w"> </span>    def fail_eof(self, end_tokens: t.Optional[t.Tuple[str, ...]]=None,
+<span class="w"> </span>        lineno: t.Optional[int]=None) -&gt;&#39;te.NoReturn&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Like fail_unknown_tag but for end of template situations.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if end_tokens is None:</span>
+<span class="gi">+            end_tokens = tuple()</span>
+<span class="gi">+        if lineno is None:</span>
+<span class="gi">+            lineno = self.stream.current.lineno</span>
+<span class="gi">+        if self._tag_stack:</span>
+<span class="gi">+            expected = f&#39;Unexpected end of template. Jinja was looking for the following tags: {&quot;, &quot;.join(reversed(self._tag_stack))}.&#39;</span>
+<span class="gi">+        elif end_tokens:</span>
+<span class="gi">+            expected = f&#39;Unexpected end of template. Jinja was looking for one of the following tokens: {&quot;, &quot;.join(repr(x) for x in end_tokens)}.&#39;</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            expected = &#39;Unexpected end of template.&#39;</span>
+<span class="gi">+        self.fail(expected, lineno)</span>
+
+<span class="w"> </span>    def is_tuple_end(self, extra_end_rules: t.Optional[t.Tuple[str, ...]]=None
+<span class="w"> </span>        ) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Are we at the end of a tuple?&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.stream.current.type in (&#39;variable_end&#39;, &#39;block_end&#39;, &#39;rparen&#39;):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        elif extra_end_rules is not None:</span>
+<span class="gi">+            return self.stream.current.test_any(*extra_end_rules)</span>
+<span class="gi">+        return False</span>
+
+<span class="w"> </span>    def free_identifier(self, lineno: t.Optional[int]=None
+<span class="w"> </span>        ) -&gt;nodes.InternalName:
+<span class="w"> </span>        &quot;&quot;&quot;Return a new free identifier as :class:`~jinja2.nodes.InternalName`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._last_identifier += 1</span>
+<span class="gi">+        rv = object.__new__(nodes.InternalName)</span>
+<span class="gi">+        rv.name = f&#39;fi{self._last_identifier}&#39;</span>
+<span class="gi">+        rv.lineno = lineno or self.stream.current.lineno</span>
+<span class="gi">+        return rv</span>
+
+<span class="w"> </span>    def parse_statement(self) -&gt;t.Union[nodes.Node, t.List[nodes.Node]]:
+<span class="w"> </span>        &quot;&quot;&quot;Parse a single statement.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        token = self.stream.current</span>
+<span class="gi">+        if token.type != &#39;name&#39;:</span>
+<span class="gi">+            return self.parse_expression()</span>
+<span class="gi">+        </span>
+<span class="gi">+        if token.value in _statement_keywords:</span>
+<span class="gi">+            if token.value == &#39;for&#39;:</span>
+<span class="gi">+                return self.parse_for()</span>
+<span class="gi">+            elif token.value == &#39;if&#39;:</span>
+<span class="gi">+                return self.parse_if()</span>
+<span class="gi">+            elif token.value == &#39;block&#39;:</span>
+<span class="gi">+                return self.parse_block()</span>
+<span class="gi">+            elif token.value == &#39;extends&#39;:</span>
+<span class="gi">+                return self.parse_extends()</span>
+<span class="gi">+            elif token.value == &#39;print&#39;:</span>
+<span class="gi">+                return self.parse_print()</span>
+<span class="gi">+            elif token.value == &#39;macro&#39;:</span>
+<span class="gi">+                return self.parse_macro()</span>
+<span class="gi">+            elif token.value == &#39;include&#39;:</span>
+<span class="gi">+                return self.parse_include()</span>
+<span class="gi">+            elif token.value == &#39;from&#39;:</span>
+<span class="gi">+                return self.parse_from()</span>
+<span class="gi">+            elif token.value == &#39;import&#39;:</span>
+<span class="gi">+                return self.parse_import()</span>
+<span class="gi">+            elif token.value == &#39;set&#39;:</span>
+<span class="gi">+                return self.parse_set()</span>
+<span class="gi">+            elif token.value == &#39;with&#39;:</span>
+<span class="gi">+                return self.parse_with()</span>
+<span class="gi">+            elif token.value == &#39;autoescape&#39;:</span>
+<span class="gi">+                return self.parse_autoescape()</span>
+<span class="gi">+        </span>
+<span class="gi">+        if token.value in self.extensions:</span>
+<span class="gi">+            return self.extensions[token.value](self)</span>
+<span class="gi">+        </span>
+<span class="gi">+        self.fail_unknown_tag(token.value)</span>
+
+<span class="w"> </span>    def parse_statements(self, end_tokens: t.Tuple[str, ...], drop_needle:
+<span class="w"> </span>        bool=False) -&gt;t.List[nodes.Node]:
+<span class="gu">@@ -87,7 +146,29 @@ class Parser:</span>
+<span class="w"> </span>        the call is the matched end token.  If this is not wanted `drop_needle`
+<span class="w"> </span>        can be set to `True` and the end token is removed.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        result = []</span>
+<span class="gi">+        </span>
+<span class="gi">+        # skip colon if present</span>
+<span class="gi">+        if self.stream.current.type == &#39;colon&#39;:</span>
+<span class="gi">+            self.stream.next()</span>
+<span class="gi">+        </span>
+<span class="gi">+        # check for block end</span>
+<span class="gi">+        if self.stream.current.type == &#39;block_end&#39;:</span>
+<span class="gi">+            self.stream.next()</span>
+<span class="gi">+        </span>
+<span class="gi">+        while self.stream.current.type != &#39;eof&#39;:</span>
+<span class="gi">+            if self.stream.current.test_any(*end_tokens):</span>
+<span class="gi">+                if drop_needle:</span>
+<span class="gi">+                    self.stream.next()</span>
+<span class="gi">+                break</span>
+<span class="gi">+            </span>
+<span class="gi">+            if self.stream.current.type == &#39;data&#39;:</span>
+<span class="gi">+                result.append(nodes.Output([nodes.TemplateData(self.stream.current.value)]))</span>
+<span class="gi">+                self.stream.next()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                result.append(self.parse_statement())</span>
+<span class="gi">+        </span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def parse_set(self) -&gt;t.Union[nodes.Assign, nodes.AssignBlock]:
+<span class="w"> </span>        &quot;&quot;&quot;Parse an assign statement.&quot;&quot;&quot;
+<span class="gh">diff --git a/src/jinja2/runtime.py b/src/jinja2/runtime.py</span>
+<span class="gh">index c88211d..b7d315c 100644</span>
+<span class="gd">--- a/src/jinja2/runtime.py</span>
+<span class="gi">+++ b/src/jinja2/runtime.py</span>
+<span class="gu">@@ -43,17 +43,17 @@ def identity(x: V) -&gt;V:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Returns its argument. Useful for certain things in the
+<span class="w"> </span>    environment.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return x</span>
+
+
+<span class="w"> </span>def markup_join(seq: t.Iterable[t.Any]) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Concatenation that escapes if necessary and converts to string.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return Markup(&#39;&#39;).join(escape(soft_str(v)) for v in seq)</span>
+
+
+<span class="w"> </span>def str_join(seq: t.Iterable[t.Any]) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Simple args to string conversion and concatenation.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return &#39;&#39;.join(map(str, seq))</span>
+
+
+<span class="w"> </span>def new_context(environment: &#39;Environment&#39;, template_name: t.Optional[str],
+<span class="gu">@@ -62,7 +62,14 @@ def new_context(environment: &#39;Environment&#39;, template_name: t.Optional[str],</span>
+<span class="w"> </span>    Optional[t.MutableMapping[str, t.Any]]=None, locals: t.Optional[t.
+<span class="w"> </span>    Mapping[str, t.Any]]=None) -&gt;&#39;Context&#39;:
+<span class="w"> </span>    &quot;&quot;&quot;Internal helper for context creation.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    parent = environment.make_globals(globals)</span>
+<span class="gi">+    if vars is not None:</span>
+<span class="gi">+        parent.update(vars)</span>
+<span class="gi">+    if shared:</span>
+<span class="gi">+        parent = parent.copy()</span>
+<span class="gi">+    if locals:</span>
+<span class="gi">+        parent.update(locals)</span>
+<span class="gi">+    return Context(environment, parent, template_name, blocks)</span>
+
+
+<span class="w"> </span>class TemplateReference:
+<span class="gu">@@ -116,7 +123,14 @@ class Context:</span>
+<span class="w"> </span>    def super(self, name: str, current: t.Callable[[&#39;Context&#39;], t.Iterator[
+<span class="w"> </span>        str]]) -&gt;t.Union[&#39;BlockReference&#39;, &#39;Undefined&#39;]:
+<span class="w"> </span>        &quot;&quot;&quot;Render a parent block.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            blocks = self.blocks[name]</span>
+<span class="gi">+            index = blocks.index(current) + 1</span>
+<span class="gi">+            if index &lt; len(blocks):</span>
+<span class="gi">+                return BlockReference(name, self, blocks, index)</span>
+<span class="gi">+        except (LookupError, ValueError):</span>
+<span class="gi">+            pass</span>
+<span class="gi">+        return self.environment.undefined(f&#39;there is no parent block called {name!r}.&#39;, name=&#39;super&#39;)</span>
+
+<span class="w"> </span>    def get(self, key: str, default: t.Any=None) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Look up a variable by name, or return a default if the key is
+<span class="gu">@@ -125,7 +139,10 @@ class Context:</span>
+<span class="w"> </span>        :param key: The variable name to look up.
+<span class="w"> </span>        :param default: The value to return if the key is not found.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self[key]</span>
+<span class="gi">+        except KeyError:</span>
+<span class="gi">+            return default</span>
+
+<span class="w"> </span>    def resolve(self, key: str) -&gt;t.Union[t.Any, &#39;Undefined&#39;]:
+<span class="w"> </span>        &quot;&quot;&quot;Look up a variable by name, or return an :class:`Undefined`
+<span class="gu">@@ -137,7 +154,10 @@ class Context:</span>
+
+<span class="w"> </span>        :param key: The variable name to look up.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        rv = self.resolve_or_missing(key)</span>
+<span class="gi">+        if rv is missing:</span>
+<span class="gi">+            return self.environment.undefined(name=key)</span>
+<span class="gi">+        return rv</span>
+
+<span class="w"> </span>    def resolve_or_missing(self, key: str) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Look up a variable by name, or return a ``missing`` sentinel
+<span class="gu">@@ -149,18 +169,22 @@ class Context:</span>
+
+<span class="w"> </span>        :param key: The variable name to look up.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if key in self.vars:</span>
+<span class="gi">+            return self.vars[key]</span>
+<span class="gi">+        if key in self.parent:</span>
+<span class="gi">+            return self.parent[key]</span>
+<span class="gi">+        return missing</span>
+
+<span class="w"> </span>    def get_exported(self) -&gt;t.Dict[str, t.Any]:
+<span class="w"> </span>        &quot;&quot;&quot;Get a new dict with the exported variables.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return {k: self.vars[k] for k in self.exported_vars}</span>
+
+<span class="w"> </span>    def get_all(self) -&gt;t.Dict[str, t.Any]:
+<span class="w"> </span>        &quot;&quot;&quot;Return the complete context as dict including the exported
+<span class="w"> </span>        variables.  For optimizations reasons this might not return an
+<span class="w"> </span>        actual copy so be careful with using it.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return {**self.parent, **self.vars}</span>
+
+<span class="w"> </span>    @internalcode
+<span class="w"> </span>    def call(__self, __obj: t.Callable[..., t.Any], *args: t.Any, **kwargs:
+<span class="gu">@@ -170,14 +194,25 @@ class Context:</span>
+<span class="w"> </span>        argument if the callable has :func:`pass_context` or
+<span class="w"> </span>        :func:`pass_environment`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(__obj, _PassArg):</span>
+<span class="gi">+            if __obj._type == &#39;context&#39;:</span>
+<span class="gi">+                args = (__self,) + args</span>
+<span class="gi">+            elif __obj._type == &#39;environment&#39;:</span>
+<span class="gi">+                args = (__self.environment,) + args</span>
+<span class="gi">+            return __obj._func(*args, **kwargs)</span>
+<span class="gi">+        return __obj(*args, **kwargs)</span>
+
+<span class="w"> </span>    def derived(self, locals: t.Optional[t.Dict[str, t.Any]]=None) -&gt;&#39;Context&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Internal helper function to create a derived context.  This is
+<span class="w"> </span>        used in situations where the system needs a new context in the same
+<span class="w"> </span>        template that is independent.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        context = new_context(self.environment, self.name, self.blocks,</span>
+<span class="gi">+                              {**self.vars, **(locals or {})},</span>
+<span class="gi">+                              True, self.globals_keys)</span>
+<span class="gi">+        context.eval_ctx = self.eval_ctx</span>
+<span class="gi">+        context.exported_vars = set(self.exported_vars)</span>
+<span class="gi">+        return context</span>
+<span class="w"> </span>    keys = _dict_method_all(dict.keys)
+<span class="w"> </span>    values = _dict_method_all(dict.values)
+<span class="w"> </span>    items = _dict_method_all(dict.items)
+<span class="gh">diff --git a/src/jinja2/sandbox.py b/src/jinja2/sandbox.py</span>
+<span class="gh">index b73a983..6803d85 100644</span>
+<span class="gd">--- a/src/jinja2/sandbox.py</span>
+<span class="gi">+++ b/src/jinja2/sandbox.py</span>
+<span class="gu">@@ -35,7 +35,22 @@ def safe_range(*args: int) -&gt;range:</span>
+<span class="w"> </span>    &quot;&quot;&quot;A range that can&#39;t generate ranges with a length of more than
+<span class="w"> </span>    MAX_RANGE items.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if len(args) == 1:</span>
+<span class="gi">+        start, stop, step = 0, args[0], 1</span>
+<span class="gi">+    elif len(args) == 2:</span>
+<span class="gi">+        start, stop, step = args[0], args[1], 1</span>
+<span class="gi">+    elif len(args) == 3:</span>
+<span class="gi">+        start, stop, step = args</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(&#39;range() requires 1-3 integer arguments&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Calculate the length of the range</span>
+<span class="gi">+    length = (stop - start + step - 1) // step</span>
+<span class="gi">+    </span>
+<span class="gi">+    if length &gt; MAX_RANGE:</span>
+<span class="gi">+        raise OverflowError(f&#39;range() result has too many items (maximum is {MAX_RANGE})&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return range(start, stop, step)</span>
+
+
+<span class="w"> </span>def unsafe(f: F) -&gt;F:
+<span class="gu">@@ -47,7 +62,8 @@ def unsafe(f: F) -&gt;F:</span>
+<span class="w"> </span>        def delete(self):
+<span class="w"> </span>            pass
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    f.unsafe_callable = True</span>
+<span class="gi">+    return f</span>
+
+
+<span class="w"> </span>def is_internal_attribute(obj: t.Any, attr: str) -&gt;bool:
+<span class="gu">@@ -62,7 +78,14 @@ def is_internal_attribute(obj: t.Any, attr: str) -&gt;bool:</span>
+<span class="w"> </span>    &gt;&gt;&gt; is_internal_attribute(str, &quot;upper&quot;)
+<span class="w"> </span>    False
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return attr.startswith(&#39;__&#39;) and attr.endswith(&#39;__&#39;) or \</span>
+<span class="gi">+           attr.startswith(&#39;func_&#39;) or \</span>
+<span class="gi">+           attr in UNSAFE_FUNCTION_ATTRIBUTES or \</span>
+<span class="gi">+           attr in UNSAFE_METHOD_ATTRIBUTES or \</span>
+<span class="gi">+           (isinstance(obj, (types.FunctionType, types.MethodType)) and attr in (&#39;__globals__&#39;, &#39;__closure__&#39;)) or \</span>
+<span class="gi">+           (isinstance(obj, types.GeneratorType) and attr in UNSAFE_GENERATOR_ATTRIBUTES) or \</span>
+<span class="gi">+           (isinstance(obj, types.CoroutineType) and attr in UNSAFE_COROUTINE_ATTRIBUTES) or \</span>
+<span class="gi">+           (isinstance(obj, types.AsyncGeneratorType) and attr in UNSAFE_ASYNC_GENERATOR_ATTRIBUTES)</span>
+
+
+<span class="w"> </span>def modifies_known_mutable(obj: t.Any, attr: str) -&gt;bool:
+<span class="gu">@@ -84,7 +107,10 @@ def modifies_known_mutable(obj: t.Any, attr: str) -&gt;bool:</span>
+<span class="w"> </span>    &gt;&gt;&gt; modifies_known_mutable(&quot;foo&quot;, &quot;upper&quot;)
+<span class="w"> </span>    False
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for typ, mutable_attrs in _mutable_spec:</span>
+<span class="gi">+        if isinstance(obj, typ):</span>
+<span class="gi">+            return attr in mutable_attrs</span>
+<span class="gi">+    return False</span>
+
+
+<span class="w"> </span>class SandboxedEnvironment(Environment):
+<span class="gu">@@ -120,7 +146,7 @@ class SandboxedEnvironment(Environment):</span>
+<span class="w"> </span>        special attributes of internal python objects as returned by the
+<span class="w"> </span>        :func:`is_internal_attribute` function.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return not (attr.startswith(&#39;_&#39;) or is_internal_attribute(obj, attr))</span>
+
+<span class="w"> </span>    def is_safe_callable(self, obj: t.Any) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;Check if an object is safely callable. By default callables
+<span class="gu">@@ -129,7 +155,8 @@ class SandboxedEnvironment(Environment):</span>
+<span class="w"> </span>        This also recognizes the Django convention of setting
+<span class="w"> </span>        ``func.alters_data = True``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return not (getattr(obj, &#39;unsafe_callable&#39;, False) or</span>
+<span class="gi">+                    getattr(obj, &#39;alters_data&#39;, False))</span>
+
+<span class="w"> </span>    def call_binop(self, context: Context, operator: str, left: t.Any,
+<span class="w"> </span>        right: t.Any) -&gt;t.Any:
+<span class="gu">@@ -139,7 +166,9 @@ class SandboxedEnvironment(Environment):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.6
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if operator not in self.binop_table:</span>
+<span class="gi">+            raise SecurityError(f&#39;unsupported binary operator: {operator}&#39;)</span>
+<span class="gi">+        return self.binop_table[operator](left, right)</span>
+
+<span class="w"> </span>    def call_unop(self, context: Context, operator: str, arg: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;For intercepted unary operator calls (:meth:`intercepted_unops`)
+<span class="gu">@@ -148,22 +177,40 @@ class SandboxedEnvironment(Environment):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.6
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if operator not in self.unop_table:</span>
+<span class="gi">+            raise SecurityError(f&#39;unsupported unary operator: {operator}&#39;)</span>
+<span class="gi">+        return self.unop_table[operator](arg)</span>
+
+<span class="w"> </span>    def getitem(self, obj: t.Any, argument: t.Union[str, t.Any]) -&gt;t.Union[
+<span class="w"> </span>        t.Any, Undefined]:
+<span class="w"> </span>        &quot;&quot;&quot;Subscribe an object from sandboxed code.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return obj[argument]</span>
+<span class="gi">+        except (TypeError, LookupError):</span>
+<span class="gi">+            if isinstance(argument, str):</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    return self.getattr(obj, argument)</span>
+<span class="gi">+                except AttributeError:</span>
+<span class="gi">+                    pass</span>
+<span class="gi">+            return self.undefined(obj=obj, name=argument)</span>
+
+<span class="w"> </span>    def getattr(self, obj: t.Any, attribute: str) -&gt;t.Union[t.Any, Undefined]:
+<span class="w"> </span>        &quot;&quot;&quot;Subscribe an object from sandboxed code and prefer the
+<span class="w"> </span>        attribute.  The attribute passed *must* be a bytestring.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            value = getattr(obj, attribute)</span>
+<span class="gi">+        except AttributeError:</span>
+<span class="gi">+            return self.undefined(obj=obj, name=attribute)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if self.is_safe_attribute(obj, attribute, value):</span>
+<span class="gi">+                return value</span>
+<span class="gi">+            return self.unsafe_undefined(obj, attribute)</span>
+
+<span class="w"> </span>    def unsafe_undefined(self, obj: t.Any, attribute: str) -&gt;Undefined:
+<span class="w"> </span>        &quot;&quot;&quot;Return an undefined object for unsafe attributes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.undefined(obj=obj, name=attribute, exc=SecurityError(</span>
+<span class="gi">+            f&#39;{attribute!r} is an unsafe attribute&#39;))</span>
+
+<span class="w"> </span>    def format_string(self, s: str, args: t.Tuple[t.Any, ...], kwargs: t.
+<span class="w"> </span>        Dict[str, t.Any], format_func: t.Optional[t.Callable[..., t.Any]]=None
+<span class="gu">@@ -171,12 +218,20 @@ class SandboxedEnvironment(Environment):</span>
+<span class="w"> </span>        &quot;&quot;&quot;If a format call is detected, then this is routed through this
+<span class="w"> </span>        method so that our safety sandbox can be used for it.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if format_func is None:</span>
+<span class="gi">+            format_func = self.format_string</span>
+<span class="gi">+        if isinstance(s, Markup):</span>
+<span class="gi">+            formatter = SandboxedEscapeFormatter(self, format_func=format_func)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            formatter = SandboxedFormatter(self, format_func=format_func)</span>
+<span class="gi">+        return formatter.vformat(s, args, kwargs)</span>
+
+<span class="w"> </span>    def call(__self, __context: Context, __obj: t.Any, *args: t.Any, **
+<span class="w"> </span>        kwargs: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Call an object from sandboxed code.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not __self.is_safe_callable(__obj):</span>
+<span class="gi">+            raise SecurityError(f&#39;{__obj!r} is not safely callable&#39;)</span>
+<span class="gi">+        return __obj(*args, **kwargs)</span>
+
+
+<span class="w"> </span>class ImmutableSandboxedEnvironment(SandboxedEnvironment):
+<span class="gh">diff --git a/src/jinja2/tests.py b/src/jinja2/tests.py</span>
+<span class="gh">index 2823a4b..914a56d 100644</span>
+<span class="gd">--- a/src/jinja2/tests.py</span>
+<span class="gi">+++ b/src/jinja2/tests.py</span>
+<span class="gu">@@ -11,17 +11,17 @@ if t.TYPE_CHECKING:</span>
+
+<span class="w"> </span>def test_odd(value: int) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is odd.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value % 2 != 0</span>
+
+
+<span class="w"> </span>def test_even(value: int) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is even.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value % 2 == 0</span>
+
+
+<span class="w"> </span>def test_divisibleby(value: int, num: int) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if a variable is divisible by a number.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value % num == 0</span>
+
+
+<span class="w"> </span>def test_defined(value: t.Any) -&gt;bool:
+<span class="gu">@@ -38,12 +38,12 @@ def test_defined(value: t.Any) -&gt;bool:</span>
+<span class="w"> </span>    See the :func:`default` filter for a simple way to set undefined
+<span class="w"> </span>    variables.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return not isinstance(value, Undefined)</span>
+
+
+<span class="w"> </span>def test_undefined(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Like :func:`defined` but the other way round.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, Undefined)</span>
+
+
+<span class="w"> </span>@pass_environment
+<span class="gu">@@ -61,7 +61,7 @@ def test_filter(env: &#39;Environment&#39;, value: str) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value in env.filters</span>
+
+
+<span class="w"> </span>@pass_environment
+<span class="gu">@@ -83,12 +83,12 @@ def test_test(env: &#39;Environment&#39;, value: str) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 3.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value in env.tests</span>
+
+
+<span class="w"> </span>def test_none(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is none.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value is None</span>
+
+
+<span class="w"> </span>def test_boolean(value: t.Any) -&gt;bool:
+<span class="gu">@@ -96,7 +96,7 @@ def test_boolean(value: t.Any) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.11
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, bool)</span>
+
+
+<span class="w"> </span>def test_false(value: t.Any) -&gt;bool:
+<span class="gu">@@ -104,7 +104,7 @@ def test_false(value: t.Any) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.11
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value is False</span>
+
+
+<span class="w"> </span>def test_true(value: t.Any) -&gt;bool:
+<span class="gu">@@ -112,7 +112,7 @@ def test_true(value: t.Any) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.11
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value is True</span>
+
+
+<span class="w"> </span>def test_integer(value: t.Any) -&gt;bool:
+<span class="gu">@@ -120,7 +120,7 @@ def test_integer(value: t.Any) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.11
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, int)</span>
+
+
+<span class="w"> </span>def test_float(value: t.Any) -&gt;bool:
+<span class="gu">@@ -128,22 +128,22 @@ def test_float(value: t.Any) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.11
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, float)</span>
+
+
+<span class="w"> </span>def test_lower(value: str) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is lowercased.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, str) and value.islower()</span>
+
+
+<span class="w"> </span>def test_upper(value: str) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is uppercased.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, str) and value.isupper()</span>
+
+
+<span class="w"> </span>def test_string(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the object is a string.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, str)</span>
+
+
+<span class="w"> </span>def test_mapping(value: t.Any) -&gt;bool:
+<span class="gu">@@ -151,19 +151,19 @@ def test_mapping(value: t.Any) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.6
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, abc.Mapping)</span>
+
+
+<span class="w"> </span>def test_number(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is a number.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, Number)</span>
+
+
+<span class="w"> </span>def test_sequence(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Return true if the variable is a sequence. Sequences are variables
+<span class="w"> </span>    that are iterable.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return isinstance(value, abc.Sequence) and not isinstance(value, str)</span>
+
+
+<span class="w"> </span>def test_sameas(value: t.Any, other: t.Any) -&gt;bool:
+<span class="gu">@@ -176,17 +176,21 @@ def test_sameas(value: t.Any, other: t.Any) -&gt;bool:</span>
+<span class="w"> </span>            the foo attribute really is the `False` singleton
+<span class="w"> </span>        {% endif %}
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value is other</span>
+
+
+<span class="w"> </span>def test_iterable(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if it&#39;s possible to iterate over an object.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        iter(value)</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    except TypeError:</span>
+<span class="gi">+        return False</span>
+
+
+<span class="w"> </span>def test_escaped(value: t.Any) -&gt;bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if the value is escaped.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return hasattr(value, &#39;__html__&#39;)</span>
+
+
+<span class="w"> </span>def test_in(value: t.Any, seq: t.Container[t.Any]) -&gt;bool:
+<span class="gu">@@ -194,7 +198,7 @@ def test_in(value: t.Any, seq: t.Container[t.Any]) -&gt;bool:</span>
+
+<span class="w"> </span>    .. versionadded:: 2.10
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value in seq</span>
+
+
+<span class="w"> </span>TESTS = {&#39;odd&#39;: test_odd, &#39;even&#39;: test_even, &#39;divisibleby&#39;:
+<span class="gh">diff --git a/src/jinja2/utils.py b/src/jinja2/utils.py</span>
+<span class="gh">index 7563812..9a4ac9c 100644</span>
+<span class="gd">--- a/src/jinja2/utils.py</span>
+<span class="gi">+++ b/src/jinja2/utils.py</span>
+<span class="gu">@@ -32,7 +32,8 @@ def pass_context(f: F) -&gt;F:</span>
+<span class="w"> </span>    .. versionadded:: 3.0.0
+<span class="w"> </span>        Replaces ``contextfunction`` and ``contextfilter``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    f.jinja_pass_arg = _PassArg.context</span>
+<span class="gi">+    return f</span>
+
+
+<span class="w"> </span>def pass_eval_context(f: F) -&gt;F:
+<span class="gu">@@ -48,7 +49,8 @@ def pass_eval_context(f: F) -&gt;F:</span>
+<span class="w"> </span>    .. versionadded:: 3.0.0
+<span class="w"> </span>        Replaces ``evalcontextfunction`` and ``evalcontextfilter``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    f.jinja_pass_arg = _PassArg.eval_context</span>
+<span class="gi">+    return f</span>
+
+
+<span class="w"> </span>def pass_environment(f: F) -&gt;F:
+<span class="gu">@@ -60,7 +62,8 @@ def pass_environment(f: F) -&gt;F:</span>
+<span class="w"> </span>    .. versionadded:: 3.0.0
+<span class="w"> </span>        Replaces ``environmentfunction`` and ``environmentfilter``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    f.jinja_pass_arg = _PassArg.environment</span>
+<span class="gi">+    return f</span>
+
+
+<span class="w"> </span>class _PassArg(enum.Enum):
+<span class="gu">@@ -71,7 +74,8 @@ class _PassArg(enum.Enum):</span>
+
+<span class="w"> </span>def internalcode(f: F) -&gt;F:
+<span class="w"> </span>    &quot;&quot;&quot;Marks the function as internally used&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    internal_code.add(f.__code__)</span>
+<span class="gi">+    return f</span>
+
+
+<span class="w"> </span>def is_undefined(obj: t.Any) -&gt;bool:
+<span class="gu">@@ -86,7 +90,8 @@ def is_undefined(obj: t.Any) -&gt;bool:</span>
+<span class="w"> </span>                return default
+<span class="w"> </span>            return var
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from .runtime import Undefined</span>
+<span class="gi">+    return isinstance(obj, Undefined)</span>
+
+
+<span class="w"> </span>def consume(iterable: t.Iterable[t.Any]) -&gt;None:
+<span class="gh">diff --git a/src/jinja2/visitor.py b/src/jinja2/visitor.py</span>
+<span class="gh">index ebb34c6..54d7091 100644</span>
+<span class="gd">--- a/src/jinja2/visitor.py</span>
+<span class="gi">+++ b/src/jinja2/visitor.py</span>
+<span class="gu">@@ -30,15 +30,19 @@ class NodeVisitor:</span>
+<span class="w"> </span>        exists for this node.  In that case the generic visit function is
+<span class="w"> </span>        used instead.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        method = &#39;visit_&#39; + node.__class__.__name__</span>
+<span class="gi">+        return getattr(self, method, None)</span>
+
+<span class="w"> </span>    def visit(self, node: Node, *args: t.Any, **kwargs: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Visit a node.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        f = self.get_visitor(node)</span>
+<span class="gi">+        if f is None:</span>
+<span class="gi">+            return self.generic_visit(node, *args, **kwargs)</span>
+<span class="gi">+        return f(node, *args, **kwargs)</span>
+
+<span class="w"> </span>    def generic_visit(self, node: Node, *args: t.Any, **kwargs: t.Any) -&gt;t.Any:
+<span class="w"> </span>        &quot;&quot;&quot;Called if no explicit visitor function exists for a node.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return node</span>
+
+
+<span class="w"> </span>class NodeTransformer(NodeVisitor):
+<span class="gu">@@ -57,4 +61,12 @@ class NodeTransformer(NodeVisitor):</span>
+<span class="w"> </span>        &quot;&quot;&quot;As transformers may return lists in some places this method
+<span class="w"> </span>        can be used to enforce a list as return value.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        result = []</span>
+<span class="gi">+        for child in node:</span>
+<span class="gi">+            new_node = self.visit(child, *args, **kwargs)</span>
+<span class="gi">+            if new_node is not None:</span>
+<span class="gi">+                if isinstance(new_node, list):</span>
+<span class="gi">+                    result.extend(new_node)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    result.append(new_node)</span>
+<span class="gi">+        return result</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

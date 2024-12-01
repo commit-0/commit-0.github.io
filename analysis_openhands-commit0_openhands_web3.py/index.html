@@ -1,0 +1,1360 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands web3.py - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-web3py" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands web3.py
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-web3py"><strong>OpenHands</strong>: web3.py</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
+  File &quot;/testbed/.venv/bin/pytest&quot;, line 8, in &lt;module&gt;
+    sys.exit(console_main())
+             ^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 201, in console_main
+    code = main()
+           ^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 156, in main
+    config = _prepareconfig(args, plugins)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 341, in _prepareconfig
+    config = pluginmanager.hook.pytest_cmdline_parse(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_hooks.py&quot;, line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py&quot;, line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py&quot;, line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py&quot;, line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/helpconfig.py&quot;, line 105, in pytest_cmdline_parse
+    config = yield
+             ^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py&quot;, line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 1140, in pytest_cmdline_parse
+    self.parse(args)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 1494, in parse
+    self._preparse(args, addopts=addopts)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py&quot;, line 1381, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints(&quot;pytest11&quot;)
+  File &quot;/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py&quot;, line 421, in load_setuptools_entrypoints
+    plugin = ep.load()
+             ^^^^^^^^^
+  File &quot;/root/.local/share/uv/python/cpython-3.12.6-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py&quot;, line 205, in load
+    module = import_module(match.group(&#39;module&#39;))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/root/.local/share/uv/python/cpython-3.12.6-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py&quot;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1387, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1360, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1310, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 488, in _call_with_frames_removed
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1387, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1360, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1310, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 488, in _call_with_frames_removed
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1387, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1360, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1310, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 488, in _call_with_frames_removed
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1387, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1360, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1331, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 935, in _load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 995, in exec_module
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 488, in _call_with_frames_removed
+  File &quot;/testbed/web3/__init__.py&quot;, line 4, in &lt;module&gt;
+    from web3.providers import (
+  File &quot;/testbed/web3/providers/__init__.py&quot;, line 1, in &lt;module&gt;
+    from .async_base import (
+  File &quot;/testbed/web3/providers/async_base.py&quot;, line 4, in &lt;module&gt;
+    from web3._utils.encoding import FriendlyJsonSerde, Web3JsonEncoder
+  File &quot;/testbed/web3/_utils/encoding.py&quot;, line 9, in &lt;module&gt;
+    from web3._utils.abi import is_address_type, is_array_type, is_bool_type, is_bytes_type, is_int_type, is_string_type, is_uint_type, size_of_type, sub_type_of_array_type
+  File &quot;/testbed/web3/_utils/abi.py&quot;, line 21, in &lt;module&gt;
+    from web3.utils import get_abi_input_names
+  File &quot;/testbed/web3/utils/__init__.py&quot;, line 6, in &lt;module&gt;
+    from .abi import (  # NOQA
+ImportError: cannot import name &#39;get_abi_input_names&#39; from &#39;web3.utils.abi&#39; (/testbed/web3/utils/abi.py)
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/tests/core/contracts/test_contract_call_interface.py b/tests/core/contracts/test_contract_call_interface.py</span>
+<span class="gh">index f9173336..8452faf9 100644</span>
+<span class="gd">--- a/tests/core/contracts/test_contract_call_interface.py</span>
+<span class="gi">+++ b/tests/core/contracts/test_contract_call_interface.py</span>
+<span class="gu">@@ -27,7 +27,7 @@ from web3._utils.contract_sources.contract_data.bytes_contracts import (</span>
+<span class="w"> </span>    BYTES32_CONTRACT_DATA,
+<span class="w"> </span>    BYTES_CONTRACT_DATA,
+<span class="w"> </span>)
+<span class="gd">-from web3._utils.ens import (</span>
+<span class="gi">+from web3._utils.validation_utils import (</span>
+<span class="w"> </span>    contract_ens_addresses,
+<span class="w"> </span>)
+<span class="w"> </span>from web3.exceptions import (
+<span class="gh">diff --git a/tests/core/contracts/test_contract_init.py b/tests/core/contracts/test_contract_init.py</span>
+<span class="gh">index e297dd51..07062a0f 100644</span>
+<span class="gd">--- a/tests/core/contracts/test_contract_init.py</span>
+<span class="gi">+++ b/tests/core/contracts/test_contract_init.py</span>
+<span class="gu">@@ -1,6 +1,6 @@</span>
+<span class="w"> </span>import pytest
+
+<span class="gd">-from web3._utils.ens import (</span>
+<span class="gi">+from web3._utils.validation_utils import (</span>
+<span class="w"> </span>    contract_ens_addresses,
+<span class="w"> </span>    ens_addresses,
+<span class="w"> </span>)
+<span class="gh">diff --git a/tests/core/eth-module/test_transactions.py b/tests/core/eth-module/test_transactions.py</span>
+<span class="gh">index a455c311..91ab248a 100644</span>
+<span class="gd">--- a/tests/core/eth-module/test_transactions.py</span>
+<span class="gi">+++ b/tests/core/eth-module/test_transactions.py</span>
+<span class="gu">@@ -9,7 +9,7 @@ from hexbytes import (</span>
+<span class="w"> </span>    HexBytes,
+<span class="w"> </span>)
+
+<span class="gd">-from web3._utils.ens import (</span>
+<span class="gi">+from web3._utils.validation_utils import (</span>
+<span class="w"> </span>    ens_addresses,
+<span class="w"> </span>)
+<span class="w"> </span>from web3._utils.rpc_abi import (
+<span class="gh">diff --git a/web3/_utils/abi.py b/web3/_utils/abi.py</span>
+<span class="gh">index c3535180..64456cf0 100644</span>
+<span class="gd">--- a/web3/_utils/abi.py</span>
+<span class="gi">+++ b/web3/_utils/abi.py</span>
+<span class="gu">@@ -14,7 +14,7 @@ from eth_utils import decode_hex, is_bytes, is_list_like, is_string, is_text, to</span>
+<span class="w"> </span>from eth_utils.abi import collapse_if_tuple
+<span class="w"> </span>from eth_utils.toolz import curry, partial, pipe
+<span class="w"> </span>from web3._utils.decorators import reject_recursive_repeats
+<span class="gd">-from web3._utils.ens import is_ens_name</span>
+<span class="gi">+from web3._utils.validation_utils import is_ens_name</span>
+<span class="w"> </span>from web3._utils.formatters import recursive_map
+<span class="w"> </span>from web3.exceptions import FallbackNotFound, MismatchedABI
+<span class="w"> </span>from web3.types import ABI, ABIEvent, ABIEventParams, ABIFunction, ABIFunctionParams, TReturn
+<span class="gu">@@ -29,7 +29,9 @@ def get_normalized_abi_arg_type(abi_arg: ABIEventParams) -&gt; str:</span>
+<span class="w"> </span>    makes use of `collapse_if_tuple()` to collapse the appropriate component
+<span class="w"> </span>    types within a tuple type, if present.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(abi_arg[&#39;type&#39;], str):</span>
+<span class="gi">+        return collapse_if_tuple(dict(abi_arg))</span>
+<span class="gi">+    raise ValueError(f&quot;Unknown ABI arg type: {abi_arg[&#39;type&#39;]}&quot;)</span>
+
+<span class="w"> </span>class AddressEncoder(encoding.AddressEncoder):
+<span class="w"> </span>    pass
+<span class="gu">@@ -73,7 +75,57 @@ def merge_args_and_kwargs(function_abi: ABIFunction, args: Sequence[Any], kwargs</span>
+<span class="w"> </span>    given.  Returns a list of argument values aligned to the order of inputs
+<span class="w"> </span>    defined in ``function_abi``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not function_abi.get(&#39;inputs&#39;, None):</span>
+<span class="gi">+        if args or kwargs:</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;Function {} does not accept any arguments&quot;.format(function_abi.get(&#39;name&#39;, &#39;[fallback]&#39;))</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return ()</span>
+<span class="gi">+</span>
+<span class="gi">+    input_names = get_abi_input_names(function_abi)</span>
+<span class="gi">+    num_inputs = len(input_names)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Check that all positional args are in bounds</span>
+<span class="gi">+    if len(args) &gt; num_inputs:</span>
+<span class="gi">+        raise TypeError(</span>
+<span class="gi">+            &quot;Function {} received too many positional values&quot;.format(function_abi.get(&#39;name&#39;, &#39;[fallback]&#39;))</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Check that all keyword args are known</span>
+<span class="gi">+    for key in kwargs:</span>
+<span class="gi">+        if key not in input_names:</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;{} is not a valid argument for function {}&quot;.format(</span>
+<span class="gi">+                    key, function_abi.get(&#39;name&#39;, &#39;[fallback]&#39;)</span>
+<span class="gi">+                )</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Check that same argument is not passed twice</span>
+<span class="gi">+    for idx, value in enumerate(args):</span>
+<span class="gi">+        if input_names[idx] in kwargs:</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;Function {} got multiple values for argument {}&quot;.format(</span>
+<span class="gi">+                    function_abi.get(&#39;name&#39;, &#39;[fallback]&#39;),</span>
+<span class="gi">+                    input_names[idx],</span>
+<span class="gi">+                )</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Fill remaining arguments with keyword values</span>
+<span class="gi">+    args_as_kwargs = {name: arg for name, arg in zip(input_names, args)}</span>
+<span class="gi">+    args_as_kwargs.update(kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Check that all required args have been given</span>
+<span class="gi">+    missing_args = set(input_names) - set(args_as_kwargs)</span>
+<span class="gi">+    if missing_args:</span>
+<span class="gi">+        raise TypeError(</span>
+<span class="gi">+            &quot;Function {} missing arguments: {}&quot;.format(</span>
+<span class="gi">+                function_abi.get(&#39;name&#39;, &#39;[fallback]&#39;),</span>
+<span class="gi">+                &#39;, &#39;.join(missing_args),</span>
+<span class="gi">+            )</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    # Return values in order of inputs</span>
+<span class="gi">+    return tuple(args_as_kwargs[name] for name in input_names)</span>
+<span class="w"> </span>TUPLE_TYPE_STR_RE = re.compile(&#39;^(tuple)((\\[([1-9]\\d*\\b)?])*)??$&#39;)
+
+<span class="w"> </span>def get_tuple_type_str_parts(s: str) -&gt; Optional[Tuple[str, Optional[str]]]:
+<span class="gu">@@ -81,14 +133,57 @@ def get_tuple_type_str_parts(s: str) -&gt; Optional[Tuple[str, Optional[str]]]:</span>
+<span class="w"> </span>    Takes a JSON ABI type string.  For tuple type strings, returns the separated
+<span class="w"> </span>    prefix and array dimension parts.  For all other strings, returns ``None``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    match = TUPLE_TYPE_STR_RE.match(s)</span>
+<span class="gi">+    if match:</span>
+<span class="gi">+        tuple_prefix = match.group(1)</span>
+<span class="gi">+        array_part = match.group(2) or None</span>
+<span class="gi">+        return tuple_prefix, array_part</span>
+<span class="gi">+    return None</span>
+<span class="gi">+</span>
+<span class="gi">+def _align_tuple_items(tuple_components: Sequence[ABIFunctionParams], tuple_value: Union[Sequence[Any], Mapping[Any, Any]]) -&gt; Tuple[Any, ...]:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Takes a list of tuple component ABIs and a sequence or mapping of values.</span>
+<span class="gi">+    Returns a tuple of values aligned to the component ABIs.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(tuple_value, Mapping):</span>
+<span class="gi">+        return tuple(</span>
+<span class="gi">+            _align_abi_input(comp_abi, tuple_value[comp_abi[&#39;name&#39;]])</span>
+<span class="gi">+            for comp_abi in tuple_components</span>
+<span class="gi">+        )</span>
+<span class="gi">+    </span>
+<span class="gi">+    return tuple(</span>
+<span class="gi">+        _align_abi_input(comp_abi, tuple_item)</span>
+<span class="gi">+        for comp_abi, tuple_item in zip(tuple_components, tuple_value)</span>
+<span class="gi">+    )</span>
+
+<span class="w"> </span>def _align_abi_input(arg_abi: ABIFunctionParams, arg: Any) -&gt; Tuple[Any, ...]:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Aligns the values of any mapping at any level of nesting in ``arg``
+<span class="w"> </span>    according to the layout of the corresponding abi spec.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    tuple_parts = get_tuple_type_str_parts(arg_abi[&#39;type&#39;])</span>
+<span class="gi">+    if tuple_parts is None:</span>
+<span class="gi">+        return arg</span>
+<span class="gi">+</span>
+<span class="gi">+    tuple_prefix, array_part = tuple_parts</span>
+<span class="gi">+    tuple_components = arg_abi.get(&#39;components&#39;, None)</span>
+<span class="gi">+    if tuple_components is None:</span>
+<span class="gi">+        raise ValueError(&quot;Tuple components missing from ABI&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if array_part:</span>
+<span class="gi">+        # If array dimension exists, map alignment to each tuple element</span>
+<span class="gi">+        if not is_list_like(arg):</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;Expected list-like data for type {}, got {}&quot;.format(</span>
+<span class="gi">+                    arg_abi[&#39;type&#39;], type(arg)</span>
+<span class="gi">+                )</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return tuple(</span>
+<span class="gi">+            _align_tuple_items(tuple_components, tuple_item)</span>
+<span class="gi">+            for tuple_item in arg</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    return _align_tuple_items(tuple_components, arg)</span>
+
+<span class="w"> </span>def get_aligned_abi_inputs(abi: ABIFunction, args: Union[Tuple[Any, ...], Mapping[Any, Any]]) -&gt; Tuple[Tuple[Any, ...], Tuple[Any, ...]]:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -98,7 +193,39 @@ def get_aligned_abi_inputs(abi: ABIFunction, args: Union[Tuple[Any, ...], Mappin</span>
+<span class="w"> </span>    contained in ``args`` may contain nested mappings or sequences corresponding
+<span class="w"> </span>    to tuple-encoded values in ``abi``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    inputs = abi.get(&#39;inputs&#39;, [])</span>
+<span class="gi">+    if not inputs:</span>
+<span class="gi">+        if args and not isinstance(args, (tuple, list)) or (isinstance(args, (tuple, list)) and args):</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;Function {} does not accept any arguments&quot;.format(abi.get(&#39;name&#39;, &#39;[fallback]&#39;))</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return (), ()</span>
+<span class="gi">+</span>
+<span class="gi">+    input_types = tuple(collapse_if_tuple(dict(arg)) for arg in inputs)</span>
+<span class="gi">+</span>
+<span class="gi">+    if isinstance(args, (list, tuple)):</span>
+<span class="gi">+        if len(args) &gt; len(inputs):</span>
+<span class="gi">+            raise TypeError(</span>
+<span class="gi">+                &quot;Function {} received too many arguments&quot;.format(abi.get(&#39;name&#39;, &#39;[fallback]&#39;))</span>
+<span class="gi">+            )</span>
+<span class="gi">+        args_as_list = list(args)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        args_as_list = []</span>
+<span class="gi">+        for input_abi in inputs:</span>
+<span class="gi">+            if input_abi[&#39;name&#39;] not in args:</span>
+<span class="gi">+                raise TypeError(</span>
+<span class="gi">+                    &quot;Function {} missing argument: {}&quot;.format(</span>
+<span class="gi">+                        abi.get(&#39;name&#39;, &#39;[fallback]&#39;),</span>
+<span class="gi">+                        input_abi[&#39;name&#39;]</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                )</span>
+<span class="gi">+            args_as_list.append(args[input_abi[&#39;name&#39;]])</span>
+<span class="gi">+</span>
+<span class="gi">+    for i, input_abi in enumerate(inputs):</span>
+<span class="gi">+        if i &lt; len(args_as_list):</span>
+<span class="gi">+            args_as_list[i] = _align_abi_input(input_abi, args_as_list[i])</span>
+<span class="gi">+</span>
+<span class="gi">+    return input_types, tuple(args_as_list)</span>
+<span class="w"> </span>DYNAMIC_TYPES = [&#39;bytes&#39;, &#39;string&#39;]
+<span class="w"> </span>INT_SIZES = range(8, 257, 8)
+<span class="w"> </span>BYTES_SIZES = range(1, 33)
+<span class="gu">@@ -110,16 +237,104 @@ BASE_TYPE_REGEX = &#39;|&#39;.join((_type + &#39;(?![a-z0-9])&#39; for _type in itertools.chain(</span>
+<span class="w"> </span>SUB_TYPE_REGEX = &#39;\\[[0-9]*\\]&#39;
+<span class="w"> </span>TYPE_REGEX = &#39;^(?:{base_type})(?:(?:{sub_type})*)?$&#39;.format(base_type=BASE_TYPE_REGEX, sub_type=SUB_TYPE_REGEX)
+
+<span class="gi">+def is_recognized_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is a recognized type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return bool(re.match(TYPE_REGEX, abi_type))</span>
+<span class="gi">+</span>
+<span class="gi">+def is_array_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is an array type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return bool(re.match(ARRAY_REGEX, abi_type))</span>
+<span class="gi">+</span>
+<span class="gi">+def sub_type_of_array_type(abi_type: TypeStr) -&gt; TypeStr:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns the type of the array elements.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if not is_array_type(abi_type):</span>
+<span class="gi">+        raise ValueError(f&quot;Not an array type: {abi_type}&quot;)</span>
+<span class="gi">+    return re.sub(END_BRACKETS_OF_ARRAY_TYPE_REGEX, &#39;&#39;, abi_type)</span>
+<span class="gi">+</span>
+<span class="gi">+def is_bool_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is a boolean type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return abi_type == &#39;bool&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+def is_int_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is a signed integer type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return abi_type.startswith(&#39;int&#39;) and not abi_type.startswith(&#39;uint&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+def is_uint_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is an unsigned integer type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return abi_type.startswith(&#39;uint&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+def is_address_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is an address type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return abi_type == &#39;address&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+def is_bytes_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is a bytes type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return abi_type == &#39;bytes&#39; or abi_type.startswith(&#39;bytes&#39;) and re.match(&#39;^bytes[0-9]+$&#39;, abi_type)</span>
+<span class="gi">+</span>
+<span class="gi">+def is_string_type(abi_type: TypeStr) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Returns True if the ABI type is a string type, False otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return abi_type == &#39;string&#39;</span>
+<span class="gi">+</span>
+<span class="w"> </span>def size_of_type(abi_type: TypeStr) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns size in bits of abi_type
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not is_recognized_type(abi_type):</span>
+<span class="gi">+        raise ValueError(f&quot;Unrecognized abi_type: {abi_type}&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if is_array_type(abi_type):</span>
+<span class="gi">+        sub_type = sub_type_of_array_type(abi_type)</span>
+<span class="gi">+        return size_of_type(sub_type)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if abi_type == &#39;bool&#39;:</span>
+<span class="gi">+        return 8</span>
+<span class="gi">+    elif abi_type == &#39;address&#39;:</span>
+<span class="gi">+        return 160</span>
+<span class="gi">+    elif abi_type.startswith(&#39;bytes&#39;):</span>
+<span class="gi">+        if abi_type == &#39;bytes&#39;:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        return int(abi_type[5:]) * 8</span>
+<span class="gi">+    elif abi_type.startswith(&#39;uint&#39;):</span>
+<span class="gi">+        return int(abi_type[4:])</span>
+<span class="gi">+    elif abi_type.startswith(&#39;int&#39;):</span>
+<span class="gi">+        return int(abi_type[3:])</span>
+<span class="gi">+    elif abi_type == &#39;string&#39;:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    </span>
+<span class="gi">+    raise ValueError(f&quot;Unsupported abi_type: {abi_type}&quot;)</span>
+<span class="w"> </span>END_BRACKETS_OF_ARRAY_TYPE_REGEX = &#39;\\[[^]]*\\]$&#39;
+<span class="w"> </span>ARRAY_REGEX = &#39;^[a-zA-Z0-9_]+({sub_type})+$&#39;.format(sub_type=SUB_TYPE_REGEX)
+<span class="w"> </span>NAME_REGEX = &#39;[a-zA-Z_][a-zA-Z0-9_]*&#39;
+<span class="w"> </span>ENUM_REGEX = &#39;^{lib_name}\\.{enum_name}$&#39;.format(lib_name=NAME_REGEX, enum_name=NAME_REGEX)
+
+<span class="gi">+def _get_data(data_tree: Any) -&gt; Any:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Extract data values from an ABITypedData tree.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(data_tree, ABITypedData):</span>
+<span class="gi">+        return _get_data(data_tree.data)</span>
+<span class="gi">+    elif isinstance(data_tree, (list, tuple)):</span>
+<span class="gi">+        return type(data_tree)(_get_data(item) for item in data_tree)</span>
+<span class="gi">+    return data_tree</span>
+<span class="gi">+</span>
+<span class="w"> </span>@curry
+<span class="w"> </span>def map_abi_data(normalizers: Sequence[Callable[[TypeStr, Any], Tuple[TypeStr, Any]]], types: Sequence[TypeStr], data: Sequence[Any]) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -144,7 +359,13 @@ def map_abi_data(normalizers: Sequence[Callable[[TypeStr, Any], Tuple[TypeStr, A</span>
+<span class="w"> </span>    2. Recursively mapping each of the normalizers to the data
+<span class="w"> </span>    3. Stripping the types back out of the tree
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    pipeline = itertools.chain(</span>
+<span class="gi">+        [abi_data_tree(types)],</span>
+<span class="gi">+        map(data_tree_map, normalizers),</span>
+<span class="gi">+        [lambda tree: _get_data(tree)],</span>
+<span class="gi">+    )</span>
+<span class="gi">+</span>
+<span class="gi">+    return pipe(data, *pipeline)</span>
+
+<span class="w"> </span>@curry
+<span class="w"> </span>def abi_data_tree(types: Sequence[TypeStr], data: Sequence[Any]) -&gt; List[Any]:
+<span class="gu">@@ -157,7 +378,27 @@ def abi_data_tree(types: Sequence[TypeStr], data: Sequence[Any]) -&gt; List[Any]:</span>
+<span class="w"> </span>    &gt;&gt;&gt; abi_data_tree(types=[&quot;bool[2]&quot;, &quot;uint&quot;], data=[[True, False], 0])
+<span class="w"> </span>    [(&quot;bool[2]&quot;, [(&quot;bool&quot;, True), (&quot;bool&quot;, False)]), (&quot;uint256&quot;, 0)]
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if len(types) != len(data):</span>
+<span class="gi">+        raise ValueError(</span>
+<span class="gi">+            &quot;Length mismatch between types and data: got {0} types and {1} data items&quot;.format(</span>
+<span class="gi">+                len(types), len(data)</span>
+<span class="gi">+            )</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+    results = []</span>
+<span class="gi">+</span>
+<span class="gi">+    for data_type, data_value in zip(types, data):</span>
+<span class="gi">+        if is_array_type(data_type):</span>
+<span class="gi">+            item_type = sub_type_of_array_type(data_type)</span>
+<span class="gi">+            value_type = [</span>
+<span class="gi">+                abi_data_tree([item_type], [item])[0]</span>
+<span class="gi">+                for item in data_value</span>
+<span class="gi">+            ]</span>
+<span class="gi">+            results.append(ABITypedData([data_type, value_type]))</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            results.append(ABITypedData([data_type, data_value]))</span>
+<span class="gi">+</span>
+<span class="gi">+    return results</span>
+
+<span class="w"> </span>@curry
+<span class="w"> </span>def data_tree_map(func: Callable[[TypeStr, Any], Tuple[TypeStr, Any]], data_tree: Any) -&gt; &#39;ABITypedData&#39;:
+<span class="gu">@@ -165,7 +406,21 @@ def data_tree_map(func: Callable[[TypeStr, Any], Tuple[TypeStr, Any]], data_tree</span>
+<span class="w"> </span>    Map func to every ABITypedData element in the tree. func will
+<span class="w"> </span>    receive two args: abi_type, and data
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(data_tree, ABITypedData):</span>
+<span class="gi">+        abi_type, data = data_tree</span>
+<span class="gi">+        if is_array_type(abi_type):</span>
+<span class="gi">+            item_type = sub_type_of_array_type(abi_type)</span>
+<span class="gi">+            value_type = [</span>
+<span class="gi">+                data_tree_map(func, item)</span>
+<span class="gi">+                for item in data</span>
+<span class="gi">+            ]</span>
+<span class="gi">+            return ABITypedData(func(abi_type, value_type))</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return ABITypedData(func(abi_type, data))</span>
+<span class="gi">+    elif isinstance(data_tree, (list, tuple)):</span>
+<span class="gi">+        return type(data_tree)(data_tree_map(func, item) for item in data_tree)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return data_tree</span>
+
+<span class="w"> </span>class ABITypedData(namedtuple(&#39;ABITypedData&#39;, &#39;abi_type, data&#39;)):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -193,7 +448,15 @@ def named_tree(abi: Iterable[Union[ABIFunctionParams, ABIFunction, ABIEvent, Dic</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Convert function inputs/outputs or event data tuple to dict with names from ABI.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    names = [item[&#39;name&#39;] for item in abi]</span>
+<span class="gi">+    items_with_name = [</span>
+<span class="gi">+        (name, data_item)</span>
+<span class="gi">+        for name, data_item</span>
+<span class="gi">+        in zip(names, data)</span>
+<span class="gi">+        if name</span>
+<span class="gi">+    ]</span>
+<span class="gi">+</span>
+<span class="gi">+    return dict(items_with_name)</span>
+
+<span class="w"> </span>async def async_data_tree_map(async_w3: &#39;AsyncWeb3&#39;, func: Callable[[&#39;AsyncWeb3&#39;, TypeStr, Any], Coroutine[Any, Any, Tuple[TypeStr, Any]]], data_tree: Any) -&gt; &#39;ABITypedData&#39;:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -202,7 +465,24 @@ async def async_data_tree_map(async_w3: &#39;AsyncWeb3&#39;, func: Callable[[&#39;AsyncWeb3&#39;</span>
+<span class="w"> </span>    The awaitable method should receive three positional args:
+<span class="w"> </span>        async_w3, abi_type, and data
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(data_tree, ABITypedData):</span>
+<span class="gi">+        abi_type, data = data_tree</span>
+<span class="gi">+        if is_array_type(abi_type):</span>
+<span class="gi">+            item_type = sub_type_of_array_type(abi_type)</span>
+<span class="gi">+            value_type = [</span>
+<span class="gi">+                await async_data_tree_map(async_w3, func, item)</span>
+<span class="gi">+                for item in data</span>
+<span class="gi">+            ]</span>
+<span class="gi">+            return ABITypedData(await func(async_w3, abi_type, value_type))</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return ABITypedData(await func(async_w3, abi_type, data))</span>
+<span class="gi">+    elif isinstance(data_tree, (list, tuple)):</span>
+<span class="gi">+        return type(data_tree)(</span>
+<span class="gi">+            await async_data_tree_map(async_w3, func, item)</span>
+<span class="gi">+            for item in data_tree</span>
+<span class="gi">+        )</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return data_tree</span>
+
+<span class="w"> </span>@reject_recursive_repeats
+<span class="w"> </span>async def async_recursive_map(async_w3: &#39;AsyncWeb3&#39;, func: Callable[[Any], Coroutine[Any, Any, TReturn]], data: Any) -&gt; TReturn:
+<span class="gu">@@ -213,11 +493,31 @@ async def async_recursive_map(async_w3: &#39;AsyncWeb3&#39;, func: Callable[[Any], Corou</span>
+<span class="w"> </span>    Define the awaitable method so that it only applies to the type of value that you
+<span class="w"> </span>    want it to apply to.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = await func(data)</span>
+<span class="gi">+    return await async_map_if_collection(</span>
+<span class="gi">+        lambda item: async_recursive_map(async_w3, func, item),</span>
+<span class="gi">+        result</span>
+<span class="gi">+    )</span>
+
+<span class="w"> </span>async def async_map_if_collection(func: Callable[[Any], Coroutine[Any, Any, Any]], value: Any) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Apply an awaitable method to each element of a collection or value of a dictionary.
+<span class="w"> </span>    If the value is not a collection, return it unmodified.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if isinstance(value, dict):</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            key: await async_map_if_collection(func, item)</span>
+<span class="gi">+            for key, item in value.items()</span>
+<span class="gi">+        }</span>
+<span class="gi">+    elif isinstance(value, (list, tuple)):</span>
+<span class="gi">+        return type(value)(</span>
+<span class="gi">+            await async_map_if_collection(func, item)</span>
+<span class="gi">+            for item in value</span>
+<span class="gi">+        )</span>
+<span class="gi">+    elif isinstance(value, abc.Collection) and not isinstance(value, (str, bytes)):</span>
+<span class="gi">+        return type(value)(</span>
+<span class="gi">+            await async_map_if_collection(func, item)</span>
+<span class="gi">+            for item in value</span>
+<span class="gi">+        )</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return value</span>
+\ No newline at end of file
+<span class="gh">diff --git a/web3/_utils/encoding.py b/web3/_utils/encoding.py</span>
+<span class="gh">index f97c64a8..b606c091 100644</span>
+<span class="gd">--- a/web3/_utils/encoding.py</span>
+<span class="gi">+++ b/web3/_utils/encoding.py</span>
+<span class="gu">@@ -14,25 +14,65 @@ def hex_encode_abi_type(abi_type: TypeStr, value: Any, force_size: Optional[int]</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Encodes value into a hex string in format of abi_type
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    validate_abi_type(abi_type)</span>
+<span class="gi">+    validate_abi_value(abi_type, value)</span>
+<span class="gi">+</span>
+<span class="gi">+    data_size = force_size or size_of_type(abi_type)</span>
+<span class="gi">+    if is_array_type(abi_type):</span>
+<span class="gi">+        sub_type = sub_type_of_array_type(abi_type)</span>
+<span class="gi">+        return HexStr(&#39;&#39;.join(</span>
+<span class="gi">+            remove_0x_prefix(hex_encode_abi_type(sub_type, v, force_size))</span>
+<span class="gi">+            for v in value</span>
+<span class="gi">+        ))</span>
+<span class="gi">+    elif is_bool_type(abi_type):</span>
+<span class="gi">+        return to_hex_with_size(value, data_size)</span>
+<span class="gi">+    elif is_uint_type(abi_type):</span>
+<span class="gi">+        return to_hex_with_size(value, data_size)</span>
+<span class="gi">+    elif is_int_type(abi_type):</span>
+<span class="gi">+        return to_hex_twos_compliment(value, data_size)</span>
+<span class="gi">+    elif is_address_type(abi_type):</span>
+<span class="gi">+        return pad_hex(value, data_size)</span>
+<span class="gi">+    elif is_bytes_type(abi_type):</span>
+<span class="gi">+        if is_bytes(value):</span>
+<span class="gi">+            return encode_hex(value)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return value</span>
+<span class="gi">+    elif is_string_type(abi_type):</span>
+<span class="gi">+        return encode_hex(text_if_str(to_bytes, value))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise ValueError(f&quot;Unsupported ABI type: {abi_type}&quot;)</span>
+
+<span class="w"> </span>def to_hex_twos_compliment(value: Any, bit_size: int) -&gt; HexStr:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Converts integer value to twos compliment hex representation with given bit_size
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if value &gt;= 0:</span>
+<span class="gi">+        return to_hex_with_size(value, bit_size)</span>
+<span class="gi">+</span>
+<span class="gi">+    value = (1 &lt;&lt; bit_size) + value</span>
+<span class="gi">+    hex_value = hex(value)[2:]</span>
+<span class="gi">+    hex_size = bit_size // 4</span>
+<span class="gi">+</span>
+<span class="gi">+    return add_0x_prefix(hex_value.zfill(hex_size))</span>
+
+<span class="w"> </span>def to_hex_with_size(value: Any, bit_size: int) -&gt; HexStr:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Converts a value to hex with given bit_size:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not is_list_like(value):</span>
+<span class="gi">+        value = [value]</span>
+<span class="gi">+</span>
+<span class="gi">+    hex_value = encode_hex(value[0])[2:]</span>
+<span class="gi">+    hex_size = bit_size // 4</span>
+<span class="gi">+</span>
+<span class="gi">+    return add_0x_prefix(hex_value.zfill(hex_size))</span>
+
+<span class="w"> </span>def pad_hex(value: Any, bit_size: int) -&gt; HexStr:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Pads a hex string up to the given bit_size
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    value = remove_0x_prefix(HexStr(value))</span>
+<span class="gi">+    return add_0x_prefix(value.zfill(bit_size // 4))</span>
+<span class="w"> </span>zpad_bytes = pad_bytes(b&#39;\x00&#39;)
+
+<span class="w"> </span>@curry
+<span class="gu">@@ -44,7 +84,14 @@ def text_if_str(to_type: Callable[..., str], text_or_primitive: Union[Primitives</span>
+<span class="w"> </span>        text=text), eg~ to_bytes, to_text, to_hex, to_int, etc
+<span class="w"> </span>    @param text_or_primitive in bytes, str, or int.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(text_or_primitive, (bytes, int, bool)):</span>
+<span class="gi">+        return to_type(text_or_primitive)</span>
+<span class="gi">+    elif isinstance(text_or_primitive, str):</span>
+<span class="gi">+        return to_type(text_or_primitive, text=text_or_primitive)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(</span>
+<span class="gi">+            &quot;Expected string, bytes, int, or bool. Got {}&quot;.format(type(text_or_primitive))</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>@curry
+<span class="w"> </span>def hexstr_if_str(to_type: Callable[..., HexStr], hexstr_or_primitive: Union[Primitives, HexStr, str]) -&gt; HexStr:
+<span class="gu">@@ -55,7 +102,20 @@ def hexstr_if_str(to_type: Callable[..., HexStr], hexstr_or_primitive: Union[Pri</span>
+<span class="w"> </span>        text=text), eg~ to_bytes, to_text, to_hex, to_int, etc
+<span class="w"> </span>    @param hexstr_or_primitive in bytes, str, or int.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(hexstr_or_primitive, (bytes, int, bool)):</span>
+<span class="gi">+        return to_type(hexstr_or_primitive)</span>
+<span class="gi">+    elif isinstance(hexstr_or_primitive, str):</span>
+<span class="gi">+        if is_hex(hexstr_or_primitive):</span>
+<span class="gi">+            return to_type(hexstr_or_primitive, hexstr=hexstr_or_primitive)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(</span>
+<span class="gi">+                &quot;When the type is &#39;hexstr&#39; the value must be a valid hex string. &quot;</span>
+<span class="gi">+                &quot;Got: {}&quot;.format(hexstr_or_primitive)</span>
+<span class="gi">+            )</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(</span>
+<span class="gi">+            &quot;Expected string, bytes, int, or bool. Got {}&quot;.format(type(hexstr_or_primitive))</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>class FriendlyJsonSerde:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -65,15 +125,48 @@ class FriendlyJsonSerde:</span>
+<span class="w"> </span>    information on which fields failed, to show more
+<span class="w"> </span>    helpful information in the raised error messages.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gi">+    def _json_mapping_errors(self, mapping: Dict[Any, Any], field_path: str=&#39;&#39;) -&gt; Iterable[str]:</span>
+<span class="gi">+        for key, val in mapping.items():</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                json.dumps(key)</span>
+<span class="gi">+                json.dumps(val)</span>
+<span class="gi">+            except TypeError as exc:</span>
+<span class="gi">+                field_name = field_path + str(key)</span>
+<span class="gi">+                yield f&quot;{field_name}: {exc}&quot;</span>
+<span class="gi">+                if isinstance(val, dict):</span>
+<span class="gi">+                    yield from self._json_mapping_errors(val, field_name + &#39;.&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def json_decode(self, json_str: str) -&gt; Dict[Any, Any]:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            decoded = json.loads(json_str)</span>
+<span class="gi">+        except json.decoder.JSONDecodeError as exc:</span>
+<span class="gi">+            raise ValueError(f&quot;Could not decode json: {exc}&quot;)</span>
+<span class="gi">+        return decoded</span>
+<span class="gi">+</span>
+<span class="gi">+    def json_encode(self, value: Dict[Any, Any], cls: Optional[Type[json.JSONEncoder]]=None) -&gt; str:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return json.dumps(value, cls=cls)</span>
+<span class="gi">+        except TypeError as exc:</span>
+<span class="gi">+            if json.dumps([]) == &#39;[]&#39;:</span>
+<span class="gi">+                # TypeError not caused by json module, let it bubble up</span>
+<span class="gi">+                raise</span>
+<span class="gi">+            # Get information about which fields failed</span>
+<span class="gi">+            mapping_errors = &#39;\n&#39;.join(self._json_mapping_errors(value))</span>
+<span class="gi">+            raise TypeError(f&quot;Could not encode to JSON: {exc}\nMapping errors: {mapping_errors}&quot;)</span>
+
+<span class="w"> </span>class DynamicArrayPackedEncoder(BaseArrayEncoder):
+<span class="w"> </span>    is_dynamic = True
+
+<span class="w"> </span>class Web3JsonEncoder(json.JSONEncoder):
+<span class="gd">-    pass</span>
+<span class="gi">+    def default(self, obj: Any) -&gt; Any:</span>
+<span class="gi">+        if isinstance(obj, AttributeDict):</span>
+<span class="gi">+            return {key: value for key, value in obj.items()}</span>
+<span class="gi">+        if isinstance(obj, HexBytes):</span>
+<span class="gi">+            return obj.hex()</span>
+<span class="gi">+        return json.JSONEncoder.default(self, obj)</span>
+
+<span class="w"> </span>def to_json(obj: Dict[Any, Any]) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Convert a complex object (like a transaction object) to a JSON string
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    return FriendlyJsonSerde().json_encode(obj, cls=Web3JsonEncoder)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/web3/_utils/ens.py b/web3/_utils/ens.py</span>
+<span class="gh">index e3e1b590..2eb47f7f 100644</span>
+<span class="gd">--- a/web3/_utils/ens.py</span>
+<span class="gi">+++ b/web3/_utils/ens.py</span>
+<span class="gu">@@ -4,6 +4,8 @@ from eth_typing import ChecksumAddress</span>
+<span class="w"> </span>from eth_utils import is_0x_prefixed, is_hex, is_hex_address
+<span class="w"> </span>from ens import ENS, AsyncENS
+<span class="w"> </span>from web3.exceptions import NameNotFound
+<span class="gi">+</span>
+<span class="gi">+from web3._utils.validation_utils import is_ens_name</span>
+<span class="w"> </span>if TYPE_CHECKING:
+<span class="w"> </span>    from web3 import AsyncWeb3, Web3
+<span class="w"> </span>    from web3.contract import Contract
+<span class="gu">@@ -22,4 +24,9 @@ def contract_ens_addresses(contract: &#39;Contract&#39;, name_addr_pairs: Dict[str, Chec</span>
+<span class="w"> </span>    with contract_ens_addresses(mycontract, [(&#39;resolve-as-1s.eth&#39;, &#39;0x111...111&#39;)]):
+<span class="w"> </span>        # any contract call or transaction in here would only resolve the above ENS pair
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    tmp_ens = contract.w3.ens</span>
+<span class="gi">+    contract.w3.ens = StaticENS(name_addr_pairs)</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        yield</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        contract.w3.ens = tmp_ens</span>
+\ No newline at end of file
+<span class="gh">diff --git a/web3/_utils/module_testing/eth_module.py b/web3/_utils/module_testing/eth_module.py</span>
+<span class="gh">index 0b041341..35428d59 100644</span>
+<span class="gd">--- a/web3/_utils/module_testing/eth_module.py</span>
+<span class="gi">+++ b/web3/_utils/module_testing/eth_module.py</span>
+<span class="gu">@@ -10,7 +10,7 @@ from eth_utils import is_boolean, is_bytes, is_checksum_address, is_dict, is_int</span>
+<span class="w"> </span>from eth_utils.toolz import assoc
+<span class="w"> </span>from hexbytes import HexBytes
+<span class="w"> </span>from web3._utils.empty import empty
+<span class="gd">-from web3._utils.ens import ens_addresses</span>
+<span class="gi">+from web3._utils.validation_utils import ens_addresses</span>
+<span class="w"> </span>from web3._utils.error_formatters_utils import PANIC_ERROR_CODES
+<span class="w"> </span>from web3._utils.method_formatters import to_hex_if_integer
+<span class="w"> </span>from web3._utils.module_testing.module_testing_utils import assert_contains_log, async_mock_offchain_lookup_request_response, flaky_geth_dev_mining, mock_offchain_lookup_request_response
+<span class="gh">diff --git a/web3/_utils/module_testing/web3_module.py b/web3/_utils/module_testing/web3_module.py</span>
+<span class="gh">index 84870805..bb096fb7 100644</span>
+<span class="gd">--- a/web3/_utils/module_testing/web3_module.py</span>
+<span class="gi">+++ b/web3/_utils/module_testing/web3_module.py</span>
+<span class="gu">@@ -3,7 +3,7 @@ from typing import Any, NoReturn, Sequence, Union</span>
+<span class="w"> </span>from eth_typing import ChecksumAddress, HexAddress, HexStr, TypeStr
+<span class="w"> </span>from hexbytes import HexBytes
+<span class="w"> </span>from web3 import AsyncWeb3, Web3
+<span class="gd">-from web3._utils.ens import ens_addresses</span>
+<span class="gi">+from web3._utils.validation_utils import ens_addresses</span>
+<span class="w"> </span>from web3.exceptions import InvalidAddress
+
+<span class="w"> </span>class Web3ModuleTest:
+<span class="gh">diff --git a/web3/_utils/normalizers.py b/web3/_utils/normalizers.py</span>
+<span class="gh">index 86db09e5..7758abaf 100644</span>
+<span class="gd">--- a/web3/_utils/normalizers.py</span>
+<span class="gi">+++ b/web3/_utils/normalizers.py</span>
+<span class="gu">@@ -11,7 +11,8 @@ from eth_utils.toolz import curry</span>
+<span class="w"> </span>from hexbytes import HexBytes
+<span class="w"> </span>from ens import ENS, AsyncENS
+<span class="w"> </span>from web3._utils.encoding import hexstr_if_str, text_if_str
+<span class="gd">-from web3._utils.ens import StaticENS, async_validate_name_has_address, is_ens_name, validate_name_has_address</span>
+<span class="gi">+from web3._utils.validation_utils import is_ens_name</span>
+<span class="gi">+from web3._utils.ens import StaticENS</span>
+<span class="w"> </span>from web3._utils.validation import validate_abi, validate_address
+<span class="w"> </span>from web3.exceptions import InvalidAddress, NameNotFound
+<span class="w"> </span>from web3.types import ABI
+<span class="gh">diff --git a/web3/_utils/validation.py b/web3/_utils/validation.py</span>
+<span class="gh">index ed960605..a4967ea4 100644</span>
+<span class="gd">--- a/web3/_utils/validation.py</span>
+<span class="gi">+++ b/web3/_utils/validation.py</span>
+<span class="gu">@@ -10,27 +10,121 @@ from web3._utils.abi import abi_to_signature, filter_by_type, is_address_type, i</span>
+<span class="w"> </span>from web3.exceptions import InvalidAddress
+<span class="w"> </span>from web3.types import ABI, ABIFunction
+
+<span class="gi">+def validate_abi_item(abi_item: Dict[str, Any]) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Helper function for validating an ABI item</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if &#39;type&#39; not in abi_item:</span>
+<span class="gi">+        raise ValueError(&quot;&#39;type&#39; is required in the ABI item&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    abi_type = abi_item[&#39;type&#39;]</span>
+<span class="gi">+    if abi_type not in (&#39;function&#39;, &#39;constructor&#39;, &#39;event&#39;, &#39;fallback&#39;, &#39;receive&#39;):</span>
+<span class="gi">+        raise ValueError(f&quot;&#39;type&#39; must be one of &#39;function&#39;, &#39;constructor&#39;, &#39;event&#39;, &#39;fallback&#39;, or &#39;receive&#39;. Got {abi_type}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if abi_type != &#39;fallback&#39; and abi_type != &#39;receive&#39;:</span>
+<span class="gi">+        if &#39;inputs&#39; not in abi_item:</span>
+<span class="gi">+            raise ValueError(&quot;&#39;inputs&#39; is required in the ABI item&quot;)</span>
+<span class="gi">+        if not is_list_like(abi_item[&#39;inputs&#39;]):</span>
+<span class="gi">+            raise ValueError(&quot;&#39;inputs&#39; must be a list&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        for input_item in abi_item[&#39;inputs&#39;]:</span>
+<span class="gi">+            validate_abi_input_output(input_item)</span>
+<span class="gi">+</span>
+<span class="gi">+        if abi_type in (&#39;function&#39;, &#39;constructor&#39;):</span>
+<span class="gi">+            if &#39;outputs&#39; not in abi_item:</span>
+<span class="gi">+                raise ValueError(&quot;&#39;outputs&#39; is required in the ABI item&quot;)</span>
+<span class="gi">+            if not is_list_like(abi_item[&#39;outputs&#39;]):</span>
+<span class="gi">+                raise ValueError(&quot;&#39;outputs&#39; must be a list&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+            for output_item in abi_item[&#39;outputs&#39;]:</span>
+<span class="gi">+                validate_abi_input_output(output_item)</span>
+<span class="gi">+</span>
+<span class="gi">+def validate_abi_input_output(item: Dict[str, Any]) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Helper function for validating an ABI input or output item</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if &#39;type&#39; not in item:</span>
+<span class="gi">+        raise ValueError(&quot;&#39;type&#39; is required in the ABI input/output item&quot;)</span>
+<span class="gi">+    validate_abi_type(item[&#39;type&#39;])</span>
+<span class="gi">+</span>
+<span class="w"> </span>def validate_abi(abi: ABI) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Helper function for validating an ABI
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not is_list_like(abi):</span>
+<span class="gi">+        raise ValueError(&quot;&#39;abi&#39; is not a list&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    for abi_item in abi:</span>
+<span class="gi">+        if not is_dict(abi_item):</span>
+<span class="gi">+            raise ValueError(&quot;The elements of &#39;abi&#39; are not all dictionaries&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        validate_abi_item(abi_item)</span>
+
+<span class="w"> </span>def validate_abi_type(abi_type: TypeStr) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Helper function for validating an abi_type
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not is_recognized_type(abi_type):</span>
+<span class="gi">+        raise ValueError(f&quot;&#39;{abi_type}&#39; is not a recognized type&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_array_type(abi_type):</span>
+<span class="gi">+        validate_abi_type(sub_type_of_array_type(abi_type))</span>
+
+<span class="w"> </span>def validate_abi_value(abi_type: TypeStr, value: Any) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Helper function for validating a value against the expected abi_type
+<span class="w"> </span>    Note: abi_type &#39;bytes&#39; must either be python3 &#39;bytes&#39; object or &#39;&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if is_array_type(abi_type) and not is_list_like(value):</span>
+<span class="gi">+        raise TypeError(f&quot;Value must be list-like for array type: {abi_type}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_array_type(abi_type):</span>
+<span class="gi">+        sub_type = sub_type_of_array_type(abi_type)</span>
+<span class="gi">+        for v in value:</span>
+<span class="gi">+            validate_abi_value(sub_type, v)</span>
+<span class="gi">+        return</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_bool_type(abi_type) and not is_boolean(value):</span>
+<span class="gi">+        raise TypeError(f&quot;Value must be boolean for type: {abi_type}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    elif is_uint_type(abi_type) or is_int_type(abi_type):</span>
+<span class="gi">+        if not is_integer(value):</span>
+<span class="gi">+            raise TypeError(f&quot;Value must be integer for type: {abi_type}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    elif is_address_type(abi_type):</span>
+<span class="gi">+        validate_address(value)</span>
+<span class="gi">+</span>
+<span class="gi">+    elif is_bytes_type(abi_type):</span>
+<span class="gi">+        if not is_bytes(value) and not is_string(value):</span>
+<span class="gi">+            raise TypeError(f&quot;Value must be bytes or string for type: {abi_type}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    elif is_string_type(abi_type) and not is_string(value):</span>
+<span class="gi">+        raise TypeError(f&quot;Value must be string for type: {abi_type}&quot;)</span>
+
+<span class="w"> </span>def validate_address(value: Any) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Helper function for validating an address
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if not is_address(value):</span>
+<span class="gi">+        raise InvalidAddress(&quot;Value must be a valid address, zero-padded to 20 bytes&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+def is_address(value: Any) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Helper function for checking if a value is a valid address</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if not is_string(value):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_binary_address(value):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_hex_address(value):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_checksum_address(value):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    if is_valid_ens_name(value):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    return False</span>
+\ No newline at end of file
+<span class="gh">diff --git a/web3/_utils/validation_utils.py b/web3/_utils/validation_utils.py</span>
+new file mode 100644
+<span class="gh">index 00000000..a7255c67</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/web3/_utils/validation_utils.py</span>
+<span class="gu">@@ -0,0 +1,22 @@</span>
+<span class="gi">+from typing import Any</span>
+<span class="gi">+from eth_utils import is_0x_prefixed, is_hex_address</span>
+<span class="gi">+</span>
+<span class="gi">+def is_ens_name(value: Any) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    Check if the given value is a valid ENS name.</span>
+<span class="gi">+    </span>
+<span class="gi">+    A valid ENS name:</span>
+<span class="gi">+    - Is a string</span>
+<span class="gi">+    - Contains at least one dot (.)</span>
+<span class="gi">+    - Is not a hex address</span>
+<span class="gi">+    - Is not 0x-prefixed</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if not isinstance(value, str):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    if not &quot;.&quot; in value:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    if is_hex_address(value):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    if is_0x_prefixed(value):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    return True</span>
+\ No newline at end of file
+<span class="gh">diff --git a/web3/pm.py b/web3/pm.py</span>
+<span class="gh">index 26b403fa..9c17da87 100644</span>
+<span class="gd">--- a/web3/pm.py</span>
+<span class="gi">+++ b/web3/pm.py</span>
+<span class="gu">@@ -11,7 +11,7 @@ from ethpm.uri import is_supported_content_addressed_uri, resolve_uri_contents</span>
+<span class="w"> </span>from ethpm.validation.manifest import validate_manifest_against_schema, validate_raw_manifest_format
+<span class="w"> </span>from ethpm.validation.package import validate_package_name, validate_package_version
+<span class="w"> </span>from web3 import Web3
+<span class="gd">-from web3._utils.ens import is_ens_name</span>
+<span class="gi">+from web3._utils.validation_utils import is_ens_name</span>
+<span class="w"> </span>from web3.exceptions import InvalidAddress, NameNotFound
+<span class="w"> </span>from web3.module import Module
+<span class="w"> </span>T = TypeVar(&#39;T&#39;)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

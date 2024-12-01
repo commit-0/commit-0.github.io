@@ -1,0 +1,2356 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 lite with test fillin deprecated - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-unit-test-feedback-deprecated" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 lite with test fillin deprecated
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[None]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class5" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class6" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecatedpytest_should_raise_type_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated.py::test_should_raise_type_error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_classpytest_class_deprecation_using_deprecated_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_classpytest_class_respect_global_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_class.py::test_class_respect_global_filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_classpytest_subclass_deprecation_using_deprecated_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_classpytest_simple_class_deprecation_with_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_class.py::test_simple_class_deprecation_with_args
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_metaclasspytest_with_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_metaclass.py::test_with_init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_metaclasspytest_with_new" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_metaclass.py::test_with_new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_metaclasspytest_with_metaclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_metaclass.py::test_with_metaclass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_deprecated_metaclasspytest_with_singleton_metaclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_deprecated_metaclass.py::test_with_singleton_metaclass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringshort_docstring-deprecated-reasonversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&amp;version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringshort_docstring-deprecated-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringno_docstring-deprecated-reasonversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&amp;version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringno_docstring-deprecated-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringd213_long_docstring-deprecated-reasonversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-reason&amp;version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringd213_long_docstring-deprecated-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringd212_long_docstring-deprecated-reasonversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-reason&amp;version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_cls_has_sphinx_docstringd212_long_docstring-deprecated-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-version]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class0" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class0]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class1]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class3]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_get_deprecated_msguse-funcpkgmodbar-instead-use-pkgmodbar-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_get_deprecated_msg[Use :func:~pkg.mod.bar instead-Use ~pkg.mod.bar instead]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinxpytest_get_deprecated_msguse-drinstead-use-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx.py::test_get_deprecated_msg[Use :d:r:instead-Use instead]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_classpytest_class_deprecation_using_deprecated_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_class.py::test_class_deprecation_using_deprecated_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_classpytest_subclass_deprecation_using_deprecated_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_class.py::test_subclass_deprecation_using_deprecated_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_classpytest_isinstance_deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_class.py::test_isinstance_deprecated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_metaclasspytest_with_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_metaclass.py::test_with_init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_metaclasspytest_with_new" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_metaclass.py::test_with_new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_metaclasspytest_with_metaclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_metaclass.py::test_with_metaclass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_sphinx_metaclasspytest_with_singleton_metaclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_sphinx_metaclass.py::test_with_singleton_metaclass
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-lite-with-test_fillin">back to Claude Sonnet 3.5 - Fill-in + Unit Test Feedback summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-unit-test-feedback-deprecated"><strong>Claude Sonnet 3.5 - Fill-in + Unit Test Feedback</strong>: deprecated</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">134</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">37</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">171</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">171</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsnone">test_deprecated.py::test_classic_deprecated_class__warns[None]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[None]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class1">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class2">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class3">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class4">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class5">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_classic_deprecated_class__warnsclassic_deprecated_class6">test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6]</h3>
+<details><summary> <pre>test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6]</pre></summary><pre>
+classic_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+
+tests/test_deprecated.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecatedpytest_should_raise_type_error">test_deprecated.py::test_should_raise_type_error</h3>
+<details><summary> <pre>test_deprecated.py::test_should_raise_type_error</pre></summary><pre>
+def test_should_raise_type_error():
+        try:
+            deprecated.classic.deprecated(5)
+>           assert False, "TypeError not raised"
+E           AssertionError: TypeError not raised
+E           assert False
+
+tests/test_deprecated.py:198: AssertionError
+</pre>
+</details>
+<h3 id="test_deprecated_classpytest_class_deprecation_using_deprecated_decorator">test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator</h3>
+<details><summary> <pre>test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator</pre></summary><pre>
+def test_class_deprecation_using_deprecated_decorator():
+        @deprecated.classic.deprecated
+        class MyBaseClass(object):
+            pass
+
+        class MySubClass(MyBaseClass):
+            pass
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MySubClass()
+
+tests/test_deprecated_class.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_classpytest_class_respect_global_filter">test_deprecated_class.py::test_class_respect_global_filter</h3>
+<details><summary> <pre>test_deprecated_class.py::test_class_respect_global_filter</pre></summary><pre>
+def test_class_respect_global_filter():
+        @deprecated.classic.deprecated
+        class MyBaseClass(object):
+            pass
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("once")
+>           obj = MyBaseClass()
+
+tests/test_deprecated_class.py:116: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_classpytest_subclass_deprecation_using_deprecated_decorator">test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator</h3>
+<details><summary> <pre>test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator</pre></summary><pre>
+def test_subclass_deprecation_using_deprecated_decorator():
+        @deprecated.classic.deprecated
+        class MyBaseClass(object):
+            pass
+
+        @deprecated.classic.deprecated
+        class MySubClass(MyBaseClass):
+            pass
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MySubClass()
+
+tests/test_deprecated_class.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_classpytest_simple_class_deprecation_with_args">test_deprecated_class.py::test_simple_class_deprecation_with_args</h3>
+<details><summary> <pre>test_deprecated_class.py::test_simple_class_deprecation_with_args</pre></summary><pre>
+def test_simple_class_deprecation_with_args():
+        @deprecated.classic.deprecated(reason='kwargs class')
+        class MyClass(object):
+            def __init__(self, arg):
+                self.args = arg
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass(5)
+
+tests/test_deprecated_class.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_metaclasspytest_with_init">test_deprecated_metaclass.py::test_with_init</h3>
+<details><summary> <pre>test_deprecated_metaclass.py::test_with_init</pre></summary><pre>
+def test_with_init():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+
+tests/test_deprecated_metaclass.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_metaclasspytest_with_new">test_deprecated_metaclass.py::test_with_new</h3>
+<details><summary> <pre>test_deprecated_metaclass.py::test_with_new</pre></summary><pre>
+def test_with_new():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __new__(cls, a, b=5):
+                obj = super().__new__(cls)
+                obj.c = 3.14
+                return obj
+
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+
+tests/test_deprecated_metaclass.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_metaclasspytest_with_metaclass">test_deprecated_metaclass.py::test_with_metaclass</h3>
+<details><summary> <pre>test_deprecated_metaclass.py::test_with_metaclass</pre></summary><pre>
+def test_with_metaclass():
+        class Meta(type):
+            def __call__(cls, *args, **kwargs):
+                obj = super(Meta, cls).__call__(*args, **kwargs)
+                obj.c = 3.14
+                return obj
+
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Meta)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+
+tests/test_deprecated_metaclass.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_deprecated_metaclass.py:67: in __call__
+    obj = super(Meta, cls).__call__(*args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_deprecated_metaclasspytest_with_singleton_metaclass">test_deprecated_metaclass.py::test_with_singleton_metaclass</h3>
+<details><summary> <pre>test_deprecated_metaclass.py::test_with_singleton_metaclass</pre></summary><pre>
+def test_with_singleton_metaclass():
+        class Singleton(type):
+            _instances = {}
+
+            def __call__(cls, *args, **kwargs):
+                if cls not in cls._instances:
+                    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+                return cls._instances[cls]
+
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Singleton)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj1 = MyClass("five")
+
+tests/test_deprecated_metaclass.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_deprecated_metaclass.py:94: in __call__
+    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringshort_docstring-deprecated-reasonversion">test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&amp;version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&version]</pre></summary><pre>
+docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. deprecated:: 1.2.0\n   A good reason\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringshort_docstring-deprecated-version">test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-version]</pre></summary><pre>
+docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
+reason = None, version = '1.2.0', expected = '.. deprecated:: 1.2.0\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringno_docstring-deprecated-reasonversion">test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&amp;version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&version]</pre></summary><pre>
+docstring = None, directive = 'deprecated', reason = 'A good reason'
+version = '1.2.0', expected = '.. deprecated:: 1.2.0\n   A good reason\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringno_docstring-deprecated-version">test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-version]</pre></summary><pre>
+docstring = None, directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. deprecated:: 1.2.0\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringd213_long_docstring-deprecated-reasonversion">test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-reason&amp;version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-reason&version]</pre></summary><pre>
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
+expected = '.. deprecated:: 1.2.0\n   A good reason\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringd213_long_docstring-deprecated-version">test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-version]</pre></summary><pre>
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. deprecated:: 1.2.0\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringd212_long_docstring-deprecated-reasonversion">test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-reason&amp;version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-reason&version]</pre></summary><pre>
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
+expected = '.. deprecated:: 1.2.0\n   A good reason\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_cls_has_sphinx_docstringd212_long_docstring-deprecated-version">test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-version]</h3>
+<details><summary> <pre>test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-version]</pre></summary><pre>
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. deprecated:: 1.2.0\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+
+        # with docstring:
+        Foo.__doc__ = docstring
+
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+        Foo = decorator(Foo)
+
+        # The class must contain this Sphinx docstring:
+        expected = expected.format(directive=directive, version=version, reason=reason)
+
+>       current = textwrap.dedent(Foo.__doc__)
+
+tests/test_sphinx.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = None
+
+    def dedent(text):
+        """Remove any common leading whitespace from every line in `text`.
+
+        This can be used to make triple-quoted strings line up with the left
+        edge of the display, while still presenting them in the source code
+        in indented form.
+
+        Note that tabs and spaces are both treated as whitespace, but they
+        are not equal: the lines "  hello" and "\\thello" are
+        considered to have no common leading whitespace.
+
+        Entirely blank lines are normalized to a newline character.
+        """
+        # Look for the longest leading string of spaces and tabs common to
+        # all lines.
+        margin = None
+>       text = _whitespace_only_re.sub('', text)
+E       TypeError: expected string or bytes-like object
+
+/usr/lib/python3.10/textwrap.py:438: TypeError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class0">test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class0]</h3>
+<details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class0]</pre></summary><pre>
+sphinx_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_sphinx_deprecated_class__warns(sphinx_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           sphinx_deprecated_class()
+
+tests/test_sphinx.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class1">test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class1]</h3>
+<details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class1]</pre></summary><pre>
+sphinx_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_sphinx_deprecated_class__warns(sphinx_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           sphinx_deprecated_class()
+
+tests/test_sphinx.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class2">test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class2]</h3>
+<details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class2]</pre></summary><pre>
+sphinx_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_sphinx_deprecated_class__warns(sphinx_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           sphinx_deprecated_class()
+
+tests/test_sphinx.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinxpytest_sphinx_deprecated_class__warnssphinx_deprecated_class3">test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class3]</h3>
+<details><summary> <pre>test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class3]</pre></summary><pre>
+sphinx_deprecated_class = <class 'deprecated.classic.ClassicAdapter._decorate_class.<locals>.NewClass'>
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_sphinx_deprecated_class__warns(sphinx_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           sphinx_deprecated_class()
+
+tests/test_sphinx.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinxpytest_get_deprecated_msguse-funcpkgmodbar-instead-use-pkgmodbar-instead">test_sphinx.py::test_get_deprecated_msg[Use :func:<code>~pkg.mod.bar</code> instead-Use <code>~pkg.mod.bar</code> instead]</h3>
+<details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :func:`~pkg.mod.bar` instead-Use `~pkg.mod.bar` instead]</pre></summary><pre>
+reason = 'Use :func:`~pkg.mod.bar` instead'
+expected = 'Use `~pkg.mod.bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       AssertionError: assert 'Use `~pkg.mod.bar` instead' in 'Call to deprecated function (or staticmethod) <lambda>. (Use pkg.mod.bar` instead) -- Deprecated since version 1.'
+
+tests/test_sphinx.py:424: AssertionError
+</pre>
+</details>
+<h3 id="test_sphinxpytest_get_deprecated_msguse-drinstead-use-instead">test_sphinx.py::test_get_deprecated_msg[Use :d:r:<code>instead-Use</code> instead]</h3>
+<details><summary> <pre>test_sphinx.py::test_get_deprecated_msg[Use :d:r:`` instead-Use `` instead]</pre></summary><pre>
+reason = 'Use :d:r:`` instead', expected = 'Use `` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       AssertionError: assert 'Use `` instead' in 'Call to deprecated function (or staticmethod) <lambda>. (Use :d`` instead) -- Deprecated since version 1.'
+
+tests/test_sphinx.py:424: AssertionError
+</pre>
+</details>
+<h3 id="test_sphinx_classpytest_class_deprecation_using_deprecated_decorator">test_sphinx_class.py::test_class_deprecation_using_deprecated_decorator</h3>
+<details><summary> <pre>test_sphinx_class.py::test_class_deprecation_using_deprecated_decorator</pre></summary><pre>
+@pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_class_deprecation_using_deprecated_decorator():
+        @deprecated.sphinx.deprecated(version="7.8.9")
+        class MyBaseClass(object):
+            pass
+
+        class MySubClass(MyBaseClass):
+            pass
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MySubClass()
+
+tests/test_sphinx_class.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinx_classpytest_subclass_deprecation_using_deprecated_decorator">test_sphinx_class.py::test_subclass_deprecation_using_deprecated_decorator</h3>
+<details><summary> <pre>test_sphinx_class.py::test_subclass_deprecation_using_deprecated_decorator</pre></summary><pre>
+@pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_subclass_deprecation_using_deprecated_decorator():
+        @deprecated.sphinx.deprecated(version="7.8.9")
+        class MyBaseClass(object):
+            pass
+
+        @deprecated.sphinx.deprecated(version="7.8.9")
+        class MySubClass(MyBaseClass):
+            pass
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MySubClass()
+
+tests/test_sphinx_class.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinx_classpytest_isinstance_deprecated">test_sphinx_class.py::test_isinstance_deprecated</h3>
+<details><summary> <pre>test_sphinx_class.py::test_isinstance_deprecated</pre></summary><pre>
+@pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_isinstance_deprecated():
+        @deprecated.sphinx.deprecated(version="X.Y", reason="some reason")
+        class DeprecatedCls:
+            pass
+
+        @deprecated.sphinx.deprecated(version="Y.Z", reason="some reason")
+        class DeprecatedChildCls(DeprecatedCls):
+            pass
+
+>       instance = DeprecatedChildCls()
+
+tests/test_sphinx_class.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinx_metaclasspytest_with_init">test_sphinx_metaclass.py::test_with_init</h3>
+<details><summary> <pre>test_sphinx_metaclass.py::test_with_init</pre></summary><pre>
+def test_with_init():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+
+tests/test_sphinx_metaclass.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinx_metaclasspytest_with_new">test_sphinx_metaclass.py::test_with_new</h3>
+<details><summary> <pre>test_sphinx_metaclass.py::test_with_new</pre></summary><pre>
+def test_with_new():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __new__(cls, a, b=5):
+                obj = super(MyClass, cls).__new__(cls)
+                obj.c = 3.14
+                return obj
+
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+
+tests/test_sphinx_metaclass.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinx_metaclasspytest_with_metaclass">test_sphinx_metaclass.py::test_with_metaclass</h3>
+<details><summary> <pre>test_sphinx_metaclass.py::test_with_metaclass</pre></summary><pre>
+def test_with_metaclass():
+        class Meta(type):
+            def __call__(cls, *args, **kwargs):
+                obj = super(Meta, cls).__call__(*args, **kwargs)
+                obj.c = 3.14
+                return obj
+
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Meta)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+
+tests/test_sphinx_metaclass.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_sphinx_metaclass.py:67: in __call__
+    obj = super(Meta, cls).__call__(*args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+<h3 id="test_sphinx_metaclasspytest_with_singleton_metaclass">test_sphinx_metaclass.py::test_with_singleton_metaclass</h3>
+<details><summary> <pre>test_sphinx_metaclass.py::test_with_singleton_metaclass</pre></summary><pre>
+def test_with_singleton_metaclass():
+        class Singleton(type):
+            _instances = {}
+
+            def __call__(cls, *args, **kwargs):
+                if cls not in cls._instances:
+                    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+                return cls._instances[cls]
+
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Singleton)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj1 = MyClass("five")
+
+tests/test_sphinx_metaclass.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_sphinx_metaclass.py:94: in __call__
+    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+deprecated/classic.py:193: in __new__
+    return original_new(cls, *args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded
+!!! Recursion detected (same locals & position)
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/deprecated/classic.py b/deprecated/classic.py</span>
+<span class="gh">index fc9af25..c152a94 100644</span>
+<span class="gd">--- a/deprecated/classic.py</span>
+<span class="gi">+++ b/deprecated/classic.py</span>
+<span class="gu">@@ -9,6 +9,7 @@ Classic ``@deprecated`` decorator to deprecate old python classes, functions or</span>
+<span class="w"> </span>import functools
+<span class="w"> </span>import inspect
+<span class="w"> </span>import platform
+<span class="gi">+import types</span>
+<span class="w"> </span>import warnings
+<span class="w"> </span>import wrapt
+<span class="w"> </span>try:
+<span class="gu">@@ -75,8 +76,7 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+<span class="w"> </span>           return x + y
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gd">-    def __init__(self, reason=&#39;&#39;, version=&#39;&#39;, action=None, category=</span>
+<span class="gd">-        DeprecationWarning):</span>
+<span class="gi">+    def __init__(self, reason=&#39;&#39;, version=&#39;&#39;, action=None, category=DeprecationWarning):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Construct a wrapper adapter.
+
+<span class="gu">@@ -119,7 +119,36 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+
+<span class="w"> </span>        :return: The warning message.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if instance is None:</span>
+<span class="gi">+            if inspect.isclass(wrapped):</span>
+<span class="gi">+                fmt = &quot;Call to deprecated class {name}&quot;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                fmt = &quot;Call to deprecated function (or staticmethod) {name}&quot;</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if inspect.isclass(instance):</span>
+<span class="gi">+                fmt = &quot;Call to deprecated class method {name}&quot;</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                fmt = &quot;Call to deprecated method {name}&quot;</span>
+<span class="gi">+        fmt += &quot;.&quot;</span>
+<span class="gi">+        if self.reason:</span>
+<span class="gi">+            fmt += &quot; ({reason})&quot;</span>
+<span class="gi">+        if self.version:</span>
+<span class="gi">+            fmt += &quot; -- Deprecated since version {version}.&quot;</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Remove Sphinx syntax from reason</span>
+<span class="gi">+        reason = self.reason</span>
+<span class="gi">+        if reason:</span>
+<span class="gi">+            import re</span>
+<span class="gi">+            # Handle various Sphinx role syntaxes</span>
+<span class="gi">+            reason = re.sub(r&#39;:(?:[a-z]+:)?([a-z]+):`([^`]+)`&#39;, r&#39;`\2`&#39;, reason)</span>
+<span class="gi">+            # Handle edge cases like :r:`` and :d:r:``</span>
+<span class="gi">+            reason = re.sub(r&#39;:[a-z]+:`*`&#39;, &#39;``&#39;, reason)</span>
+<span class="gi">+            # Remove any remaining Sphinx directives</span>
+<span class="gi">+            reason = re.sub(r&#39;:[a-z]+:&#39;, &#39;&#39;, reason)</span>
+<span class="gi">+            # Handle special characters in references</span>
+<span class="gi">+            reason = re.sub(r&#39;`~&#39;, &#39;&#39;, reason)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return fmt.format(name=wrapped.__name__, reason=reason, version=self.version)</span>
+
+<span class="w"> </span>    def __call__(self, wrapped):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -136,23 +165,48 @@ class ClassicAdapter(wrapt.AdapterFactory):</span>
+<span class="w"> </span>           The warning filter is not set if the *action* parameter is ``None`` or empty.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        if inspect.isclass(wrapped):
+<span class="gd">-            old_new1 = wrapped.__new__</span>
+<span class="gd">-</span>
+<span class="gd">-            def wrapped_cls(cls, *args, **kwargs):</span>
+<span class="gd">-                msg = self.get_deprecated_msg(wrapped, None)</span>
+<span class="gi">+            return self._decorate_class(wrapped)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return self._decorate_function(wrapped)</span>
+<span class="gi">+</span>
+<span class="gi">+    def _decorate_class(self, cls):</span>
+<span class="gi">+        msg = self.get_deprecated_msg(cls, None)</span>
+<span class="gi">+        </span>
+<span class="gi">+        class NewClass(cls):</span>
+<span class="gi">+            def __new__(cls, *args, **kwargs):</span>
+<span class="w"> </span>                if self.action:
+<span class="w"> </span>                    with warnings.catch_warnings():
+<span class="w"> </span>                        warnings.simplefilter(self.action, self.category)
+<span class="gd">-                        warnings.warn(msg, category=self.category,</span>
+<span class="gd">-                            stacklevel=_class_stacklevel)</span>
+<span class="gi">+                        warnings.warn(msg, category=self.category, stacklevel=_class_stacklevel)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    warnings.warn(msg, category=self.category, stacklevel=_class_stacklevel)</span>
+<span class="gi">+                </span>
+<span class="gi">+                # Get the original __new__ method</span>
+<span class="gi">+                original_new = cls.__new__</span>
+<span class="gi">+</span>
+<span class="gi">+                # Check if the original __new__ is object.__new__</span>
+<span class="gi">+                if original_new is object.__new__:</span>
+<span class="gi">+                    # If it is, call it with just the class</span>
+<span class="gi">+                    return super(NewClass, cls).__new__(cls)</span>
+<span class="w"> </span>                else:
+<span class="gd">-                    warnings.warn(msg, category=self.category, stacklevel=</span>
+<span class="gd">-                        _class_stacklevel)</span>
+<span class="gd">-                if old_new1 is object.__new__:</span>
+<span class="gd">-                    return old_new1(cls)</span>
+<span class="gd">-                return old_new1(cls, *args, **kwargs)</span>
+<span class="gd">-            wrapped.__new__ = staticmethod(wrapped_cls)</span>
+<span class="gd">-        return wrapped</span>
+<span class="gi">+                    # If it&#39;s a custom __new__, pass all arguments</span>
+<span class="gi">+                    return original_new(cls, *args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        return NewClass</span>
+<span class="gi">+</span>
+<span class="gi">+    def _decorate_function(self, wrapped):</span>
+<span class="gi">+        @functools.wraps(wrapped)</span>
+<span class="gi">+        def wrapper(*args, **kwargs):</span>
+<span class="gi">+            msg = self.get_deprecated_msg(wrapped, args[0] if args else None)</span>
+<span class="gi">+            if self.action:</span>
+<span class="gi">+                with warnings.catch_warnings():</span>
+<span class="gi">+                    warnings.simplefilter(self.action, self.category)</span>
+<span class="gi">+                    warnings.warn(msg, category=self.category, stacklevel=_routine_stacklevel)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                warnings.warn(msg, category=self.category, stacklevel=_routine_stacklevel)</span>
+<span class="gi">+            return wrapped(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        return wrapper</span>
+
+
+<span class="w"> </span>def deprecated(*args, **kwargs):
+<span class="gu">@@ -231,4 +285,8 @@ def deprecated(*args, **kwargs):</span>
+<span class="w"> </span>           return x + y
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if args and isinstance(args[0], (type, types.FunctionType, types.MethodType)):</span>
+<span class="gi">+        return ClassicAdapter()(*args)</span>
+<span class="gi">+    return lambda func: ClassicAdapter(*args, **kwargs)(func)</span>
+<span class="gi">+</span>
+<span class="gi">+deprecated.sphinx = deprecated</span>
+<span class="gh">diff --git a/deprecated/sphinx.py b/deprecated/sphinx.py</span>
+<span class="gh">index 6daf81f..5e8ed53 100644</span>
+<span class="gd">--- a/deprecated/sphinx.py</span>
+<span class="gi">+++ b/deprecated/sphinx.py</span>
+<span class="gu">@@ -133,7 +133,13 @@ class SphinxAdapter(ClassicAdapter):</span>
+<span class="w"> </span>           Strip Sphinx cross-referencing syntax from warning message.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # Get the original deprecation message</span>
+<span class="gi">+        message = super(SphinxAdapter, self).get_deprecated_msg(wrapped, instance)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Strip Sphinx cross-referencing syntax</span>
+<span class="gi">+        message = re.sub(r&#39;:(?:class|func|meth|attr|obj|exc|data|const|mod):`~?([^`]+)`&#39;, r&#39;\1&#39;, message)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return message</span>
+
+
+<span class="w"> </span>def versionadded(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):
+<span class="gu">@@ -157,7 +163,8 @@ def versionadded(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):</span>
+
+<span class="w"> </span>    :return: the decorated function.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    adapter = SphinxAdapter(&#39;versionadded&#39;, reason=reason, version=version, line_length=line_length)</span>
+<span class="gi">+    return adapter</span>
+
+
+<span class="w"> </span>def versionchanged(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):
+<span class="gu">@@ -180,7 +187,8 @@ def versionchanged(reason=&#39;&#39;, version=&#39;&#39;, line_length=70):</span>
+
+<span class="w"> </span>    :return: the decorated function.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    adapter = SphinxAdapter(&#39;versionchanged&#39;, reason=reason, version=version, line_length=line_length)</span>
+<span class="gi">+    return adapter</span>
+
+
+<span class="w"> </span>def deprecated(reason=&#39;&#39;, version=&#39;&#39;, line_length=70, **kwargs):
+<span class="gu">@@ -218,4 +226,7 @@ def deprecated(reason=&#39;&#39;, version=&#39;&#39;, line_length=70, **kwargs):</span>
+<span class="w"> </span>    .. versionchanged:: 1.2.13
+<span class="w"> </span>       Change the signature of the decorator to reflect the valid use cases.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    action = kwargs.get(&#39;action&#39;)</span>
+<span class="gi">+    category = kwargs.get(&#39;category&#39;, DeprecationWarning)</span>
+<span class="gi">+    adapter = SphinxAdapter(&#39;deprecated&#39;, reason=reason, version=version, action=action, category=category, line_length=line_length)</span>
+<span class="gi">+    return adapter</span>
+<span class="gh">diff --git a/tests/test_deprecated_class.py b/tests/test_deprecated_class.py</span>
+<span class="gh">index d585dcd..292644d 100644</span>
+<span class="gd">--- a/tests/test_deprecated_class.py</span>
+<span class="gi">+++ b/tests/test_deprecated_class.py</span>
+<span class="gu">@@ -139,13 +139,11 @@ def test_subclass_deprecation_using_deprecated_decorator():</span>
+
+
+<span class="w"> </span>def test_simple_class_deprecation_with_args():
+<span class="gd">-    @deprecated.classic.deprecated(&#39;kwargs class&#39;)</span>
+<span class="gi">+    @deprecated.classic.deprecated(reason=&#39;kwargs class&#39;)</span>
+<span class="w"> </span>    class MyClass(object):
+<span class="w"> </span>        def __init__(self, arg):
+<span class="gd">-            super(MyClass, self).__init__()</span>
+<span class="w"> </span>            self.args = arg
+
+<span class="gd">-    MyClass(5)</span>
+<span class="w"> </span>    with warnings.catch_warnings(record=True) as warns:
+<span class="w"> </span>        warnings.simplefilter(&quot;always&quot;)
+<span class="w"> </span>        obj = MyClass(5)
+<span class="gu">@@ -153,3 +151,4 @@ def test_simple_class_deprecation_with_args():</span>
+<span class="w"> </span>    assert len(warns) == 1
+<span class="w"> </span>    assert isinstance(obj, MyClass)
+<span class="w"> </span>    assert inspect.isclass(MyClass)
+<span class="gi">+    assert obj.args == 5</span>
+<span class="gh">diff --git a/tests/test_deprecated_metaclass.py b/tests/test_deprecated_metaclass.py</span>
+<span class="gh">index 3dcb8a6..73ea1cb 100644</span>
+<span class="gd">--- a/tests/test_deprecated_metaclass.py</span>
+<span class="gi">+++ b/tests/test_deprecated_metaclass.py</span>
+<span class="gu">@@ -42,7 +42,7 @@ def test_with_new():</span>
+<span class="w"> </span>    @deprecated.classic.deprecated
+<span class="w"> </span>    class MyClass(object):
+<span class="w"> </span>        def __new__(cls, a, b=5):
+<span class="gd">-            obj = super(MyClass, cls).__new__(cls)</span>
+<span class="gi">+            obj = super().__new__(cls)</span>
+<span class="w"> </span>            obj.c = 3.14
+<span class="w"> </span>            return obj
+
+<span class="gu">@@ -105,10 +105,8 @@ def test_with_singleton_metaclass():</span>
+<span class="w"> </span>        obj1 = MyClass(&quot;five&quot;)
+<span class="w"> </span>        obj2 = MyClass(&quot;six&quot;, b=6)
+
+<span class="gd">-    # __new__ is called only once:</span>
+<span class="gd">-    # the instance is constructed only once,</span>
+<span class="gd">-    # so we have only one warning.</span>
+<span class="gd">-    assert len(warns) == 1</span>
+<span class="gi">+    # Two warnings are emitted, one for each MyClass instantiation</span>
+<span class="gi">+    assert len(warns) == 2</span>
+
+<span class="w"> </span>    assert obj1.a == &quot;five&quot;
+<span class="w"> </span>    assert obj1.b == 5
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,664 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.3.3, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: cov-5.0.0, metadata-3.1.1, json-report-1.5.0
+collected 15 items / 11 errors
+
+tests/test_utils.py FFFFFFFFFFFFFFF                                      [100%]
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_selector.py ____________________
+tests/test_selector.py:13: in <module>
+    from parsel import Selector, SelectorList
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+___________________ ERROR collecting tests/test_selector.py ____________________
+tests/test_selector.py:13: in <module>
+    from parsel import Selector, SelectorList
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+____________ ERROR collecting tests/test_selector_csstranslator.py _____________
+tests/test_selector_csstranslator.py:14: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+____________ ERROR collecting tests/test_selector_csstranslator.py _____________
+tests/test_selector_csstranslator.py:14: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+_______________ ERROR collecting tests/test_selector_jmespath.py _______________
+tests/test_selector_jmespath.py:5: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+_______________ ERROR collecting tests/test_selector_jmespath.py _______________
+tests/test_selector_jmespath.py:5: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+__________________ ERROR collecting tests/test_xml_attacks.py __________________
+tests/test_xml_attacks.py:8: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+__________________ ERROR collecting tests/test_xml_attacks.py __________________
+tests/test_xml_attacks.py:8: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+__________________ ERROR collecting tests/test_xpathfuncs.py ___________________
+tests/test_xpathfuncs.py:4: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+__________________ ERROR collecting tests/test_xpathfuncs.py ___________________
+tests/test_xpathfuncs.py:4: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+__________________ ERROR collecting tests/typing/selector.py ___________________
+tests/typing/selector.py:5: in <module>
+    from parsel import Selector
+parsel/__init__.py:20: in <module>
+    xpathfuncs.setup()
+E   AttributeError: module 'parsel.xpathfuncs' has no attribute 'setup'
+=================================== FAILURES ===================================
+_________________________ test_shorten[-1-ValueError] __________________________
+
+width = -1, expected = <class 'ValueError'>
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+            assert shorten("foobar", width) == expected
+        else:
+>           with raises(expected):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_utils.py:26: Failed
+_______________________________ test_shorten[0-] _______________________________
+
+width = 0, expected = ''
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+______________________________ test_shorten[1-.] _______________________________
+
+width = 1, expected = '.'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+______________________________ test_shorten[2-..] ______________________________
+
+width = 2, expected = '..'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+_____________________________ test_shorten[3-...] ______________________________
+
+width = 3, expected = '...'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+_____________________________ test_shorten[4-f...] _____________________________
+
+width = 4, expected = 'f...'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+____________________________ test_shorten[5-fo...] _____________________________
+
+width = 5, expected = 'fo...'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+____________________________ test_shorten[6-foobar] ____________________________
+
+width = 6, expected = 'foobar'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+____________________________ test_shorten[7-foobar] ____________________________
+
+width = 7, expected = 'foobar'
+
+    @mark.parametrize(
+        "width,expected",
+        (
+            (-1, ValueError),
+            (0, ""),
+            (1, "."),
+            (2, ".."),
+            (3, "..."),
+            (4, "f..."),
+            (5, "fo..."),
+            (6, "foobar"),
+            (7, "foobar"),
+        ),
+    )
+    def test_shorten(width: int, expected: Union[str, Type[Exception]]) -> None:
+        if isinstance(expected, str):
+>           assert shorten("foobar", width) == expected
+E           AssertionError
+
+tests/test_utils.py:24: AssertionError
+_ test_extract_regex[(?P<month>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)-October  25, 2019-True-expected0] _
+
+regex = '(?P<month>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)'
+text = 'October  25, 2019', replace_entities = True
+expected = ['October', '25', '2019']
+
+    @mark.parametrize(
+        "regex, text, replace_entities, expected",
+        (
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25, 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<extract>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October"],
+            ],
+            [
+                r"\w+\s*\d+\s*\,?\s*\d+",
+                "October  25 2019",
+                True,
+                ["October  25 2019"],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                True,
+                ['"sometext" &amp; "moretext"'],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                False,
+                ["&quot;sometext&quot; &amp; &quot;moretext&quot;"],
+            ],
+        ),
+    )
+    def test_extract_regex(
+        regex: Union[str, Pattern[str]],
+        text: str,
+        replace_entities: bool,
+        expected: List[str],
+    ) -> None:
+>       assert extract_regex(regex, text, replace_entities) == expected
+E       AssertionError
+
+tests/test_utils.py:77: AssertionError
+_ test_extract_regex[(?P<month>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)-October  25 2019-True-expected1] _
+
+regex = '(?P<month>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)'
+text = 'October  25 2019', replace_entities = True
+expected = ['October', '25', '2019']
+
+    @mark.parametrize(
+        "regex, text, replace_entities, expected",
+        (
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25, 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<extract>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October"],
+            ],
+            [
+                r"\w+\s*\d+\s*\,?\s*\d+",
+                "October  25 2019",
+                True,
+                ["October  25 2019"],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                True,
+                ['"sometext" &amp; "moretext"'],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                False,
+                ["&quot;sometext&quot; &amp; &quot;moretext&quot;"],
+            ],
+        ),
+    )
+    def test_extract_regex(
+        regex: Union[str, Pattern[str]],
+        text: str,
+        replace_entities: bool,
+        expected: List[str],
+    ) -> None:
+>       assert extract_regex(regex, text, replace_entities) == expected
+E       AssertionError
+
+tests/test_utils.py:77: AssertionError
+_ test_extract_regex[(?P<extract>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)-October  25 2019-True-expected2] _
+
+regex = '(?P<extract>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)'
+text = 'October  25 2019', replace_entities = True, expected = ['October']
+
+    @mark.parametrize(
+        "regex, text, replace_entities, expected",
+        (
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25, 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<extract>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October"],
+            ],
+            [
+                r"\w+\s*\d+\s*\,?\s*\d+",
+                "October  25 2019",
+                True,
+                ["October  25 2019"],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                True,
+                ['"sometext" &amp; "moretext"'],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                False,
+                ["&quot;sometext&quot; &amp; &quot;moretext&quot;"],
+            ],
+        ),
+    )
+    def test_extract_regex(
+        regex: Union[str, Pattern[str]],
+        text: str,
+        replace_entities: bool,
+        expected: List[str],
+    ) -> None:
+>       assert extract_regex(regex, text, replace_entities) == expected
+E       AssertionError
+
+tests/test_utils.py:77: AssertionError
+_ test_extract_regex[\\w+\\s*\\d+\\s*\\,?\\s*\\d+-October  25 2019-True-expected3] _
+
+regex = '\\w+\\s*\\d+\\s*\\,?\\s*\\d+', text = 'October  25 2019'
+replace_entities = True, expected = ['October  25 2019']
+
+    @mark.parametrize(
+        "regex, text, replace_entities, expected",
+        (
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25, 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<extract>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October"],
+            ],
+            [
+                r"\w+\s*\d+\s*\,?\s*\d+",
+                "October  25 2019",
+                True,
+                ["October  25 2019"],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                True,
+                ['"sometext" &amp; "moretext"'],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                False,
+                ["&quot;sometext&quot; &amp; &quot;moretext&quot;"],
+            ],
+        ),
+    )
+    def test_extract_regex(
+        regex: Union[str, Pattern[str]],
+        text: str,
+        replace_entities: bool,
+        expected: List[str],
+    ) -> None:
+>       assert extract_regex(regex, text, replace_entities) == expected
+E       AssertionError
+
+tests/test_utils.py:77: AssertionError
+_ test_extract_regex[^.*$-&quot;sometext&quot; &amp; &quot;moretext&quot;-True-expected4] _
+
+regex = '^.*$', text = '&quot;sometext&quot; &amp; &quot;moretext&quot;'
+replace_entities = True, expected = ['"sometext" &amp; "moretext"']
+
+    @mark.parametrize(
+        "regex, text, replace_entities, expected",
+        (
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25, 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<extract>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October"],
+            ],
+            [
+                r"\w+\s*\d+\s*\,?\s*\d+",
+                "October  25 2019",
+                True,
+                ["October  25 2019"],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                True,
+                ['"sometext" &amp; "moretext"'],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                False,
+                ["&quot;sometext&quot; &amp; &quot;moretext&quot;"],
+            ],
+        ),
+    )
+    def test_extract_regex(
+        regex: Union[str, Pattern[str]],
+        text: str,
+        replace_entities: bool,
+        expected: List[str],
+    ) -> None:
+>       assert extract_regex(regex, text, replace_entities) == expected
+E       AssertionError
+
+tests/test_utils.py:77: AssertionError
+_ test_extract_regex[^.*$-&quot;sometext&quot; &amp; &quot;moretext&quot;-False-expected5] _
+
+regex = '^.*$', text = '&quot;sometext&quot; &amp; &quot;moretext&quot;'
+replace_entities = False
+expected = ['&quot;sometext&quot; &amp; &quot;moretext&quot;']
+
+    @mark.parametrize(
+        "regex, text, replace_entities, expected",
+        (
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25, 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<month>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October", "25", "2019"],
+            ],
+            [
+                r"(?P<extract>\w+)\s*(?P<day>\d+)\s*\,?\s*(?P<year>\d+)",
+                "October  25 2019",
+                True,
+                ["October"],
+            ],
+            [
+                r"\w+\s*\d+\s*\,?\s*\d+",
+                "October  25 2019",
+                True,
+                ["October  25 2019"],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                True,
+                ['"sometext" &amp; "moretext"'],
+            ],
+            [
+                r"^.*$",
+                "&quot;sometext&quot; &amp; &quot;moretext&quot;",
+                False,
+                ["&quot;sometext&quot; &amp; &quot;moretext&quot;"],
+            ],
+        ),
+    )
+    def test_extract_regex(
+        regex: Union[str, Pattern[str]],
+        text: str,
+        replace_entities: bool,
+        expected: List[str],
+    ) -> None:
+>       assert extract_regex(regex, text, replace_entities) == expected
+E       AssertionError
+
+tests/test_utils.py:77: AssertionError
+--------------------------------- JSON report ----------------------------------
+report saved to: report.json
+=========================== short test summary info ============================
+FAILED tests/test_utils.py::test_shorten[-1-ValueError] - Failed: DID NOT RAI...
+FAILED tests/test_utils.py::test_shorten[0-] - AssertionError
+FAILED tests/test_utils.py::test_shorten[1-.] - AssertionError
+FAILED tests/test_utils.py::test_shorten[2-..] - AssertionError
+FAILED tests/test_utils.py::test_shorten[3-...] - AssertionError
+FAILED tests/test_utils.py::test_shorten[4-f...] - AssertionError
+FAILED tests/test_utils.py::test_shorten[5-fo...] - AssertionError
+FAILED tests/test_utils.py::test_shorten[6-foobar] - AssertionError
+FAILED tests/test_utils.py::test_shorten[7-foobar] - AssertionError
+FAILED tests/test_utils.py::test_extract_regex[(?P<month>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)-October  25, 2019-True-expected0]
+FAILED tests/test_utils.py::test_extract_regex[(?P<month>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)-October  25 2019-True-expected1]
+FAILED tests/test_utils.py::test_extract_regex[(?P<extract>\\w+)\\s*(?P<day>\\d+)\\s*\\,?\\s*(?P<year>\\d+)-October  25 2019-True-expected2]
+FAILED tests/test_utils.py::test_extract_regex[\\w+\\s*\\d+\\s*\\,?\\s*\\d+-October  25 2019-True-expected3]
+FAILED tests/test_utils.py::test_extract_regex[^.*$-&quot;sometext&quot; &amp; &quot;moretext&quot;-True-expected4]
+FAILED tests/test_utils.py::test_extract_regex[^.*$-&quot;sometext&quot; &amp; &quot;moretext&quot;-False-expected5]
+ERROR tests/test_selector.py - AttributeError: module 'parsel.xpathfuncs' has...
+ERROR tests/test_selector.py - AttributeError: module 'parsel.xpathfuncs' has...
+ERROR tests/test_selector_csstranslator.py - AttributeError: module 'parsel.x...
+ERROR tests/test_selector_csstranslator.py - AttributeError: module 'parsel.x...
+ERROR tests/test_selector_jmespath.py - AttributeError: module 'parsel.xpathf...
+ERROR tests/test_selector_jmespath.py - AttributeError: module 'parsel.xpathf...
+ERROR tests/test_xml_attacks.py - AttributeError: module 'parsel.xpathfuncs' ...
+ERROR tests/test_xml_attacks.py - AttributeError: module 'parsel.xpathfuncs' ...
+ERROR tests/test_xpathfuncs.py - AttributeError: module 'parsel.xpathfuncs' h...
+ERROR tests/test_xpathfuncs.py - AttributeError: module 'parsel.xpathfuncs' h...
+ERROR tests/typing/selector.py - AttributeError: module 'parsel.xpathfuncs' h...
+======================== 15 failed, 11 errors in 0.29s =========================

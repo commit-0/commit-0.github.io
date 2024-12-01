@@ -1,0 +1,4778 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /testbed
+configfile: setup.cfg
+plugins: json-report-1.5.0, cov-5.0.0, metadata-3.1.1
+collected 171 items
+
+tests/test.py ..                                                         [  1%]
+tests/test_deprecated.py FEEEEEEFEEEEEEFEEEEEEFEEEEEEFEEEEEEFFFFFF       [ 25%]
+tests/test_deprecated_class.py ...FFFF                                   [ 29%]
+tests/test_deprecated_metaclass.py FFFF                                  [ 31%]
+tests/test_sphinx.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEE [ 61%]
+EEEEEEEEEEEEEEEEE.FFFF.FFFFFFFFFFFFFFFFFFFF                              [ 86%]
+tests/test_sphinx_adapter.py .........FFF                                [ 93%]
+tests/test_sphinx_class.py .FFFFFF                                       [ 97%]
+tests/test_sphinx_metaclass.py FFFF                                      [100%]
+
+==================================== ERRORS ====================================
+_ ERROR at setup of test_classic_deprecated_function__warns[classic_deprecated_function1] _
+
+request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_function(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            def foo1():
+                pass
+    
+            return foo1
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           def foo1():
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:38: TypeError
+_ ERROR at setup of test_classic_deprecated_function__warns[classic_deprecated_function2] _
+
+request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_function(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            def foo1():
+                pass
+    
+            return foo1
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           def foo1():
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:38: TypeError
+_ ERROR at setup of test_classic_deprecated_function__warns[classic_deprecated_function3] _
+
+request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_function(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            def foo1():
+                pass
+    
+            return foo1
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           def foo1():
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:38: TypeError
+_ ERROR at setup of test_classic_deprecated_function__warns[classic_deprecated_function4] _
+
+request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function4]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_function(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            def foo1():
+                pass
+    
+            return foo1
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           def foo1():
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:38: TypeError
+_ ERROR at setup of test_classic_deprecated_function__warns[classic_deprecated_function5] _
+
+request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function5]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_function(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            def foo1():
+                pass
+    
+            return foo1
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           def foo1():
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:38: TypeError
+_ ERROR at setup of test_classic_deprecated_function__warns[classic_deprecated_function6] _
+
+request = <SubRequest 'classic_deprecated_function' for <Function test_classic_deprecated_function__warns[classic_deprecated_function6]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_function(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            def foo1():
+                pass
+    
+            return foo1
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           def foo1():
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:38: TypeError
+_ ERROR at setup of test_classic_deprecated_class__warns[classic_deprecated_class1] _
+
+request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            class Foo2(object):
+                pass
+    
+            return Foo2
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           class Foo2(object):
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:57: TypeError
+_ ERROR at setup of test_classic_deprecated_class__warns[classic_deprecated_class2] _
+
+request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            class Foo2(object):
+                pass
+    
+            return Foo2
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           class Foo2(object):
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:57: TypeError
+_ ERROR at setup of test_classic_deprecated_class__warns[classic_deprecated_class3] _
+
+request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            class Foo2(object):
+                pass
+    
+            return Foo2
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           class Foo2(object):
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:57: TypeError
+_ ERROR at setup of test_classic_deprecated_class__warns[classic_deprecated_class4] _
+
+request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class4]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            class Foo2(object):
+                pass
+    
+            return Foo2
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           class Foo2(object):
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:57: TypeError
+_ ERROR at setup of test_classic_deprecated_class__warns[classic_deprecated_class5] _
+
+request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class5]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            class Foo2(object):
+                pass
+    
+            return Foo2
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           class Foo2(object):
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:57: TypeError
+_ ERROR at setup of test_classic_deprecated_class__warns[classic_deprecated_class6] _
+
+request = <SubRequest 'classic_deprecated_class' for <Function test_classic_deprecated_class__warns[classic_deprecated_class6]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class(request):
+        if request.param is None:
+    
+            @deprecated.classic.deprecated
+            class Foo2(object):
+                pass
+    
+            return Foo2
+        else:
+            args, kwargs = request.param
+    
+            @deprecated.classic.deprecated(*args, **kwargs)
+>           class Foo2(object):
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:57: TypeError
+_ ERROR at setup of test_classic_deprecated_method__warns[classic_deprecated_method1] _
+
+request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_method(request):
+        if request.param is None:
+    
+            class Foo3(object):
+                @deprecated.classic.deprecated
+                def foo3(self):
+                    pass
+    
+            return Foo3
+        else:
+            args, kwargs = request.param
+    
+>           class Foo3(object):
+
+tests/test_deprecated.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:78: TypeError
+_ ERROR at setup of test_classic_deprecated_method__warns[classic_deprecated_method2] _
+
+request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_method(request):
+        if request.param is None:
+    
+            class Foo3(object):
+                @deprecated.classic.deprecated
+                def foo3(self):
+                    pass
+    
+            return Foo3
+        else:
+            args, kwargs = request.param
+    
+>           class Foo3(object):
+
+tests/test_deprecated.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:78: TypeError
+_ ERROR at setup of test_classic_deprecated_method__warns[classic_deprecated_method3] _
+
+request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_method(request):
+        if request.param is None:
+    
+            class Foo3(object):
+                @deprecated.classic.deprecated
+                def foo3(self):
+                    pass
+    
+            return Foo3
+        else:
+            args, kwargs = request.param
+    
+>           class Foo3(object):
+
+tests/test_deprecated.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:78: TypeError
+_ ERROR at setup of test_classic_deprecated_method__warns[classic_deprecated_method4] _
+
+request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method4]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_method(request):
+        if request.param is None:
+    
+            class Foo3(object):
+                @deprecated.classic.deprecated
+                def foo3(self):
+                    pass
+    
+            return Foo3
+        else:
+            args, kwargs = request.param
+    
+>           class Foo3(object):
+
+tests/test_deprecated.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:78: TypeError
+_ ERROR at setup of test_classic_deprecated_method__warns[classic_deprecated_method5] _
+
+request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method5]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_method(request):
+        if request.param is None:
+    
+            class Foo3(object):
+                @deprecated.classic.deprecated
+                def foo3(self):
+                    pass
+    
+            return Foo3
+        else:
+            args, kwargs = request.param
+    
+>           class Foo3(object):
+
+tests/test_deprecated.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:78: TypeError
+_ ERROR at setup of test_classic_deprecated_method__warns[classic_deprecated_method6] _
+
+request = <SubRequest 'classic_deprecated_method' for <Function test_classic_deprecated_method__warns[classic_deprecated_method6]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_method(request):
+        if request.param is None:
+    
+            class Foo3(object):
+                @deprecated.classic.deprecated
+                def foo3(self):
+                    pass
+    
+            return Foo3
+        else:
+            args, kwargs = request.param
+    
+>           class Foo3(object):
+
+tests/test_deprecated.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:78: TypeError
+_ ERROR at setup of test_classic_deprecated_static_method__warns[classic_deprecated_static_method1] _
+
+request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_static_method(request):
+        if request.param is None:
+    
+            class Foo4(object):
+                @staticmethod
+                @deprecated.classic.deprecated
+                def foo4():
+                    pass
+    
+            return Foo4.foo4
+        else:
+            args, kwargs = request.param
+    
+>           class Foo4(object):
+
+tests/test_deprecated.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:101: TypeError
+_ ERROR at setup of test_classic_deprecated_static_method__warns[classic_deprecated_static_method2] _
+
+request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_static_method(request):
+        if request.param is None:
+    
+            class Foo4(object):
+                @staticmethod
+                @deprecated.classic.deprecated
+                def foo4():
+                    pass
+    
+            return Foo4.foo4
+        else:
+            args, kwargs = request.param
+    
+>           class Foo4(object):
+
+tests/test_deprecated.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:101: TypeError
+_ ERROR at setup of test_classic_deprecated_static_method__warns[classic_deprecated_static_method3] _
+
+request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_static_method(request):
+        if request.param is None:
+    
+            class Foo4(object):
+                @staticmethod
+                @deprecated.classic.deprecated
+                def foo4():
+                    pass
+    
+            return Foo4.foo4
+        else:
+            args, kwargs = request.param
+    
+>           class Foo4(object):
+
+tests/test_deprecated.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:101: TypeError
+_ ERROR at setup of test_classic_deprecated_static_method__warns[classic_deprecated_static_method4] _
+
+request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method4]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_static_method(request):
+        if request.param is None:
+    
+            class Foo4(object):
+                @staticmethod
+                @deprecated.classic.deprecated
+                def foo4():
+                    pass
+    
+            return Foo4.foo4
+        else:
+            args, kwargs = request.param
+    
+>           class Foo4(object):
+
+tests/test_deprecated.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:101: TypeError
+_ ERROR at setup of test_classic_deprecated_static_method__warns[classic_deprecated_static_method5] _
+
+request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method5]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_static_method(request):
+        if request.param is None:
+    
+            class Foo4(object):
+                @staticmethod
+                @deprecated.classic.deprecated
+                def foo4():
+                    pass
+    
+            return Foo4.foo4
+        else:
+            args, kwargs = request.param
+    
+>           class Foo4(object):
+
+tests/test_deprecated.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:101: TypeError
+_ ERROR at setup of test_classic_deprecated_static_method__warns[classic_deprecated_static_method6] _
+
+request = <SubRequest 'classic_deprecated_static_method' for <Function test_classic_deprecated_static_method__warns[classic_deprecated_static_method6]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_static_method(request):
+        if request.param is None:
+    
+            class Foo4(object):
+                @staticmethod
+                @deprecated.classic.deprecated
+                def foo4():
+                    pass
+    
+            return Foo4.foo4
+        else:
+            args, kwargs = request.param
+    
+>           class Foo4(object):
+
+tests/test_deprecated.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:101: TypeError
+_ ERROR at setup of test_classic_deprecated_class_method__warns[classic_deprecated_class_method1] _
+
+request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class_method(request):
+        if request.param is None:
+    
+            class Foo5(object):
+                @classmethod
+                @deprecated.classic.deprecated
+                def foo5(cls):
+                    pass
+    
+            return Foo5
+        else:
+            args, kwargs = request.param
+    
+>           class Foo5(object):
+
+tests/test_deprecated.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:124: TypeError
+_ ERROR at setup of test_classic_deprecated_class_method__warns[classic_deprecated_class_method2] _
+
+request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class_method(request):
+        if request.param is None:
+    
+            class Foo5(object):
+                @classmethod
+                @deprecated.classic.deprecated
+                def foo5(cls):
+                    pass
+    
+            return Foo5
+        else:
+            args, kwargs = request.param
+    
+>           class Foo5(object):
+
+tests/test_deprecated.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:124: TypeError
+_ ERROR at setup of test_classic_deprecated_class_method__warns[classic_deprecated_class_method3] _
+
+request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class_method(request):
+        if request.param is None:
+    
+            class Foo5(object):
+                @classmethod
+                @deprecated.classic.deprecated
+                def foo5(cls):
+                    pass
+    
+            return Foo5
+        else:
+            args, kwargs = request.param
+    
+>           class Foo5(object):
+
+tests/test_deprecated.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:124: TypeError
+_ ERROR at setup of test_classic_deprecated_class_method__warns[classic_deprecated_class_method4] _
+
+request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method4]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class_method(request):
+        if request.param is None:
+    
+            class Foo5(object):
+                @classmethod
+                @deprecated.classic.deprecated
+                def foo5(cls):
+                    pass
+    
+            return Foo5
+        else:
+            args, kwargs = request.param
+    
+>           class Foo5(object):
+
+tests/test_deprecated.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:124: TypeError
+_ ERROR at setup of test_classic_deprecated_class_method__warns[classic_deprecated_class_method5] _
+
+request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method5]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class_method(request):
+        if request.param is None:
+    
+            class Foo5(object):
+                @classmethod
+                @deprecated.classic.deprecated
+                def foo5(cls):
+                    pass
+    
+            return Foo5
+        else:
+            args, kwargs = request.param
+    
+>           class Foo5(object):
+
+tests/test_deprecated.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:124: TypeError
+_ ERROR at setup of test_classic_deprecated_class_method__warns[classic_deprecated_class_method6] _
+
+request = <SubRequest 'classic_deprecated_class_method' for <Function test_classic_deprecated_class_method__warns[classic_deprecated_class_method6]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def classic_deprecated_class_method(request):
+        if request.param is None:
+    
+            class Foo5(object):
+                @classmethod
+                @deprecated.classic.deprecated
+                def foo5(cls):
+                    pass
+    
+            return Foo5
+        else:
+            args, kwargs = request.param
+    
+>           class Foo5(object):
+
+tests/test_deprecated.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.classic.deprecated(*args, **kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:124: TypeError
+_ ERROR at setup of test_sphinx_deprecated_function__warns[sphinx_deprecated_function0] _
+
+request = <SubRequest 'sphinx_deprecated_function' for <Function test_sphinx_deprecated_function__warns[sphinx_deprecated_function0]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_function(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo1():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:192: TypeError
+_ ERROR at setup of test_sphinx_deprecated_function__warns[sphinx_deprecated_function1] _
+
+request = <SubRequest 'sphinx_deprecated_function' for <Function test_sphinx_deprecated_function__warns[sphinx_deprecated_function1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_function(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo1():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:192: TypeError
+_ ERROR at setup of test_sphinx_deprecated_function__warns[sphinx_deprecated_function2] _
+
+request = <SubRequest 'sphinx_deprecated_function' for <Function test_sphinx_deprecated_function__warns[sphinx_deprecated_function2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_function(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo1():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:192: TypeError
+_ ERROR at setup of test_sphinx_deprecated_function__warns[sphinx_deprecated_function3] _
+
+request = <SubRequest 'sphinx_deprecated_function' for <Function test_sphinx_deprecated_function__warns[sphinx_deprecated_function3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_function(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo1():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:192: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class__warns[sphinx_deprecated_class0] _
+
+request = <SubRequest 'sphinx_deprecated_class' for <Function test_sphinx_deprecated_class__warns[sphinx_deprecated_class0]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       class Foo2(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:203: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class__warns[sphinx_deprecated_class1] _
+
+request = <SubRequest 'sphinx_deprecated_class' for <Function test_sphinx_deprecated_class__warns[sphinx_deprecated_class1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       class Foo2(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:203: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class__warns[sphinx_deprecated_class2] _
+
+request = <SubRequest 'sphinx_deprecated_class' for <Function test_sphinx_deprecated_class__warns[sphinx_deprecated_class2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       class Foo2(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:203: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class__warns[sphinx_deprecated_class3] _
+
+request = <SubRequest 'sphinx_deprecated_class' for <Function test_sphinx_deprecated_class__warns[sphinx_deprecated_class3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class(request):
+        kwargs = request.param
+    
+        @deprecated.sphinx.deprecated(**kwargs)
+>       class Foo2(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:203: TypeError
+_ ERROR at setup of test_sphinx_deprecated_method__warns[sphinx_deprecated_method0] _
+
+request = <SubRequest 'sphinx_deprecated_method' for <Function test_sphinx_deprecated_method__warns[sphinx_deprecated_method0]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_method(request):
+        kwargs = request.param
+    
+>       class Foo3(object):
+
+tests/test_sphinx.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:215: TypeError
+_ ERROR at setup of test_sphinx_deprecated_method__warns[sphinx_deprecated_method1] _
+
+request = <SubRequest 'sphinx_deprecated_method' for <Function test_sphinx_deprecated_method__warns[sphinx_deprecated_method1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_method(request):
+        kwargs = request.param
+    
+>       class Foo3(object):
+
+tests/test_sphinx.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:215: TypeError
+_ ERROR at setup of test_sphinx_deprecated_method__warns[sphinx_deprecated_method2] _
+
+request = <SubRequest 'sphinx_deprecated_method' for <Function test_sphinx_deprecated_method__warns[sphinx_deprecated_method2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_method(request):
+        kwargs = request.param
+    
+>       class Foo3(object):
+
+tests/test_sphinx.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:215: TypeError
+_ ERROR at setup of test_sphinx_deprecated_method__warns[sphinx_deprecated_method3] _
+
+request = <SubRequest 'sphinx_deprecated_method' for <Function test_sphinx_deprecated_method__warns[sphinx_deprecated_method3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_method(request):
+        kwargs = request.param
+    
+>       class Foo3(object):
+
+tests/test_sphinx.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo3(object):
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo3(self):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:215: TypeError
+_ ERROR at setup of test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0] _
+
+request = <SubRequest 'sphinx_deprecated_static_method' for <Function test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_static_method(request):
+        kwargs = request.param
+    
+>       class Foo4(object):
+
+tests/test_sphinx.py:225: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:228: TypeError
+_ ERROR at setup of test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1] _
+
+request = <SubRequest 'sphinx_deprecated_static_method' for <Function test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_static_method(request):
+        kwargs = request.param
+    
+>       class Foo4(object):
+
+tests/test_sphinx.py:225: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:228: TypeError
+_ ERROR at setup of test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2] _
+
+request = <SubRequest 'sphinx_deprecated_static_method' for <Function test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_static_method(request):
+        kwargs = request.param
+    
+>       class Foo4(object):
+
+tests/test_sphinx.py:225: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:228: TypeError
+_ ERROR at setup of test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3] _
+
+request = <SubRequest 'sphinx_deprecated_static_method' for <Function test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_static_method(request):
+        kwargs = request.param
+    
+>       class Foo4(object):
+
+tests/test_sphinx.py:225: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo4(object):
+        @staticmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo4():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:228: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0] _
+
+request = <SubRequest 'sphinx_deprecated_class_method' for <Function test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class_method(request):
+        kwargs = request.param
+    
+>       class Foo5(object):
+
+tests/test_sphinx.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:241: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1] _
+
+request = <SubRequest 'sphinx_deprecated_class_method' for <Function test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class_method(request):
+        kwargs = request.param
+    
+>       class Foo5(object):
+
+tests/test_sphinx.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:241: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2] _
+
+request = <SubRequest 'sphinx_deprecated_class_method' for <Function test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class_method(request):
+        kwargs = request.param
+    
+>       class Foo5(object):
+
+tests/test_sphinx.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:241: TypeError
+_ ERROR at setup of test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3] _
+
+request = <SubRequest 'sphinx_deprecated_class_method' for <Function test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3]>>
+
+    @pytest.fixture(scope="module", params=_PARAMS)
+    def sphinx_deprecated_class_method(request):
+        kwargs = request.param
+    
+>       class Foo5(object):
+
+tests/test_sphinx.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class Foo5(object):
+        @classmethod
+        @deprecated.sphinx.deprecated(**kwargs)
+>       def foo5(cls):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:241: TypeError
+=================================== FAILURES ===================================
+________________ test_classic_deprecated_function__warns[None] _________________
+
+classic_deprecated_function = None
+
+    def test_classic_deprecated_function__warns(classic_deprecated_function):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_function()
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:134: TypeError
+__________________ test_classic_deprecated_class__warns[None] __________________
+
+classic_deprecated_class = None
+
+    def test_classic_deprecated_class__warns(classic_deprecated_class):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_class()
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:146: TypeError
+_________________ test_classic_deprecated_method__warns[None] __________________
+
+classic_deprecated_method = <class 'tests.test_deprecated.classic_deprecated_method.<locals>.Foo3'>
+
+    def test_classic_deprecated_method__warns(classic_deprecated_method):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+            obj = classic_deprecated_method()
+>           obj.foo3()
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:159: TypeError
+______________ test_classic_deprecated_static_method__warns[None] ______________
+
+classic_deprecated_static_method = None
+
+    def test_classic_deprecated_static_method__warns(classic_deprecated_static_method):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           classic_deprecated_static_method()
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:171: TypeError
+______________ test_classic_deprecated_class_method__warns[None] _______________
+
+classic_deprecated_class_method = <class 'tests.test_deprecated.classic_deprecated_class_method.<locals>.Foo5'>
+
+    def test_classic_deprecated_class_method__warns(classic_deprecated_class_method):
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+            cls = classic_deprecated_class_method()
+>           cls.foo5()
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:184: TypeError
+_________________________ test_should_raise_type_error _________________________
+
+    def test_should_raise_type_error():
+        try:
+            deprecated.classic.deprecated(5)
+>           assert False, "TypeError not raised"
+E           AssertionError: TypeError not raised
+E           assert False
+
+tests/test_deprecated.py:198: AssertionError
+_________________________ test_warning_msg_has_reason __________________________
+
+    def test_warning_msg_has_reason():
+        reason = "Good reason"
+    
+        @deprecated.classic.deprecated(reason=reason)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:207: TypeError
+_________________________ test_warning_msg_has_version _________________________
+
+    def test_warning_msg_has_version():
+        version = "1.2.3"
+    
+        @deprecated.classic.deprecated(version=version)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:220: TypeError
+___________________________ test_warning_is_ignored ____________________________
+
+    def test_warning_is_ignored():
+        @deprecated.classic.deprecated(action='ignore')
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:231: TypeError
+______________________ test_specific_warning_cls_is_used _______________________
+
+    def test_specific_warning_cls_is_used():
+        @deprecated.classic.deprecated(category=MyDeprecationWarning)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:241: TypeError
+__________________________ test_respect_global_filter __________________________
+
+    def test_respect_global_filter():
+        @deprecated.classic.deprecated(version='1.2.1', reason="deprecated function")
+>       def fun():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated.py:252: TypeError
+______________ test_class_deprecation_using_deprecated_decorator _______________
+
+    def test_class_deprecation_using_deprecated_decorator():
+        @deprecated.classic.deprecated
+        class MyBaseClass(object):
+            pass
+    
+>       class MySubClass(MyBaseClass):
+E       TypeError: NoneType takes no arguments
+
+tests/test_deprecated_class.py:96: TypeError
+_______________________ test_class_respect_global_filter _______________________
+
+    def test_class_respect_global_filter():
+        @deprecated.classic.deprecated
+        class MyBaseClass(object):
+            pass
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("once")
+>           obj = MyBaseClass()
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated_class.py:116: TypeError
+_____________ test_subclass_deprecation_using_deprecated_decorator _____________
+
+    def test_subclass_deprecation_using_deprecated_decorator():
+        @deprecated.classic.deprecated
+        class MyBaseClass(object):
+            pass
+    
+        @deprecated.classic.deprecated
+>       class MySubClass(MyBaseClass):
+E       TypeError: NoneType takes no arguments
+
+tests/test_deprecated_class.py:128: TypeError
+___________________ test_simple_class_deprecation_with_args ____________________
+
+    def test_simple_class_deprecation_with_args():
+        @deprecated.classic.deprecated('kwargs class')
+>       class MyClass(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated_class.py:143: TypeError
+________________________________ test_with_init ________________________________
+
+    def test_with_init():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated_metaclass.py:33: TypeError
+________________________________ test_with_new _________________________________
+
+    def test_with_new():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __new__(cls, a, b=5):
+                obj = super(MyClass, cls).__new__(cls)
+                obj.c = 3.14
+                return obj
+    
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated_metaclass.py:55: TypeError
+_____________________________ test_with_metaclass ______________________________
+
+    def test_with_metaclass():
+        class Meta(type):
+            def __call__(cls, *args, **kwargs):
+                obj = super(Meta, cls).__call__(*args, **kwargs)
+                obj.c = 3.14
+                return obj
+    
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Meta)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated_metaclass.py:79: TypeError
+________________________ test_with_singleton_metaclass _________________________
+
+    def test_with_singleton_metaclass():
+        class Singleton(type):
+            _instances = {}
+    
+            def __call__(cls, *args, **kwargs):
+                if cls not in cls._instances:
+                    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+                return cls._instances[cls]
+    
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Singleton)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj1 = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_deprecated_metaclass.py:105: TypeError
+_____ test_has_sphinx_docstring[no_docstring-versionadded-reason&version] ______
+
+docstring = None, directive = 'versionadded', reason = 'A good reason'
+version = '1.2.0', expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_________ test_has_sphinx_docstring[no_docstring-versionadded-version] _________
+
+docstring = None, directive = 'versionadded', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+___ test_cls_has_sphinx_docstring[no_docstring-versionadded-reason&version] ____
+
+docstring = None, directive = 'versionadded', reason = 'A good reason'
+version = '1.2.0', expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+_______ test_cls_has_sphinx_docstring[no_docstring-versionadded-version] _______
+
+docstring = None, directive = 'versionadded', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+____ test_has_sphinx_docstring[no_docstring-versionchanged-reason&version] _____
+
+docstring = None, directive = 'versionchanged', reason = 'A good reason'
+version = '1.2.0', expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+________ test_has_sphinx_docstring[no_docstring-versionchanged-version] ________
+
+docstring = None, directive = 'versionchanged', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+__ test_cls_has_sphinx_docstring[no_docstring-versionchanged-reason&version] ___
+
+docstring = None, directive = 'versionchanged', reason = 'A good reason'
+version = '1.2.0', expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+______ test_cls_has_sphinx_docstring[no_docstring-versionchanged-version] ______
+
+docstring = None, directive = 'versionchanged', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+___ test_has_sphinx_docstring[short_docstring-versionchanged-reason&version] ___
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionchanged'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+______ test_has_sphinx_docstring[short_docstring-versionchanged-version] _______
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionchanged'
+reason = None, version = '1.2.0', expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[short_docstring-versionchanged-reason&version] _
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionchanged'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+____ test_cls_has_sphinx_docstring[short_docstring-versionchanged-version] _____
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionchanged'
+reason = None, version = '1.2.0', expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+____ test_has_sphinx_docstring[short_docstring-versionadded-reason&version] ____
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionadded'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_______ test_has_sphinx_docstring[short_docstring-versionadded-version] ________
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionadded'
+reason = None, version = '1.2.0', expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+__ test_cls_has_sphinx_docstring[short_docstring-versionadded-reason&version] __
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionadded'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+_____ test_cls_has_sphinx_docstring[short_docstring-versionadded-version] ______
+
+docstring = 'This function adds *x* and *y*.', directive = 'versionadded'
+reason = None, version = '1.2.0', expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+_____ test_has_sphinx_docstring[short_docstring-deprecated-reason&version] _____
+
+docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+________ test_has_sphinx_docstring[short_docstring-deprecated-version] _________
+
+docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
+reason = None, version = '1.2.0', expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+___ test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&version] ___
+
+docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
+reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+______ test_cls_has_sphinx_docstring[short_docstring-deprecated-version] _______
+
+docstring = 'This function adds *x* and *y*.', directive = 'deprecated'
+reason = None, version = '1.2.0', expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+______ test_has_sphinx_docstring[no_docstring-deprecated-reason&version] _______
+
+docstring = None, directive = 'deprecated', reason = 'A good reason'
+version = '1.2.0', expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+__________ test_has_sphinx_docstring[no_docstring-deprecated-version] __________
+
+docstring = None, directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+____ test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&version] _____
+
+docstring = None, directive = 'deprecated', reason = 'A good reason'
+version = '1.2.0', expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+________ test_cls_has_sphinx_docstring[no_docstring-deprecated-version] ________
+
+docstring = None, directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+___ test_has_sphinx_docstring[D213_long_docstring-deprecated-reason&version] ___
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+______ test_has_sphinx_docstring[D213_long_docstring-deprecated-version] _______
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-reason&version] _
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+____ test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-version] _____
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+_ test_has_sphinx_docstring[D213_long_docstring-versionchanged-reason&version] _
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+____ test_has_sphinx_docstring[D213_long_docstring-versionchanged-version] _____
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[D213_long_docstring-versionchanged-reason&version] _
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+__ test_cls_has_sphinx_docstring[D213_long_docstring-versionchanged-version] ___
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+__ test_has_sphinx_docstring[D213_long_docstring-versionadded-reason&version] __
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_____ test_has_sphinx_docstring[D213_long_docstring-versionadded-version] ______
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[D213_long_docstring-versionadded-reason&version] _
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+___ test_cls_has_sphinx_docstring[D213_long_docstring-versionadded-version] ____
+
+docstring = '\n        This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+___ test_has_sphinx_docstring[D212_long_docstring-deprecated-reason&version] ___
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+______ test_has_sphinx_docstring[D212_long_docstring-deprecated-version] _______
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-reason&version] _
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+____ test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-version] _____
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'deprecated', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+_ test_has_sphinx_docstring[D212_long_docstring-versionchanged-reason&version] _
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+____ test_has_sphinx_docstring[D212_long_docstring-versionchanged-version] _____
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[D212_long_docstring-versionchanged-reason&version] _
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+__ test_cls_has_sphinx_docstring[D212_long_docstring-versionchanged-version] ___
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionchanged', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+__ test_has_sphinx_docstring[D212_long_docstring-versionadded-reason&version] __
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_____ test_has_sphinx_docstring[D212_long_docstring-versionadded-version] ______
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The function:
+        def foo(x, y):
+            return x + y
+    
+        # with docstring:
+        foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:81: TypeError
+_ test_cls_has_sphinx_docstring[D212_long_docstring-versionadded-reason&version] _
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = 'A good reason', version = '1.2.0'
+expected = '.. {directive}:: {version}\n   {reason}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+___ test_cls_has_sphinx_docstring[D212_long_docstring-versionadded-version] ____
+
+docstring = 'This function adds *x* and *y*.\n\n        :param x: number *x*\n        :param y: number *y*\n        :return: sum = *x* + *y*\n        '
+directive = 'versionadded', reason = None, version = '1.2.0'
+expected = '.. {directive}:: {version}\n'
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    @pytest.mark.parametrize(
+        "reason, version, expected",
+        [
+            (
+                'A good reason',
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                       {reason}
+                    """
+                ),
+            ),
+            (
+                None,
+                '1.2.0',
+                textwrap.dedent(
+                    """\
+                    .. {directive}:: {version}
+                    """
+                ),
+            ),
+        ],
+        ids=["reason&version", "version"],
+    )
+    def test_cls_has_sphinx_docstring(docstring, directive, reason, version, expected):
+        # The class:
+        class Foo(object):
+            pass
+    
+        # with docstring:
+        Foo.__doc__ = docstring
+    
+        # is decorated with:
+        decorator_factory = getattr(deprecated.sphinx, directive)
+        decorator = decorator_factory(reason=reason, version=version)
+>       Foo = decorator(Foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:148: TypeError
+_________________________ test_warning_msg_has_reason __________________________
+
+    def test_warning_msg_has_reason():
+        reason = "Good reason"
+    
+        @deprecated.sphinx.deprecated(version="4.5.6", reason=reason)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:325: TypeError
+_________________________ test_warning_msg_has_version _________________________
+
+    def test_warning_msg_has_version():
+        version = "1.2.3"
+    
+        @deprecated.sphinx.deprecated(version=version)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:338: TypeError
+___________________________ test_warning_is_ignored ____________________________
+
+    def test_warning_is_ignored():
+        @deprecated.sphinx.deprecated(version="4.5.6", action='ignore')
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:349: TypeError
+______________________ test_specific_warning_cls_is_used _______________________
+
+    def test_specific_warning_cls_is_used():
+        @deprecated.sphinx.deprecated(version="4.5.6", category=MyDeprecationWarning)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:359: TypeError
+__ test_sphinx_syntax_trimming[Use :function:`bar` instead-Use `bar` instead] __
+
+reason = 'Use :function:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        ["reason", "expected"],
+        [
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+        ],
+    )
+    def test_sphinx_syntax_trimming(reason, expected):
+        @deprecated.sphinx.deprecated(version="4.5.6", reason=reason)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:384: TypeError
+__ test_sphinx_syntax_trimming[Use :py:func:`bar` instead-Use `bar` instead] ___
+
+reason = 'Use :py:func:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        ["reason", "expected"],
+        [
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+        ],
+    )
+    def test_sphinx_syntax_trimming(reason, expected):
+        @deprecated.sphinx.deprecated(version="4.5.6", reason=reason)
+>       def foo():
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx.py:384: TypeError
+______ test_get_deprecated_msg[Use :func:`bar` instead-Use `bar` instead] ______
+
+reason = 'Use :func:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+____ test_get_deprecated_msg[Use :function:`bar` instead-Use `bar` instead] ____
+
+reason = 'Use :function:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_____ test_get_deprecated_msg[Use :class:`Baz` instead-Use `Baz` instead] ______
+
+reason = 'Use :class:`Baz` instead', expected = 'Use `Baz` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+______ test_get_deprecated_msg[Use :exc:`Baz` instead-Use `Baz` instead] _______
+
+reason = 'Use :exc:`Baz` instead', expected = 'Use `Baz` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+___ test_get_deprecated_msg[Use :exception:`Baz` instead-Use `Baz` instead] ____
+
+reason = 'Use :exception:`Baz` instead', expected = 'Use `Baz` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+__ test_get_deprecated_msg[Use :meth:`Baz.bar` instead-Use `Baz.bar` instead] __
+
+reason = 'Use :meth:`Baz.bar` instead', expected = 'Use `Baz.bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_ test_get_deprecated_msg[Use :method:`Baz.bar` instead-Use `Baz.bar` instead] _
+
+reason = 'Use :method:`Baz.bar` instead', expected = 'Use `Baz.bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+____ test_get_deprecated_msg[Use :py:func:`bar` instead-Use `bar` instead] _____
+
+reason = 'Use :py:func:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+____ test_get_deprecated_msg[Use :cpp:func:`bar` instead-Use `bar` instead] ____
+
+reason = 'Use :cpp:func:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+____ test_get_deprecated_msg[Use :js:func:`bar` instead-Use `bar` instead] _____
+
+reason = 'Use :js:func:`bar` instead', expected = 'Use `bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_ test_get_deprecated_msg[Use :func:`~pkg.mod.bar` instead-Use `~pkg.mod.bar` instead] _
+
+reason = 'Use :func:`~pkg.mod.bar` instead'
+expected = 'Use `~pkg.mod.bar` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+__________ test_get_deprecated_msg[Use :r:`` instead-Use `` instead] ___________
+
+reason = 'Use :r:`` instead', expected = 'Use `` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_________ test_get_deprecated_msg[Use :d:r:`` instead-Use `` instead] __________
+
+reason = 'Use :d:r:`` instead', expected = 'Use `` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_______ test_get_deprecated_msg[Use :r:`foo` instead-Use `foo` instead] ________
+
+reason = 'Use :r:`foo` instead', expected = 'Use `foo` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+______ test_get_deprecated_msg[Use :d:r:`foo` instead-Use `foo` instead] _______
+
+reason = 'Use :d:r:`foo` instead', expected = 'Use `foo` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_______ test_get_deprecated_msg[Use r:`bad` instead-Use r:`bad` instead] _______
+
+reason = 'Use r:`bad` instead', expected = 'Use r:`bad` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_______ test_get_deprecated_msg[Use ::`bad` instead-Use ::`bad` instead] _______
+
+reason = 'Use ::`bad` instead', expected = 'Use ::`bad` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+______ test_get_deprecated_msg[Use :::`bad` instead-Use :::`bad` instead] ______
+
+reason = 'Use :::`bad` instead', expected = 'Use :::`bad` instead'
+
+    @pytest.mark.parametrize(
+        "reason, expected",
+        [
+            # classic examples using the default domain (Python)
+            ("Use :func:`bar` instead", "Use `bar` instead"),
+            ("Use :function:`bar` instead", "Use `bar` instead"),
+            ("Use :class:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exc:`Baz` instead", "Use `Baz` instead"),
+            ("Use :exception:`Baz` instead", "Use `Baz` instead"),
+            ("Use :meth:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            ("Use :method:`Baz.bar` instead", "Use `Baz.bar` instead"),
+            # other examples using a domain :
+            ("Use :py:func:`bar` instead", "Use `bar` instead"),
+            ("Use :cpp:func:`bar` instead", "Use `bar` instead"),
+            ("Use :js:func:`bar` instead", "Use `bar` instead"),
+            # the reference can have special characters:
+            ("Use :func:`~pkg.mod.bar` instead", "Use `~pkg.mod.bar` instead"),
+            # edge cases:
+            ("Use :r:`` instead", "Use `` instead"),
+            ("Use :d:r:`` instead", "Use `` instead"),
+            ("Use :r:`foo` instead", "Use `foo` instead"),
+            ("Use :d:r:`foo` instead", "Use `foo` instead"),
+            ("Use r:`bad` instead", "Use r:`bad` instead"),
+            ("Use ::`bad` instead", "Use ::`bad` instead"),
+            ("Use :::`bad` instead", "Use :::`bad` instead"),
+        ],
+    )
+    def test_get_deprecated_msg(reason, expected):
+        adapter = deprecated.sphinx.SphinxAdapter("deprecated", reason=reason, version="1")
+        actual = adapter.get_deprecated_msg(lambda: None, None)
+>       assert expected in actual
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_sphinx.py:424: TypeError
+_________ test_decorator_accept_line_length[versionadded-versionadded] _________
+
+decorator_factory = <function versionadded at 0x7ecfdf3d2dd0>
+directive = 'versionadded'
+
+    @pytest.mark.parametrize(
+        "decorator_factory, directive",
+        [
+            (versionadded, "versionadded"),
+            (versionchanged, "versionchanged"),
+            (deprecated, "deprecated"),
+        ],
+    )
+    def test_decorator_accept_line_length(decorator_factory, directive):
+        reason = "bar " * 30
+        decorator = decorator_factory(reason=reason, version="1.2.3", line_length=50)
+    
+        def foo():
+            pass
+    
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_adapter.py:117: TypeError
+_______ test_decorator_accept_line_length[versionchanged-versionchanged] _______
+
+decorator_factory = <function versionchanged at 0x7ecfdf3d2b90>
+directive = 'versionchanged'
+
+    @pytest.mark.parametrize(
+        "decorator_factory, directive",
+        [
+            (versionadded, "versionadded"),
+            (versionchanged, "versionchanged"),
+            (deprecated, "deprecated"),
+        ],
+    )
+    def test_decorator_accept_line_length(decorator_factory, directive):
+        reason = "bar " * 30
+        decorator = decorator_factory(reason=reason, version="1.2.3", line_length=50)
+    
+        def foo():
+            pass
+    
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_adapter.py:117: TypeError
+___________ test_decorator_accept_line_length[deprecated-deprecated] ___________
+
+decorator_factory = <function deprecated at 0x7ecfdf3d31c0>
+directive = 'deprecated'
+
+    @pytest.mark.parametrize(
+        "decorator_factory, directive",
+        [
+            (versionadded, "versionadded"),
+            (versionchanged, "versionchanged"),
+            (deprecated, "deprecated"),
+        ],
+    )
+    def test_decorator_accept_line_length(decorator_factory, directive):
+        reason = "bar " * 30
+        decorator = decorator_factory(reason=reason, version="1.2.3", line_length=50)
+    
+        def foo():
+            pass
+    
+>       foo = decorator(foo)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_adapter.py:117: TypeError
+______________ test_class_deprecation_using_deprecated_decorator _______________
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_class_deprecation_using_deprecated_decorator():
+        @deprecated.sphinx.deprecated(version="7.8.9")
+>       class MyBaseClass(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_class.py:49: TypeError
+_____________ test_subclass_deprecation_using_deprecated_decorator _____________
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_subclass_deprecation_using_deprecated_decorator():
+        @deprecated.sphinx.deprecated(version="7.8.9")
+>       class MyBaseClass(object):
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_class.py:70: TypeError
+_________________________ test_isinstance_versionadded _________________________
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_isinstance_versionadded():
+        # https://github.com/tantale/deprecated/issues/48
+        @deprecated.sphinx.versionadded(version="X.Y", reason="some reason")
+>       class VersionAddedCls:
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_class.py:93: TypeError
+________________________ test_isinstance_versionchanged ________________________
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_isinstance_versionchanged():
+        @deprecated.sphinx.versionchanged(version="X.Y", reason="some reason")
+>       class VersionChangedCls:
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_class.py:110: TypeError
+__________________________ test_isinstance_deprecated __________________________
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_isinstance_deprecated():
+        @deprecated.sphinx.deprecated(version="X.Y", reason="some reason")
+>       class DeprecatedCls:
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_class.py:127: TypeError
+_________________ test_isinstance_versionadded_versionchanged __________________
+
+    @pytest.mark.skipif(
+        sys.version_info < (3, 3), reason="Classes should have mutable docstrings -- resolved in python 3.3"
+    )
+    def test_isinstance_versionadded_versionchanged():
+        @deprecated.sphinx.versionadded(version="X.Y")
+        @deprecated.sphinx.versionchanged(version="X.Y.Z")
+>       class AddedChangedCls:
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_class.py:145: TypeError
+________________________________ test_with_init ________________________________
+
+    def test_with_init():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_metaclass.py:33: TypeError
+________________________________ test_with_new _________________________________
+
+    def test_with_new():
+        @deprecated.classic.deprecated
+        class MyClass(object):
+            def __new__(cls, a, b=5):
+                obj = super(MyClass, cls).__new__(cls)
+                obj.c = 3.14
+                return obj
+    
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_metaclass.py:55: TypeError
+_____________________________ test_with_metaclass ______________________________
+
+    def test_with_metaclass():
+        class Meta(type):
+            def __call__(cls, *args, **kwargs):
+                obj = super(Meta, cls).__call__(*args, **kwargs)
+                obj.c = 3.14
+                return obj
+    
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Meta)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_metaclass.py:79: TypeError
+________________________ test_with_singleton_metaclass _________________________
+
+    def test_with_singleton_metaclass():
+        class Singleton(type):
+            _instances = {}
+    
+            def __call__(cls, *args, **kwargs):
+                if cls not in cls._instances:
+                    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+                return cls._instances[cls]
+    
+        @deprecated.classic.deprecated
+        class MyClass(with_metaclass(Singleton)):
+            def __init__(self, a, b=5):
+                self.a = a
+                self.b = b
+    
+        with warnings.catch_warnings(record=True) as warns:
+            warnings.simplefilter("always")
+>           obj1 = MyClass("five")
+E           TypeError: 'NoneType' object is not callable
+
+tests/test_sphinx_metaclass.py:105: TypeError
+=============================== warnings summary ===============================
+tests/test.py:2
+  /testbed/tests/test.py:2: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+.venv/lib/python3.10/site-packages/pkg_resources/__init__.py:3154
+  /testbed/.venv/lib/python3.10/site-packages/pkg_resources/__init__.py:3154: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------------------------- JSON report ----------------------------------
+report saved to: report.json
+=========================== short test summary info ============================
+FAILED tests/test_deprecated.py::test_classic_deprecated_function__warns[None]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[None]
+FAILED tests/test_deprecated.py::test_classic_deprecated_method__warns[None]
+FAILED tests/test_deprecated.py::test_classic_deprecated_static_method__warns[None]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[None]
+FAILED tests/test_deprecated.py::test_should_raise_type_error - AssertionErro...
+FAILED tests/test_deprecated.py::test_warning_msg_has_reason - TypeError: 'No...
+FAILED tests/test_deprecated.py::test_warning_msg_has_version - TypeError: 'N...
+FAILED tests/test_deprecated.py::test_warning_is_ignored - TypeError: 'NoneTy...
+FAILED tests/test_deprecated.py::test_specific_warning_cls_is_used - TypeErro...
+FAILED tests/test_deprecated.py::test_respect_global_filter - TypeError: 'Non...
+FAILED tests/test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator
+FAILED tests/test_deprecated_class.py::test_class_respect_global_filter - Typ...
+FAILED tests/test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator
+FAILED tests/test_deprecated_class.py::test_simple_class_deprecation_with_args
+FAILED tests/test_deprecated_metaclass.py::test_with_init - TypeError: 'NoneT...
+FAILED tests/test_deprecated_metaclass.py::test_with_new - TypeError: 'NoneTy...
+FAILED tests/test_deprecated_metaclass.py::test_with_metaclass - TypeError: '...
+FAILED tests/test_deprecated_metaclass.py::test_with_singleton_metaclass - Ty...
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D213_long_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D213_long_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-deprecated-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-versionchanged-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-versionchanged-version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_has_sphinx_docstring[D212_long_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-versionadded-reason&version]
+FAILED tests/test_sphinx.py::test_cls_has_sphinx_docstring[D212_long_docstring-versionadded-version]
+FAILED tests/test_sphinx.py::test_warning_msg_has_reason - TypeError: 'NoneTy...
+FAILED tests/test_sphinx.py::test_warning_msg_has_version - TypeError: 'NoneT...
+FAILED tests/test_sphinx.py::test_warning_is_ignored - TypeError: 'NoneType' ...
+FAILED tests/test_sphinx.py::test_specific_warning_cls_is_used - TypeError: '...
+FAILED tests/test_sphinx.py::test_sphinx_syntax_trimming[Use :function:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_sphinx_syntax_trimming[Use :py:func:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :func:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :function:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :class:`Baz` instead-Use `Baz` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :exc:`Baz` instead-Use `Baz` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :exception:`Baz` instead-Use `Baz` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :meth:`Baz.bar` instead-Use `Baz.bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :method:`Baz.bar` instead-Use `Baz.bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :py:func:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :cpp:func:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :js:func:`bar` instead-Use `bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :func:`~pkg.mod.bar` instead-Use `~pkg.mod.bar` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :r:`` instead-Use `` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :d:r:`` instead-Use `` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :r:`foo` instead-Use `foo` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :d:r:`foo` instead-Use `foo` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use r:`bad` instead-Use r:`bad` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use ::`bad` instead-Use ::`bad` instead]
+FAILED tests/test_sphinx.py::test_get_deprecated_msg[Use :::`bad` instead-Use :::`bad` instead]
+FAILED tests/test_sphinx_adapter.py::test_decorator_accept_line_length[versionadded-versionadded]
+FAILED tests/test_sphinx_adapter.py::test_decorator_accept_line_length[versionchanged-versionchanged]
+FAILED tests/test_sphinx_adapter.py::test_decorator_accept_line_length[deprecated-deprecated]
+FAILED tests/test_sphinx_class.py::test_class_deprecation_using_deprecated_decorator
+FAILED tests/test_sphinx_class.py::test_subclass_deprecation_using_deprecated_decorator
+FAILED tests/test_sphinx_class.py::test_isinstance_versionadded - TypeError: ...
+FAILED tests/test_sphinx_class.py::test_isinstance_versionchanged - TypeError...
+FAILED tests/test_sphinx_class.py::test_isinstance_deprecated - TypeError: 'N...
+FAILED tests/test_sphinx_class.py::test_isinstance_versionadded_versionchanged
+FAILED tests/test_sphinx_metaclass.py::test_with_init - TypeError: 'NoneType'...
+FAILED tests/test_sphinx_metaclass.py::test_with_new - TypeError: 'NoneType' ...
+FAILED tests/test_sphinx_metaclass.py::test_with_metaclass - TypeError: 'None...
+FAILED tests/test_sphinx_metaclass.py::test_with_singleton_metaclass - TypeEr...
+ERROR tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function1]
+ERROR tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function2]
+ERROR tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function3]
+ERROR tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function4]
+ERROR tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function5]
+ERROR tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function6]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6]
+ERROR tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method1]
+ERROR tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method2]
+ERROR tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method3]
+ERROR tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method4]
+ERROR tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method5]
+ERROR tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method6]
+ERROR tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method1]
+ERROR tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method2]
+ERROR tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method3]
+ERROR tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method4]
+ERROR tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method5]
+ERROR tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method6]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method1]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method2]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method3]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method4]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method5]
+ERROR tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method6]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function0]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function1]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function2]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function3]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class0]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class1]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class2]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class3]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method0]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method1]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method2]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method3]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2]
+ERROR tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3]
+============ 104 failed, 17 passed, 2 warnings, 50 errors in 3.25s =============

@@ -1,0 +1,2000 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin fastapi - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-fastapi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin fastapi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial003_04pytest_invalid_response_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial003_04.py::test_invalid_response_model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial003_04_py310pytest_invalid_response_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial003_04_py310.py::test_invalid_response_model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_app02pytest_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_app02.py::test_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_app02pytest_override_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_app02.py::test_override_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_main_b_an_py310pytest_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_main_b_an_py310.py::test_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_main_b_an_py39pytest_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_main_b_an_py39.py::test_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_main_b_py310pytest_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_main_b_py310.py::test_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial003pytest_main" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial003.py::test_main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_items_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_items_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_items_with_q_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_items_with_q_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_items_with_params_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_items_with_params_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_users_with_q" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_users_with_q
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_users_with_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_users_with_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_normal_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_normal_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_items_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_items_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_items_with_q_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_items_with_q_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_items_with_params_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_items_with_params_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_users_with_q" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_users_with_q
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_users_with_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_users_with_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_normal_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_normal_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_items_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_items_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_items_with_q_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_items_with_q_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_items_with_params_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_items_with_params_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_users_with_q" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_users_with_q
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_users_with_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_users_with_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_normal_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_normal_app
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-fastapi"><strong>Claude Sonnet 3.5 - Fill-in</strong>: fastapi</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">29</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_tutorial003_04pytest_invalid_response_model">test_tutorial003_04.py::test_invalid_response_model</h3>
+<details><summary> <pre>test_tutorial003_04.py::test_invalid_response_model</pre></summary><pre>
+def test_invalid_response_model():
+        with pytest.raises(FastAPIError):
+>           from docs_src.response_model.tutorial003_04 import app
+
+tests/test_tutorial/test_response_model/test_tutorial003_04.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/response_model/tutorial003_04.py:3: in <module>
+    from fastapi import FastAPI, Response
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial003_04_py310pytest_invalid_response_model">test_tutorial003_04_py310.py::test_invalid_response_model</h3>
+<details><summary> <pre>test_tutorial003_04_py310.py::test_invalid_response_model</pre></summary><pre>
+@needs_py310
+    def test_invalid_response_model():
+        with pytest.raises(FastAPIError):
+>           from docs_src.response_model.tutorial003_04_py310 import app
+
+tests/test_tutorial/test_response_model/test_tutorial003_04_py310.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/response_model/tutorial003_04_py310.py:1: in <module>
+    from fastapi import FastAPI, Response
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_app02pytest_settings">test_app02.py::test_settings</h3>
+<details><summary> <pre>test_app02.py::test_settings</pre></summary><pre>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7eee53d790c0>
+
+    @needs_pydanticv2
+    def test_settings(monkeypatch: MonkeyPatch):
+>       from docs_src.settings.app02 import main
+
+tests/test_tutorial/test_settings/test_app02.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/settings/app02/main.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_app02pytest_override_settings">test_app02.py::test_override_settings</h3>
+<details><summary> <pre>test_app02.py::test_override_settings</pre></summary><pre>
+@needs_pydanticv2
+    def test_override_settings():
+>       from docs_src.settings.app02 import test_main
+
+tests/test_tutorial/test_settings/test_app02.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/settings/app02/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_main_b_an_py310pytest_app">test_main_b_an_py310.py::test_app</h3>
+<details><summary> <pre>test_main_b_an_py310.py::test_app</pre></summary><pre>
+@needs_py310
+    def test_app():
+>       from docs_src.app_testing.app_b_an_py310 import test_main
+
+tests/test_tutorial/test_testing/test_main_b_an_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/app_testing/app_b_an_py310/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_main_b_an_py39pytest_app">test_main_b_an_py39.py::test_app</h3>
+<details><summary> <pre>test_main_b_an_py39.py::test_app</pre></summary><pre>
+@needs_py39
+    def test_app():
+>       from docs_src.app_testing.app_b_an_py39 import test_main
+
+tests/test_tutorial/test_testing/test_main_b_an_py39.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/app_testing/app_b_an_py39/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_main_b_py310pytest_app">test_main_b_py310.py::test_app</h3>
+<details><summary> <pre>test_main_b_py310.py::test_app</pre></summary><pre>
+@needs_py310
+    def test_app():
+>       from docs_src.app_testing.app_b_py310 import test_main
+
+tests/test_tutorial/test_testing/test_main_b_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/app_testing/app_b_py310/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial003pytest_main">test_tutorial003.py::test_main</h3>
+<details><summary> <pre>test_tutorial003.py::test_main</pre></summary><pre>
+def test_main():
+        with pytest.warns(DeprecationWarning):
+>           from docs_src.app_testing.tutorial003 import test_read_items
+
+tests/test_tutorial/test_testing/test_tutorial003.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/app_testing/tutorial003.py:1: in <module>
+    from fastapi import FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+
+During handling of the above exception, another exception occurred:
+
+    def test_main():
+>       with pytest.warns(DeprecationWarning):
+E       Failed: DID NOT WARN. No warnings of type (<class 'DeprecationWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+tests/test_tutorial/test_testing/test_tutorial003.py:5: Failed
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_items_run">test_tutorial001_an_py310.py::test_override_in_items_run</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_items_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_run():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import test_override_in_items
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_items_with_q_run">test_tutorial001_an_py310.py::test_override_in_items_with_q_run</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_items_with_q_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_q_run():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import (
+            test_override_in_items_with_q,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_items_with_params_run">test_tutorial001_an_py310.py::test_override_in_items_with_params_run</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_items_with_params_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_params_run():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import (
+            test_override_in_items_with_params,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_users">test_tutorial001_an_py310.py::test_override_in_users</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_users</pre></summary><pre>
+@needs_py310
+    def test_override_in_users():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_users_with_q">test_tutorial001_an_py310.py::test_override_in_users_with_q</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_users_with_q</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_q():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_users_with_params">test_tutorial001_an_py310.py::test_override_in_users_with_params</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_users_with_params</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_params():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_normal_app">test_tutorial001_an_py310.py::test_normal_app</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_normal_app</pre></summary><pre>
+@needs_py310
+    def test_normal_app():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import app, client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_items_run">test_tutorial001_an_py39.py::test_override_in_items_run</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_items_run</pre></summary><pre>
+@needs_py39
+    def test_override_in_items_run():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import test_override_in_items
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_items_with_q_run">test_tutorial001_an_py39.py::test_override_in_items_with_q_run</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_items_with_q_run</pre></summary><pre>
+@needs_py39
+    def test_override_in_items_with_q_run():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import (
+            test_override_in_items_with_q,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_items_with_params_run">test_tutorial001_an_py39.py::test_override_in_items_with_params_run</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_items_with_params_run</pre></summary><pre>
+@needs_py39
+    def test_override_in_items_with_params_run():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import (
+            test_override_in_items_with_params,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_users">test_tutorial001_an_py39.py::test_override_in_users</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_users</pre></summary><pre>
+@needs_py39
+    def test_override_in_users():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_users_with_q">test_tutorial001_an_py39.py::test_override_in_users_with_q</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_users_with_q</pre></summary><pre>
+@needs_py39
+    def test_override_in_users_with_q():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_users_with_params">test_tutorial001_an_py39.py::test_override_in_users_with_params</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_users_with_params</pre></summary><pre>
+@needs_py39
+    def test_override_in_users_with_params():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_normal_app">test_tutorial001_an_py39.py::test_normal_app</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_normal_app</pre></summary><pre>
+@needs_py39
+    def test_normal_app():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import app, client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_items_run">test_tutorial001_py310.py::test_override_in_items_run</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_items_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_run():
+>       from docs_src.dependency_testing.tutorial001_py310 import test_override_in_items
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_items_with_q_run">test_tutorial001_py310.py::test_override_in_items_with_q_run</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_items_with_q_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_q_run():
+>       from docs_src.dependency_testing.tutorial001_py310 import (
+            test_override_in_items_with_q,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_items_with_params_run">test_tutorial001_py310.py::test_override_in_items_with_params_run</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_items_with_params_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_params_run():
+>       from docs_src.dependency_testing.tutorial001_py310 import (
+            test_override_in_items_with_params,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_users">test_tutorial001_py310.py::test_override_in_users</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_users</pre></summary><pre>
+@needs_py310
+    def test_override_in_users():
+>       from docs_src.dependency_testing.tutorial001_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_users_with_q">test_tutorial001_py310.py::test_override_in_users_with_q</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_users_with_q</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_q():
+>       from docs_src.dependency_testing.tutorial001_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_users_with_params">test_tutorial001_py310.py::test_override_in_users_with_params</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_users_with_params</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_params():
+>       from docs_src.dependency_testing.tutorial001_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_normal_app">test_tutorial001_py310.py::test_normal_app</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_normal_app</pre></summary><pre>
+@needs_py310
+    def test_normal_app():
+>       from docs_src.dependency_testing.tutorial001_py310 import app, client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/fastapi/background.py b/fastapi/background.py</span>
+<span class="gh">index 368be9bc..10d3f1ec 100644</span>
+<span class="gd">--- a/fastapi/background.py</span>
+<span class="gi">+++ b/fastapi/background.py</span>
+<span class="gu">@@ -46,4 +46,4 @@ class BackgroundTasks(StarletteBackgroundTasks):</span>
+<span class="w"> </span>        Read more about it in the
+<span class="w"> </span>        [FastAPI docs for Background Tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/).
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        super().add_task(func, *args, **kwargs)</span>
+<span class="gh">diff --git a/fastapi/datastructures.py b/fastapi/datastructures.py</span>
+<span class="gh">index e6043019..8f03ea18 100644</span>
+<span class="gd">--- a/fastapi/datastructures.py</span>
+<span class="gi">+++ b/fastapi/datastructures.py</span>
+<span class="gu">@@ -63,7 +63,7 @@ class UploadFile(StarletteUploadFile):</span>
+
+<span class="w"> </span>        To be awaitable, compatible with async, this is run in threadpool.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        await self._run_in_threadpool(self.file.write, data)</span>
+
+<span class="w"> </span>    async def read(self, size: Annotated[int, Doc(
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -75,7 +75,7 @@ class UploadFile(StarletteUploadFile):</span>
+
+<span class="w"> </span>        To be awaitable, compatible with async, this is run in threadpool.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return await self._run_in_threadpool(self.file.read, size)</span>
+
+<span class="w"> </span>    async def seek(self, offset: Annotated[int, Doc(
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -89,7 +89,7 @@ class UploadFile(StarletteUploadFile):</span>
+
+<span class="w"> </span>        To be awaitable, compatible with async, this is run in threadpool.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        await self._run_in_threadpool(self.file.seek, offset)</span>
+
+<span class="w"> </span>    async def close(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -97,7 +97,7 @@ class UploadFile(StarletteUploadFile):</span>
+
+<span class="w"> </span>        To be awaitable, compatible with async, this is run in threadpool.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        await self._run_in_threadpool(self.file.close)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def __get_validators__(cls: Type[&#39;UploadFile&#39;]) -&gt;Iterable[Callable[...,
+<span class="gu">@@ -148,4 +148,4 @@ def Default(value: DefaultType) -&gt;DefaultType:</span>
+<span class="w"> </span>    It&#39;s used internally to recognize when a default value has been overwritten, even
+<span class="w"> </span>    if the overridden default value was truthy.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return cast(DefaultType, DefaultPlaceholder(value))</span>
+<span class="gh">diff --git a/fastapi/encoders.py b/fastapi/encoders.py</span>
+<span class="gh">index 66986830..e6a4b4a7 100644</span>
+<span class="gd">--- a/fastapi/encoders.py</span>
+<span class="gi">+++ b/fastapi/encoders.py</span>
+<span class="gu">@@ -33,7 +33,10 @@ def decimal_encoder(dec_value: Decimal) -&gt;Union[int, float]:</span>
+<span class="w"> </span>    &gt;&gt;&gt; decimal_encoder(Decimal(&quot;1&quot;))
+<span class="w"> </span>    1
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if dec_value.as_tuple().exponent == 0:</span>
+<span class="gi">+        return int(dec_value)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return float(dec_value)</span>
+
+
+<span class="w"> </span>ENCODERS_BY_TYPE: Dict[Type[Any], Callable[[Any], Any]] = {bytes: lambda o:
+<span class="gu">@@ -114,4 +117,100 @@ def jsonable_encoder(obj: Annotated[Any, Doc(</span>
+<span class="w"> </span>    Read more about it in the
+<span class="w"> </span>    [FastAPI docs for JSON Compatible Encoder](https://fastapi.tiangolo.com/tutorial/encoder/).
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if custom_encoder is None:</span>
+<span class="gi">+        custom_encoder = {}</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(obj, BaseModel):</span>
+<span class="gi">+        encoder = getattr(obj.__config__, &quot;json_encoders&quot;, {})</span>
+<span class="gi">+        if custom_encoder:</span>
+<span class="gi">+            encoder.update(custom_encoder)</span>
+<span class="gi">+        return _model_dump(</span>
+<span class="gi">+            obj,</span>
+<span class="gi">+            mode=&quot;json&quot;,</span>
+<span class="gi">+            include=include,</span>
+<span class="gi">+            exclude=exclude,</span>
+<span class="gi">+            by_alias=by_alias,</span>
+<span class="gi">+            exclude_unset=exclude_unset,</span>
+<span class="gi">+            exclude_defaults=exclude_defaults,</span>
+<span class="gi">+            exclude_none=exclude_none,</span>
+<span class="gi">+            custom_encoder=encoder,</span>
+<span class="gi">+        )</span>
+<span class="gi">+    </span>
+<span class="gi">+    if dataclasses.is_dataclass(obj):</span>
+<span class="gi">+        return dataclasses.asdict(obj)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(obj, Enum):</span>
+<span class="gi">+        return obj.value</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(obj, PurePath):</span>
+<span class="gi">+        return str(obj)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(obj, (str, int, float, type(None))):</span>
+<span class="gi">+        return obj</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(obj, dict):</span>
+<span class="gi">+        encoded_dict = {}</span>
+<span class="gi">+        for key, value in obj.items():</span>
+<span class="gi">+            if isinstance(key, bytes):</span>
+<span class="gi">+                encoded_key = key.decode()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                encoded_key = jsonable_encoder(</span>
+<span class="gi">+                    key,</span>
+<span class="gi">+                    by_alias=by_alias,</span>
+<span class="gi">+                    exclude_unset=exclude_unset,</span>
+<span class="gi">+                    exclude_defaults=exclude_defaults,</span>
+<span class="gi">+                    exclude_none=exclude_none,</span>
+<span class="gi">+                    custom_encoder=custom_encoder,</span>
+<span class="gi">+                    sqlalchemy_safe=sqlalchemy_safe,</span>
+<span class="gi">+                )</span>
+<span class="gi">+            encoded_value = jsonable_encoder(</span>
+<span class="gi">+                value,</span>
+<span class="gi">+                by_alias=by_alias,</span>
+<span class="gi">+                exclude_unset=exclude_unset,</span>
+<span class="gi">+                exclude_defaults=exclude_defaults,</span>
+<span class="gi">+                exclude_none=exclude_none,</span>
+<span class="gi">+                custom_encoder=custom_encoder,</span>
+<span class="gi">+                sqlalchemy_safe=sqlalchemy_safe,</span>
+<span class="gi">+            )</span>
+<span class="gi">+            encoded_dict[encoded_key] = encoded_value</span>
+<span class="gi">+        return encoded_dict</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(obj, (list, set, frozenset, GeneratorType, tuple)):</span>
+<span class="gi">+        return [</span>
+<span class="gi">+            jsonable_encoder(</span>
+<span class="gi">+                item,</span>
+<span class="gi">+                include=include,</span>
+<span class="gi">+                exclude=exclude,</span>
+<span class="gi">+                by_alias=by_alias,</span>
+<span class="gi">+                exclude_unset=exclude_unset,</span>
+<span class="gi">+                exclude_defaults=exclude_defaults,</span>
+<span class="gi">+                exclude_none=exclude_none,</span>
+<span class="gi">+                custom_encoder=custom_encoder,</span>
+<span class="gi">+                sqlalchemy_safe=sqlalchemy_safe,</span>
+<span class="gi">+            )</span>
+<span class="gi">+            for item in obj</span>
+<span class="gi">+        ]</span>
+<span class="gi">+    </span>
+<span class="gi">+    if type(obj) in ENCODERS_BY_TYPE:</span>
+<span class="gi">+        return ENCODERS_BY_TYPE[type(obj)](obj)</span>
+<span class="gi">+    </span>
+<span class="gi">+    for encoder, classes_tuple in encoders_by_class_tuples:</span>
+<span class="gi">+        if isinstance(obj, classes_tuple):</span>
+<span class="gi">+            return encoder(obj)</span>
+<span class="gi">+    </span>
+<span class="gi">+    try:</span>
+<span class="gi">+        data = dict(obj)</span>
+<span class="gi">+    except Exception:</span>
+<span class="gi">+        return str(obj)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return jsonable_encoder(</span>
+<span class="gi">+        data,</span>
+<span class="gi">+        include=include,</span>
+<span class="gi">+        exclude=exclude,</span>
+<span class="gi">+        by_alias=by_alias,</span>
+<span class="gi">+        exclude_unset=exclude_unset,</span>
+<span class="gi">+        exclude_defaults=exclude_defaults,</span>
+<span class="gi">+        exclude_none=exclude_none,</span>
+<span class="gi">+        custom_encoder=custom_encoder,</span>
+<span class="gi">+        sqlalchemy_safe=sqlalchemy_safe,</span>
+<span class="gi">+    )</span>
+<span class="gh">diff --git a/fastapi/openapi/docs.py b/fastapi/openapi/docs.py</span>
+<span class="gh">index a9c03e54..f7c0cdf0 100644</span>
+<span class="gd">--- a/fastapi/openapi/docs.py</span>
+<span class="gi">+++ b/fastapi/openapi/docs.py</span>
+<span class="gu">@@ -71,7 +71,43 @@ def get_swagger_ui_html(*, openapi_url: Annotated[str, Doc(</span>
+<span class="w"> </span>    [FastAPI docs for Configure Swagger UI](https://fastapi.tiangolo.com/how-to/configure-swagger-ui/)
+<span class="w"> </span>    and the [FastAPI docs for Custom Docs UI Static Assets (Self-Hosting)](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/).
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if swagger_ui_parameters is None:</span>
+<span class="gi">+        swagger_ui_parameters = swagger_ui_default_parameters</span>
+<span class="gi">+</span>
+<span class="gi">+    html = f&quot;&quot;&quot;</span>
+<span class="gi">+    &lt;!DOCTYPE html&gt;</span>
+<span class="gi">+    &lt;html&gt;</span>
+<span class="gi">+    &lt;head&gt;</span>
+<span class="gi">+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{swagger_css_url}&quot;&gt;</span>
+<span class="gi">+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;{swagger_favicon_url}&quot;&gt;</span>
+<span class="gi">+    &lt;title&gt;{title}&lt;/title&gt;</span>
+<span class="gi">+    &lt;/head&gt;</span>
+<span class="gi">+    &lt;body&gt;</span>
+<span class="gi">+    &lt;div id=&quot;swagger-ui&quot;&gt;</span>
+<span class="gi">+    &lt;/div&gt;</span>
+<span class="gi">+    &lt;script src=&quot;{swagger_js_url}&quot;&gt;&lt;/script&gt;</span>
+<span class="gi">+    &lt;!-- `SwaggerUIBundle` is now available on the page --&gt;</span>
+<span class="gi">+    &lt;script&gt;</span>
+<span class="gi">+    const ui = SwaggerUIBundle({{</span>
+<span class="gi">+        url: &#39;{openapi_url}&#39;,</span>
+<span class="gi">+        oauth2RedirectUrl: {json.dumps(oauth2_redirect_url)},</span>
+<span class="gi">+        dom_id: &#39;#swagger-ui&#39;,</span>
+<span class="gi">+        presets: [</span>
+<span class="gi">+        SwaggerUIBundle.presets.apis,</span>
+<span class="gi">+        SwaggerUIBundle.SwaggerUIStandalonePreset</span>
+<span class="gi">+        ],</span>
+<span class="gi">+        layout: &quot;BaseLayout&quot;,</span>
+<span class="gi">+        deepLinking: true,</span>
+<span class="gi">+        showExtensions: true,</span>
+<span class="gi">+        showCommonExtensions: true,</span>
+<span class="gi">+        {f&quot;initOAuth: {json.dumps(jsonable_encoder(init_oauth))},&quot; if init_oauth else &quot;&quot;}</span>
+<span class="gi">+        ...{json.dumps(swagger_ui_parameters)}</span>
+<span class="gi">+    }})</span>
+<span class="gi">+    &lt;/script&gt;</span>
+<span class="gi">+    &lt;/body&gt;</span>
+<span class="gi">+    &lt;/html&gt;</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return HTMLResponse(html)</span>
+
+
+<span class="w"> </span>def get_redoc_html(*, openapi_url: Annotated[str, Doc(
+<span class="gu">@@ -113,7 +149,38 @@ def get_redoc_html(*, openapi_url: Annotated[str, Doc(</span>
+<span class="w"> </span>    Read more about it in the
+<span class="w"> </span>    [FastAPI docs for Custom Docs UI Static Assets (Self-Hosting)](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/).
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    html = f&quot;&quot;&quot;</span>
+<span class="gi">+    &lt;!DOCTYPE html&gt;</span>
+<span class="gi">+    &lt;html&gt;</span>
+<span class="gi">+    &lt;head&gt;</span>
+<span class="gi">+    &lt;title&gt;{title}&lt;/title&gt;</span>
+<span class="gi">+    &lt;!-- needed for adaptive design --&gt;</span>
+<span class="gi">+    &lt;meta charset=&quot;utf-8&quot;/&gt;</span>
+<span class="gi">+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if with_google_fonts:</span>
+<span class="gi">+        html += &quot;&quot;&quot;</span>
+<span class="gi">+    &lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&quot; rel=&quot;stylesheet&quot;&gt;</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    html += f&quot;&quot;&quot;</span>
+<span class="gi">+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;{redoc_favicon_url}&quot;&gt;</span>
+<span class="gi">+    &lt;!--</span>
+<span class="gi">+    ReDoc doesn&#39;t change outer page styles</span>
+<span class="gi">+    --&gt;</span>
+<span class="gi">+    &lt;style&gt;</span>
+<span class="gi">+      body {{</span>
+<span class="gi">+        margin: 0;</span>
+<span class="gi">+        padding: 0;</span>
+<span class="gi">+      }}</span>
+<span class="gi">+    &lt;/style&gt;</span>
+<span class="gi">+    &lt;/head&gt;</span>
+<span class="gi">+    &lt;body&gt;</span>
+<span class="gi">+    &lt;redoc spec-url=&quot;{openapi_url}&quot;&gt;&lt;/redoc&gt;</span>
+<span class="gi">+    &lt;script src=&quot;{redoc_js_url}&quot;&gt; &lt;/script&gt;</span>
+<span class="gi">+    &lt;/body&gt;</span>
+<span class="gi">+    &lt;/html&gt;</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return HTMLResponse(html)</span>
+
+
+<span class="w"> </span>def get_swagger_ui_oauth2_redirect_html() -&gt;HTMLResponse:
+<span class="gu">@@ -122,4 +189,73 @@ def get_swagger_ui_oauth2_redirect_html() -&gt;HTMLResponse:</span>
+
+<span class="w"> </span>    You normally don&#39;t need to use or change this.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    html = &quot;&quot;&quot;</span>
+<span class="gi">+    &lt;!DOCTYPE html&gt;</span>
+<span class="gi">+    &lt;html lang=&quot;en-US&quot;&gt;</span>
+<span class="gi">+    &lt;body onload=&quot;run()&quot;&gt;</span>
+<span class="gi">+    &lt;/body&gt;</span>
+<span class="gi">+    &lt;/html&gt;</span>
+<span class="gi">+    &lt;script&gt;</span>
+<span class="gi">+        &#39;use strict&#39;;</span>
+<span class="gi">+        function run () {</span>
+<span class="gi">+            var oauth2 = window.opener.swaggerUIRedirectOauth2;</span>
+<span class="gi">+            var sentState = oauth2.state;</span>
+<span class="gi">+            var redirectUrl = oauth2.redirectUrl;</span>
+<span class="gi">+            var isValid, qp, arr;</span>
+<span class="gi">+</span>
+<span class="gi">+            if (/code|token|error/.test(window.location.hash)) {</span>
+<span class="gi">+                qp = window.location.hash.substring(1);</span>
+<span class="gi">+            } else {</span>
+<span class="gi">+                qp = location.search.substring(1);</span>
+<span class="gi">+            }</span>
+<span class="gi">+</span>
+<span class="gi">+            arr = qp.split(&quot;&amp;&quot;)</span>
+<span class="gi">+            arr.forEach(function (v,i,_arr) { _arr[i] = &#39;&quot;&#39; + v.replace(&#39;=&#39;, &#39;&quot;:&quot;&#39;) + &#39;&quot;&#39;;})</span>
+<span class="gi">+            qp = qp ? JSON.parse(&#39;{&#39; + arr.join() + &#39;}&#39;,</span>
+<span class="gi">+                    function (key, value) {</span>
+<span class="gi">+                        return key === &quot;&quot; ? value : decodeURIComponent(value)</span>
+<span class="gi">+                    }</span>
+<span class="gi">+            ) : {}</span>
+<span class="gi">+</span>
+<span class="gi">+            isValid = qp.state === sentState</span>
+<span class="gi">+</span>
+<span class="gi">+            if ((</span>
+<span class="gi">+            oauth2.auth.schema.get(&quot;flow&quot;) === &quot;accessCode&quot;||</span>
+<span class="gi">+            oauth2.auth.schema.get(&quot;flow&quot;) === &quot;authorizationCode&quot;</span>
+<span class="gi">+            ) &amp;&amp; !oauth2.auth.code) {</span>
+<span class="gi">+                if (!isValid) {</span>
+<span class="gi">+                    oauth2.errCb({</span>
+<span class="gi">+                        authId: oauth2.auth.name,</span>
+<span class="gi">+                        source: &quot;auth&quot;,</span>
+<span class="gi">+                        level: &quot;warning&quot;,</span>
+<span class="gi">+                        message: &quot;Authorization may be unsafe, passed state was changed in server Passed state wasn&#39;t returned from auth server&quot;</span>
+<span class="gi">+                    });</span>
+<span class="gi">+                }</span>
+<span class="gi">+</span>
+<span class="gi">+                if (qp.code) {</span>
+<span class="gi">+                    delete oauth2.state;</span>
+<span class="gi">+                    oauth2.auth.code = qp.code;</span>
+<span class="gi">+                    oauth2.callback({auth: oauth2.auth, redirectUrl: redirectUrl});</span>
+<span class="gi">+                } else {</span>
+<span class="gi">+                    let oauthErrorMsg</span>
+<span class="gi">+                    if (qp.error) {</span>
+<span class="gi">+                        oauthErrorMsg = &quot;[&quot;+qp.error+&quot;]: &quot; +</span>
+<span class="gi">+                            (qp.error_description ? qp.error_description+ &quot;. &quot; : &quot;no accessCode received from the server. &quot;) +</span>
+<span class="gi">+                            (qp.error_uri ? &quot;More info: &quot;+qp.error_uri : &quot;&quot;);</span>
+<span class="gi">+                    }</span>
+<span class="gi">+</span>
+<span class="gi">+                    oauth2.errCb({</span>
+<span class="gi">+                        authId: oauth2.auth.name,</span>
+<span class="gi">+                        source: &quot;auth&quot;,</span>
+<span class="gi">+                        level: &quot;error&quot;,</span>
+<span class="gi">+                        message: oauthErrorMsg || &quot;[Authorization failed]: no accessCode received from the server&quot;</span>
+<span class="gi">+                    });</span>
+<span class="gi">+                }</span>
+<span class="gi">+            } else {</span>
+<span class="gi">+                oauth2.callback({auth: oauth2.auth, token: qp, isValid: isValid, redirectUrl: redirectUrl});</span>
+<span class="gi">+            }</span>
+<span class="gi">+            window.close();</span>
+<span class="gi">+        }</span>
+<span class="gi">+    &lt;/script&gt;</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return HTMLResponse(content=html)</span>
+<span class="gh">diff --git a/fastapi/param_functions.py b/fastapi/param_functions.py</span>
+<span class="gh">index 298d63fa..c99dc23d 100644</span>
+<span class="gd">--- a/fastapi/param_functions.py</span>
+<span class="gi">+++ b/fastapi/param_functions.py</span>
+<span class="gu">@@ -180,7 +180,37 @@ def Path(default: Annotated[Any, Doc(</span>
+<span class="w"> </span>        return {&quot;item_id&quot;: item_id}
+<span class="w"> </span>    ```
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return params.Path(</span>
+<span class="gi">+        default=default,</span>
+<span class="gi">+        default_factory=default_factory,</span>
+<span class="gi">+        alias=alias,</span>
+<span class="gi">+        alias_priority=alias_priority,</span>
+<span class="gi">+        validation_alias=validation_alias,</span>
+<span class="gi">+        serialization_alias=serialization_alias,</span>
+<span class="gi">+        title=title,</span>
+<span class="gi">+        description=description,</span>
+<span class="gi">+        gt=gt,</span>
+<span class="gi">+        ge=ge,</span>
+<span class="gi">+        lt=lt,</span>
+<span class="gi">+        le=le,</span>
+<span class="gi">+        min_length=min_length,</span>
+<span class="gi">+        max_length=max_length,</span>
+<span class="gi">+        pattern=pattern,</span>
+<span class="gi">+        regex=regex,</span>
+<span class="gi">+        discriminator=discriminator,</span>
+<span class="gi">+        strict=strict,</span>
+<span class="gi">+        multiple_of=multiple_of,</span>
+<span class="gi">+        allow_inf_nan=allow_inf_nan,</span>
+<span class="gi">+        max_digits=max_digits,</span>
+<span class="gi">+        decimal_places=decimal_places,</span>
+<span class="gi">+        examples=examples,</span>
+<span class="gi">+        example=example,</span>
+<span class="gi">+        openapi_examples=openapi_examples,</span>
+<span class="gi">+        deprecated=deprecated,</span>
+<span class="gi">+        include_in_schema=include_in_schema,</span>
+<span class="gi">+        json_schema_extra=json_schema_extra,</span>
+<span class="gi">+        **extra</span>
+<span class="gi">+    )</span>
+
+
+<span class="w"> </span>def Depends(dependency: Annotated[Optional[Callable[..., Any]], Doc(
+<span class="gu">@@ -230,7 +260,7 @@ def Depends(dependency: Annotated[Optional[Callable[..., Any]], Doc(</span>
+<span class="w"> </span>        return commons
+<span class="w"> </span>    ```
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return params.Depends(dependency=dependency, use_cache=use_cache)</span>
+
+
+<span class="w"> </span>def Security(dependency: Annotated[Optional[Callable[..., Any]], Doc(
+<span class="gu">@@ -299,4 +329,4 @@ def Security(dependency: Annotated[Optional[Callable[..., Any]], Doc(</span>
+<span class="w"> </span>        return [{&quot;item_id&quot;: &quot;Foo&quot;, &quot;owner&quot;: current_user.username}]
+<span class="w"> </span>    ```
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return params.Security(dependency=dependency, scopes=scopes, use_cache=use_cache)</span>
+<span class="gh">diff --git a/fastapi/utils.py b/fastapi/utils.py</span>
+<span class="gh">index a742b860..cd0b7efd 100644</span>
+<span class="gd">--- a/fastapi/utils.py</span>
+<span class="gi">+++ b/fastapi/utils.py</span>
+<span class="gu">@@ -24,7 +24,33 @@ def create_response_field(name: str, type_: Type[Any], class_validators:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Create a new response field. Raises if type_ is invalid.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        if PYDANTIC_V2:</span>
+<span class="gi">+            from pydantic.fields import FieldInfo as PydanticFieldInfo</span>
+<span class="gi">+            field_info = field_info or PydanticFieldInfo()</span>
+<span class="gi">+            return ModelField(</span>
+<span class="gi">+                name=name,</span>
+<span class="gi">+                type_=type_,</span>
+<span class="gi">+                class_validators=class_validators,</span>
+<span class="gi">+                default=default,</span>
+<span class="gi">+                required=required,</span>
+<span class="gi">+                model_config=model_config,</span>
+<span class="gi">+                field_info=field_info,</span>
+<span class="gi">+                alias=alias,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return ModelField(</span>
+<span class="gi">+                name=name,</span>
+<span class="gi">+                type_=type_,</span>
+<span class="gi">+                class_validators=class_validators,</span>
+<span class="gi">+                default=default,</span>
+<span class="gi">+                required=required,</span>
+<span class="gi">+                model_config=model_config,</span>
+<span class="gi">+                field_info=field_info,</span>
+<span class="gi">+                alias=alias,</span>
+<span class="gi">+            )</span>
+<span class="gi">+    except PydanticSchemaGenerationError as e:</span>
+<span class="gi">+        raise ValueError(f&quot;Invalid type for response field: {e}&quot;)</span>
+
+
+<span class="w"> </span>def get_value_or_default(first_item: Union[DefaultPlaceholder, DefaultType],
+<span class="gu">@@ -37,4 +63,7 @@ def get_value_or_default(first_item: Union[DefaultPlaceholder, DefaultType],</span>
+
+<span class="w"> </span>    Otherwise, the first item (a `DefaultPlaceholder`) will be returned.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for item in (first_item, *extra_items):</span>
+<span class="gi">+        if not isinstance(item, DefaultPlaceholder):</span>
+<span class="gi">+            return item</span>
+<span class="gi">+    return first_item</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

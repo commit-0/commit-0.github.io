@@ -1,0 +1,294 @@
+diff --git a/wcwidth/unicode_versions.py b/wcwidth/unicode_versions.py
+index 6fa22b3..272027c 100644
+--- a/wcwidth/unicode_versions.py
++++ b/wcwidth/unicode_versions.py
+@@ -14,4 +14,5 @@ def list_versions():
+     :returns: Supported Unicode version numbers in ascending sorted order.
+     :rtype: list[str]
+     """
+-    pass
+\ No newline at end of file
++    from .table_zero import ZERO_WIDTH
++    return sorted(ZERO_WIDTH.keys(), key=lambda x: tuple(map(int, x.split('.'))))
+\ No newline at end of file
+diff --git a/wcwidth/wcwidth.py b/wcwidth/wcwidth.py
+index c5ddc4c..bc54eb1 100644
+--- a/wcwidth/wcwidth.py
++++ b/wcwidth/wcwidth.py
+@@ -84,7 +84,21 @@ def _bisearch(ucs, table):
+     :rtype: int
+     :returns: 1 if ordinal value ucs is found within lookup table, else 0.
+     """
+-    pass
++    min = 0
++    max = len(table) - 1
++    if ucs < table[0][0] or ucs > table[max][1]:
++        return 0
++
++    while max >= min:
++        mid = (min + max) // 2
++        if ucs > table[mid][1]:
++            min = mid + 1
++        elif ucs < table[mid][0]:
++            max = mid - 1
++        else:
++            return 1
++
++    return 0
+ 
+ @lru_cache(maxsize=1000)
+ def wcwidth(wc, unicode_version='auto'):
+@@ -109,7 +123,60 @@ def wcwidth(wc, unicode_version='auto'):
+ 
+     See :ref:`Specification` for details of cell measurement.
+     """
+-    pass
++    ucs = ord(wc) if len(wc) else 0
++
++    # Handle special cases first
++    if ucs == 0:
++        return 0
++
++    if ucs < 32 or (0x7f <= ucs < 0xa0):
++        return -1
++
++    # Handle zero-width characters
++    version = _wcmatch_version(unicode_version)
++    if _bisearch(ucs, ZERO_WIDTH[version]):
++        return 0
++
++    # Handle zero-width joiner and variation selectors
++    if ucs == 0x200D:  # ZERO WIDTH JOINER
++        return 0
++    if ucs == 0xFE0F:  # VARIATION SELECTOR-16
++        return 0
++
++    # VS16_NARROW_TO_WIDE and WIDE_EASTASIAN might not have all versions
++    # In that case, use the closest available version
++    vs16_version = version
++    if version not in VS16_NARROW_TO_WIDE:
++        vs16_versions = sorted(VS16_NARROW_TO_WIDE.keys(), key=_wcversion_value)
++        vs16_version = vs16_versions[0]  # Use earliest version for VS16
++        for v in vs16_versions:
++            if _wcversion_value(v) <= _wcversion_value(version):
++                vs16_version = v
++                break
++
++    wide_version = version
++    if version not in WIDE_EASTASIAN:
++        wide_versions = sorted(WIDE_EASTASIAN.keys(), key=_wcversion_value)
++        wide_version = wide_versions[0]  # Use earliest version for WIDE
++        for v in wide_versions:
++            if _wcversion_value(v) <= _wcversion_value(version):
++                wide_version = v
++                break
++
++    # For VS16 sequences and special characters, use version-specific behavior
++    if _bisearch(ucs, VS16_NARROW_TO_WIDE[vs16_version]):
++        # Before Unicode 9.0, VS16 sequences were treated as narrow
++        if _wcversion_value(version) <= _wcversion_value('8.0.0'):
++            return 1
++        # After Unicode 9.0, VS16 sequences are treated as wide
++        return 1
++
++    # For other characters, use the version-specific wide table
++    if _bisearch(ucs, WIDE_EASTASIAN[wide_version]):
++        return 2
++
++    # Default to narrow width
++    return 1
+ 
+ def wcswidth(pwcs, n=None, unicode_version='auto'):
+     """
+@@ -132,7 +199,115 @@ def wcswidth(pwcs, n=None, unicode_version='auto'):
+ 
+     See :ref:`Specification` for details of cell measurement.
+     """
+-    pass
++    if not pwcs:
++        return 0
++
++    if n is None:
++        n = len(pwcs)
++    else:
++        n = min(n, len(pwcs))
++
++    # Find all sequences first
++    sequences = []
++    i = 0
++    while i < n:
++        # Check for control characters
++        ucs = ord(pwcs[i])
++        if ucs != 0 and (ucs < 32 or (0x7f <= ucs < 0xa0)):
++            return -1
++
++        # Check for ZWJ sequence
++        if i + 1 < n and ord(pwcs[i + 1]) == 0x200D:  # ZWJ
++            start = i
++            j = i + 2
++            while j < n:
++                if j + 1 < n and ord(pwcs[j + 1]) == 0x200D:
++                    j += 2
++                elif j < n and (ord(pwcs[j]) == 0x200D or ord(pwcs[j]) == 0xFE0F):
++                    j += 1
++                else:
++                    break
++            sequences.append((start, j + 1, 'zwj'))
++            i = j + 1
++            continue
++
++        # Check for VS16 sequence
++        if i + 1 < n and ord(pwcs[i + 1]) == 0xFE0F:  # VS16
++            sequences.append((i, i + 2, 'vs16'))
++            i += 2
++            continue
++
++        i += 1
++
++    # Now calculate width
++    width = 0
++    i = 0
++    while i < n:
++        # Check if this position starts a sequence
++        is_sequence_start = False
++        for start, end, seq_type in sequences:
++            if i == start:
++                if seq_type == 'vs16':
++                    # VS16 sequence is treated as width 1 before Unicode 9.0
++                    if _wcversion_value(unicode_version) <= _wcversion_value('8.0.0'):
++                        width += 1
++                    else:
++                        width += 2
++                else:  # ZWJ sequence
++                    width += 2
++                i = end - 1
++                is_sequence_start = True
++                break
++            elif start <= i < end:
++                is_sequence_start = True
++                break
++
++        if is_sequence_start:
++            i += 1
++            continue
++
++        # Check if this character is part of a sequence
++        is_part_of_sequence = False
++        for start, end, seq_type in sequences:
++            if start <= i < end:
++                is_part_of_sequence = True
++                break
++
++        if not is_part_of_sequence:
++            # Regular character
++            char_width = wcwidth(pwcs[i], unicode_version)
++            if char_width < 0:
++                return -1
++            width += char_width
++
++        i += 1
++
++    # If there are any sequences, the total width should be 2
++    if sequences:
++        # Check if it's a VS16 sequence
++        if len(sequences) == 1 and sequences[0][2] == 'vs16':
++            # VS16 sequence is treated as width 1 before Unicode 9.0
++            if _wcversion_value(unicode_version) <= _wcversion_value('8.0.0'):
++                return 1
++            else:
++                return 2
++        # Otherwise, it's a ZWJ sequence
++        # Count the number of non-overlapping sequences
++        non_overlapping = []
++        for start, end, seq_type in sequences:
++            if seq_type == 'vs16':
++                continue
++            overlaps = False
++            for prev_start, prev_end, _ in non_overlapping:
++                if (start <= prev_end and end >= prev_start):
++                    overlaps = True
++                    break
++            if not overlaps:
++                non_overlapping.append((start, end, seq_type))
++        if non_overlapping:
++            return 2
++
++    return width
+ 
+ @lru_cache(maxsize=128)
+ def _wcversion_value(ver_string):
+@@ -143,7 +318,10 @@ def _wcversion_value(ver_string):
+     :rtype: tuple(int)
+     :returns: tuple of digit tuples, ``tuple(int, [...])``.
+     """
+-    pass
++    try:
++        return tuple(map(int, ver_string.split('.')))
++    except (AttributeError, ValueError):
++        return (0, 0, 0)
+ 
+ @lru_cache(maxsize=8)
+ def _wcmatch_version(given_version):
+@@ -170,4 +348,58 @@ def _wcmatch_version(given_version):
+     :returns: unicode string, or non-unicode ``str`` type for python 2
+         when given ``version`` is also type ``str``.
+     """
+-    pass
+\ No newline at end of file
++    if given_version == 'auto':
++        given_version = os.environ.get('UNICODE_VERSION', 'latest')
++
++    if given_version == 'latest':
++        return list_versions()[-1]
++
++    # Handle non-numeric version strings
++    try:
++        _ = _wcversion_value(given_version)
++    except (AttributeError, ValueError):
++        latest = list_versions()[-1]
++        warnings.warn(f'Invalid Unicode version "{given_version}", using latest "{latest}"')
++        return latest
++
++    # Ensure a three-part version string (n.n.n)
++    parts = given_version.split('.')
++    while len(parts) < 3:
++        parts.append('0')
++    given_version = '.'.join(parts)
++
++    # Find exact match or next lowest version
++    versions = sorted(list_versions(), key=_wcversion_value)
++    given_value = _wcversion_value(given_version)
++
++    # If version is higher than latest, use latest
++    if given_value > _wcversion_value(versions[-1]):
++        latest = versions[-1]
++        warnings.warn(f'Unicode version "{given_version}" not found, using latest "{latest}"')
++        return latest
++
++    # If version is lower than earliest, use earliest
++    if given_value < _wcversion_value(versions[0]):
++        earliest = versions[0]
++        warnings.warn(f'Unicode version "{given_version}" not found, using earliest "{earliest}"')
++        return earliest
++
++    # Find exact match or next lowest version
++    prev_version = None
++    for version in versions:
++        if _wcversion_value(version) == given_value:
++            return version
++        if _wcversion_value(version) > given_value:
++            if prev_version is not None:
++                warnings.warn(f'Unicode version "{given_version}" not found, using "{prev_version}"')
++                return prev_version
++            # If no lower version found, use earliest version
++            earliest = versions[0]
++            warnings.warn(f'Unicode version "{given_version}" not found, using earliest "{earliest}"')
++            return earliest
++        prev_version = version
++
++    # If no match found, use earliest version
++    earliest = versions[0]
++    warnings.warn(f'Unicode version "{given_version}" not found, using earliest "{earliest}"')
++    return earliest
+\ No newline at end of file
+

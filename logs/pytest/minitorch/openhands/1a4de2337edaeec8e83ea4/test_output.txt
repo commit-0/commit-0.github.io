@@ -1,0 +1,182 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /testbed
+configfile: setup.cfg
+plugins: cov-5.0.0, metadata-3.1.1, env-0.6.2, json-report-1.5.0, hypothesis-6.54.0
+collected 0 items / 10 errors
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_autodiff.py ____________________
+tests/test_autodiff.py:5: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+_____________________ ERROR collecting tests/test_conv.py ______________________
+tests/test_conv.py:4: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+____________________ ERROR collecting tests/test_module.py _____________________
+tests/test_module.py:4: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+____________________ ERROR collecting tests/test_modules.py ____________________
+tests/test_modules.py:7: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+______________________ ERROR collecting tests/test_nn.py _______________________
+tests/test_nn.py:4: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+___________________ ERROR collecting tests/test_operators.py ___________________
+tests/test_operators.py:7: in <module>
+    from minitorch import MathTest
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+____________________ ERROR collecting tests/test_scalar.py _____________________
+tests/test_scalar.py:7: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+____________________ ERROR collecting tests/test_tensor.py _____________________
+tests/test_tensor.py:7: in <module>
+    from minitorch import MathTestVariable, Tensor, grad_check, tensor
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+__________________ ERROR collecting tests/test_tensor_data.py __________________
+tests/test_tensor_data.py:5: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+________________ ERROR collecting tests/test_tensor_general.py _________________
+tests/test_tensor_general.py:9: in <module>
+    import minitorch
+minitorch/__init__.py:6: in <module>
+    from .cuda_ops import *  # noqa: F401,F403
+minitorch/cuda_ops.py:4: in <module>
+    from .tensor import Tensor
+minitorch/tensor.py:11: in <module>
+    from .tensor_functions import EQ, LT, Add, All, Copy, Exp, Inv, IsClose, Log, MatMul, Mul, Neg, Permute, ReLU, Sigmoid, Sum, View, tensor
+minitorch/tensor_functions.py:11: in <module>
+    from .tensor_ops import SimpleBackend, TensorBackend
+minitorch/tensor_ops.py:225: in <module>
+    SimpleBackend = TensorBackend(SimpleOps)
+minitorch/tensor_ops.py:43: in __init__
+    self.id_cmap = ops.cmap(operators.id)
+E   AttributeError: type object 'SimpleOps' has no attribute 'cmap'. Did you mean: 'map'?
+--------------------------------- JSON report ----------------------------------
+report saved to: report.json
+=========================== short test summary info ============================
+ERROR tests/test_autodiff.py - AttributeError: type object 'SimpleOps' has no...
+ERROR tests/test_conv.py - AttributeError: type object 'SimpleOps' has no att...
+ERROR tests/test_module.py - AttributeError: type object 'SimpleOps' has no a...
+ERROR tests/test_modules.py - AttributeError: type object 'SimpleOps' has no ...
+ERROR tests/test_nn.py - AttributeError: type object 'SimpleOps' has no attri...
+ERROR tests/test_operators.py - AttributeError: type object 'SimpleOps' has n...
+ERROR tests/test_scalar.py - AttributeError: type object 'SimpleOps' has no a...
+ERROR tests/test_tensor.py - AttributeError: type object 'SimpleOps' has no a...
+ERROR tests/test_tensor_data.py - AttributeError: type object 'SimpleOps' has...
+ERROR tests/test_tensor_general.py - AttributeError: type object 'SimpleOps' ...
+============================== 10 errors in 2.42s ==============================

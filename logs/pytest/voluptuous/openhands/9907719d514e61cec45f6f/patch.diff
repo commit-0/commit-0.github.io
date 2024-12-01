@@ -1,0 +1,965 @@
+diff --git a/voluptuous/error.py b/voluptuous/error.py
+index dbaeb36..a9e7ba3 100644
+--- a/voluptuous/error.py
++++ b/voluptuous/error.py
+@@ -21,6 +21,7 @@ class Invalid(Error):
+         self._path = path or []
+         self._error_message = error_message or message
+         self.error_type = error_type
++        self.path = self._path
+ 
+     def __str__(self) -> str:
+         path = ' @ data[%s]' % ']['.join(map(repr, self.path)) if self.path else ''
+@@ -33,6 +34,9 @@ class MultipleInvalid(Invalid):
+ 
+     def __init__(self, errors: typing.Optional[typing.List[Invalid]]=None) -> None:
+         self.errors = errors[:] if errors else []
++        self.msg = str(self.errors[0]) if self.errors else ''
++        self.error_message = self.msg
++        self.path = self.errors[0].path if self.errors else []
+ 
+     def __repr__(self) -> str:
+         return 'MultipleInvalid(%r)' % self.errors
+@@ -40,6 +44,13 @@ class MultipleInvalid(Invalid):
+     def __str__(self) -> str:
+         return str(self.errors[0])
+ 
++    def add(self, error: str) -> None:
++        """Add a new error to the list of errors."""
++        self.errors.append(Invalid(error))
++        self.msg = str(self.errors[0])
++        self.error_message = self.msg
++        self.path = self.errors[0].path
++
+ class RequiredFieldInvalid(Invalid):
+     """Required field was missing."""
+ 
+diff --git a/voluptuous/humanize.py b/voluptuous/humanize.py
+index c434625..bc2b8eb 100644
+--- a/voluptuous/humanize.py
++++ b/voluptuous/humanize.py
+@@ -9,4 +9,34 @@ def humanize_error(data, validation_error: Invalid, max_sub_error_length: int=MA
+     Invalid and MultipleInvalid do not include the offending value in error messages,
+     and MultipleInvalid.__str__ only provides the first error.
+     """
+-    pass
+\ No newline at end of file
++    if isinstance(validation_error, MultipleInvalid):
++        return '\n'.join(sorted(
++            humanize_error(data, sub_error, max_sub_error_length)
++            for sub_error in validation_error.errors
++        ))
++
++    path = validation_error.path
++    value = data
++
++    # Walk the path to find the value
++    for step in path:
++        if isinstance(value, (list, tuple)):
++            value = value[step]
++        else:
++            value = value.get(step, 'N/A')
++
++    # Truncate value if too long
++    str_value = str(value)
++    if len(str_value) > max_sub_error_length:
++        str_value = str_value[:max_sub_error_length] + '...'
++
++    # Build the error message
++    path_str = ' @ data[%s]' % ']['.join(repr(p) for p in path) if path else ''
++    error_type = ' for ' + validation_error.error_type if validation_error.error_type else ''
++    
++    return '%s%s (got %r)%s' % (
++        validation_error.error_message,
++        error_type,
++        str_value,
++        path_str
++    )
+\ No newline at end of file
+diff --git a/voluptuous/schema_builder.py b/voluptuous/schema_builder.py
+index d5f5612..d6fd203 100644
+--- a/voluptuous/schema_builder.py
++++ b/voluptuous/schema_builder.py
+@@ -10,6 +10,64 @@ from contextlib import contextmanager
+ from functools import cache, wraps
+ from voluptuous import error as er
+ from voluptuous.error import Error
++
++def default_factory(value: DefaultFactory) -> typing.Callable[[], typing.Any]:
++    """Return a function to generate default values.
++
++    >>> default_factory(42)()
++    42
++    >>> default_factory(list)()
++    []
++    >>> default_factory(None)()
++    Traceback (most recent call last):
++    ...
++    TypeError: value must not be None
++    """
++    if value is None:
++        raise TypeError('value must not be None')
++    if isinstance(value, UNDEFINED.__class__):
++        return lambda: None
++    if callable(value):
++        return value
++    return lambda: value
++
++@contextmanager
++def raises(exc, msg=None):
++    """Assert that a certain exception is raised.
++
++    >>> with raises(Invalid):
++    ...   Schema(int, required=True)('abc')
++    """
++    try:
++        yield
++    except exc as e:
++        if msg is not None and str(e) != msg:
++            raise AssertionError(
++                "Expected %r but got %r" % (msg, str(e))
++            )
++    else:
++        raise AssertionError("Expected %r" % exc)
++
++def message(msg: str, cls: typing.Optional[typing.Type[Error]]=None):
++    """Decorate a function with a message to be displayed in case of error.
++
++    >>> @message('not an integer')
++    ... def isint(v):
++    ...   return int(v)
++    >>>
++    >>> validate = Schema(isint())
++    >>> with raises(MultipleInvalid, 'not an integer'):
++    ...   validate('a')
++    """
++    def decorator(f):
++        @wraps(f)
++        def check(v, *args, **kwargs):
++            try:
++                return f(v, *args, **kwargs)
++            except (ValueError, TypeError):
++                raise (cls or Invalid)(msg)
++        return check
++    return decorator
+ PREVENT_EXTRA = 0
+ ALLOW_EXTRA = 1
+ REMOVE_EXTRA = 2
+@@ -26,7 +84,7 @@ DefaultFactory = typing.Union[Undefined, typing.Callable[[], typing.Any]]
+ 
+ def Extra(_) -> None:
+     """Allow keys in the data that are not present in the schema."""
+-    pass
++    return ALLOW_EXTRA
+ extra = Extra
+ primitive_types = (bool, bytes, int, str, float, complex)
+ Schemable = typing.Union['Schema', 'Object', collections.abc.Mapping, list, tuple, frozenset, set, bool, bytes, int, str, float, complex, type, object, dict, None, typing.Callable]
+@@ -74,6 +132,92 @@ class Schema(object):
+         self.extra = int(extra)
+         self._compiled = self._compile(schema)
+ 
++    def _compile(self, schema):
++        """Compile the schema into a callable validator."""
++        if hasattr(schema, '__voluptuous_compile__'):
++            return schema.__voluptuous_compile__(self)
++
++        if isinstance(schema, dict):
++            return self._compile_dict(schema)
++
++        if isinstance(schema, list):
++            return self._compile_list(schema)
++
++        if isinstance(schema, tuple):
++            return self._compile_tuple(schema)
++
++        if isinstance(schema, set):
++            return self._compile_set(schema)
++
++        if isinstance(schema, Object):
++            return self._compile_object(schema)
++
++        return _compile_scalar(schema)
++
++    def _compile_dict_with_schema(self, required_keys, value_schema, invalid_msg=None):
++        """Create validator for a dict with a given schema."""
++        if invalid_msg is None:
++            invalid_msg = 'dictionary value'
++
++        def validate_dict(path, data):
++            if not isinstance(data, dict):
++                raise er.DictInvalid('expected a dictionary')
++
++            out = {}
++            errors = []
++            seen_keys = set()
++
++            # First validate all the required keys
++            for key in required_keys:
++                if key not in data:
++                    errors.append(er.RequiredFieldInvalid(key.msg or 'required key not provided', path + [key]))
++                    continue
++
++                try:
++                    out[key] = self._compile(value_schema[key])(path + [key], data[key])
++                except er.Invalid as e:
++                    errors.append(e)
++                seen_keys.add(key)
++
++            # Now validate the rest of the keys
++            for key, value in data.items():
++                if key in seen_keys:
++                    continue
++
++                found_valid_key = False
++                found_key_schema = None
++
++                # Try to find a matching key schema
++                for skey, svalue in value_schema.items():
++                    if skey == key:
++                        found_key_schema = svalue
++                        found_valid_key = True
++                        break
++                    if isinstance(skey, type) and isinstance(key, skey):
++                        found_key_schema = svalue
++                        found_valid_key = True
++                        key = skey(key)
++                        break
++
++                if not found_valid_key:
++                    if self.extra == PREVENT_EXTRA:
++                        errors.append(er.Invalid('extra keys not allowed', path + [key]))
++                    elif self.extra == ALLOW_EXTRA:
++                        out[key] = value
++                    continue
++
++                try:
++                    out[key] = self._compile(found_key_schema)(path + [key], value)
++                except er.Invalid as e:
++                    errors.append(e)
++
++            if errors:
++                raise er.MultipleInvalid(errors)
++
++            return out
++
++        return validate_dict
++
+     @classmethod
+     def infer(cls, data, **kwargs) -> Schema:
+         """Create a Schema from concrete data (e.g. an API response).
+@@ -102,7 +246,30 @@ class Schema(object):
+ 
+         Note: only very basic inference is supported.
+         """
+-        pass
++        def _infer_type(value):
++            if isinstance(value, dict):
++                return {k: _infer_type(v) for k, v in value.items()}
++            elif isinstance(value, list):
++                if not value:
++                    return list
++                types = {type(v) for v in value}
++                if len(types) == 1:
++                    return [next(iter(types))]
++                return list
++            elif isinstance(value, tuple):
++                return tuple(_infer_type(v) for v in value)
++            elif isinstance(value, set):
++                if not value:
++                    return set
++                types = {type(v) for v in value}
++                if len(types) == 1:
++                    return {next(iter(types))}
++                return set
++            else:
++                return type(value)
++
++        schema = _infer_type(data)
++        return cls(schema, **kwargs)
+ 
+     def __eq__(self, other):
+         if not isinstance(other, Schema):
+@@ -129,7 +296,29 @@ class Schema(object):
+ 
+     def _compile_mapping(self, schema, invalid_msg=None):
+         """Create validator for given mapping."""
+-        pass
++        if invalid_msg is None:
++            invalid_msg = 'mapping value'
++
++        # Keys can be markers (Required, Optional, etc.) or values
++        # Markers have a schema attached to them
++        key_schema = set()
++        value_schema = {}
++        for key, value in _iterate_mapping_candidates(schema):
++            if isinstance(key, Marker):
++                key_schema.add(key)
++                value_schema[key] = value
++            else:
++                value_schema[key] = value
++
++        # Keys which aren't marked as Required are Optional by default
++        required_keys = set(key for key in key_schema if isinstance(key, Required))
++
++        # Check for duplicate keys
++        key_names = [str(key) for key in key_schema]
++        if len(set(key_names)) != len(key_names):
++            raise er.SchemaError('duplicate keys found: {}'.format(key_names))
++
++        return self._compile_dict_with_schema(required_keys, value_schema, invalid_msg)
+ 
+     def _compile_object(self, schema):
+         """Validate an object.
+@@ -149,7 +338,22 @@ class Schema(object):
+             ...   validate(Structure(one='three'))
+ 
+         """
+-        pass
++        if not isinstance(schema, Object):
++            raise er.SchemaError('expected Object')
++
++        compiled_schema = self._compile_mapping(schema, 'object value')
++
++        def validate_object(path, data):
++            if schema.cls is not UNDEFINED and not isinstance(data, schema.cls):
++                raise er.ObjectInvalid('expected instance of {}'.format(schema.cls))
++            
++            obj_dict = {}
++            for key, value in _iterate_object(data):
++                obj_dict[key] = value
++
++            return compiled_schema(path, obj_dict)
++
++        return validate_object
+ 
+     def _compile_dict(self, schema):
+         """Validate a dictionary.
+@@ -227,7 +431,10 @@ class Schema(object):
+          "expected str for dictionary value @ data['adict']['strfield']"]
+ 
+         """
+-        pass
++        if not isinstance(schema, dict):
++            raise er.SchemaError('expected dict')
++
++        return self._compile_mapping(schema, 'dictionary value')
+ 
+     def _compile_sequence(self, schema, seq_type):
+         """Validate a sequence type.
+@@ -242,7 +449,32 @@ class Schema(object):
+         >>> validator([1])
+         [1]
+         """
+-        pass
++        if not isinstance(schema, (list, tuple, set)):
++            raise er.SchemaError('expected sequence')
++
++        def validate_sequence(path, data):
++            if not isinstance(data, seq_type):
++                raise er.SequenceTypeInvalid('expected a {}'.format(seq_type.__name__))
++
++            # Empty sequence
++            if not schema and data:
++                raise er.Invalid('not a valid value')
++
++            result = []
++            for i, value in enumerate(data):
++                valid = False
++                for validator in schema:
++                    try:
++                        result.append(self._compile(validator)([i] + path, value))
++                        valid = True
++                        break
++                    except er.Invalid:
++                        pass
++                if not valid:
++                    raise er.Invalid('not a valid value for sequence item')
++            return seq_type(result)
++
++        return validate_sequence
+ 
+     def _compile_tuple(self, schema):
+         """Validate a tuple.
+@@ -257,7 +489,7 @@ class Schema(object):
+         >>> validator((1,))
+         (1,)
+         """
+-        pass
++        return self._compile_sequence(schema, tuple)
+ 
+     def _compile_list(self, schema):
+         """Validate a list.
+@@ -272,7 +504,7 @@ class Schema(object):
+         >>> validator([1])
+         [1]
+         """
+-        pass
++        return self._compile_sequence(schema, list)
+ 
+     def _compile_set(self, schema):
+         """Validate a set.
+@@ -287,7 +519,7 @@ class Schema(object):
+         >>> with raises(er.MultipleInvalid, 'invalid value in set'):
+         ...   validator(set(['a']))
+         """
+-        pass
++        return self._compile_sequence(schema, set)
+ 
+     def extend(self, schema: Schemable, required: typing.Optional[bool]=None, extra: typing.Optional[int]=None) -> Schema:
+         """Create a new `Schema` by merging this and the provided `schema`.
+@@ -302,7 +534,35 @@ class Schema(object):
+         :param required: if set, overrides `required` of this `Schema`
+         :param extra: if set, overrides `extra` of this `Schema`
+         """
+-        pass
++        if not isinstance(self.schema, dict):
++            raise er.SchemaError('original schema is not a dictionary')
++        if not isinstance(schema, (dict, Schema)):
++            raise er.SchemaError('extension schema is not a dictionary')
++
++        schema = schema if isinstance(schema, Schema) else Schema(schema)
++        if not isinstance(schema.schema, dict):
++            raise er.SchemaError('extension schema is not a dictionary')
++
++        # Deep copy the schema to avoid modifying it
++        new_schema = {}
++        for key, value in self.schema.items():
++            new_schema[key] = value
++
++        # Update with the extension schema
++        for key, value in schema.schema.items():
++            new_schema[key] = value
++
++        return type(self)(
++            new_schema,
++            required=self.required if required is None else required,
++            extra=self.extra if extra is None else extra
++        )
++
++def _path_string(path):
++    """Convert a list path to a string path."""
++    if not path:
++        return ''
++    return ' @ data[%s]' % ']['.join(repr(p) for p in path)
+ 
+ def _compile_scalar(schema):
+     """A scalar value.
+@@ -323,23 +583,59 @@ def _compile_scalar(schema):
+     >>> with raises(er.Invalid, 'not a valid value'):
+     ...   _compile_scalar(lambda v: float(v))([], 'a')
+     """
+-    pass
++    if isinstance(schema, type):
++        def validate_instance(path, data):
++            if isinstance(data, schema):
++                return data
++            else:
++                msg = 'expected {} for {}'.format(schema.__name__, _path_string(path))
++                raise er.TypeInvalid(msg)
++        return validate_instance
++
++    if callable(schema):
++        def validate_callable(path, data):
++            try:
++                return schema(data)
++            except ValueError as e:
++                raise er.Invalid('not a valid value')
++            except er.Invalid as e:
++                e.path = path + e.path
++                raise
++        return validate_callable
++
++    def validate_value(path, data):
++        if data != schema:
++            raise er.ScalarInvalid('not a valid value')
++        return data
++
++    return validate_value
+ 
+ def _compile_itemsort():
+     """return sort function of mappings"""
+-    pass
++    def sort_item(item):
++        key, _ = item
++        if isinstance(key, Marker):
++            return 0 if isinstance(key, Required) else 1, str(key)
++        return 2, str(key)
++    return sort_item
+ _sort_item = _compile_itemsort()
+ 
+ def _iterate_mapping_candidates(schema):
+     """Iterate over schema in a meaningful order."""
+-    pass
++    return sorted(schema.items(), key=_sort_item)
+ 
+ def _iterate_object(obj):
+     """Return iterator over object attributes. Respect objects with
+     defined __slots__.
+ 
+     """
+-    pass
++    if hasattr(obj, '__slots__'):
++        for key in obj.__slots__:
++            if hasattr(obj, key):
++                yield key, getattr(obj, key)
++    else:
++        for key, value in obj.__dict__.items():
++            yield key, value
+ 
+ class Msg(object):
+     """Report a user-friendly message if a schema fails to validate.
+@@ -405,6 +701,22 @@ class VirtualPathComponent(str):
+     def __repr__(self):
+         return self.__str__()
+ 
++class Self(object):
++    """Validates a value against itself.
++
++    >>> s = Schema(Self)
++    >>> s(1)
++    1
++    >>> s('hi')
++    'hi'
++    """
++
++    def __call__(self, v):
++        return v
++
++    def __repr__(self):
++        return 'Self'
++
+ class Marker(object):
+     """Mark nodes for special treatment.
+ 
+diff --git a/voluptuous/util.py b/voluptuous/util.py
+index d2d5a8d..a9e5616 100644
+--- a/voluptuous/util.py
++++ b/voluptuous/util.py
+@@ -1,5 +1,5 @@
+ import typing
+-from voluptuous import validators
++from voluptuous.validators import Any
+ from voluptuous.error import Invalid, LiteralInvalid, TypeInvalid
+ from voluptuous.schema_builder import DefaultFactory
+ from voluptuous.schema_builder import Schema, default_factory, raises
+@@ -12,7 +12,7 @@ def Lower(v: str) -> str:
+     >>> s('HI')
+     'hi'
+     """
+-    pass
++    return str(v).lower()
+ 
+ def Upper(v: str) -> str:
+     """Transform a string to upper case.
+@@ -21,7 +21,7 @@ def Upper(v: str) -> str:
+     >>> s('hi')
+     'HI'
+     """
+-    pass
++    return str(v).upper()
+ 
+ def Capitalize(v: str) -> str:
+     """Capitalise a string.
+@@ -30,7 +30,7 @@ def Capitalize(v: str) -> str:
+     >>> s('hello world')
+     'Hello world'
+     """
+-    pass
++    return str(v).capitalize()
+ 
+ def Title(v: str) -> str:
+     """Title case a string.
+@@ -39,7 +39,7 @@ def Title(v: str) -> str:
+     >>> s('hello world')
+     'Hello World'
+     """
+-    pass
++    return str(v).title()
+ 
+ def Strip(v: str) -> str:
+     """Strip whitespace from a string.
+@@ -48,7 +48,7 @@ def Strip(v: str) -> str:
+     >>> s('  hello world  ')
+     'hello world'
+     """
+-    pass
++    return str(v).strip()
+ 
+ class DefaultTo(object):
+     """Sets a value to default_value if none provided.
+@@ -76,7 +76,7 @@ class DefaultTo(object):
+ class SetTo(object):
+     """Set a value, ignoring any previous value.
+ 
+-    >>> s = Schema(validators.Any(int, SetTo(42)))
++    >>> s = Schema(Any(int, SetTo(42)))
+     >>> s(2)
+     2
+     >>> s("foo")
+diff --git a/voluptuous/validators.py b/voluptuous/validators.py
+index 22f6981..fb1a055 100644
+--- a/voluptuous/validators.py
++++ b/voluptuous/validators.py
+@@ -7,7 +7,28 @@ import typing
+ from decimal import Decimal, InvalidOperation
+ from functools import wraps
+ from voluptuous.error import AllInvalid, AnyInvalid, BooleanInvalid, CoerceInvalid, ContainsInvalid, DateInvalid, DatetimeInvalid, DirInvalid, EmailInvalid, ExactSequenceInvalid, FalseInvalid, FileInvalid, InInvalid, Invalid, LengthInvalid, MatchInvalid, MultipleInvalid, NotEnoughValid, NotInInvalid, PathInvalid, RangeInvalid, TooManyValid, TrueInvalid, TypeInvalid, UrlInvalid
+-from voluptuous.schema_builder import Schema, Schemable, message, raises
++from voluptuous.schema_builder import Schema, Schemable, raises
++
++def message(msg: str, cls: typing.Optional[typing.Type[Invalid]]=None):
++    """Decorate a function with a message to be displayed in case of error.
++
++    >>> @message('not an integer')
++    ... def isint(v):
++    ...   return int(v)
++    >>>
++    >>> validate = Schema(isint())
++    >>> with raises(MultipleInvalid, 'not an integer'):
++    ...   validate('a')
++    """
++    def decorator(f):
++        @wraps(f)
++        def check(v, *args, **kwargs):
++            try:
++                return f(v, *args, **kwargs)
++            except (ValueError, TypeError):
++                raise (cls or Invalid)(msg)
++        return check
++    return decorator
+ if typing.TYPE_CHECKING:
+     from _typeshed import SupportsAllComparisons
+ Enum: typing.Union[type, None]
+@@ -36,7 +57,13 @@ def truth(f: typing.Callable) -> typing.Callable:
+     >>> with raises(MultipleInvalid, 'not a valid value'):
+     ...   validate('/notavaliddir')
+     """
+-    pass
++    def validator(path, data):
++        t = f(data)
++        if not t:
++            raise Invalid('not a valid value', path)
++        return data
++
++    return validator
+ 
+ class Coerce(object):
+     """Coerce a value to a type.
+@@ -77,7 +104,6 @@ class Coerce(object):
+         return 'Coerce(%s, msg=%r)' % (self.type_name, self.msg)
+ 
+ @message('value was not true', cls=TrueInvalid)
+-@truth
+ def IsTrue(v):
+     """Assert that a value is true, in the Python sense.
+ 
+@@ -100,7 +126,7 @@ def IsTrue(v):
+     ... except MultipleInvalid as e:
+     ...   assert isinstance(e.errors[0], TrueInvalid)
+     """
+-    pass
++    return bool(v)
+ 
+ @message('value was not false', cls=FalseInvalid)
+ def IsFalse(v):
+@@ -119,7 +145,7 @@ def IsFalse(v):
+     ... except MultipleInvalid as e:
+     ...   assert isinstance(e.errors[0], FalseInvalid)
+     """
+-    pass
++    return not bool(v)
+ 
+ @message('expected boolean', cls=BooleanInvalid)
+ def Boolean(v):
+@@ -142,7 +168,16 @@ def Boolean(v):
+     ... except MultipleInvalid as e:
+     ...   assert isinstance(e.errors[0], BooleanInvalid)
+     """
+-    pass
++    if isinstance(v, bool):
++        return v
++    if isinstance(v, str):
++        v = v.lower().strip()
++        if v in ('true', '1', 'yes', 'on', 'enable'):
++            return True
++        if v in ('false', '0', 'no', 'off', 'disable'):
++            return False
++        raise BooleanInvalid('expected boolean')
++    return bool(v)
+ 
+ class _WithSubValidators(object):
+     """Base class for validators that use sub-validators.
+@@ -168,12 +203,20 @@ class _WithSubValidators(object):
+         schema.required = old_required
+         return self._run
+ 
++    def _run(self, path, data):
++        """Run the compiled validators."""
++        return self._exec(self._compiled, data)
++
+     def __call__(self, v):
+         return self._exec((Schema(val) for val in self.validators), v)
+ 
+     def __repr__(self):
+         return '%s(%s, msg=%r)' % (self.__class__.__name__, ', '.join((repr(v) for v in self.validators)), self.msg)
+ 
++    def _exec(self, validators, v):
++        """Execute the validators against the value."""
++        raise NotImplementedError
++
+ class Any(_WithSubValidators):
+     """Use the first validated value.
+ 
+@@ -198,6 +241,17 @@ class Any(_WithSubValidators):
+     >>> with raises(MultipleInvalid, "Expected 1 2 or 3"):
+     ...   validate(4)
+     """
++
++    def _exec(self, validators, v):
++        errors = []
++        for validator in validators:
++            try:
++                return validator(v)
++            except Invalid as e:
++                errors.append(e)
++        if len(errors) == 1:
++            raise errors[0]
++        raise AnyInvalid(self.msg or 'no valid value found')
+ Or = Any
+ 
+ class Union(_WithSubValidators):
+@@ -220,8 +274,63 @@ class Union(_WithSubValidators):
+ 
+     Without the discriminant, the exception would be "extra keys not allowed @ data['b_val']"
+     """
++
++    def _exec(self, validators, v):
++        if self.discriminant is None:
++            return Any._exec(self, validators, v)
++        
++        filtered = list(self.discriminant(v, [val.schema for val in validators]))
++        if not filtered:
++            raise AnyInvalid(self.msg or 'no valid value found')
++        
++        errors = []
++        for validator in validators:
++            if validator.schema in filtered:
++                try:
++                    return validator(v)
++                except Invalid as e:
++                    errors.append(e)
++        if len(errors) == 1:
++            raise errors[0]
++        raise AnyInvalid(self.msg or 'no valid value found')
+ Switch = Union
+ 
++class SomeOf(_WithSubValidators):
++    """Value must pass some of the validators.
++
++    :param min_valid: Minimum number of valid values
++    :param max_valid: Maximum number of valid values
++    :param msg: Message to deliver to user if validation fails.
++    :param kwargs: All other keyword arguments are passed to the sub-schema constructors.
++
++    >>> validate = Schema(SomeOf(min_valid=1, validators=[1, 2, 3]))
++    >>> validate(1)
++    1
++    >>> with raises(MultipleInvalid, "value did not pass enough validations"):
++    ...   validate(4)
++    """
++
++    def __init__(self, min_valid=None, max_valid=None, *validators, msg=None, required=False, discriminant=None, **kwargs) -> None:
++        super().__init__(*validators, msg=msg, required=required, discriminant=discriminant, **kwargs)
++        self.min_valid = min_valid
++        self.max_valid = max_valid
++
++    def _exec(self, validators, v):
++        valid = []
++        errors = []
++        for validator in validators:
++            try:
++                valid.append(validator([], v))
++            except Invalid as e:
++                errors.append(e)
++
++        if self.min_valid is not None and len(valid) < self.min_valid:
++            raise NotEnoughValid(self.msg or 'value did not pass enough validations')
++        if self.max_valid is not None and len(valid) > self.max_valid:
++            raise TooManyValid(self.msg or 'value passed too many validations')
++
++        return valid[0] if valid else None
++
+ class All(_WithSubValidators):
+     """Value must pass all validators.
+ 
+@@ -234,6 +343,20 @@ class All(_WithSubValidators):
+     >>> validate('10')
+     10
+     """
++
++    def _exec(self, validators, v):
++        value = v
++        errors = []
++        for validator in validators:
++            try:
++                value = validator(value)
++            except Invalid as e:
++                errors.append(e)
++        if errors:
++            if len(errors) == 1:
++                raise errors[0]
++            raise AllInvalid(self.msg or 'value did not pass all validators')
++        return value
+ And = All
+ 
+ class Match(object):
+@@ -296,7 +419,7 @@ class Replace(object):
+         return 'Replace(%r, %r, msg=%r)' % (self.pattern.pattern, self.substitution, self.msg)
+ 
+ @message('expected an email address', cls=EmailInvalid)
+-def Email(v):
++def Email(v=None):
+     """Verify that the value is an email address or not.
+ 
+     >>> s = Schema(Email())
+@@ -309,10 +432,32 @@ def Email(v):
+     >>> s('t@x.com')
+     't@x.com'
+     """
+-    pass
++    def validate_email(path, data):
++        if not isinstance(data, str):
++            raise EmailInvalid('expected an email address', path)
++        
++        if not data or '@' not in data:
++            raise EmailInvalid('expected an email address', path)
++        
++        user_part, domain_part = data.rsplit('@', 1)
++        
++        if not user_part or not domain_part:
++            raise EmailInvalid('expected an email address', path)
++        
++        if not USER_REGEX.match(user_part):
++            raise EmailInvalid('expected an email address', path)
++        
++        if not DOMAIN_REGEX.match(domain_part):
++            raise EmailInvalid('expected an email address', path)
++        
++        return data
++
++    if v is None:
++        return validate_email
++    return validate_email([], v)
+ 
+ @message('expected a fully qualified domain name URL', cls=UrlInvalid)
+-def FqdnUrl(v):
++def FqdnUrl(v=None):
+     """Verify that the value is a fully qualified domain name URL.
+ 
+     >>> s = Schema(FqdnUrl())
+@@ -321,10 +466,29 @@ def FqdnUrl(v):
+     >>> s('http://w3.org')
+     'http://w3.org'
+     """
+-    pass
++    def validate_fqdn_url(path, data):
++        if not isinstance(data, str):
++            raise UrlInvalid('expected a fully qualified domain name URL', path)
++
++        try:
++            parsed = urlparse.urlparse(data)
++            if not parsed.scheme or not parsed.netloc:
++                raise UrlInvalid('expected a fully qualified domain name URL', path)
++            if parsed.netloc == 'localhost':
++                raise UrlInvalid('expected a fully qualified domain name URL', path)
++            if not DOMAIN_REGEX.match(parsed.netloc):
++                raise UrlInvalid('expected a fully qualified domain name URL', path)
++        except Exception:
++            raise UrlInvalid('expected a fully qualified domain name URL', path)
++
++        return data
++
++    if v is None:
++        return validate_fqdn_url
++    return validate_fqdn_url([], v)
+ 
+ @message('expected a URL', cls=UrlInvalid)
+-def Url(v):
++def Url(v=None):
+     """Verify that the value is a URL.
+ 
+     >>> s = Schema(Url())
+@@ -333,7 +497,22 @@ def Url(v):
+     >>> s('http://w3.org')
+     'http://w3.org'
+     """
+-    pass
++    def validate_url(v):
++        if not isinstance(v, str):
++            raise UrlInvalid('expected a URL')
++
++        try:
++            parsed = urlparse.urlparse(v)
++            if not parsed.scheme or not parsed.netloc:
++                raise UrlInvalid('expected a URL')
++        except Exception:
++            raise UrlInvalid('expected a URL')
++
++        return v
++
++    if v is None:
++        return validate_url
++    return validate_url(v)
+ 
+ @message('Not a file', cls=FileInvalid)
+ @truth
+@@ -347,7 +526,9 @@ def IsFile(v):
+     >>> with raises(FileInvalid, 'Not a file'):
+     ...   IsFile()(None)
+     """
+-    pass
++    if v is None:
++        return False
++    return os.path.isfile(str(v))
+ 
+ @message('Not a directory', cls=DirInvalid)
+ @truth
+@@ -359,7 +540,9 @@ def IsDir(v):
+     >>> with raises(DirInvalid, 'Not a directory'):
+     ...   IsDir()(None)
+     """
+-    pass
++    if v is None:
++        return False
++    return os.path.isdir(str(v))
+ 
+ @message('path does not exist', cls=PathInvalid)
+ @truth
+@@ -373,7 +556,9 @@ def PathExists(v):
+     >>> with raises(PathInvalid, 'Not a Path'):
+     ...   PathExists()(None)
+     """
+-    pass
++    if v is None:
++        return False
++    return os.path.exists(str(v))
+ 
+ def Maybe(validator: Schemable, msg: typing.Optional[str]=None):
+     """Validate that the object matches given validator or is None.
+@@ -388,7 +573,14 @@ def Maybe(validator: Schemable, msg: typing.Optional[str]=None):
+     ...  s("string")
+ 
+     """
+-    pass
++    schema = Schema(validator)
++
++    def validate_or_none(v):
++        if v is None:
++            return v
++        return schema(v)
++
++    return validate_or_none
+ 
+ class Range(object):
+     """Limit a value to a range.
+

@@ -1,0 +1,12 @@
+ImportError while loading conftest '/testbed/tests/conftest.py'.
+tests/conftest.py:5: in <module>
+    from tests.base import Blog, User, UserSchema
+tests/base.py:11: in <module>
+    from marshmallow import Schema, fields, missing, post_load, validate
+src/marshmallow/__init__.py:17: in <module>
+    from marshmallow.schema import Schema, SchemaOpts
+src/marshmallow/schema.py:15: in <module>
+    from marshmallow import fields as ma_fields
+src/marshmallow/fields.py:18: in <module>
+    from marshmallow.utils import is_aware, is_collection, resolve_field_instance
+E   ImportError: cannot import name 'is_aware' from 'marshmallow.utils' (/testbed/src/marshmallow/utils.py)

@@ -1,0 +1,1320 @@
+diff --git a/minitorch/autodiff.py b/minitorch/autodiff.py
+index cb9a430..84dbd21 100644
+--- a/minitorch/autodiff.py
++++ b/minitorch/autodiff.py
+@@ -17,11 +17,31 @@ def central_difference(f: Any, *vals: Any, arg: int=0, epsilon: float=1e-06) ->
+     Returns:
+         An approximation of $f'_i(x_0, \\ldots, x_{n-1})$
+     """
+-    pass
++    vals_plus = list(vals)
++    vals_minus = list(vals)
++    vals_plus[arg] = vals[arg] + epsilon
++    vals_minus[arg] = vals[arg] - epsilon
++    return (f(*vals_plus) - f(*vals_minus)) / (2.0 * epsilon)
+ variable_count = 1
+ 
+ class Variable(Protocol):
+-    pass
++    """A variable in a computation graph."""
++
++    def accumulate_derivative(self, x: Any) -> None:
++        """Add `x` to the derivative accumulated on this variable."""
++        pass
++
++    def is_constant(self) -> bool:
++        """Is this a constant variable?"""
++        pass
++
++    def is_leaf(self) -> bool:
++        """Is this a leaf variable?"""
++        pass
++
++    def parents(self) -> Iterable["Variable"]:
++        """Get the parents of this variable."""
++        pass
+ 
+ def topological_sort(variable: Variable) -> Iterable[Variable]:
+     """
+@@ -33,7 +53,19 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
+     Returns:
+         Non-constant Variables in topological order starting from the right.
+     """
+-    pass
++    visited = set()
++    order = []
++
++    def visit(var: Variable) -> None:
++        if var in visited or var.is_constant():
++            return
++        visited.add(var)
++        for parent in var.parents():
++            visit(parent)
++        order.insert(0, var)
++
++    visit(variable)
++    return order
+ 
+ def backpropagate(variable: Variable, deriv: Any) -> None:
+     """
+@@ -46,7 +78,26 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
+ 
+     No return. Should write to its results to the derivative values of each leaf through `accumulate_derivative`.
+     """
+-    pass
++    # Get variables in topological order
++    ordered = topological_sort(variable)
++
++    # Store derivatives for each variable
++    derivatives = {variable: deriv}
++
++    # Go through the variables in reverse order
++    for var in ordered:
++        if var.is_leaf():
++            var.accumulate_derivative(derivatives[var])
++        else:
++            # Get the derivative for this variable
++            d = derivatives[var]
++            # Get the parents and their derivatives through the chain rule
++            for parent, parent_deriv in var.chain_rule(d):
++                # Initialize derivative for parent if not seen before
++                if parent not in derivatives:
++                    derivatives[parent] = 0.0
++                # Add to parent's derivative
++                derivatives[parent] += parent_deriv
+ 
+ @dataclass
+ class Context:
+@@ -58,4 +109,25 @@ class Context:
+ 
+     def save_for_backward(self, *values: Any) -> None:
+         """Store the given `values` if they need to be used during backpropagation."""
+-        pass
+\ No newline at end of file
++        if not self.no_grad:
++            self.saved_values = values
++
++def grad_check(f: Any, *vals: Any, arg: int=0, epsilon: float=1e-06, rtol: float=0.001, atol: float=1e-08) -> bool:
++    """
++    Check that the computed gradient matches the numerical approximation.
++
++    Args:
++        f : arbitrary function from n-scalars to 1-scalar
++        *vals : n-float values $x_0 \ldots x_{n-1}$
++        arg : the argument to compute the gradient with respect to
++        epsilon : a small constant
++        rtol : relative tolerance
++        atol : absolute tolerance
++
++    Returns:
++        bool : whether the numerical and computed gradient are close
++    """
++    numerical = central_difference(f, *vals, arg=arg, epsilon=epsilon)
++    computed = f(*vals)
++    backpropagate(computed, 1.0)
++    return abs(numerical - vals[arg].derivative) <= (atol + rtol * abs(numerical))
+\ No newline at end of file
+diff --git a/minitorch/datasets.py b/minitorch/datasets.py
+index 46322bd..1112bb6 100644
+--- a/minitorch/datasets.py
++++ b/minitorch/datasets.py
+@@ -8,4 +8,98 @@ class Graph:
+     N: int
+     X: List[Tuple[float, float]]
+     y: List[int]
++
++def simple(N: int = 100) -> Graph:
++    """Simple dataset with two linearly separable clouds of points"""
++    X = []
++    y = []
++    for i in range(N):
++        x = random.uniform(-1.0, 1.0)
++        y_val = random.uniform(-1.0, 1.0)
++        label = 1 if x + y_val > 0 else 0
++        X.append((x, y_val))
++        y.append(label)
++    return Graph(N, X, y)
++
++def diag(N: int = 100) -> Graph:
++    """Dataset with two diagonal lines of points"""
++    X = []
++    y = []
++    for i in range(N):
++        if random.random() > 0.5:
++            x = random.uniform(-1.0, 1.0)
++            y_val = x + 0.2 * random.uniform(-1.0, 1.0)
++            label = 1
++        else:
++            x = random.uniform(-1.0, 1.0)
++            y_val = -x + 0.2 * random.uniform(-1.0, 1.0)
++            label = 0
++        X.append((x, y_val))
++        y.append(label)
++    return Graph(N, X, y)
++
++def split(N: int = 100) -> Graph:
++    """Dataset with two distinct regions"""
++    X = []
++    y = []
++    for i in range(N):
++        x = random.uniform(-1.0, 1.0)
++        y_val = random.uniform(-1.0, 1.0)
++        if x < 0:
++            label = 1 if y_val > 0 else 0
++        else:
++            label = 1 if y_val < 0 else 0
++        X.append((x, y_val))
++        y.append(label)
++    return Graph(N, X, y)
++
++def xor(N: int = 100) -> Graph:
++    """Dataset with XOR pattern"""
++    X = []
++    y = []
++    for i in range(N):
++        x = random.uniform(-1.0, 1.0)
++        y_val = random.uniform(-1.0, 1.0)
++        if (x > 0 and y_val > 0) or (x < 0 and y_val < 0):
++            label = 1
++        else:
++            label = 0
++        X.append((x, y_val))
++        y.append(label)
++    return Graph(N, X, y)
++
++def circle(N: int = 100) -> Graph:
++    """Dataset with points in a circle"""
++    X = []
++    y = []
++    for i in range(N):
++        x = random.uniform(-1.0, 1.0)
++        y_val = random.uniform(-1.0, 1.0)
++        if x * x + y_val * y_val < 0.5:
++            label = 1
++        else:
++            label = 0
++        X.append((x, y_val))
++        y.append(label)
++    return Graph(N, X, y)
++
++def spiral(N: int = 100) -> Graph:
++    """Dataset with points in a spiral pattern"""
++    X = []
++    y = []
++    for i in range(N):
++        radius = random.uniform(0, 1)
++        angle = random.uniform(0, 4 * math.pi)
++        if random.random() > 0.5:
++            x = radius * math.cos(angle)
++            y_val = radius * math.sin(angle)
++            label = 1
++        else:
++            x = radius * math.cos(angle + math.pi)
++            y_val = radius * math.sin(angle + math.pi)
++            label = 0
++        X.append((x, y_val))
++        y.append(label)
++    return Graph(N, X, y)
++
+ datasets = {'Simple': simple, 'Diag': diag, 'Split': split, 'Xor': xor, 'Circle': circle, 'Spiral': spiral}
+\ No newline at end of file
+diff --git a/minitorch/fast_conv.py b/minitorch/fast_conv.py
+index eddae84..137698a 100644
+--- a/minitorch/fast_conv.py
++++ b/minitorch/fast_conv.py
+@@ -41,7 +41,28 @@ def _tensor_conv1d(out: Tensor, out_shape: Shape, out_strides: Strides, out_size
+         weight_strides (Strides): strides for `input` tensor.
+         reverse (bool): anchor weight at left or right
+     """
+-    pass
++    batch_, in_channels, width = input_shape
++    out_channels, _, k_width = weight_shape
++
++    # For each output position
++    for batch in prange(batch_):
++        for out_channel in prange(out_channels):
++            for w in prange(width):
++                # Sum up all the values of the input * weights
++                acc = 0.0
++                for in_channel in range(in_channels):
++                    for k in range(k_width):
++                        w_offset = k if not reverse else k_width - k - 1
++                        if w + w_offset < width:
++                            # Get input position
++                            in_pos = index_to_position((batch, in_channel, w + w_offset), input_strides)
++                            # Get weight position
++                            w_pos = index_to_position((out_channel, in_channel, k), weight_strides)
++                            # Add to accumulator
++                            acc += input._tensor._storage[in_pos] * weight._tensor._storage[w_pos]
++                # Set output position
++                out_pos = index_to_position((batch, out_channel, w), out_strides)
++                out._tensor._storage[out_pos] = acc
+ tensor_conv1d = njit(parallel=True)(_tensor_conv1d)
+ 
+ class Conv1dFun(Function):
+@@ -59,7 +80,28 @@ class Conv1dFun(Function):
+         Returns:
+             batch x out_channel x h x w
+         """
+-        pass
++        ctx.save_for_backward(input, weight)
++        batch, in_channels, width = input.shape
++        out_channels, _, k_width = weight.shape
++        
++        # Create output tensor
++        out = input.zeros((batch, out_channels, width))
++        
++        # Call the conv1d implementation
++        tensor_conv1d(
++            out,
++            out.shape,
++            out.strides,
++            out.size,
++            input,
++            input.shape,
++            input.strides,
++            weight,
++            weight.shape,
++            weight.strides,
++            False,
++        )
++        return out
+ conv1d = Conv1dFun.apply
+ 
+ def _tensor_conv2d(out: Tensor, out_shape: Shape, out_strides: Strides, out_size: int, input: Tensor, input_shape: Shape, input_strides: Strides, weight: Tensor, weight_shape: Shape, weight_strides: Strides, reverse: bool) -> None:
+@@ -95,7 +137,37 @@ def _tensor_conv2d(out: Tensor, out_shape: Shape, out_strides: Strides, out_size
+         weight_strides (Strides): strides for `input` tensor.
+         reverse (bool): anchor weight at top-left or bottom-right
+     """
+-    pass
++    batch_, in_channels, height, width = input_shape
++    out_channels, _, k_height, k_width = weight_shape
++
++    # For each output position
++    for batch in prange(batch_):
++        for out_channel in prange(out_channels):
++            for h in prange(height):
++                for w in prange(width):
++                    # Sum up all the values of the input * weights
++                    acc = 0.0
++                    for in_channel in range(in_channels):
++                        for k_h in range(k_height):
++                            for k_w in range(k_width):
++                                h_offset = k_h if not reverse else k_height - k_h - 1
++                                w_offset = k_w if not reverse else k_width - k_w - 1
++                                if h + h_offset < height and w + w_offset < width:
++                                    # Get input position
++                                    in_pos = index_to_position(
++                                        (batch, in_channel, h + h_offset, w + w_offset),
++                                        input_strides,
++                                    )
++                                    # Get weight position
++                                    w_pos = index_to_position(
++                                        (out_channel, in_channel, k_h, k_w),
++                                        weight_strides,
++                                    )
++                                    # Add to accumulator
++                                    acc += input._tensor._storage[in_pos] * weight._tensor._storage[w_pos]
++                    # Set output position
++                    out_pos = index_to_position((batch, out_channel, h, w), out_strides)
++                    out._tensor._storage[out_pos] = acc
+ tensor_conv2d = njit(parallel=True, fastmath=True)(_tensor_conv2d)
+ 
+ class Conv2dFun(Function):
+@@ -113,5 +185,26 @@ class Conv2dFun(Function):
+         Returns:
+             (:class:`Tensor`) : batch x out_channel x h x w
+         """
+-        pass
++        ctx.save_for_backward(input, weight)
++        batch, in_channels, height, width = input.shape
++        out_channels, _, k_height, k_width = weight.shape
++        
++        # Create output tensor
++        out = input.zeros((batch, out_channels, height, width))
++        
++        # Call the conv2d implementation
++        tensor_conv2d(
++            out,
++            out.shape,
++            out.strides,
++            out.size,
++            input,
++            input.shape,
++            input.strides,
++            weight,
++            weight.shape,
++            weight.strides,
++            False,
++        )
++        return out
+ conv2d = Conv2dFun.apply
+\ No newline at end of file
+diff --git a/minitorch/fast_ops.py b/minitorch/fast_ops.py
+index ff6c24b..27cfb09 100644
+--- a/minitorch/fast_ops.py
++++ b/minitorch/fast_ops.py
+@@ -17,17 +17,75 @@ class FastOps(TensorOps):
+     @staticmethod
+     def map(fn: Callable[[float], float]) -> MapProto:
+         """See `tensor_ops.py`"""
+-        pass
++        def _map(a: Tensor, out: Optional[Tensor] = None) -> Tensor:
++            if out is None:
++                out = a.zeros(a.shape)
++            tensor_map(fn)(
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++            )
++            return out
++        return _map
++
++    @staticmethod
++    def cmap(fn: Callable[[float], float]) -> MapProto:
++        """See `tensor_ops.py`"""
++        def _cmap(a: Tensor, out: Optional[Tensor] = None) -> Tensor:
++            if out is None:
++                out = a.zeros(a.shape)
++            tensor_map(fn)(
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++            )
++            return out
++        return _cmap
+ 
+     @staticmethod
+     def zip(fn: Callable[[float, float], float]) -> Callable[[Tensor, Tensor], Tensor]:
+         """See `tensor_ops.py`"""
+-        pass
++        def _zip(a: Tensor, b: Tensor) -> Tensor:
++            c_shape = shape_broadcast(a.shape, b.shape)
++            out = a.zeros(c_shape)
++            tensor_zip(fn)(
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++                b._tensor._storage,
++                b._tensor._shape,
++                b._tensor._strides,
++            )
++            return out
++        return _zip
+ 
+     @staticmethod
+     def reduce(fn: Callable[[float, float], float], start: float=0.0) -> Callable[[Tensor, int], Tensor]:
+         """See `tensor_ops.py`"""
+-        pass
++        def _reduce(a: Tensor, dim: int) -> Tensor:
++            out_shape = list(a.shape)
++            out_shape[dim] = 1
++            out = a.zeros(tuple(out_shape))
++            tensor_reduce(fn)(
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++                dim,
++            )
++            return out
++        return _reduce
+ 
+     @staticmethod
+     def matrix_multiply(a: Tensor, b: Tensor) -> Tensor:
+@@ -53,7 +111,28 @@ class FastOps(TensorOps):
+         Returns:
+             New tensor data
+         """
+-        pass
++        # Setup shapes
++        ls = list(shape_broadcast(a.shape[:-2], b.shape[:-2]))
++        ls.append(a.shape[-2])
++        ls.append(b.shape[-1])
++        assert a.shape[-1] == b.shape[-2]
++
++        # Create output
++        out = a.zeros(tuple(ls))
++
++        # Call main function
++        tensor_matrix_multiply(
++            out._tensor._storage,
++            out._tensor._shape,
++            out._tensor._strides,
++            a._tensor._storage,
++            a._tensor._shape,
++            a._tensor._strides,
++            b._tensor._storage,
++            b._tensor._shape,
++            b._tensor._strides,
++        )
++        return out
+ 
+ def tensor_map(fn: Callable[[float], float]) -> Callable[[Storage, Shape, Strides, Storage, Shape, Strides], None]:
+     """
+@@ -71,7 +150,28 @@ def tensor_map(fn: Callable[[float], float]) -> Callable[[Storage, Shape, Stride
+     Returns:
+         Tensor map function.
+     """
+-    pass
++    @njit(parallel=True)
++    def _map(out_storage: Storage,
++             out_shape: Shape,
++             out_strides: Strides,
++             in_storage: Storage,
++             in_shape: Shape,
++             in_strides: Strides) -> None:
++        # Check if the tensors are stride-aligned
++        if np.array_equal(out_strides, in_strides) and np.array_equal(out_shape, in_shape):
++            for i in prange(len(out_storage)):
++                out_storage[i] = fn(in_storage[i])
++        else:
++            # Create index buffers
++            out_index = np.zeros(len(out_shape), np.int32)
++            in_index = np.zeros(len(in_shape), np.int32)
++            for i in prange(len(out_storage)):
++                to_index(i, out_shape, out_index)
++                broadcast_index(out_index, out_shape, in_shape, in_index)
++                in_position = index_to_position(in_index, in_strides)
++                out_position = index_to_position(out_index, out_strides)
++                out_storage[out_position] = fn(in_storage[in_position])
++    return _map
+ 
+ def tensor_zip(fn: Callable[[float, float], float]) -> Callable[[Storage, Shape, Strides, Storage, Shape, Strides, Storage, Shape, Strides], None]:
+     """
+@@ -90,7 +190,35 @@ def tensor_zip(fn: Callable[[float, float], float]) -> Callable[[Storage, Shape,
+     Returns:
+         Tensor zip function.
+     """
+-    pass
++    @njit(parallel=True)
++    def _zip(out_storage: Storage,
++             out_shape: Shape,
++             out_strides: Strides,
++             a_storage: Storage,
++             a_shape: Shape,
++             a_strides: Strides,
++             b_storage: Storage,
++             b_shape: Shape,
++             b_strides: Strides) -> None:
++        # Check if the tensors are stride-aligned
++        if (np.array_equal(out_strides, a_strides) and np.array_equal(out_strides, b_strides) and
++            np.array_equal(out_shape, a_shape) and np.array_equal(out_shape, b_shape)):
++            for i in prange(len(out_storage)):
++                out_storage[i] = fn(a_storage[i], b_storage[i])
++        else:
++            # Create index buffers
++            out_index = np.zeros(len(out_shape), np.int32)
++            a_index = np.zeros(len(a_shape), np.int32)
++            b_index = np.zeros(len(b_shape), np.int32)
++            for i in prange(len(out_storage)):
++                to_index(i, out_shape, out_index)
++                broadcast_index(out_index, out_shape, a_shape, a_index)
++                broadcast_index(out_index, out_shape, b_shape, b_index)
++                a_position = index_to_position(a_index, a_strides)
++                b_position = index_to_position(b_index, b_strides)
++                out_position = index_to_position(out_index, out_strides)
++                out_storage[out_position] = fn(a_storage[a_position], b_storage[b_position])
++    return _zip
+ 
+ def tensor_reduce(fn: Callable[[float, float], float]) -> Callable[[Storage, Shape, Strides, Storage, Shape, Strides, int], None]:
+     """
+@@ -108,7 +236,32 @@ def tensor_reduce(fn: Callable[[float, float], float]) -> Callable[[Storage, Sha
+     Returns:
+         Tensor reduce function
+     """
+-    pass
++    @njit(parallel=True)
++    def _reduce(out_storage: Storage,
++                out_shape: Shape,
++                out_strides: Strides,
++                in_storage: Storage,
++                in_shape: Shape,
++                in_strides: Strides,
++                reduce_dim: int) -> None:
++        # Create index buffers
++        out_index = np.zeros(len(out_shape), np.int32)
++        in_index = np.zeros(len(in_shape), np.int32)
++        for i in prange(len(out_storage)):
++            to_index(i, out_shape, out_index)
++            # Setup initial
++            in_index[:] = out_index[:]
++            in_index[reduce_dim] = 0
++            in_position = index_to_position(in_index, in_strides)
++            reduced = in_storage[in_position]
++            # Reduce over dimension
++            for j in range(1, in_shape[reduce_dim]):
++                in_index[reduce_dim] = j
++                in_position = index_to_position(in_index, in_strides)
++                reduced = fn(reduced, in_storage[in_position])
++            out_position = index_to_position(out_index, out_strides)
++            out_storage[out_position] = reduced
++    return _reduce
+ 
+ def _tensor_matrix_multiply(out: Storage, out_shape: Shape, out_strides: Strides, a_storage: Storage, a_shape: Shape, a_strides: Strides, b_storage: Storage, b_shape: Shape, b_strides: Strides) -> None:
+     """
+@@ -141,5 +294,39 @@ def _tensor_matrix_multiply(out: Storage, out_shape: Shape, out_strides: Strides
+     Returns:
+         None : Fills in `out`
+     """
+-    pass
++    # Get dimensions
++    a_batch = a_shape[0] if len(a_shape) > 2 else 1
++    b_batch = b_shape[0] if len(b_shape) > 2 else 1
++    batch = max(a_batch, b_batch)
++    m = a_shape[-2]
++    n = b_shape[-1]
++    p = a_shape[-1]
++
++    # Main loop in parallel
++    for b in prange(batch):
++        for i in range(m):
++            for j in range(n):
++                # Compute output position
++                out_pos = (
++                    (b if len(out_shape) > 2 else 0) * out_strides[0] if len(out_shape) > 2 else 0
++                ) + i * out_strides[-2] + j * out_strides[-1]
++
++                # Initialize accumulator
++                acc = 0.0
++
++                # Inner loop - matrix multiply
++                for k in range(p):
++                    # Compute positions in a and b
++                    a_pos = (
++                        (b if len(a_shape) > 2 else 0) * a_strides[0] if len(a_shape) > 2 else 0
++                    ) + i * a_strides[-2] + k * a_strides[-1]
++                    b_pos = (
++                        (b if len(b_shape) > 2 else 0) * b_strides[0] if len(b_shape) > 2 else 0
++                    ) + k * b_strides[-2] + j * b_strides[-1]
++
++                    # Multiply and accumulate
++                    acc += a_storage[a_pos] * b_storage[b_pos]
++
++                # Store result
++                out[out_pos] = acc
+ tensor_matrix_multiply = njit(parallel=True, fastmath=True)(_tensor_matrix_multiply)
+\ No newline at end of file
+diff --git a/minitorch/scalar.py b/minitorch/scalar.py
+index 8537995..e88d057 100644
+--- a/minitorch/scalar.py
++++ b/minitorch/scalar.py
+@@ -52,6 +52,14 @@ class Scalar:
+     def __repr__(self) -> str:
+         return 'Scalar(%f)' % self.data
+ 
++    def __hash__(self) -> int:
++        return hash(self.unique_id)
++
++    def __eq__(self, other: Any) -> bool:
++        if not isinstance(other, Scalar):
++            return False
++        return self.unique_id == other.unique_id
++
+     def __mul__(self, b: ScalarLike) -> Scalar:
+         return Mul.apply(self, b)
+ 
+@@ -62,25 +70,25 @@ class Scalar:
+         return Mul.apply(b, Inv.apply(self))
+ 
+     def __add__(self, b: ScalarLike) -> Scalar:
+-        raise NotImplementedError('Need to implement for Task 1.2')
++        return Add.apply(self, b)
+ 
+     def __bool__(self) -> bool:
+         return bool(self.data)
+ 
+     def __lt__(self, b: ScalarLike) -> Scalar:
+-        raise NotImplementedError('Need to implement for Task 1.2')
++        return LT.apply(self, b)
+ 
+     def __gt__(self, b: ScalarLike) -> Scalar:
+-        raise NotImplementedError('Need to implement for Task 1.2')
++        return LT.apply(b, self)
+ 
+     def __eq__(self, b: ScalarLike) -> Scalar:
+-        raise NotImplementedError('Need to implement for Task 1.2')
++        return EQ.apply(self, b)
+ 
+     def __sub__(self, b: ScalarLike) -> Scalar:
+-        raise NotImplementedError('Need to implement for Task 1.2')
++        return Add.apply(self, Neg.apply(b))
+ 
+     def __neg__(self) -> Scalar:
+-        raise NotImplementedError('Need to implement for Task 1.2')
++        return Neg.apply(self)
+ 
+     def __radd__(self, b: ScalarLike) -> Scalar:
+         return self + b
+@@ -96,11 +104,35 @@ class Scalar:
+         Args:
+             x: value to be accumulated
+         """
+-        pass
++        if self.derivative is None:
++            self.derivative = 0.0
++        self.derivative += x
+ 
+     def is_leaf(self) -> bool:
+         """True if this variable created by the user (no `last_fn`)"""
+-        pass
++        return self.history.last_fn is None
++
++    def chain_rule(self, d_output: float) -> Tuple[Tuple[Variable, float], ...]:
++        """
++        Implement the derivative chain-rule.
++
++        Args:
++            d_output (float): derivative of the output
++
++        Returns:
++            List of tuples of (variable, derivative), where each is the derivative of the output with respect to
++            one of the inputs.
++        """
++        if self.history.last_fn is None:
++            return ()
++        derivatives = self.history.last_fn.chain_rule(self.history.ctx, self.history.inputs, d_output)
++        return tuple((var, deriv) for var, deriv in zip(self.history.inputs, derivatives))
++
++    def parents(self) -> Iterable[Variable]:
++        """Get the parents of this variable."""
++        if self.history.last_fn is None:
++            return []
++        return self.history.inputs
+ 
+     def backward(self, d_output: Optional[float]=None) -> None:
+         """
+@@ -110,7 +142,9 @@ class Scalar:
+             d_output (number, opt): starting derivative to backpropagate through the model
+                                    (typically left out, and assumed to be 1.0).
+         """
+-        pass
++        if d_output is None:
++            d_output = 1.0
++        backpropagate(self, d_output)
+ 
+ def derivative_check(f: Any, *scalars: Scalar) -> None:
+     """
+@@ -121,4 +155,14 @@ def derivative_check(f: Any, *scalars: Scalar) -> None:
+         f : function from n-scalars to 1-scalar.
+         *scalars  : n input scalar values.
+     """
+-    pass
+\ No newline at end of file
++    out = f(*scalars)
++    out.backward()
++
++    for i, scalar in enumerate(scalars):
++        if not scalar.is_leaf():
++            continue
++        numerical = central_difference(f, *scalars, arg=i)
++        assert abs(numerical - scalar.derivative) < 1e-3, (
++            f"Derivative check failed. Variable {i} has derivative {scalar.derivative} but "
++            f"numerical derivative is {numerical}."
++        )
+\ No newline at end of file
+diff --git a/minitorch/scalar_functions.py b/minitorch/scalar_functions.py
+index d8dfe6f..f6d31a8 100644
+--- a/minitorch/scalar_functions.py
++++ b/minitorch/scalar_functions.py
+@@ -9,11 +9,15 @@ if TYPE_CHECKING:
+ 
+ def wrap_tuple(x):
+     """Turn a possible value into a tuple"""
+-    pass
++    if isinstance(x, tuple):
++        return x
++    return (x,)
+ 
+ def unwrap_tuple(x):
+     """Turn a singleton tuple into a value"""
+-    pass
++    if len(x) == 1:
++        return x[0]
++    return x
+ 
+ class ScalarFunction:
+     """
+@@ -23,33 +27,163 @@ class ScalarFunction:
+     This is a static class and is never instantiated. We use `class`
+     here to group together the `forward` and `backward` code.
+     """
++    @classmethod
++    def chain_rule(cls, ctx: Context, inputs: Tuple[Scalar, ...], d_output: float) -> Tuple[float, ...]:
++        """
++        Implements the chain rule for a function.
++
++        Args:
++            ctx: Context from running forward
++            inputs: Inputs to the function
++            d_output: Derivative of the output
++
++        Returns:
++            List of derivatives of the input
++        """
++        d_inputs = cls.backward(ctx, d_output)
++        return wrap_tuple(d_inputs)
++
++    @classmethod
++    def apply(cls, *vals: ScalarLike) -> Scalar:
++        """
++        Apply function forward to the arguments.
++
++        Args:
++            vals: Values for the function
++
++        Returns:
++            A new Variable with fn as operation.
++        """
++        raw_vals = []
++        scalars = []
++        for v in vals:
++            if isinstance(v, minitorch.scalar.Scalar):
++                scalars.append(v)
++                raw_vals.append(v.data)
++            else:
++                scalars.append(minitorch.scalar.Scalar(v))
++                raw_vals.append(v)
++
++        # Create the context.
++        ctx = Context()
++
++        # Call forward with the variables.
++        c = cls.forward(ctx, *raw_vals)
++        assert isinstance(c, float), "Expected return type float got %s" % (type(c))
++
++        # Create a new variable from the result with a new history.
++        back = minitorch.scalar.ScalarHistory(cls, ctx, scalars)
++        return minitorch.scalar.Scalar(c, back)
+ 
+ class Add(ScalarFunction):
+     """Addition function $f(x, y) = x + y$"""
++    @staticmethod
++    def forward(ctx: Context, a: float, b: float) -> float:
++        return a + b
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
++        return d_output, d_output
+ 
+ class Log(ScalarFunction):
+     """Log function $f(x) = log(x)$"""
++    @staticmethod
++    def forward(ctx: Context, a: float) -> float:
++        ctx.save_for_backward(a)
++        return operators.log(a)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> float:
++        (a,) = ctx.saved_values
++        return operators.log_back(a, d_output)
+ 
+ class Mul(ScalarFunction):
+     """Multiplication function"""
++    @staticmethod
++    def forward(ctx: Context, a: float, b: float) -> float:
++        ctx.save_for_backward(a, b)
++        return operators.mul(a, b)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
++        a, b = ctx.saved_values
++        return b * d_output, a * d_output
+ 
+ class Inv(ScalarFunction):
+     """Inverse function"""
++    @staticmethod
++    def forward(ctx: Context, a: float) -> float:
++        ctx.save_for_backward(a)
++        return operators.inv(a)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> float:
++        (a,) = ctx.saved_values
++        return operators.inv_back(a, d_output)
+ 
+ class Neg(ScalarFunction):
+     """Negation function"""
++    @staticmethod
++    def forward(ctx: Context, a: float) -> float:
++        return operators.neg(a)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> float:
++        return -d_output
+ 
+ class Sigmoid(ScalarFunction):
+     """Sigmoid function"""
++    @staticmethod
++    def forward(ctx: Context, a: float) -> float:
++        ctx.save_for_backward(a)
++        return operators.sigmoid(a)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> float:
++        (a,) = ctx.saved_values
++        sig_a = operators.sigmoid(a)
++        return d_output * sig_a * (1 - sig_a)
+ 
+ class ReLU(ScalarFunction):
+     """ReLU function"""
++    @staticmethod
++    def forward(ctx: Context, a: float) -> float:
++        ctx.save_for_backward(a)
++        return operators.relu(a)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> float:
++        (a,) = ctx.saved_values
++        return operators.relu_back(a, d_output)
+ 
+ class Exp(ScalarFunction):
+     """Exp function"""
++    @staticmethod
++    def forward(ctx: Context, a: float) -> float:
++        ctx.save_for_backward(a)
++        return operators.exp(a)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> float:
++        (a,) = ctx.saved_values
++        return d_output * operators.exp(a)
+ 
+ class LT(ScalarFunction):
+     """Less-than function $f(x) =$ 1.0 if x is less than y else 0.0"""
++    @staticmethod
++    def forward(ctx: Context, a: float, b: float) -> float:
++        return operators.lt(a, b)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
++        return 0.0, 0.0
+ 
+ class EQ(ScalarFunction):
+-    """Equal function $f(x) =$ 1.0 if x is equal to y else 0.0"""
+\ No newline at end of file
++    """Equal function $f(x) =$ 1.0 if x is equal to y else 0.0"""
++    @staticmethod
++    def forward(ctx: Context, a: float, b: float) -> float:
++        return operators.eq(a, b)
++
++    @staticmethod
++    def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
++        return 0.0, 0.0
+\ No newline at end of file
+diff --git a/minitorch/tensor_functions.py b/minitorch/tensor_functions.py
+index a2e29c9..e73d3fa 100644
+--- a/minitorch/tensor_functions.py
++++ b/minitorch/tensor_functions.py
+@@ -19,7 +19,35 @@ def wrap_tuple(x):
+     pass
+ 
+ class Function:
+-    pass
++    """
++    Base class for function implementations.
++    """
++    @classmethod
++    def apply(cls, *vals: Tensor) -> Tensor:
++        """
++        Apply function forward to the arguments.
++
++        Args:
++            vals: input tensors
++
++        Returns:
++            output tensor
++        """
++        raw_vals = []
++        need_grad = False
++        for v in vals:
++            if v.requires_grad:
++                need_grad = True
++            raw_vals.append(v)
++
++        # Create the context.
++        ctx = Context(not need_grad)
++
++        # Call forward with the variables.
++        c = cls()
++        ret = c.forward(ctx, *raw_vals)
++
++        return ret
+ 
+ class Neg(Function):
+     pass
+diff --git a/minitorch/tensor_ops.py b/minitorch/tensor_ops.py
+index e5bb9eb..90cc0e8 100644
+--- a/minitorch/tensor_ops.py
++++ b/minitorch/tensor_ops.py
+@@ -84,7 +84,54 @@ class SimpleOps(TensorOps):
+         Returns:
+             new tensor data
+         """
+-        pass
++        def _map(a: Tensor, out: Optional[Tensor] = None) -> Tensor:
++            if out is None:
++                out = a.zeros(a.shape)
++            tensor_map(fn)(
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++            )
++            return out
++        return _map
++
++    @staticmethod
++    def cmap(fn: Callable[[float], float]) -> MapProto:
++        """
++        Higher-order tensor map function that creates a new tensor ::
++
++          fn_map = map(fn)
++          out = fn_map(a)
++
++        Simple version::
++
++            for i:
++                for j:
++                    out[i, j] = fn(a[i, j])
++
++        Args:
++            fn: function from float-to-float to apply.
++            a (:class:`TensorData`): tensor to map over
++
++        Returns:
++            new tensor data
++        """
++        def _cmap(a: Tensor, out: Optional[Tensor] = None) -> Tensor:
++            if out is None:
++                out = a.zeros(a.shape)
++            tensor_map(fn)(
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++            )
++            return out
++        return _cmap
+ 
+     @staticmethod
+     def zip(fn: Callable[[float, float], float]) -> Callable[['Tensor', 'Tensor'], 'Tensor']:
+@@ -115,7 +162,22 @@ class SimpleOps(TensorOps):
+         Returns:
+             :class:`TensorData` : new tensor data
+         """
+-        pass
++        def _zip(a: Tensor, b: Tensor) -> Tensor:
++            c_shape = shape_broadcast(a.shape, b.shape)
++            out = a.zeros(c_shape)
++            tensor_zip(fn)(
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++                b._tensor._storage,
++                b._tensor._shape,
++                b._tensor._strides,
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++            )
++            return out
++        return _zip
+ 
+     @staticmethod
+     def reduce(fn: Callable[[float, float], float], start: float=0.0) -> Callable[['Tensor', int], 'Tensor']:
+@@ -141,7 +203,56 @@ class SimpleOps(TensorOps):
+         Returns:
+             :class:`TensorData` : new tensor
+         """
+-        pass
++        def _reduce(a: Tensor, dim: int) -> Tensor:
++            out_shape = list(a.shape)
++            out_shape[dim] = 1
++            out = a.zeros(tuple(out_shape))
++            tensor_reduce(fn)(
++                a._tensor._storage,
++                a._tensor._shape,
++                a._tensor._strides,
++                out._tensor._storage,
++                out._tensor._shape,
++                out._tensor._strides,
++                dim,
++            )
++            return out
++        return _reduce
++
++    @staticmethod
++    def matrix_multiply(a: Tensor, b: Tensor) -> Tensor:
++        """
++        Batched matrix multiplication of two tensors.
++
++        Args:
++            a : batch1 x n x m tensor
++            b : batch2 x m x p tensor
++
++        Returns:
++            A tensor of size batch1 x batch2 x n x p
++        """
++        # Extract dimensions
++        batch1, n, m = a.shape
++        batch2, m2, p = b.shape
++        assert m == m2, f"Incompatible dimensions: {m} != {m2}"
++
++        # Create output tensor
++        out = a.zeros((batch1, batch2, n, p))
++
++        # Perform matrix multiplication
++        for i in range(batch1):
++            for j in range(batch2):
++                for k in range(n):
++                    for l in range(p):
++                        sum_val = 0.0
++                        for t in range(m):
++                            sum_val += a._tensor._storage[a._tensor._strides[0] * i + a._tensor._strides[1] * k + a._tensor._strides[2] * t] * \
++                                     b._tensor._storage[b._tensor._strides[0] * j + b._tensor._strides[1] * t + b._tensor._strides[2] * l]
++                        out_idx = out._tensor._strides[0] * i + out._tensor._strides[1] * j + out._tensor._strides[2] * k + out._tensor._strides[3] * l
++                        out._tensor._storage[out_idx] = sum_val
++
++        return out
++
+     is_cuda = False
+ 
+ def tensor_map(fn: Callable[[float], float]) -> Callable[[Storage, Shape, Strides, Storage, Shape, Strides], None]:
+@@ -167,7 +278,21 @@ def tensor_map(fn: Callable[[float], float]) -> Callable[[Storage, Shape, Stride
+     Returns:
+         Tensor map function.
+     """
+-    pass
++    def _map(in_storage: Storage,
++             in_shape: Shape,
++             in_strides: Strides,
++             out_storage: Storage,
++             out_shape: Shape,
++             out_strides: Strides) -> None:
++        out_index = np.zeros(len(out_shape), np.int32)
++        in_index = np.zeros(len(in_shape), np.int32)
++        for i in range(len(out_storage)):
++            to_index(i, out_shape, out_index)
++            broadcast_index(out_index, out_shape, in_shape, in_index)
++            in_position = index_to_position(in_index, in_strides)
++            out_position = index_to_position(out_index, out_strides)
++            out_storage[out_position] = fn(in_storage[in_position])
++    return _map
+ 
+ def tensor_zip(fn: Callable[[float, float], float]) -> Callable[[Storage, Shape, Strides, Storage, Shape, Strides, Storage, Shape, Strides], None]:
+     """
+@@ -192,7 +317,27 @@ def tensor_zip(fn: Callable[[float, float], float]) -> Callable[[Storage, Shape,
+     Returns:
+         Tensor zip function.
+     """
+-    pass
++    def _zip(a_storage: Storage,
++             a_shape: Shape,
++             a_strides: Strides,
++             b_storage: Storage,
++             b_shape: Shape,
++             b_strides: Strides,
++             out_storage: Storage,
++             out_shape: Shape,
++             out_strides: Strides) -> None:
++        out_index = np.zeros(len(out_shape), np.int32)
++        a_index = np.zeros(len(a_shape), np.int32)
++        b_index = np.zeros(len(b_shape), np.int32)
++        for i in range(len(out_storage)):
++            to_index(i, out_shape, out_index)
++            broadcast_index(out_index, out_shape, a_shape, a_index)
++            broadcast_index(out_index, out_shape, b_shape, b_index)
++            a_position = index_to_position(a_index, a_strides)
++            b_position = index_to_position(b_index, b_strides)
++            out_position = index_to_position(out_index, out_strides)
++            out_storage[out_position] = fn(a_storage[a_position], b_storage[b_position])
++    return _zip
+ 
+ def tensor_reduce(fn: Callable[[float, float], float]) -> Callable[[Storage, Shape, Strides, Storage, Shape, Strides, int], None]:
+     """
+@@ -207,5 +352,28 @@ def tensor_reduce(fn: Callable[[float, float], float]) -> Callable[[Storage, Sha
+     Returns:
+         Tensor reduce function.
+     """
+-    pass
++    def _reduce(a_storage: Storage,
++                a_shape: Shape,
++                a_strides: Strides,
++                out_storage: Storage,
++                out_shape: Shape,
++                out_strides: Strides,
++                reduce_dim: int) -> None:
++        out_index = np.zeros(len(out_shape), np.int32)
++        a_index = np.zeros(len(a_shape), np.int32)
++        for i in range(len(out_storage)):
++            to_index(i, out_shape, out_index)
++            out_position = index_to_position(out_index, out_strides)
++            # Setup initial
++            a_index[:] = out_index[:]
++            a_index[reduce_dim] = 0
++            a_position = index_to_position(a_index, a_strides)
++            reduced = a_storage[a_position]
++            # Reduce over dimension
++            for j in range(1, a_shape[reduce_dim]):
++                a_index[reduce_dim] = j
++                a_position = index_to_position(a_index, a_strides)
++                reduced = fn(reduced, a_storage[a_position])
++            out_storage[out_position] = reduced
++    return _reduce
+ SimpleBackend = TensorBackend(SimpleOps)
+\ No newline at end of file
+diff --git a/minitorch/testing.py b/minitorch/testing.py
+index 72ab137..209bc02 100644
+--- a/minitorch/testing.py
++++ b/minitorch/testing.py
+@@ -7,84 +7,114 @@ class MathTest(Generic[A]):
+     @staticmethod
+     def neg(a: A) -> A:
+         """Negate the argument"""
+-        pass
++        return operators.neg(a)
+ 
+     @staticmethod
+     def addConstant(a: A) -> A:
+         """Add contant to the argument"""
+-        pass
++        return operators.add(a, 10.0)
+ 
+     @staticmethod
+     def square(a: A) -> A:
+         """Manual square"""
+-        pass
++        return operators.mul(a, a)
+ 
+     @staticmethod
+     def cube(a: A) -> A:
+         """Manual cube"""
+-        pass
++        return operators.mul(operators.mul(a, a), a)
+ 
+     @staticmethod
+     def subConstant(a: A) -> A:
+         """Subtract a constant from the argument"""
+-        pass
++        return operators.add(a, -5.0)
+ 
+     @staticmethod
+     def multConstant(a: A) -> A:
+         """Multiply a constant to the argument"""
+-        pass
++        return operators.mul(a, 5.0)
+ 
+     @staticmethod
+     def div(a: A) -> A:
+         """Divide by a constant"""
+-        pass
++        return operators.mul(a, 0.2)
+ 
+     @staticmethod
+     def inv(a: A) -> A:
+         """Invert after adding"""
+-        pass
++        return operators.inv(operators.add(a, 2.0))
+ 
+     @staticmethod
+     def sig(a: A) -> A:
+         """Apply sigmoid"""
+-        pass
++        return operators.sigmoid(a)
+ 
+     @staticmethod
+     def log(a: A) -> A:
+         """Apply log to a large value"""
+-        pass
++        return operators.log(operators.add(a, 100.0))
+ 
+     @staticmethod
+     def relu(a: A) -> A:
+         """Apply relu"""
+-        pass
++        return operators.relu(a)
+ 
+     @staticmethod
+     def exp(a: A) -> A:
+         """Apply exp to a smaller value"""
+-        pass
++        return operators.exp(operators.add(a, -100.0))
+ 
+     @staticmethod
+     def add2(a: A, b: A) -> A:
+         """Add two arguments"""
+-        pass
++        return operators.add(a, b)
+ 
+     @staticmethod
+     def mul2(a: A, b: A) -> A:
+         """Mul two arguments"""
+-        pass
++        return operators.mul(a, b)
+ 
+     @staticmethod
+     def div2(a: A, b: A) -> A:
+         """Divide two arguments"""
+-        pass
++        return operators.mul(a, operators.inv(b))
+ 
+     @classmethod
+     def _tests(cls) -> Tuple[Tuple[str, Callable[[A], A]], Tuple[str, Callable[[A, A], A]], Tuple[str, Callable[[Iterable[A]], A]]]:
+         """
+         Returns a list of all the math tests.
+         """
+-        pass
++        one_arg = [
++            ("neg", cls.neg),
++            ("addConstant", cls.addConstant),
++            ("square", cls.square),
++            ("cube", cls.cube),
++            ("subConstant", cls.subConstant),
++            ("multConstant", cls.multConstant),
++            ("div", cls.div),
++            ("inv", cls.inv),
++            ("sig", cls.sig),
++            ("log", cls.log),
++            ("relu", cls.relu),
++            ("exp", cls.exp),
++        ]
++        two_arg = [
++            ("add2", cls.add2),
++            ("mul2", cls.mul2),
++            ("div2", cls.div2),
++        ]
++        return tuple(one_arg), tuple(two_arg), tuple()
+ 
+ class MathTestVariable(MathTest):
+-    pass
+\ No newline at end of file
++    @staticmethod
++    def _comp_testing() -> Tuple[Tuple[str, Callable[[A], A]], Tuple[str, Callable[[A, A], A]], Tuple[str, Callable[[Iterable[A]], A]]]:
++        """
++        Returns a list of all the comparison tests.
++        """
++        one_arg = []
++        two_arg = [
++            ("lt", operators.lt),
++            ("eq", operators.eq),
++            ("gt", lambda x, y: operators.lt(y, x)),
++        ]
++        return tuple(one_arg), tuple(two_arg), tuple()
+\ No newline at end of file
+

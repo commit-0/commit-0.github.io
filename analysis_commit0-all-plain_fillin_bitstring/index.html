@@ -1,0 +1,1645 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis commit0 all plain fillin bitstring - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-fill-in-bitstring" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis commit0 all plain fillin bitstring
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_commit0-all-plain_fillin">back to Claude Sonnet 3.5 - Fill-in summary</a></p>
+<h1 id="claude-sonnet-35-fill-in-bitstring"><strong>Claude Sonnet 3.5 - Fill-in</strong>: bitstring</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/bitstring/array_.py b/bitstring/array_.py</span>
+<span class="gh">index 5df26f0..cb5e869 100644</span>
+<span class="gd">--- a/bitstring/array_.py</span>
+<span class="gi">+++ b/bitstring/array_.py</span>
+<span class="gu">@@ -95,7 +95,7 @@ class Array:</span>
+
+<span class="w"> </span>    def _create_element(self, value: ElementType) -&gt;Bits:
+<span class="w"> </span>        &quot;&quot;&quot;Create Bits from value according to the token_name and token_length&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._dtype.set_fn(value)</span>
+
+<span class="w"> </span>    def __len__(self) -&gt;int:
+<span class="w"> </span>        return len(self.data) // self._dtype.length
+<span class="gu">@@ -206,13 +206,20 @@ class Array:</span>
+
+<span class="w"> </span>    def astype(self, dtype: Union[str, Dtype]) -&gt;Array:
+<span class="w"> </span>        &quot;&quot;&quot;Return Array with elements of new dtype, initialised from current Array.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        new_array = Array(dtype)</span>
+<span class="gi">+        new_array.extend(self)</span>
+<span class="gi">+        return new_array</span>
+
+<span class="w"> </span>    def insert(self, i: int, x: ElementType) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Insert a new element into the Array at position i.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if i &lt; 0:</span>
+<span class="gi">+            i += len(self)</span>
+<span class="gi">+        if i &lt; 0 or i &gt; len(self):</span>
+<span class="gi">+            raise IndexError(&quot;Array index out of range&quot;)</span>
+<span class="gi">+        element = self._create_element(x)</span>
+<span class="gi">+        self.data.insert(i * self._dtype.length, element)</span>
+
+<span class="w"> </span>    def pop(self, i: int=-1) -&gt;ElementType:
+<span class="w"> </span>        &quot;&quot;&quot;Return and remove an element of the Array.
+<span class="gu">@@ -220,7 +227,15 @@ class Array:</span>
+<span class="w"> </span>        Default is to return and remove the final element.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if i &lt; 0:</span>
+<span class="gi">+            i += len(self)</span>
+<span class="gi">+        if i &lt; 0 or i &gt;= len(self):</span>
+<span class="gi">+            raise IndexError(&quot;Array index out of range&quot;)</span>
+<span class="gi">+        start = i * self._dtype.length</span>
+<span class="gi">+        end = start + self._dtype.length</span>
+<span class="gi">+        element = self._dtype.read_fn(self.data, start=start)</span>
+<span class="gi">+        del self.data[start:end]</span>
+<span class="gi">+        return element</span>
+
+<span class="w"> </span>    def byteswap(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Change the endianness in-place of all items in the Array.
+<span class="gu">@@ -228,7 +243,14 @@ class Array:</span>
+<span class="w"> </span>        If the Array format is not a whole number of bytes a ValueError will be raised.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._dtype.length % 8 != 0:</span>
+<span class="gi">+            raise ValueError(&quot;Array format is not a whole number of bytes&quot;)</span>
+<span class="gi">+        bytes_per_item = self._dtype.length // 8</span>
+<span class="gi">+        for i in range(0, len(self.data), self._dtype.length):</span>
+<span class="gi">+            item = self.data[i:i + self._dtype.length]</span>
+<span class="gi">+            swapped = BitArray(item)</span>
+<span class="gi">+            swapped.byteswap()</span>
+<span class="gi">+            self.data.overwrite(swapped, i)</span>
+
+<span class="w"> </span>    def count(self, value: ElementType) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Return count of Array items that equal value.
+<span class="gu">@@ -238,7 +260,13 @@ class Array:</span>
+<span class="w"> </span>        For floating point types using a value of float(&#39;nan&#39;) will count the number of elements that are NaN.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        count = 0</span>
+<span class="gi">+        for item in self:</span>
+<span class="gi">+            if math.isnan(value) and math.isnan(item):</span>
+<span class="gi">+                count += 1</span>
+<span class="gi">+            elif item == value:</span>
+<span class="gi">+                count += 1</span>
+<span class="gi">+        return count</span>
+
+<span class="w"> </span>    def tobytes(self) -&gt;bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Return the Array data as a bytes object, padding with zero bits if needed.
+<span class="gu">@@ -246,7 +274,7 @@ class Array:</span>
+<span class="w"> </span>        Up to seven zero bits will be added at the end to byte align.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.data.tobytes()</span>
+
+<span class="w"> </span>    def tofile(self, f: BinaryIO) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Write the Array data to a file object, padding with zero bits if needed.
+<span class="gu">@@ -254,7 +282,7 @@ class Array:</span>
+<span class="w"> </span>        Up to seven zero bits will be added at the end to byte align.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        f.write(self.tobytes())</span>
+
+<span class="w"> </span>    def pp(self, fmt: Optional[str]=None, width: int=120, show_offset: bool
+<span class="w"> </span>        =True, stream: TextIO=sys.stdout) -&gt;None:
+<span class="gh">diff --git a/bitstring/bitarray_.py b/bitstring/bitarray_.py</span>
+<span class="gh">index 5d6204f..f9b9ee7 100644</span>
+<span class="gd">--- a/bitstring/bitarray_.py</span>
+<span class="gi">+++ b/bitstring/bitarray_.py</span>
+<span class="gu">@@ -113,7 +113,7 @@ class BitArray(Bits):</span>
+
+<span class="w"> </span>    def copy(self: TBits) -&gt;TBits:
+<span class="w"> </span>        &quot;&quot;&quot;Return a copy of the bitstring.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return BitArray(self)</span>
+
+<span class="w"> </span>    def __setattr__(self, attribute, value) -&gt;None:
+<span class="w"> </span>        try:
+<span class="gu">@@ -245,7 +245,34 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        out of range.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not old:</span>
+<span class="gi">+            raise ValueError(&quot;Empty bitstring to replace&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+        count = -1 if count is None else count</span>
+<span class="gi">+</span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or start &gt; end:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        old_bits = Bits(old)</span>
+<span class="gi">+        new_bits = Bits(new)</span>
+<span class="gi">+        replacements = 0</span>
+<span class="gi">+        pos = start</span>
+<span class="gi">+</span>
+<span class="gi">+        while pos &lt;= end - len(old_bits) and replacements != count:</span>
+<span class="gi">+            if bytealigned and pos % 8 != 0:</span>
+<span class="gi">+                pos += 1</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            </span>
+<span class="gi">+            if self[pos:pos+len(old_bits)] == old_bits:</span>
+<span class="gi">+                self[pos:pos+len(old_bits)] = new_bits</span>
+<span class="gi">+                pos += len(new_bits)</span>
+<span class="gi">+                replacements += 1</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                pos += 1</span>
+<span class="gi">+</span>
+<span class="gi">+        return replacements</span>
+
+<span class="w"> </span>    def insert(self, bs: BitsType, pos: int) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Insert bs at bit position pos.
+<span class="gu">@@ -256,7 +283,11 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises ValueError if pos &lt; 0 or pos &gt; len(self).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if pos &lt; 0 or pos &gt; len(self):</span>
+<span class="gi">+            raise ValueError(&quot;Invalid insertion position&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        bs_to_insert = Bits(bs)</span>
+<span class="gi">+        self._bitstore = self._bitstore[:pos] + bs_to_insert._bitstore + self._bitstore[pos:]</span>
+
+<span class="w"> </span>    def overwrite(self, bs: BitsType, pos: int) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Overwrite with bs at bit position pos.
+<span class="gu">@@ -267,7 +298,15 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises ValueError if pos &lt; 0 or pos &gt; len(self).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if pos &lt; 0 or pos &gt; len(self):</span>
+<span class="gi">+            raise ValueError(&quot;Invalid overwrite position&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        bs_to_write = Bits(bs)</span>
+<span class="gi">+        end = pos + len(bs_to_write)</span>
+<span class="gi">+        if end &gt; len(self):</span>
+<span class="gi">+            self._bitstore = self._bitstore[:pos] + bs_to_write._bitstore</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._bitstore = self._bitstore[:pos] + bs_to_write._bitstore + self._bitstore[end:]</span>
+
+<span class="w"> </span>    def append(self, bs: BitsType) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Append a bitstring to the current bitstring.
+<span class="gu">@@ -275,7 +314,8 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        bs -- The bitstring to append.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bs_to_append = Bits(bs)</span>
+<span class="gi">+        self._bitstore += bs_to_append._bitstore</span>
+
+<span class="w"> </span>    def prepend(self, bs: BitsType) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Prepend a bitstring to the current bitstring.
+<span class="gu">@@ -283,7 +323,8 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        bs -- The bitstring to prepend.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bs_to_prepend = Bits(bs)</span>
+<span class="gi">+        self._bitstore = bs_to_prepend._bitstore + self._bitstore</span>
+
+<span class="w"> </span>    def reverse(self, start: Optional[int]=None, end: Optional[int]=None
+<span class="w"> </span>        ) -&gt;None:
+<span class="gu">@@ -298,7 +339,17 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises ValueError if start &lt; 0, end &gt; len(self) or end &lt; start.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+</span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or end &lt; start:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        reversed_section = self._bitstore[start:end][::-1]</span>
+<span class="gi">+        self._bitstore = self._bitstore[:start] + reversed_section + self._bitstore[end:]</span>
+
+<span class="w"> </span>    def set(self, value: Any, pos: Optional[Union[int, Iterable[int]]]=None
+<span class="w"> </span>        ) -&gt;None:
+<span class="gu">@@ -312,7 +363,23 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises IndexError if pos &lt; -len(self) or pos &gt;= len(self).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bit_value = 1 if bool(value) else 0</span>
+<span class="gi">+</span>
+<span class="gi">+        if pos is None:</span>
+<span class="gi">+            self._bitstore = BitArray([bit_value] * len(self))._bitstore</span>
+<span class="gi">+        elif isinstance(pos, int):</span>
+<span class="gi">+            if pos &lt; -len(self) or pos &gt;= len(self):</span>
+<span class="gi">+                raise IndexError(&quot;Bit position out of range&quot;)</span>
+<span class="gi">+            if pos &lt; 0:</span>
+<span class="gi">+                pos = len(self) + pos</span>
+<span class="gi">+            self._bitstore[pos] = bit_value</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            for p in pos:</span>
+<span class="gi">+                if p &lt; -len(self) or p &gt;= len(self):</span>
+<span class="gi">+                    raise IndexError(&quot;Bit position out of range&quot;)</span>
+<span class="gi">+                if p &lt; 0:</span>
+<span class="gi">+                    p = len(self) + p</span>
+<span class="gi">+                self._bitstore[p] = bit_value</span>
+
+<span class="w"> </span>    def invert(self, pos: Optional[Union[Iterable[int], int]]=None) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Invert one or many bits from 0 to 1 or vice versa.
+<span class="gu">@@ -323,7 +390,21 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises IndexError if pos &lt; -len(self) or pos &gt;= len(self).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if pos is None:</span>
+<span class="gi">+            self._bitstore = ~self._bitstore</span>
+<span class="gi">+        elif isinstance(pos, int):</span>
+<span class="gi">+            if pos &lt; -len(self) or pos &gt;= len(self):</span>
+<span class="gi">+                raise IndexError(&quot;Bit position out of range&quot;)</span>
+<span class="gi">+            if pos &lt; 0:</span>
+<span class="gi">+                pos = len(self) + pos</span>
+<span class="gi">+            self._bitstore[pos] = not self._bitstore[pos]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            for p in pos:</span>
+<span class="gi">+                if p &lt; -len(self) or p &gt;= len(self):</span>
+<span class="gi">+                    raise IndexError(&quot;Bit position out of range&quot;)</span>
+<span class="gi">+                if p &lt; 0:</span>
+<span class="gi">+                    p = len(self) + p</span>
+<span class="gi">+                self._bitstore[p] = not self._bitstore[p]</span>
+
+<span class="w"> </span>    def ror(self, bits: int, start: Optional[int]=None, end: Optional[int]=None
+<span class="w"> </span>        ) -&gt;None:
+<span class="gu">@@ -336,7 +417,26 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises ValueError if bits &lt; 0.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if bits &lt; 0:</span>
+<span class="gi">+            raise ValueError(&quot;Cannot rotate by a negative amount&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+</span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or start &gt;= end:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if bits == 0 or start == end:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        slice_len = end - start</span>
+<span class="gi">+        bits = bits % slice_len  # Normalize rotation amount</span>
+<span class="gi">+</span>
+<span class="gi">+        if bits == 0:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        rotated = self._bitstore[end-bits:end] + self._bitstore[start:end-bits]</span>
+<span class="gi">+        self._bitstore = self._bitstore[:start] + rotated + self._bitstore[end:]</span>
+
+<span class="w"> </span>    def rol(self, bits: int, start: Optional[int]=None, end: Optional[int]=None
+<span class="w"> </span>        ) -&gt;None:
+<span class="gu">@@ -349,7 +449,26 @@ class BitArray(Bits):</span>
+<span class="w"> </span>        Raises ValueError if bits &lt; 0.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if bits &lt; 0:</span>
+<span class="gi">+            raise ValueError(&quot;Cannot rotate by a negative amount&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+</span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or start &gt;= end:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if bits == 0 or start == end:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        slice_len = end - start</span>
+<span class="gi">+        bits = bits % slice_len  # Normalize rotation amount</span>
+<span class="gi">+</span>
+<span class="gi">+        if bits == 0:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        rotated = self._bitstore[start+bits:end] + self._bitstore[start:start+bits]</span>
+<span class="gi">+        self._bitstore = self._bitstore[:start] + rotated + self._bitstore[end:]</span>
+
+<span class="w"> </span>    def byteswap(self, fmt: Optional[Union[int, Iterable[int], str]]=None,
+<span class="w"> </span>        start: Optional[int]=None, end: Optional[int]=None, repeat: bool=True
+<span class="gu">@@ -365,8 +484,42 @@ class BitArray(Bits):</span>
+<span class="w"> </span>                  as much as possible.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+</span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or start &gt; end:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if fmt is None or fmt == 0:</span>
+<span class="gi">+            fmt = [8] * ((end - start) // 8)</span>
+<span class="gi">+        elif isinstance(fmt, int):</span>
+<span class="gi">+            fmt = [8] * fmt</span>
+<span class="gi">+        elif isinstance(fmt, str):</span>
+<span class="gi">+            fmt = [int(x) * 8 for x in fmt.split(&#39;,&#39;) if x]</span>
+<span class="gi">+        </span>
+<span class="gi">+        fmt = [f for f in fmt if f % 8 == 0]  # Ensure all chunks are byte-aligned</span>
+<span class="gi">+        if not fmt:</span>
+<span class="gi">+            return 0</span>
+<span class="gi">+</span>
+<span class="gi">+        chunk_size = sum(fmt)</span>
+<span class="gi">+        if chunk_size == 0:</span>
+<span class="gi">+            return 0</span>
+<span class="gi">+</span>
+<span class="gi">+        repeats = 0</span>
+<span class="gi">+        pos = start</span>
+<span class="gi">+        while pos + chunk_size &lt;= end:</span>
+<span class="gi">+            for size in fmt:</span>
+<span class="gi">+                byte_size = size // 8</span>
+<span class="gi">+                byte_data = self._bitstore[pos:pos+size].tobytes()</span>
+<span class="gi">+                swapped_data = byte_data[::-1]</span>
+<span class="gi">+                self._bitstore[pos:pos+size] = BitArray(bytes=swapped_data)</span>
+<span class="gi">+                pos += size</span>
+<span class="gi">+            repeats += 1</span>
+<span class="gi">+            if not repeat:</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+        return repeats</span>
+
+<span class="w"> </span>    def clear(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Remove all bits, reset to zero length.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._bitstore = BitArray()</span>
+<span class="gh">diff --git a/bitstring/bits.py b/bitstring/bits.py</span>
+<span class="gh">index f6d7d08..6a8c668 100644</span>
+<span class="gd">--- a/bitstring/bits.py</span>
+<span class="gi">+++ b/bitstring/bits.py</span>
+<span class="gu">@@ -421,16 +421,33 @@ class Bits:</span>
+
+<span class="w"> </span>    def _clear(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Reset the bitstring to an empty state.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._bitstore = BitStore()</span>
+
+<span class="w"> </span>    def _setauto_no_length_or_offset(self, s: BitsType, /) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Set bitstring from a bitstring, file, bool, array, iterable or string.&quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gd">-    def _setauto(self, s: BitsType, length: Optional[int], offset: Optional</span>
+<span class="gd">-        [int], /) -&gt;None:</span>
+<span class="gi">+    def _setauto(self, s: BitsType, length: Optional[int], offset: Optional[int], /) -&gt;None:</span>
+<span class="w"> </span>        &quot;&quot;&quot;Set bitstring from a bitstring, file, bool, array, iterable or string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(s, Bits):</span>
+<span class="gi">+            self._bitstore = s._bitstore.copy()</span>
+<span class="gi">+        elif isinstance(s, (bytes, bytearray)):</span>
+<span class="gi">+            self._setbytes_with_truncation(s, length, offset)</span>
+<span class="gi">+        elif isinstance(s, str):</span>
+<span class="gi">+            if s.startswith(&#39;0b&#39;):</span>
+<span class="gi">+                self._setbin_safe(s[2:], length)</span>
+<span class="gi">+            elif s.startswith(&#39;0x&#39;):</span>
+<span class="gi">+                self._sethex(s[2:], length)</span>
+<span class="gi">+            elif s.startswith(&#39;0o&#39;):</span>
+<span class="gi">+                self._setoct(s[2:], length)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                self._setfile(s, length, offset)</span>
+<span class="gi">+        elif isinstance(s, (int, bool)):</span>
+<span class="gi">+            self._setuint(int(s), length)</span>
+<span class="gi">+        elif isinstance(s, (array.array, list, tuple)):</span>
+<span class="gi">+            self._setbytes(bytes(s), length)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise TypeError(f&quot;Cannot initialise bitstring from {type(s)}&quot;)</span>
+
+<span class="w"> </span>    def _setfile(self, filename: str, length: Optional[int]=None, offset:
+<span class="w"> </span>        Optional[int]=None) -&gt;None:
+<span class="gu">@@ -445,11 +462,23 @@ class Bits:</span>
+<span class="w"> </span>    def _setbytes_with_truncation(self, data: Union[bytearray, bytes],
+<span class="w"> </span>        length: Optional[int]=None, offset: Optional[int]=None) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Set the data from a bytes or bytearray object, with optional offset and length truncations.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if offset is None:</span>
+<span class="gi">+            offset = 0</span>
+<span class="gi">+        if length is None:</span>
+<span class="gi">+            length = len(data) * 8 - offset</span>
+<span class="gi">+        start_byte, start_bit = divmod(offset, 8)</span>
+<span class="gi">+        end_byte = (offset + length + 7) // 8</span>
+<span class="gi">+        truncated_data = data[start_byte:end_byte]</span>
+<span class="gi">+        self._bitstore = BitStore(truncated_data)</span>
+<span class="gi">+        if start_bit:</span>
+<span class="gi">+            self._bitstore.lshift(start_bit)</span>
+<span class="gi">+        if (offset + length) % 8:</span>
+<span class="gi">+            self._bitstore.rshift(8 - ((offset + length) % 8))</span>
+<span class="gi">+        self._bitstore.truncate(length)</span>
+
+<span class="w"> </span>    def _getbytes(self) -&gt;bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Return the data as an ordinary bytes object.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._bitstore.tobytes()</span>
+<span class="w"> </span>    _unprintable = list(range(0, 32))
+<span class="w"> </span>    _unprintable.extend(range(127, 255))
+
+<span class="gu">@@ -571,7 +600,13 @@ class Bits:</span>
+
+<span class="w"> </span>    def _setbin_safe(self, binstring: str, length: None=None) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Reset the bitstring to the value given in binstring.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if set(binstring) - set(&#39;01&#39;):</span>
+<span class="gi">+            raise ValueError(&quot;binstring must contain only &#39;0&#39; and &#39;1&#39;&quot;)</span>
+<span class="gi">+        if length is not None and len(binstring) &gt; length:</span>
+<span class="gi">+            raise ValueError(&quot;binstring is too long&quot;)</span>
+<span class="gi">+        self._bitstore = BitStore.frombinstr(binstring)</span>
+<span class="gi">+        if length is not None:</span>
+<span class="gi">+            self._bitstore.prepend(BitStore(length - len(binstring)))</span>
+
+<span class="w"> </span>    def _setbin_unsafe(self, binstring: str, length: None=None) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Same as _setbin_safe, but input isn&#39;t sanity checked. binstring mustn&#39;t start with &#39;0b&#39;.&quot;&quot;&quot;
+<span class="gu">@@ -591,7 +626,15 @@ class Bits:</span>
+
+<span class="w"> </span>    def _sethex(self, hexstring: str, length: None=None) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Reset the bitstring to have the value given in hexstring.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            byte_data = bytes.fromhex(hexstring)</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid hexadecimal string&quot;)</span>
+<span class="gi">+        self._bitstore = BitStore(byte_data)</span>
+<span class="gi">+        if length is not None:</span>
+<span class="gi">+            if len(self._bitstore) &gt; length:</span>
+<span class="gi">+                raise ValueError(&quot;hexstring is too long&quot;)</span>
+<span class="gi">+            self._bitstore.prepend(BitStore(length - len(self._bitstore)))</span>
+
+<span class="w"> </span>    def _gethex(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Return the hexadecimal representation as a string.
+<span class="gu">@@ -603,15 +646,19 @@ class Bits:</span>
+
+<span class="w"> </span>    def _getlength(self) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Return the length of the bitstring in bits.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return len(self._bitstore)</span>
+
+<span class="w"> </span>    def _copy(self: TBits) -&gt;TBits:
+<span class="w"> </span>        &quot;&quot;&quot;Create and return a new copy of the Bits (always in memory).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        new_bits = object.__new__(self.__class__)</span>
+<span class="gi">+        new_bits._bitstore = self._bitstore.copy()</span>
+<span class="gi">+        return new_bits</span>
+
+<span class="w"> </span>    def _slice(self: TBits, start: int, end: int) -&gt;TBits:
+<span class="w"> </span>        &quot;&quot;&quot;Used internally to get a slice, without error checking.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        new_bits = object.__new__(self.__class__)</span>
+<span class="gi">+        new_bits._bitstore = self._bitstore[start:end]</span>
+<span class="gi">+        return new_bits</span>
+
+<span class="w"> </span>    def _absolute_slice(self: TBits, start: int, end: int) -&gt;TBits:
+<span class="w"> </span>        &quot;&quot;&quot;Used internally to get a slice, without error checking.
+<span class="gu">@@ -625,11 +672,13 @@ class Bits:</span>
+
+<span class="w"> </span>    def _addright(self, bs: Bits, /) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Add a bitstring to the RHS of the current bitstring.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._bitstore.extend(bs._bitstore)</span>
+
+<span class="w"> </span>    def _addleft(self, bs: Bits, /) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Prepend a bitstring to the current bitstring.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        new_bitstore = bs._bitstore.copy()</span>
+<span class="gi">+        new_bitstore.extend(self._bitstore)</span>
+<span class="gi">+        self._bitstore = new_bitstore</span>
+
+<span class="w"> </span>    def _truncateleft(self: TBits, bits: int, /) -&gt;TBits:
+<span class="w"> </span>        &quot;&quot;&quot;Truncate bits from the start of the bitstring. Return the truncated bits.&quot;&quot;&quot;
+<span class="gu">@@ -657,11 +706,11 @@ class Bits:</span>
+
+<span class="w"> </span>    def _invert(self, pos: int, /) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Flip bit at pos 1&lt;-&gt;0.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._bitstore.invert(pos)</span>
+
+<span class="w"> </span>    def _invert_all(self) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Invert every bit.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._bitstore.invert_all()</span>
+
+<span class="w"> </span>    def _ilshift(self: TBits, n: int, /) -&gt;TBits:
+<span class="w"> </span>        &quot;&quot;&quot;Shift bits by n to the left in place. Return self.&quot;&quot;&quot;
+<span class="gu">@@ -825,7 +874,7 @@ class Bits:</span>
+<span class="w"> </span>        Up to seven zero bits will be added at the end to byte align.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._bitstore.tobytes()</span>
+
+<span class="w"> </span>    def tobitarray(self) -&gt;bitarray.bitarray:
+<span class="w"> </span>        &quot;&quot;&quot;Convert the bitstring to a bitarray object.&quot;&quot;&quot;
+<span class="gh">diff --git a/bitstring/bitstore.py b/bitstring/bitstore.py</span>
+<span class="gh">index d01a2d3..85a6d59 100644</span>
+<span class="gd">--- a/bitstring/bitstore.py</span>
+<span class="gi">+++ b/bitstring/bitstore.py</span>
+<span class="gu">@@ -53,10 +53,29 @@ class BitStore:</span>
+
+<span class="w"> </span>    def _copy(self) -&gt;BitStore:
+<span class="w"> </span>        &quot;&quot;&quot;Always creates a copy, even if instance is immutable.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        new_bitstore = BitStore()</span>
+<span class="gi">+        new_bitstore._bitarray = self._bitarray.copy()</span>
+<span class="gi">+        new_bitstore.modified_length = self.modified_length</span>
+<span class="gi">+        new_bitstore.immutable = False  # The copy is always mutable</span>
+<span class="gi">+        return new_bitstore</span>
+
+<span class="w"> </span>    def __getitem__(self, item: Union[int, slice], /) -&gt;Union[int, BitStore]:
+<span class="gd">-        raise NotImplementedError</span>
+<span class="gi">+        if isinstance(item, int):</span>
+<span class="gi">+            return self.getindex(item)</span>
+<span class="gi">+        elif isinstance(item, slice):</span>
+<span class="gi">+            new_bitstore = BitStore()</span>
+<span class="gi">+            new_bitstore._bitarray = self._bitarray[item]</span>
+<span class="gi">+            return new_bitstore</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise TypeError(&quot;Invalid argument type.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def getindex(self, i: int) -&gt;int:</span>
+<span class="gi">+        &quot;&quot;&quot;Get the bit at index i (LSB0 order).&quot;&quot;&quot;</span>
+<span class="gi">+        if i &lt; 0:</span>
+<span class="gi">+            i += len(self)</span>
+<span class="gi">+        if i &lt; 0 or i &gt;= len(self):</span>
+<span class="gi">+            raise IndexError(&quot;Bit index out of range&quot;)</span>
+<span class="gi">+        return self._bitarray[len(self) - 1 - i]</span>
+
+<span class="w"> </span>    def __len__(self) -&gt;int:
+<span class="w"> </span>        return (self.modified_length if self.modified_length is not None else
+<span class="gh">diff --git a/bitstring/bitstore_helpers.py b/bitstring/bitstore_helpers.py</span>
+<span class="gh">index 87a9787..6edc23c 100644</span>
+<span class="gd">--- a/bitstring/bitstore_helpers.py</span>
+<span class="gi">+++ b/bitstring/bitstore_helpers.py</span>
+<span class="gu">@@ -11,9 +11,9 @@ from bitstring.mxfp import e3m2mxfp_fmt, e2m3mxfp_fmt, e2m1mxfp_fmt, e4m3mxfp_sa</span>
+<span class="w"> </span>CACHE_SIZE = 256
+
+
+<span class="gd">-def tidy_input_string(s: str) -&gt;str:</span>
+<span class="gi">+def tidy_input_string(s: str) -&gt; str:</span>
+<span class="w"> </span>    &quot;&quot;&quot;Return string made lowercase and with all whitespace and underscores removed.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return &#39;&#39;.join(char.lower() for char in s if char not in (&#39; &#39;, &#39;\t&#39;, &#39;\n&#39;, &#39;\r&#39;, &#39;_&#39;))</span>
+
+
+<span class="w"> </span>e8m0mxfp_allowed_values = [float(2 ** x) for x in range(-127, 128)]
+<span class="gh">diff --git a/bitstring/bitstream.py b/bitstring/bitstream.py</span>
+<span class="gh">index 9a65360..fb32043 100644</span>
+<span class="gd">--- a/bitstring/bitstream.py</span>
+<span class="gi">+++ b/bitstring/bitstream.py</span>
+<span class="gu">@@ -109,19 +109,25 @@ class ConstBitStream(Bits):</span>
+
+<span class="w"> </span>    def _setbytepos(self, bytepos: int) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Move to absolute byte-aligned position in stream.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if bytepos * 8 &gt; len(self):</span>
+<span class="gi">+            raise ValueError(&quot;Byte position out of range&quot;)</span>
+<span class="gi">+        self._pos = bytepos * 8</span>
+
+<span class="w"> </span>    def _getbytepos(self) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Return the current position in the stream in bytes. Must be byte aligned.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._pos % 8:</span>
+<span class="gi">+            raise ValueError(&quot;Current position is not byte aligned&quot;)</span>
+<span class="gi">+        return self._pos // 8</span>
+
+<span class="w"> </span>    def _setbitpos(self, pos: int) -&gt;None:
+<span class="w"> </span>        &quot;&quot;&quot;Move to absolute position bit in bitstream.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if pos &lt; 0 or pos &gt; len(self):</span>
+<span class="gi">+            raise ValueError(&quot;Bit position out of range&quot;)</span>
+<span class="gi">+        self._pos = pos</span>
+
+<span class="w"> </span>    def _getbitpos(self) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Return the current position in the stream in bits.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._pos</span>
+
+<span class="w"> </span>    def __copy__(self: TConstBitStream) -&gt;TConstBitStream:
+<span class="w"> </span>        &quot;&quot;&quot;Return a new copy of the ConstBitStream for the copy module.&quot;&quot;&quot;
+<span class="gu">@@ -184,7 +190,8 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        The current bit position will be moved to the end of the BitStream.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._bitstore.append(Bits(bs)._bitstore)</span>
+<span class="gi">+        self._pos = len(self)</span>
+
+<span class="w"> </span>    def __repr__(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;Return representation that could be used to recreate the bitstring.
+<span class="gu">@@ -204,7 +211,18 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        Raises ValueError if pos &lt; 0 or pos &gt; len(self).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if pos is None:</span>
+<span class="gi">+            pos = self._pos</span>
+<span class="gi">+        if pos &lt; 0 or pos &gt; len(self):</span>
+<span class="gi">+            raise ValueError(&quot;pos must be between 0 and len(self)&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        bs = Bits(bs)</span>
+<span class="gi">+        end = pos + len(bs)</span>
+<span class="gi">+        if end &gt; len(self):</span>
+<span class="gi">+            self._bitstore.append(bs._bitstore)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._bitstore[pos:end] = bs._bitstore</span>
+<span class="gi">+        self._pos = end</span>
+
+<span class="w"> </span>    def find(self, bs: BitsType, /, start: Optional[int]=None, end:
+<span class="w"> </span>        Optional[int]=None, bytealigned: Optional[bool]=None) -&gt;Union[Tuple
+<span class="gu">@@ -229,7 +247,24 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        (6,)
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bs = Bits(bs)</span>
+<span class="gi">+        if not bs:</span>
+<span class="gi">+            raise ValueError(&quot;Cannot find an empty bitstring&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+        </span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or end &lt; start:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if bytealigned:</span>
+<span class="gi">+            start = (start + 7) // 8 * 8</span>
+<span class="gi">+        </span>
+<span class="gi">+        pos = self._bitstore.find(bs._bitstore, start, end, bytealigned)</span>
+<span class="gi">+        if pos &gt;= 0:</span>
+<span class="gi">+            self._pos = pos</span>
+<span class="gi">+            return (pos,)</span>
+<span class="gi">+        return ()</span>
+
+<span class="w"> </span>    def rfind(self, bs: BitsType, /, start: Optional[int]=None, end:
+<span class="w"> </span>        Optional[int]=None, bytealigned: Optional[bool]=None) -&gt;Union[Tuple
+<span class="gu">@@ -251,7 +286,24 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        if end &lt; start.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bs = Bits(bs)</span>
+<span class="gi">+        if not bs:</span>
+<span class="gi">+            raise ValueError(&quot;Cannot find an empty bitstring&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+        </span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or end &lt; start:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if bytealigned:</span>
+<span class="gi">+            start = (start + 7) // 8 * 8</span>
+<span class="gi">+        </span>
+<span class="gi">+        pos = self._bitstore.rfind(bs._bitstore, start, end, bytealigned)</span>
+<span class="gi">+        if pos &gt;= 0:</span>
+<span class="gi">+            self._pos = pos</span>
+<span class="gi">+            return (pos,)</span>
+<span class="gi">+        return ()</span>
+
+<span class="w"> </span>    def read(self, fmt: Union[int, str, Dtype]) -&gt;Union[int, float, str,
+<span class="w"> </span>        Bits, bool, bytes, None]:
+<span class="gu">@@ -290,7 +342,19 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        Raises ValueError if the format is not understood.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(fmt, int):</span>
+<span class="gi">+            fmt = f&#39;bits:{fmt}&#39;</span>
+<span class="gi">+        </span>
+<span class="gi">+        dtype = Dtype(fmt)</span>
+<span class="gi">+        length = dtype.length</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self._pos + length &gt; len(self):</span>
+<span class="gi">+            raise bitstring.ReadError(&quot;Not enough bits available&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        value = dtype.get_fn(self[self._pos:self._pos + length])</span>
+<span class="gi">+        self._pos += length</span>
+<span class="gi">+        </span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>    def readlist(self, fmt: Union[str, List[Union[int, str, Dtype]]], **kwargs
+<span class="w"> </span>        ) -&gt;List[Union[int, float, str, Bits, bool, bytes, None]]:
+<span class="gu">@@ -314,7 +378,23 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        &gt;&gt;&gt; i, bs1, bs2 = s.readlist([&#39;uint:12&#39;, 10, 10])
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        tokens = []</span>
+<span class="gi">+        if isinstance(fmt, str):</span>
+<span class="gi">+            fmt = fmt.replace(&#39; &#39;, &#39;&#39;)</span>
+<span class="gi">+            tokens = fmt.split(&#39;,&#39;)</span>
+<span class="gi">+        elif isinstance(fmt, list):</span>
+<span class="gi">+            tokens = fmt</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(&quot;fmt must be either a string or a list&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return_values = []</span>
+<span class="gi">+        for token in tokens:</span>
+<span class="gi">+            if isinstance(token, int):</span>
+<span class="gi">+                token = f&#39;bits:{token}&#39;</span>
+<span class="gi">+            value = self.read(token)</span>
+<span class="gi">+            if not token.startswith(&#39;pad:&#39;):</span>
+<span class="gi">+                return_values.append(value)</span>
+<span class="gi">+        return return_values</span>
+
+<span class="w"> </span>    def readto(self: TConstBitStream, bs: BitsType, /, bytealigned:
+<span class="w"> </span>        Optional[bool]=None) -&gt;TConstBitStream:
+<span class="gu">@@ -328,7 +408,18 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        Raises ReadError if bs is not found.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bs = Bits(bs)</span>
+<span class="gi">+        if not bs:</span>
+<span class="gi">+            raise ValueError(&quot;Cannot find an empty bitstring&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        found = self.find(bs, start=self._pos, bytealigned=bytealigned)</span>
+<span class="gi">+        if not found:</span>
+<span class="gi">+            raise bitstring.ReadError(&quot;Substring not found&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        end = found[0] + len(bs)</span>
+<span class="gi">+        return_value = self[self._pos:end]</span>
+<span class="gi">+        self._pos = end</span>
+<span class="gi">+        return return_value</span>
+
+<span class="w"> </span>    def peek(self: TConstBitStream, fmt: Union[int, str]) -&gt;Union[int,
+<span class="w"> </span>        float, str, TConstBitStream, bool, bytes, None]:
+<span class="gu">@@ -345,7 +436,11 @@ class ConstBitStream(Bits):</span>
+<span class="w"> </span>        See the docstring for &#39;read&#39; for token examples.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        original_pos = self._pos</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self.read(fmt)</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            self._pos = original_pos</span>
+
+<span class="w"> </span>    def peeklist(self, fmt: Union[str, List[Union[int, str]]], **kwargs
+<span class="w"> </span>        ) -&gt;List[Union[int, float, str, Bits, None]]:
+<span class="gu">@@ -537,7 +632,9 @@ class BitStream(ConstBitStream, bitstring.BitArray):</span>
+<span class="w"> </span>        bs -- The bitstring to prepend.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        bs = Bits(bs)</span>
+<span class="gi">+        self._bitstore = bs._bitstore + self._bitstore</span>
+<span class="gi">+        self._pos += len(bs)</span>
+
+<span class="w"> </span>    def __setitem__(self, /, key: Union[slice, int], value: BitsType) -&gt;None:
+<span class="w"> </span>        length_before = len(self)
+<span class="gu">@@ -570,7 +667,14 @@ class BitStream(ConstBitStream, bitstring.BitArray):</span>
+<span class="w"> </span>        Raises ValueError if pos &lt; 0 or pos &gt; len(self).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if pos is None:</span>
+<span class="gi">+            pos = self._pos</span>
+<span class="gi">+        if pos &lt; 0 or pos &gt; len(self):</span>
+<span class="gi">+            raise ValueError(&quot;pos must be between 0 and len(self)&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        bs = Bits(bs)</span>
+<span class="gi">+        self._bitstore = self._bitstore[:pos] + bs._bitstore + self._bitstore[pos:]</span>
+<span class="gi">+        self._pos = pos + len(bs)</span>
+
+<span class="w"> </span>    def replace(self, old: BitsType, new: BitsType, start: Optional[int]=
+<span class="w"> </span>        None, end: Optional[int]=None, count: Optional[int]=None,
+<span class="gu">@@ -594,4 +698,29 @@ class BitStream(ConstBitStream, bitstring.BitArray):</span>
+<span class="w"> </span>        out of range.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        old = Bits(old)</span>
+<span class="gi">+        new = Bits(new)</span>
+<span class="gi">+        if not old:</span>
+<span class="gi">+            raise ValueError(&quot;Cannot replace an empty bitstring&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        start = 0 if start is None else start</span>
+<span class="gi">+        end = len(self) if end is None else end</span>
+<span class="gi">+        count = -1 if count is None else count</span>
+<span class="gi">+        </span>
+<span class="gi">+        if start &lt; 0 or end &gt; len(self) or start &gt; end:</span>
+<span class="gi">+            raise ValueError(&quot;Invalid start or end values&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        replacements = 0</span>
+<span class="gi">+        pos = start</span>
+<span class="gi">+        while count != 0:</span>
+<span class="gi">+            found = self.find(old, start=pos, end=end, bytealigned=bytealigned)</span>
+<span class="gi">+            if not found:</span>
+<span class="gi">+                break</span>
+<span class="gi">+            pos = found[0]</span>
+<span class="gi">+            self._bitstore = self._bitstore[:pos] + new._bitstore + self._bitstore[pos + len(old):]</span>
+<span class="gi">+            pos += len(new)</span>
+<span class="gi">+            end += len(new) - len(old)</span>
+<span class="gi">+            replacements += 1</span>
+<span class="gi">+            count -= 1</span>
+<span class="gi">+        </span>
+<span class="gi">+        return replacements</span>
+<span class="gh">diff --git a/bitstring/dtypes.py b/bitstring/dtypes.py</span>
+<span class="gh">index 775063f..09100af 100644</span>
+<span class="gd">--- a/bitstring/dtypes.py</span>
+<span class="gi">+++ b/bitstring/dtypes.py</span>
+<span class="gu">@@ -44,57 +44,57 @@ class Dtype:</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def scale(self) -&gt;Union[int, float, None]:
+<span class="w"> </span>        &quot;&quot;&quot;The multiplicative scale applied when interpreting the data.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._scale</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def name(self) -&gt;str:
+<span class="w"> </span>        &quot;&quot;&quot;A string giving the name of the data type.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._name</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def length(self) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;The length of the data type in units of bits_per_item. Set to None for variable length dtypes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._length</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def bitlength(self) -&gt;Optional[int]:
+<span class="w"> </span>        &quot;&quot;&quot;The number of bits needed to represent a single instance of the data type. Set to None for variable length dtypes.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._bitlength</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def bits_per_item(self) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;The number of bits for each unit of length. Usually 1, but equals 8 for bytes type.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._bits_per_item</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def variable_length(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;If True then the length of the data type depends on the data being interpreted, and must not be specified.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._variable_length</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def return_type(self) -&gt;Any:
+<span class="w"> </span>        &quot;&quot;&quot;The type of the value returned by the parse method, such as int, float or str.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._return_type</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def is_signed(self) -&gt;bool:
+<span class="w"> </span>        &quot;&quot;&quot;If True then the data type represents a signed quantity.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._is_signed</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def set_fn(self) -&gt;Optional[Callable]:
+<span class="w"> </span>        &quot;&quot;&quot;A function to set the value of the data type.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._set_fn</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def get_fn(self) -&gt;Callable:
+<span class="w"> </span>        &quot;&quot;&quot;A function to get the value of the data type.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._get_fn</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def read_fn(self) -&gt;Callable:
+<span class="w"> </span>        &quot;&quot;&quot;A function to read the value of the data type.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._read_fn</span>
+
+<span class="w"> </span>    def __hash__(self) -&gt;int:
+<span class="w"> </span>        return hash((self._name, self._length))
+<span class="gu">@@ -104,13 +104,31 @@ class Dtype:</span>
+
+<span class="w"> </span>        The value parameter should be of a type appropriate to the dtype.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._set_fn is None:</span>
+<span class="gi">+            raise NotImplementedError(f&quot;Cannot build {self._name} dtype&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self._set_fn_needs_length:</span>
+<span class="gi">+            return self._set_fn(value, self._length)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return self._set_fn(value)</span>
+
+<span class="w"> </span>    def parse(self, b: BitsType, /) -&gt;Any:
+<span class="w"> </span>        &quot;&quot;&quot;Parse a bitstring to find its value.
+
+<span class="w"> </span>        The b parameter should be a bitstring of the appropriate length, or an object that can be converted to a bitstring.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(b, bitstring.Bits):</span>
+<span class="gi">+            bs = b</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            bs = bitstring.Bits(b)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if not self._variable_length and self._bitlength is not None:</span>
+<span class="gi">+            if len(bs) != self._bitlength:</span>
+<span class="gi">+                raise ValueError(f&quot;Expected {self._bitlength} bits, got {len(bs)}&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        result = self._get_fn(bs)</span>
+<span class="gi">+        if self._scale is not None:</span>
+<span class="gi">+            return result * self._scale</span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def __str__(self) -&gt;str:
+<span class="w"> </span>        if self._scale is not None:
+<span class="gh">diff --git a/bitstring/fp8.py b/bitstring/fp8.py</span>
+<span class="gh">index 4cf9431..53453e9 100644</span>
+<span class="gd">--- a/bitstring/fp8.py</span>
+<span class="gi">+++ b/bitstring/fp8.py</span>
+<span class="gu">@@ -25,11 +25,61 @@ class Binary8Format:</span>
+
+<span class="w"> </span>    def float_to_int8(self, f: float) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Given a Python float convert to the best float8 (expressed as an integer in 0-255 range).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if math.isnan(f):</span>
+<span class="gi">+            return 0  # NaN is represented as 0 in this format</span>
+<span class="gi">+        </span>
+<span class="gi">+        if f == 0:</span>
+<span class="gi">+            return 0 if math.copysign(1, f) == 1 else 128  # Handle +0 and -0</span>
+<span class="gi">+        </span>
+<span class="gi">+        if f &gt; 0 and f &gt;= 2 ** (self.pos_clamp_value - self.bias):</span>
+<span class="gi">+            return self.pos_clamp_value  # Positive infinity or too large positive number</span>
+<span class="gi">+        </span>
+<span class="gi">+        if f &lt; 0 and f &lt;= -2 ** (self.neg_clamp_value - 128 - self.bias):</span>
+<span class="gi">+            return self.neg_clamp_value  # Negative infinity or too large negative number</span>
+<span class="gi">+        </span>
+<span class="gi">+        sign = 0 if f &gt; 0 else 128</span>
+<span class="gi">+        f = abs(f)</span>
+<span class="gi">+        </span>
+<span class="gi">+        exponent = math.floor(math.log2(f)) + self.bias</span>
+<span class="gi">+        mantissa = round((f / (2 ** (exponent - self.bias)) - 1) * (2 ** (8 - self.exp_bits)))</span>
+<span class="gi">+        </span>
+<span class="gi">+        if mantissa == 2 ** (8 - self.exp_bits):</span>
+<span class="gi">+            exponent += 1</span>
+<span class="gi">+            mantissa = 0</span>
+<span class="gi">+        </span>
+<span class="gi">+        if exponent &lt; 0:</span>
+<span class="gi">+            exponent = 0</span>
+<span class="gi">+            mantissa = 1</span>
+<span class="gi">+        elif exponent &gt;= 2 ** self.exp_bits - 1:</span>
+<span class="gi">+            exponent = 2 ** self.exp_bits - 1</span>
+<span class="gi">+            mantissa = 0</span>
+<span class="gi">+        </span>
+<span class="gi">+        return sign | (exponent &lt;&lt; (8 - self.exp_bits)) | mantissa</span>
+
+<span class="w"> </span>    def createLUT_for_binary8_to_float(self):
+<span class="w"> </span>        &quot;&quot;&quot;Create a LUT to convert an int in range 0-255 representing a float8 into a Python float&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        lut = []</span>
+<span class="gi">+        for i in range(256):</span>
+<span class="gi">+            sign = -1 if i &amp; 128 else 1</span>
+<span class="gi">+            exponent = (i &gt;&gt; (8 - self.exp_bits)) &amp; ((1 &lt;&lt; self.exp_bits) - 1)</span>
+<span class="gi">+            mantissa = i &amp; ((1 &lt;&lt; (8 - self.exp_bits)) - 1)</span>
+<span class="gi">+            </span>
+<span class="gi">+            if exponent == 0:</span>
+<span class="gi">+                if mantissa == 0:</span>
+<span class="gi">+                    value = 0.0</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    value = sign * (mantissa / (2 ** (8 - self.exp_bits))) * (2 ** (1 - self.bias))</span>
+<span class="gi">+            elif exponent == (2 ** self.exp_bits) - 1:</span>
+<span class="gi">+                if mantissa == 0:</span>
+<span class="gi">+                    value = float(&#39;inf&#39;) if sign == 1 else float(&#39;-inf&#39;)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    value = float(&#39;nan&#39;)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                value = sign * (1 + mantissa / (2 ** (8 - self.exp_bits))) * (2 ** (exponent - self.bias))</span>
+<span class="gi">+            </span>
+<span class="gi">+            lut.append(value)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return lut</span>
+
+
+<span class="w"> </span>p4binary_fmt = Binary8Format(exp_bits=4, bias=8)
+<span class="gh">diff --git a/bitstring/methods.py b/bitstring/methods.py</span>
+<span class="gh">index e6be89b..db7277d 100644</span>
+<span class="gd">--- a/bitstring/methods.py</span>
+<span class="gi">+++ b/bitstring/methods.py</span>
+<span class="gu">@@ -43,4 +43,37 @@ def pack(fmt: Union[str, List[str]], *values, **kwargs) -&gt;BitStream:</span>
+<span class="w"> </span>    &gt;&gt;&gt; u = pack(&#39;uint:8=a, uint:8=b, uint:55=a&#39;, a=6, b=44)
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(fmt, list):</span>
+<span class="gi">+        fmt = &#39;,&#39;.join(fmt)</span>
+<span class="gi">+</span>
+<span class="gi">+    tokens, _ = tokenparser(fmt)</span>
+<span class="gi">+    bitstring_list = []</span>
+<span class="gi">+    value_index = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    for token in tokens:</span>
+<span class="gi">+        if &#39;=&#39; in token[1]:</span>
+<span class="gi">+            name, token_str = token[1].split(&#39;=&#39;)</span>
+<span class="gi">+            value = kwargs.get(name.strip())</span>
+<span class="gi">+            if value is None:</span>
+<span class="gi">+                raise CreationError(f&quot;Keyword &#39;{name.strip()}&#39; not provided&quot;)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if value_index &gt;= len(values):</span>
+<span class="gi">+                raise CreationError(&quot;Not enough values provided&quot;)</span>
+<span class="gi">+            value = values[value_index]</span>
+<span class="gi">+            value_index += 1</span>
+<span class="gi">+            token_str = token[1]</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            bs = bitstore_from_token(token_str, value)</span>
+<span class="gi">+            bitstring_list.append(bs)</span>
+<span class="gi">+        except ValueError as e:</span>
+<span class="gi">+            raise CreationError(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+    if value_index &lt; len(values):</span>
+<span class="gi">+        raise CreationError(&quot;Too many values provided&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    result = BitStream()</span>
+<span class="gi">+    for bs in bitstring_list:</span>
+<span class="gi">+        result.append(bs)</span>
+<span class="gi">+</span>
+<span class="gi">+    return result</span>
+<span class="gh">diff --git a/bitstring/mxfp.py b/bitstring/mxfp.py</span>
+<span class="gh">index be90cd1..9afdd75 100644</span>
+<span class="gd">--- a/bitstring/mxfp.py</span>
+<span class="gi">+++ b/bitstring/mxfp.py</span>
+<span class="gu">@@ -42,15 +42,66 @@ class MXFPFormat:</span>
+
+<span class="w"> </span>    def float_to_int(self, f: float) -&gt;int:
+<span class="w"> </span>        &quot;&quot;&quot;Given a Python float convert to the best mxfp float (expressed as an int) that represents it.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if math.isnan(f):</span>
+<span class="gi">+            return (1 &lt;&lt; (self.exp_bits + self.mantissa_bits + 1)) - 1  # All ones for NaN</span>
+<span class="gi">+        </span>
+<span class="gi">+        if f == 0:</span>
+<span class="gi">+            return 0  # Zero is represented as all zeros</span>
+<span class="gi">+        </span>
+<span class="gi">+        sign = 1 if f &lt; 0 else 0</span>
+<span class="gi">+        f = abs(f)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Handle infinity and large numbers</span>
+<span class="gi">+        if math.isinf(f) or f &gt;= 2 ** (2 ** self.exp_bits - self.bias):</span>
+<span class="gi">+            if self.mxfp_overflow == &#39;saturate&#39;:</span>
+<span class="gi">+                return self.neg_clamp_value if sign else self.pos_clamp_value</span>
+<span class="gi">+            else:  # overflow</span>
+<span class="gi">+                return self.neg_clamp_value if sign else self.pos_clamp_value</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Find the exponent</span>
+<span class="gi">+        exp = math.floor(math.log2(f))</span>
+<span class="gi">+        exp = max(exp, 1 - self.bias)  # Handle subnormals</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Calculate mantissa</span>
+<span class="gi">+        mantissa = int(round((f / (2 ** exp) - 1) * (2 ** self.mantissa_bits)))</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Adjust for bias</span>
+<span class="gi">+        exp += self.bias</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Combine sign, exponent, and mantissa</span>
+<span class="gi">+        result = (sign &lt;&lt; (self.exp_bits + self.mantissa_bits)) | (exp &lt;&lt; self.mantissa_bits) | mantissa</span>
+<span class="gi">+        </span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def createLUT_for_int_to_float(self) -&gt;array.array:
+<span class="w"> </span>        &quot;&quot;&quot;Create a LUT to convert an int in representing a MXFP float into a Python float&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        lut = array.array(&#39;f&#39;)</span>
+<span class="gi">+        for i in range(1 &lt;&lt; (self.exp_bits + self.mantissa_bits + 1)):</span>
+<span class="gi">+            sign = -1 if i &amp; (1 &lt;&lt; (self.exp_bits + self.mantissa_bits)) else 1</span>
+<span class="gi">+            exp = (i &gt;&gt; self.mantissa_bits) &amp; ((1 &lt;&lt; self.exp_bits) - 1)</span>
+<span class="gi">+            mantissa = i &amp; ((1 &lt;&lt; self.mantissa_bits) - 1)</span>
+<span class="gi">+            </span>
+<span class="gi">+            if exp == 0 and mantissa == 0:</span>
+<span class="gi">+                lut.append(0.0)</span>
+<span class="gi">+            elif exp == (1 &lt;&lt; self.exp_bits) - 1:</span>
+<span class="gi">+                if mantissa == 0:</span>
+<span class="gi">+                    lut.append(float(&#39;inf&#39;) if sign &gt; 0 else float(&#39;-inf&#39;))</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    lut.append(float(&#39;nan&#39;))</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                value = sign * (1 + mantissa / (2 ** self.mantissa_bits)) * (2 ** (exp - self.bias))</span>
+<span class="gi">+                lut.append(value)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return lut</span>
+
+<span class="w"> </span>    def createLUT_for_float16_to_mxfp(self) -&gt;bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Create a LUT to convert a float16 into a MXFP format&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        lut = bytearray(65536)</span>
+<span class="gi">+        for i in range(65536):</span>
+<span class="gi">+            f16 = struct.unpack(&#39;!e&#39;, struct.pack(&#39;!H&#39;, i))[0]</span>
+<span class="gi">+            mxfp = self.float_to_int(f16)</span>
+<span class="gi">+            lut[i] = mxfp</span>
+<span class="gi">+        return bytes(lut)</span>
+
+
+<span class="w"> </span>e2m1mxfp_fmt = MXFPFormat(exp_bits=2, mantissa_bits=1, bias=1,
+<span class="gh">diff --git a/bitstring/utils.py b/bitstring/utils.py</span>
+<span class="gh">index 623d69b..dd9fa5a 100644</span>
+<span class="gd">--- a/bitstring/utils.py</span>
+<span class="gi">+++ b/bitstring/utils.py</span>
+<span class="gu">@@ -36,7 +36,27 @@ PACK_CODE_SIZE: Dict[str, int] = {&#39;b&#39;: 1, &#39;B&#39;: 1, &#39;h&#39;: 2, &#39;H&#39;: 2, &#39;l&#39;: 4,</span>
+
+<span class="w"> </span>def structparser(m: Match[str]) -&gt;List[str]:
+<span class="w"> </span>    &quot;&quot;&quot;Parse struct-like format string token into sub-token list.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    endian = m.group(&#39;endian&#39;)</span>
+<span class="gi">+    fmt = m.group(&#39;fmt&#39;)</span>
+<span class="gi">+    tokens = []</span>
+<span class="gi">+    </span>
+<span class="gi">+    if endian == &#39;&gt;&#39;:</span>
+<span class="gi">+        replacements = REPLACEMENTS_BE</span>
+<span class="gi">+    elif endian == &#39;&lt;&#39;:</span>
+<span class="gi">+        replacements = REPLACEMENTS_LE</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        replacements = REPLACEMENTS_NE</span>
+<span class="gi">+    </span>
+<span class="gi">+    for match in STRUCT_SPLIT_RE.finditer(fmt):</span>
+<span class="gi">+        code = match.group()</span>
+<span class="gi">+        if code[0] in &#39;0123456789&#39;:</span>
+<span class="gi">+            count = int(code[:-1])</span>
+<span class="gi">+            token = replacements[code[-1]]</span>
+<span class="gi">+            tokens.extend([token] * count)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            tokens.append(replacements[code])</span>
+<span class="gi">+    </span>
+<span class="gi">+    return tokens</span>
+
+
+<span class="w"> </span>@functools.lru_cache(CACHE_SIZE)
+<span class="gu">@@ -54,7 +74,61 @@ def tokenparser(fmt: str, keys: Tuple[str, ...]=()) -&gt;Tuple[bool, List[</span>
+<span class="w"> </span>    tokens must be of the form: [factor*][initialiser][:][length][=value]
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    tokens = []</span>
+<span class="gi">+    stretchy_token = False</span>
+<span class="gi">+    fmt = expand_brackets(fmt)</span>
+<span class="gi">+    </span>
+<span class="gi">+    for token in fmt.split(&#39;,&#39;):</span>
+<span class="gi">+        token = token.strip()</span>
+<span class="gi">+        if token in keys:</span>
+<span class="gi">+            tokens.append((token, None, None))</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        </span>
+<span class="gi">+        mobj = MULTIPLICATIVE_RE.match(token)</span>
+<span class="gi">+        if mobj:</span>
+<span class="gi">+            factor = int(mobj.group(&#39;factor&#39;))</span>
+<span class="gi">+            token = mobj.group(&#39;token&#39;)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            factor = 1</span>
+<span class="gi">+        </span>
+<span class="gi">+        mobj = NAME_INT_RE.match(token)</span>
+<span class="gi">+        if mobj:</span>
+<span class="gi">+            name, length = mobj.group(1), mobj.group(2)</span>
+<span class="gi">+            if length:</span>
+<span class="gi">+                length = int(length)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                length = None</span>
+<span class="gi">+            if name == &#39;pad&#39;:</span>
+<span class="gi">+                if length is None:</span>
+<span class="gi">+                    stretchy_token = True</span>
+<span class="gi">+            tokens.extend([(name, length, None)] * factor)</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        </span>
+<span class="gi">+        mobj = DEFAULT_BITS.match(token)</span>
+<span class="gi">+        if mobj:</span>
+<span class="gi">+            name = &#39;bits&#39;</span>
+<span class="gi">+            length = mobj.group(&#39;len&#39;)</span>
+<span class="gi">+            if length:</span>
+<span class="gi">+                length = int(length)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                length = None</span>
+<span class="gi">+            value = mobj.group(&#39;value&#39;)</span>
+<span class="gi">+            if length is None and value is None:</span>
+<span class="gi">+                stretchy_token = True</span>
+<span class="gi">+            tokens.extend([(name, length, value)] * factor)</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        </span>
+<span class="gi">+        mobj = LITERAL_RE.match(token)</span>
+<span class="gi">+        if mobj:</span>
+<span class="gi">+            name = mobj.group(&#39;name&#39;).lower()</span>
+<span class="gi">+            value = mobj.group(&#39;value&#39;)</span>
+<span class="gi">+            length = len(value) * {&#39;0b&#39;: 1, &#39;0o&#39;: 3, &#39;0x&#39;: 4}[name]</span>
+<span class="gi">+            tokens.extend([(name, length, value)] * factor)</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        </span>
+<span class="gi">+        raise ValueError(f&quot;Don&#39;t understand token &#39;{token}&#39; in format string&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return stretchy_token, tokens</span>
+
+
+<span class="w"> </span>BRACKET_RE = re.compile(&#39;(?P&lt;factor&gt;\\d+)\\*\\(&#39;)
+<span class="gu">@@ -62,4 +136,13 @@ BRACKET_RE = re.compile(&#39;(?P&lt;factor&gt;\\d+)\\*\\(&#39;)</span>
+
+<span class="w"> </span>def expand_brackets(s: str) -&gt;str:
+<span class="w"> </span>    &quot;&quot;&quot;Expand all brackets.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        match = BRACKET_RE.search(s)</span>
+<span class="gi">+        if not match:</span>
+<span class="gi">+            break</span>
+<span class="gi">+        factor = int(match.group(&#39;factor&#39;))</span>
+<span class="gi">+        start = match.start()</span>
+<span class="gi">+        end = s.index(&#39;)&#39;, start)</span>
+<span class="gi">+        sub = s[start + len(match.group()):end]</span>
+<span class="gi">+        s = s[:start] + &#39;,&#39;.join([sub] * factor) + s[end + 1:]</span>
+<span class="gi">+    return s</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

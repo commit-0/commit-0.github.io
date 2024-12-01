@@ -1,0 +1,413 @@
+diff --git a/src/cachetools/__init__.py b/src/cachetools/__init__.py
+index 2d2e2cf..bfc3906 100644
+--- a/src/cachetools/__init__.py
++++ b/src/cachetools/__init__.py
+@@ -24,6 +24,8 @@ import time
+ 
+ from . import keys
+ 
++_CacheInfo = collections.namedtuple("CacheInfo", ["hits", "misses", "maxsize", "currsize"])
++
+ 
+ class _DefaultSize:
+     __slots__ = ()
+@@ -635,158 +637,109 @@ _CacheInfo = collections.namedtuple(
+ )
+ 
+ 
+-def cached(cache, key=keys.hashkey, lock=None, info=False):
++def cached(cache, key=keys.hashkey, lock=None, info=True):
+     """Decorator to wrap a function with a memoizing callable that saves
+     results in a cache.
+ 
+     """
+ 
+     def decorator(func):
+-        if info:
+-            hits = misses = 0
++        hits = misses = 0
+ 
+-            if isinstance(cache, Cache):
++        if isinstance(cache, Cache):
+ 
+-                def getinfo():
+-                    nonlocal hits, misses
+-                    return _CacheInfo(hits, misses, cache.maxsize, cache.currsize)
++            def getinfo():
++                nonlocal hits, misses
++                return _CacheInfo(hits, misses, cache.maxsize, cache.currsize)
+ 
+-            elif isinstance(cache, collections.abc.Mapping):
++        elif isinstance(cache, collections.abc.Mapping):
+ 
+-                def getinfo():
+-                    nonlocal hits, misses
+-                    return _CacheInfo(hits, misses, None, len(cache))
++            def getinfo():
++                nonlocal hits, misses
++                return _CacheInfo(hits, misses, None, len(cache))
+ 
+-            else:
++        else:
++
++            def getinfo():
++                nonlocal hits, misses
++                return _CacheInfo(hits, misses, 0, 0)
++
++        if cache is None:
+ 
+-                def getinfo():
+-                    nonlocal hits, misses
+-                    return _CacheInfo(hits, misses, 0, 0)
++            def wrapper(*args, **kwargs):
++                nonlocal misses
++                misses += 1
++                return func(*args, **kwargs)
+ 
+-            if cache is None:
++            def cache_clear():
++                nonlocal hits, misses
++                hits = misses = 0
+ 
+-                def wrapper(*args, **kwargs):
+-                    nonlocal misses
++            cache_info = getinfo
++
++        elif lock is None:
++
++            def wrapper(*args, **kwargs):
++                nonlocal hits, misses
++                k = key(*args, **kwargs)
++                try:
++                    result = cache[k]
++                    hits += 1
++                    return result
++                except KeyError:
+                     misses += 1
+-                    return func(*args, **kwargs)
++                v = func(*args, **kwargs)
++                try:
++                    cache[k] = v
++                except ValueError:
++                    pass  # value too large
++                return v
+ 
+-                def cache_clear():
+-                    nonlocal hits, misses
+-                    hits = misses = 0
++            def cache_clear():
++                nonlocal hits, misses
++                cache.clear()
++                hits = misses = 0
+ 
+-                cache_info = getinfo
++            cache_info = getinfo
+ 
+-            elif lock is None:
++        else:
+ 
+-                def wrapper(*args, **kwargs):
+-                    nonlocal hits, misses
+-                    k = key(*args, **kwargs)
+-                    try:
++            def wrapper(*args, **kwargs):
++                nonlocal hits, misses
++                k = key(*args, **kwargs)
++                try:
++                    with lock:
+                         result = cache[k]
+                         hits += 1
+                         return result
+-                    except KeyError:
+-                        misses += 1
+-                    v = func(*args, **kwargs)
+-                    try:
+-                        cache[k] = v
+-                    except ValueError:
+-                        pass  # value too large
+-                    return v
+-
+-                def cache_clear():
+-                    nonlocal hits, misses
+-                    cache.clear()
+-                    hits = misses = 0
+-
+-                cache_info = getinfo
+-
+-            else:
+-
+-                def wrapper(*args, **kwargs):
+-                    nonlocal hits, misses
+-                    k = key(*args, **kwargs)
+-                    try:
+-                        with lock:
+-                            result = cache[k]
+-                            hits += 1
+-                            return result
+-                    except KeyError:
+-                        with lock:
+-                            misses += 1
+-                    v = func(*args, **kwargs)
+-                    # in case of a race, prefer the item already in the cache
+-                    try:
+-                        with lock:
+-                            return cache.setdefault(k, v)
+-                    except ValueError:
+-                        return v  # value too large
+-
+-                def cache_clear():
+-                    nonlocal hits, misses
++                except KeyError:
+                     with lock:
+-                        cache.clear()
+-                        hits = misses = 0
+-
+-                def cache_info():
++                        misses += 1
++                v = func(*args, **kwargs)
++                # in case of a race, prefer the item already in the cache
++                try:
+                     with lock:
+-                        return getinfo()
++                        return cache.setdefault(k, v)
++                except ValueError:
++                    return v  # value too large
+ 
+-        else:
+-            if cache is None:
+-
+-                def wrapper(*args, **kwargs):
+-                    return func(*args, **kwargs)
+-
+-                def cache_clear():
+-                    pass
+-
+-            elif lock is None:
+-
+-                def wrapper(*args, **kwargs):
+-                    k = key(*args, **kwargs)
+-                    try:
+-                        return cache[k]
+-                    except KeyError:
+-                        pass  # key not found
+-                    v = func(*args, **kwargs)
+-                    try:
+-                        cache[k] = v
+-                    except ValueError:
+-                        pass  # value too large
+-                    return v
+-
+-                def cache_clear():
++            def cache_clear():
++                nonlocal hits, misses
++                with lock:
+                     cache.clear()
++                    hits = misses = 0
+ 
+-            else:
+-
+-                def wrapper(*args, **kwargs):
+-                    k = key(*args, **kwargs)
+-                    try:
+-                        with lock:
+-                            return cache[k]
+-                    except KeyError:
+-                        pass  # key not found
+-                    v = func(*args, **kwargs)
+-                    # in case of a race, prefer the item already in the cache
+-                    try:
+-                        with lock:
+-                            return cache.setdefault(k, v)
+-                    except ValueError:
+-                        return v  # value too large
+-
+-                def cache_clear():
+-                    with lock:
+-                        cache.clear()
++            def cache_info():
++                with lock:
++                    return getinfo()
+ 
+-            cache_info = None
++            cache_info = cache_info
+ 
+         wrapper.cache = cache
+         wrapper.cache_key = key
+         wrapper.cache_lock = lock
+         wrapper.cache_clear = cache_clear
+-        wrapper.cache_info = cache_info
++        wrapper.cache_info = cache_info if info else None
+ 
+         return functools.update_wrapper(wrapper, func)
+ 
+diff --git a/src/cachetools/func.py b/src/cachetools/func.py
+index 9436992..18d2fbe 100644
+--- a/src/cachetools/func.py
++++ b/src/cachetools/func.py
+@@ -22,7 +22,20 @@ def fifo_cache(maxsize=128, typed=False):
+     algorithm.
+ 
+     """
+-    pass
++    # Handle both @fifo_cache and @fifo_cache() syntax
++    if callable(maxsize):
++        user_function = maxsize
++        maxsize = 128
++        typed = False
++
++    def decorator(func):
++        lock = RLock()
++        key_func = keys.typedkey if typed else keys.hashkey
++        wrapper = cached(cache=FIFOCache(maxsize), key=key_func, lock=lock, info=True)(func)
++        wrapper.cache_parameters = lambda: {"maxsize": maxsize, "typed": typed}
++        return wrapper
++
++    return decorator(user_function) if callable(maxsize) else decorator
+ 
+ def lfu_cache(maxsize=128, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -30,7 +43,20 @@ def lfu_cache(maxsize=128, typed=False):
+     algorithm.
+ 
+     """
+-    pass
++    # Handle both @lfu_cache and @lfu_cache() syntax
++    if callable(maxsize):
++        user_function = maxsize
++        maxsize = 128
++        typed = False
++
++    def decorator(func):
++        lock = RLock()
++        key_func = keys.typedkey if typed else keys.hashkey
++        wrapper = cached(cache=LFUCache(maxsize), key=key_func, lock=lock, info=True)(func)
++        wrapper.cache_parameters = lambda: {"maxsize": maxsize, "typed": typed}
++        return wrapper
++
++    return decorator(user_function) if callable(maxsize) else decorator
+ 
+ def lru_cache(maxsize=128, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -38,14 +64,40 @@ def lru_cache(maxsize=128, typed=False):
+     algorithm.
+ 
+     """
+-    pass
++    # Handle both @lru_cache and @lru_cache() syntax
++    if callable(maxsize):
++        user_function = maxsize
++        maxsize = 128
++        typed = False
++
++    def decorator(func):
++        lock = RLock()
++        key_func = keys.typedkey if typed else keys.hashkey
++        wrapper = cached(cache=LRUCache(maxsize), key=key_func, lock=lock, info=True)(func)
++        wrapper.cache_parameters = lambda: {"maxsize": maxsize, "typed": typed}
++        return wrapper
++
++    return decorator(user_function) if callable(maxsize) else decorator
+ 
+ def mru_cache(maxsize=128, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+     up to `maxsize` results based on a Most Recently Used (MRU)
+     algorithm.
+     """
+-    pass
++    # Handle both @mru_cache and @mru_cache() syntax
++    if callable(maxsize):
++        user_function = maxsize
++        maxsize = 128
++        typed = False
++
++    def decorator(func):
++        lock = RLock()
++        key_func = keys.typedkey if typed else keys.hashkey
++        wrapper = cached(cache=MRUCache(maxsize), key=key_func, lock=lock, info=True)(func)
++        wrapper.cache_parameters = lambda: {"maxsize": maxsize, "typed": typed}
++        return wrapper
++
++    return decorator(user_function) if callable(maxsize) else decorator
+ 
+ def rr_cache(maxsize=128, choice=random.choice, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -53,11 +105,41 @@ def rr_cache(maxsize=128, choice=random.choice, typed=False):
+     algorithm.
+ 
+     """
+-    pass
++    # Handle both @rr_cache and @rr_cache() syntax
++    if callable(maxsize):
++        user_function = maxsize
++        maxsize = 128
++        typed = False
++
++    def decorator(func):
++        lock = RLock()
++        key_func = keys.typedkey if typed else keys.hashkey
++        wrapper = cached(cache=RRCache(maxsize, choice=choice), key=key_func, lock=lock, info=True)(func)
++        wrapper.cache_parameters = lambda: {"maxsize": maxsize, "typed": typed}
++        return wrapper
++
++    return decorator(user_function) if callable(maxsize) else decorator
+ 
+ def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+     up to `maxsize` results based on a Least Recently Used (LRU)
+     algorithm with a per-item time-to-live (TTL) value.
+     """
+-    pass
+\ No newline at end of file
++    # Handle both @ttl_cache and @ttl_cache() syntax
++    if callable(maxsize):
++        user_function = maxsize
++        maxsize = 128
++        typed = False
++
++    def decorator(func):
++        lock = RLock()
++        key_func = keys.typedkey if typed else keys.hashkey
++        if maxsize is None:
++            cache = _UnboundTTLCache(ttl, timer)
++        else:
++            cache = TTLCache(maxsize, ttl, timer)
++        wrapper = cached(cache=cache, key=key_func, lock=lock, info=True)(func)
++        wrapper.cache_parameters = lambda: {"maxsize": maxsize, "ttl": ttl, "timer": timer, "typed": typed}
++        return wrapper
++
++    return decorator(user_function) if callable(maxsize) else decorator
+\ No newline at end of file
+diff --git a/src/cachetools/keys.py b/src/cachetools/keys.py
+index 3615183..3984c79 100644
+--- a/src/cachetools/keys.py
++++ b/src/cachetools/keys.py
+@@ -28,16 +28,22 @@ _kwmark = (_HashedTuple,)
+ 
+ def hashkey(*args, **kwargs):
+     """Return a cache key for the specified hashable arguments."""
+-    pass
++    if kwargs:
++        return _HashedTuple(args + _kwmark + tuple(sorted(kwargs.items())))
++    return _HashedTuple(args)
+ 
+ def methodkey(self, *args, **kwargs):
+     """Return a cache key for use with cached methods."""
+-    pass
++    return hashkey(*args, **kwargs)
+ 
+ def typedkey(*args, **kwargs):
+     """Return a typed cache key for the specified hashable arguments."""
+-    pass
++    key = hashkey(*args, **kwargs)
++    key += tuple(type(arg) for arg in args)
++    if kwargs:
++        key += tuple(type(val) for val in sorted(kwargs.values()))
++    return key
+ 
+ def typedmethodkey(self, *args, **kwargs):
+     """Return a typed cache key for use with cached methods."""
+-    pass
+\ No newline at end of file
++    return typedkey(*args, **kwargs)
+\ No newline at end of file
+

@@ -1,0 +1,896 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis test save commit0 baseline voluptuous - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-sonnet-35-base-voluptuous" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis test save commit0 baseline voluptuous
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_test-save-commit0_baseline">back to Claude Sonnet 3.5 - Base summary</a></p>
+<h1 id="claude-sonnet-35-base-voluptuous"><strong>Claude Sonnet 3.5 - Base</strong>: voluptuous</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/voluptuous/error.py b/voluptuous/error.py</span>
+<span class="gh">index f72fbe7..7999b26 100644</span>
+<span class="gd">--- a/voluptuous/error.py</span>
+<span class="gi">+++ b/voluptuous/error.py</span>
+<span class="gu">@@ -146,7 +146,7 @@ class LiteralInvalid(Invalid):</span>
+
+
+<span class="w"> </span>class LengthInvalid(Invalid):
+<span class="gd">-    pass</span>
+<span class="gi">+    &quot;&quot;&quot;The value has an invalid length.&quot;&quot;&quot;</span>
+
+
+<span class="w"> </span>class DatetimeInvalid(Invalid):
+<span class="gu">@@ -158,22 +158,28 @@ class DateInvalid(Invalid):</span>
+
+
+<span class="w"> </span>class InInvalid(Invalid):
+<span class="gd">-    pass</span>
+<span class="gi">+    &quot;&quot;&quot;The value is not in the required collection.&quot;&quot;&quot;</span>
+
+
+<span class="w"> </span>class NotInInvalid(Invalid):
+<span class="gd">-    pass</span>
+<span class="gi">+    &quot;&quot;&quot;The value is in a collection it should not be in.&quot;&quot;&quot;</span>
+
+
+<span class="w"> </span>class ExactSequenceInvalid(Invalid):
+<span class="gd">-    pass</span>
+<span class="gi">+    &quot;&quot;&quot;The sequence does not match exactly.&quot;&quot;&quot;</span>
+
+
+<span class="w"> </span>class NotEnoughValid(Invalid):
+<span class="w"> </span>    &quot;&quot;&quot;The value did not pass enough validations.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, msg: str, min_valid: int, actual_valid: int, path: typing.Optional[typing.List[typing.Hashable]] = None):</span>
+<span class="gi">+        super().__init__(msg, path)</span>
+<span class="gi">+        self.min_valid = min_valid</span>
+<span class="gi">+        self.actual_valid = actual_valid</span>
+
+
+<span class="w"> </span>class TooManyValid(Invalid):
+<span class="w"> </span>    &quot;&quot;&quot;The value passed more than expected validations.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def __init__(self, msg: str, max_valid: int, actual_valid: int, path: typing.Optional[typing.List[typing.Hashable]] = None):</span>
+<span class="gi">+        super().__init__(msg, path)</span>
+<span class="gi">+        self.max_valid = max_valid</span>
+<span class="gi">+        self.actual_valid = actual_valid</span>
+<span class="gh">diff --git a/voluptuous/humanize.py b/voluptuous/humanize.py</span>
+<span class="gh">index 2902871..7776e89 100644</span>
+<span class="gd">--- a/voluptuous/humanize.py</span>
+<span class="gi">+++ b/voluptuous/humanize.py</span>
+<span class="gu">@@ -11,4 +11,32 @@ def humanize_error(data, validation_error: Invalid, max_sub_error_length:</span>
+<span class="w"> </span>    Invalid and MultipleInvalid do not include the offending value in error messages,
+<span class="w"> </span>    and MultipleInvalid.__str__ only provides the first error.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(validation_error, MultipleInvalid):</span>
+<span class="gi">+        errors = validation_error.errors</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        errors = [validation_error]</span>
+<span class="gi">+</span>
+<span class="gi">+    error_messages = []</span>
+<span class="gi">+    for error in errors:</span>
+<span class="gi">+        path = _format_path(error.path)</span>
+<span class="gi">+        value = _get_value_from_path(data, error.path)</span>
+<span class="gi">+        error_message = f&quot;Error at {path}: {error}&quot;</span>
+<span class="gi">+        if value is not None:</span>
+<span class="gi">+            truncated_value = str(value)[:max_sub_error_length]</span>
+<span class="gi">+            if len(str(value)) &gt; max_sub_error_length:</span>
+<span class="gi">+                truncated_value += &quot;...&quot;</span>
+<span class="gi">+            error_message += f&quot; (got {truncated_value})&quot;</span>
+<span class="gi">+        error_messages.append(error_message)</span>
+<span class="gi">+</span>
+<span class="gi">+    return &quot;\n&quot;.join(error_messages)</span>
+<span class="gi">+</span>
+<span class="gi">+def _format_path(path):</span>
+<span class="gi">+    return &quot;.&quot;.join(str(p) for p in path) if path else &quot;root&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+def _get_value_from_path(data, path):</span>
+<span class="gi">+    for key in path:</span>
+<span class="gi">+        if isinstance(data, (dict, list)) and key in data:</span>
+<span class="gi">+            data = data[key]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+    return data</span>
+<span class="gh">diff --git a/voluptuous/schema_builder.py b/voluptuous/schema_builder.py</span>
+<span class="gh">index de2b53c..57ef356 100644</span>
+<span class="gd">--- a/voluptuous/schema_builder.py</span>
+<span class="gi">+++ b/voluptuous/schema_builder.py</span>
+<span class="gu">@@ -113,7 +113,27 @@ class Schema(object):</span>
+
+<span class="w"> </span>        Note: only very basic inference is supported.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def infer_type(value):</span>
+<span class="gi">+            if isinstance(value, dict):</span>
+<span class="gi">+                return {k: infer_type(v) for k, v in value.items()}</span>
+<span class="gi">+            elif isinstance(value, list):</span>
+<span class="gi">+                if value:</span>
+<span class="gi">+                    return [infer_type(value[0])]</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return list</span>
+<span class="gi">+            elif isinstance(value, str):</span>
+<span class="gi">+                return str</span>
+<span class="gi">+            elif isinstance(value, int):</span>
+<span class="gi">+                return int</span>
+<span class="gi">+            elif isinstance(value, float):</span>
+<span class="gi">+                return float</span>
+<span class="gi">+            elif isinstance(value, bool):</span>
+<span class="gi">+                return bool</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return type(value)</span>
+<span class="gi">+</span>
+<span class="gi">+        inferred_schema = infer_type(data)</span>
+<span class="gi">+        return cls(inferred_schema, **kwargs)</span>
+
+<span class="w"> </span>    def __eq__(self, other):
+<span class="w"> </span>        if not isinstance(other, Schema):
+<span class="gu">@@ -142,7 +162,58 @@ class Schema(object):</span>
+
+<span class="w"> </span>    def _compile_mapping(self, schema, invalid_msg=None):
+<span class="w"> </span>        &quot;&quot;&quot;Create validator for given mapping.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def validate_mapping(path, iterable, value):</span>
+<span class="gi">+            if not isinstance(value, dict):</span>
+<span class="gi">+                raise er.Invalid(invalid_msg or &#39;expected a dictionary&#39;, path)</span>
+<span class="gi">+</span>
+<span class="gi">+            out = {}</span>
+<span class="gi">+            required_keys = set()</span>
+<span class="gi">+            optional_keys = set()</span>
+<span class="gi">+            _compile = self._compile</span>
+<span class="gi">+            error = er.MultipleInvalid()</span>
+<span class="gi">+</span>
+<span class="gi">+            for key, subschema in _iterate_mapping_candidates(schema):</span>
+<span class="gi">+                if isinstance(key, Required):</span>
+<span class="gi">+                    required_keys.add(key.schema)</span>
+<span class="gi">+                elif isinstance(key, Optional):</span>
+<span class="gi">+                    optional_keys.add(key.schema)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    optional_keys.add(key)</span>
+<span class="gi">+</span>
+<span class="gi">+            for key, val in value.items():</span>
+<span class="gi">+                key_path = path + [key]</span>
+<span class="gi">+                for skey, svalue in _iterate_mapping_candidates(schema):</span>
+<span class="gi">+                    if isinstance(skey, Optional):</span>
+<span class="gi">+                        skey = skey.schema</span>
+<span class="gi">+                    if isinstance(skey, Required):</span>
+<span class="gi">+                        skey = skey.schema</span>
+<span class="gi">+                    if skey == key:</span>
+<span class="gi">+                        try:</span>
+<span class="gi">+                            out[key] = _compile(svalue)(key_path, value, val)</span>
+<span class="gi">+                            break</span>
+<span class="gi">+                        except er.Invalid as e:</span>
+<span class="gi">+                            error.add(e)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    if self.extra == PREVENT_EXTRA:</span>
+<span class="gi">+                        error.add(er.Invalid(&#39;extra keys not allowed&#39;, key_path))</span>
+<span class="gi">+                    elif self.extra == ALLOW_EXTRA:</span>
+<span class="gi">+                        out[key] = val</span>
+<span class="gi">+                    elif self.extra == REMOVE_EXTRA:</span>
+<span class="gi">+                        pass</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        raise ValueError(&#39;Invalid value for extra&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+            missing_required_keys = required_keys - set(out.keys())</span>
+<span class="gi">+            if missing_required_keys:</span>
+<span class="gi">+                error.add(er.Invalid(f&#39;required key(s) {&quot;, &quot;.join(repr(k) for k in missing_required_keys)} not provided&#39;,</span>
+<span class="gi">+                                     path))</span>
+<span class="gi">+</span>
+<span class="gi">+            if error.errors:</span>
+<span class="gi">+                raise error</span>
+<span class="gi">+</span>
+<span class="gi">+            return out</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_mapping</span>
+
+<span class="w"> </span>    def _compile_object(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate an object.
+<span class="gu">@@ -162,7 +233,26 @@ class Schema(object):</span>
+<span class="w"> </span>            ...   validate(Structure(one=&#39;three&#39;))
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        base = self._compile_mapping(schema, invalid_msg=&#39;object value&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_object(path, iterable, value):</span>
+<span class="gi">+            if schema.cls is not UNDEFINED and not isinstance(value, schema.cls):</span>
+<span class="gi">+                raise er.Invalid(&#39;expected {} but got {}&#39;.format(schema.cls, type(value)), path)</span>
+<span class="gi">+            </span>
+<span class="gi">+            # Convert object attributes to a dictionary</span>
+<span class="gi">+            value_dict = {k: getattr(value, k) for k in dir(value) if not k.startswith(&#39;_&#39;)}</span>
+<span class="gi">+            </span>
+<span class="gi">+            # Validate the dictionary</span>
+<span class="gi">+            result_dict = base(path, iterable, value_dict)</span>
+<span class="gi">+            </span>
+<span class="gi">+            # Create a new object with validated attributes</span>
+<span class="gi">+            validated_obj = schema.cls() if schema.cls is not UNDEFINED else type(value)()</span>
+<span class="gi">+            for k, v in result_dict.items():</span>
+<span class="gi">+                setattr(validated_obj, k, v)</span>
+<span class="gi">+            </span>
+<span class="gi">+            return validated_obj</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_object</span>
+
+<span class="w"> </span>    def _compile_dict(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a dictionary.
+<span class="gu">@@ -240,7 +330,7 @@ class Schema(object):</span>
+<span class="w"> </span>         &quot;expected str for dictionary value @ data[&#39;adict&#39;][&#39;strfield&#39;]&quot;]
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._compile_mapping(schema, invalid_msg=&#39;expected a dictionary&#39;)</span>
+
+<span class="w"> </span>    def _compile_sequence(self, schema, seq_type):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a sequence type.
+<span class="gu">@@ -255,7 +345,27 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; validator([1])
+<span class="w"> </span>        [1]
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        _compile = self._compile</span>
+<span class="gi">+        seq_schema = [_compile(s) for s in schema]</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_sequence(path, iterable, value):</span>
+<span class="gi">+            if not isinstance(value, seq_type):</span>
+<span class="gi">+                raise er.Invalid(&#39;expected a {}&#39;.format(seq_type.__name__), path)</span>
+<span class="gi">+</span>
+<span class="gi">+            result = []</span>
+<span class="gi">+            for i, item in enumerate(value):</span>
+<span class="gi">+                item_path = path + [i]</span>
+<span class="gi">+                for validator in seq_schema:</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        result.append(validator(item_path, iterable, item))</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    except er.Invalid:</span>
+<span class="gi">+                        pass</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise er.Invalid(&#39;invalid value&#39;, item_path)</span>
+<span class="gi">+            return seq_type(result)</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_sequence</span>
+
+<span class="w"> </span>    def _compile_tuple(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a tuple.
+<span class="gu">@@ -270,7 +380,7 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; validator((1,))
+<span class="w"> </span>        (1,)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._compile_sequence(schema, tuple)</span>
+
+<span class="w"> </span>    def _compile_list(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a list.
+<span class="gu">@@ -285,7 +395,7 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; validator([1])
+<span class="w"> </span>        [1]
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._compile_sequence(schema, list)</span>
+
+<span class="w"> </span>    def _compile_set(self, schema):
+<span class="w"> </span>        &quot;&quot;&quot;Validate a set.
+<span class="gu">@@ -300,7 +410,26 @@ class Schema(object):</span>
+<span class="w"> </span>        &gt;&gt;&gt; with raises(er.MultipleInvalid, &#39;invalid value in set&#39;):
+<span class="w"> </span>        ...   validator(set([&#39;a&#39;]))
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        _compile = self._compile</span>
+<span class="gi">+        set_schema = [_compile(s) for s in schema]</span>
+<span class="gi">+</span>
+<span class="gi">+        def validate_set(path, iterable, value):</span>
+<span class="gi">+            if not isinstance(value, set):</span>
+<span class="gi">+                raise er.Invalid(&#39;expected a set&#39;, path)</span>
+<span class="gi">+</span>
+<span class="gi">+            result = set()</span>
+<span class="gi">+            for item in value:</span>
+<span class="gi">+                for validator in set_schema:</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        result.add(validator(path, iterable, item))</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    except er.Invalid:</span>
+<span class="gi">+                        pass</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise er.Invalid(&#39;invalid value in set&#39;, path)</span>
+<span class="gi">+            return result</span>
+<span class="gi">+</span>
+<span class="gi">+        return validate_set</span>
+
+<span class="w"> </span>    def extend(self, schema: Schemable, required: typing.Optional[bool]=
+<span class="w"> </span>        None, extra: typing.Optional[int]=None) -&gt;Schema:
+<span class="gu">@@ -316,7 +445,17 @@ class Schema(object):</span>
+<span class="w"> </span>        :param required: if set, overrides `required` of this `Schema`
+<span class="w"> </span>        :param extra: if set, overrides `extra` of this `Schema`
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not isinstance(self.schema, dict) or not isinstance(schema, dict):</span>
+<span class="gi">+            raise ValueError(&quot;Both schemas must be dictionary-based&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        new_schema = self.schema.copy()</span>
+<span class="gi">+        new_schema.update(schema)</span>
+<span class="gi">+</span>
+<span class="gi">+        return Schema(</span>
+<span class="gi">+            new_schema,</span>
+<span class="gi">+            required=self.required if required is None else required,</span>
+<span class="gi">+            extra=self.extra if extra is None else extra</span>
+<span class="gi">+        )</span>
+
+
+<span class="w"> </span>def _compile_scalar(schema):
+<span class="gu">@@ -678,17 +817,31 @@ def message(default: typing.Optional[str]=None, cls: typing.Optional[typing</span>
+<span class="w"> </span>        ... except er.MultipleInvalid as e:
+<span class="w"> </span>        ...   assert isinstance(e.errors[0], IntegerInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def decorator(func):</span>
+<span class="gi">+        @wraps(func)</span>
+<span class="gi">+        def wrapper(*args, **kwargs):</span>
+<span class="gi">+            msg = kwargs.pop(&#39;msg&#39;, None) or default</span>
+<span class="gi">+            clsoverride = kwargs.pop(&#39;clsoverride&#39;, None) or cls</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                return func(*args, **kwargs)</span>
+<span class="gi">+            except ValueError as e:</span>
+<span class="gi">+                raise (clsoverride or er.Invalid)(msg or str(e))</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+    return decorator</span>
+
+
+<span class="w"> </span>def _args_to_dict(func, args):
+<span class="w"> </span>    &quot;&quot;&quot;Returns argument names as values as key-value pairs.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    arg_count = func.__code__.co_argcount</span>
+<span class="gi">+    arg_names = func.__code__.co_varnames[:arg_count]</span>
+<span class="gi">+    return dict(zip(arg_names, args))</span>
+
+
+<span class="w"> </span>def _merge_args_with_kwargs(args_dict, kwargs_dict):
+<span class="w"> </span>    &quot;&quot;&quot;Merge args with kwargs.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    ret = args_dict.copy()</span>
+<span class="gi">+    ret.update(kwargs_dict)</span>
+<span class="gi">+    return ret</span>
+
+
+<span class="w"> </span>def validate(*a, **kw) -&gt;typing.Callable:
+<span class="gu">@@ -707,4 +860,20 @@ def validate(*a, **kw) -&gt;typing.Callable:</span>
+<span class="w"> </span>        ...   return arg1 * 2
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def validate_schema_decorator(func):</span>
+<span class="gi">+        schema = Schema(kw) if kw else Schema(a[0])</span>
+<span class="gi">+</span>
+<span class="gi">+        @wraps(func)</span>
+<span class="gi">+        def wrapper(*args, **kwargs):</span>
+<span class="gi">+            schema_dict = _merge_args_with_kwargs(_args_to_dict(func, args), kwargs)</span>
+<span class="gi">+            validated = schema(schema_dict)</span>
+<span class="gi">+            result = func(**validated)</span>
+<span class="gi">+            if &#39;__return__&#39; in schema.schema:</span>
+<span class="gi">+                return_validator = schema.schema[&#39;__return__&#39;]</span>
+<span class="gi">+                if isinstance(return_validator, Schema):</span>
+<span class="gi">+                    return return_validator(result)</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    return Schema(return_validator)(result)</span>
+<span class="gi">+            return result</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+    return validate_schema_decorator</span>
+<span class="gh">diff --git a/voluptuous/util.py b/voluptuous/util.py</span>
+<span class="gh">index fe15b1a..a2c57d8 100644</span>
+<span class="gd">--- a/voluptuous/util.py</span>
+<span class="gi">+++ b/voluptuous/util.py</span>
+<span class="gu">@@ -13,7 +13,7 @@ def Lower(v: str) -&gt;str:</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;HI&#39;)
+<span class="w"> </span>    &#39;hi&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v.lower()</span>
+
+
+<span class="w"> </span>def Upper(v: str) -&gt;str:
+<span class="gu">@@ -23,7 +23,7 @@ def Upper(v: str) -&gt;str:</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;hi&#39;)
+<span class="w"> </span>    &#39;HI&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v.upper()</span>
+
+
+<span class="w"> </span>def Capitalize(v: str) -&gt;str:
+<span class="gu">@@ -33,7 +33,7 @@ def Capitalize(v: str) -&gt;str:</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;hello world&#39;)
+<span class="w"> </span>    &#39;Hello world&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v.capitalize()</span>
+
+
+<span class="w"> </span>def Title(v: str) -&gt;str:
+<span class="gu">@@ -43,7 +43,7 @@ def Title(v: str) -&gt;str:</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;hello world&#39;)
+<span class="w"> </span>    &#39;Hello World&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v.title()</span>
+
+
+<span class="w"> </span>def Strip(v: str) -&gt;str:
+<span class="gu">@@ -53,7 +53,7 @@ def Strip(v: str) -&gt;str:</span>
+<span class="w"> </span>    &gt;&gt;&gt; s(&#39;  hello world  &#39;)
+<span class="w"> </span>    &#39;hello world&#39;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v.strip()</span>
+
+
+<span class="w"> </span>class DefaultTo(object):
+<span class="gh">diff --git a/voluptuous/validators.py b/voluptuous/validators.py</span>
+<span class="gh">index 88b50f6..10230e1 100644</span>
+<span class="gd">--- a/voluptuous/validators.py</span>
+<span class="gi">+++ b/voluptuous/validators.py</span>
+<span class="gu">@@ -41,7 +41,13 @@ def truth(f: typing.Callable) -&gt;typing.Callable:</span>
+<span class="w"> </span>    &gt;&gt;&gt; with raises(MultipleInvalid, &#39;not a valid value&#39;):
+<span class="w"> </span>    ...   validate(&#39;/notavaliddir&#39;)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    @wraps(f)</span>
+<span class="gi">+    def wrapper(v):</span>
+<span class="gi">+        t = f(v)</span>
+<span class="gi">+        if not t:</span>
+<span class="gi">+            raise ValueError</span>
+<span class="gi">+        return v</span>
+<span class="gi">+    return wrapper</span>
+
+
+<span class="w"> </span>class Coerce(object):
+<span class="gu">@@ -109,7 +115,7 @@ def IsTrue(v):</span>
+<span class="w"> </span>    ... except MultipleInvalid as e:
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], TrueInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return bool(v)</span>
+
+
+<span class="w"> </span>@message(&#39;value was not false&#39;, cls=FalseInvalid)
+<span class="gu">@@ -129,7 +135,7 @@ def IsFalse(v):</span>
+<span class="w"> </span>    ... except MultipleInvalid as e:
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], FalseInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return not bool(v)</span>
+
+
+<span class="w"> </span>@message(&#39;expected boolean&#39;, cls=BooleanInvalid)
+<span class="gu">@@ -153,7 +159,18 @@ def Boolean(v):</span>
+<span class="w"> </span>    ... except MultipleInvalid as e:
+<span class="w"> </span>    ...   assert isinstance(e.errors[0], BooleanInvalid)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(v, bool):</span>
+<span class="gi">+        return v</span>
+<span class="gi">+    if isinstance(v, str):</span>
+<span class="gi">+        v = v.lower()</span>
+<span class="gi">+        if v in (&#39;1&#39;, &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;, &#39;enable&#39;):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        if v in (&#39;0&#39;, &#39;false&#39;, &#39;no&#39;, &#39;off&#39;, &#39;disable&#39;):</span>
+<span class="gi">+            return False</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return bool(v)</span>
+<span class="gi">+    except ValueError:</span>
+<span class="gi">+        raise BooleanInvalid(&#39;expected boolean&#39;)</span>
+
+
+<span class="w"> </span>class _WithSubValidators(object):
+<span class="gu">@@ -894,7 +911,16 @@ class Number(object):</span>
+<span class="w"> </span>        :param number:
+<span class="w"> </span>        :return: tuple(precision, scale, decimal_number)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            decimal_num = Decimal(number)</span>
+<span class="gi">+        except InvalidOperation:</span>
+<span class="gi">+            raise Invalid(self.msg or f&#39;{number} is not a valid Decimal&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        sign, digits, exponent = decimal_num.as_tuple()</span>
+<span class="gi">+        scale = -exponent if exponent &lt; 0 else 0</span>
+<span class="gi">+        precision = len(digits)</span>
+<span class="gi">+</span>
+<span class="gi">+        return precision, scale, decimal_num</span>
+
+
+<span class="w"> </span>class SomeOf(_WithSubValidators):
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
