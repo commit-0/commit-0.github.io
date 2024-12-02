@@ -1,0 +1,12 @@
+ImportError while loading conftest '/testbed/tests/conftest.py'.
+tests/conftest.py:7: in <module>
+    from tinydb.middlewares import CachingMiddleware
+tinydb/__init__.py:27: in <module>
+    from .queries import Query, where
+tinydb/queries.py:21: in <module>
+    from .utils import freeze
+tinydb/utils.py:69: in <module>
+    class FrozenDict(dict):
+tinydb/utils.py:80: in FrozenDict
+    __setitem__ = _immutable
+E   NameError: name '_immutable' is not defined

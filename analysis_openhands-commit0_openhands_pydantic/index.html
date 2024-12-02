@@ -1,0 +1,1304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands pydantic - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-pydantic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands pydantic
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-pydantic"><strong>OpenHands</strong>: pydantic</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:17: in &lt;module&gt;
+    from pydantic import GenerateSchema
+E   ImportError: cannot import name &#39;GenerateSchema&#39; from &#39;pydantic&#39; (/testbed/pydantic/__init__.py)
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/pydantic/_internal/_generate_schema.py b/pydantic/_internal/_generate_schema.py</span>
+<span class="gh">index a9c65d49f..3670f2123 100644</span>
+<span class="gd">--- a/pydantic/_internal/_generate_schema.py</span>
+<span class="gi">+++ b/pydantic/_internal/_generate_schema.py</span>
+<span class="gu">@@ -69,7 +69,11 @@ def check_validator_fields_against_field_name(info: FieldDecoratorInfo, field: s</span>
+<span class="w"> </span>    Returns:
+<span class="w"> </span>        `True` if field name is in validator fields, `False` otherwise.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not info.fields:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    if &#39;*&#39; in info.fields:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    return field in info.fields</span>
+
+<span class="w"> </span>def check_decorator_fields_exist(decorators: Iterable[AnyFieldDecorator], fields: Iterable[str]) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Check if the defined fields in decorators exist in `fields` param.
+<span class="gu">@@ -83,7 +87,15 @@ def check_decorator_fields_exist(decorators: Iterable[AnyFieldDecorator], fields</span>
+<span class="w"> </span>    Raises:
+<span class="w"> </span>        PydanticUserError: If one of the field names does not exist in `fields` param.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    fields_set = set(fields)</span>
+<span class="gi">+    for dec in decorators:</span>
+<span class="gi">+        if dec.info.check_fields and dec.info.fields and &#39;*&#39; not in dec.info.fields:</span>
+<span class="gi">+            for field in dec.info.fields:</span>
+<span class="gi">+                if field not in fields_set:</span>
+<span class="gi">+                    raise PydanticUserError(</span>
+<span class="gi">+                        f&#39;Decorators defined with fields {dec.info.fields} but {field} not found in model&#39;,</span>
+<span class="gi">+                        code=&#39;validator-field&#39;,</span>
+<span class="gi">+                    )</span>
+
+<span class="w"> </span>def modify_model_json_schema(schema_or_field: CoreSchemaOrField, handler: GetJsonSchemaHandler, *, cls: Any, title: str | None=None) -&gt; JsonSchemaValue:
+<span class="w"> </span>    &quot;&quot;&quot;Add title and description for model-like classes&#39; JSON schema.
+<span class="gu">@@ -97,7 +109,13 @@ def modify_model_json_schema(schema_or_field: CoreSchemaOrField, handler: GetJso</span>
+<span class="w"> </span>    Returns:
+<span class="w"> </span>        JsonSchemaValue: The updated JSON schema.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    json_schema = handler(schema_or_field)</span>
+<span class="gi">+    if title is None:</span>
+<span class="gi">+        title = cls.__name__</span>
+<span class="gi">+    json_schema[&#39;title&#39;] = title</span>
+<span class="gi">+    if cls.__doc__:</span>
+<span class="gi">+        json_schema[&#39;description&#39;] = inspect.cleandoc(cls.__doc__)</span>
+<span class="gi">+    return json_schema</span>
+<span class="w"> </span>JsonEncoders = Dict[Type[Any], JsonEncoder]
+
+<span class="w"> </span>def _add_custom_serialization_from_json_encoders(json_encoders: JsonEncoders | None, tp: Any, schema: CoreSchema) -&gt; CoreSchema:
+<span class="gu">@@ -108,7 +126,16 @@ def _add_custom_serialization_from_json_encoders(json_encoders: JsonEncoders | N</span>
+<span class="w"> </span>        tp: The type to check for a matching encoder.
+<span class="w"> </span>        schema: The schema to add the encoder to.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not json_encoders:</span>
+<span class="gi">+        return schema</span>
+<span class="gi">+</span>
+<span class="gi">+    for type_, encoder in json_encoders.items():</span>
+<span class="gi">+        if isinstance(tp, type) and issubclass(tp, type_):</span>
+<span class="gi">+            return core_schema.json_or_python_schema(</span>
+<span class="gi">+                json_schema=core_schema.with_info_plain_validator_function(encoder),</span>
+<span class="gi">+                python_schema=schema,</span>
+<span class="gi">+            )</span>
+<span class="gi">+    return schema</span>
+<span class="w"> </span>TypesNamespace = Union[Dict[str, Any], None]
+
+<span class="w"> </span>class TypesNamespaceStack:
+<span class="gu">@@ -123,7 +150,7 @@ def _get_first_non_null(a: Any, b: Any) -&gt; Any:</span>
+<span class="w"> </span>    Use case: serialization_alias (argument a) and alias (argument b) are both defined, and serialization_alias is &#39;&#39;.
+<span class="w"> </span>    This function will return serialization_alias, which is the first argument, even though it is an empty string.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return a if a is not None else b</span>
+
+<span class="w"> </span>class GenerateSchema:
+<span class="w"> </span>    &quot;&quot;&quot;Generate core schema for a Pydantic model, dataclass and types like `str`, `datetime`, ... .&quot;&quot;&quot;
+<span class="gu">@@ -139,7 +166,7 @@ class GenerateSchema:</span>
+
+<span class="w"> </span>    def str_schema(self) -&gt; CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate a CoreSchema for `str`&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return core_schema.str_schema()</span>
+
+<span class="w"> </span>    class CollectedInvalid(Exception):
+<span class="w"> </span>        pass
+<span class="gu">@@ -167,22 +194,110 @@ class GenerateSchema:</span>
+<span class="w"> </span>                - If `typing.TypedDict` is used instead of `typing_extensions.TypedDict` on Python &lt; 3.12.
+<span class="w"> </span>                - If `__modify_schema__` method is used instead of `__get_pydantic_json_schema__`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if from_dunder_get_core_schema:</span>
+<span class="gi">+            schema = self._generate_schema_from_property(obj, obj)</span>
+<span class="gi">+            if schema is not None:</span>
+<span class="gi">+                return schema</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, str):</span>
+<span class="gi">+            return self.str_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type):</span>
+<span class="gi">+            if obj == str:</span>
+<span class="gi">+                return self.str_schema()</span>
+<span class="gi">+            elif obj == bool:</span>
+<span class="gi">+                return core_schema.bool_schema()</span>
+<span class="gi">+            elif obj == int:</span>
+<span class="gi">+                return core_schema.int_schema()</span>
+<span class="gi">+            elif obj == float:</span>
+<span class="gi">+                return core_schema.float_schema()</span>
+<span class="gi">+            elif obj == bytes:</span>
+<span class="gi">+                return core_schema.bytes_schema()</span>
+<span class="gi">+            elif obj == list:</span>
+<span class="gi">+                return core_schema.list_schema(core_schema.any_schema())</span>
+<span class="gi">+            elif obj == dict:</span>
+<span class="gi">+                return core_schema.dict_schema(core_schema.any_schema(), core_schema.any_schema())</span>
+<span class="gi">+            elif obj == set:</span>
+<span class="gi">+                return core_schema.set_schema(core_schema.any_schema())</span>
+<span class="gi">+            elif obj == frozenset:</span>
+<span class="gi">+                return core_schema.frozenset_schema(core_schema.any_schema())</span>
+<span class="gi">+            elif obj == tuple:</span>
+<span class="gi">+                return core_schema.tuple_variable_schema(core_schema.any_schema())</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.match_type(obj)</span>
+
+<span class="w"> </span>    def _model_schema(self, cls: type[BaseModel]) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Pydantic model.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        config_wrapper = self._config_wrapper_stack.get()</span>
+<span class="gi">+        fields = {}</span>
+<span class="gi">+        computed_fields = {}</span>
+<span class="gi">+        validators = []</span>
+<span class="gi">+        serializers = []</span>
+<span class="gi">+        model_validators = []</span>
+<span class="gi">+        model_serializers = []</span>
+<span class="gi">+</span>
+<span class="gi">+        # Get fields from parent classes</span>
+<span class="gi">+        for base in reversed(cls.__mro__[1:]):</span>
+<span class="gi">+            if hasattr(base, &#39;__pydantic_fields__&#39;):</span>
+<span class="gi">+                fields.update(base.__pydantic_fields__)</span>
+<span class="gi">+            if hasattr(base, &#39;__pydantic_computed_fields__&#39;):</span>
+<span class="gi">+                computed_fields.update(base.__pydantic_computed_fields__)</span>
+<span class="gi">+            if hasattr(base, &#39;__pydantic_decorators__&#39;):</span>
+<span class="gi">+                validators.extend(base.__pydantic_decorators__.field_validators)</span>
+<span class="gi">+                serializers.extend(base.__pydantic_decorators__.field_serializers)</span>
+<span class="gi">+                model_validators.extend(base.__pydantic_decorators__.model_validators)</span>
+<span class="gi">+                model_serializers.extend(base.__pydantic_decorators__.model_serializers)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Add fields from current class</span>
+<span class="gi">+        fields.update(cls.__pydantic_fields__)</span>
+<span class="gi">+        computed_fields.update(cls.__pydantic_computed_fields__)</span>
+<span class="gi">+        validators.extend(cls.__pydantic_decorators__.field_validators)</span>
+<span class="gi">+        serializers.extend(cls.__pydantic_decorators__.field_serializers)</span>
+<span class="gi">+        model_validators.extend(cls.__pydantic_decorators__.model_validators)</span>
+<span class="gi">+        model_serializers.extend(cls.__pydantic_decorators__.model_serializers)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Generate schema for each field</span>
+<span class="gi">+        field_schemas = {}</span>
+<span class="gi">+        for field_name, field_info in fields.items():</span>
+<span class="gi">+            field_schema = self.generate_schema(field_info.annotation)</span>
+<span class="gi">+            field_schemas[field_name] = field_schema</span>
+<span class="gi">+</span>
+<span class="gi">+        # Create model schema</span>
+<span class="gi">+        schema = core_schema.model_schema(</span>
+<span class="gi">+            cls,</span>
+<span class="gi">+            field_schemas,</span>
+<span class="gi">+            computed_fields=computed_fields,</span>
+<span class="gi">+            validators=validators,</span>
+<span class="gi">+            serializers=serializers,</span>
+<span class="gi">+            model_validators=model_validators,</span>
+<span class="gi">+            model_serializers=model_serializers,</span>
+<span class="gi">+            config=config_wrapper.config_dict,</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        return schema</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _get_model_title_from_config(model: type[BaseModel | StandardDataclass], config_wrapper: ConfigWrapper | None=None) -&gt; str | None:
+<span class="w"> </span>        &quot;&quot;&quot;Get the title of a model if `model_title_generator` or `title` are set in the config, else return None&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if config_wrapper is None:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+        if config_wrapper.title is not None:</span>
+<span class="gi">+            return config_wrapper.title</span>
+<span class="gi">+</span>
+<span class="gi">+        if config_wrapper.title_generator is not None:</span>
+<span class="gi">+            return config_wrapper.title_generator(model)</span>
+<span class="gi">+</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def _unpack_refs_defs(self, schema: CoreSchema) -&gt; CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Unpack all &#39;definitions&#39; schemas into `GenerateSchema.defs.definitions`
+<span class="w"> </span>        and return the inner schema.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if &#39;definitions&#39; in schema:</span>
+<span class="gi">+            self.defs.definitions.update(schema[&#39;definitions&#39;])</span>
+<span class="gi">+            schema = {k: v for k, v in schema.items() if k != &#39;definitions&#39;}</span>
+<span class="gi">+        return schema</span>
+
+<span class="w"> </span>    def _generate_schema_from_property(self, obj: Any, source: Any) -&gt; core_schema.CoreSchema | None:
+<span class="w"> </span>        &quot;&quot;&quot;Try to generate schema from either the `__get_pydantic_core_schema__` function or
+<span class="gu">@@ -191,7 +306,17 @@ class GenerateSchema:</span>
+<span class="w"> </span>        Note: `__get_pydantic_core_schema__` takes priority so it can
+<span class="w"> </span>        decide whether to use a `__pydantic_core_schema__` attribute, or generate a fresh schema.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if hasattr(obj, &#39;__get_pydantic_core_schema__&#39;):</span>
+<span class="gi">+            schema = obj.__get_pydantic_core_schema__(source, self)</span>
+<span class="gi">+            if schema is not None:</span>
+<span class="gi">+                return schema</span>
+<span class="gi">+</span>
+<span class="gi">+        if hasattr(obj, &#39;__pydantic_core_schema__&#39;):</span>
+<span class="gi">+            schema = obj.__pydantic_core_schema__</span>
+<span class="gi">+            if schema is not None:</span>
+<span class="gi">+                return schema</span>
+<span class="gi">+</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def match_type(self, obj: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Main mapping of types to schemas.
+<span class="gu">@@ -206,19 +331,148 @@ class GenerateSchema:</span>
+<span class="w"> </span>        The idea is that we&#39;ll evolve this into adding more and more user facing methods over time
+<span class="w"> </span>        as they get requested and we figure out what the right API for them is.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(obj, type):</span>
+<span class="gi">+            if issubclass(obj, BaseModel):</span>
+<span class="gi">+                return self._model_schema(obj)</span>
+<span class="gi">+            elif issubclass(obj, (list, tuple, set, frozenset)):</span>
+<span class="gi">+                return core_schema.list_schema(core_schema.any_schema())</span>
+<span class="gi">+            elif issubclass(obj, dict):</span>
+<span class="gi">+                return core_schema.dict_schema(core_schema.any_schema(), core_schema.any_schema())</span>
+<span class="gi">+            elif issubclass(obj, bool):</span>
+<span class="gi">+                return core_schema.bool_schema()</span>
+<span class="gi">+            elif issubclass(obj, int):</span>
+<span class="gi">+                return core_schema.int_schema()</span>
+<span class="gi">+            elif issubclass(obj, float):</span>
+<span class="gi">+                return core_schema.float_schema()</span>
+<span class="gi">+            elif issubclass(obj, str):</span>
+<span class="gi">+                return core_schema.str_schema()</span>
+<span class="gi">+            elif issubclass(obj, bytes):</span>
+<span class="gi">+                return core_schema.bytes_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, _AnnotatedType):</span>
+<span class="gi">+            return self._annotated_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, ForwardRef):</span>
+<span class="gi">+            return self._forward_ref_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, TypeVar):</span>
+<span class="gi">+            return self._type_var_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, TypeAliasType):</span>
+<span class="gi">+            return self._type_alias_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, Enum):</span>
+<span class="gi">+            return self._enum_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (list, tuple, set, frozenset)):</span>
+<span class="gi">+            return self._sequence_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, dict):</span>
+<span class="gi">+            return self._dict_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (int, float, str, bytes)):</span>
+<span class="gi">+            return self._primitive_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, bool):</span>
+<span class="gi">+            return core_schema.bool_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (datetime, date, time, timedelta)):</span>
+<span class="gi">+            return self._datetime_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, UUID):</span>
+<span class="gi">+            return self._uuid_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, Path):</span>
+<span class="gi">+            return self._path_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network)):</span>
+<span class="gi">+            return self._ip_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (Decimal, )):</span>
+<span class="gi">+            return self._decimal_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (Pattern, )):</span>
+<span class="gi">+            return self._pattern_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (Color, )):</span>
+<span class="gi">+            return self._color_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (NameEmail, )):</span>
+<span class="gi">+            return self._name_email_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (SecretStr, SecretBytes)):</span>
+<span class="gi">+            return self._secret_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (DirectoryPath, FilePath)):</span>
+<span class="gi">+            return self._path_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (RootModel, )):</span>
+<span class="gi">+            return self._root_model_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (TypedDict, )):</span>
+<span class="gi">+            return self._typed_dict_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (tuple, )):</span>
+<span class="gi">+            return self._tuple_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (list, )):</span>
+<span class="gi">+            return self._list_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (set, frozenset)):</span>
+<span class="gi">+            return self._set_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (dict, )):</span>
+<span class="gi">+            return self._dict_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (Callable, )):</span>
+<span class="gi">+            return self._callable_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (Generic, )):</span>
+<span class="gi">+            return self._generic_schema(obj)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (Any, )):</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (None.__class__, )):</span>
+<span class="gi">+            return core_schema.none_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(obj, type) and issubclass(obj, (object, )):</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        raise PydanticSchemaGenerationError(f&#39;Unable to generate schema for {obj}&#39;)</span>
+
+<span class="w"> </span>    def _generate_td_field_schema(self, name: str, field_info: FieldInfo, decorators: DecoratorInfos, *, required: bool=True) -&gt; core_schema.TypedDictField:
+<span class="w"> </span>        &quot;&quot;&quot;Prepare a TypedDictField to represent a model or typeddict field.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        schema = self.generate_schema(field_info.annotation)</span>
+<span class="gi">+        return core_schema.typed_dict_field(</span>
+<span class="gi">+            schema,</span>
+<span class="gi">+            required=required,</span>
+<span class="gi">+            serialization=field_info.serialization,</span>
+<span class="gi">+            validation=field_info.validation,</span>
+<span class="gi">+            decorators=decorators,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def _generate_md_field_schema(self, name: str, field_info: FieldInfo, decorators: DecoratorInfos) -&gt; core_schema.ModelField:
+<span class="w"> </span>        &quot;&quot;&quot;Prepare a ModelField to represent a model field.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        schema = self.generate_schema(field_info.annotation)</span>
+<span class="gi">+        return core_schema.model_field(</span>
+<span class="gi">+            schema,</span>
+<span class="gi">+            serialization=field_info.serialization,</span>
+<span class="gi">+            validation=field_info.validation,</span>
+<span class="gi">+            decorators=decorators,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def _generate_dc_field_schema(self, name: str, field_info: FieldInfo, decorators: DecoratorInfos) -&gt; core_schema.DataclassField:
+<span class="w"> </span>        &quot;&quot;&quot;Prepare a DataclassField to represent the parameter/field, of a dataclass.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        schema = self.generate_schema(field_info.annotation)</span>
+<span class="gi">+        return core_schema.dataclass_field(</span>
+<span class="gi">+            schema,</span>
+<span class="gi">+            serialization=field_info.serialization,</span>
+<span class="gi">+            validation=field_info.validation,</span>
+<span class="gi">+            decorators=decorators,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _apply_alias_generator_to_field_info(alias_generator: Callable[[str], str] | AliasGenerator, field_info: FieldInfo, field_name: str) -&gt; None:
+<span class="gu">@@ -229,7 +483,12 @@ class GenerateSchema:</span>
+<span class="w"> </span>            field_info: The FieldInfo instance to which the alias_generator is (maybe) applied.
+<span class="w"> </span>            field_name: The name of the field from which to generate the alias.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if field_info.alias is None and field_info.validation_alias is None and field_info.serialization_alias is None:</span>
+<span class="gi">+            if isinstance(alias_generator, AliasGenerator):</span>
+<span class="gi">+                field_info.validation_alias = alias_generator.validation_alias(field_name)</span>
+<span class="gi">+                field_info.serialization_alias = alias_generator.serialization_alias(field_name)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                field_info.alias = alias_generator(field_name)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _apply_alias_generator_to_computed_field_info(alias_generator: Callable[[str], str] | AliasGenerator, computed_field_info: ComputedFieldInfo, computed_field_name: str):
+<span class="gu">@@ -240,7 +499,11 @@ class GenerateSchema:</span>
+<span class="w"> </span>            computed_field_info: The ComputedFieldInfo instance to which the alias_generator is (maybe) applied.
+<span class="w"> </span>            computed_field_name: The name of the computed field from which to generate the alias.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if computed_field_info.alias is None:</span>
+<span class="gi">+            if isinstance(alias_generator, AliasGenerator):</span>
+<span class="gi">+                computed_field_info.alias = alias_generator.serialization_alias(computed_field_name)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                computed_field_info.alias = alias_generator(computed_field_name)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _apply_field_title_generator_to_field_info(config_wrapper: ConfigWrapper, field_info: FieldInfo | ComputedFieldInfo, field_name: str) -&gt; None:
+<span class="gu">@@ -250,15 +513,36 @@ class GenerateSchema:</span>
+<span class="w"> </span>            field_info: The FieldInfo or ComputedField instance to which the title_generator is (maybe) applied.
+<span class="w"> </span>            field_name: The name of the field from which to generate the title.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if field_info.title is None and config_wrapper.field_title_generator is not None:</span>
+<span class="gi">+            field_info.title = config_wrapper.field_title_generator(field_name, field_info)</span>
+
+<span class="w"> </span>    def _union_schema(self, union_type: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Union.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(union_type)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        schemas = []</span>
+<span class="gi">+        for arg in args:</span>
+<span class="gi">+            schema = self.generate_schema(arg)</span>
+<span class="gi">+            schemas.append(schema)</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.union_schema(schemas)</span>
+
+<span class="w"> </span>    def _literal_schema(self, literal_type: Any) -&gt; CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Literal.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(literal_type)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        values = []</span>
+<span class="gi">+        for arg in args:</span>
+<span class="gi">+            if isinstance(arg, Literal):</span>
+<span class="gi">+                values.extend(get_args(arg))</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                values.append(arg)</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.literal_schema(values)</span>
+
+<span class="w"> </span>    def _typed_dict_schema(self, typed_dict_cls: Any, origin: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a TypedDict.
+<span class="gu">@@ -276,50 +560,151 @@ class GenerateSchema:</span>
+<span class="w"> </span>        Hence to avoid creating validators that do not do what users expect we only
+<span class="w"> </span>        support typing.TypedDict on Python &gt;= 3.12 or typing_extension.TypedDict on all versions
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not _SUPPORTS_TYPEDDICT and origin.__module__ == &#39;typing&#39;:</span>
+<span class="gi">+            raise PydanticUserError(</span>
+<span class="gi">+                &#39;Please use `typing_extensions.TypedDict` instead of `typing.TypedDict` on Python &lt; 3.12.&#39;,</span>
+<span class="gi">+                code=&#39;typing-typeddict&#39;,</span>
+<span class="gi">+            )</span>
+<span class="gi">+</span>
+<span class="gi">+        fields = {}</span>
+<span class="gi">+        for field_name, field_type in typed_dict_cls.__annotations__.items():</span>
+<span class="gi">+            field_schema = self.generate_schema(field_type)</span>
+<span class="gi">+            fields[field_name] = field_schema</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.typed_dict_schema(</span>
+<span class="gi">+            fields,</span>
+<span class="gi">+            required_keys=getattr(typed_dict_cls, &#39;__required_keys__&#39;, set()),</span>
+<span class="gi">+            total=getattr(typed_dict_cls, &#39;__total__&#39;, True),</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def _namedtuple_schema(self, namedtuple_cls: Any, origin: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a NamedTuple.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        fields = {}</span>
+<span class="gi">+        for field_name, field_type in namedtuple_cls.__annotations__.items():</span>
+<span class="gi">+            field_schema = self.generate_schema(field_type)</span>
+<span class="gi">+            fields[field_name] = field_schema</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.namedtuple_schema(</span>
+<span class="gi">+            namedtuple_cls,</span>
+<span class="gi">+            fields,</span>
+<span class="gi">+            defaults=namedtuple_cls._field_defaults,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def _generate_parameter_schema(self, name: str, annotation: type[Any], default: Any=Parameter.empty, mode: Literal[&#39;positional_only&#39;, &#39;positional_or_keyword&#39;, &#39;keyword_only&#39;] | None=None) -&gt; core_schema.ArgumentsParameter:
+<span class="w"> </span>        &quot;&quot;&quot;Prepare a ArgumentsParameter to represent a field in a namedtuple or function signature.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        schema = self.generate_schema(annotation)</span>
+<span class="gi">+        return core_schema.arguments_parameter(</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            schema=schema,</span>
+<span class="gi">+            mode=mode or &#39;positional_or_keyword&#39;,</span>
+<span class="gi">+            default=default if default is not Parameter.empty else PydanticUndefined,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def _tuple_schema(self, tuple_type: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Tuple, e.g. `tuple[int, str]` or `tuple[int, ...]`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(tuple_type)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.tuple_variable_schema(core_schema.any_schema())</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(args) == 2 and args[1] is ...:</span>
+<span class="gi">+            # Handle tuple[int, ...] case</span>
+<span class="gi">+            item_schema = self.generate_schema(args[0])</span>
+<span class="gi">+            return core_schema.tuple_variable_schema(item_schema)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle tuple[int, str] case</span>
+<span class="gi">+        item_schemas = []</span>
+<span class="gi">+        for arg in args:</span>
+<span class="gi">+            schema = self.generate_schema(arg)</span>
+<span class="gi">+            item_schemas.append(schema)</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.tuple_positional_schema(item_schemas)</span>
+
+<span class="w"> </span>    def _union_is_subclass_schema(self, union_type: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for `Type[Union[X, ...]]`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(union_type)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        schemas = []</span>
+<span class="gi">+        for arg in args:</span>
+<span class="gi">+            schema = self.generate_schema(arg)</span>
+<span class="gi">+            schemas.append(schema)</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.union_schema(schemas)</span>
+
+<span class="w"> </span>    def _subclass_schema(self, type_: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Type, e.g. `Type[int]`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(type_)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        schema = self.generate_schema(args[0])</span>
+<span class="gi">+        return core_schema.is_subclass_schema(schema)</span>
+
+<span class="w"> </span>    def _sequence_schema(self, sequence_type: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Sequence, e.g. `Sequence[int]`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(sequence_type)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.list_schema(core_schema.any_schema())</span>
+<span class="gi">+</span>
+<span class="gi">+        item_schema = self.generate_schema(args[0])</span>
+<span class="gi">+        return core_schema.list_schema(item_schema)</span>
+
+<span class="w"> </span>    def _iterable_schema(self, type_: Any) -&gt; core_schema.GeneratorSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate a schema for an `Iterable`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(type_)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.generator_schema(core_schema.any_schema())</span>
+<span class="gi">+</span>
+<span class="gi">+        item_schema = self.generate_schema(args[0])</span>
+<span class="gi">+        return core_schema.generator_schema(item_schema)</span>
+
+<span class="w"> </span>    def _dataclass_schema(self, dataclass: type[StandardDataclass], origin: type[StandardDataclass] | None) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a dataclass.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        fields = {}</span>
+<span class="gi">+        for field_name, field_info in dataclass.__dataclass_fields__.items():</span>
+<span class="gi">+            field_schema = self.generate_schema(field_info.type)</span>
+<span class="gi">+            fields[field_name] = field_schema</span>
+<span class="gi">+</span>
+<span class="gi">+        return core_schema.dataclass_schema(</span>
+<span class="gi">+            dataclass,</span>
+<span class="gi">+            fields,</span>
+<span class="gi">+            config=self._config_wrapper_stack.get().config_dict,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def _callable_schema(self, function: Callable[..., Any]) -&gt; core_schema.CallSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for a Callable.
+
+<span class="w"> </span>        TODO support functional validators once we support them in Config
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(function)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.call_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        parameters = []</span>
+<span class="gi">+        for arg in args[:-1]:  # Last arg is return type</span>
+<span class="gi">+            param_schema = self.generate_schema(arg)</span>
+<span class="gi">+            parameters.append(param_schema)</span>
+<span class="gi">+</span>
+<span class="gi">+        return_schema = self.generate_schema(args[-1])</span>
+<span class="gi">+        return core_schema.call_schema(parameters=parameters, return_schema=return_schema)</span>
+
+<span class="w"> </span>    def _annotated_schema(self, annotated_type: Any) -&gt; core_schema.CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Generate schema for an Annotated type, e.g. `Annotated[int, Field(...)]` or `Annotated[int, Gt(0)]`.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        args = get_args(annotated_type)</span>
+<span class="gi">+        if not args:</span>
+<span class="gi">+            return core_schema.any_schema()</span>
+<span class="gi">+</span>
+<span class="gi">+        base_schema = self.generate_schema(args[0])</span>
+<span class="gi">+        metadata = args[1:]</span>
+<span class="gi">+</span>
+<span class="gi">+        for meta in metadata:</span>
+<span class="gi">+            if hasattr(meta, &#39;__get_pydantic_core_schema__&#39;):</span>
+<span class="gi">+                base_schema = meta.__get_pydantic_core_schema__(base_schema, self)</span>
+<span class="gi">+            elif hasattr(meta, &#39;__pydantic_core_schema__&#39;):</span>
+<span class="gi">+                base_schema = meta.__pydantic_core_schema__</span>
+<span class="gi">+</span>
+<span class="gi">+        return base_schema</span>
+
+<span class="w"> </span>    def _apply_annotations(self, source_type: Any, annotations: list[Any], transform_inner_schema: Callable[[CoreSchema], CoreSchema]=lambda x: x) -&gt; CoreSchema:
+<span class="w"> </span>        &quot;&quot;&quot;Apply arguments from `Annotated` or from `FieldInfo` to a schema.
+<span class="gh">diff --git a/pydantic/_internal/_typing_extra.py b/pydantic/_internal/_typing_extra.py</span>
+<span class="gh">index 965ece1cf..265fdcd3c 100644</span>
+<span class="gd">--- a/pydantic/_internal/_typing_extra.py</span>
+<span class="gi">+++ b/pydantic/_internal/_typing_extra.py</span>
+<span class="gu">@@ -49,13 +49,27 @@ def all_literal_values(type_: type[Any]) -&gt; list[Any]:</span>
+<span class="w"> </span>    Literal can be used recursively (see https://www.python.org/dev/peps/pep-0586)
+<span class="w"> </span>    e.g. `Literal[Literal[Literal[1, 2, 3], &quot;foo&quot;], 5, None]`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if get_origin(type_) in LITERAL_TYPES:</span>
+<span class="gi">+        values = []</span>
+<span class="gi">+        for arg in get_args(type_):</span>
+<span class="gi">+            if get_origin(arg) in LITERAL_TYPES:</span>
+<span class="gi">+                values.extend(all_literal_values(arg))</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                values.append(arg)</span>
+<span class="gi">+        return values</span>
+<span class="gi">+    return []</span>
+
+<span class="w"> </span>def is_namedtuple(type_: type[Any]) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if a given class is a named tuple.
+<span class="w"> </span>    It can be either a `typing.NamedTuple` or `collections.namedtuple`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        isinstance(type_, type)</span>
+<span class="gi">+        and issubclass(type_, tuple)</span>
+<span class="gi">+        and hasattr(type_, &#39;_fields&#39;)</span>
+<span class="gi">+        and isinstance(type_._fields, tuple)</span>
+<span class="gi">+        and all(isinstance(field, str) for field in type_._fields)</span>
+<span class="gi">+    )</span>
+<span class="w"> </span>test_new_type = typing.NewType(&#39;test_new_type&#39;, str)
+
+<span class="w"> </span>def is_new_type(type_: type[Any]) -&gt; bool:
+<span class="gu">@@ -63,11 +77,11 @@ def is_new_type(type_: type[Any]) -&gt; bool:</span>
+
+<span class="w"> </span>    Can&#39;t use isinstance because it fails &lt;3.10.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return hasattr(type_, &#39;__supertype__&#39;) and type_.__module__ == &#39;typing&#39;</span>
+
+<span class="w"> </span>def _check_finalvar(v: type[Any] | None) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if a given type is a `typing.Final` type.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return v is not None and get_origin(v) is Final</span>
+
+<span class="w"> </span>def parent_frame_namespace(*, parent_depth: int=2) -&gt; dict[str, Any] | None:
+<span class="w"> </span>    &quot;&quot;&quot;We allow use of items in parent namespace to get around the issue with `get_type_hints` only looking in the
+<span class="gu">@@ -81,18 +95,40 @@ def parent_frame_namespace(*, parent_depth: int=2) -&gt; dict[str, Any] | None:</span>
+<span class="w"> </span>    dict of exactly what&#39;s in scope. Using `f_back` would work sometimes but would be very wrong and confusing in many
+<span class="w"> </span>    other cases. See https://discuss.python.org/t/is-there-a-way-to-access-parent-nested-namespaces/20659.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    import inspect</span>
+<span class="gi">+    frame = inspect.currentframe()</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        for _ in range(parent_depth):</span>
+<span class="gi">+            if frame is None:</span>
+<span class="gi">+                return None</span>
+<span class="gi">+            frame = frame.f_back</span>
+<span class="gi">+        if frame is None:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        return frame.f_locals</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        del frame  # Avoid reference cycles</span>
+
+<span class="w"> </span>def get_cls_type_hints_lenient(obj: Any, globalns: dict[str, Any] | None=None) -&gt; dict[str, Any]:
+<span class="w"> </span>    &quot;&quot;&quot;Collect annotations from a class, including those from parent classes.
+
+<span class="w"> </span>    Unlike `typing.get_type_hints`, this function will not error if a forward reference is not resolvable.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    hints: dict[str, Any] = {}</span>
+<span class="gi">+    for base in reversed(getattr(obj, &#39;__mro__&#39;, [obj])):</span>
+<span class="gi">+        base_hints = getattr(base, &#39;__annotations__&#39;, {})</span>
+<span class="gi">+        for name, value in base_hints.items():</span>
+<span class="gi">+            if isinstance(value, str):</span>
+<span class="gi">+                hints[name] = eval_type_lenient(value, globalns=globalns)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                hints[name] = value</span>
+<span class="gi">+    return hints</span>
+
+<span class="w"> </span>def eval_type_lenient(value: Any, globalns: dict[str, Any] | None=None, localns: dict[str, Any] | None=None) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;Behaves like typing._eval_type, except it won&#39;t raise an error if a forward reference can&#39;t be resolved.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return eval_type_backport(value, globalns=globalns, localns=localns)</span>
+<span class="gi">+    except (NameError, AttributeError):</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>def eval_type_backport(value: Any, globalns: dict[str, Any] | None=None, localns: dict[str, Any] | None=None, type_params: tuple[Any] | None=None) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;Like `typing._eval_type`, but falls back to the `eval_type_backport` package if it&#39;s
+<span class="gu">@@ -101,13 +137,60 @@ def eval_type_backport(value: Any, globalns: dict[str, Any] | None=None, localns</span>
+<span class="w"> </span>    and `list[X]` into `typing.List[X]` etc. (for all the types made generic in PEP 585)
+<span class="w"> </span>    if the original syntax is not supported in the current Python version.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        from eval_type_backport import eval_type</span>
+<span class="gi">+        return eval_type(value, globalns=globalns, localns=localns, type_params=type_params)</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        # If eval_type_backport is not installed, fall back to typing._eval_type</span>
+<span class="gi">+        if type_params is not None:</span>
+<span class="gi">+            raise TypeError(&quot;type_params is only supported with eval_type_backport&quot;)</span>
+<span class="gi">+        if isinstance(value, str):</span>
+<span class="gi">+            if globalns is None and localns is None:</span>
+<span class="gi">+                globalns = sys.modules[__name__].__dict__</span>
+<span class="gi">+            localns = localns or {}</span>
+<span class="gi">+            return typing._eval_type(value, globalns, localns)</span>
+<span class="gi">+        return value</span>
+
+<span class="w"> </span>def get_function_type_hints(function: Callable[..., Any], *, include_keys: set[str] | None=None, types_namespace: dict[str, Any] | None=None) -&gt; dict[str, Any]:
+<span class="w"> </span>    &quot;&quot;&quot;Like `typing.get_type_hints`, but doesn&#39;t convert `X` to `Optional[X]` if the default value is `None`, also
+<span class="w"> </span>    copes with `partial`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(function, partial):</span>
+<span class="gi">+        # Get the type hints from the original function</span>
+<span class="gi">+        hints = get_function_type_hints(function.func, include_keys=include_keys, types_namespace=types_namespace)</span>
+<span class="gi">+        # Remove hints for arguments that are already bound</span>
+<span class="gi">+        if function.keywords:</span>
+<span class="gi">+            hints = {k: v for k, v in hints.items() if k not in function.keywords}</span>
+<span class="gi">+        if function.args:</span>
+<span class="gi">+            # Remove hints for positional arguments that are already bound</span>
+<span class="gi">+            sig = inspect.signature(function.func)</span>
+<span class="gi">+            pos_params = [p.name for p in sig.parameters.values() if p.kind in (p.POSITIONAL_ONLY, p.POSITIONAL_OR_KEYWORD)]</span>
+<span class="gi">+            for i in range(len(function.args)):</span>
+<span class="gi">+                if i &lt; len(pos_params):</span>
+<span class="gi">+                    hints.pop(pos_params[i], None)</span>
+<span class="gi">+        return hints</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the function&#39;s annotations</span>
+<span class="gi">+    annotations = getattr(function, &#39;__annotations__&#39;, {})</span>
+<span class="gi">+    if not annotations:</span>
+<span class="gi">+        return {}</span>
+<span class="gi">+</span>
+<span class="gi">+    # If include_keys is provided, only include those keys</span>
+<span class="gi">+    if include_keys is not None:</span>
+<span class="gi">+        annotations = {k: v for k, v in annotations.items() if k in include_keys}</span>
+<span class="gi">+</span>
+<span class="gi">+    # Evaluate any string annotations</span>
+<span class="gi">+    hints = {}</span>
+<span class="gi">+    for name, value in annotations.items():</span>
+<span class="gi">+        if isinstance(value, str):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                hints[name] = eval_type_lenient(value, globalns=types_namespace)</span>
+<span class="gi">+            except (NameError, SyntaxError):</span>
+<span class="gi">+                hints[name] = value</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            hints[name] = value</span>
+<span class="gi">+</span>
+<span class="gi">+    return hints</span>
+<span class="w"> </span>if sys.version_info &lt; (3, 9, 8) or (3, 10) &lt;= sys.version_info &lt; (3, 10, 1):
+
+<span class="w"> </span>    def _make_forward_ref(arg: Any, is_argument: bool=True, *, is_class: bool=False) -&gt; typing.ForwardRef:
+<span class="gu">@@ -122,7 +205,7 @@ if sys.version_info &lt; (3, 9, 8) or (3, 10) &lt;= sys.version_info &lt; (3, 10, 1):</span>
+
+<span class="w"> </span>        Implemented as EAFP with memory.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return typing.ForwardRef(arg, is_argument=is_argument)</span>
+<span class="w"> </span>else:
+<span class="w"> </span>    _make_forward_ref = typing.ForwardRef
+<span class="w"> </span>if sys.version_info &gt;= (3, 10):
+<span class="gu">@@ -173,9 +256,60 @@ else:</span>
+<span class="w"> </span>        - If two dict arguments are passed, they specify globals and
+<span class="w"> </span>          locals, respectively.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if hasattr(typing, &#39;get_type_hints&#39;):</span>
+<span class="gi">+            # Use the built-in get_type_hints if available</span>
+<span class="gi">+            return typing.get_type_hints(obj, globalns=globalns, localns=localns, include_extras=include_extras)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Get annotations</span>
+<span class="gi">+        annotations = getattr(obj, &#39;__annotations__&#39;, {})</span>
+<span class="gi">+        if not annotations:</span>
+<span class="gi">+            return {}</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle module-level annotations</span>
+<span class="gi">+        if isinstance(obj, type(sys)):</span>
+<span class="gi">+            if globalns is None:</span>
+<span class="gi">+                globalns = obj.__dict__</span>
+<span class="gi">+            if localns is None:</span>
+<span class="gi">+                localns = globalns</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # Get globals and locals for classes and functions</span>
+<span class="gi">+            if globalns is None:</span>
+<span class="gi">+                if isinstance(obj, type):</span>
+<span class="gi">+                    globalns = sys.modules[obj.__module__].__dict__</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    globalns = getattr(obj, &#39;__globals__&#39;, {})</span>
+<span class="gi">+            if localns is None:</span>
+<span class="gi">+                localns = globalns</span>
+<span class="gi">+</span>
+<span class="gi">+        # Evaluate string annotations</span>
+<span class="gi">+        hints = {}</span>
+<span class="gi">+        for name, value in annotations.items():</span>
+<span class="gi">+            if isinstance(value, str):</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    value = eval_type_lenient(value, globalns=globalns, localns=localns)</span>
+<span class="gi">+                except (NameError, SyntaxError):</span>
+<span class="gi">+                    value = _make_forward_ref(value)</span>
+<span class="gi">+            hints[name] = value</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle Optional types for attributes with None default values</span>
+<span class="gi">+        if isinstance(obj, type):</span>
+<span class="gi">+            for base in reversed(obj.__mro__[1:]):</span>
+<span class="gi">+                base_hints = get_type_hints(base, globalns=globalns, localns=localns, include_extras=include_extras)</span>
+<span class="gi">+                hints.update(base_hints)</span>
+<span class="gi">+</span>
+<span class="gi">+        return hints</span>
+<span class="w"> </span>if sys.version_info &gt;= (3, 10):
+<span class="gi">+    from typing import Self as _Self</span>
+<span class="gi">+else:</span>
+<span class="gi">+    from typing_extensions import Self as _Self</span>
+<span class="gi">+</span>
+<span class="gi">+def is_generic_alias(type_: Any) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;Check if a type is a generic alias (e.g., list[int], tuple[str, ...], etc.)&quot;&quot;&quot;</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        isinstance(type_, (typing._GenericAlias, types.GenericAlias))</span>
+<span class="gi">+        or (sys.version_info &gt;= (3, 9) and isinstance(type_, typing._SpecialGenericAlias))</span>
+<span class="gi">+    )</span>
+
+<span class="w"> </span>def is_self_type(tp: Any) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if a given class is a Self type (from `typing` or `typing_extensions`)&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    return tp is _Self</span>
+\ No newline at end of file
+<span class="gh">diff --git a/pydantic/_migration.py b/pydantic/_migration.py</span>
+<span class="gh">index 96b29f4a8..fcff7d682 100644</span>
+<span class="gd">--- a/pydantic/_migration.py</span>
+<span class="gi">+++ b/pydantic/_migration.py</span>
+<span class="gu">@@ -16,4 +16,42 @@ def getattr_migration(module: str) -&gt; Callable[[str], Any]:</span>
+<span class="w"> </span>    Returns:
+<span class="w"> </span>        A callable that will raise an error if the object is not found.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    def __getattr__(name: str) -&gt; Any:</span>
+<span class="gi">+        from importlib import import_module</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check if the attribute exists in the module&#39;s globals</span>
+<span class="gi">+        module_globals = sys.modules[module].__dict__</span>
+<span class="gi">+        if name in module_globals:</span>
+<span class="gi">+            return module_globals[name]</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check if it&#39;s a moved attribute</span>
+<span class="gi">+        full_name = f&quot;{module}:{name}&quot;</span>
+<span class="gi">+        if full_name in MOVED_IN_V2:</span>
+<span class="gi">+            new_location = MOVED_IN_V2[full_name]</span>
+<span class="gi">+            new_module, new_name = new_location.split(&#39;:&#39;)</span>
+<span class="gi">+            return getattr(import_module(new_module), new_name)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check if it&#39;s a deprecated but moved attribute</span>
+<span class="gi">+        if full_name in DEPRECATED_MOVED_IN_V2:</span>
+<span class="gi">+            new_location = DEPRECATED_MOVED_IN_V2[full_name]</span>
+<span class="gi">+            new_module, new_name = new_location.split(&#39;:&#39;)</span>
+<span class="gi">+            return getattr(import_module(new_module), new_name)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check if it&#39;s redirected to V1</span>
+<span class="gi">+        if full_name in REDIRECT_TO_V1:</span>
+<span class="gi">+            new_location = REDIRECT_TO_V1[full_name]</span>
+<span class="gi">+            new_module, new_name = new_location.split(&#39;:&#39;)</span>
+<span class="gi">+            return getattr(import_module(new_module), new_name)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check if it&#39;s a removed attribute</span>
+<span class="gi">+        if full_name in REMOVED_IN_V2:</span>
+<span class="gi">+            raise PydanticImportError(f&quot;`{full_name}` has been removed in V2.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Special case for BaseSettings</span>
+<span class="gi">+        if name == &#39;BaseSettings&#39;:</span>
+<span class="gi">+            raise PydanticImportError(&quot;`BaseSettings` has been moved to the `pydantic-settings` package. &quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        # If not found anywhere, raise AttributeError</span>
+<span class="gi">+        raise AttributeError(f&quot;module &#39;{module}&#39; has no attribute &#39;{name}&#39;&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return __getattr__</span>
+\ No newline at end of file
+<span class="gh">diff --git a/pydantic/errors.py b/pydantic/errors.py</span>
+<span class="gh">index f2fe369d2..4e2e4f3e3 100644</span>
+<span class="gd">--- a/pydantic/errors.py</span>
+<span class="gi">+++ b/pydantic/errors.py</span>
+<span class="gu">@@ -51,7 +51,8 @@ class PydanticUndefinedAnnotation(PydanticErrorMixin, NameError):</span>
+<span class="w"> </span>        Returns:
+<span class="w"> </span>            Converted `PydanticUndefinedAnnotation` error.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        name = str(name_error).split(&quot;&#39;&quot;)[1] if &quot;&#39;&quot; in str(name_error) else str(name_error)</span>
+<span class="gi">+        return cls(name=name, message=str(name_error))</span>
+
+<span class="w"> </span>class PydanticImportError(PydanticErrorMixin, ImportError):
+<span class="w"> </span>    &quot;&quot;&quot;An error raised when an import fails due to module changes between V1 and V2.
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

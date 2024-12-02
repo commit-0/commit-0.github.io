@@ -1,0 +1,1061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands python prompt toolkit - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-python-prompt-toolkit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands python prompt toolkit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_invert" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_invert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_or" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_or
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_and" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_and
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_nested_and" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_nested_and
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_nested_or" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_nested_or
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_to_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_to_filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_filter_cache_regression_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_filter_cache_regression_1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_filter_cache_regression_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_filter_cache_regression_2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filterpytest_filter_remove_duplicates" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_filter.py::test_filter_remove_duplicates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-python-prompt-toolkit"><strong>OpenHands</strong>: python-prompt-toolkit</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_filterpytest_invert">test_filter.py::test_invert</h3>
+<details><summary> <pre>test_filter.py::test_invert</pre></summary><pre>
+def test_invert():
+        assert not (~Always())()
+        assert ~Never()()
+
+>       c = ~Condition(lambda: False)
+E       TypeError: bad operand type for unary ~: 'Condition'
+
+tests/test_filter.py:21: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_or">test_filter.py::test_or</h3>
+<details><summary> <pre>test_filter.py::test_or</pre></summary><pre>
+def test_or():
+        for a in (True, False):
+            for b in (True, False):
+                c1 = Condition(lambda: a)
+                c2 = Condition(lambda: b)
+>               c3 = c1 | c2
+E               TypeError: unsupported operand type(s) for |: 'Condition' and 'Condition'
+
+tests/test_filter.py:30: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_and">test_filter.py::test_and</h3>
+<details><summary> <pre>test_filter.py::test_and</pre></summary><pre>
+def test_and():
+        for a in (True, False):
+            for b in (True, False):
+                c1 = Condition(lambda: a)
+                c2 = Condition(lambda: b)
+>               c3 = c1 & c2
+E               TypeError: unsupported operand type(s) for &: 'Condition' and 'Condition'
+
+tests/test_filter.py:41: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_nested_and">test_filter.py::test_nested_and</h3>
+<details><summary> <pre>test_filter.py::test_nested_and</pre></summary><pre>
+def test_nested_and():
+        for a in (True, False):
+            for b in (True, False):
+                for c in (True, False):
+                    c1 = Condition(lambda: a)
+                    c2 = Condition(lambda: b)
+                    c3 = Condition(lambda: c)
+>                   c4 = (c1 & c2) & c3
+E                   TypeError: unsupported operand type(s) for &: 'Condition' and 'Condition'
+
+tests/test_filter.py:54: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_nested_or">test_filter.py::test_nested_or</h3>
+<details><summary> <pre>test_filter.py::test_nested_or</pre></summary><pre>
+def test_nested_or():
+        for a in (True, False):
+            for b in (True, False):
+                for c in (True, False):
+                    c1 = Condition(lambda: a)
+                    c2 = Condition(lambda: b)
+                    c3 = Condition(lambda: c)
+>                   c4 = (c1 | c2) | c3
+E                   TypeError: unsupported operand type(s) for |: 'Condition' and 'Condition'
+
+tests/test_filter.py:67: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_to_filter">test_filter.py::test_to_filter</h3>
+<details><summary> <pre>test_filter.py::test_to_filter</pre></summary><pre>
+def test_to_filter():
+        f1 = to_filter(True)
+        f2 = to_filter(False)
+        f3 = to_filter(Condition(lambda: True))
+        f4 = to_filter(Condition(lambda: False))
+
+>       assert isinstance(f1, Filter)
+E       assert False
+E        +  where False = isinstance(None, Filter)
+
+tests/test_filter.py:79: AssertionError
+</pre>
+</details>
+<h3 id="test_filterpytest_filter_cache_regression_1">test_filter.py::test_filter_cache_regression_1</h3>
+<details><summary> <pre>test_filter.py::test_filter_cache_regression_1</pre></summary><pre>
+def test_filter_cache_regression_1():
+        # See: https://github.com/prompt-toolkit/python-prompt-toolkit/issues/1729
+
+        cond = Condition(lambda: True)
+
+        # The use of a `WeakValueDictionary` caused this following expression to
+        # fail. The problem is that the nested `(a & a)` expression gets garbage
+        # collected between the two statements and is removed from our cache.
+>       x = (cond & cond) & cond
+E       TypeError: unsupported operand type(s) for &: 'Condition' and 'Condition'
+
+tests/test_filter.py:100: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_filter_cache_regression_2">test_filter.py::test_filter_cache_regression_2</h3>
+<details><summary> <pre>test_filter.py::test_filter_cache_regression_2</pre></summary><pre>
+def test_filter_cache_regression_2():
+        cond1 = Condition(lambda: True)
+        cond2 = Condition(lambda: True)
+        cond3 = Condition(lambda: True)
+
+>       x = (cond1 & cond2) & cond3
+E       TypeError: unsupported operand type(s) for &: 'Condition' and 'Condition'
+
+tests/test_filter.py:110: TypeError
+</pre>
+</details>
+<h3 id="test_filterpytest_filter_remove_duplicates">test_filter.py::test_filter_remove_duplicates</h3>
+<details><summary> <pre>test_filter.py::test_filter_remove_duplicates</pre></summary><pre>
+def test_filter_remove_duplicates():
+        cond1 = Condition(lambda: True)
+        cond2 = Condition(lambda: True)
+
+        # When a condition is appended to itself using an `&` or `|` operator, it
+        # should not be present twice. Having it twice in the `_AndList` or
+        # `_OrList` will make them more expensive to evaluate.
+
+>       assert isinstance(cond1 & cond1, Condition)
+E       TypeError: unsupported operand type(s) for &: 'Condition' and 'Condition'
+
+tests/test_filter.py:123: TypeError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/prompt_toolkit/cache.py b/src/prompt_toolkit/cache.py</span>
+<span class="gh">index 9d5c8f21..4d27ea79 100644</span>
+<span class="gd">--- a/src/prompt_toolkit/cache.py</span>
+<span class="gi">+++ b/src/prompt_toolkit/cache.py</span>
+<span class="gu">@@ -26,11 +26,24 @@ class SimpleCache(Generic[_T, _U]):</span>
+<span class="w"> </span>        If not found, call `getter_func` to resolve it, and put that on the top
+<span class="w"> </span>        of the cache instead.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if key in self._data:</span>
+<span class="gi">+            return self._data[key]</span>
+<span class="gi">+</span>
+<span class="gi">+        result = getter_func()</span>
+<span class="gi">+        self._data[key] = result</span>
+<span class="gi">+        self._keys.append(key)</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(self._data) &gt; self.maxsize:</span>
+<span class="gi">+            key_to_remove = self._keys.popleft()</span>
+<span class="gi">+            if key_to_remove in self._data:</span>
+<span class="gi">+                del self._data[key_to_remove]</span>
+<span class="gi">+</span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def clear(self) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Clear cache.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._data.clear()</span>
+<span class="gi">+        self._keys.clear()</span>
+<span class="w"> </span>_K = TypeVar(&#39;_K&#39;, bound=Tuple[Hashable, ...])
+<span class="w"> </span>_V = TypeVar(&#39;_V&#39;)
+
+<span class="gu">@@ -68,4 +81,14 @@ def memoized(maxsize: int=1024) -&gt; Callable[[_F], _F]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Memoization decorator for immutable classes and pure functions.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    def decorator(function: _F) -&gt; _F:</span>
+<span class="gi">+        cache = SimpleCache(maxsize=maxsize)</span>
+<span class="gi">+</span>
+<span class="gi">+        @wraps(function)</span>
+<span class="gi">+        def wrapped(*args: Any, **kwargs: Any) -&gt; Any:</span>
+<span class="gi">+            key = (args, tuple(sorted(kwargs.items())))</span>
+<span class="gi">+            return cache.get(cast(Hashable, key), lambda: function(*args, **kwargs))</span>
+<span class="gi">+</span>
+<span class="gi">+        return cast(_F, wrapped)</span>
+<span class="gi">+</span>
+<span class="gi">+    return decorator</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/prompt_toolkit/filters/__init__.py b/src/prompt_toolkit/filters/__init__.py</span>
+<span class="gh">index 277f428e..c06fb7d4 100644</span>
+<span class="gd">--- a/src/prompt_toolkit/filters/__init__.py</span>
+<span class="gi">+++ b/src/prompt_toolkit/filters/__init__.py</span>
+<span class="gu">@@ -18,7 +18,16 @@ Filters can be chained using ``&amp;`` and ``|`` operations, and inverted using the</span>
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="w"> </span>from __future__ import annotations
+
+<span class="gd">-from .app import *</span>
+<span class="gi">+from .app import (</span>
+<span class="gi">+    has_arg, has_completions, completion_is_selected, has_focus, buffer_has_focus,</span>
+<span class="gi">+    has_selection, has_suggestion, has_validation_error, is_done, is_read_only,</span>
+<span class="gi">+    is_multiline, renderer_height_is_known, in_editing_mode, in_paste_mode,</span>
+<span class="gi">+    vi_mode, vi_navigation_mode, vi_insert_mode, vi_insert_multiple_mode,</span>
+<span class="gi">+    vi_replace_mode, vi_selection_mode, vi_waiting_for_text_object_mode,</span>
+<span class="gi">+    vi_digraph_mode, vi_recording_macro, emacs_mode, emacs_insert_mode,</span>
+<span class="gi">+    emacs_selection_mode, shift_selection_mode, is_searching,</span>
+<span class="gi">+    control_is_searchable, vi_search_direction_reversed</span>
+<span class="gi">+)</span>
+<span class="w"> </span>from .base import Always, Condition, Filter, FilterOrBool, Never
+<span class="w"> </span>from .cli import *
+<span class="w"> </span>from .utils import is_true, to_filter
+<span class="gh">diff --git a/src/prompt_toolkit/filters/app.py b/src/prompt_toolkit/filters/app.py</span>
+<span class="gh">index 4ffdf2cc..61261599 100644</span>
+<span class="gd">--- a/src/prompt_toolkit/filters/app.py</span>
+<span class="gi">+++ b/src/prompt_toolkit/filters/app.py</span>
+<span class="gu">@@ -6,7 +6,8 @@ from typing import TYPE_CHECKING, cast</span>
+<span class="w"> </span>from prompt_toolkit.application.current import get_app
+<span class="w"> </span>from prompt_toolkit.cache import memoized
+<span class="w"> </span>from prompt_toolkit.enums import EditingMode
+<span class="gd">-from .base import Condition</span>
+<span class="gi">+from prompt_toolkit.selection import SelectionType</span>
+<span class="gi">+from .base import Condition, Filter</span>
+<span class="w"> </span>if TYPE_CHECKING:
+<span class="w"> </span>    from prompt_toolkit.layout.layout import FocusableElement
+<span class="w"> </span>__all__ = [&#39;has_arg&#39;, &#39;has_completions&#39;, &#39;completion_is_selected&#39;, &#39;has_focus&#39;, &#39;buffer_has_focus&#39;, &#39;has_selection&#39;, &#39;has_suggestion&#39;, &#39;has_validation_error&#39;, &#39;is_done&#39;, &#39;is_read_only&#39;, &#39;is_multiline&#39;, &#39;renderer_height_is_known&#39;, &#39;in_editing_mode&#39;, &#39;in_paste_mode&#39;, &#39;vi_mode&#39;, &#39;vi_navigation_mode&#39;, &#39;vi_insert_mode&#39;, &#39;vi_insert_multiple_mode&#39;, &#39;vi_replace_mode&#39;, &#39;vi_selection_mode&#39;, &#39;vi_waiting_for_text_object_mode&#39;, &#39;vi_digraph_mode&#39;, &#39;vi_recording_macro&#39;, &#39;emacs_mode&#39;, &#39;emacs_insert_mode&#39;, &#39;emacs_selection_mode&#39;, &#39;shift_selection_mode&#39;, &#39;is_searching&#39;, &#39;control_is_searchable&#39;, &#39;vi_search_direction_reversed&#39;]
+<span class="gu">@@ -15,73 +16,78 @@ def has_focus(value: FocusableElement) -&gt; Condition:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Enable when this buffer has the focus.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    @Condition</span>
+<span class="gi">+    def has_focus() -&gt; bool:</span>
+<span class="gi">+        return get_app().layout.current_control == value</span>
+<span class="gi">+    return has_focus</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def buffer_has_focus() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Enabled when the currently focused control is a `BufferControl`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from prompt_toolkit.layout.controls import BufferControl</span>
+<span class="gi">+    return isinstance(get_app().layout.current_control, BufferControl)</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def has_selection() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Enable when the current buffer has a selection.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return bool(get_app().current_buffer.selection_state)</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def has_suggestion() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Enable when the current buffer has a suggestion.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return bool(get_app().current_buffer.suggestion)</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def has_completions() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Enable when the current buffer has completions.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return bool(get_app().current_buffer.complete_state)</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def completion_is_selected() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    True when the user selected a completion.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    complete_state = get_app().current_buffer.complete_state</span>
+<span class="gi">+    return bool(complete_state and complete_state.current_completion)</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def is_read_only() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    True when the current buffer is read only.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().current_buffer.read_only()</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def is_multiline() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    True when the current buffer has been marked as multiline.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().current_buffer.multiline</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def has_validation_error() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Current buffer has validation error.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return bool(get_app().current_buffer.validation_error)</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def has_arg() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Enable when the input processor has an &#39;arg&#39;.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().key_processor.arg is not None</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def is_done() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    True when the CLI is returning, aborting or exiting.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().is_done</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def renderer_height_is_known() -&gt; bool:
+<span class="gu">@@ -94,43 +100,116 @@ def renderer_height_is_known() -&gt; bool:</span>
+<span class="w"> </span>    until we receive the height, in order to avoid flickering -- first drawing
+<span class="w"> </span>    somewhere in the middle, and then again at the bottom.)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().renderer.height_is_known</span>
+
+<span class="gd">-@memoized()</span>
+<span class="gd">-def in_editing_mode(editing_mode: EditingMode) -&gt; Condition:</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def in_paste_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When we are pasting text from the clipboard.&quot;&quot;&quot;</span>
+<span class="gi">+    return get_app().paste_mode</span>
+<span class="gi">+</span>
+<span class="gi">+def in_editing_mode(editing_mode: EditingMode) -&gt; Filter:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Check whether a given editing mode is active. (Vi or Emacs.)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    @Condition</span>
+<span class="gi">+    def in_editing_mode_filter() -&gt; bool:</span>
+<span class="gi">+        return get_app().editing_mode == editing_mode</span>
+<span class="gi">+    return in_editing_mode_filter</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def vi_navigation_mode() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Active when the set for Vi navigation key bindings are active.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.input_mode == &#39;navigation&#39;</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def vi_recording_macro() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;When recording a Vi macro.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.recording_register is not None</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def emacs_mode() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;When the Emacs bindings are active.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().editing_mode == EditingMode.EMACS</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def emacs_insert_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Emacs is in insert mode.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.EMACS and not bool(app.current_buffer.selection_state)</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def emacs_selection_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Emacs has a selection.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.EMACS and bool(app.current_buffer.selection_state)</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When the Vi bindings are active.&quot;&quot;&quot;</span>
+<span class="gi">+    return get_app().editing_mode == EditingMode.VI</span>
+<span class="gi">+</span>
+<span class="gi">+# Create an alias for vi_mode to avoid circular imports</span>
+<span class="gi">+vi_mode = vi_mode</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_insert_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Vi is in insert mode.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.input_mode == &#39;insert&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_insert_multiple_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Vi is in insert mode, entering multiple characters.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.input_mode == &#39;insert_multiple&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_replace_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Vi is in replace mode.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.input_mode == &#39;replace&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_selection_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Vi has a selection.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.operator_func is not None</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_waiting_for_text_object_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Vi is waiting for a text object.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.waiting_for_text_object</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def vi_digraph_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When Vi is in digraph mode.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return app.editing_mode == EditingMode.VI and app.vi_state.waiting_for_digraph</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def is_searching() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;When we are searching.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return get_app().current_search_state is not None</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def control_is_searchable() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;When the current UIControl is searchable.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from prompt_toolkit.layout.controls import BufferControl, SearchBufferControl</span>
+<span class="gi">+    control = get_app().layout.current_control</span>
+<span class="gi">+    return isinstance(control, (BufferControl, SearchBufferControl))</span>
+
+<span class="w"> </span>@Condition
+<span class="w"> </span>def vi_search_direction_reversed() -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;When the &#39;/&#39; and &#39;?&#39; key bindings for Vi-style searching have been reversed.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    return get_app().reverse_vi_search_direction()</span>
+<span class="gi">+</span>
+<span class="gi">+@Condition</span>
+<span class="gi">+def shift_selection_mode() -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;When shift has been pressed while selecting text.&quot;&quot;&quot;</span>
+<span class="gi">+    app = get_app()</span>
+<span class="gi">+    return bool(app.current_buffer.selection_state and app.current_buffer.selection_state.type == SelectionType.CHARACTERS)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/prompt_toolkit/filters/base.py b/src/prompt_toolkit/filters/base.py</span>
+<span class="gh">index 6ae2fa53..0700f24a 100644</span>
+<span class="gd">--- a/src/prompt_toolkit/filters/base.py</span>
+<span class="gi">+++ b/src/prompt_toolkit/filters/base.py</span>
+<span class="gu">@@ -1,6 +1,6 @@</span>
+<span class="w"> </span>from __future__ import annotations
+<span class="w"> </span>from abc import ABCMeta, abstractmethod
+<span class="gd">-from typing import Callable, Iterable, Union</span>
+<span class="gi">+from typing import Any, Callable, Iterable, Union</span>
+<span class="w"> </span>__all__ = [&#39;Filter&#39;, &#39;Never&#39;, &#39;Always&#39;, &#39;Condition&#39;, &#39;FilterOrBool&#39;]
+
+<span class="w"> </span>class Filter(metaclass=ABCMeta):
+<span class="gu">@@ -89,7 +89,13 @@ class _AndList(Filter):</span>
+<span class="w"> </span>        If there&#39;s only one unique filter in the given iterable, it will return
+<span class="w"> </span>        that one filter instead of an `_AndList`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        unique_filters = list(set(filters))</span>
+<span class="gi">+        if len(unique_filters) == 0:</span>
+<span class="gi">+            return Always()</span>
+<span class="gi">+        elif len(unique_filters) == 1:</span>
+<span class="gi">+            return unique_filters[0]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return cls(unique_filters)</span>
+
+<span class="w"> </span>    def __call__(self) -&gt; bool:
+<span class="w"> </span>        return all((f() for f in self.filters))
+<span class="gu">@@ -114,7 +120,13 @@ class _OrList(Filter):</span>
+<span class="w"> </span>        If there&#39;s only one unique filter in the given iterable, it will return
+<span class="w"> </span>        that one filter instead of an `_OrList`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        unique_filters = list(set(filters))</span>
+<span class="gi">+        if len(unique_filters) == 0:</span>
+<span class="gi">+            return Never()</span>
+<span class="gi">+        elif len(unique_filters) == 1:</span>
+<span class="gi">+            return unique_filters[0]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return cls(unique_filters)</span>
+
+<span class="w"> </span>    def __call__(self) -&gt; bool:
+<span class="w"> </span>        return any((f() for f in self.filters))
+<span class="gu">@@ -165,7 +177,7 @@ class Never(Filter):</span>
+<span class="w"> </span>    def __invert__(self) -&gt; Always:
+<span class="w"> </span>        return Always()
+
+<span class="gd">-class Condition(Filter):</span>
+<span class="gi">+class Condition:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Turn any callable into a Filter. The callable is supposed to not take any
+<span class="w"> </span>    arguments.
+<span class="gu">@@ -180,12 +192,23 @@ class Condition(Filter):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="w"> </span>    def __init__(self, func: Callable[[], bool]) -&gt; None:
+<span class="gd">-        super().__init__()</span>
+<span class="w"> </span>        self.func = func
+
+<span class="gd">-    def __call__(self) -&gt; bool:</span>
+<span class="gd">-        return self.func()</span>
+<span class="gi">+    def __call__(self, *args: Any, **kwargs: Any) -&gt; Filter:</span>
+<span class="gi">+        &quot;&quot;&quot;Create a new Filter instance from this callable.&quot;&quot;&quot;</span>
+<span class="gi">+        if args or kwargs:</span>
+<span class="gi">+            raise ValueError(&quot;Condition does not accept any arguments&quot;)</span>
+
+<span class="gd">-    def __repr__(self) -&gt; str:</span>
+<span class="gd">-        return &#39;Condition(%r)&#39; % self.func</span>
+<span class="gi">+        class _Condition(Filter):</span>
+<span class="gi">+            def __init__(self2) -&gt; None:</span>
+<span class="gi">+                super().__init__()</span>
+<span class="gi">+                self2.func = self.func</span>
+<span class="gi">+</span>
+<span class="gi">+            def __call__(self2) -&gt; bool:</span>
+<span class="gi">+                return self2.func()</span>
+<span class="gi">+</span>
+<span class="gi">+            def __repr__(self2) -&gt; str:</span>
+<span class="gi">+                return &#39;Condition(%r)&#39; % self2.func</span>
+<span class="gi">+</span>
+<span class="gi">+        return _Condition()</span>
+<span class="w"> </span>FilterOrBool = Union[Filter, bool]
+\ No newline at end of file
+<span class="gh">diff --git a/src/prompt_toolkit/filters/cli.py b/src/prompt_toolkit/filters/cli.py</span>
+<span class="gh">index 6791ad51..41b4b8fb 100644</span>
+<span class="gd">--- a/src/prompt_toolkit/filters/cli.py</span>
+<span class="gi">+++ b/src/prompt_toolkit/filters/cli.py</span>
+<span class="gu">@@ -3,7 +3,14 @@ For backwards-compatibility. keep this file.</span>
+<span class="w"> </span>(Many people are going to have key bindings that rely on this file.)
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="w"> </span>from __future__ import annotations
+<span class="gd">-from .app import *</span>
+<span class="gi">+from .app import (</span>
+<span class="gi">+    has_validation_error, has_arg, is_done, renderer_height_is_known,</span>
+<span class="gi">+    vi_navigation_mode, in_paste_mode, emacs_mode, emacs_insert_mode,</span>
+<span class="gi">+    vi_mode, is_searching, control_is_searchable, emacs_selection_mode,</span>
+<span class="gi">+    vi_digraph_mode, vi_waiting_for_text_object_mode, vi_selection_mode,</span>
+<span class="gi">+    vi_replace_mode, vi_insert_multiple_mode, vi_insert_mode, has_selection,</span>
+<span class="gi">+    has_completions, is_read_only, is_multiline, has_focus, in_editing_mode</span>
+<span class="gi">+)</span>
+<span class="w"> </span>__all__ = [&#39;HasArg&#39;, &#39;HasCompletions&#39;, &#39;HasFocus&#39;, &#39;HasSelection&#39;, &#39;HasValidationError&#39;, &#39;IsDone&#39;, &#39;IsReadOnly&#39;, &#39;IsMultiline&#39;, &#39;RendererHeightIsKnown&#39;, &#39;InEditingMode&#39;, &#39;InPasteMode&#39;, &#39;ViMode&#39;, &#39;ViNavigationMode&#39;, &#39;ViInsertMode&#39;, &#39;ViInsertMultipleMode&#39;, &#39;ViReplaceMode&#39;, &#39;ViSelectionMode&#39;, &#39;ViWaitingForTextObjectMode&#39;, &#39;ViDigraphMode&#39;, &#39;EmacsMode&#39;, &#39;EmacsInsertMode&#39;, &#39;EmacsSelectionMode&#39;, &#39;IsSearching&#39;, &#39;HasSearch&#39;, &#39;ControlIsSearchable&#39;]
+<span class="w"> </span>HasValidationError = lambda: has_validation_error
+<span class="w"> </span>HasArg = lambda: has_arg
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

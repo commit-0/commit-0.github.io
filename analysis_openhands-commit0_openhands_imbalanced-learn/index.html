@@ -1,0 +1,1222 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands imbalanced learn - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-imbalanced-learn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands imbalanced learn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-imbalanced-learn"><strong>OpenHands</strong>: imbalanced-learn</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/imblearn/pipeline.py b/imblearn/pipeline.py</span>
+<span class="gh">index 9bf26e5..f18c970 100644</span>
+<span class="gd">--- a/imblearn/pipeline.py</span>
+<span class="gi">+++ b/imblearn/pipeline.py</span>
+<span class="gu">@@ -129,6 +129,14 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    _parameter_constraints: dict = {&#39;steps&#39;: &#39;no_validation&#39;, &#39;memory&#39;: [None, str, HasMethods([&#39;cache&#39;])], &#39;verbose&#39;: [&#39;boolean&#39;]}
+
+<span class="gi">+    def _can_fit_transform(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Check if the pipeline can fit_transform.&quot;&quot;&quot;</span>
+<span class="gi">+        return hasattr(self.steps[-1][1], &quot;fit_transform&quot;) or (hasattr(self.steps[-1][1], &quot;fit&quot;) and hasattr(self.steps[-1][1], &quot;transform&quot;))</span>
+<span class="gi">+</span>
+<span class="gi">+    def _can_fit_resample(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Check if the pipeline can fit_resample.&quot;&quot;&quot;</span>
+<span class="gi">+        return hasattr(self.steps[-1][1], &quot;fit_resample&quot;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def _iter(self, with_final=True, filter_passthrough=True, filter_resample=True):
+<span class="w"> </span>        &quot;&quot;&quot;Generate (idx, (name, trans)) tuples from self.steps.
+
+<span class="gu">@@ -136,7 +144,11 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        transformers are filtered out. When `filter_resample` is `True`,
+<span class="w"> </span>        estimator with a method `fit_resample` are filtered out.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        stop = len(self.steps) if with_final else -1</span>
+<span class="gi">+        for idx, (name, trans) in enumerate(self.steps[:stop]):</span>
+<span class="gi">+            if not filter_passthrough or trans not in (&#39;passthrough&#39;, None):</span>
+<span class="gi">+                if not filter_resample or not hasattr(trans, &#39;fit_resample&#39;):</span>
+<span class="gi">+                    yield idx, (name, trans)</span>
+
+<span class="w"> </span>    @_fit_context(prefer_skip_nested_validation=False)
+<span class="w"> </span>    def fit(self, X, y=None, **params):
+<span class="gu">@@ -183,7 +195,46 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        self : Pipeline
+<span class="w"> </span>            This estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;fit&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.fit = self._check_method_params(method=&quot;fit&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        yt = y</span>
+<span class="gi">+        self._memory = check_memory(self.memory)</span>
+<span class="gi">+</span>
+<span class="gi">+        for step_idx, name, transformer in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transformer is None or transformer == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            if hasattr(transformer, &quot;fit_resample&quot;):</span>
+<span class="gi">+                cloned_transformer = clone(transformer)</span>
+<span class="gi">+                Xt, yt = cloned_transformer.fit_resample(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                    Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                transformer = cloned_transformer</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if hasattr(transformer, &quot;fit_transform&quot;):</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    Xt = cloned_transformer.fit_transform(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    cloned_transformer.fit(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                        Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+</span>
+<span class="gi">+            self.steps[step_idx] = (name, transformer)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self._final_estimator != &quot;passthrough&quot;:</span>
+<span class="gi">+            fit_params_last_step = routed_params.fit.get(self.steps[-1][0], {})</span>
+<span class="gi">+            self._final_estimator.fit(Xt, yt, **fit_params_last_step)</span>
+<span class="gi">+</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    @available_if(_can_fit_transform)
+<span class="w"> </span>    @_fit_context(prefer_skip_nested_validation=False)
+<span class="gu">@@ -230,7 +281,50 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        Xt : array-like of shape (n_samples, n_transformed_features)
+<span class="w"> </span>            Transformed samples.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;fit&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.fit = self._check_method_params(method=&quot;fit&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        yt = y</span>
+<span class="gi">+        self._memory = check_memory(self.memory)</span>
+<span class="gi">+</span>
+<span class="gi">+        for step_idx, name, transformer in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transformer is None or transformer == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            if hasattr(transformer, &quot;fit_resample&quot;):</span>
+<span class="gi">+                cloned_transformer = clone(transformer)</span>
+<span class="gi">+                Xt, yt = cloned_transformer.fit_resample(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                    Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                transformer = cloned_transformer</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if hasattr(transformer, &quot;fit_transform&quot;):</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    Xt = cloned_transformer.fit_transform(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    cloned_transformer.fit(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                        Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+</span>
+<span class="gi">+            self.steps[step_idx] = (name, transformer)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self._final_estimator == &quot;passthrough&quot;:</span>
+<span class="gi">+            return Xt</span>
+<span class="gi">+</span>
+<span class="gi">+        fit_params_last_step = routed_params.fit.get(self.steps[-1][0], {})</span>
+<span class="gi">+        if hasattr(self._final_estimator, &quot;fit_transform&quot;):</span>
+<span class="gi">+            return self._final_estimator.fit_transform(Xt, yt, **fit_params_last_step)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            self._final_estimator.fit(Xt, yt, **fit_params_last_step)</span>
+<span class="gi">+            return self._final_estimator.transform(Xt)</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;predict&#39;))
+<span class="w"> </span>    def predict(self, X, **params):
+<span class="gu">@@ -279,7 +373,22 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        y_pred : ndarray
+<span class="w"> </span>            Result of calling `predict` on the final estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;predict&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.predict = self._check_method_params(method=&quot;predict&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, name, transform in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+</span>
+<span class="gi">+        predict_params = routed_params.predict.get(self.steps[-1][0], {})</span>
+<span class="gi">+        return self.steps[-1][1].predict(Xt, **predict_params)</span>
+
+<span class="w"> </span>    @available_if(_can_fit_resample)
+<span class="w"> </span>    @_fit_context(prefer_skip_nested_validation=False)
+<span class="gu">@@ -329,7 +438,47 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        yt : array-like of shape (n_samples, n_transformed_features)
+<span class="w"> </span>            Transformed target.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;fit&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.fit = self._check_method_params(method=&quot;fit&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        yt = y</span>
+<span class="gi">+        self._memory = check_memory(self.memory)</span>
+<span class="gi">+</span>
+<span class="gi">+        for step_idx, name, transformer in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transformer is None or transformer == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            if hasattr(transformer, &quot;fit_resample&quot;):</span>
+<span class="gi">+                cloned_transformer = clone(transformer)</span>
+<span class="gi">+                Xt, yt = cloned_transformer.fit_resample(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                    Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                transformer = cloned_transformer</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if hasattr(transformer, &quot;fit_transform&quot;):</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    Xt = cloned_transformer.fit_transform(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    cloned_transformer.fit(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                        Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+</span>
+<span class="gi">+            self.steps[step_idx] = (name, transformer)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self._final_estimator == &quot;passthrough&quot;:</span>
+<span class="gi">+            return Xt, yt</span>
+<span class="gi">+</span>
+<span class="gi">+        fit_params_last_step = routed_params.fit.get(self.steps[-1][0], {})</span>
+<span class="gi">+        Xt, yt = self._final_estimator.fit_resample(Xt, yt, **fit_params_last_step)</span>
+<span class="gi">+        return Xt, yt</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;fit_predict&#39;))
+<span class="w"> </span>    @_fit_context(prefer_skip_nested_validation=False)
+<span class="gu">@@ -382,7 +531,43 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        y_pred : ndarray of shape (n_samples,)
+<span class="w"> </span>            The predicted target.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;fit&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.fit = self._check_method_params(method=&quot;fit&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        yt = y</span>
+<span class="gi">+        self._memory = check_memory(self.memory)</span>
+<span class="gi">+</span>
+<span class="gi">+        for step_idx, name, transformer in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transformer is None or transformer == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            if hasattr(transformer, &quot;fit_resample&quot;):</span>
+<span class="gi">+                cloned_transformer = clone(transformer)</span>
+<span class="gi">+                Xt, yt = cloned_transformer.fit_resample(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                    Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                transformer = cloned_transformer</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if hasattr(transformer, &quot;fit_transform&quot;):</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    Xt = cloned_transformer.fit_transform(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    cloned_transformer = clone(transformer)</span>
+<span class="gi">+                    cloned_transformer.fit(Xt, yt, **routed_params.fit.get(name, {}))</span>
+<span class="gi">+                    if hasattr(cloned_transformer, &quot;transform&quot;):</span>
+<span class="gi">+                        Xt = cloned_transformer.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+                    transformer = cloned_transformer</span>
+<span class="gi">+</span>
+<span class="gi">+            self.steps[step_idx] = (name, transformer)</span>
+<span class="gi">+</span>
+<span class="gi">+        fit_params_last_step = routed_params.fit.get(self.steps[-1][0], {})</span>
+<span class="gi">+        return self.steps[-1][1].fit_predict(Xt, yt, **fit_params_last_step)</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;predict_proba&#39;))
+<span class="w"> </span>    def predict_proba(self, X, **params):
+<span class="gu">@@ -426,7 +611,22 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        y_proba : ndarray of shape (n_samples, n_classes)
+<span class="w"> </span>            Result of calling `predict_proba` on the final estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;predict_proba&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.predict_proba = self._check_method_params(method=&quot;predict_proba&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, name, transform in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+</span>
+<span class="gi">+        predict_proba_params = routed_params.predict_proba.get(self.steps[-1][0], {})</span>
+<span class="gi">+        return self.steps[-1][1].predict_proba(Xt, **predict_proba_params)</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;decision_function&#39;))
+<span class="w"> </span>    def decision_function(self, X, **params):
+<span class="gu">@@ -458,7 +658,22 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        y_score : ndarray of shape (n_samples, n_classes)
+<span class="w"> </span>            Result of calling `decision_function` on the final estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;decision_function&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.decision_function = self._check_method_params(method=&quot;decision_function&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, name, transform in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+</span>
+<span class="gi">+        decision_function_params = routed_params.decision_function.get(self.steps[-1][0], {})</span>
+<span class="gi">+        return self.steps[-1][1].decision_function(Xt, **decision_function_params)</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;score_samples&#39;))
+<span class="w"> </span>    def score_samples(self, X):
+<span class="gu">@@ -480,7 +695,13 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        y_score : ndarray of shape (n_samples,)
+<span class="w"> </span>            Result of calling `score_samples` on the final estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, _, transform in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt)</span>
+<span class="gi">+        return self.steps[-1][1].score_samples(Xt)</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;predict_log_proba&#39;))
+<span class="w"> </span>    def predict_log_proba(self, X, **params):
+<span class="gu">@@ -524,7 +745,22 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        y_log_proba : ndarray of shape (n_samples, n_classes)
+<span class="w"> </span>            Result of calling `predict_log_proba` on the final estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;predict_log_proba&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.predict_log_proba = self._check_method_params(method=&quot;predict_log_proba&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, name, transform in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+</span>
+<span class="gi">+        predict_log_proba_params = routed_params.predict_log_proba.get(self.steps[-1][0], {})</span>
+<span class="gi">+        return self.steps[-1][1].predict_log_proba(Xt, **predict_log_proba_params)</span>
+
+<span class="w"> </span>    @available_if(_can_transform)
+<span class="w"> </span>    def transform(self, X, **params):
+<span class="gu">@@ -559,7 +795,19 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        Xt : ndarray of shape (n_samples, n_transformed_features)
+<span class="w"> </span>            Transformed data.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;transform&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, name, transform in self._iter(with_final=True, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+        return Xt</span>
+
+<span class="w"> </span>    @available_if(_can_inverse_transform)
+<span class="w"> </span>    def inverse_transform(self, Xt, **params):
+<span class="gu">@@ -591,7 +839,18 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>            Inverse transformed data, that is, data in the original feature
+<span class="w"> </span>            space.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;inverse_transform&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.inverse_transform = self._check_method_params(method=&quot;inverse_transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        for _, name, transform in reversed(list(self._iter(with_final=True, filter_passthrough=False))):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;inverse_transform&quot;):</span>
+<span class="gi">+                Xt = transform.inverse_transform(Xt, **routed_params.inverse_transform.get(name, {}))</span>
+<span class="gi">+        return Xt</span>
+
+<span class="w"> </span>    @available_if(pipeline._final_estimator_has(&#39;score&#39;))
+<span class="w"> </span>    def score(self, X, y=None, sample_weight=None, **params):
+<span class="gu">@@ -630,7 +889,24 @@ class Pipeline(_ParamsValidationMixin, pipeline.Pipeline):</span>
+<span class="w"> </span>        score : float
+<span class="w"> </span>            Result of calling `score` on the final estimator.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if _routing_enabled():</span>
+<span class="gi">+            routed_params = process_routing(self, &quot;score&quot;, **params)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            routed_params = Bunch()</span>
+<span class="gi">+            routed_params.score = self._check_method_params(method=&quot;score&quot;, **params)</span>
+<span class="gi">+            routed_params.transform = self._check_method_params(method=&quot;transform&quot;, **params)</span>
+<span class="gi">+</span>
+<span class="gi">+        Xt = X</span>
+<span class="gi">+        for _, name, transform in self._iter(with_final=False, filter_passthrough=False):</span>
+<span class="gi">+            if transform is None or transform == &quot;passthrough&quot;:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if hasattr(transform, &quot;transform&quot;):</span>
+<span class="gi">+                Xt = transform.transform(Xt, **routed_params.transform.get(name, {}))</span>
+<span class="gi">+</span>
+<span class="gi">+        score_params = routed_params.score.get(self.steps[-1][0], {})</span>
+<span class="gi">+        if sample_weight is not None:</span>
+<span class="gi">+            score_params = {**score_params, &quot;sample_weight&quot;: sample_weight}</span>
+<span class="gi">+        return self.steps[-1][1].score(Xt, y, **score_params)</span>
+
+<span class="w"> </span>    def get_metadata_routing(self):
+<span class="w"> </span>        &quot;&quot;&quot;Get metadata routing of this object.
+<span class="gh">diff --git a/imblearn/utils/_metadata_requests.py b/imblearn/utils/_metadata_requests.py</span>
+<span class="gh">index 494f911..46f897f 100644</span>
+<span class="gd">--- a/imblearn/utils/_metadata_requests.py</span>
+<span class="gi">+++ b/imblearn/utils/_metadata_requests.py</span>
+<span class="gu">@@ -387,7 +387,9 @@ if parse_version(sklearn_version.base_version) &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>                common = existing &amp; upcoming
+<span class="w"> </span>                conflicts = [key for key in common if requests[key] != mmr._requests[key]]
+<span class="w"> </span>                if conflicts:
+<span class="gd">-                    raise ValueError(f&#39;Conflicting metadata requests for {&#39;, &#39;.join(conflicts)} while composing the requests for {name}. Metadata with the same name for methods {&#39;, &#39;.join(COMPOSITE_METHODS[name])} should have the same request value.&#39;)</span>
+<span class="gi">+                    conflicts_str = &#39;, &#39;.join(conflicts)</span>
+<span class="gi">+                    methods_str = &#39;, &#39;.join(COMPOSITE_METHODS[name])</span>
+<span class="gi">+                    raise ValueError(f&#39;Conflicting metadata requests for {conflicts_str} while composing the requests for {name}. Metadata with the same name for methods {methods_str} should have the same request value.&#39;)</span>
+<span class="w"> </span>                requests.update(mmr._requests)
+<span class="w"> </span>            return MethodMetadataRequest(owner=self.owner, method=name, requests=requests)
+
+<span class="gu">@@ -882,6 +884,7 @@ if parse_version(sklearn_version.base_version) &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>        .. versionadded:: 1.3
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        if TYPE_CHECKING:
+<span class="gi">+            pass</span>
+
+<span class="w"> </span>        def __init_subclass__(cls, **kwargs):
+<span class="w"> </span>            &quot;&quot;&quot;Set the ``set_{method}_request`` methods.
+<span class="gh">diff --git a/imblearn/utils/_param_validation.py b/imblearn/utils/_param_validation.py</span>
+<span class="gh">index 25f6aa4..5ecbde1 100644</span>
+<span class="gd">--- a/imblearn/utils/_param_validation.py</span>
+<span class="gi">+++ b/imblearn/utils/_param_validation.py</span>
+<span class="gu">@@ -59,7 +59,39 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>        caller_name : str
+<span class="w"> </span>            The name of the estimator or function or method that called this function.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if parameter_constraints == &quot;no_validation&quot;:</span>
+<span class="gi">+            return</span>
+<span class="gi">+</span>
+<span class="gi">+        for param_name, param_val in params.items():</span>
+<span class="gi">+            # Each parameter can be validated against a list of constraints.</span>
+<span class="gi">+            # We keep track of the exceptions raised by each validator so we can</span>
+<span class="gi">+            # give a meaningful message if all of them failed.</span>
+<span class="gi">+            if param_name not in parameter_constraints:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+            constraints = parameter_constraints[param_name]</span>
+<span class="gi">+            constraints = [make_constraint(constraint) for constraint in constraints]</span>
+<span class="gi">+</span>
+<span class="gi">+            exceptions_raised = []</span>
+<span class="gi">+            for constraint in constraints:</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    if constraint.is_satisfied_by(param_val):</span>
+<span class="gi">+                        # We found a valid constraint</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                except Exception as e:</span>
+<span class="gi">+                    exceptions_raised.append(e)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                # No constraint was found to be valid</span>
+<span class="gi">+                constraints_str = &quot;, &quot;.join(str(c) for c in constraints)</span>
+<span class="gi">+                error_msg = (</span>
+<span class="gi">+                    f&quot;The {param_name!r} parameter of {caller_name} must be &quot;</span>
+<span class="gi">+                    f&quot;{constraints_str}. Got {param_val!r} instead.&quot;</span>
+<span class="gi">+                )</span>
+<span class="gi">+                if exceptions_raised:</span>
+<span class="gi">+                    error_msg += (</span>
+<span class="gi">+                        f&quot; The following errors were raised: {exceptions_raised}&quot;</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                raise InvalidParameterError(error_msg)</span>
+
+<span class="w"> </span>    def make_constraint(constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Convert the constraint into the appropriate Constraint object.
+<span class="gu">@@ -74,7 +106,35 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>        constraint : instance of _Constraint
+<span class="w"> </span>            The converted constraint.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(constraint, _Constraint):</span>
+<span class="gi">+            return constraint</span>
+<span class="gi">+        elif isinstance(constraint, type):</span>
+<span class="gi">+            return _InstancesOf(constraint)</span>
+<span class="gi">+        elif constraint is None:</span>
+<span class="gi">+            return _NoneConstraint()</span>
+<span class="gi">+        elif constraint == &quot;array-like&quot;:</span>
+<span class="gi">+            return _ArrayLikes()</span>
+<span class="gi">+        elif constraint == &quot;sparse matrix&quot;:</span>
+<span class="gi">+            return _SparseMatrices()</span>
+<span class="gi">+        elif constraint == &quot;random_state&quot;:</span>
+<span class="gi">+            return _RandomStates()</span>
+<span class="gi">+        elif constraint == &quot;boolean&quot;:</span>
+<span class="gi">+            return _Booleans()</span>
+<span class="gi">+        elif constraint == &quot;verbose&quot;:</span>
+<span class="gi">+            return _VerboseHelper()</span>
+<span class="gi">+        elif constraint == &quot;cv_object&quot;:</span>
+<span class="gi">+            return _CVObjects()</span>
+<span class="gi">+        elif constraint == &quot;nan&quot;:</span>
+<span class="gi">+            return _NanConstraint()</span>
+<span class="gi">+        elif callable(constraint):</span>
+<span class="gi">+            return _Callables()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(</span>
+<span class="gi">+                f&quot;Unknown constraint type: {constraint}. &quot;</span>
+<span class="gi">+                &quot;Valid constraints are: instance of _Constraint, type, None, &quot;</span>
+<span class="gi">+                &quot;&#39;array-like&#39;, &#39;sparse matrix&#39;, &#39;random_state&#39;, &#39;boolean&#39;, &quot;</span>
+<span class="gi">+                &quot;&#39;verbose&#39;, &#39;cv_object&#39;, &#39;nan&#39;, or callable.&quot;</span>
+<span class="gi">+            )</span>
+
+<span class="w"> </span>    def validate_params(parameter_constraints, *, prefer_skip_nested_validation):
+<span class="w"> </span>        &quot;&quot;&quot;Decorator to validate types and values of functions and methods.
+<span class="gu">@@ -107,7 +167,33 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>        decorated_function : function or method
+<span class="w"> </span>            The decorated function.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(func):</span>
+<span class="gi">+            # Get the signature of the function to be decorated</span>
+<span class="gi">+            sig = signature(func)</span>
+<span class="gi">+</span>
+<span class="gi">+            @functools.wraps(func)</span>
+<span class="gi">+            def wrapper(*args, **kwargs):</span>
+<span class="gi">+                # Map *args and **kwargs to the function signature to get a dict of</span>
+<span class="gi">+                # parameters</span>
+<span class="gi">+                params = sig.bind(*args, **kwargs)</span>
+<span class="gi">+                params.apply_defaults()</span>
+<span class="gi">+                params = params.arguments</span>
+<span class="gi">+</span>
+<span class="gi">+                # Skip validation if the config flag is set</span>
+<span class="gi">+                if get_config()[&quot;skip_parameter_validation&quot;]:</span>
+<span class="gi">+                    return func(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+                # Skip validation if we are in a nested validation context and</span>
+<span class="gi">+                # prefer_skip_nested_validation is True</span>
+<span class="gi">+                with config_context(skip_parameter_validation=prefer_skip_nested_validation):</span>
+<span class="gi">+                    validate_parameter_constraints(</span>
+<span class="gi">+                        parameter_constraints, params, func.__qualname__</span>
+<span class="gi">+                    )</span>
+<span class="gi">+                    return func(*args, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+            return wrapper</span>
+<span class="gi">+</span>
+<span class="gi">+        return decorator</span>
+
+<span class="w"> </span>    class RealNotInt(Real):
+<span class="w"> </span>        &quot;&quot;&quot;A type that represents reals that are not instances of int.
+<span class="gu">@@ -120,7 +206,11 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+
+<span class="w"> </span>    def _type_name(t):
+<span class="w"> </span>        &quot;&quot;&quot;Convert type into human readable string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        module = t.__module__</span>
+<span class="gi">+        qualname = t.__qualname__</span>
+<span class="gi">+        if module == &quot;builtins&quot;:</span>
+<span class="gi">+            return qualname</span>
+<span class="gi">+        return f&quot;{module}.{qualname}&quot;</span>
+
+<span class="w"> </span>    class _Constraint(ABC):
+<span class="w"> </span>        &quot;&quot;&quot;Base class for the constraint objects.&quot;&quot;&quot;
+<span class="gu">@@ -142,7 +232,7 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            is_satisfied : bool
+<span class="w"> </span>                Whether or not the constraint is satisfied by this value.
+<span class="w"> </span>            &quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            raise NotImplementedError</span>
+
+<span class="w"> </span>        @abstractmethod
+<span class="w"> </span>        def __str__(self):
+<span class="gu">@@ -161,24 +251,40 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            super().__init__()
+<span class="w"> </span>            self.type = type
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return isinstance(val, self.type)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return f&#39;an instance of {_type_name(self.type)!r}&#39;
+
+<span class="w"> </span>    class _NoneConstraint(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing the None singleton.&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return val is None</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;None&#39;
+
+<span class="w"> </span>    class _NanConstraint(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing the indicator `np.nan`.&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return isinstance(val, Real) and math.isnan(val)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;numpy.nan&#39;
+
+<span class="w"> </span>    class _PandasNAConstraint(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing the indicator `pd.NA`.&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                import pandas as pd</span>
+<span class="gi">+                return val is pd.NA</span>
+<span class="gi">+            except ImportError:</span>
+<span class="gi">+                return False</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;pandas.NA&#39;
+
+<span class="gu">@@ -207,10 +313,12 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+
+<span class="w"> </span>        def _mark_if_deprecated(self, option):
+<span class="w"> </span>            &quot;&quot;&quot;Add a deprecated mark to an option if needed.&quot;&quot;&quot;
+<span class="gd">-            pass</span>
+<span class="gi">+            if option in self.deprecated:</span>
+<span class="gi">+                return f&quot;{option} (DEPRECATED)&quot;</span>
+<span class="gi">+            return str(option)</span>
+
+<span class="w"> </span>        def __str__(self):
+<span class="gd">-            options_str = f&#39;{&#39;, &#39;.join([self._mark_if_deprecated(o) for o in self.options])}&#39;</span>
+<span class="gi">+            options_str = &#39;, &#39;.join([self._mark_if_deprecated(o) for o in self.options])</span>
+<span class="w"> </span>            return f&#39;a {_type_name(self.type)} among {{{options_str}}}&#39;
+
+<span class="w"> </span>    class StrOptions(Options):
+<span class="gu">@@ -301,18 +409,27 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>    class _ArrayLikes(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing array-likes&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return _is_arraylike_not_scalar(val)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;an array-like&#39;
+
+<span class="w"> </span>    class _SparseMatrices(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing sparse matrices.&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return issparse(val)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;a sparse matrix&#39;
+
+<span class="w"> </span>    class _Callables(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing callables.&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return callable(val)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;a callable&#39;
+
+<span class="gu">@@ -327,8 +444,12 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            super().__init__()
+<span class="w"> </span>            self._constraints = [Interval(Integral, 0, 2 ** 32 - 1, closed=&#39;both&#39;), _InstancesOf(np.random.RandomState), _NoneConstraint()]
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return any(c.is_satisfied_by(val) for c in self._constraints)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="gd">-            return f&#39;{&#39;, &#39;.join([str(c) for c in self._constraints[:-1]])} or {self._constraints[-1]}&#39;</span>
+<span class="gi">+            constraints_str = &#39;, &#39;.join(str(c) for c in self._constraints[:-1])</span>
+<span class="gi">+            return f&#39;{constraints_str} or {self._constraints[-1]}&#39;</span>
+
+<span class="w"> </span>    class _Booleans(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing boolean likes.
+<span class="gu">@@ -341,8 +462,12 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            super().__init__()
+<span class="w"> </span>            self._constraints = [_InstancesOf(bool), _InstancesOf(np.bool_)]
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return any(c.is_satisfied_by(val) for c in self._constraints)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="gd">-            return f&#39;{&#39;, &#39;.join([str(c) for c in self._constraints[:-1]])} or {self._constraints[-1]}&#39;</span>
+<span class="gi">+            constraints_str = &#39;, &#39;.join(str(c) for c in self._constraints[:-1])</span>
+<span class="gi">+            return f&#39;{constraints_str} or {self._constraints[-1]}&#39;</span>
+
+<span class="w"> </span>    class _VerboseHelper(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Helper constraint for the verbose parameter.
+<span class="gu">@@ -355,8 +480,12 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            super().__init__()
+<span class="w"> </span>            self._constraints = [Interval(Integral, 0, None, closed=&#39;left&#39;), _InstancesOf(bool), _InstancesOf(np.bool_)]
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return any(c.is_satisfied_by(val) for c in self._constraints)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="gd">-            return f&#39;{&#39;, &#39;.join([str(c) for c in self._constraints[:-1]])} or {self._constraints[-1]}&#39;</span>
+<span class="gi">+            constraints_str = &#39;, &#39;.join(str(c) for c in self._constraints[:-1])</span>
+<span class="gi">+            return f&#39;{constraints_str} or {self._constraints[-1]}&#39;</span>
+
+<span class="w"> </span>    class MissingValues(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Helper constraint for the `missing_values` parameters.
+<span class="gu">@@ -385,8 +514,12 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            if not self.numeric_only:
+<span class="w"> </span>                self._constraints.extend([_InstancesOf(str), _NoneConstraint()])
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return any(c.is_satisfied_by(val) for c in self._constraints)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="gd">-            return f&#39;{&#39;, &#39;.join([str(c) for c in self._constraints[:-1]])} or {self._constraints[-1]}&#39;</span>
+<span class="gi">+            constraints_str = &#39;, &#39;.join(str(c) for c in self._constraints[:-1])</span>
+<span class="gi">+            return f&#39;{constraints_str} or {self._constraints[-1]}&#39;</span>
+
+<span class="w"> </span>    class HasMethods(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing objects that expose specific methods.
+<span class="gu">@@ -407,16 +540,23 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>                methods = [methods]
+<span class="w"> </span>            self.methods = methods
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return all(hasattr(val, method) and callable(getattr(val, method)) for method in self.methods)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            if len(self.methods) == 1:
+<span class="gd">-                methods = f&#39;{self.methods[0]!r}&#39;</span>
+<span class="gi">+                methods = repr(self.methods[0])</span>
+<span class="w"> </span>            else:
+<span class="gd">-                methods = f&#39;{&#39;, &#39;.join([repr(m) for m in self.methods[:-1]])} and {self.methods[-1]!r}&#39;</span>
+<span class="gi">+                methods_str = &#39;, &#39;.join(repr(m) for m in self.methods[:-1])</span>
+<span class="gi">+                methods = f&#39;{methods_str} and {self.methods[-1]!r}&#39;</span>
+<span class="w"> </span>            return f&#39;an object implementing {methods}&#39;
+
+<span class="w"> </span>    class _IterablesNotString(_Constraint):
+<span class="w"> </span>        &quot;&quot;&quot;Constraint representing iterables that are not strings.&quot;&quot;&quot;
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return isinstance(val, Iterable) and not isinstance(val, str)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="w"> </span>            return &#39;an iterable&#39;
+
+<span class="gu">@@ -436,8 +576,12 @@ if sklearn_version &lt; parse_version(&#39;1.4&#39;):</span>
+<span class="w"> </span>            super().__init__()
+<span class="w"> </span>            self._constraints = [Interval(Integral, 2, None, closed=&#39;left&#39;), HasMethods([&#39;split&#39;, &#39;get_n_splits&#39;]), _IterablesNotString(), _NoneConstraint()]
+
+<span class="gi">+        def is_satisfied_by(self, val):</span>
+<span class="gi">+            return any(c.is_satisfied_by(val) for c in self._constraints)</span>
+<span class="gi">+</span>
+<span class="w"> </span>        def __str__(self):
+<span class="gd">-            return f&#39;{&#39;, &#39;.join([str(c) for c in self._constraints[:-1]])} or {self._constraints[-1]}&#39;</span>
+<span class="gi">+            constraints_str = &#39;, &#39;.join(str(c) for c in self._constraints[:-1])</span>
+<span class="gi">+            return f&#39;{constraints_str} or {self._constraints[-1]}&#39;</span>
+
+<span class="w"> </span>    class Hidden:
+<span class="w"> </span>        &quot;&quot;&quot;Class encapsulating a constraint not meant to be exposed to the user.
+<span class="gh">diff --git a/imblearn/utils/fixes.py b/imblearn/utils/fixes.py</span>
+<span class="gh">index 6b49d43..47aa9a9 100644</span>
+<span class="gd">--- a/imblearn/utils/fixes.py</span>
+<span class="gi">+++ b/imblearn/utils/fixes.py</span>
+<span class="gu">@@ -21,7 +21,7 @@ else:</span>
+
+<span class="w"> </span>    def _is_arraylike_not_scalar(array):
+<span class="w"> </span>        &quot;&quot;&quot;Return True if array is array-like and not a scalar&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return _is_arraylike(array) and not np.isscalar(array)</span>
+<span class="w"> </span>if sklearn_version &lt; parse_version(&#39;1.3&#39;):
+
+<span class="w"> </span>    def _fit_context(*, prefer_skip_nested_validation):
+<span class="gu">@@ -47,7 +47,13 @@ if sklearn_version &lt; parse_version(&#39;1.3&#39;):</span>
+<span class="w"> </span>        decorated_fit : method
+<span class="w"> </span>            The decorated fit method.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def decorator(fit_method):</span>
+<span class="gi">+            @functools.wraps(fit_method)</span>
+<span class="gi">+            def wrapper(self, *args, **kwargs):</span>
+<span class="gi">+                with config_context(skip_parameter_validation=prefer_skip_nested_validation):</span>
+<span class="gi">+                    return fit_method(self, *args, **kwargs)</span>
+<span class="gi">+            return wrapper</span>
+<span class="gi">+        return decorator</span>
+<span class="w"> </span>else:
+<span class="w"> </span>    from sklearn.base import _fit_context
+<span class="w"> </span>if sklearn_version &lt; parse_version(&#39;1.3&#39;):
+<span class="gu">@@ -76,7 +82,17 @@ if sklearn_version &lt; parse_version(&#39;1.3&#39;):</span>
+<span class="w"> </span>        fitted : bool
+<span class="w"> </span>            Whether the estimator is fitted.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if attributes is None:</span>
+<span class="gi">+            attributes = [v for v in vars(estimator)</span>
+<span class="gi">+                        if v.endswith(&quot;_&quot;) and not v.startswith(&quot;__&quot;)]</span>
+<span class="gi">+</span>
+<span class="gi">+        if not attributes:</span>
+<span class="gi">+            raise ValueError(&quot;No valid attributes to check if fitted.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(attributes, (str, bytes)):</span>
+<span class="gi">+            attributes = [attributes]</span>
+<span class="gi">+</span>
+<span class="gi">+        return all_or_any(hasattr(estimator, attr) for attr in attributes)</span>
+<span class="w"> </span>else:
+<span class="w"> </span>    from sklearn.utils.validation import _is_fitted
+<span class="w"> </span>try:
+<span class="gu">@@ -85,4 +101,19 @@ except ImportError:</span>
+
+<span class="w"> </span>    def _is_pandas_df(X):
+<span class="w"> </span>        &quot;&quot;&quot;Return True if the X is a pandas dataframe.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+\ No newline at end of file
+<span class="gi">+        try:</span>
+<span class="gi">+            import pandas as pd</span>
+<span class="gi">+            return isinstance(X, pd.DataFrame)</span>
+<span class="gi">+        except ImportError:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+</span>
+<span class="gi">+def _mode(a, axis=0):</span>
+<span class="gi">+    &quot;&quot;&quot;Return the mode of an array along a given axis.</span>
+<span class="gi">+</span>
+<span class="gi">+    This is a replacement for scipy.stats.mode which was deprecated in version 1.9.0.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if sp_version &gt;= parse_version(&#39;1.9.0&#39;):</span>
+<span class="gi">+        mode_result = scipy.stats.mode(a, axis=axis, keepdims=True)</span>
+<span class="gi">+        return mode_result.mode, mode_result.count</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return scipy.stats.mode(a, axis=axis)</span>
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

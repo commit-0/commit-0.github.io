@@ -1,0 +1,4129 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands fabric - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-fabric" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands fabric
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_sources_yields_in_specific_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_sources_yields_in_specific_order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_authenticate_always_closes_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::authenticate_always_closes_agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_close_closes_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::close_closes_agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysfabric_configloads_identities_config_var" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::fabric_config::loads_identities_config_var
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysfabric_configsilently_skips_nonexistent_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::fabric_config::silently_skips_nonexistent_files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysssh_configloads_identityfile_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::ssh_config::loads_identityfile_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysssh_configsilently_skips_nonexistent_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::ssh_config::silently_skips_nonexistent_files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationsloads_all_four_known_key_types" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::loads_all_four_known_key_types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationssilently_skips_nonexistent_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::silently_skips_nonexistent_files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationsdoes_not_load_if_config_based_keys_given" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::does_not_load_if_config_based_keys_given
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationsuses_windows_style_ssh_dir_on_windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::uses_windows_style_ssh_dir_on_windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysloads_keys_from_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::loads_keys_from_agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authpyopensshauthstrategy_get_pubkeysyields_sources_in_specific_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      auth.py::OpenSSHAuthStrategy_::get_pubkeys::yields_sources_in_specific_order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callshosts_flag_setparameterization_per_host" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::hosts_flag_set::parameterization_per_host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callshosts_flag_setpost_tasks_happen_once_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::hosts_flag_set::post_tasks_happen_once_only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callshosts_attribute_on_task_objectsparameterization_per_host" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::parameterization_per_host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callshosts_attribute_on_task_objectspost_tasks_happen_once_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::post_tasks_happen_once_only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callshosts_attribute_on_task_objectsmay_give_connection_kwargs_as_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::may_give_Connection_kwargs_as_values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callsinvoke_task_objects_without_hosts_attribute_still_workhosts_flag_still_triggers_parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::Invoke_task_objects_without_hosts_attribute_still_work::hosts_flag_still_triggers_parameterization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callshosts_flag_vs_attributesflag_wins" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::hosts_flag_vs_attributes::flag_wins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callsremainderraises_nothingtodo_when_no_hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::remainder::raises_NothingToDo_when_no_hosts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callsdedupededuplication_not_performed" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::dedupe::deduplication_not_performed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executorpyexecutor_expand_callsparameterizealways_generates_connectioncall_with_host_attr" class="md-nav__link">
+    <span class="md-ellipsis">
+      executor.py::Executor_::expand_calls::parameterize::always_generates_ConnectionCall_with_host_attr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_needs_handle_on_a_connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::needs_handle_on_a_Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_envreplaces_when_replace_env_true" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::env::replaces_when_replace_env_True
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_envaugments_when_replace_env_false" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::env::augments_when_replace_env_False
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runcalls_expected_paramiko_bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::calls_expected_paramiko_bits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runwrites_remote_streams_to_local_streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::writes_remote_streams_to_local_streams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runreturn_value_is_result_subclass_exposing_cxn_used" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::return_value_is_Result_subclass_exposing_cxn_used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runchannel_is_closed_normally" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::channel_is_closed_normally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runchannel_is_closed_on_body_exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::channel_is_closed_on_body_exceptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runstop_calls_super_correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::stop_calls_super_correctly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runchannel_close_skipped_when_channel_not_even_made" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::channel_close_skipped_when_channel_not_even_made
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runpty_trueuses_paramiko_get_pty_with_local_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::pty_True::uses_paramiko_get_pty_with_local_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runpty_trueno_sigwinch_means_no_handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::pty_True::no_SIGWINCH_means_no_handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runpty_truesigwinch_handled_when_present" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::pty_True::SIGWINCH_handled_when_present
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runpty_truesigwinch_not_handled_in_subthreads" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::pty_True::SIGWINCH_not_handled_in_subthreads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_runpty_truewindow_change_handler_uses_resize_pty" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::run::pty_True::window_change_handler_uses_resize_pty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_startsends_env_to_paramiko_update_environment_by_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::start::sends_env_to_paramiko_update_environment_by_default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_startuses_export_prefixing_when_inline_env_is_true" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::start::uses_export_prefixing_when_inline_env_is_True
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_send_start_message_sends_exec_command" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::send_start_message_sends_exec_command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremote_kill_closes_the_channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::Remote_::kill_closes_the_channel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runnerspyremoteshell_send_start_message_sends_invoke_shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      runners.py::RemoteShell_::send_start_message_sends_invoke_shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskpytask_accepts_invoke_level_kwargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      task.py::task_::accepts_Invoke_level_kwargs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskpytask_returns_fabric_level_task_instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      task.py::task_::returns_Fabric_level_Task_instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskpytask_does_not_touch_klass_kwarg_if_explicitly_given" class="md-nav__link">
+    <span class="md-ellipsis">
+      task.py::task_::does_not_touch_klass_kwarg_if_explicitly_given
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskpytask_hosts_kwargvalues_may_be_connection_first_posarg_strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      task.py::task_::hosts_kwarg::values_may_be_connection_first_posarg_strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskpytask_hosts_kwargvalues_may_be_connection_constructor_kwarg_dicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      task.py::task_::hosts_kwarg::values_may_be_Connection_constructor_kwarg_dicts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskpytask_hosts_kwargvalues_may_be_mixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      task.py::task_::hosts_kwarg::values_may_be_mixed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingpymockremote_mocks_by_defaultprevents_real_ssh_connectivity_via_paramiko_guts" class="md-nav__link">
+    <span class="md-ellipsis">
+      testing.py::MockRemote_::mocks_by_default::prevents_real_ssh_connectivity_via_paramiko_guts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingpymockremote_mocks_by_defaultdoes_not_run_safety_checks_when_nothing_really_expected" class="md-nav__link">
+    <span class="md-ellipsis">
+      testing.py::MockRemote_::mocks_by_default::does_not_run_safety_checks_when_nothing_really_expected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingpymockremote_enable_sftpdoes_not_break_ssh_mocking" class="md-nav__link">
+    <span class="md-ellipsis">
+      testing.py::MockRemote_::enable_sftp::does_not_break_ssh_mocking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingpymockremote_enable_sftpenables_per_session_sftp_mocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      testing.py::MockRemote_::enable_sftp::enables_per_session_sftp_mocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingpymockremote_enable_sftpsafety_checks_work" class="md-nav__link">
+    <span class="md-ellipsis">
+      testing.py::MockRemote_::enable_sftp::safety_checks_work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_initrequires_connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::init::requires_connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_is_remote_dirreturns_bool_of_stat_isdir_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::is_remote_dir::returns_bool_of_stat_ISDIR_flag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_is_remote_dirreturns_false_if_stat_raises_ioerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::is_remote_dir::returns_False_if_stat_raises_IOError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getbasicsaccepts_single_remote_path_posarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::basics::accepts_single_remote_path_posarg
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getbasicsaccepts_local_and_remote_kwargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::basics::accepts_local_and_remote_kwargs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getbasicsreturns_rich_result_object" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::basics::returns_rich_Result_object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getpath_arg_edge_caseslocal_none_uses_remote_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::path_arg_edge_cases::local_None_uses_remote_filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getpath_arg_edge_caseslocal_empty_string_uses_remote_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::path_arg_edge_cases::local_empty_string_uses_remote_filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getpath_arg_edge_casesremote_arg_is_required" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_is_required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getpath_arg_edge_casesremote_arg_cannot_be_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_cannot_be_None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getpath_arg_edge_casesremote_arg_cannot_be_empty_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_cannot_be_empty_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getlocal_arg_interpolationconnection_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::local_arg_interpolation::connection_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getlocal_arg_interpolationconnection_params_as_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::local_arg_interpolation::connection_params_as_dir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getlocal_arg_interpolationremote_path_posixpath_bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::local_arg_interpolation::remote_path_posixpath_bits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getfile_like_local_pathsremote_path_to_local_stringio" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::file_like_local_paths::remote_path_to_local_StringIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getfile_like_local_pathsresult_contains_fd_for_local_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::file_like_local_paths::result_contains_fd_for_local_path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getmode_concernspreserves_remote_mode_by_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::mode_concerns::preserves_remote_mode_by_default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getmode_concernsallows_disabling_remote_mode_preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::mode_concerns::allows_disabling_remote_mode_preservation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getlocal_directory_creationwithout_trailing_slash_means_leaf_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::local_directory_creation::without_trailing_slash_means_leaf_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_getlocal_directory_creationwith_trailing_slash_means_mkdir_entire_arg" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::get::local_directory_creation::with_trailing_slash_means_mkdir_entire_arg
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putbasicsaccepts_single_local_path_posarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::basics::accepts_single_local_path_posarg
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putbasicsaccepts_local_and_remote_kwargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::basics::accepts_local_and_remote_kwargs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putbasicsreturns_rich_result_object" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::basics::returns_rich_Result_object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putremote_end_is_directoryappends_local_file_basename" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::remote_end_is_directory::appends_local_file_basename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putremote_end_is_directoryfile_like_local_objectsname_attribute_present_appends_like_basename" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::remote_end_is_directory::file_like_local_objects::name_attribute_present_appends_like_basename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putremote_end_is_directoryfile_like_local_objectsno_name_attribute_raises_valueerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::remote_end_is_directory::file_like_local_objects::no_name_attribute_raises_ValueError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putpath_arg_edge_casesremote_none_uses_local_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::path_arg_edge_cases::remote_None_uses_local_filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putpath_arg_edge_casesremote_empty_string_uses_local_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::path_arg_edge_cases::remote_empty_string_uses_local_filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putpath_arg_edge_casesremote_cant_be_empty_if_local_file_like" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::path_arg_edge_cases::remote_cant_be_empty_if_local_file_like
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putpath_arg_edge_caseslocal_arg_is_required" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_is_required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putpath_arg_edge_caseslocal_arg_cannot_be_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_cannot_be_None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putpath_arg_edge_caseslocal_arg_cannot_be_empty_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_cannot_be_empty_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putfile_like_local_pathsremote_path_from_local_stringio" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::file_like_local_paths::remote_path_from_local_StringIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putfile_like_local_pathslocal_flos_are_rewound_before_putting" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::file_like_local_paths::local_FLOs_are_rewound_before_putting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putfile_like_local_pathsresult_contains_fd_for_local_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::file_like_local_paths::result_contains_fd_for_local_path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putmode_concernspreserves_local_mode_by_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::mode_concerns::preserves_local_mode_by_default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferpytransfer_putmode_concernsallows_disabling_local_mode_preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      transfer.py::Transfer_::put::mode_concerns::allows_disabling_local_mode_preservation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilpyget_local_user_defaults_to_getpass_getuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      util.py::get_local_user_::defaults_to_getpass_getuser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-fabric"><strong>OpenHands</strong>: fabric</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">24</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">92</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">117</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">117</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="authpyopensshauthstrategy_get_sources_yields_in_specific_order">auth.py::OpenSSHAuthStrategy_::get_sources_yields_in_specific_order</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_sources_yields_in_specific_order</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_ object at 0x7eadab72ff70>
+mock_partial = <MagicMock name='partial' id='139284355842304'>
+
+    @patch("fabric.auth.partial")
+    def get_sources_yields_in_specific_order(self, mock_partial):
+        # Yields from get_pubkeys
+        strat = _strategy()
+        strat.get_pubkeys = Mock(return_value=iter([1, 2, 3]))
+>       generator = strat.get_sources()
+
+tests/auth.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <fabric.auth.OpenSSHAuthStrategy object at 0x7eadaa8da1a0>
+
+    def get_sources(self):
+        """
+        Generator yielding `AuthSource` instances, in the order to try.
+
+        This is the primary override point for subclasses: you figure out what
+        sources you need, and ``yield`` them.
+
+        Subclasses _of_ subclasses may find themselves wanting to do things
+        like filtering or discarding around a call to `super`.
+        """
+>       raise NotImplementedError
+E       NotImplementedError
+
+.venv/lib/python3.10/site-packages/paramiko/auth_strategy.py:258: NotImplementedError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_authenticate_always_closes_agent">auth.py::OpenSSHAuthStrategy_::authenticate_always_closes_agent</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::authenticate_always_closes_agent</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_ object at 0x7eadab72e980>
+
+    def authenticate_always_closes_agent(self):
+        strat = _strategy()
+        strat.close = Mock()
+        oops = Exception("onoz")
+        kaboom = Mock(authenticate=Mock(side_effect=oops))
+        strat.get_sources = Mock(return_value=iter([kaboom]))
+        with raises(AuthFailure):
+            strat.authenticate(None)
+>       strat.close.assert_called_once_with()
+
+tests/auth.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock id='139284347766384'>, args = (), kwargs = {}
+msg = "Expected 'mock' to be called once. Called 0 times."
+
+    def assert_called_once_with(self, /, *args, **kwargs):
+        """assert that the mock was called exactly once and that that call was
+        with the specified arguments."""
+        if not self.call_count == 1:
+            msg = ("Expected '%s' to be called once. Called %s times.%s"
+                   % (self._mock_name or 'mock',
+                      self.call_count,
+                      self._calls_repr()))
+>           raise AssertionError(msg)
+E           AssertionError: Expected 'mock' to be called once. Called 0 times.
+
+/usr/lib/python3.10/unittest/mock.py:940: AssertionError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_close_closes_agent">auth.py::OpenSSHAuthStrategy_::close_closes_agent</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::close_closes_agent</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_ object at 0x7eadab72c3d0>
+
+    def close_closes_agent(self):
+        agent = Mock()
+        strat = _strategy()
+        strat.agent = agent
+        strat.close()
+>       agent.close.assert_called_once_with()
+
+tests/auth.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock name='mock.close' id='139284371189008'>, args = (), kwargs = {}
+msg = "Expected 'close' to be called once. Called 0 times."
+
+    def assert_called_once_with(self, /, *args, **kwargs):
+        """assert that the mock was called exactly once and that that call was
+        with the specified arguments."""
+        if not self.call_count == 1:
+            msg = ("Expected '%s' to be called once. Called %s times.%s"
+                   % (self._mock_name or 'mock',
+                      self.call_count,
+                      self._calls_repr()))
+>           raise AssertionError(msg)
+E           AssertionError: Expected 'close' to be called once. Called 0 times.
+
+/usr/lib/python3.10/unittest/mock.py:940: AssertionError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysfabric_configloads_identities_config_var">auth.py::OpenSSHAuthStrategy_::get_pubkeys::fabric_config::loads_identities_config_var</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::fabric_config::loads_identities_config_var</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.fabric_config object at 0x7eadab72f850>
+fake = {'Agent': <MagicMock name='Agent' id='139284374542160'>, 'PKey': <MagicMock name='PKey' id='139284384410224'>}
+
+    def loads_identities_config_var(self, fake):
+        strat = _strategy(py_keys=["rsa.key"])
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:111: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysfabric_configsilently_skips_nonexistent_files">auth.py::OpenSSHAuthStrategy_::get_pubkeys::fabric_config::silently_skips_nonexistent_files</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::fabric_config::silently_skips_nonexistent_files</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.fabric_config object at 0x7eadac37bc70>
+fake = {'Agent': <MagicMock name='Agent' id='139284396256336'>, 'PKey': <MagicMock name='PKey' id='139284347768880'>}
+
+    def silently_skips_nonexistent_files(self, fake):
+        key = Mock()
+        fake.PKey.from_path.side_effect = [FileNotFoundError, key]
+        strat = _strategy(py_keys=["rsa.key", "ed25519.key"])
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:124: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysssh_configloads_identityfile_key">auth.py::OpenSSHAuthStrategy_::get_pubkeys::ssh_config::loads_identityfile_key</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::ssh_config::loads_identityfile_key</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.ssh_config object at 0x7eadab72dba0>
+fake = {'Agent': <MagicMock name='Agent' id='139284347793088'>, 'PKey': <MagicMock name='PKey' id='139284347784688'>}
+
+    def loads_identityfile_key(self, fake):
+        strat = _strategy(ssh_keys=["rsa.key"])
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:132: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysssh_configsilently_skips_nonexistent_files">auth.py::OpenSSHAuthStrategy_::get_pubkeys::ssh_config::silently_skips_nonexistent_files</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::ssh_config::silently_skips_nonexistent_files</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.ssh_config object at 0x7eadab72e080>
+fake = {'Agent': <MagicMock name='Agent' id='139284383920720'>, 'PKey': <MagicMock name='PKey' id='139284354357744'>}
+
+    def silently_skips_nonexistent_files(self, fake):
+        key = Mock()
+        fake.PKey.from_path.side_effect = [FileNotFoundError, key]
+        strat = _strategy(ssh_keys=["rsa.key", "ed25519.key"])
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:145: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationsloads_all_four_known_key_types">auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::loads_all_four_known_key_types</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::loads_all_four_known_key_types</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.implicit_user_home_locations object at 0x7eadab72f4c0>
+fake = {'Agent': <MagicMock name='Agent' id='139284348027280'>, 'PKey': <MagicMock name='PKey' id='139284348042928'>}
+
+    def loads_all_four_known_key_types(self, fake):
+        strat = _strategy()
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:153: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationssilently_skips_nonexistent_files">auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::silently_skips_nonexistent_files</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::silently_skips_nonexistent_files</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.implicit_user_home_locations object at 0x7eadac37b550>
+fake = {'Agent': <MagicMock name='Agent' id='139284396147040'>, 'PKey': <MagicMock name='PKey' id='139284348062544'>}
+
+    def silently_skips_nonexistent_files(self, fake):
+        fake.PKey.from_path.side_effect = [
+            FileNotFoundError,
+            Mock(),
+            Mock(),
+            Mock(),
+        ]
+        strat = _strategy()
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:173: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationsdoes_not_load_if_config_based_keys_given">auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::does_not_load_if_config_based_keys_given</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::does_not_load_if_config_based_keys_given</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.implicit_user_home_locations object at 0x7eadac378a00>
+fake = {'Agent': <MagicMock name='Agent' id='139284367754000'>, 'PKey': <MagicMock name='PKey' id='139284356501216'>}
+
+    def does_not_load_if_config_based_keys_given(self, fake):
+        strat = _strategy(py_keys=["rsa.key"])
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:186: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysimplicit_user_home_locationsuses_windows_style_ssh_dir_on_windows">auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::uses_windows_style_ssh_dir_on_windows</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::implicit_user_home_locations::uses_windows_style_ssh_dir_on_windows</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys.implicit_user_home_locations object at 0x7eadac378b80>
+fake = {'Agent': <MagicMock name='Agent' id='139284375663328'>, 'PKey': <MagicMock name='PKey' id='139284368796368'>}
+
+    @patch("fabric.auth.win32", True)
+    def uses_windows_style_ssh_dir_on_windows(self, fake):
+        strat = _strategy()
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:194: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysloads_keys_from_agent">auth.py::OpenSSHAuthStrategy_::get_pubkeys::loads_keys_from_agent</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::loads_keys_from_agent</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys object at 0x7eadab72fa60>
+fake = {'Agent': <MagicMock name='Agent' id='139284374537792'>, 'PKey': <MagicMock name='PKey' id='139284348437744'>}
+
+    def loads_keys_from_agent(self, fake):
+        # No $HOME keys to gum things up.
+        fake.PKey.from_path.side_effect = FileNotFoundError
+        agent_keys = [
+            AgentKey(fake.Agent.return_value, x)
+            for x in (b"dummy", b"data")
+        ]
+        get_keys = fake.Agent.return_value.get_keys
+        get_keys.return_value = agent_keys
+        strat = _strategy()
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:216: AttributeError
+</pre>
+</details>
+<h3 id="authpyopensshauthstrategy_get_pubkeysyields_sources_in_specific_order">auth.py::OpenSSHAuthStrategy_::get_pubkeys::yields_sources_in_specific_order</h3>
+<details><summary> <pre>auth.py::OpenSSHAuthStrategy_::get_pubkeys::yields_sources_in_specific_order</pre></summary><pre>
+self = <auth.OpenSSHAuthStrategy_.get_pubkeys object at 0x7eadab72f880>
+fake = {'Agent': <MagicMock name='Agent' id='139284347793664'>, 'PKey': <MagicMock name='PKey' id='139284347797072'>}
+
+    def yields_sources_in_specific_order(self, fake):
+        # Set up fake-enough keys
+        # Reminder: 'CLI' in our world generally means
+        # CLI-or-Fabric-Config; we inject them via Fabric config.
+        class FaKey(PKey):
+            def __init__(self, name):
+                self._name = name
+                self.public_blob = None
+                if name.endswith(".cert"):
+                    self.public_blob = True  # good enough for AuthStrategy
+
+            @property
+            def _fields(self):
+                return [self._name, self.public_blob]
+
+            @property
+            def fingerprint(self):
+                return self._name
+
+        # Both a useful lookup source for the fake constructor, and the
+        # final expected order of things.
+        expected_keys = [
+            # Certs, from ssh conf files
+            FaKey("ssh-conf.cert"),
+            # Certs, from CLI / Python conf files
+            FaKey("py-conf.cert"),
+            # Agent keys, when overlapping with config file keys
+            FaKey("agent-conf.key"),
+            # Agent keys, the rest
+            FaKey("agent-noconf.key"),
+            # Non-cert keys, from the CLI
+            FaKey("py-conf.key"),
+            # Non-cert keys, from SSH configs
+            FaKey("ssh-conf.key"),
+        ]
+
+        def get_key(name):
+            for candidate in expected_keys:
+                if candidate._name == name:
+                    return candidate
+            raise Exception(f"Your candidate list has no {name!r}!")
+
+        fake.PKey.from_path.side_effect = get_key
+        fake.Agent.return_value.get_keys.return_value = [
+            # not also found in config
+            get_key("agent-noconf.key"),
+            # also found in config, and should show up before agent_noconf
+            # does, despite showing up in get_keys() later!
+            get_key("agent-conf.key"),
+        ]
+        strat = _strategy(
+            py_keys=["py-conf.key", "py-conf.cert"],
+            ssh_keys=["ssh-conf.key", "ssh-conf.cert", "agent-conf.key"],
+        )
+>       keys = list(strat.get_pubkeys())
+E       AttributeError: 'OpenSSHAuthStrategy' object has no attribute 'get_pubkeys'
+
+tests/auth.py:275: AttributeError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callshosts_flag_setparameterization_per_host">executor.py::Executor_::expand_calls::hosts_flag_set::parameterization_per_host</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::hosts_flag_set::parameterization_per_host</pre></summary><pre>
+self = <executor.Executor_.expand_calls.hosts_flag_set object at 0x7eadabbbc220>
+
+    def parameterization_per_host(self):
+        task = _execute(hosts_flag="host1,host2,host3")
+>       assert task.call_count == 3
+E       AssertionError: assert 1 == 3
+E        +  where 1 = <Mock id='139284347766912'>.call_count
+
+tests/executor.py:44: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callshosts_flag_setpost_tasks_happen_once_only">executor.py::Executor_::expand_calls::hosts_flag_set::post_tasks_happen_once_only</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::hosts_flag_set::post_tasks_happen_once_only</pre></summary><pre>
+self = <executor.Executor_.expand_calls.hosts_flag_set object at 0x7eadabbbd9c0>
+
+    def post_tasks_happen_once_only(self):
+        post = Mock()
+        task = _execute(
+            hosts_flag="host1,host2,host3", post=Task(post)
+        )
+>       assert task.call_count == 3
+E       AssertionError: assert 1 == 3
+E        +  where 1 = <Mock id='139284355847056'>.call_count
+
+tests/executor.py:52: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callshosts_attribute_on_task_objectsparameterization_per_host">executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::parameterization_per_host</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::parameterization_per_host</pre></summary><pre>
+self = <executor.Executor_.expand_calls.hosts_attribute_on_task_objects object at 0x7eadabbbf340>
+
+    def parameterization_per_host(self):
+        task = _execute(hosts_kwarg=["host1", "host2", "host3"])
+>       assert task.call_count == 3
+E       AssertionError: assert 1 == 3
+E        +  where 1 = <Mock id='139284348445280'>.call_count
+
+tests/executor.py:58: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callshosts_attribute_on_task_objectspost_tasks_happen_once_only">executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::post_tasks_happen_once_only</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::post_tasks_happen_once_only</pre></summary><pre>
+self = <executor.Executor_.expand_calls.hosts_attribute_on_task_objects object at 0x7eadabbbd420>
+
+    def post_tasks_happen_once_only(self):
+        post = Mock()
+        task = _execute(
+            hosts_kwarg=["host1", "host2", "host3"], post=Task(post)
+        )
+>       assert task.call_count == 3
+E       AssertionError: assert 1 == 3
+E        +  where 1 = <Mock id='139284355118944'>.call_count
+
+tests/executor.py:66: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callshosts_attribute_on_task_objectsmay_give_connection_kwargs_as_values">executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::may_give_Connection_kwargs_as_values</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::hosts_attribute_on_task_objects::may_give_Connection_kwargs_as_values</pre></summary><pre>
+self = <executor.Executor_.expand_calls.hosts_attribute_on_task_objects object at 0x7eadabbbcc70>
+
+    def may_give_Connection_kwargs_as_values(self):
+        task = _execute(
+            hosts_kwarg=[
+                {"host": "host1"},
+                {"host": "host2", "user": "doge"},
+            ]
+        )
+>       assert task.call_count == 2
+E       AssertionError: assert 1 == 2
+E        +  where 1 = <Mock id='139284348452384'>.call_count
+
+tests/executor.py:76: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callsinvoke_task_objects_without_hosts_attribute_still_workhosts_flag_still_triggers_parameterization">executor.py::Executor_::expand_calls::Invoke_task_objects_without_hosts_attribute_still_work::hosts_flag_still_triggers_parameterization</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::Invoke_task_objects_without_hosts_attribute_still_work::hosts_flag_still_triggers_parameterization</pre></summary><pre>
+self = <executor.Executor_.expand_calls.Invoke_task_objects_without_hosts_attribute_still_work object at 0x7eadabbbcc10>
+
+    def hosts_flag_still_triggers_parameterization(self):
+        body = Mock(pre=[], post=[])
+        coll = Collection(mytask=InvokeTask(body))
+        hosts = Argument(name="hosts")
+        hosts.value = "host1,host2,host3"
+        core_args = ParseResult([ParserContext(args=[hosts])])
+        Executor(coll, core=core_args).execute("mytask")
+>       assert body.call_count == 3
+E       AssertionError: assert 1 == 3
+E        +  where 1 = <Mock id='139284368791760'>.call_count
+
+tests/executor.py:100: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callshosts_flag_vs_attributesflag_wins">executor.py::Executor_::expand_calls::hosts_flag_vs_attributes::flag_wins</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::hosts_flag_vs_attributes::flag_wins</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadabbbf2e0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <executor.Executor_.expand_calls.hosts_flag_vs_attributes object at 0x7eadabbbf400>
+
+    def flag_wins(self):
+        task = _execute(
+            hosts_flag="via-flag", hosts_kwarg=["via-kwarg"]
+        )
+        assert task.call_count == 1
+>       assert task.call_args[0][0] == Connection(host="via-flag")
+
+tests/executor.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadabbbf2e0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callsremainderraises_nothingtodo_when_no_hosts">executor.py::Executor_::expand_calls::remainder::raises_NothingToDo_when_no_hosts</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::remainder::raises_NothingToDo_when_no_hosts</pre></summary><pre>
+self = <executor.Executor_.expand_calls.remainder object at 0x7eadabbbe6b0>
+
+    def raises_NothingToDo_when_no_hosts(self):
+>       with raises(NothingToDo):
+E       Failed: DID NOT RAISE <class 'fabric.exceptions.NothingToDo'>
+
+tests/executor.py:112: Failed
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callsdedupededuplication_not_performed">executor.py::Executor_::expand_calls::dedupe::deduplication_not_performed</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::dedupe::deduplication_not_performed</pre></summary><pre>
+self = <executor.Executor_.expand_calls.dedupe object at 0x7eadabaadb10>
+
+    def deduplication_not_performed(self):
+        task = _execute(invocation=["mytask", "mytask"])
+>       assert task.call_count == 2  # not 1
+E       AssertionError: assert 1 == 2
+E        +  where 1 = <Mock id='139284368796464'>.call_count
+
+tests/executor.py:124: AssertionError
+</pre>
+</details>
+<h3 id="executorpyexecutor_expand_callsparameterizealways_generates_connectioncall_with_host_attr">executor.py::Executor_::expand_calls::parameterize::always_generates_ConnectionCall_with_host_attr</h3>
+<details><summary> <pre>executor.py::Executor_::expand_calls::parameterize::always_generates_ConnectionCall_with_host_attr</pre></summary><pre>
+self = <executor.Executor_.expand_calls.parameterize object at 0x7eadabbbdff0>
+
+    def always_generates_ConnectionCall_with_host_attr(self):
+        task, executor = _get_executor(hosts_flag="host1,host2,host3")
+        calls = executor.expand_calls(calls=[Call(task)])
+>       assert len(calls) == 3
+E       AssertionError: assert 1 == 3
+E        +  where 1 = len([<Call <Mock name='mock.name' id='139284355596976'>, args: (), kwargs: {}>])
+
+tests/executor.py:130: AssertionError
+</pre>
+</details>
+<h3 id="runnerspyremote_needs_handle_on_a_connection">runners.py::Remote_::needs_handle_on_a_Connection</h3>
+<details><summary> <pre>runners.py::Remote_::needs_handle_on_a_Connection</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa1758a0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_ object at 0x7eadaa89dbd0>
+
+    def needs_handle_on_a_Connection(self):
+>       c = _Connection("host")
+
+tests/runners.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa1758a0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_envreplaces_when_replace_env_true">runners.py::Remote_::env::replaces_when_replace_env_True</h3>
+<details><summary> <pre>runners.py::Remote_::env::replaces_when_replace_env_True</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadac953550>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_.env object at 0x7eadaa89f460>, remote = None
+
+    def replaces_when_replace_env_True(self, remote):
+>       env = _runner().run(CMD, env={"JUST": "ME"}, replace_env=True).env
+
+tests/runners.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:22: in _runner
+    return Remote(context=_Connection("host"))
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadac953550>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_envaugments_when_replace_env_false">runners.py::Remote_::env::augments_when_replace_env_False</h3>
+<details><summary> <pre>runners.py::Remote_::env::augments_when_replace_env_False</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa164e50>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_.env object at 0x7eadaa89c400>, remote = None
+
+    def augments_when_replace_env_False(self, remote):
+>       env = _runner().run(CMD, env={"JUST": "ME"}, replace_env=False).env
+
+tests/runners.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:22: in _runner
+    return Remote(context=_Connection("host"))
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa164e50>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runcalls_expected_paramiko_bits">runners.py::Remote_::run::calls_expected_paramiko_bits</h3>
+<details><summary> <pre>runners.py::Remote_::run::calls_expected_paramiko_bits</pre></summary><pre>
+self = <runners.Remote_.run object at 0x7eadaa89c430>, remote = None
+
+    def calls_expected_paramiko_bits(self, remote):
+        # remote mocking makes generic safety checks like "were
+        # get_transport and open_session called", but we also want to make
+        # sure that exec_command got run with our arg to run().
+>       remote.expect(cmd=CMD)
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:48: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runwrites_remote_streams_to_local_streams">runners.py::Remote_::run::writes_remote_streams_to_local_streams</h3>
+<details><summary> <pre>runners.py::Remote_::run::writes_remote_streams_to_local_streams</pre></summary><pre>
+self = <runners.Remote_.run object at 0x7eadaa89d3f0>, remote = None
+
+    def writes_remote_streams_to_local_streams(self, remote):
+>       remote.expect(out=b"hello yes this is dog")
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:52: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runreturn_value_is_result_subclass_exposing_cxn_used">runners.py::Remote_::run::return_value_is_Result_subclass_exposing_cxn_used</h3>
+<details><summary> <pre>runners.py::Remote_::run::return_value_is_Result_subclass_exposing_cxn_used</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa824550>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_.run object at 0x7eadaa89ec80>, remote = None
+
+    def return_value_is_Result_subclass_exposing_cxn_used(self, remote):
+>       c = _Connection("host")
+
+tests/runners.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa824550>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runchannel_is_closed_normally">runners.py::Remote_::run::channel_is_closed_normally</h3>
+<details><summary> <pre>runners.py::Remote_::run::channel_is_closed_normally</pre></summary><pre>
+self = <runners.Remote_.run object at 0x7eadaa89cb20>, remote = None
+
+    def channel_is_closed_normally(self, remote):
+>       chan = remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:68: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runchannel_is_closed_on_body_exceptions">runners.py::Remote_::run::channel_is_closed_on_body_exceptions</h3>
+<details><summary> <pre>runners.py::Remote_::run::channel_is_closed_on_body_exceptions</pre></summary><pre>
+self = <runners.Remote_.run object at 0x7eadaa89d030>, remote = None
+
+    def channel_is_closed_on_body_exceptions(self, remote):
+>       chan = remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:74: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runstop_calls_super_correctly">runners.py::Remote_::run::stop_calls_super_correctly</h3>
+<details><summary> <pre>runners.py::Remote_::run::stop_calls_super_correctly</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa8db370>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_.run object at 0x7eadaa89eb90>, remote = None
+
+    def stop_calls_super_correctly(self, remote):
+        # RE: #2241
+        Runner.stop = Mock()
+>       _runner().run(CMD)
+
+tests/runners.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:22: in _runner
+    return Remote(context=_Connection("host"))
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa8db370>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runchannel_close_skipped_when_channel_not_even_made">runners.py::Remote_::run::channel_close_skipped_when_channel_not_even_made</h3>
+<details><summary> <pre>runners.py::Remote_::run::channel_close_skipped_when_channel_not_even_made</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab7b4820>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_.run object at 0x7eadaa89e170>
+
+    def channel_close_skipped_when_channel_not_even_made(self):
+        # I.e. if obtaining self.channel doesn't even happen (i.e. if
+        # Connection.create_session() dies), we need to account for that
+        # case...
+        class Oops(Exception):
+            pass
+
+        def oops():
+            raise Oops
+
+>       cxn = _Connection("host")
+
+tests/runners.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab7b4820>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runpty_trueuses_paramiko_get_pty_with_local_size">runners.py::Remote_::run::pty_True::uses_paramiko_get_pty_with_local_size</h3>
+<details><summary> <pre>runners.py::Remote_::run::pty_True::uses_paramiko_get_pty_with_local_size</pre></summary><pre>
+self = <runners.Remote_.run.pty_True object at 0x7eadaa89db10>, remote = None
+
+    def uses_paramiko_get_pty_with_local_size(self, remote):
+>       chan = remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:122: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runpty_trueno_sigwinch_means_no_handler">runners.py::Remote_::run::pty_True::no_SIGWINCH_means_no_handler</h3>
+<details><summary> <pre>runners.py::Remote_::run::pty_True::no_SIGWINCH_means_no_handler</pre></summary><pre>
+self = <runners.Remote_.run.pty_True object at 0x7eadaa89dc30>
+signal = <MagicMock name='signal' id='139284367765328'>, remote = None
+
+    @patch("fabric.runners.signal")
+    def no_SIGWINCH_means_no_handler(self, signal, remote):
+        delattr(signal, "SIGWINCH")
+>       remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:130: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runpty_truesigwinch_handled_when_present">runners.py::Remote_::run::pty_True::SIGWINCH_handled_when_present</h3>
+<details><summary> <pre>runners.py::Remote_::run::pty_True::SIGWINCH_handled_when_present</pre></summary><pre>
+self = <runners.Remote_.run.pty_True object at 0x7eadaa89dea0>
+signal = <MagicMock name='signal' id='139284368798624'>, remote = None
+
+    @patch("fabric.runners.signal")
+    def SIGWINCH_handled_when_present(self, signal, remote):
+>       remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:136: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runpty_truesigwinch_not_handled_in_subthreads">runners.py::Remote_::run::pty_True::SIGWINCH_not_handled_in_subthreads</h3>
+<details><summary> <pre>runners.py::Remote_::run::pty_True::SIGWINCH_not_handled_in_subthreads</pre></summary><pre>
+self = <runners.Remote_.run.pty_True object at 0x7eadaa89e410>
+threading = <MagicMock name='threading' id='139284370917408'>
+signal = <MagicMock name='signal' id='139284371189968'>, remote = None
+
+    @patch("fabric.runners.signal")
+    @patch("fabric.runners.threading")
+    def SIGWINCH_not_handled_in_subthreads(
+        self, threading, signal, remote
+    ):
+>       remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:153: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_runpty_truewindow_change_handler_uses_resize_pty">runners.py::Remote_::run::pty_True::window_change_handler_uses_resize_pty</h3>
+<details><summary> <pre>runners.py::Remote_::run::pty_True::window_change_handler_uses_resize_pty</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab7b5420>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_.run.pty_True object at 0x7eadaa89dd20>
+
+    def window_change_handler_uses_resize_pty(self):
+>       runner = _runner()
+
+tests/runners.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:22: in _runner
+    return Remote(context=_Connection("host"))
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab7b5420>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_startsends_env_to_paramiko_update_environment_by_default">runners.py::Remote_::start::sends_env_to_paramiko_update_environment_by_default</h3>
+<details><summary> <pre>runners.py::Remote_::start::sends_env_to_paramiko_update_environment_by_default</pre></summary><pre>
+self = <runners.Remote_.start object at 0x7eadaa89cc10>, remote = None
+
+    def sends_env_to_paramiko_update_environment_by_default(self, remote):
+>       chan = remote.expect()
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:180: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_startuses_export_prefixing_when_inline_env_is_true">runners.py::Remote_::start::uses_export_prefixing_when_inline_env_is_True</h3>
+<details><summary> <pre>runners.py::Remote_::start::uses_export_prefixing_when_inline_env_is_True</pre></summary><pre>
+self = <runners.Remote_.start object at 0x7eadaa89f760>, remote = None
+
+    def uses_export_prefixing_when_inline_env_is_True(self, remote):
+>       chan = remote.expect(
+            cmd="export DEBUG=1 PATH=/opt/bin && {}".format(CMD)
+        )
+E       AttributeError: 'NoneType' object has no attribute 'expect'
+
+tests/runners.py:185: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_send_start_message_sends_exec_command">runners.py::Remote_::send_start_message_sends_exec_command</h3>
+<details><summary> <pre>runners.py::Remote_::send_start_message_sends_exec_command</pre></summary><pre>
+self = <runners.Remote_ object at 0x7eadaa89ccd0>
+
+    def send_start_message_sends_exec_command(self):
+        runner = Remote(context=None)
+        runner.channel = Mock()
+>       runner.send_start_message(command="whatever")
+E       AttributeError: 'Remote' object has no attribute 'send_start_message'
+
+tests/runners.py:195: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremote_kill_closes_the_channel">runners.py::Remote_::kill_closes_the_channel</h3>
+<details><summary> <pre>runners.py::Remote_::kill_closes_the_channel</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa1ca8c0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {'run': {'in_stream': False}}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <runners.Remote_ object at 0x7eadaa89f4c0>
+
+    def kill_closes_the_channel(self):
+>       runner = _runner()
+
+tests/runners.py:199: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runners.py:22: in _runner
+    return Remote(context=_Connection("host"))
+tests/runners.py:18: in _Connection
+    return Connection(*args, **kwargs)
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: ['run']\n\nValid real attributes: ['clear...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa1ca8c0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: ['run']
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="runnerspyremoteshell_send_start_message_sends_invoke_shell">runners.py::RemoteShell_::send_start_message_sends_invoke_shell</h3>
+<details><summary> <pre>runners.py::RemoteShell_::send_start_message_sends_invoke_shell</pre></summary><pre>
+self = <runners.RemoteShell_ object at 0x7eadaa89fac0>
+
+    def send_start_message_sends_invoke_shell(self):
+        runner = RemoteShell(context=None)
+        runner.channel = Mock()
+>       runner.send_start_message(command=None)
+E       AttributeError: 'RemoteShell' object has no attribute 'send_start_message'
+
+tests/runners.py:209: AttributeError
+</pre>
+</details>
+<h3 id="taskpytask_accepts_invoke_level_kwargs">task.py::task_::accepts_Invoke_level_kwargs</h3>
+<details><summary> <pre>task.py::task_::accepts_Invoke_level_kwargs</pre></summary><pre>
+self = <task.task_ object at 0x7eadaa126aa0>
+
+    def accepts_Invoke_level_kwargs(self):
+        # Arbitrarily selected list of invoke-level kwargs...
+        def body(c, parts):
+            "I am a docstring"
+            pass
+
+        # Faux @task()
+>       t = fabric.task(
+            name="dadbod",
+            aliases=["heavenly", "check", "shop"],
+            default=True,
+            help={"parts": "See: the sum of"},
+            iterable=["parts"],
+        )(body)
+E       TypeError: 'NoneType' object is not callable
+
+tests/task.py:46: TypeError
+</pre>
+</details>
+<h3 id="taskpytask_returns_fabric_level_task_instance">task.py::task_::returns_Fabric_level_Task_instance</h3>
+<details><summary> <pre>task.py::task_::returns_Fabric_level_Task_instance</pre></summary><pre>
+self = <task.task_ object at 0x7eadaa126c50>
+
+    def returns_Fabric_level_Task_instance(self):
+>       assert isinstance(fabric.task(Mock()), fabric.Task)
+E       AssertionError: assert False
+E        +  where False = isinstance(None, <class 'fabric.tasks.Task'>)
+E        +    where None = <function task at 0x7eadab79acb0>(<Mock id='139284355111936'>)
+E        +      where <function task at 0x7eadab79acb0> = fabric.task
+E        +      and   <Mock id='139284355111936'> = Mock()
+E        +    and   <class 'fabric.tasks.Task'> = fabric.Task
+
+tests/task.py:62: AssertionError
+</pre>
+</details>
+<h3 id="taskpytask_does_not_touch_klass_kwarg_if_explicitly_given">task.py::task_::does_not_touch_klass_kwarg_if_explicitly_given</h3>
+<details><summary> <pre>task.py::task_::does_not_touch_klass_kwarg_if_explicitly_given</pre></summary><pre>
+self = <task.task_ object at 0x7eadaa127eb0>
+
+    def does_not_touch_klass_kwarg_if_explicitly_given(self):
+        # Otherwise sub-subclassers would be screwed, yea?
+        class SubFabTask(fabric.Task):
+            pass
+
+>       assert isinstance(fabric.task(klass=SubFabTask)(Mock()), SubFabTask)
+E       TypeError: 'NoneType' object is not callable
+
+tests/task.py:69: TypeError
+</pre>
+</details>
+<h3 id="taskpytask_hosts_kwargvalues_may_be_connection_first_posarg_strings">task.py::task_::hosts_kwarg::values_may_be_connection_first_posarg_strings</h3>
+<details><summary> <pre>task.py::task_::hosts_kwarg::values_may_be_connection_first_posarg_strings</pre></summary><pre>
+self = <task.task_.hosts_kwarg object at 0x7eadaa127c10>
+
+    def values_may_be_connection_first_posarg_strings(self):
+>       self._run(["host1", "user@host2", "host3:2222"])
+
+tests/task.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <task.task_.hosts_kwarg object at 0x7eadaa127c10>
+hosts = ['host1', 'user@host2', 'host3:2222']
+
+    def _run(self, hosts):
+        @fabric.task(hosts=hosts)
+>       def mytask(c):
+E       TypeError: 'NoneType' object is not callable
+
+tests/task.py:77: TypeError
+</pre>
+</details>
+<h3 id="taskpytask_hosts_kwargvalues_may_be_connection_constructor_kwarg_dicts">task.py::task_::hosts_kwarg::values_may_be_Connection_constructor_kwarg_dicts</h3>
+<details><summary> <pre>task.py::task_::hosts_kwarg::values_may_be_Connection_constructor_kwarg_dicts</pre></summary><pre>
+self = <task.task_.hosts_kwarg object at 0x7eadaa126560>
+
+    def values_may_be_Connection_constructor_kwarg_dicts(self):
+>       self._run(
+            [
+                {"host": "host1"},
+                {"host": "host2", "user": "user"},
+                {"host": "host3", "port": 2222},
+            ]
+        )
+
+tests/task.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <task.task_.hosts_kwarg object at 0x7eadaa126560>
+hosts = [{'host': 'host1'}, {'host': 'host2', 'user': 'user'}, {'host': 'host3', 'port': 2222}]
+
+    def _run(self, hosts):
+        @fabric.task(hosts=hosts)
+>       def mytask(c):
+E       TypeError: 'NoneType' object is not callable
+
+tests/task.py:77: TypeError
+</pre>
+</details>
+<h3 id="taskpytask_hosts_kwargvalues_may_be_mixed">task.py::task_::hosts_kwarg::values_may_be_mixed</h3>
+<details><summary> <pre>task.py::task_::hosts_kwarg::values_may_be_mixed</pre></summary><pre>
+self = <task.task_.hosts_kwarg object at 0x7eadaa127b50>
+
+    def values_may_be_mixed(self):
+>       self._run([{"host": "host1"}, "user@host2"])
+
+tests/task.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <task.task_.hosts_kwarg object at 0x7eadaa127b50>
+hosts = [{'host': 'host1'}, 'user@host2']
+
+    def _run(self, hosts):
+        @fabric.task(hosts=hosts)
+>       def mytask(c):
+E       TypeError: 'NoneType' object is not callable
+
+tests/task.py:77: TypeError
+</pre>
+</details>
+<h3 id="testingpymockremote_mocks_by_defaultprevents_real_ssh_connectivity_via_paramiko_guts">testing.py::MockRemote_::mocks_by_default::prevents_real_ssh_connectivity_via_paramiko_guts</h3>
+<details><summary> <pre>testing.py::MockRemote_::mocks_by_default::prevents_real_ssh_connectivity_via_paramiko_guts</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa76e950>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <testing.MockRemote_.mocks_by_default object at 0x7eadab4eb580>
+socket = <MagicMock name='socket' id='139284348027280'>
+
+    @patch("paramiko.transport.socket")
+    def prevents_real_ssh_connectivity_via_paramiko_guts(self, socket):
+        with MockRemote():
+>           cxn = Connection(host="host")
+
+tests/testing.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa76e950>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="testingpymockremote_mocks_by_defaultdoes_not_run_safety_checks_when_nothing_really_expected">testing.py::MockRemote_::mocks_by_default::does_not_run_safety_checks_when_nothing_really_expected</h3>
+<details><summary> <pre>testing.py::MockRemote_::mocks_by_default::does_not_run_safety_checks_when_nothing_really_expected</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa12b850>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <testing.MockRemote_.mocks_by_default object at 0x7eadab4ea470>
+
+    def does_not_run_safety_checks_when_nothing_really_expected(self):
+        with MockRemote():
+>           cxn = Connection(host="host")
+
+tests/testing.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa12b850>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="testingpymockremote_enable_sftpdoes_not_break_ssh_mocking">testing.py::MockRemote_::enable_sftp::does_not_break_ssh_mocking</h3>
+<details><summary> <pre>testing.py::MockRemote_::enable_sftp::does_not_break_ssh_mocking</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa76e980>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <testing.MockRemote_.enable_sftp object at 0x7eadab4e9cf0>
+
+    def does_not_break_ssh_mocking(self):
+        with MockRemote(enable_sftp=True) as mr:
+            mr.expect(cmd="whoami")
+>           cxn = Connection(host="whatevs")
+
+tests/testing.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa76e980>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="testingpymockremote_enable_sftpenables_per_session_sftp_mocks">testing.py::MockRemote_::enable_sftp::enables_per_session_sftp_mocks</h3>
+<details><summary> <pre>testing.py::MockRemote_::enable_sftp::enables_per_session_sftp_mocks</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab5186d0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <testing.MockRemote_.enable_sftp object at 0x7eadab4e9480>
+
+    def enables_per_session_sftp_mocks(self):
+        with MockRemote(enable_sftp=True) as mr:
+            mr.expect(
+                cmd="rm file",
+                transfers=[
+                    dict(
+                        method="put",
+                        localpath="/local/whatevs",
+                        remotepath="/remote/whatevs",
+                    )
+                ],
+            )
+>           cxn = Connection(host="host")
+
+tests/testing.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab5186d0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="testingpymockremote_enable_sftpsafety_checks_work">testing.py::MockRemote_::enable_sftp::safety_checks_work</h3>
+<details><summary> <pre>testing.py::MockRemote_::enable_sftp::safety_checks_work</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa174550>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <testing.MockRemote_.enable_sftp object at 0x7eadab4eb340>
+
+    def safety_checks_work(self):
+        with raises(AssertionError, match=r"put(.*whatevs)"):
+            with MockRemote(enable_sftp=True) as mr:
+                mr.expect(
+                    transfers=[
+                        dict(
+                            method="put",
+                            localpath="/local/whatevs",
+                            remotepath="/remote/whatevs",
+                        )
+                    ],
+                )
+>               cxn = Connection(host="host")
+
+tests/testing.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa174550>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_initrequires_connection">transfer.py::Transfer_::init::requires_connection</h3>
+<details><summary> <pre>transfer.py::Transfer_::init::requires_connection</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab77afb0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <transfer.Transfer_.init object at 0x7eadaa958730>
+
+    def requires_connection(self):
+        # Transfer() -> explodes
+        try:
+            Transfer()
+        except TypeError:
+            pass
+        else:
+            assert False, "Did not raise ArgumentError"
+        # Transfer(Connection()) -> happy, exposes an attribute
+>       cxn = Connection("host")
+
+tests/transfer.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadab77afb0>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_is_remote_dirreturns_bool_of_stat_isdir_flag">transfer.py::Transfer_::is_remote_dir::returns_bool_of_stat_ISDIR_flag</h3>
+<details><summary> <pre>transfer.py::Transfer_::is_remote_dir::returns_bool_of_stat_ISDIR_flag</pre></summary><pre>
+self = <transfer.Transfer_.is_remote_dir object at 0x7eadaa958130>
+sftp_objs = None
+
+    def returns_bool_of_stat_ISDIR_flag(self, sftp_objs):
+>       xfer, sftp = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:33: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_is_remote_dirreturns_false_if_stat_raises_ioerror">transfer.py::Transfer_::is_remote_dir::returns_False_if_stat_raises_IOError</h3>
+<details><summary> <pre>transfer.py::Transfer_::is_remote_dir::returns_False_if_stat_raises_IOError</pre></summary><pre>
+self = <transfer.Transfer_.is_remote_dir object at 0x7eadaa959c30>
+sftp_objs = None
+
+    def returns_False_if_stat_raises_IOError(self, sftp_objs):
+>       xfer, sftp = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:41: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getbasicsaccepts_single_remote_path_posarg">transfer.py::Transfer_::get::basics::accepts_single_remote_path_posarg</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::basics::accepts_single_remote_path_posarg</pre></summary><pre>
+self = <transfer.Transfer_.get.basics object at 0x7eadaa95a860>
+sftp_objs = None
+
+    def accepts_single_remote_path_posarg(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:48: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getbasicsaccepts_local_and_remote_kwargs">transfer.py::Transfer_::get::basics::accepts_local_and_remote_kwargs</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::basics::accepts_local_and_remote_kwargs</pre></summary><pre>
+self = <transfer.Transfer_.get.basics object at 0x7eadaa95a380>
+sftp_objs = None
+
+    def accepts_local_and_remote_kwargs(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:55: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getbasicsreturns_rich_result_object">transfer.py::Transfer_::get::basics::returns_rich_Result_object</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::basics::returns_rich_Result_object</pre></summary><pre>
+self = <transfer.Transfer_.get.basics object at 0x7eadaa95a740>
+sftp_objs = None
+
+    def returns_rich_Result_object(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:62: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getpath_arg_edge_caseslocal_none_uses_remote_filename">transfer.py::Transfer_::get::path_arg_edge_cases::local_None_uses_remote_filename</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::path_arg_edge_cases::local_None_uses_remote_filename</pre></summary><pre>
+self = <transfer.Transfer_.get.path_arg_edge_cases object at 0x7eadaa9591b0>
+transfer = None
+
+    def local_None_uses_remote_filename(self, transfer):
+>       assert transfer.get("file").local == "/local/file"
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:75: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getpath_arg_edge_caseslocal_empty_string_uses_remote_filename">transfer.py::Transfer_::get::path_arg_edge_cases::local_empty_string_uses_remote_filename</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::path_arg_edge_cases::local_empty_string_uses_remote_filename</pre></summary><pre>
+self = <transfer.Transfer_.get.path_arg_edge_cases object at 0x7eadaa95bb80>
+transfer = None
+
+    def local_empty_string_uses_remote_filename(self, transfer):
+>       assert transfer.get("file", local="").local == "/local/file"
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:78: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getpath_arg_edge_casesremote_arg_is_required">transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_is_required</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_is_required</pre></summary><pre>
+self = <transfer.Transfer_.get.path_arg_edge_cases object at 0x7eadaa95a710>
+transfer = None
+
+    @raises(TypeError)
+    def remote_arg_is_required(self, transfer):
+>       transfer.get()
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:82: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getpath_arg_edge_casesremote_arg_cannot_be_none">transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_cannot_be_None</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_cannot_be_None</pre></summary><pre>
+self = <transfer.Transfer_.get.path_arg_edge_cases object at 0x7eadaa95bbb0>
+transfer = None
+
+    @raises(ValueError)
+    def remote_arg_cannot_be_None(self, transfer):
+>       transfer.get(None)
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:86: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getpath_arg_edge_casesremote_arg_cannot_be_empty_string">transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_cannot_be_empty_string</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::path_arg_edge_cases::remote_arg_cannot_be_empty_string</pre></summary><pre>
+self = <transfer.Transfer_.get.path_arg_edge_cases object at 0x7eadaa958d30>
+transfer = None
+
+    @raises(ValueError)
+    def remote_arg_cannot_be_empty_string(self, transfer):
+>       transfer.get("")
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:90: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getlocal_arg_interpolationconnection_params">transfer.py::Transfer_::get::local_arg_interpolation::connection_params</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::local_arg_interpolation::connection_params</pre></summary><pre>
+self = <transfer.Transfer_.get.local_arg_interpolation object at 0x7eadaa9581f0>
+transfer = None
+
+    def connection_params(self, transfer):
+>       result = transfer.get("somefile", "{user}@{host}-{port}")
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:94: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getlocal_arg_interpolationconnection_params_as_dir">transfer.py::Transfer_::get::local_arg_interpolation::connection_params_as_dir</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::local_arg_interpolation::connection_params_as_dir</pre></summary><pre>
+self = <transfer.Transfer_.get.local_arg_interpolation object at 0x7eadaa958370>
+transfer = None
+
+    def connection_params_as_dir(self, transfer):
+>       result = transfer.get("somefile", "{host}/")
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:99: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getlocal_arg_interpolationremote_path_posixpath_bits">transfer.py::Transfer_::get::local_arg_interpolation::remote_path_posixpath_bits</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::local_arg_interpolation::remote_path_posixpath_bits</pre></summary><pre>
+self = <transfer.Transfer_.get.local_arg_interpolation object at 0x7eadaa958160>
+transfer = None
+
+    def remote_path_posixpath_bits(self, transfer):
+>       result = transfer.get(
+            "parent/mid/leaf", "foo/{dirname}/bar/{basename}"
+        )
+E       AttributeError: 'NoneType' object has no attribute 'get'
+
+tests/transfer.py:103: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getfile_like_local_pathsremote_path_to_local_stringio">transfer.py::Transfer_::get::file_like_local_paths::remote_path_to_local_StringIO</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::file_like_local_paths::remote_path_to_local_StringIO</pre></summary><pre>
+self = <transfer.Transfer_.get.file_like_local_paths object at 0x7eadaa95b760>
+sftp_objs = None
+
+    def remote_path_to_local_StringIO(self, sftp_objs):
+>       self._get_to_stringio(sftp_objs)
+
+tests/transfer.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <transfer.Transfer_.get.file_like_local_paths object at 0x7eadaa95b760>
+sftp_objs = None
+
+    def _get_to_stringio(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:114: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getfile_like_local_pathsresult_contains_fd_for_local_path">transfer.py::Transfer_::get::file_like_local_paths::result_contains_fd_for_local_path</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::file_like_local_paths::result_contains_fd_for_local_path</pre></summary><pre>
+self = <transfer.Transfer_.get.file_like_local_paths object at 0x7eadaa959db0>
+sftp_objs = None
+
+    def result_contains_fd_for_local_path(self, sftp_objs):
+>       result, fd = self._get_to_stringio(sftp_objs)
+
+tests/transfer.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <transfer.Transfer_.get.file_like_local_paths object at 0x7eadaa959db0>
+sftp_objs = None
+
+    def _get_to_stringio(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:114: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getmode_concernspreserves_remote_mode_by_default">transfer.py::Transfer_::get::mode_concerns::preserves_remote_mode_by_default</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::mode_concerns::preserves_remote_mode_by_default</pre></summary><pre>
+self = <transfer.Transfer_.get.mode_concerns object at 0x7eadaa959de0>
+sftp = None
+
+    def preserves_remote_mode_by_default(self, sftp):
+>       transfer, client, mock_os = sftp
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:137: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getmode_concernsallows_disabling_remote_mode_preservation">transfer.py::Transfer_::get::mode_concerns::allows_disabling_remote_mode_preservation</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::mode_concerns::allows_disabling_remote_mode_preservation</pre></summary><pre>
+self = <transfer.Transfer_.get.mode_concerns object at 0x7eadaa95a7a0>
+sftp = None
+
+    def allows_disabling_remote_mode_preservation(self, sftp):
+>       transfer, client, mock_os = sftp
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:146: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getlocal_directory_creationwithout_trailing_slash_means_leaf_file">transfer.py::Transfer_::get::local_directory_creation::without_trailing_slash_means_leaf_file</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::local_directory_creation::without_trailing_slash_means_leaf_file</pre></summary><pre>
+self = <transfer.Transfer_.get.local_directory_creation object at 0x7eadaa95a650>
+Path = <MagicMock name='Path' id='139284367755920'>, sftp_objs = None
+
+    @patch("fabric.transfer.Path")
+    def without_trailing_slash_means_leaf_file(self, Path, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:154: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_getlocal_directory_creationwith_trailing_slash_means_mkdir_entire_arg">transfer.py::Transfer_::get::local_directory_creation::with_trailing_slash_means_mkdir_entire_arg</h3>
+<details><summary> <pre>transfer.py::Transfer_::get::local_directory_creation::with_trailing_slash_means_mkdir_entire_arg</pre></summary><pre>
+self = <transfer.Transfer_.get.local_directory_creation object at 0x7eadaa9583a0>
+Path = <MagicMock name='Path' id='139284355847200'>, sftp_objs = None
+
+    @patch("fabric.transfer.Path")
+    def with_trailing_slash_means_mkdir_entire_arg(
+        self, Path, sftp_objs
+    ):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:169: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putbasicsaccepts_single_local_path_posarg">transfer.py::Transfer_::put::basics::accepts_single_local_path_posarg</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::basics::accepts_single_local_path_posarg</pre></summary><pre>
+self = <transfer.Transfer_.put.basics object at 0x7eadaa95b100>
+sftp_objs = None
+
+    def accepts_single_local_path_posarg(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:183: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putbasicsaccepts_local_and_remote_kwargs">transfer.py::Transfer_::put::basics::accepts_local_and_remote_kwargs</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::basics::accepts_local_and_remote_kwargs</pre></summary><pre>
+self = <transfer.Transfer_.put.basics object at 0x7eadaa9593c0>
+sftp_objs = None
+
+    def accepts_local_and_remote_kwargs(self, sftp_objs):
+>       transfer, sftp = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:190: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putbasicsreturns_rich_result_object">transfer.py::Transfer_::put::basics::returns_rich_Result_object</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::basics::returns_rich_Result_object</pre></summary><pre>
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa125600>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+>           return self._get(key)
+
+.venv/lib/python3.10/site-packages/invoke/config.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/invoke/config.py:177: in _get
+    value = self._config[key]
+.venv/lib/python3.10/site-packages/invoke/config.py:168: in __getitem__
+    return self._get(key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Config: {}>, key = 'derive_shorthand'
+
+    def _get(self, key: str) -> Any:
+        # Short-circuit if pickling/copying mechanisms are asking if we've got
+        # __setstate__ etc; they'll ask this w/o calling our __init__ first, so
+        # we'd be in a RecursionError-causing catch-22 otherwise.
+        if key in ("__setstate__",):
+            raise AttributeError(key)
+        # At this point we should be able to assume a self._config...
+>       value = self._config[key]
+E       KeyError: 'derive_shorthand'
+
+.venv/lib/python3.10/site-packages/invoke/config.py:177: KeyError
+
+During handling of the above exception, another exception occurred:
+
+self = <transfer.Transfer_.put.basics object at 0x7eadaa959ba0>, transfer = None
+
+    def returns_rich_Result_object(self, transfer):
+>       cxn = Connection("host")
+
+tests/transfer.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+fabric/connection.py:317: in __init__
+    shorthand = self.derive_shorthand(host)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("No attribute or config key found for 'user'\n\nValid keys: []\n\nValid real attributes: ['clear', 'c...runtime_path', 'set_runtime_ssh_path', 'setdefault', 'update']") raised in repr()] Connection object at 0x7eadaa125600>
+key = 'derive_shorthand'
+
+    def __getattr__(self, key: str) -> Any:
+        # NOTE: due to default Python attribute-lookup semantics, "real"
+        # attributes will always be yielded on attribute access and this method
+        # is skipped. That behavior is good for us (it's more intuitive than
+        # having a config key accidentally shadow a real attribute or method).
+        try:
+            return self._get(key)
+        except KeyError:
+            # Proxy most special vars to config for dict procotol.
+            if key in self._proxies:
+                return getattr(self._config, key)
+            # Otherwise, raise useful AttributeError to follow getattr proto.
+            err = "No attribute or config key found for {!r}".format(key)
+            attrs = [x for x in dir(self.__class__) if not x.startswith("_")]
+            err += "\n\nValid keys: {!r}".format(
+                sorted(list(self._config.keys()))
+            )
+            err += "\n\nValid real attributes: {!r}".format(attrs)
+>           raise AttributeError(err)
+E           AttributeError: No attribute or config key found for 'derive_shorthand'
+E           
+E           Valid keys: []
+E           
+E           Valid real attributes: ['cd', 'clear', 'client', 'close', 'config', 'connect_kwargs', 'connect_timeout', 'cwd', 'forward_agent', 'forward_local', 'forward_remote', 'from_data', 'from_v1', 'gateway', 'get', 'host', 'is_connected', 'local', 'open', 'open_gateway', 'original_host', 'pop', 'popitem', 'port', 'prefix', 'put', 'run', 'setdefault', 'sftp', 'shell', 'ssh_config', 'sudo', 'transport', 'update', 'user']
+
+.venv/lib/python3.10/site-packages/invoke/config.py:129: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putremote_end_is_directoryappends_local_file_basename">transfer.py::Transfer_::put::remote_end_is_directory::appends_local_file_basename</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::remote_end_is_directory::appends_local_file_basename</pre></summary><pre>
+self = <transfer.Transfer_.put.remote_end_is_directory object at 0x7eadaa95a3b0>
+sftp_objs = None
+
+    def appends_local_file_basename(self, sftp_objs):
+>       xfer, sftp = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:210: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putremote_end_is_directoryfile_like_local_objectsname_attribute_present_appends_like_basename">transfer.py::Transfer_::put::remote_end_is_directory::file_like_local_objects::name_attribute_present_appends_like_basename</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::remote_end_is_directory::file_like_local_objects::name_attribute_present_appends_like_basename</pre></summary><pre>
+self = <transfer.Transfer_.put.remote_end_is_directory.file_like_local_objects object at 0x7eadaa959030>
+sftp_objs = None
+
+    def name_attribute_present_appends_like_basename(
+        self, sftp_objs
+    ):
+>       xfer, sftp = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:223: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putremote_end_is_directoryfile_like_local_objectsno_name_attribute_raises_valueerror">transfer.py::Transfer_::put::remote_end_is_directory::file_like_local_objects::no_name_attribute_raises_ValueError</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::remote_end_is_directory::file_like_local_objects::no_name_attribute_raises_ValueError</pre></summary><pre>
+self = <transfer.Transfer_.put.remote_end_is_directory.file_like_local_objects object at 0x7eadaa958bb0>
+sftp_objs = None
+
+    @raises(ValueError)
+    def no_name_attribute_raises_ValueError(self, sftp_objs):
+>       xfer, sftp = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:234: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putpath_arg_edge_casesremote_none_uses_local_filename">transfer.py::Transfer_::put::path_arg_edge_cases::remote_None_uses_local_filename</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::path_arg_edge_cases::remote_None_uses_local_filename</pre></summary><pre>
+self = <transfer.Transfer_.put.path_arg_edge_cases object at 0x7eadaa95a020>
+transfer = None
+
+    def remote_None_uses_local_filename(self, transfer):
+>       assert transfer.put("file").remote == "/remote/file"
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:241: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putpath_arg_edge_casesremote_empty_string_uses_local_filename">transfer.py::Transfer_::put::path_arg_edge_cases::remote_empty_string_uses_local_filename</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::path_arg_edge_cases::remote_empty_string_uses_local_filename</pre></summary><pre>
+self = <transfer.Transfer_.put.path_arg_edge_cases object at 0x7eadaa95b940>
+transfer = None
+
+    def remote_empty_string_uses_local_filename(self, transfer):
+>       assert transfer.put("file", remote="").remote == "/remote/file"
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:244: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putpath_arg_edge_casesremote_cant_be_empty_if_local_file_like">transfer.py::Transfer_::put::path_arg_edge_cases::remote_cant_be_empty_if_local_file_like</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::path_arg_edge_cases::remote_cant_be_empty_if_local_file_like</pre></summary><pre>
+self = <transfer.Transfer_.put.path_arg_edge_cases object at 0x7eadaa958cd0>
+transfer = None
+
+    @raises(ValueError)
+    def remote_cant_be_empty_if_local_file_like(self, transfer):
+>       transfer.put(StringIO())
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:248: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putpath_arg_edge_caseslocal_arg_is_required">transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_is_required</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_is_required</pre></summary><pre>
+self = <transfer.Transfer_.put.path_arg_edge_cases object at 0x7eadaba400a0>
+transfer = None
+
+    @raises(TypeError)
+    def local_arg_is_required(self, transfer):
+>       transfer.put()
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:252: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putpath_arg_edge_caseslocal_arg_cannot_be_none">transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_cannot_be_None</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_cannot_be_None</pre></summary><pre>
+self = <transfer.Transfer_.put.path_arg_edge_cases object at 0x7eadaba41b10>
+transfer = None
+
+    @raises(ValueError)
+    def local_arg_cannot_be_None(self, transfer):
+>       transfer.put(None)
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:256: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putpath_arg_edge_caseslocal_arg_cannot_be_empty_string">transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_cannot_be_empty_string</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::path_arg_edge_cases::local_arg_cannot_be_empty_string</pre></summary><pre>
+self = <transfer.Transfer_.put.path_arg_edge_cases object at 0x7eadaba42da0>
+transfer = None
+
+    @raises(ValueError)
+    def local_arg_cannot_be_empty_string(self, transfer):
+>       transfer.put("")
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:260: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putfile_like_local_pathsremote_path_from_local_stringio">transfer.py::Transfer_::put::file_like_local_paths::remote_path_from_local_StringIO</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::file_like_local_paths::remote_path_from_local_StringIO</pre></summary><pre>
+self = <transfer.Transfer_.put.file_like_local_paths object at 0x7eadaba42f50>
+sftp_objs = None
+
+    def remote_path_from_local_StringIO(self, sftp_objs):
+>       self._put_from_stringio(sftp_objs)
+
+tests/transfer.py:276: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <transfer.Transfer_.put.file_like_local_paths object at 0x7eadaba42f50>
+sftp_objs = None
+
+    def _put_from_stringio(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:266: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putfile_like_local_pathslocal_flos_are_rewound_before_putting">transfer.py::Transfer_::put::file_like_local_paths::local_FLOs_are_rewound_before_putting</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::file_like_local_paths::local_FLOs_are_rewound_before_putting</pre></summary><pre>
+self = <transfer.Transfer_.put.file_like_local_paths object at 0x7eadaba42800>
+transfer = None
+
+    def local_FLOs_are_rewound_before_putting(self, transfer):
+        fd = Mock()
+        fd.tell.return_value = 17
+>       transfer.put(fd, remote="file")
+E       AttributeError: 'NoneType' object has no attribute 'put'
+
+tests/transfer.py:281: AttributeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putfile_like_local_pathsresult_contains_fd_for_local_path">transfer.py::Transfer_::put::file_like_local_paths::result_contains_fd_for_local_path</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::file_like_local_paths::result_contains_fd_for_local_path</pre></summary><pre>
+self = <transfer.Transfer_.put.file_like_local_paths object at 0x7eadaba43be0>
+sftp_objs = None
+
+    def result_contains_fd_for_local_path(self, sftp_objs):
+>       result, fd = self._put_from_stringio(sftp_objs)
+
+tests/transfer.py:286: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <transfer.Transfer_.put.file_like_local_paths object at 0x7eadaba43be0>
+sftp_objs = None
+
+    def _put_from_stringio(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:266: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putmode_concernspreserves_local_mode_by_default">transfer.py::Transfer_::put::mode_concerns::preserves_local_mode_by_default</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::mode_concerns::preserves_local_mode_by_default</pre></summary><pre>
+self = <transfer.Transfer_.put.mode_concerns object at 0x7eadaba40880>
+sftp = None
+
+    def preserves_local_mode_by_default(self, sftp):
+>       transfer, client, mock_os = sftp
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:292: TypeError
+</pre>
+</details>
+<h3 id="transferpytransfer_putmode_concernsallows_disabling_local_mode_preservation">transfer.py::Transfer_::put::mode_concerns::allows_disabling_local_mode_preservation</h3>
+<details><summary> <pre>transfer.py::Transfer_::put::mode_concerns::allows_disabling_local_mode_preservation</pre></summary><pre>
+self = <transfer.Transfer_.put.mode_concerns object at 0x7eadaba403a0>
+sftp_objs = None
+
+    def allows_disabling_local_mode_preservation(self, sftp_objs):
+>       transfer, client = sftp_objs
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/transfer.py:299: TypeError
+</pre>
+</details>
+<h3 id="utilpyget_local_user_defaults_to_getpass_getuser">util.py::get_local_user_::defaults_to_getpass_getuser</h3>
+<details><summary> <pre>util.py::get_local_user_::defaults_to_getpass_getuser</pre></summary><pre>
+self = <util.get_local_user_ object at 0x7eadaba43310>
+getuser = <MagicMock name='getuser' id='139284349466320'>
+
+    @patch("getpass.getuser")
+    def defaults_to_getpass_getuser(self, getuser):
+        "defaults to getpass.getuser"
+        get_local_user()
+>       getuser.assert_called_once_with()
+
+tests/util.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='getuser' id='139284349466320'>, args = (), kwargs = {}
+msg = "Expected 'getuser' to be called once. Called 0 times."
+
+    def assert_called_once_with(self, /, *args, **kwargs):
+        """assert that the mock was called exactly once and that that call was
+        with the specified arguments."""
+        if not self.call_count == 1:
+            msg = ("Expected '%s' to be called once. Called %s times.%s"
+                   % (self._mock_name or 'mock',
+                      self.call_count,
+                      self._calls_repr()))
+>           raise AssertionError(msg)
+E           AssertionError: Expected 'getuser' to be called once. Called 0 times.
+
+/usr/lib/python3.10/unittest/mock.py:940: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/fabric/connection.py b/fabric/connection.py</span>
+<span class="gh">index b00bf937..96d8bc7a 100644</span>
+<span class="gd">--- a/fabric/connection.py</span>
+<span class="gi">+++ b/fabric/connection.py</span>
+<span class="gu">@@ -125,7 +125,36 @@ class Connection(Context):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.4
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # Sanity check</span>
+<span class="gi">+        if not hasattr(env, &#39;get&#39;):</span>
+<span class="gi">+            raise InvalidV1Env(&quot;&#39;env&#39; must be a dict-like object!&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Map v1 settings to v2 kwargs</span>
+<span class="gi">+        settings = {}</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Host connection settings</span>
+<span class="gi">+        if env.get(&#39;host_string&#39;):</span>
+<span class="gi">+            settings[&#39;host&#39;] = env[&#39;host_string&#39;]</span>
+<span class="gi">+        if env.get(&#39;user&#39;):</span>
+<span class="gi">+            settings[&#39;user&#39;] = env[&#39;user&#39;]</span>
+<span class="gi">+        if env.get(&#39;port&#39;):</span>
+<span class="gi">+            settings[&#39;port&#39;] = env[&#39;port&#39;]</span>
+<span class="gi">+        </span>
+<span class="gi">+        # SSH settings</span>
+<span class="gi">+        if env.get(&#39;key_filename&#39;):</span>
+<span class="gi">+            settings[&#39;connect_kwargs&#39;] = {&#39;key_filename&#39;: env[&#39;key_filename&#39;]}</span>
+<span class="gi">+        if env.get(&#39;forward_agent&#39;):</span>
+<span class="gi">+            settings[&#39;forward_agent&#39;] = env[&#39;forward_agent&#39;]</span>
+<span class="gi">+        if env.get(&#39;gateway&#39;):</span>
+<span class="gi">+            settings[&#39;gateway&#39;] = env[&#39;gateway&#39;]</span>
+<span class="gi">+        if env.get(&#39;connect_timeout&#39;):</span>
+<span class="gi">+            settings[&#39;connect_timeout&#39;] = env[&#39;connect_timeout&#39;]</span>
+<span class="gi">+</span>
+<span class="gi">+        # Update with any explicit kwargs</span>
+<span class="gi">+        settings.update(kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Create &amp; return</span>
+<span class="gi">+        return cls(**settings)</span>
+
+<span class="w"> </span>    def __init__(self, host, user=None, port=None, config=None, gateway=None, forward_agent=None, connect_timeout=None, connect_kwargs=None, inline_ssh_env=None):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -355,7 +384,7 @@ class Connection(Context):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.transport is not None and self.transport.active</span>
+
+<span class="w"> </span>    def open(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -380,7 +409,32 @@ class Connection(Context):</span>
+<span class="w"> </span>            Now returns the inner Paramiko connect call&#39;s return value instead
+<span class="w"> </span>            of always returning the implicit ``None``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.is_connected:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+        # Set up gateway if needed</span>
+<span class="gi">+        sock = None</span>
+<span class="gi">+        if self.gateway:</span>
+<span class="gi">+            sock = self.open_gateway()</span>
+<span class="gi">+</span>
+<span class="gi">+        # Connect!</span>
+<span class="gi">+        connect_kwargs = dict(</span>
+<span class="gi">+            hostname=self.host,</span>
+<span class="gi">+            port=int(self.port),</span>
+<span class="gi">+            username=self.user,</span>
+<span class="gi">+            timeout=self.connect_timeout,</span>
+<span class="gi">+            sock=sock,</span>
+<span class="gi">+            **self.connect_kwargs</span>
+<span class="gi">+        )</span>
+<span class="gi">+</span>
+<span class="gi">+        result = self.client.connect(**connect_kwargs)</span>
+<span class="gi">+        self.transport = self.client.get_transport()</span>
+<span class="gi">+</span>
+<span class="gi">+        # Set up agent forwarding if requested</span>
+<span class="gi">+        if self.forward_agent:</span>
+<span class="gi">+            self._agent_handler = AgentRequestHandler(self.transport.get_channel(&quot;session&quot;, timeout=self.connect_timeout))</span>
+<span class="gi">+</span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def open_gateway(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -393,7 +447,19 @@ class Connection(Context):</span>
+
+<span class="w"> </span>        .. versionadded:: 2.0
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(self.gateway, str):</span>
+<span class="gi">+            # ProxyCommand</span>
+<span class="gi">+            return ProxyCommand(self.gateway)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # Jump host</span>
+<span class="gi">+            if not self.gateway.is_connected:</span>
+<span class="gi">+                self.gateway.open()</span>
+<span class="gi">+            chan = self.gateway.transport.open_channel(</span>
+<span class="gi">+                &#39;direct-tcpip&#39;,</span>
+<span class="gi">+                (self.host, self.port),</span>
+<span class="gi">+                (&#39;&#39;, 0)</span>
+<span class="gi">+            )</span>
+<span class="gi">+            return chan</span>
+
+<span class="w"> </span>    def close(self):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -407,7 +473,21 @@ class Connection(Context):</span>
+<span class="w"> </span>        .. versionchanged:: 3.0
+<span class="w"> </span>            Now closes SFTP sessions too (2.x required manually doing so).
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._sftp is not None:</span>
+<span class="gi">+            self._sftp.close()</span>
+<span class="gi">+            self._sftp = None</span>
+<span class="gi">+</span>
+<span class="gi">+        if self._agent_handler is not None:</span>
+<span class="gi">+            self._agent_handler.close()</span>
+<span class="gi">+            self._agent_handler = None</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.transport is not None:</span>
+<span class="gi">+            self.transport.close()</span>
+<span class="gi">+            self.transport = None</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.client is not None:</span>
+<span class="gi">+            self.client.close()</span>
+<span class="gi">+            self.client = None</span>
+
+<span class="w"> </span>    def __enter__(self):
+<span class="w"> </span>        return self
+<span class="gu">@@ -415,8 +495,28 @@ class Connection(Context):</span>
+<span class="w"> </span>    def __exit__(self, *exc):
+<span class="w"> </span>        self.close()
+
+<span class="gd">-    @opens</span>
+<span class="w"> </span>    def run(self, command, **kwargs):
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Execute a remote command.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param str command: The command to run.</span>
+<span class="gi">+        :param kwargs: Additional keyword arguments to pass to `invoke.context.Context.run`.</span>
+<span class="gi">+</span>
+<span class="gi">+        :returns: The result of the command execution.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if not self.is_connected:</span>
+<span class="gi">+            self.open()</span>
+<span class="gi">+        channel = self.transport.open_session()</span>
+<span class="gi">+        channel.settimeout(self.connect_timeout)</span>
+<span class="gi">+        channel.exec_command(command)</span>
+<span class="gi">+        stdout = channel.makefile(&#39;r&#39;)</span>
+<span class="gi">+        stderr = channel.makefile_stderr(&#39;r&#39;)</span>
+<span class="gi">+        status = channel.recv_exit_status()</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &#39;stdout&#39;: stdout.read(),</span>
+<span class="gi">+            &#39;stderr&#39;: stderr.read(),</span>
+<span class="gi">+            &#39;status&#39;: status</span>
+<span class="gi">+        }</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Execute a shell command on the remote end of this connection.
+
+<span class="gu">@@ -432,8 +532,19 @@ class Connection(Context):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gd">-    @opens</span>
+<span class="w"> </span>    def sudo(self, command, **kwargs):
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Execute a command with sudo.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param str command: The command to run with sudo.</span>
+<span class="gi">+        :param kwargs: Additional keyword arguments to pass to `run`.</span>
+<span class="gi">+</span>
+<span class="gi">+        :returns: The result of the command execution.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if not self.is_connected:</span>
+<span class="gi">+            self.open()</span>
+<span class="gi">+        sudo_command = f&quot;sudo {command}&quot;</span>
+<span class="gi">+        return self.run(sudo_command, **kwargs)</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Execute a shell command, via ``sudo``, on the remote end.
+
+<span class="gu">@@ -446,9 +557,36 @@ class Connection(Context):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gd">-    @opens</span>
+<span class="w"> </span>    def shell(self, **kwargs):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gi">+        Open an interactive shell session on the remote end.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param kwargs: Additional keyword arguments to pass to the shell.</span>
+<span class="gi">+</span>
+<span class="gi">+        :returns: None</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if not self.is_connected:</span>
+<span class="gi">+            self.open()</span>
+<span class="gi">+        channel = self.transport.open_session()</span>
+<span class="gi">+        channel.get_pty(**kwargs)</span>
+<span class="gi">+        channel.invoke_shell()</span>
+<span class="gi">+        channel.settimeout(None)  # Disable timeout for interactive shell</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Forward stdin/stdout</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            while True:</span>
+<span class="gi">+                if channel.recv_ready():</span>
+<span class="gi">+                    data = channel.recv(1024)</span>
+<span class="gi">+                    if not data:</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    print(data.decode(), end=&#39;&#39;, flush=True)</span>
+<span class="gi">+                if channel.exit_status_ready():</span>
+<span class="gi">+                    break</span>
+<span class="gi">+        except KeyboardInterrupt:</span>
+<span class="gi">+            channel.close()</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            channel.close()</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="w"> </span>        Run an interactive login shell on the remote end, as with ``ssh``.
+
+<span class="w"> </span>        This method is intended strictly for use cases where you can&#39;t know
+<span class="gu">@@ -519,8 +657,19 @@ class Connection(Context):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gd">-    @opens</span>
+<span class="w"> </span>    def sftp(self):
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Return a new SFTP session object.</span>
+<span class="gi">+</span>
+<span class="gi">+        The session object is a wrapper around Paramiko&#39;s SFTPClient class.</span>
+<span class="gi">+</span>
+<span class="gi">+        :returns: A new SFTP session object.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if not self.is_connected:</span>
+<span class="gi">+            self.open()</span>
+<span class="gi">+        if self._sftp is None:</span>
+<span class="gi">+            self._sftp = self.transport.open_sftp_client()</span>
+<span class="gi">+        return self._sftp</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Return a `~paramiko.sftp_client.SFTPClient` object.
+
+<span class="gu">@@ -556,8 +705,28 @@ class Connection(Context):</span>
+<span class="w"> </span>        pass
+
+<span class="w"> </span>    @contextmanager
+<span class="gd">-    @opens</span>
+<span class="w"> </span>    def forward_local(self, local_port, remote_port=None, remote_host=&#39;localhost&#39;, local_host=&#39;localhost&#39;):
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Create a local port forward.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param local_port: Local port to forward.</span>
+<span class="gi">+        :param remote_port: Remote port to forward to (defaults to local_port).</span>
+<span class="gi">+        :param remote_host: Remote host to forward to (defaults to &#39;localhost&#39;).</span>
+<span class="gi">+        :param local_host: Local interface to bind to (defaults to &#39;localhost&#39;).</span>
+<span class="gi">+</span>
+<span class="gi">+        :returns: A new `~paramiko.channel.Channel` object.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if not self.is_connected:</span>
+<span class="gi">+            self.open()</span>
+<span class="gi">+        if remote_port is None:</span>
+<span class="gi">+            remote_port = local_port</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.transport.request_port_forward(</span>
+<span class="gi">+            local_host,</span>
+<span class="gi">+            local_port,</span>
+<span class="gi">+            remote_host,</span>
+<span class="gi">+            remote_port</span>
+<span class="gi">+        )</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Open a tunnel connecting ``local_port`` to the server&#39;s environment.
+
+<span class="gu">@@ -601,8 +770,28 @@ class Connection(Context):</span>
+<span class="w"> </span>        pass
+
+<span class="w"> </span>    @contextmanager
+<span class="gd">-    @opens</span>
+<span class="w"> </span>    def forward_remote(self, remote_port, local_port=None, remote_host=&#39;127.0.0.1&#39;, local_host=&#39;localhost&#39;):
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        Create a remote port forward.</span>
+<span class="gi">+</span>
+<span class="gi">+        :param remote_port: Remote port to forward.</span>
+<span class="gi">+        :param local_port: Local port to forward to (defaults to remote_port).</span>
+<span class="gi">+        :param remote_host: Remote interface to bind to (defaults to &#39;127.0.0.1&#39;).</span>
+<span class="gi">+        :param local_host: Local host to forward to (defaults to &#39;localhost&#39;).</span>
+<span class="gi">+</span>
+<span class="gi">+        :returns: A new `~paramiko.channel.Channel` object.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if not self.is_connected:</span>
+<span class="gi">+            self.open()</span>
+<span class="gi">+        if local_port is None:</span>
+<span class="gi">+            local_port = remote_port</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.transport.request_port_forward(</span>
+<span class="gi">+            remote_host,</span>
+<span class="gi">+            remote_port,</span>
+<span class="gi">+            local_host,</span>
+<span class="gi">+            local_port</span>
+<span class="gi">+        )</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Open a tunnel connecting ``remote_port`` to the local environment.
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

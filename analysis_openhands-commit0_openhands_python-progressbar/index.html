@@ -1,0 +1,1187 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands python progressbar - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-python-progressbar" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands python progressbar
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-python-progressbar"><strong>OpenHands</strong>: python-progressbar</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Unknown failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/=3.8.1 b/=3.8.1</span>
+new file mode 100644
+<span class="gh">index 0000000..ef39be2</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/=3.8.1</span>
+<span class="gu">@@ -0,0 +1,19 @@</span>
+<span class="gi">+Collecting python-utils</span>
+<span class="gi">+  Downloading python_utils-3.9.0-py2.py3-none-any.whl (32 kB)</span>
+<span class="gi">+Collecting pytest</span>
+<span class="gi">+  Downloading pytest-8.3.3-py3-none-any.whl (342 kB)</span>
+<span class="gi">+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 342.3/342.3 KB 7.9 MB/s eta 0:00:00</span>
+<span class="gi">+Collecting typing-extensions&gt;3.10.0.2</span>
+<span class="gi">+  Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)</span>
+<span class="gi">+Collecting tomli&gt;=1</span>
+<span class="gi">+  Using cached tomli-2.1.0-py3-none-any.whl (13 kB)</span>
+<span class="gi">+Collecting exceptiongroup&gt;=1.0.0rc8</span>
+<span class="gi">+  Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)</span>
+<span class="gi">+Collecting iniconfig</span>
+<span class="gi">+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)</span>
+<span class="gi">+Collecting pluggy&lt;2,&gt;=1.5</span>
+<span class="gi">+  Downloading pluggy-1.5.0-py3-none-any.whl (20 kB)</span>
+<span class="gi">+Collecting packaging</span>
+<span class="gi">+  Using cached packaging-24.2-py3-none-any.whl (65 kB)</span>
+<span class="gi">+Installing collected packages: typing-extensions, tomli, pluggy, packaging, iniconfig, exceptiongroup, python-utils, pytest</span>
+<span class="gi">+Successfully installed exceptiongroup-1.2.2 iniconfig-2.0.0 packaging-24.2 pluggy-1.5.0 pytest-8.3.3 python-utils-3.9.0 tomli-2.1.0 typing-extensions-4.12.2</span>
+<span class="gh">diff --git a/progressbar/algorithms.py b/progressbar/algorithms.py</span>
+<span class="gh">index 91e2731..3285c66 100644</span>
+<span class="gd">--- a/progressbar/algorithms.py</span>
+<span class="gi">+++ b/progressbar/algorithms.py</span>
+<span class="gu">@@ -6,7 +6,7 @@ class SmoothingAlgorithm(abc.ABC):</span>
+
+<span class="w"> </span>    @abc.abstractmethod
+<span class="w"> </span>    def __init__(self, **kwargs):
+<span class="gd">-        raise NotImplementedError</span>
+<span class="gi">+        pass</span>
+
+<span class="w"> </span>    @abc.abstractmethod
+<span class="w"> </span>    def update(self, new_value: float, elapsed: timedelta) -&gt; float:
+<span class="gu">@@ -23,9 +23,15 @@ class ExponentialMovingAverage(SmoothingAlgorithm):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="w"> </span>    def __init__(self, alpha: float=0.5) -&gt; None:
+<span class="gi">+        super().__init__()</span>
+<span class="w"> </span>        self.alpha = alpha
+<span class="w"> </span>        self.value = 0
+
+<span class="gi">+    def update(self, new_value: float, elapsed: timedelta) -&gt; float:</span>
+<span class="gi">+        &quot;&quot;&quot;Updates the EMA with a new value and returns the smoothed value.&quot;&quot;&quot;</span>
+<span class="gi">+        self.value = (self.alpha * new_value) + ((1 - self.alpha) * self.value)</span>
+<span class="gi">+        return self.value</span>
+<span class="gi">+</span>
+<span class="w"> </span>class DoubleExponentialMovingAverage(SmoothingAlgorithm):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    The Double Exponential Moving Average (DEMA) is essentially an EMA of an
+<span class="gu">@@ -34,6 +40,16 @@ class DoubleExponentialMovingAverage(SmoothingAlgorithm):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="w"> </span>    def __init__(self, alpha: float=0.5) -&gt; None:
+<span class="gi">+        super().__init__()</span>
+<span class="w"> </span>        self.alpha = alpha
+<span class="w"> </span>        self.ema1 = 0
+<span class="gd">-        self.ema2 = 0</span>
+\ No newline at end of file
+<span class="gi">+        self.ema2 = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    def update(self, new_value: float, elapsed: timedelta) -&gt; float:</span>
+<span class="gi">+        &quot;&quot;&quot;Updates the DEMA with a new value and returns the smoothed value.&quot;&quot;&quot;</span>
+<span class="gi">+        # Update first EMA</span>
+<span class="gi">+        self.ema1 = (self.alpha * new_value) + ((1 - self.alpha) * self.ema1)</span>
+<span class="gi">+        # Update second EMA</span>
+<span class="gi">+        self.ema2 = (self.alpha * self.ema1) + ((1 - self.alpha) * self.ema2)</span>
+<span class="gi">+        # DEMA = 2 * EMA1 - EMA2</span>
+<span class="gi">+        return 2 * self.ema1 - self.ema2</span>
+\ No newline at end of file
+<span class="gh">diff --git a/progressbar/bar.py b/progressbar/bar.py</span>
+<span class="gh">index 57bfd66..43a5093 100644</span>
+<span class="gd">--- a/progressbar/bar.py</span>
+<span class="gi">+++ b/progressbar/bar.py</span>
+<span class="gu">@@ -46,10 +46,23 @@ class ProgressBarMixinBase(abc.ABC):</span>
+<span class="w"> </span>    start_time: types.Optional[datetime]
+<span class="w"> </span>    seconds_elapsed: float
+<span class="w"> </span>    extra: types.Dict[str, types.Any]
+<span class="gi">+</span>
+<span class="gi">+    def get_last_update_time(self) -&gt; types.Optional[float]:</span>
+<span class="gi">+        &quot;&quot;&quot;Get the last update time.&quot;&quot;&quot;</span>
+<span class="gi">+        return self._last_update_time</span>
+<span class="gi">+</span>
+<span class="gi">+    def set_last_update_time(self, value: types.Optional[float]) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Set the last update time.&quot;&quot;&quot;</span>
+<span class="gi">+        self._last_update_time = value</span>
+<span class="gi">+</span>
+<span class="w"> </span>    last_update_time = property(get_last_update_time, set_last_update_time)
+
+<span class="w"> </span>    def __init__(self, **kwargs):
+<span class="gd">-        pass</span>
+<span class="gi">+        self._started = False</span>
+<span class="gi">+        self._finished = False</span>
+<span class="gi">+        self._last_update_time = None</span>
+<span class="gi">+        self.extra = {}</span>
+<span class="gi">+        self.variables = utils.AttributeDict()</span>
+
+<span class="w"> </span>    def __del__(self):
+<span class="w"> </span>        if not self._finished and self._started:
+<span class="gu">@@ -81,6 +94,14 @@ class DefaultFdMixin(ProgressBarMixinBase):</span>
+<span class="w"> </span>    line_breaks: bool | None = True
+<span class="w"> </span>    enable_colors: progressbar.env.ColorSupport = progressbar.env.COLOR_SUPPORT
+
+<span class="gi">+    def _apply_line_offset(self, fd: base.TextIO, line_offset: int) -&gt; base.TextIO:</span>
+<span class="gi">+        &quot;&quot;&quot;Apply line offset to the file descriptor.&quot;&quot;&quot;</span>
+<span class="gi">+        if line_offset &gt; 0:</span>
+<span class="gi">+            for _ in range(line_offset):</span>
+<span class="gi">+                fd.write(&#39;\n&#39;)</span>
+<span class="gi">+            fd.flush()</span>
+<span class="gi">+        return fd</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __init__(self, fd: base.TextIO=sys.stderr, is_terminal: bool | None=None, line_breaks: bool | None=None, enable_colors: progressbar.env.ColorSupport | None=None, line_offset: int=0, **kwargs):
+<span class="w"> </span>        if fd is sys.stdout:
+<span class="w"> </span>            fd = utils.streams.original_stdout
+<span class="gu">@@ -94,6 +115,12 @@ class DefaultFdMixin(ProgressBarMixinBase):</span>
+<span class="w"> </span>        self.enable_colors = self._determine_enable_colors(enable_colors)
+<span class="w"> </span>        super().__init__(**kwargs)
+
+<span class="gi">+    def _determine_line_breaks(self, line_breaks: bool | None) -&gt; bool:</span>
+<span class="gi">+        &quot;&quot;&quot;Determine if line breaks should be used.&quot;&quot;&quot;</span>
+<span class="gi">+        if line_breaks is not None:</span>
+<span class="gi">+            return line_breaks</span>
+<span class="gi">+        return self.is_terminal</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def _determine_enable_colors(self, enable_colors: progressbar.env.ColorSupport | None) -&gt; progressbar.env.ColorSupport:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Determines the color support for the progress bar.
+<span class="gu">@@ -122,11 +149,58 @@ class DefaultFdMixin(ProgressBarMixinBase):</span>
+<span class="w"> </span>            ValueError: If `enable_colors` is not None, True, False, or an
+<span class="w"> </span>            instance of `progressbar.env.ColorSupport`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if enable_colors is None:</span>
+<span class="gi">+            # Check environment variables</span>
+<span class="gi">+            if progressbar.env.env_flag(&#39;PROGRESSBAR_ENABLE_COLORS&#39;, default=None):</span>
+<span class="gi">+                return progressbar.env.ColorSupport.XTERM_256</span>
+<span class="gi">+            elif progressbar.env.env_flag(&#39;FORCE_COLOR&#39;, default=None):</span>
+<span class="gi">+                return progressbar.env.ColorSupport.XTERM_256</span>
+<span class="gi">+            elif self.is_ansi_terminal:</span>
+<span class="gi">+                return progressbar.env.COLOR_SUPPORT</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                return progressbar.env.ColorSupport.NONE</span>
+<span class="gi">+        elif enable_colors is True:</span>
+<span class="gi">+            return progressbar.env.ColorSupport.XTERM_256</span>
+<span class="gi">+        elif enable_colors is False:</span>
+<span class="gi">+            return progressbar.env.ColorSupport.NONE</span>
+<span class="gi">+        elif isinstance(enable_colors, progressbar.env.ColorSupport):</span>
+<span class="gi">+            return enable_colors</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(f&#39;Invalid value for enable_colors: {enable_colors}&#39;)</span>
+
+<span class="w"> </span>    def _format_line(self):
+<span class="w"> </span>        &quot;&quot;&quot;Joins the widgets and justifies the line.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        result = []</span>
+<span class="gi">+</span>
+<span class="gi">+        # Add prefix if specified</span>
+<span class="gi">+        if self.prefix:</span>
+<span class="gi">+            result.append(self.prefix)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Add widgets</span>
+<span class="gi">+        for widget in self.widgets:</span>
+<span class="gi">+            if isinstance(widget, str):</span>
+<span class="gi">+                result.append(widget)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                result.append(str(widget))</span>
+<span class="gi">+</span>
+<span class="gi">+        # Add suffix if specified</span>
+<span class="gi">+        if self.suffix:</span>
+<span class="gi">+            result.append(self.suffix)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Join all parts</span>
+<span class="gi">+        line = &#39;&#39;.join(result)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Calculate width and padding</span>
+<span class="gi">+        width = self.custom_len(line)</span>
+<span class="gi">+        padding = max(0, self.term_width - width)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Apply justification</span>
+<span class="gi">+        if padding and self.left_justify:</span>
+<span class="gi">+            return line + &#39; &#39; * padding</span>
+<span class="gi">+        elif padding:</span>
+<span class="gi">+            return &#39; &#39; * padding + line</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return line</span>
+
+<span class="w"> </span>class ResizableMixin(ProgressBarMixinBase):
+
+<span class="gu">@@ -145,7 +219,13 @@ class ResizableMixin(ProgressBarMixinBase):</span>
+
+<span class="w"> </span>    def _handle_resize(self, signum=None, frame=None):
+<span class="w"> </span>        &quot;&quot;&quot;Tries to catch resize signals sent from the terminal.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            from python_utils.terminal import get_terminal_size</span>
+<span class="gi">+            terminal_width = get_terminal_size()[0]</span>
+<span class="gi">+            if terminal_width:</span>
+<span class="gi">+                self.term_width = terminal_width</span>
+<span class="gi">+        except (ImportError, OSError):</span>
+<span class="gi">+            pass</span>
+
+<span class="w"> </span>class StdRedirectMixin(DefaultFdMixin):
+<span class="w"> </span>    redirect_stderr: bool = False
+<span class="gu">@@ -269,6 +349,10 @@ class ProgressBar(StdRedirectMixin, ResizableMixin, ProgressBarBase):</span>
+<span class="w"> </span>        self.value = initial_value
+<span class="w"> </span>        self._iterable = None
+<span class="w"> </span>        self.custom_len = custom_len
+<span class="gi">+        self.initial_start_time = None</span>
+<span class="gi">+        self.poll_interval = poll_interval</span>
+<span class="gi">+        self.min_poll_interval = min_poll_interval</span>
+<span class="gi">+        self.variables = utils.AttributeDict(variables or {})</span>
+<span class="w"> </span>        self.initial_start_time = kwargs.get(&#39;start_time&#39;)
+<span class="w"> </span>        self.init()
+<span class="w"> </span>        poll_interval = utils.deltas_to_seconds(poll_interval, default=None)
+<span class="gu">@@ -286,7 +370,69 @@ class ProgressBar(StdRedirectMixin, ResizableMixin, ProgressBarBase):</span>
+<span class="w"> </span>        (re)initialize values to original state so the progressbar can be
+<span class="w"> </span>        used (again).
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._started = False</span>
+<span class="gi">+        self._finished = False</span>
+<span class="gi">+        self._last_update_time = None</span>
+<span class="gi">+        self.previous_value = None</span>
+<span class="gi">+        self.value = self.min_value</span>
+<span class="gi">+        self.num_intervals = 0</span>
+<span class="gi">+        self.next_update = 0</span>
+<span class="gi">+        self.start_time = None</span>
+<span class="gi">+        self.end_time = None</span>
+<span class="gi">+        self.extra = {}</span>
+<span class="gi">+</span>
+<span class="gi">+    def start(self, max_value=None, init=True):</span>
+<span class="gi">+        &quot;&quot;&quot;Start measuring time and progress.</span>
+<span class="gi">+</span>
+<span class="gi">+        max_value - The maximum value of the progressbar</span>
+<span class="gi">+        init - Whether to initialize the progressbar or not</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if init:</span>
+<span class="gi">+            self.init()</span>
+<span class="gi">+</span>
+<span class="gi">+        if max_value is not None:</span>
+<span class="gi">+            self.max_value = max_value</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.max_value is None:</span>
+<span class="gi">+            self.max_value = base.UnknownLength</span>
+<span class="gi">+</span>
+<span class="gi">+        self.num_intervals = max(100, self.term_width)</span>
+<span class="gi">+        self.next_update = 0</span>
+<span class="gi">+</span>
+<span class="gi">+        if not self._started:</span>
+<span class="gi">+            self.start_time = self.initial_start_time or datetime.now()</span>
+<span class="gi">+            self._started = True</span>
+<span class="gi">+</span>
+<span class="gi">+        return self</span>
+<span class="gi">+</span>
+<span class="gi">+    def update(self, value=None, force=False, **kwargs):</span>
+<span class="gi">+        &quot;&quot;&quot;Updates the ProgressBar to a new value.</span>
+<span class="gi">+</span>
+<span class="gi">+        value - New value of progress</span>
+<span class="gi">+        force - Skip the time/interval checks and force update</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        if self.end_time:</span>
+<span class="gi">+            return self</span>
+<span class="gi">+</span>
+<span class="gi">+        if value is not None:</span>
+<span class="gi">+            self.previous_value = self.value</span>
+<span class="gi">+            self.value = value</span>
+<span class="gi">+</span>
+<span class="gi">+        # Update variables</span>
+<span class="gi">+        for key, val in kwargs.items():</span>
+<span class="gi">+            self.variables[key] = val</span>
+<span class="gi">+</span>
+<span class="gi">+        # Skip update if not enough time has passed</span>
+<span class="gi">+        now = datetime.now()</span>
+<span class="gi">+        if not force and self._last_update_time:</span>
+<span class="gi">+            delta = now - self._last_update_time</span>
+<span class="gi">+            if delta &lt; timedelta(seconds=self.min_poll_interval):</span>
+<span class="gi">+                return self</span>
+<span class="gi">+</span>
+<span class="gi">+        self._last_update_time = now</span>
+<span class="gi">+        self.num_intervals += 1</span>
+<span class="gi">+</span>
+<span class="gi">+        return self</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def percentage(self) -&gt; float | None:
+<span class="gu">@@ -320,7 +466,16 @@ class ProgressBar(StdRedirectMixin, ResizableMixin, ProgressBarBase):</span>
+<span class="w"> </span>        &gt;&gt;&gt; progress.max_value = None
+<span class="w"> </span>        &gt;&gt;&gt; progress.percentage
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.max_value is None or isinstance(self.max_value, base.UnknownLength):</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+        # Calculate the total range and current position</span>
+<span class="gi">+        total_range = self.max_value - self.min_value</span>
+<span class="gi">+        if total_range == 0:</span>
+<span class="gi">+            return 100.0</span>
+<span class="gi">+</span>
+<span class="gi">+        current_pos = self.value - self.min_value</span>
+<span class="gi">+        return (current_pos / total_range) * 100.0</span>
+
+<span class="w"> </span>    def data(self) -&gt; types.Dict[str, types.Any]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -350,7 +505,28 @@ class ProgressBar(StdRedirectMixin, ResizableMixin, ProgressBarBase):</span>
+<span class="w"> </span>                  :py:class:`~progressbar.widgets.Variable`&#39;s.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        now = datetime.now()</span>
+<span class="gi">+        time_elapsed = now - (self.start_time or now)</span>
+<span class="gi">+        total_seconds = time_elapsed.total_seconds()</span>
+<span class="gi">+</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &#39;max_value&#39;: self.max_value,</span>
+<span class="gi">+            &#39;start_time&#39;: self.start_time,</span>
+<span class="gi">+            &#39;last_update_time&#39;: self.last_update_time,</span>
+<span class="gi">+            &#39;end_time&#39;: self.end_time,</span>
+<span class="gi">+            &#39;value&#39;: self.value,</span>
+<span class="gi">+            &#39;previous_value&#39;: self.previous_value,</span>
+<span class="gi">+            &#39;updates&#39;: self.num_intervals,</span>
+<span class="gi">+            &#39;total_seconds_elapsed&#39;: total_seconds,</span>
+<span class="gi">+            &#39;seconds_elapsed&#39;: int(total_seconds % 60),</span>
+<span class="gi">+            &#39;minutes_elapsed&#39;: int((total_seconds // 60) % 60),</span>
+<span class="gi">+            &#39;hours_elapsed&#39;: int((total_seconds // 3600) % 24),</span>
+<span class="gi">+            &#39;days_elapsed&#39;: int(total_seconds // (24 * 3600)),</span>
+<span class="gi">+            &#39;time_elapsed&#39;: time_elapsed,</span>
+<span class="gi">+            &#39;percentage&#39;: self.percentage,</span>
+<span class="gi">+            &#39;dynamic_messages&#39;: self.variables,  # For backwards compatibility</span>
+<span class="gi">+            &#39;variables&#39;: self.variables,</span>
+<span class="gi">+        }</span>
+
+<span class="w"> </span>    def __call__(self, iterable, max_value=None):
+<span class="w"> </span>        &quot;&quot;&quot;Use a ProgressBar to iterate through an iterable.&quot;&quot;&quot;
+<span class="gh">diff --git a/progressbar/env.py b/progressbar/env.py</span>
+<span class="gh">index 8d34cb1..c856064 100644</span>
+<span class="gd">--- a/progressbar/env.py</span>
+<span class="gi">+++ b/progressbar/env.py</span>
+<span class="gu">@@ -14,7 +14,16 @@ def env_flag(name, default=None):</span>
+<span class="w"> </span>    If the environment variable is not defined, or has an unknown value,
+<span class="w"> </span>    returns `default`
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    value = os.environ.get(name)</span>
+<span class="gi">+    if value is None:</span>
+<span class="gi">+        return default</span>
+<span class="gi">+    </span>
+<span class="gi">+    value = value.lower().strip()</span>
+<span class="gi">+    if value in (&#39;y&#39;, &#39;yes&#39;, &#39;1&#39;, &#39;true&#39;, &#39;on&#39;):</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    elif value in (&#39;n&#39;, &#39;no&#39;, &#39;0&#39;, &#39;false&#39;, &#39;off&#39;):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    return default</span>
+
+<span class="w"> </span>class ColorSupport(enum.IntEnum):
+<span class="w"> </span>    &quot;&quot;&quot;Color support for the terminal.&quot;&quot;&quot;
+<span class="gu">@@ -39,10 +48,48 @@ class ColorSupport(enum.IntEnum):</span>
+<span class="w"> </span>        Note that the highest available value will be used! Having
+<span class="w"> </span>        `COLORTERM=truecolor` will override `TERM=xterm-256color`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if JUPYTER:</span>
+<span class="gi">+            return cls.XTERM_TRUECOLOR</span>
+<span class="gi">+</span>
+<span class="gi">+        term = os.environ.get(&#39;TERM&#39;, &#39;&#39;).lower()</span>
+<span class="gi">+        colorterm = os.environ.get(&#39;COLORTERM&#39;, &#39;&#39;).lower()</span>
+<span class="gi">+        color = os.environ.get(&#39;COLOR&#39;, &#39;&#39;).lower()</span>
+<span class="gi">+</span>
+<span class="gi">+        for value in (term, colorterm, color):</span>
+<span class="gi">+            if &#39;24bit&#39; in value or &#39;truecolor&#39; in value:</span>
+<span class="gi">+                return cls.XTERM_TRUECOLOR</span>
+<span class="gi">+            elif &#39;256&#39; in value:</span>
+<span class="gi">+                return cls.XTERM_256</span>
+<span class="gi">+            elif &#39;xterm&#39; in value:</span>
+<span class="gi">+                return cls.XTERM</span>
+<span class="gi">+</span>
+<span class="gi">+        return cls.NONE</span>
+<span class="w"> </span>if os.name == &#39;nt&#39;:
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        import colorama</span>
+<span class="gi">+        colorama.init()</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="w"> </span>JUPYTER = bool(os.environ.get(&#39;JUPYTER_COLUMNS&#39;) or os.environ.get(&#39;JUPYTER_LINES&#39;) or os.environ.get(&#39;JPY_PARENT_PID&#39;))
+<span class="w"> </span>COLOR_SUPPORT = ColorSupport.from_env()
+<span class="w"> </span>ANSI_TERMS = (&#39;([xe]|bv)term&#39;, &#39;(sco)?ansi&#39;, &#39;cygwin&#39;, &#39;konsole&#39;, &#39;linux&#39;, &#39;rxvt&#39;, &#39;screen&#39;, &#39;tmux&#39;, &#39;vt(10[02]|220|320)&#39;)
+<span class="gd">-ANSI_TERM_RE = re.compile(f&#39;^({&#39;|&#39;.join(ANSI_TERMS)})&#39;, re.IGNORECASE)</span>
+\ No newline at end of file
+<span class="gi">+ANSI_TERM_RE = re.compile(&#39;^(&#39; + &#39;|&#39;.join(ANSI_TERMS) + &#39;)&#39;, re.IGNORECASE)</span>
+<span class="gi">+</span>
+<span class="gi">+def is_terminal(fd, is_terminal=None):</span>
+<span class="gi">+    &quot;&quot;&quot;Check if the file descriptor is a terminal.&quot;&quot;&quot;</span>
+<span class="gi">+    if is_terminal is not None:</span>
+<span class="gi">+        return is_terminal</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return fd.isatty()</span>
+<span class="gi">+    except (AttributeError, ValueError):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+def is_ansi_terminal(fd):</span>
+<span class="gi">+    &quot;&quot;&quot;Check if the file descriptor supports ANSI escape sequences.&quot;&quot;&quot;</span>
+<span class="gi">+    if not is_terminal(fd):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    term = os.environ.get(&#39;TERM&#39;, &#39;&#39;).lower()</span>
+<span class="gi">+    return bool(ANSI_TERM_RE.match(term))</span>
+\ No newline at end of file
+<span class="gh">diff --git a/progressbar/shortcuts.py b/progressbar/shortcuts.py</span>
+<span class="gh">index df5c3dd..fc8b47b 100644</span>
+<span class="gd">--- a/progressbar/shortcuts.py</span>
+<span class="gi">+++ b/progressbar/shortcuts.py</span>
+<span class="gu">@@ -1 +1,14 @@</span>
+<span class="gd">-from . import bar</span>
+\ No newline at end of file
+<span class="gi">+from . import bar</span>
+<span class="gi">+</span>
+<span class="gi">+def progressbar(*args, **kwargs):</span>
+<span class="gi">+    &quot;&quot;&quot;Create and start a progress bar, then return an iterator.</span>
+<span class="gi">+</span>
+<span class="gi">+    The context manager API is more convenient than this function since the</span>
+<span class="gi">+    progress bar is automatically cleared on exit, but not all implementations</span>
+<span class="gi">+    may support the context manager API.</span>
+<span class="gi">+</span>
+<span class="gi">+    &gt;&gt;&gt; progress = progressbar(range(100))</span>
+<span class="gi">+    &gt;&gt;&gt; for i in progress:</span>
+<span class="gi">+    ...     pass</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return bar.ProgressBar(*args, **kwargs)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/progressbar/terminal/base.py b/progressbar/terminal/base.py</span>
+<span class="gh">index 41bed4d..bdb7c91 100644</span>
+<span class="gd">--- a/progressbar/terminal/base.py</span>
+<span class="gi">+++ b/progressbar/terminal/base.py</span>
+<span class="gu">@@ -109,7 +109,20 @@ class WindowsColors(enum.Enum):</span>
+<span class="w"> </span>        &gt;&gt;&gt; WindowsColors.from_rgb((128, 0, 128))
+<span class="w"> </span>        &lt;WindowsColors.MAGENTA: (128, 0, 128)&gt;
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        min_distance = float(&#39;inf&#39;)</span>
+<span class="gi">+        closest_color = None</span>
+<span class="gi">+</span>
+<span class="gi">+        for color in WindowsColors:</span>
+<span class="gi">+            # Calculate Euclidean distance between colors</span>
+<span class="gi">+            r1, g1, b1 = rgb</span>
+<span class="gi">+            r2, g2, b2 = color.value</span>
+<span class="gi">+            distance = ((r1 - r2) ** 2 + (g1 - g2) ** 2 + (b1 - b2) ** 2) ** 0.5</span>
+<span class="gi">+</span>
+<span class="gi">+            if distance &lt; min_distance:</span>
+<span class="gi">+                min_distance = distance</span>
+<span class="gi">+                closest_color = color</span>
+<span class="gi">+</span>
+<span class="gi">+        return closest_color</span>
+
+<span class="w"> </span>class WindowsColor:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -139,7 +152,7 @@ class RGB(collections.namedtuple(&#39;RGB&#39;, [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;])):</span>
+<span class="w"> </span>        Convert an RGB color (0-255 per channel) to the closest color in the
+<span class="w"> </span>        Windows 16 color scheme.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return WindowsColors.from_rgb((self.red, self.green, self.blue))</span>
+
+<span class="w"> </span>class HSL(collections.namedtuple(&#39;HSL&#39;, [&#39;hue&#39;, &#39;saturation&#39;, &#39;lightness&#39;])):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -156,7 +169,20 @@ class HSL(collections.namedtuple(&#39;HSL&#39;, [&#39;hue&#39;, &#39;saturation&#39;, &#39;lightness&#39;])):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Convert a 0-255 RGB color to a 0-255 HLS color.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # Convert RGB values to 0-1 range for colorsys</span>
+<span class="gi">+        r = rgb.red / 255.0</span>
+<span class="gi">+        g = rgb.green / 255.0</span>
+<span class="gi">+        b = rgb.blue / 255.0</span>
+<span class="gi">+</span>
+<span class="gi">+        # Convert to HSL</span>
+<span class="gi">+        h, l, s = colorsys.rgb_to_hls(r, g, b)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Convert hue to 0-360 range and saturation/lightness to 0-100 range</span>
+<span class="gi">+        h = h * 360</span>
+<span class="gi">+        s = s * 100</span>
+<span class="gi">+        l = l * 100</span>
+<span class="gi">+</span>
+<span class="gi">+        return cls(h, s, l)</span>
+
+<span class="w"> </span>class ColorBase(abc.ABC):
+<span class="w"> </span>    pass
+<span class="gu">@@ -195,6 +221,47 @@ class Colors:</span>
+<span class="w"> </span>    by_hls: ClassVar[defaultdict[HSL, types.List[Color]]] = collections.defaultdict(list)
+<span class="w"> </span>    by_xterm: ClassVar[dict[int, Color]] = dict()
+
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def register(cls, rgb: RGB, hls: HSL, name: str, xterm: int) -&gt; Color:</span>
+<span class="gi">+        &quot;&quot;&quot;Register a new color with the given RGB, HSL, name and xterm code.&quot;&quot;&quot;</span>
+<span class="gi">+        color = Color(rgb, hls, name, xterm)</span>
+<span class="gi">+        cls.by_name[name].append(color)</span>
+<span class="gi">+        cls.by_lowername[name.lower()].append(color)</span>
+<span class="gi">+        cls.by_rgb[rgb].append(color)</span>
+<span class="gi">+        cls.by_hls[hls].append(color)</span>
+<span class="gi">+        cls.by_xterm[xterm] = color</span>
+<span class="gi">+        return color</span>
+<span class="gi">+</span>
+<span class="gi">+    @staticmethod</span>
+<span class="gi">+    def interpolate(color1: Color, color2: Color, value: float) -&gt; Color:</span>
+<span class="gi">+        &quot;&quot;&quot;Interpolate between two colors based on a value between 0 and 1.&quot;&quot;&quot;</span>
+<span class="gi">+        if value &lt;= 0:</span>
+<span class="gi">+            return color1</span>
+<span class="gi">+        elif value &gt;= 1:</span>
+<span class="gi">+            return color2</span>
+<span class="gi">+</span>
+<span class="gi">+        # Interpolate RGB values</span>
+<span class="gi">+        r1, g1, b1 = color1.rgb</span>
+<span class="gi">+        r2, g2, b2 = color2.rgb</span>
+<span class="gi">+        r = int(r1 + (r2 - r1) * value)</span>
+<span class="gi">+        g = int(g1 + (g2 - g1) * value)</span>
+<span class="gi">+        b = int(b1 + (b2 - b1) * value)</span>
+<span class="gi">+        rgb = RGB(r, g, b)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Interpolate HSL values</span>
+<span class="gi">+        h1, s1, l1 = color1.hls</span>
+<span class="gi">+        h2, s2, l2 = color2.hls</span>
+<span class="gi">+        h = h1 + (h2 - h1) * value</span>
+<span class="gi">+        s = s1 + (s2 - s1) * value</span>
+<span class="gi">+        l = l1 + (l2 - l1) * value</span>
+<span class="gi">+        hsl = HSL(h, s, l)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Use the name of the color we&#39;re closer to</span>
+<span class="gi">+        name = color1.name if value &lt; 0.5 else color2.name</span>
+<span class="gi">+        xterm = color1.xterm if value &lt; 0.5 else color2.xterm</span>
+<span class="gi">+</span>
+<span class="gi">+        return Color(rgb, hsl, name, xterm)</span>
+<span class="gi">+</span>
+<span class="w"> </span>class ColorGradient(ColorBase):
+
+<span class="w"> </span>    def __init__(self, *colors: Color, interpolate=Colors.interpolate):
+<span class="gu">@@ -207,7 +274,17 @@ class ColorGradient(ColorBase):</span>
+
+<span class="w"> </span>    def get_color(self, value: float) -&gt; Color:
+<span class="w"> </span>        &quot;&quot;&quot;Map a value from 0 to 1 to a color.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if value &lt;= 0:</span>
+<span class="gi">+            return self.colors[0]</span>
+<span class="gi">+        elif value &gt;= 1:</span>
+<span class="gi">+            return self.colors[-1]</span>
+<span class="gi">+</span>
+<span class="gi">+        # Calculate which segment of the gradient we&#39;re in</span>
+<span class="gi">+        segment_size = 1.0 / (len(self.colors) - 1)</span>
+<span class="gi">+        segment = int(value / segment_size)</span>
+<span class="gi">+        segment_value = (value - segment * segment_size) / segment_size</span>
+<span class="gi">+</span>
+<span class="gi">+        return self.interpolate(self.colors[segment], self.colors[segment + 1], segment_value)</span>
+<span class="w"> </span>OptionalColor = types.Union[Color, ColorGradient, None]
+
+<span class="w"> </span>def apply_colors(text: str, percentage: float | None=None, *, fg: OptionalColor=None, bg: OptionalColor=None, fg_none: Color | None=None, bg_none: Color | None=None, **kwargs: types.Any) -&gt; str:
+<span class="gu">@@ -217,7 +294,23 @@ def apply_colors(text: str, percentage: float | None=None, *, fg: OptionalColor=</span>
+<span class="w"> </span>    Otherwise, the `fg` and `bg` colors will be used. If the colors are
+<span class="w"> </span>    gradients, the color will be interpolated depending on the percentage.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if percentage is None:</span>
+<span class="gi">+        fg_color = fg_none</span>
+<span class="gi">+        bg_color = bg_none</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        fg_color = fg(percentage) if isinstance(fg, ColorGradient) else fg</span>
+<span class="gi">+        bg_color = bg(percentage) if isinstance(bg, ColorGradient) else bg</span>
+<span class="gi">+</span>
+<span class="gi">+    if fg_color is None and bg_color is None:</span>
+<span class="gi">+        return text</span>
+<span class="gi">+</span>
+<span class="gi">+    # Apply colors</span>
+<span class="gi">+    if fg_color:</span>
+<span class="gi">+        text = fg_color(text)</span>
+<span class="gi">+    if bg_color:</span>
+<span class="gi">+        text = bg_color(text)</span>
+<span class="gi">+</span>
+<span class="gi">+    return text</span>
+
+<span class="w"> </span>class DummyColor:
+
+<span class="gh">diff --git a/progressbar/terminal/os_specific/posix.py b/progressbar/terminal/os_specific/posix.py</span>
+<span class="gh">index 38f7626..47e07cb 100644</span>
+<span class="gd">--- a/progressbar/terminal/os_specific/posix.py</span>
+<span class="gi">+++ b/progressbar/terminal/os_specific/posix.py</span>
+<span class="gu">@@ -1,3 +1,14 @@</span>
+<span class="w"> </span>import sys
+<span class="w"> </span>import termios
+<span class="gd">-import tty</span>
+\ No newline at end of file
+<span class="gi">+import tty</span>
+<span class="gi">+</span>
+<span class="gi">+def getch():</span>
+<span class="gi">+    &quot;&quot;&quot;Get a single character from stdin without echoing.&quot;&quot;&quot;</span>
+<span class="gi">+    fd = sys.stdin.fileno()</span>
+<span class="gi">+    old_settings = termios.tcgetattr(fd)</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        tty.setraw(fd)</span>
+<span class="gi">+        ch = sys.stdin.read(1)</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)</span>
+<span class="gi">+    return ch</span>
+\ No newline at end of file
+<span class="gh">diff --git a/progressbar/utils.py b/progressbar/utils.py</span>
+<span class="gh">index 7a30cc8..0a9afb7 100644</span>
+<span class="gd">--- a/progressbar/utils.py</span>
+<span class="gi">+++ b/progressbar/utils.py</span>
+<span class="gu">@@ -48,7 +48,22 @@ def deltas_to_seconds(*deltas, default: types.Optional[types.Type[ValueError]]=V</span>
+<span class="w"> </span>    &gt;&gt;&gt; deltas_to_seconds(default=0.0)
+<span class="w"> </span>    0.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not deltas and default is ValueError:</span>
+<span class="gi">+        raise ValueError(&#39;No valid deltas passed to `deltas_to_seconds`&#39;)</span>
+<span class="gi">+    elif not deltas:</span>
+<span class="gi">+        return default</span>
+<span class="gi">+</span>
+<span class="gi">+    for delta in deltas:</span>
+<span class="gi">+        if delta is None:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        elif isinstance(delta, datetime.timedelta):</span>
+<span class="gi">+            return timedelta_to_seconds(delta)</span>
+<span class="gi">+        elif isinstance(delta, (int, float)):</span>
+<span class="gi">+            return float(delta)</span>
+<span class="gi">+</span>
+<span class="gi">+    if default is ValueError:</span>
+<span class="gi">+        raise ValueError(&#39;No valid deltas passed to `deltas_to_seconds`&#39;)</span>
+<span class="gi">+    return default</span>
+
+<span class="w"> </span>def no_color(value: StringT) -&gt; StringT:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -65,7 +80,12 @@ def no_color(value: StringT) -&gt; StringT:</span>
+<span class="w"> </span>    ...
+<span class="w"> </span>    TypeError: `value` must be a string or bytes, got 123
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(value, (str, bytes)):</span>
+<span class="gi">+        raise TypeError(f&#39;`value` must be a string or bytes, got {value}&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Pattern to match ANSI escape sequences</span>
+<span class="gi">+    pattern = re.compile(rb&#39;\x1b\[[^m]*m&#39; if isinstance(value, bytes) else r&#39;\x1b\[[^m]*m&#39;)</span>
+<span class="gi">+    return types.cast(StringT, pattern.sub(b&#39;&#39; if isinstance(value, bytes) else &#39;&#39;, value))</span>
+
+<span class="w"> </span>def len_color(value: types.StringTypes) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -78,7 +98,7 @@ def len_color(value: types.StringTypes) -&gt; int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; len_color(&#39;\x1b[1234]abc&#39;)
+<span class="w"> </span>    3
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return len(no_color(value))</span>
+
+<span class="w"> </span>class WrappingIO:
+<span class="w"> </span>    buffer: io.StringIO
+<span class="gu">@@ -106,6 +126,26 @@ class WrappingIO:</span>
+<span class="w"> </span>    def __exit__(self, __t: type[BaseException] | None, __value: BaseException | None, __traceback: TracebackType | None) -&gt; None:
+<span class="w"> </span>        self.close()
+
+<span class="gi">+    def fileno(self) -&gt; int:</span>
+<span class="gi">+        &quot;&quot;&quot;Return the file descriptor of the target.&quot;&quot;&quot;</span>
+<span class="gi">+        return self.target.fileno()</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Close the buffer and target.&quot;&quot;&quot;</span>
+<span class="gi">+        self.buffer.close()</span>
+<span class="gi">+        if hasattr(self.target, &#39;close&#39;):</span>
+<span class="gi">+            self.target.close()</span>
+<span class="gi">+</span>
+<span class="gi">+    def flush(self) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Flush the buffer and target.&quot;&quot;&quot;</span>
+<span class="gi">+        self.buffer.flush()</span>
+<span class="gi">+        if hasattr(self.target, &#39;flush&#39;):</span>
+<span class="gi">+            self.target.flush()</span>
+<span class="gi">+</span>
+<span class="gi">+    def isatty(self) -&gt; bool:</span>
+<span class="gi">+        &quot;&quot;&quot;Return True if the target is a terminal.&quot;&quot;&quot;</span>
+<span class="gi">+        return hasattr(self.target, &#39;isatty&#39;) and self.target.isatty()</span>
+<span class="gi">+</span>
+<span class="w"> </span>class StreamWrapper:
+<span class="w"> </span>    &quot;&quot;&quot;Wrap stdout and stderr globally.&quot;&quot;&quot;
+<span class="w"> </span>    stdout: base.TextIO | WrappingIO
+<span class="gu">@@ -131,6 +171,13 @@ class StreamWrapper:</span>
+<span class="w"> </span>        if env.env_flag(&#39;WRAP_STDERR&#39;, default=False):
+<span class="w"> </span>            self.wrap_stderr()
+
+<span class="gi">+    def flush(self) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Flush both stdout and stderr streams.&quot;&quot;&quot;</span>
+<span class="gi">+        if hasattr(self.stdout, &#39;flush&#39;):</span>
+<span class="gi">+            self.stdout.flush()</span>
+<span class="gi">+        if hasattr(self.stderr, &#39;flush&#39;):</span>
+<span class="gi">+            self.stderr.flush()</span>
+<span class="gi">+</span>
+<span class="w"> </span>class AttributeDict(dict):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    A dict that can be accessed with .attribute.
+<span class="gh">diff --git a/progressbar/widgets.py b/progressbar/widgets.py</span>
+<span class="gh">index e2fed01..2062a31 100644</span>
+<span class="gd">--- a/progressbar/widgets.py</span>
+<span class="gi">+++ b/progressbar/widgets.py</span>
+<span class="gu">@@ -19,6 +19,20 @@ Data = types.Dict[str, types.Any]</span>
+<span class="w"> </span>FormatString = typing.Optional[str]
+<span class="w"> </span>T = typing.TypeVar(&#39;T&#39;)
+
+<span class="gi">+def string_or_lambda(input_value):</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a string to a lambda or return the callable.&quot;&quot;&quot;</span>
+<span class="gi">+    if callable(input_value):</span>
+<span class="gi">+        return input_value</span>
+<span class="gi">+    return lambda progress, data: input_value</span>
+<span class="gi">+</span>
+<span class="gi">+def create_marker(marker, marker_wrap=None):</span>
+<span class="gi">+    &quot;&quot;&quot;Create a marker function that wraps the marker string if needed.&quot;&quot;&quot;</span>
+<span class="gi">+    if callable(marker):</span>
+<span class="gi">+        return marker</span>
+<span class="gi">+    if marker_wrap:</span>
+<span class="gi">+        return lambda progress, data: marker_wrap % marker</span>
+<span class="gi">+    return lambda progress, data: marker</span>
+<span class="gi">+</span>
+<span class="w"> </span>def create_wrapper(wrapper):
+<span class="w"> </span>    &quot;&quot;&quot;Convert a wrapper tuple or format string to a format string.
+
+<span class="gu">@@ -30,14 +44,25 @@ def create_wrapper(wrapper):</span>
+<span class="w"> </span>    &gt;&gt;&gt; print(create_wrapper((&#39;a&#39;, &#39;b&#39;)))
+<span class="w"> </span>    a{}b
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not wrapper:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    elif isinstance(wrapper, tuple):</span>
+<span class="gi">+        return wrapper[0] + &#39;{}&#39; + wrapper[1]</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return wrapper</span>
+
+<span class="w"> </span>def wrapper(function, wrapper_):
+<span class="w"> </span>    &quot;&quot;&quot;Wrap the output of a function in a template string or a tuple with
+<span class="w"> </span>    begin/end strings.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    wrapper_format = create_wrapper(wrapper_)</span>
+<span class="gi">+</span>
+<span class="gi">+    def wrap_text(progress, data):</span>
+<span class="gi">+        text = function(progress, data)</span>
+<span class="gi">+        return wrapper_format.format(text) if wrapper_format else text</span>
+<span class="gi">+</span>
+<span class="gi">+    return wrap_text</span>
+
+<span class="w"> </span>class FormatWidgetMixin(abc.ABC):
+<span class="w"> </span>    &quot;&quot;&quot;Mixin to format widgets using a formatstring.
+<span class="gu">@@ -148,6 +173,12 @@ class WidgetBase(WidthWidgetMixin, metaclass=abc.ABCMeta):</span>
+<span class="w"> </span>    _gradient_colors: ClassVar[TGradientColors] = TGradientColors(fg=None, bg=None)
+<span class="w"> </span>    _len: typing.Callable[[str | bytes], int] = len
+
+<span class="gi">+    @property</span>
+<span class="gi">+    def uses_colors(self) -&gt; bool:</span>
+<span class="gi">+        &quot;&quot;&quot;Check if this widget uses colors.&quot;&quot;&quot;</span>
+<span class="gi">+        return bool(self._fixed_colors.get(&#39;fg_none&#39;) or self._fixed_colors.get(&#39;bg_none&#39;) or</span>
+<span class="gi">+                   self._gradient_colors.get(&#39;fg&#39;) or self._gradient_colors.get(&#39;bg&#39;))</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __init__(self, *args, fixed_colors=None, gradient_colors=None, **kwargs):
+<span class="w"> </span>        if fixed_colors is not None:
+<span class="w"> </span>            self._fixed_colors.update(fixed_colors)
+<span class="gu">@@ -564,6 +595,16 @@ class Bar(AutoWidthWidgetBase):</span>
+<span class="w"> </span>        self.fill_left = fill_left
+<span class="w"> </span>        AutoWidthWidgetBase.__init__(self, **kwargs)
+
+<span class="gi">+    def _apply_colors(self, text: str, data: Data) -&gt; str:</span>
+<span class="gi">+        &quot;&quot;&quot;Apply colors to the text based on the progress percentage.&quot;&quot;&quot;</span>
+<span class="gi">+        percentage = data.get(&#39;percentage&#39;)</span>
+<span class="gi">+        if percentage is None:</span>
+<span class="gi">+            return text</span>
+<span class="gi">+</span>
+<span class="gi">+        return terminal.apply_colors(text, percentage / 100.0,</span>
+<span class="gi">+                                   fg=self.fg, bg=self.bg,</span>
+<span class="gi">+                                   **self._fixed_colors)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __call__(self, progress: ProgressBarMixinBase, data: Data, width: int=0, color=True):
+<span class="w"> </span>        &quot;&quot;&quot;Updates the progress bar and its subcomponents.&quot;&quot;&quot;
+<span class="w"> </span>        left = converters.to_unicode(self.left(progress, data, width))
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

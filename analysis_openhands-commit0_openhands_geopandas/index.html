@@ -1,0 +1,808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands geopandas - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-geopandas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands geopandas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-geopandas"><strong>OpenHands</strong>: geopandas</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/geopandas/conftest.py&#39;.
+geopandas/__init__.py:3: in &lt;module&gt;
+    from geopandas.geoseries import GeoSeries
+geopandas/geoseries.py:16: in &lt;module&gt;
+    from geopandas.plotting import plot_series
+geopandas/plotting.py:554: in &lt;module&gt;
+    class GeoplotAccessor(PlotAccessor):
+E   TypeError: &#39;NoneType&#39; object is not callable
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/geopandas/_compat.py b/geopandas/_compat.py</span>
+<span class="gh">index 99d27b11..957d041f 100644</span>
+<span class="gd">--- a/geopandas/_compat.py</span>
+<span class="gi">+++ b/geopandas/_compat.py</span>
+<span class="gu">@@ -32,7 +32,27 @@ def import_optional_dependency(name: str, extra: str=&#39;&#39;):</span>
+<span class="w"> </span>    -------
+<span class="w"> </span>    module
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        module = importlib.import_module(name)</span>
+<span class="gi">+        return module</span>
+<span class="gi">+    except ImportError as e:</span>
+<span class="gi">+        msg = f&quot;Missing optional dependency &#39;{name}&#39;. {extra} &quot;</span>
+<span class="gi">+        msg += f&quot;Use pip or conda to install {name}.&quot;</span>
+<span class="gi">+        raise ImportError(msg) from e</span>
+<span class="gi">+import functools</span>
+<span class="gi">+</span>
+<span class="gi">+def requires_pyproj(func):</span>
+<span class="gi">+    &quot;&quot;&quot;Decorator to check if pyproj is installed.&quot;&quot;&quot;</span>
+<span class="gi">+    @functools.wraps(func)</span>
+<span class="gi">+    def wrapper(*args, **kwargs):</span>
+<span class="gi">+        if not HAS_PYPROJ:</span>
+<span class="gi">+            raise ImportError(</span>
+<span class="gi">+                &quot;The pyproj package is required for this functionality. &quot;</span>
+<span class="gi">+                f&quot;Import error: {pyproj_import_error}&quot;</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return func(*args, **kwargs)</span>
+<span class="gi">+    return wrapper</span>
+<span class="gi">+</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    import pyproj
+<span class="w"> </span>    HAS_PYPROJ = True
+<span class="gh">diff --git a/geopandas/_config.py b/geopandas/_config.py</span>
+<span class="gh">index 849a9efb..7e221bbc 100644</span>
+<span class="gd">--- a/geopandas/_config.py</span>
+<span class="gi">+++ b/geopandas/_config.py</span>
+<span class="gu">@@ -5,6 +5,25 @@ Based on https://github.com/topper-123/optioneer, but simplified (don&#39;t deal</span>
+<span class="w"> </span>with nested options, deprecated options, ..), just the attribute-style dict
+<span class="w"> </span>like holding the options and giving a nice repr.
+<span class="w"> </span>&quot;&quot;&quot;
+<span class="gi">+</span>
+<span class="gi">+def _validate_display_precision(value):</span>
+<span class="gi">+    if value is not None:</span>
+<span class="gi">+        if not isinstance(value, int):</span>
+<span class="gi">+            raise ValueError(&quot;display_precision must be an integer or None&quot;)</span>
+<span class="gi">+        if value &lt; 0:</span>
+<span class="gi">+            raise ValueError(&quot;display_precision must be non-negative&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+def _validate_io_engine(value):</span>
+<span class="gi">+    if value is not None and value not in (&#39;pyogrio&#39;, &#39;fiona&#39;):</span>
+<span class="gi">+        raise ValueError(&quot;io_engine must be one of &#39;pyogrio&#39;, &#39;fiona&#39;, or None&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+def _warn_use_pygeos_deprecated(value):</span>
+<span class="gi">+    if value:</span>
+<span class="gi">+        warnings.warn(</span>
+<span class="gi">+            &quot;The use_pygeos option is deprecated and will be removed in GeoPandas 1.1.&quot;,</span>
+<span class="gi">+            FutureWarning,</span>
+<span class="gi">+            stacklevel=2</span>
+<span class="gi">+        )</span>
+<span class="w"> </span>import textwrap
+<span class="w"> </span>import warnings
+<span class="w"> </span>from collections import namedtuple
+<span class="gh">diff --git a/geopandas/base.py b/geopandas/base.py</span>
+<span class="gh">index bfba310e..0daf2736 100644</span>
+<span class="gd">--- a/geopandas/base.py</span>
+<span class="gi">+++ b/geopandas/base.py</span>
+<span class="gu">@@ -9,6 +9,22 @@ from shapely.geometry.base import BaseGeometry</span>
+<span class="w"> </span>from . import _compat as compat
+<span class="w"> </span>from .array import GeometryArray, GeometryDtype, points_from_xy
+
+<span class="gi">+def _delegate_property(property_name):</span>
+<span class="gi">+    &quot;&quot;&quot;Create a property that delegates to the underlying geometry array.</span>
+<span class="gi">+    </span>
+<span class="gi">+    Parameters</span>
+<span class="gi">+    ----------</span>
+<span class="gi">+    property_name : str</span>
+<span class="gi">+        The name of the property to delegate to the geometry array.</span>
+<span class="gi">+    </span>
+<span class="gi">+    Returns</span>
+<span class="gi">+    -------</span>
+<span class="gi">+    property</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    def _property_getter(self):</span>
+<span class="gi">+        return getattr(self.geometry.values, property_name)</span>
+<span class="gi">+    return property(_property_getter)</span>
+<span class="gi">+</span>
+<span class="w"> </span>def is_geometry_type(data):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Check if the data is of geometry dtype.
+<span class="gh">diff --git a/geopandas/plotting.py b/geopandas/plotting.py</span>
+<span class="gh">index 267f28a0..d8118912 100644</span>
+<span class="gd">--- a/geopandas/plotting.py</span>
+<span class="gi">+++ b/geopandas/plotting.py</span>
+<span class="gu">@@ -24,7 +24,30 @@ def _sanitize_geoms(geoms, prefix=&#39;Multi&#39;):</span>
+<span class="w"> </span>    component_index : index array
+<span class="w"> </span>        indices are repeated for all components in the same Multi geometry
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    components = []</span>
+<span class="gi">+    component_index = []</span>
+<span class="gi">+</span>
+<span class="gi">+    if isinstance(geoms, (pd.Series, pd.DataFrame)):</span>
+<span class="gi">+        geoms_index = np.arange(len(geoms))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        geoms_index = np.arange(len(list(geoms)))</span>
+<span class="gi">+</span>
+<span class="gi">+    for geom, idx in zip(geoms, geoms_index):</span>
+<span class="gi">+        if geom is None or geom.is_empty:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if prefix == &#39;Multi&#39; and geom.type.startswith(&#39;Multi&#39;):</span>
+<span class="gi">+            for component in geom.geoms:</span>
+<span class="gi">+                components.append(component)</span>
+<span class="gi">+                component_index.append(idx)</span>
+<span class="gi">+        elif prefix == &#39;Geom&#39; and geom.type == &#39;GeometryCollection&#39;:</span>
+<span class="gi">+            for component in geom.geoms:</span>
+<span class="gi">+                components.append(component)</span>
+<span class="gi">+                component_index.append(idx)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            components.append(geom)</span>
+<span class="gi">+            component_index.append(idx)</span>
+<span class="gi">+</span>
+<span class="gi">+    return components, np.array(component_index)</span>
+
+<span class="w"> </span>def _expand_kwargs(kwargs, multiindex):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -33,7 +56,19 @@ def _expand_kwargs(kwargs, multiindex):</span>
+<span class="w"> </span>    it (in place) to the correct length/formats with help of &#39;multiindex&#39;, unless
+<span class="w"> </span>    the value appears to already be a valid (single) value for the key.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for key, value in kwargs.items():</span>
+<span class="gi">+        if isinstance(value, (np.ndarray, pd.Series)):</span>
+<span class="gi">+            if value.shape[0] != len(multiindex):</span>
+<span class="gi">+                raise ValueError(</span>
+<span class="gi">+                    f&quot;Length of {key} sequence must match length of geometries&quot;</span>
+<span class="gi">+                )</span>
+<span class="gi">+            kwargs[key] = value.take(multiindex)</span>
+<span class="gi">+        elif isinstance(value, list):</span>
+<span class="gi">+            if len(value) != len(multiindex):</span>
+<span class="gi">+                raise ValueError(</span>
+<span class="gi">+                    f&quot;Length of {key} sequence must match length of geometries&quot;</span>
+<span class="gi">+                )</span>
+<span class="gi">+            kwargs[key] = np.array(value).take(multiindex)</span>
+
+<span class="w"> </span>def _PolygonPatch(polygon, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;Constructs a matplotlib patch from a Polygon geometry
+<span class="gu">@@ -51,7 +86,35 @@ def _PolygonPatch(polygon, **kwargs):</span>
+<span class="w"> </span>    (BSD license, https://pypi.org/project/descartes) for PolygonPatch, but
+<span class="w"> </span>    this dependency was removed in favor of the below matplotlib code.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        from matplotlib.patches import PathPatch</span>
+<span class="gi">+        from matplotlib.path import Path</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        raise ImportError(&quot;matplotlib is required for plotting&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def ring_coding(ob):</span>
+<span class="gi">+        # The codes will be all &quot;LINETO&quot; commands, except for &quot;MOVETO&quot;s at the</span>
+<span class="gi">+        # beginning of each subpath</span>
+<span class="gi">+        n = len(ob.coords)</span>
+<span class="gi">+        codes = np.ones(n, dtype=Path.code_type) * Path.LINETO</span>
+<span class="gi">+        codes[0] = Path.MOVETO</span>
+<span class="gi">+        return codes</span>
+<span class="gi">+</span>
+<span class="gi">+    def pathify(polygon):</span>
+<span class="gi">+        # Convert coordinates to path vertices. Objects produced by asShape() have</span>
+<span class="gi">+        # coordinates in the form [(x, y), (x, y), ...]</span>
+<span class="gi">+        vertices = np.concatenate(</span>
+<span class="gi">+            [np.asarray(polygon.exterior.coords)[:, :2]]</span>
+<span class="gi">+            + [np.asarray(r.coords)[:, :2] for r in polygon.interiors]</span>
+<span class="gi">+        )</span>
+<span class="gi">+        codes = np.concatenate(</span>
+<span class="gi">+            [ring_coding(polygon.exterior)]</span>
+<span class="gi">+            + [ring_coding(r) for r in polygon.interiors]</span>
+<span class="gi">+        )</span>
+<span class="gi">+        return Path(vertices, codes)</span>
+<span class="gi">+</span>
+<span class="gi">+    path = pathify(polygon)</span>
+<span class="gi">+    return PathPatch(path, **kwargs)</span>
+
+<span class="w"> </span>def _plot_polygon_collection(ax, geoms, values=None, color=None, cmap=None, vmin=None, vmax=None, autolim=True, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -82,7 +145,44 @@ def _plot_polygon_collection(ax, geoms, values=None, color=None, cmap=None, vmin</span>
+<span class="w"> </span>    -------
+<span class="w"> </span>    collection : matplotlib.collections.Collection that was plotted
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        from matplotlib.collections import PatchCollection</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        raise ImportError(&quot;matplotlib is required for plotting&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    geoms, multiindex = _sanitize_geoms(geoms)</span>
+<span class="gi">+    if not geoms:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    # Process values and colors</span>
+<span class="gi">+    if values is not None:</span>
+<span class="gi">+        if color is not None:</span>
+<span class="gi">+            warnings.warn(&quot;&#39;color&#39; keyword is ignored when using &#39;values&#39;&quot;)</span>
+<span class="gi">+        if cmap is None:</span>
+<span class="gi">+            cmap = &quot;viridis&quot;</span>
+<span class="gi">+        if isinstance(values, pd.Series):</span>
+<span class="gi">+            values = values.values</span>
+<span class="gi">+        values = np.take(values, multiindex)</span>
+<span class="gi">+        kwargs[&quot;array&quot;] = values</span>
+<span class="gi">+        kwargs[&quot;cmap&quot;] = cmap</span>
+<span class="gi">+        if vmin is not None:</span>
+<span class="gi">+            kwargs[&quot;vmin&quot;] = vmin</span>
+<span class="gi">+        if vmax is not None:</span>
+<span class="gi">+            kwargs[&quot;vmax&quot;] = vmax</span>
+<span class="gi">+    elif color is not None:</span>
+<span class="gi">+        if isinstance(color, (pd.Series, np.ndarray, list)):</span>
+<span class="gi">+            kwargs[&quot;facecolor&quot;] = np.take(color, multiindex)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            kwargs[&quot;facecolor&quot;] = color</span>
+<span class="gi">+        if &quot;edgecolor&quot; not in kwargs:</span>
+<span class="gi">+            kwargs[&quot;edgecolor&quot;] = &quot;black&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create patches and collections</span>
+<span class="gi">+    patches = [_PolygonPatch(poly) for poly in geoms]</span>
+<span class="gi">+    collection = PatchCollection(patches, **kwargs)</span>
+<span class="gi">+    ax.add_collection(collection, autolim=autolim)</span>
+<span class="gi">+</span>
+<span class="gi">+    return collection</span>
+
+<span class="w"> </span>def _plot_linestring_collection(ax, geoms, values=None, color=None, cmap=None, vmin=None, vmax=None, autolim=True, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -106,7 +206,48 @@ def _plot_linestring_collection(ax, geoms, values=None, color=None, cmap=None, v</span>
+<span class="w"> </span>    -------
+<span class="w"> </span>    collection : matplotlib.collections.Collection that was plotted
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        from matplotlib.collections import LineCollection</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        raise ImportError(&quot;matplotlib is required for plotting&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    geoms, multiindex = _sanitize_geoms(geoms)</span>
+<span class="gi">+    if not geoms:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    # Extract line segments</span>
+<span class="gi">+    segments = []</span>
+<span class="gi">+    for line in geoms:</span>
+<span class="gi">+        if line.type == &#39;LineString&#39;:</span>
+<span class="gi">+            segments.append(np.array(line.coords))</span>
+<span class="gi">+        elif line.type == &#39;MultiLineString&#39;:</span>
+<span class="gi">+            segments.extend(np.array(ls.coords) for ls in line.geoms)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Process values and colors</span>
+<span class="gi">+    if values is not None:</span>
+<span class="gi">+        if color is not None:</span>
+<span class="gi">+            warnings.warn(&quot;&#39;color&#39; keyword is ignored when using &#39;values&#39;&quot;)</span>
+<span class="gi">+        if cmap is None:</span>
+<span class="gi">+            cmap = &quot;viridis&quot;</span>
+<span class="gi">+        if isinstance(values, pd.Series):</span>
+<span class="gi">+            values = values.values</span>
+<span class="gi">+        values = np.take(values, multiindex)</span>
+<span class="gi">+        kwargs[&quot;array&quot;] = values</span>
+<span class="gi">+        kwargs[&quot;cmap&quot;] = cmap</span>
+<span class="gi">+        if vmin is not None:</span>
+<span class="gi">+            kwargs[&quot;vmin&quot;] = vmin</span>
+<span class="gi">+        if vmax is not None:</span>
+<span class="gi">+            kwargs[&quot;vmax&quot;] = vmax</span>
+<span class="gi">+    elif color is not None:</span>
+<span class="gi">+        if isinstance(color, (pd.Series, np.ndarray, list)):</span>
+<span class="gi">+            kwargs[&quot;color&quot;] = np.take(color, multiindex)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            kwargs[&quot;color&quot;] = color</span>
+<span class="gi">+</span>
+<span class="gi">+    collection = LineCollection(segments, **kwargs)</span>
+<span class="gi">+    ax.add_collection(collection, autolim=autolim)</span>
+<span class="gi">+</span>
+<span class="gi">+    return collection</span>
+
+<span class="w"> </span>def _plot_point_collection(ax, geoms, values=None, color=None, cmap=None, vmin=None, vmax=None, marker=&#39;o&#39;, markersize=None, **kwargs):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -130,7 +271,53 @@ def _plot_point_collection(ax, geoms, values=None, color=None, cmap=None, vmin=N</span>
+<span class="w"> </span>    -------
+<span class="w"> </span>    collection : matplotlib.collections.Collection that was plotted
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    geoms, multiindex = _sanitize_geoms(geoms)</span>
+<span class="gi">+    if not geoms:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    # Convert points to coordinates array</span>
+<span class="gi">+    x = []</span>
+<span class="gi">+    y = []</span>
+<span class="gi">+    for point in geoms:</span>
+<span class="gi">+        if point.type == &#39;Point&#39;:</span>
+<span class="gi">+            x.append(point.x)</span>
+<span class="gi">+            y.append(point.y)</span>
+<span class="gi">+        elif point.type == &#39;MultiPoint&#39;:</span>
+<span class="gi">+            for p in point.geoms:</span>
+<span class="gi">+                x.append(p.x)</span>
+<span class="gi">+                y.append(p.y)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Process values and colors</span>
+<span class="gi">+    if values is not None:</span>
+<span class="gi">+        if color is not None:</span>
+<span class="gi">+            warnings.warn(&quot;&#39;color&#39; keyword is ignored when using &#39;values&#39;&quot;)</span>
+<span class="gi">+        if cmap is None:</span>
+<span class="gi">+            cmap = &quot;viridis&quot;</span>
+<span class="gi">+        if isinstance(values, pd.Series):</span>
+<span class="gi">+            values = values.values</span>
+<span class="gi">+        values = np.take(values, multiindex)</span>
+<span class="gi">+        kwargs[&quot;c&quot;] = values</span>
+<span class="gi">+        kwargs[&quot;cmap&quot;] = cmap</span>
+<span class="gi">+        if vmin is not None:</span>
+<span class="gi">+            kwargs[&quot;vmin&quot;] = vmin</span>
+<span class="gi">+        if vmax is not None:</span>
+<span class="gi">+            kwargs[&quot;vmax&quot;] = vmax</span>
+<span class="gi">+    elif color is not None:</span>
+<span class="gi">+        if isinstance(color, (pd.Series, np.ndarray, list)):</span>
+<span class="gi">+            kwargs[&quot;c&quot;] = np.take(color, multiindex)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            kwargs[&quot;c&quot;] = color</span>
+<span class="gi">+</span>
+<span class="gi">+    # Process marker size</span>
+<span class="gi">+    if markersize is not None:</span>
+<span class="gi">+        if isinstance(markersize, (pd.Series, np.ndarray, list)):</span>
+<span class="gi">+            markersize = np.take(markersize, multiindex)</span>
+<span class="gi">+        kwargs[&quot;s&quot;] = markersize</span>
+<span class="gi">+</span>
+<span class="gi">+    kwargs[&quot;marker&quot;] = marker</span>
+<span class="gi">+    collection = ax.scatter(x, y, **kwargs)</span>
+<span class="gi">+</span>
+<span class="gi">+    return collection</span>
+
+<span class="w"> </span>def plot_series(s, cmap=None, color=None, ax=None, figsize=None, aspect=&#39;auto&#39;, autolim=True, **style_kwds):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -178,7 +365,58 @@ def plot_series(s, cmap=None, color=None, ax=None, figsize=None, aspect=&#39;auto&#39;,</span>
+<span class="w"> </span>    -------
+<span class="w"> </span>    ax : matplotlib axes instance
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        import matplotlib.pyplot as plt</span>
+<span class="gi">+    except ImportError:</span>
+<span class="gi">+        raise ImportError(&quot;matplotlib is required for plotting&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if ax is None:</span>
+<span class="gi">+        fig, ax = plt.subplots(figsize=figsize)</span>
+<span class="gi">+</span>
+<span class="gi">+    if aspect == &#39;auto&#39;:</span>
+<span class="gi">+        if s.crs is not None and s.crs.is_geographic:</span>
+<span class="gi">+            bounds = s.total_bounds</span>
+<span class="gi">+            y_coord = np.mean([bounds[1], bounds[3]])</span>
+<span class="gi">+            ax.set_aspect(1 / np.cos(np.deg2rad(y_coord)))</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            ax.set_aspect(&#39;equal&#39;)</span>
+<span class="gi">+    elif aspect is not None:</span>
+<span class="gi">+        ax.set_aspect(aspect)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Process style keywords</span>
+<span class="gi">+    if color is not None:</span>
+<span class="gi">+        style_kwds[&#39;color&#39;] = color</span>
+<span class="gi">+</span>
+<span class="gi">+    # Group geometries by type</span>
+<span class="gi">+    geoms = s.geometry.values</span>
+<span class="gi">+    polygons = []</span>
+<span class="gi">+    lines = []</span>
+<span class="gi">+    points = []</span>
+<span class="gi">+</span>
+<span class="gi">+    for geom in geoms:</span>
+<span class="gi">+        if geom is None:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        if geom.type.startswith(&#39;Multi&#39;):</span>
+<span class="gi">+            geom_type = geom.type[5:]  # Remove &#39;Multi&#39; prefix</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            geom_type = geom.type</span>
+<span class="gi">+        </span>
+<span class="gi">+        if geom_type == &#39;Polygon&#39;:</span>
+<span class="gi">+            polygons.append(geom)</span>
+<span class="gi">+        elif geom_type == &#39;LineString&#39;:</span>
+<span class="gi">+            lines.append(geom)</span>
+<span class="gi">+        elif geom_type == &#39;Point&#39;:</span>
+<span class="gi">+            points.append(geom)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Plot each geometry type</span>
+<span class="gi">+    if polygons:</span>
+<span class="gi">+        _plot_polygon_collection(ax, polygons, cmap=cmap, autolim=autolim, **style_kwds)</span>
+<span class="gi">+    if lines:</span>
+<span class="gi">+        _plot_linestring_collection(ax, lines, cmap=cmap, autolim=autolim, **style_kwds)</span>
+<span class="gi">+    if points:</span>
+<span class="gi">+        _plot_point_collection(ax, points, cmap=cmap, **style_kwds)</span>
+<span class="gi">+</span>
+<span class="gi">+    return ax</span>
+
+<span class="w"> </span>def plot_dataframe(df, column=None, cmap=None, color=None, ax=None, cax=None, categorical=False, legend=False, scheme=None, k=5, vmin=None, vmax=None, markersize=None, figsize=None, legend_kwds=None, categories=None, classification_kwds=None, missing_kwds=None, aspect=&#39;auto&#39;, autolim=True, **style_kwds):
+<span class="w"> </span>    &quot;&quot;&quot;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

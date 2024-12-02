@@ -1,0 +1,3993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands imapclient - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-imapclient" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands imapclient
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_datetime_utilpytestparsingtest_dots_for_time_separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_datetime_util.py::TestParsing::test_dots_for_time_separator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_datetime_utilpytestparsingtest_internaldate_style" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_datetime_util.py::TestParsing::test_internaldate_style
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_datetime_utilpytestparsingtest_rfc822_style" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_datetime_util.py::TestParsing::test_rfc822_style
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_datetime_utilpytestdatetimetointernaldatetest_with_timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_datetime_util.py::TestDatetimeToINTERNALDATE::test_with_timezone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_datetime_utilpytestdatetimetointernaldatetest_without_timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_datetime_util.py::TestDatetimeToINTERNALDATE::test_without_timezone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_fixed_offsetpytestfixedoffsettest_gmt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_fixed_offset.py::TestFixedOffset::test_GMT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_fixed_offsetpytestfixedoffsettest_for_system_dst_active" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_fixed_offset.py::TestFixedOffset::test_for_system_DST_active
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_fixed_offsetpytestfixedoffsettest_for_system_dst_not_active" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_fixed_offset.py::TestFixedOffset::test_for_system_DST_not_active
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_fixed_offsetpytestfixedoffsettest_for_system_no_dst" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_fixed_offset.py::TestFixedOffset::test_for_system_no_DST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_fixed_offsetpytestfixedoffsettest_negative" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_fixed_offset.py::TestFixedOffset::test_negative
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_fixed_offsetpytestfixedoffsettest_positive" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_fixed_offset.py::TestFixedOffset::test_positive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_imap_utf7pyimap4utf7testcasetest_decode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_imap_utf7.py::IMAP4UTF7TestCase::test_decode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_imap_utf7pyimap4utf7testcasetest_encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_imap_utf7.py::IMAP4UTF7TestCase::test_encode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_imap_utf7pyimap4utf7testcasetest_printable_singletons" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_imap_utf7.py::IMAP4UTF7TestCase::test_printable_singletons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_escaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_escaping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_invalid_escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_invalid_escape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_literal" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_literal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_literals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_multiple_inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_multiple_inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_no_escaping_in_square_brackets" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_no_escaping_in_square_brackets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_one_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_one_token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_quoted_strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_quoted_strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_simple_tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_simple_tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_square_brackets" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_square_brackets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_unmatched_square_brackets" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_unmatched_square_brackets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_unterminated_strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_unterminated_strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_lexerpytesttokensourcetest_whitespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_lexer.py::TestTokenSource::test_whitespace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_bad_literal" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_bad_literal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_bad_quoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_bad_quoting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_complex_mixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_complex_mixed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_deeper_nest_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_deeper_nest_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_empty_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_empty_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_envelopey" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_envelopey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_envelopey_quoted" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_envelopey_quoted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_incomplete_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_incomplete_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_int" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_int_and_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_int_and_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_int_zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_int_zero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_literal" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_literal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_literal_with_more" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_literal_with_more
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_nested_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_nested_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_nil" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_nil
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_not_an_int" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_not_an_int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_quoted_specials" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_quoted_specials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_square_brackets" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_square_brackets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparseresponsetest_unquoted" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseResponse::test_unquoted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsemessagelisttest_basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseMessageList::test_basic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsemessagelisttest_modseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseMessageList::test_modseq
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsemessagelisttest_modseq_interleaved" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseMessageList::test_modseq_interleaved
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsemessagelisttest_modseq_no_space" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseMessageList::test_modseq_no_space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsemessagelisttest_one_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseMessageList::test_one_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_address_str_ignores_encoding_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_Address_str_ignores_encoding_error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_body" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_BODY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_bodystructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_BODYSTRUCTURE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_body_header_fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_BODY_HEADER_FIELDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_ENVELOPE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_envelope_with_empty_addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_empty_addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_envelope_with_invalid_date" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_invalid_date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_envelope_with_no_date" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_no_date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_FLAGS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_internaldate" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_internaldate_nil" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE_NIL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_internaldate_normalised" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE_normalised
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_uid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_UID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_bad_uid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_bad_UID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_bad_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_bad_data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_bad_msgid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_bad_msgid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_basic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_literals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_literals_and_keys_with_square_brackets" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_literals_and_keys_with_square_brackets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_missing_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_missing_data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_mixed_types" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_mixed_types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_multiple_messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_multiple_messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_none_special_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_none_special_case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_not_uid_is_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_not_uid_is_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_odd_pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_odd_pairs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_partial_fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_partial_fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_same_message_appearing_multiple_times" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_same_message_appearing_multiple_times
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_response_parserpytestparsefetchresponsetest_simple_pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_response_parser.py::TestParseFetchResponse::test_simple_pairs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-imapclient"><strong>OpenHands</strong>: imapclient</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">82</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">86</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">86</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_datetime_utilpytestparsingtest_dots_for_time_separator">test_datetime_util.py::TestParsing::test_dots_for_time_separator</h3>
+<details><summary> <pre>test_datetime_util.py::TestParsing::test_dots_for_time_separator</pre></summary><pre>
+self = <tests.test_datetime_util.TestParsing testMethod=test_dots_for_time_separator>
+
+    def test_dots_for_time_separator(self):
+        # As reported in issue #154.
+>       self.check_normalised_and_not(
+            b"Sat, 8 May 2010 16.03.09 +0200",
+            datetime(2010, 5, 8, 16, 3, 9, 0, FixedOffset(120)),
+        )
+
+tests/test_datetime_util.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_datetime_util.py:21: in check_normalised_and_not
+    parse_to_datetime(in_string), datetime_to_native(expected_datetime)
+imapclient/datetime_util.py:69: in parse_to_datetime
+    return datetime_to_native(dt)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dt = datetime.datetime(2010, 5, 8, 16, 3, 9, tzinfo=<imapclient.fixed_offset.FixedOffset object at 0x7ffa81f91d50>)
+
+    def datetime_to_native(dt: datetime) -> datetime:
+        """Convert a timezone-aware datetime to a naive datetime in the local timezone."""
+        if dt.tzinfo is None:
+            return dt
+>       return dt.astimezone(FixedOffset.for_system()).replace(tzinfo=None)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+imapclient/datetime_util.py:11: NotImplementedError
+</pre>
+</details>
+<h3 id="test_datetime_utilpytestparsingtest_internaldate_style">test_datetime_util.py::TestParsing::test_internaldate_style</h3>
+<details><summary> <pre>test_datetime_util.py::TestParsing::test_internaldate_style</pre></summary><pre>
+self = <tests.test_datetime_util.TestParsing testMethod=test_internaldate_style>
+
+    def test_internaldate_style(self):
+>       self.check_normalised_and_not(
+            b" 9-Feb-2007 17:08:08 -0430",
+            datetime(2007, 2, 9, 17, 8, 8, 0, FixedOffset(-4 * 60 - 30)),
+        )
+
+tests/test_datetime_util.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_datetime_util.py:21: in check_normalised_and_not
+    parse_to_datetime(in_string), datetime_to_native(expected_datetime)
+imapclient/datetime_util.py:69: in parse_to_datetime
+    return datetime_to_native(dt)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dt = datetime.datetime(2007, 2, 9, 17, 8, 8, tzinfo=<imapclient.fixed_offset.FixedOffset object at 0x7ffa820b3c70>)
+
+    def datetime_to_native(dt: datetime) -> datetime:
+        """Convert a timezone-aware datetime to a naive datetime in the local timezone."""
+        if dt.tzinfo is None:
+            return dt
+>       return dt.astimezone(FixedOffset.for_system()).replace(tzinfo=None)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+imapclient/datetime_util.py:11: NotImplementedError
+</pre>
+</details>
+<h3 id="test_datetime_utilpytestparsingtest_rfc822_style">test_datetime_util.py::TestParsing::test_rfc822_style</h3>
+<details><summary> <pre>test_datetime_util.py::TestParsing::test_rfc822_style</pre></summary><pre>
+self = <tests.test_datetime_util.TestParsing testMethod=test_rfc822_style>
+
+    def test_rfc822_style(self):
+>       self.check_normalised_and_not(
+            b"Sun, 24 Mar 2013 22:06:10 +0200",
+            datetime(2013, 3, 24, 22, 6, 10, 0, FixedOffset(120)),
+        )
+
+tests/test_datetime_util.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_datetime_util.py:21: in check_normalised_and_not
+    parse_to_datetime(in_string), datetime_to_native(expected_datetime)
+imapclient/datetime_util.py:69: in parse_to_datetime
+    return datetime_to_native(dt)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dt = datetime.datetime(2013, 3, 24, 22, 6, 10, tzinfo=<imapclient.fixed_offset.FixedOffset object at 0x7ffa811f63b0>)
+
+    def datetime_to_native(dt: datetime) -> datetime:
+        """Convert a timezone-aware datetime to a naive datetime in the local timezone."""
+        if dt.tzinfo is None:
+            return dt
+>       return dt.astimezone(FixedOffset.for_system()).replace(tzinfo=None)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+imapclient/datetime_util.py:11: NotImplementedError
+</pre>
+</details>
+<h3 id="test_datetime_utilpytestdatetimetointernaldatetest_with_timezone">test_datetime_util.py::TestDatetimeToINTERNALDATE::test_with_timezone</h3>
+<details><summary> <pre>test_datetime_util.py::TestDatetimeToINTERNALDATE::test_with_timezone</pre></summary><pre>
+self = <tests.test_datetime_util.TestDatetimeToINTERNALDATE testMethod=test_with_timezone>
+
+    def test_with_timezone(self):
+        dt = datetime(2009, 1, 2, 3, 4, 5, 0, FixedOffset(2 * 60 + 30))
+>       self.assertEqual(datetime_to_INTERNALDATE(dt), "02-Jan-2009 03:04:05 +0230")
+
+tests/test_datetime_util.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dt = datetime.datetime(2009, 1, 2, 3, 4, 5, tzinfo=<imapclient.fixed_offset.FixedOffset object at 0x7ffa8212d420>)
+
+    def datetime_to_INTERNALDATE(dt: datetime) -> str:
+        """Convert a datetime instance to a IMAP INTERNALDATE string.
+
+        If timezone information is missing the current system
+        timezone is used.
+        """
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=FixedOffset.for_system())
+
+>       sign = '+' if dt.utcoffset().total_seconds() >= 0 else '-'
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+imapclient/datetime_util.py:81: NotImplementedError
+</pre>
+</details>
+<h3 id="test_datetime_utilpytestdatetimetointernaldatetest_without_timezone">test_datetime_util.py::TestDatetimeToINTERNALDATE::test_without_timezone</h3>
+<details><summary> <pre>test_datetime_util.py::TestDatetimeToINTERNALDATE::test_without_timezone</pre></summary><pre>
+/usr/lib/python3.10/unittest/mock.py:1376: in patched
+    with self.decoration_helper(patched,
+/usr/lib/python3.10/contextlib.py:135: in __enter__
+    return next(self.gen)
+/usr/lib/python3.10/unittest/mock.py:1358: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+/usr/lib/python3.10/contextlib.py:492: in enter_context
+    result = _cm_type.__enter__(cm)
+/usr/lib/python3.10/unittest/mock.py:1431: in __enter__
+    self.target = self.getter()
+/usr/lib/python3.10/unittest/mock.py:1618: in <lambda>
+    getter = lambda: _importer(target)
+/usr/lib/python3.10/unittest/mock.py:1257: in _importer
+    thing = __import__(import_path)
+imapclient/__init__.py:8: in <module>
+    from .imapclient import *  # noqa: F401,F403
+imapclient/imapclient.py:1707: in <module>
+    class _dict_bytes_normaliser:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class _dict_bytes_normaliser:
+        """Wrap a dict with unicode/bytes keys and normalise the keys to
+        bytes.
+        """
+
+        def __init__(self, d):
+            self._d = d
+>       items = iteritems
+E       NameError: name 'iteritems' is not defined
+
+imapclient/imapclient.py:1714: NameError
+</pre>
+</details>
+<h3 id="test_fixed_offsetpytestfixedoffsettest_gmt">test_fixed_offset.py::TestFixedOffset::test_GMT</h3>
+<details><summary> <pre>test_fixed_offset.py::TestFixedOffset::test_GMT</pre></summary><pre>
+self = <tests.test_fixed_offset.TestFixedOffset testMethod=test_GMT>
+
+    def test_GMT(self):
+>       self._check(FixedOffset(0), timedelta(0), "+0000")
+
+tests/test_fixed_offset.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_fixed_offset.TestFixedOffset testMethod=test_GMT>
+offset = <imapclient.fixed_offset.FixedOffset object at 0x7ffa8148b520>
+expected_delta = datetime.timedelta(0), expected_name = '+0000'
+
+    def _check(self, offset, expected_delta, expected_name):
+>       self.assertEqual(offset.utcoffset(None), expected_delta)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+tests/test_fixed_offset.py:14: NotImplementedError
+</pre>
+</details>
+<h3 id="test_fixed_offsetpytestfixedoffsettest_for_system_dst_active">test_fixed_offset.py::TestFixedOffset::test_for_system_DST_active</h3>
+<details><summary> <pre>test_fixed_offset.py::TestFixedOffset::test_for_system_DST_active</pre></summary><pre>
+/usr/lib/python3.10/unittest/mock.py:1376: in patched
+    with self.decoration_helper(patched,
+/usr/lib/python3.10/contextlib.py:135: in __enter__
+    return next(self.gen)
+/usr/lib/python3.10/unittest/mock.py:1358: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+/usr/lib/python3.10/contextlib.py:492: in enter_context
+    result = _cm_type.__enter__(cm)
+/usr/lib/python3.10/unittest/mock.py:1431: in __enter__
+    self.target = self.getter()
+/usr/lib/python3.10/unittest/mock.py:1674: in <lambda>
+    getter = lambda: _importer(target)
+/usr/lib/python3.10/unittest/mock.py:1257: in _importer
+    thing = __import__(import_path)
+imapclient/__init__.py:8: in <module>
+    from .imapclient import *  # noqa: F401,F403
+imapclient/imapclient.py:1707: in <module>
+    class _dict_bytes_normaliser:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class _dict_bytes_normaliser:
+        """Wrap a dict with unicode/bytes keys and normalise the keys to
+        bytes.
+        """
+
+        def __init__(self, d):
+            self._d = d
+>       items = iteritems
+E       NameError: name 'iteritems' is not defined
+
+imapclient/imapclient.py:1714: NameError
+</pre>
+</details>
+<h3 id="test_fixed_offsetpytestfixedoffsettest_for_system_dst_not_active">test_fixed_offset.py::TestFixedOffset::test_for_system_DST_not_active</h3>
+<details><summary> <pre>test_fixed_offset.py::TestFixedOffset::test_for_system_DST_not_active</pre></summary><pre>
+/usr/lib/python3.10/unittest/mock.py:1376: in patched
+    with self.decoration_helper(patched,
+/usr/lib/python3.10/contextlib.py:135: in __enter__
+    return next(self.gen)
+/usr/lib/python3.10/unittest/mock.py:1358: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+/usr/lib/python3.10/contextlib.py:492: in enter_context
+    result = _cm_type.__enter__(cm)
+/usr/lib/python3.10/unittest/mock.py:1431: in __enter__
+    self.target = self.getter()
+/usr/lib/python3.10/unittest/mock.py:1674: in <lambda>
+    getter = lambda: _importer(target)
+/usr/lib/python3.10/unittest/mock.py:1257: in _importer
+    thing = __import__(import_path)
+imapclient/__init__.py:8: in <module>
+    from .imapclient import *  # noqa: F401,F403
+imapclient/imapclient.py:1707: in <module>
+    class _dict_bytes_normaliser:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class _dict_bytes_normaliser:
+        """Wrap a dict with unicode/bytes keys and normalise the keys to
+        bytes.
+        """
+
+        def __init__(self, d):
+            self._d = d
+>       items = iteritems
+E       NameError: name 'iteritems' is not defined
+
+imapclient/imapclient.py:1714: NameError
+</pre>
+</details>
+<h3 id="test_fixed_offsetpytestfixedoffsettest_for_system_no_dst">test_fixed_offset.py::TestFixedOffset::test_for_system_no_DST</h3>
+<details><summary> <pre>test_fixed_offset.py::TestFixedOffset::test_for_system_no_DST</pre></summary><pre>
+/usr/lib/python3.10/unittest/mock.py:1376: in patched
+    with self.decoration_helper(patched,
+/usr/lib/python3.10/contextlib.py:135: in __enter__
+    return next(self.gen)
+/usr/lib/python3.10/unittest/mock.py:1358: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+/usr/lib/python3.10/contextlib.py:492: in enter_context
+    result = _cm_type.__enter__(cm)
+/usr/lib/python3.10/unittest/mock.py:1431: in __enter__
+    self.target = self.getter()
+/usr/lib/python3.10/unittest/mock.py:1674: in <lambda>
+    getter = lambda: _importer(target)
+/usr/lib/python3.10/unittest/mock.py:1257: in _importer
+    thing = __import__(import_path)
+imapclient/__init__.py:8: in <module>
+    from .imapclient import *  # noqa: F401,F403
+imapclient/imapclient.py:1707: in <module>
+    class _dict_bytes_normaliser:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class _dict_bytes_normaliser:
+        """Wrap a dict with unicode/bytes keys and normalise the keys to
+        bytes.
+        """
+
+        def __init__(self, d):
+            self._d = d
+>       items = iteritems
+E       NameError: name 'iteritems' is not defined
+
+imapclient/imapclient.py:1714: NameError
+</pre>
+</details>
+<h3 id="test_fixed_offsetpytestfixedoffsettest_negative">test_fixed_offset.py::TestFixedOffset::test_negative</h3>
+<details><summary> <pre>test_fixed_offset.py::TestFixedOffset::test_negative</pre></summary><pre>
+self = <tests.test_fixed_offset.TestFixedOffset testMethod=test_negative>
+
+    def test_negative(self):
+>       self._check(FixedOffset(-30), timedelta(minutes=-30), "-0030")
+
+tests/test_fixed_offset.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_fixed_offset.TestFixedOffset testMethod=test_negative>
+offset = <imapclient.fixed_offset.FixedOffset object at 0x7ffa820b2560>
+expected_delta = datetime.timedelta(days=-1, seconds=84600)
+expected_name = '-0030'
+
+    def _check(self, offset, expected_delta, expected_name):
+>       self.assertEqual(offset.utcoffset(None), expected_delta)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+tests/test_fixed_offset.py:14: NotImplementedError
+</pre>
+</details>
+<h3 id="test_fixed_offsetpytestfixedoffsettest_positive">test_fixed_offset.py::TestFixedOffset::test_positive</h3>
+<details><summary> <pre>test_fixed_offset.py::TestFixedOffset::test_positive</pre></summary><pre>
+self = <tests.test_fixed_offset.TestFixedOffset testMethod=test_positive>
+
+    def test_positive(self):
+>       self._check(FixedOffset(30), timedelta(minutes=30), "+0030")
+
+tests/test_fixed_offset.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_fixed_offset.TestFixedOffset testMethod=test_positive>
+offset = <imapclient.fixed_offset.FixedOffset object at 0x7ffa811f4670>
+expected_delta = datetime.timedelta(seconds=1800), expected_name = '+0030'
+
+    def _check(self, offset, expected_delta, expected_name):
+>       self.assertEqual(offset.utcoffset(None), expected_delta)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+tests/test_fixed_offset.py:14: NotImplementedError
+</pre>
+</details>
+<h3 id="test_imap_utf7pyimap4utf7testcasetest_decode">test_imap_utf7.py::IMAP4UTF7TestCase::test_decode</h3>
+<details><summary> <pre>test_imap_utf7.py::IMAP4UTF7TestCase::test_decode</pre></summary><pre>
+self = <tests.test_imap_utf7.IMAP4UTF7TestCase testMethod=test_decode>
+
+    def test_decode(self):
+        for input, output in self.tests:
+            decoded = decode(output)
+>           self.assertIsInstance(decoded, str)
+E           AssertionError: None is not an instance of <class 'str'>
+
+tests/test_imap_utf7.py:36: AssertionError
+</pre>
+</details>
+<h3 id="test_imap_utf7pyimap4utf7testcasetest_encode">test_imap_utf7.py::IMAP4UTF7TestCase::test_encode</h3>
+<details><summary> <pre>test_imap_utf7.py::IMAP4UTF7TestCase::test_encode</pre></summary><pre>
+self = <tests.test_imap_utf7.IMAP4UTF7TestCase testMethod=test_encode>
+
+    def test_encode(self):
+        for input, output in self.tests:
+            encoded = encode(input)
+>           self.assertIsInstance(encoded, bytes)
+E           AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_imap_utf7.py:30: AssertionError
+</pre>
+</details>
+<h3 id="test_imap_utf7pyimap4utf7testcasetest_printable_singletons">test_imap_utf7.py::IMAP4UTF7TestCase::test_printable_singletons</h3>
+<details><summary> <pre>test_imap_utf7.py::IMAP4UTF7TestCase::test_printable_singletons</pre></summary><pre>
+self = <tests.test_imap_utf7.IMAP4UTF7TestCase testMethod=test_printable_singletons>
+
+    def test_printable_singletons(self):
+        """
+        The IMAP4 modified UTF-7 implementation encodes all printable
+        characters which are in ASCII using the corresponding ASCII byte.
+        """
+        # All printables represent themselves
+        for o in list(range(0x20, 0x26)) + list(range(0x27, 0x7F)):
+>           self.assertEqual(bytes((o,)), encode(chr(o)))
+E           AssertionError: b' ' != None
+
+tests/test_imap_utf7.py:46: AssertionError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_escaping">test_response_lexer.py::TestTokenSource::test_escaping</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_escaping</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_escaping>
+
+    def test_escaping(self):
+>       self.check([rb'"aaa\"bbb"'], [rb'"aaa"bbb"'])
+
+tests/test_response_lexer.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa811f4b20>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_invalid_escape">test_response_lexer.py::TestTokenSource::test_invalid_escape</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_invalid_escape</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_invalid_escape>
+
+    def test_invalid_escape(self):
+>       self.check([rb'"aaa\Zbbb"'], [rb'"aaa\Zbbb"'])
+
+tests/test_response_lexer.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa820b00d0>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_lists">test_response_lexer.py::TestTokenSource::test_lists</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_lists</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_lists>
+
+    def test_lists(self):
+>       self.check([b"()"], [b"(", b")"])
+
+tests/test_response_lexer.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa810db940>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_literal">test_response_lexer.py::TestTokenSource::test_literal</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_literal</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_literal>
+
+    def test_literal(self):
+        source = TokenSource([(b"abc {7}", b"foo bar"), b")"])
+        tokens = iter(source)
+>       self.assertEqual(next(tokens), b"abc")
+
+tests/test_response_lexer.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa811f7550>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_literals">test_response_lexer.py::TestTokenSource::test_literals</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_literals</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_literals>
+
+    def test_literals(self):
+        source = TokenSource([(b"abc {7}", b"foo bar"), (b"{5}", b"snafu"), b")"])
+        tokens = iter(source)
+>       self.assertEqual(next(tokens), b"abc")
+
+tests/test_response_lexer.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa82094310>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_multiple_inputs">test_response_lexer.py::TestTokenSource::test_multiple_inputs</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_multiple_inputs</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_multiple_inputs>
+
+    def test_multiple_inputs(self):
+>       self.check([b"abc 111", b"def 222"], [b"abc", b"111", b"def", b"222"])
+
+tests/test_response_lexer.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa811f4e20>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_no_escaping_in_square_brackets">test_response_lexer.py::TestTokenSource::test_no_escaping_in_square_brackets</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_no_escaping_in_square_brackets</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_no_escaping_in_square_brackets>
+
+    def test_no_escaping_in_square_brackets(self):
+>       self.check([rb"[aaa\\bbb]"], [rb"[aaa\\bbb]"])
+
+tests/test_response_lexer.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa810fb190>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_one_token">test_response_lexer.py::TestTokenSource::test_one_token</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_one_token</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_one_token>
+
+    def test_one_token(self):
+>       self.check([b"abc"], [b"abc"])
+
+tests/test_response_lexer.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa820b05b0>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_quoted_strings">test_response_lexer.py::TestTokenSource::test_quoted_strings</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_quoted_strings</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_quoted_strings>
+
+    def test_quoted_strings(self):
+>       self.check([b'"abc def"'], [b'"abc def"'])
+
+tests/test_response_lexer.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa81f91d50>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_simple_tokens">test_response_lexer.py::TestTokenSource::test_simple_tokens</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_simple_tokens</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_simple_tokens>
+
+    def test_simple_tokens(self):
+>       self.check([b"abc 111 def"], [b"abc", b"111", b"def"])
+
+tests/test_response_lexer.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa82365ed0>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_square_brackets">test_response_lexer.py::TestTokenSource::test_square_brackets</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_square_brackets</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_square_brackets>
+
+    def test_square_brackets(self):
+>       self.check([b"[aaa bbb]"], [b"[aaa bbb]"])
+
+tests/test_response_lexer.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa810f9db0>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_unmatched_square_brackets">test_response_lexer.py::TestTokenSource::test_unmatched_square_brackets</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_unmatched_square_brackets</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_unmatched_square_brackets>
+
+    def test_unmatched_square_brackets(self):
+        message = "No closing ']'"
+>       self.check_error([b"["], message)
+
+tests/test_response_lexer.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:94: in check_error
+    self.assertRaisesRegex(
+tests/test_response_lexer.py:95: in <lambda>
+    ValueError, expected_message, lambda: list(TokenSource(text_in))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_unterminated_strings">test_response_lexer.py::TestTokenSource::test_unterminated_strings</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_unterminated_strings</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_unterminated_strings>
+
+    def test_unterminated_strings(self):
+        message = "No closing '\"'"
+>       self.check_error([b'"'], message)
+
+tests/test_response_lexer.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:94: in check_error
+    self.assertRaisesRegex(
+tests/test_response_lexer.py:95: in <lambda>
+    ValueError, expected_message, lambda: list(TokenSource(text_in))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_lexerpytesttokensourcetest_whitespace">test_response_lexer.py::TestTokenSource::test_whitespace</h3>
+<details><summary> <pre>test_response_lexer.py::TestTokenSource::test_whitespace</pre></summary><pre>
+self = <tests.test_response_lexer.TestTokenSource testMethod=test_whitespace>
+
+    def test_whitespace(self):
+>       self.check([b"abc   def"], [b"abc", b"def"])
+
+tests/test_response_lexer.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_lexer.py:91: in check
+    self.assertSequenceEqual(list(tokens), expected_out)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <imapclient.response_lexer.Lexer object at 0x7ffa823667a0>
+
+    def __iter__(self) -> Iterator[bytes]:
+        for source in self.sources:
+            self.current_source = source
+>           for tok in self.read_token_stream(iter(source)):
+E           AttributeError: 'Lexer' object has no attribute 'read_token_stream'
+
+imapclient/response_lexer.py:45: AttributeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_bad_literal">test_response_parser.py::TestParseResponse::test_bad_literal</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_bad_literal</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_bad_literal>
+
+    def test_bad_literal(self):
+>       self._test_parse_error(
+            [(b"{99}", b"abc")], "Expecting literal of size 99, got 3"
+        )
+
+tests/test_response_parser.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:196: in _test_parse_error
+    self.assertRaisesRegex(ProtocolError, expected_msg, parse_response, to_parse)
+E   AssertionError: ProtocolError not raised by parse_response
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_bad_quoting">test_response_parser.py::TestParseResponse::test_bad_quoting</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_bad_quoting</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_bad_quoting>
+
+    def test_bad_quoting(self):
+>       self._test_parse_error(b'"abc next', """No closing '"'""")
+
+tests/test_response_parser.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:196: in _test_parse_error
+    self.assertRaisesRegex(ProtocolError, expected_msg, parse_response, to_parse)
+E   AssertionError: ProtocolError not raised by parse_response
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_complex_mixed">test_response_parser.py::TestParseResponse::test_complex_mixed</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_complex_mixed</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_complex_mixed>
+
+    def test_complex_mixed(self):
+>       self._test(
+            b'((FOO "PLAIN" ("CHARSET" "US-ASCII") NIL NIL "7BIT" 1152 23) '
+            b'("TEXT" "PLAIN" ("CHARSET" "US-ASCII" "NAME" "cc.diff") '
+            b'"<hi.there>" "foo" "BASE64" 4554 73) "MIXED")',
+            (
+                (
+                    b"FOO",
+                    b"PLAIN",
+                    (b"CHARSET", b"US-ASCII"),
+                    None,
+                    None,
+                    b"7BIT",
+                    1152,
+                    23,
+                ),
+                (
+                    b"TEXT",
+                    b"PLAIN",
+                    (b"CHARSET", b"US-ASCII", b"NAME", b"cc.diff"),
+                    b"<hi.there>",
+                    b"foo",
+                    b"BASE64",
+                    4554,
+                    73,
+                ),
+                b"MIXED",
+            ),
+        )
+
+tests/test_response_parser.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (((b'FOO', b'PLAIN', (b'CHARSET', b'US-ASCII'), None, None, b'7BIT', 1152, 23),
+E   +   (b'TEXT',
+E   +    b'PLAIN',
+E   +    (b'CHARSET', b'US-ASCII', b'NAME', b'cc.diff'),
+E   +    b'<hi.there>',
+E   +    b'foo',
+E   +    b'BASE64',
+E   +    4554,
+E   +    73),
+E   +   b'MIXED'),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_deeper_nest_tuple">test_response_parser.py::TestParseResponse::test_deeper_nest_tuple</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_deeper_nest_tuple</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_deeper_nest_tuple>
+
+    def test_deeper_nest_tuple(self):
+>       self._test(
+            b'(123 "foo" ((0 1 2) "more" NIL) 66)',
+            (123, b"foo", ((0, 1, 2), b"more", None), 66),
+        )
+
+tests/test_response_parser.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((123, b'foo', ((0, 1, 2), b'more', None), 66),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_empty_tuple">test_response_parser.py::TestParseResponse::test_empty_tuple</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_empty_tuple</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_empty_tuple>
+
+    def test_empty_tuple(self):
+>       self._test(b"()", ())
+
+tests/test_response_parser.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_envelopey">test_response_parser.py::TestParseResponse::test_envelopey</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_envelopey</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_envelopey>
+
+    def test_envelopey(self):
+>       self._test(
+            b'(UID 5 ENVELOPE ("internal_date" "subject" '
+            b'(("name" NIL "address1" "domain1.com")) '
+            b'((NIL NIL "address2" "domain2.com")) '
+            b'(("name" NIL "address3" "domain3.com")) '
+            b'((NIL NIL "address4" "domain4.com")) '
+            b'NIL NIL "<reply-to-id>" "<msg_id>"))',
+            (
+                b"UID",
+                5,
+                b"ENVELOPE",
+                (
+                    b"internal_date",
+                    b"subject",
+                    ((b"name", None, b"address1", b"domain1.com"),),
+                    ((None, None, b"address2", b"domain2.com"),),
+                    ((b"name", None, b"address3", b"domain3.com"),),
+                    ((None, None, b"address4", b"domain4.com"),),
+                    None,
+                    None,
+                    b"<reply-to-id>",
+                    b"<msg_id>",
+                ),
+            ),
+        )
+
+tests/test_response_parser.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((b'UID',
+E   +   5,
+E   +   b'ENVELOPE',
+E   +   (b'internal_date',
+E   +    b'subject',
+E   +    ((b'name', None, b'address1', b'domain1.com'),),
+E   +    ((None, None, b'address2', b'domain2.com'),),
+E   +    ((b'name', None, b'address3', b'domain3.com'),),
+E   +    ((None, None, b'address4', b'domain4.com'),),
+E   +    None,
+E   +    None,
+E   +    b'<reply-to-id>',
+E   +    b'<msg_id>')),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_envelopey_quoted">test_response_parser.py::TestParseResponse::test_envelopey_quoted</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_envelopey_quoted</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_envelopey_quoted>
+
+    def test_envelopey_quoted(self):
+>       self._test(
+            b'(UID 5 ENVELOPE ("internal_date" "subject with \\"quotes\\"" '
+            b'(("name" NIL "address1" "domain1.com")) '
+            b'((NIL NIL "address2" "domain2.com")) '
+            b'(("name" NIL "address3" "domain3.com")) '
+            b'((NIL NIL "address4" "domain4.com")) '
+            b'NIL NIL "<reply-to-id>" "<msg_id>"))',
+            (
+                b"UID",
+                5,
+                b"ENVELOPE",
+                (
+                    b"internal_date",
+                    b'subject with "quotes"',
+                    ((b"name", None, b"address1", b"domain1.com"),),
+                    ((None, None, b"address2", b"domain2.com"),),
+                    ((b"name", None, b"address3", b"domain3.com"),),
+                    ((None, None, b"address4", b"domain4.com"),),
+                    None,
+                    None,
+                    b"<reply-to-id>",
+                    b"<msg_id>",
+                ),
+            ),
+        )
+
+tests/test_response_parser.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((b'UID',
+E   +   5,
+E   +   b'ENVELOPE',
+E   +   (b'internal_date',
+E   +    b'subject with "quotes"',
+E   +    ((b'name', None, b'address1', b'domain1.com'),),
+E   +    ((None, None, b'address2', b'domain2.com'),),
+E   +    ((b'name', None, b'address3', b'domain3.com'),),
+E   +    ((None, None, b'address4', b'domain4.com'),),
+E   +    None,
+E   +    None,
+E   +    b'<reply-to-id>',
+E   +    b'<msg_id>')),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_incomplete_tuple">test_response_parser.py::TestParseResponse::test_incomplete_tuple</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_incomplete_tuple</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_incomplete_tuple>
+
+    def test_incomplete_tuple(self):
+>       self._test_parse_error(b"abc (1 2", r'Tuple incomplete before "\(1 2"')
+
+tests/test_response_parser.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:196: in _test_parse_error
+    self.assertRaisesRegex(ProtocolError, expected_msg, parse_response, to_parse)
+E   AssertionError: ProtocolError not raised by parse_response
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_int">test_response_parser.py::TestParseResponse::test_int</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_int</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_int>
+
+    def test_int(self):
+>       self._test(b"45", 45)
+
+tests/test_response_parser.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (45,)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_int_and_tuple">test_response_parser.py::TestParseResponse::test_int_and_tuple</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_int_and_tuple</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_int_and_tuple>
+
+    def test_int_and_tuple(self):
+>       self._test(b'1 (123 "foo")', (1, (123, b"foo")), wrap=False)
+
+tests/test_response_parser.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (1, (123, b'foo'))
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_int_zero">test_response_parser.py::TestParseResponse::test_int_zero</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_int_zero</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_int_zero>
+
+    def test_int_zero(self):
+>       self._test(b"0", 0)
+
+tests/test_response_parser.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (0,)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_literal">test_response_parser.py::TestParseResponse::test_literal</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_literal</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_literal>
+
+    def test_literal(self):
+        literal_text = add_crlf(b"012\n" b"abc def XYZ\n")
+>       self._test([(b"{18}", literal_text)], literal_text)
+
+tests/test_response_parser.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (b'012\r\nabc def XYZ\r\n',)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_literal_with_more">test_response_parser.py::TestParseResponse::test_literal_with_more</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_literal_with_more</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_literal_with_more>
+
+    def test_literal_with_more(self):
+        literal_text = add_crlf(b"012\n" b"abc def XYZ\n")
+        response = [(b'(12 "foo" {18}', literal_text), b")"]
+>       self._test(response, (12, b"foo", literal_text))
+
+tests/test_response_parser.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((12, b'foo', b'012\r\nabc def XYZ\r\n'),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_nested_tuple">test_response_parser.py::TestParseResponse::test_nested_tuple</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_nested_tuple</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_nested_tuple>
+
+    def test_nested_tuple(self):
+>       self._test(b'(123 "foo" ("more" NIL) 66)', (123, b"foo", (b"more", None), 66))
+
+tests/test_response_parser.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((123, b'foo', (b'more', None), 66),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_nil">test_response_parser.py::TestParseResponse::test_nil</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_nil</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_nil>
+
+    def test_nil(self):
+>       self._test(b"NIL", None)
+
+tests/test_response_parser.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (None,)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_not_an_int">test_response_parser.py::TestParseResponse::test_not_an_int</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_not_an_int</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_not_an_int>
+
+    def test_not_an_int(self):
+>       self._test(b"0123", b"0123")
+
+tests/test_response_parser.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (b'0123',)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_quoted_specials">test_response_parser.py::TestParseResponse::test_quoted_specials</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_quoted_specials</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_quoted_specials>
+
+    def test_quoted_specials(self):
+>       self._test(rb'"\"foo bar\""', b'"foo bar"')
+
+tests/test_response_parser.py:162: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (b'"foo bar"',)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_square_brackets">test_response_parser.py::TestParseResponse::test_square_brackets</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_square_brackets</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_square_brackets>
+
+    def test_square_brackets(self):
+>       self._test(b"foo[bar rrr]", b"foo[bar rrr]")
+
+tests/test_response_parser.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (b'foo[bar rrr]',)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_string">test_response_parser.py::TestParseResponse::test_string</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_string</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_string>
+
+    def test_string(self):
+>       self._test(b'"TEST"', b"TEST")
+
+tests/test_response_parser.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (b'TEST',)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_tuple">test_response_parser.py::TestParseResponse::test_tuple</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_tuple</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_tuple>
+
+    def test_tuple(self):
+>       self._test(b'(123 "foo" GeE)', (123, b"foo", b"GeE"))
+
+tests/test_response_parser.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + ((123, b'foo', b'GeE'),)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparseresponsetest_unquoted">test_response_parser.py::TestParseResponse::test_unquoted</h3>
+<details><summary> <pre>test_response_parser.py::TestParseResponse::test_unquoted</pre></summary><pre>
+self = <tests.test_response_parser.TestParseResponse testMethod=test_unquoted>
+
+    def test_unquoted(self):
+>       self._test(b"FOO", b"FOO")
+
+tests/test_response_parser.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:191: in _test
+    self.assertSequenceEqual(output, expected)
+E   AssertionError: First sequence has no length.    Non-sequence?
+E   - None
+E   + (b'FOO',)
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsemessagelisttest_basic">test_response_parser.py::TestParseMessageList::test_basic</h3>
+<details><summary> <pre>test_response_parser.py::TestParseMessageList::test_basic</pre></summary><pre>
+self = <tests.test_response_parser.TestParseMessageList testMethod=test_basic>
+
+    def test_basic(self):
+        out = parse_message_list([b"1 2 3"])
+>       self.assertSequenceEqual(out, [1, 2, 3])
+E       AssertionError: First sequence has no length.    Non-sequence?
+E       - None
+E       + [1, 2, 3]
+
+tests/test_response_parser.py:202: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsemessagelisttest_modseq">test_response_parser.py::TestParseMessageList::test_modseq</h3>
+<details><summary> <pre>test_response_parser.py::TestParseMessageList::test_modseq</pre></summary><pre>
+self = <tests.test_response_parser.TestParseMessageList testMethod=test_modseq>
+
+    def test_modseq(self):
+        out = parse_message_list([b"1 2 3 (modseq 999)"])
+>       self.assertSequenceEqual(out, [1, 2, 3])
+E       AssertionError: First sequence has no length.    Non-sequence?
+E       - None
+E       + [1, 2, 3]
+
+tests/test_response_parser.py:210: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsemessagelisttest_modseq_interleaved">test_response_parser.py::TestParseMessageList::test_modseq_interleaved</h3>
+<details><summary> <pre>test_response_parser.py::TestParseMessageList::test_modseq_interleaved</pre></summary><pre>
+self = <tests.test_response_parser.TestParseMessageList testMethod=test_modseq_interleaved>
+
+    def test_modseq_interleaved(self):
+        # Unlikely but test it anyway.
+        out = parse_message_list([b"1 2 (modseq 9) 3 4"])
+>       self.assertSequenceEqual(out, [1, 2, 3, 4])
+E       AssertionError: First sequence has no length.    Non-sequence?
+E       - None
+E       + [1, 2, 3, 4]
+
+tests/test_response_parser.py:221: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsemessagelisttest_modseq_no_space">test_response_parser.py::TestParseMessageList::test_modseq_no_space</h3>
+<details><summary> <pre>test_response_parser.py::TestParseMessageList::test_modseq_no_space</pre></summary><pre>
+self = <tests.test_response_parser.TestParseMessageList testMethod=test_modseq_no_space>
+
+    def test_modseq_no_space(self):
+        out = parse_message_list([b"1 2 3(modseq 999)"])
+>       self.assertSequenceEqual(out, [1, 2, 3])
+E       AssertionError: First sequence has no length.    Non-sequence?
+E       - None
+E       + [1, 2, 3]
+
+tests/test_response_parser.py:215: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsemessagelisttest_one_id">test_response_parser.py::TestParseMessageList::test_one_id</h3>
+<details><summary> <pre>test_response_parser.py::TestParseMessageList::test_one_id</pre></summary><pre>
+self = <tests.test_response_parser.TestParseMessageList testMethod=test_one_id>
+
+    def test_one_id(self):
+>       self.assertSequenceEqual(parse_message_list([b"4"]), [4])
+E       AssertionError: First sequence has no length.    Non-sequence?
+E       - None
+E       + [4]
+
+tests/test_response_parser.py:206: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_address_str_ignores_encoding_error">test_response_parser.py::TestParseFetchResponse::test_Address_str_ignores_encoding_error</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_Address_str_ignores_encoding_error</pre></summary><pre>
+/usr/lib/python3.10/unittest/mock.py:1376: in patched
+    with self.decoration_helper(patched,
+/usr/lib/python3.10/contextlib.py:135: in __enter__
+    return next(self.gen)
+/usr/lib/python3.10/unittest/mock.py:1358: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+/usr/lib/python3.10/contextlib.py:492: in enter_context
+    result = _cm_type.__enter__(cm)
+/usr/lib/python3.10/unittest/mock.py:1431: in __enter__
+    self.target = self.getter()
+/usr/lib/python3.10/unittest/mock.py:1618: in <lambda>
+    getter = lambda: _importer(target)
+/usr/lib/python3.10/unittest/mock.py:1257: in _importer
+    thing = __import__(import_path)
+imapclient/__init__.py:8: in <module>
+    from .imapclient import *  # noqa: F401,F403
+imapclient/imapclient.py:1707: in <module>
+    class _dict_bytes_normaliser:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class _dict_bytes_normaliser:
+        """Wrap a dict with unicode/bytes keys and normalise the keys to
+        bytes.
+        """
+
+        def __init__(self, d):
+            self._d = d
+>       items = iteritems
+E       NameError: name 'iteritems' is not defined
+
+imapclient/imapclient.py:1714: NameError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_body">test_response_parser.py::TestParseFetchResponse::test_BODY</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_BODY</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_BODY>
+
+    def test_BODY(self):
+>       self.check_BODYish_single_part(b"BODY")
+
+tests/test_response_parser.py:327: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:342: in check_BODYish_single_part
+    self.assertEqual(
+E   AssertionError: None != {317: {b'BODY': (b'TEXT', b'PLAIN', (b'CH[59 chars]123}}
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_bodystructure">test_response_parser.py::TestParseFetchResponse::test_BODYSTRUCTURE</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_BODYSTRUCTURE</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_BODYSTRUCTURE>
+
+    def test_BODYSTRUCTURE(self):
+>       self.check_BODYish_single_part(b"BODYSTRUCTURE")
+
+tests/test_response_parser.py:332: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_response_parser.py:342: in check_BODYish_single_part
+    self.assertEqual(
+E   AssertionError: None != {317: {b'BODYSTRUCTURE': (b'TEXT', b'PLAI[68 chars]123}}
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_body_header_fields">test_response_parser.py::TestParseFetchResponse::test_BODY_HEADER_FIELDS</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_BODY_HEADER_FIELDS</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_BODY_HEADER_FIELDS>
+
+    def test_BODY_HEADER_FIELDS(self):
+        header_text = b"Subject: A subject\r\nFrom: Some one <someone@mail.com>\r\n\r\n"
+>       self.assertEqual(
+            parse_fetch_response(
+                [
+                    (
+                        b"123 (UID 31710 BODY[HEADER.FIELDS (from subject)] {57}",
+                        header_text,
+                    ),
+                    b")",
+                ]
+            ),
+            {31710: {b"BODY[HEADER.FIELDS (FROM SUBJECT)]": header_text, b"SEQ": 123}},
+        )
+E       AssertionError: None != {31710: {b'BODY[HEADER.FIELDS (FROM SUBJE[83 chars]123}}
+
+tests/test_response_parser.py:313: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_envelope">test_response_parser.py::TestParseFetchResponse::test_ENVELOPE</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_ENVELOPE</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_ENVELOPE>
+
+    def test_ENVELOPE(self):
+        envelope_str = (
+            b"1 (ENVELOPE ( "
+            b'"Sun, 24 Mar 2013 22:06:10 +0200" '
+            b'"subject" '
+            b'(("name" NIL "address1" "domain1.com")) '  # from (name and address)
+            b'((NIL NIL "address2" "domain2.com")) '  # sender (just address)
+            b'(("name" NIL "address3" "domain3.com") NIL) '  # reply to
+            b"NIL"  # to (no address)
+            b'((NIL NIL "address4" "domain4.com") '  # cc
+            b'("person" NIL "address4b" "domain4b.com")) '
+            b"NIL "  # bcc
+            b'"<reply-to-id>" '
+            b'"<msg_id>"))'
+        )
+
+        output = parse_fetch_response([envelope_str], normalise_times=False)
+
+        self.assertEqual(
+>           output[1][b"ENVELOPE"],
+            Envelope(
+                datetime(2013, 3, 24, 22, 6, 10, tzinfo=FixedOffset(120)),
+                b"subject",
+                (Address(b"name", None, b"address1", b"domain1.com"),),
+                (Address(None, None, b"address2", b"domain2.com"),),
+                (Address(b"name", None, b"address3", b"domain3.com"),),
+                None,
+                (
+                    Address(None, None, b"address4", b"domain4.com"),
+                    Address(b"person", None, b"address4b", b"domain4b.com"),
+                ),
+                None,
+                b"<reply-to-id>",
+                b"<msg_id>",
+            ),
+        )
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:515: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_envelope_with_empty_addresses">test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_empty_addresses</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_empty_addresses</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_ENVELOPE_with_empty_addresses>
+
+    def test_ENVELOPE_with_empty_addresses(self):
+        envelope_str = (
+            b"1 (ENVELOPE ( "
+            b"NIL "
+            b'"subject" '
+            b'(("name" NIL "address1" "domain1.com") NIL) '
+            b'(NIL (NIL NIL "address2" "domain2.com")) '
+            b'(("name" NIL "address3" "domain3.com") NIL ("name" NIL "address3b" "domain3b.com")) '
+            b"NIL"
+            b'((NIL NIL "address4" "domain4.com") '
+            b'("person" NIL "address4b" "domain4b.com")) '
+            b'NIL "<reply-to-id>" "<msg_id>"))'
+        )
+
+        output = parse_fetch_response([envelope_str], normalise_times=False)
+
+        self.assertEqual(
+>           output[1][b"ENVELOPE"],
+            Envelope(
+                None,
+                b"subject",
+                (Address(b"name", None, b"address1", b"domain1.com"),),
+                (Address(None, None, b"address2", b"domain2.com"),),
+                (
+                    Address(b"name", None, b"address3", b"domain3.com"),
+                    Address(b"name", None, b"address3b", b"domain3b.com"),
+                ),
+                None,
+                (
+                    Address(None, None, b"address4", b"domain4.com"),
+                    Address(b"person", None, b"address4b", b"domain4b.com"),
+                ),
+                None,
+                b"<reply-to-id>",
+                b"<msg_id>",
+            ),
+        )
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:610: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_envelope_with_invalid_date">test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_invalid_date</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_invalid_date</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_ENVELOPE_with_invalid_date>
+
+    def test_ENVELOPE_with_invalid_date(self):
+        envelope_str = (
+            b"1 (ENVELOPE ( "
+            b'"wtf" '  # bad date
+            b'"subject" '
+            b"NIL NIL NIL NIL NIL NIL "
+            b'"<reply-to-id>" "<msg_id>"))'
+        )
+
+        output = parse_fetch_response([envelope_str], normalise_times=False)
+
+        self.assertEqual(
+>           output[1][b"ENVELOPE"],
+            Envelope(
+                None,
+                b"subject",
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                b"<reply-to-id>",
+                b"<msg_id>",
+            ),
+        )
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:578: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_envelope_with_no_date">test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_no_date</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_ENVELOPE_with_no_date</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_ENVELOPE_with_no_date>
+
+    def test_ENVELOPE_with_no_date(self):
+        envelope_str = (
+            b"1 (ENVELOPE ( "
+            b"NIL "
+            b'"subject" '
+            b"NIL "
+            b"NIL "
+            b"NIL "
+            b"NIL "
+            b"NIL "
+            b"NIL "
+            b'"<reply-to-id>" '
+            b'"<msg_id>"))'
+        )
+
+        output = parse_fetch_response([envelope_str], normalise_times=False)
+
+        self.assertEqual(
+>           output[1][b"ENVELOPE"],
+            Envelope(
+                None,
+                b"subject",
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                b"<reply-to-id>",
+                b"<msg_id>",
+            ),
+        )
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:551: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_flags">test_response_parser.py::TestParseFetchResponse::test_FLAGS</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_FLAGS</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_FLAGS>
+
+    def test_FLAGS(self):
+>       self.assertEqual(
+            parse_fetch_response([rb"23 (FLAGS (\Seen Stuff))"]),
+            {23: {b"SEQ": 23, b"FLAGS": (rb"\Seen", b"Stuff")}},
+        )
+E       AssertionError: None != {23: {b'SEQ': 23, b'FLAGS': (b'\\Seen', b'Stuff')}}
+
+tests/test_response_parser.py:265: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_internaldate">test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_INTERNALDATE>
+
+    def test_INTERNALDATE(self):
+        out = parse_fetch_response(
+            [b'1 (INTERNALDATE " 9-Feb-2007 17:08:08 -0430")'], normalise_times=False
+        )
+        self.assertEqual(
+>           out[1][b"INTERNALDATE"],
+            datetime(2007, 2, 9, 17, 8, 8, 0, FixedOffset(-4 * 60 - 30)),
+        )
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:636: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_internaldate_nil">test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE_NIL</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE_NIL</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_INTERNALDATE_NIL>
+
+    def test_INTERNALDATE_NIL(self):
+        out = parse_fetch_response([b"1 (INTERNALDATE NIL)"])
+>       self.assertEqual(out[1][b"INTERNALDATE"], None)
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:653: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_internaldate_normalised">test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE_normalised</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_INTERNALDATE_normalised</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_INTERNALDATE_normalised>
+
+    def test_INTERNALDATE_normalised(self):
+        output = parse_fetch_response(
+            [b'3 (INTERNALDATE " 9-Feb-2007 17:08:08 -0430")']
+        )
+>       dt = output[3][b"INTERNALDATE"]
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_response_parser.py:644: TypeError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_uid">test_response_parser.py::TestParseFetchResponse::test_UID</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_UID</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_UID>
+
+    def test_UID(self):
+>       self.assertEqual(parse_fetch_response([b"23 (UID 76)"]), {76: {b"SEQ": 23}})
+E       AssertionError: None != {76: {b'SEQ': 23}}
+
+tests/test_response_parser.py:252: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_bad_uid">test_response_parser.py::TestParseFetchResponse::test_bad_UID</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_bad_UID</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_bad_UID>
+
+    def test_bad_UID(self):
+>       self.assertRaises(ProtocolError, parse_fetch_response, [b"(UID X)"])
+E       AssertionError: ProtocolError not raised by parse_fetch_response
+
+tests/test_response_parser.py:262: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_bad_data">test_response_parser.py::TestParseFetchResponse::test_bad_data</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_bad_data</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_bad_data>
+
+    def test_bad_data(self):
+>       self.assertRaises(ProtocolError, parse_fetch_response, [b"2 WHAT"])
+E       AssertionError: ProtocolError not raised by parse_fetch_response
+
+tests/test_response_parser.py:236: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_bad_msgid">test_response_parser.py::TestParseFetchResponse::test_bad_msgid</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_bad_msgid</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_bad_msgid>
+
+    def test_bad_msgid(self):
+>       self.assertRaises(ProtocolError, parse_fetch_response, [b"abc ()"])
+E       AssertionError: ProtocolError not raised by parse_fetch_response
+
+tests/test_response_parser.py:233: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_basic">test_response_parser.py::TestParseFetchResponse::test_basic</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_basic</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_basic>
+
+    def test_basic(self):
+>       self.assertEqual(parse_fetch_response([b"4 ()"]), {4: {b"SEQ": 4}})
+E       AssertionError: None != {4: {b'SEQ': 4}}
+
+tests/test_response_parser.py:227: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_literals">test_response_parser.py::TestParseFetchResponse::test_literals</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_literals</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_literals>
+
+    def test_literals(self):
+>       self.assertEqual(
+            parse_fetch_response(
+                [
+                    (b"1 (RFC822.TEXT {4}", b"body"),
+                    (b" RFC822 {21}", b"Subject: test\r\n\r\nbody"),
+                    b")",
+                ]
+            ),
+            {
+                1: {
+                    b"RFC822.TEXT": b"body",
+                    b"RFC822": b"Subject: test\r\n\r\nbody",
+                    b"SEQ": 1,
+                }
+            },
+        )
+E       AssertionError: None != {1: {b'RFC822.TEXT': b'body', b'RFC822': [36 chars]: 1}}
+
+tests/test_response_parser.py:288: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_literals_and_keys_with_square_brackets">test_response_parser.py::TestParseFetchResponse::test_literals_and_keys_with_square_brackets</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_literals_and_keys_with_square_brackets</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_literals_and_keys_with_square_brackets>
+
+    def test_literals_and_keys_with_square_brackets(self):
+>       self.assertEqual(
+            parse_fetch_response([(b"1 (BODY[TEXT] {11}", b"Hi there.\r\n"), b")"]),
+            {1: {b"BODY[TEXT]": b"Hi there.\r\n", b"SEQ": 1}},
+        )
+E       AssertionError: None != {1: {b'BODY[TEXT]': b'Hi there.\r\n', b'SEQ': 1}}
+
+tests/test_response_parser.py:306: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_missing_data">test_response_parser.py::TestParseFetchResponse::test_missing_data</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_missing_data</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_missing_data>
+
+    def test_missing_data(self):
+>       self.assertRaises(ProtocolError, parse_fetch_response, [b"2"])
+E       AssertionError: ProtocolError not raised by parse_fetch_response
+
+tests/test_response_parser.py:239: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_mixed_types">test_response_parser.py::TestParseFetchResponse::test_mixed_types</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_mixed_types</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_mixed_types>
+
+    def test_mixed_types(self):
+        self.assertEqual(
+            parse_fetch_response(
+                [
+                    (
+                        b'1 (INTERNALDATE " 9-Feb-2007 17:08:08 +0100" RFC822 {21}',
+                        b"Subject: test\r\n\r\nbody",
+                    ),
+                    b")",
+                ]
+            ),
+            {
+                1: {
+>                   b"INTERNALDATE": datetime_to_native(
+                        datetime(2007, 2, 9, 17, 8, 8, 0, FixedOffset(60))
+                    ),
+                    b"RFC822": b"Subject: test\r\n\r\nbody",
+                    b"SEQ": 1,
+                }
+            },
+        )
+
+tests/test_response_parser.py:668: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dt = datetime.datetime(2007, 2, 9, 17, 8, 8, tzinfo=<imapclient.fixed_offset.FixedOffset object at 0x7ffa81e59240>)
+
+    def datetime_to_native(dt: datetime) -> datetime:
+        """Convert a timezone-aware datetime to a naive datetime in the local timezone."""
+        if dt.tzinfo is None:
+            return dt
+>       return dt.astimezone(FixedOffset.for_system()).replace(tzinfo=None)
+E       NotImplementedError: a tzinfo subclass must implement utcoffset()
+
+imapclient/datetime_util.py:11: NotImplementedError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_multiple_messages">test_response_parser.py::TestParseFetchResponse::test_multiple_messages</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_multiple_messages</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_multiple_messages>
+
+    def test_multiple_messages(self):
+>       self.assertEqual(
+            parse_fetch_response([b"2 (FLAGS (Foo Bar)) ", b"7 (FLAGS (Baz Sneeve))"]),
+            {
+                2: {b"FLAGS": (b"Foo", b"Bar"), b"SEQ": 2},
+                7: {b"FLAGS": (b"Baz", b"Sneeve"), b"SEQ": 7},
+            },
+        )
+E       AssertionError: None != {2: {b'FLAGS': (b'Foo', b'Bar'), b'SEQ': [45 chars]: 7}}
+
+tests/test_response_parser.py:271: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_none_special_case">test_response_parser.py::TestParseFetchResponse::test_none_special_case</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_none_special_case</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_none_special_case>
+
+    def test_none_special_case(self):
+>       self.assertEqual(parse_fetch_response([None]), {})
+E       AssertionError: None != {}
+
+tests/test_response_parser.py:230: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_not_uid_is_key">test_response_parser.py::TestParseFetchResponse::test_not_uid_is_key</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_not_uid_is_key</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_not_uid_is_key>
+
+    def test_not_uid_is_key(self):
+>       self.assertEqual(
+            parse_fetch_response([b"23 (UID 76)"], uid_is_key=False),
+            {23: {b"UID": 76, b"SEQ": 23}},
+        )
+E       AssertionError: None != {23: {b'UID': 76, b'SEQ': 23}}
+
+tests/test_response_parser.py:256: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_odd_pairs">test_response_parser.py::TestParseFetchResponse::test_odd_pairs</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_odd_pairs</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_odd_pairs>
+
+    def test_odd_pairs(self):
+>       self.assertRaises(ProtocolError, parse_fetch_response, [b"(ONE)"])
+E       AssertionError: ProtocolError not raised by parse_fetch_response
+
+tests/test_response_parser.py:248: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_partial_fetch">test_response_parser.py::TestParseFetchResponse::test_partial_fetch</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_partial_fetch</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_partial_fetch>
+
+    def test_partial_fetch(self):
+        body = b"01234567890123456789"
+>       self.assertEqual(
+            parse_fetch_response([(b"123 (UID 367 BODY[]<0> {20}", body), b")"]),
+            {367: {b"BODY[]<0>": body, b"SEQ": 123}},
+        )
+E       AssertionError: None != {367: {b'BODY[]<0>': b'01234567890123456789', b'SEQ': 123}}
+
+tests/test_response_parser.py:491: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_same_message_appearing_multiple_times">test_response_parser.py::TestParseFetchResponse::test_same_message_appearing_multiple_times</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_same_message_appearing_multiple_times</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_same_message_appearing_multiple_times>
+
+    def test_same_message_appearing_multiple_times(self):
+        # This can occur when server sends unsolicited FETCH responses
+        # (e.g. RFC 4551)
+>       self.assertEqual(
+            parse_fetch_response([b"2 (FLAGS (Foo Bar)) ", b"2 (MODSEQ 4)"]),
+            {2: {b"FLAGS": (b"Foo", b"Bar"), b"SEQ": 2, b"MODSEQ": 4}},
+        )
+E       AssertionError: None != {2: {b'FLAGS': (b'Foo', b'Bar'), b'SEQ': 2, b'MODSEQ': 4}}
+
+tests/test_response_parser.py:282: AssertionError
+</pre>
+</details>
+<h3 id="test_response_parserpytestparsefetchresponsetest_simple_pairs">test_response_parser.py::TestParseFetchResponse::test_simple_pairs</h3>
+<details><summary> <pre>test_response_parser.py::TestParseFetchResponse::test_simple_pairs</pre></summary><pre>
+self = <tests.test_response_parser.TestParseFetchResponse testMethod=test_simple_pairs>
+
+    def test_simple_pairs(self):
+>       self.assertEqual(
+            parse_fetch_response([b'23 (ABC 123 StUfF "hello")']),
+            {23: {b"ABC": 123, b"STUFF": b"hello", b"SEQ": 23}},
+        )
+E       AssertionError: None != {23: {b'ABC': 123, b'STUFF': b'hello', b'SEQ': 23}}
+
+tests/test_response_parser.py:242: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/imapclient/datetime_util.py b/imapclient/datetime_util.py</span>
+<span class="gh">index 73dc91d..a233545 100644</span>
+<span class="gd">--- a/imapclient/datetime_util.py</span>
+<span class="gi">+++ b/imapclient/datetime_util.py</span>
+<span class="gu">@@ -4,6 +4,12 @@ from email.utils import parsedate_tz</span>
+<span class="w"> </span>from .fixed_offset import FixedOffset
+<span class="w"> </span>_SHORT_MONTHS = &#39; Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec&#39;.split(&#39; &#39;)
+
+<span class="gi">+def datetime_to_native(dt: datetime) -&gt; datetime:</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a timezone-aware datetime to a naive datetime in the local timezone.&quot;&quot;&quot;</span>
+<span class="gi">+    if dt.tzinfo is None:</span>
+<span class="gi">+        return dt</span>
+<span class="gi">+    return dt.astimezone(FixedOffset.for_system()).replace(tzinfo=None)</span>
+<span class="gi">+</span>
+<span class="w"> </span>def parse_to_datetime(timestamp: bytes, normalise: bool=True) -&gt; datetime:
+<span class="w"> </span>    &quot;&quot;&quot;Convert an IMAP datetime string to a datetime.
+
+<span class="gu">@@ -13,7 +19,55 @@ def parse_to_datetime(timestamp: bytes, normalise: bool=True) -&gt; datetime:</span>
+<span class="w"> </span>    If normalise is False, then the returned datetime will be
+<span class="w"> </span>    unadjusted but will contain timezone information as per the input.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    timestamp = timestamp.decode(&#39;ascii&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Handle dotted time format</span>
+<span class="gi">+    if _rfc822_dotted_time.match(timestamp):</span>
+<span class="gi">+        timestamp = timestamp.replace(&#39;.&#39;, &#39;:&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Try RFC822 format first</span>
+<span class="gi">+    parsed = parsedate_tz(timestamp)</span>
+<span class="gi">+    if parsed:</span>
+<span class="gi">+        tz_offset = parsed[-1]</span>
+<span class="gi">+        if tz_offset is None:</span>
+<span class="gi">+            tz = None</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            tz = FixedOffset(tz_offset // 60)</span>
+<span class="gi">+        dt = datetime(*parsed[:6], tzinfo=tz)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        # Try INTERNALDATE format</span>
+<span class="gi">+        timestamp = timestamp.strip()</span>
+<span class="gi">+        parts = timestamp.split(&#39; &#39;)</span>
+<span class="gi">+        if len(parts) != 3:</span>
+<span class="gi">+            raise ValueError(f&#39;Invalid timestamp format: {timestamp}&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        date_parts = parts[0].split(&#39;-&#39;)</span>
+<span class="gi">+        if len(date_parts) != 3:</span>
+<span class="gi">+            raise ValueError(f&#39;Invalid date format: {parts[0]}&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        day = int(date_parts[0])</span>
+<span class="gi">+        month = _SHORT_MONTHS.index(date_parts[1])</span>
+<span class="gi">+        year = int(date_parts[2])</span>
+<span class="gi">+        </span>
+<span class="gi">+        time_parts = parts[1].split(&#39;:&#39;)</span>
+<span class="gi">+        if len(time_parts) != 3:</span>
+<span class="gi">+            raise ValueError(f&#39;Invalid time format: {parts[1]}&#39;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        hour = int(time_parts[0])</span>
+<span class="gi">+        minute = int(time_parts[1])</span>
+<span class="gi">+        second = int(time_parts[2])</span>
+<span class="gi">+        </span>
+<span class="gi">+        tz_str = parts[2]</span>
+<span class="gi">+        tz_sign = 1 if tz_str[0] == &#39;+&#39; else -1</span>
+<span class="gi">+        tz_hour = int(tz_str[1:3])</span>
+<span class="gi">+        tz_min = int(tz_str[3:5])</span>
+<span class="gi">+        tz = FixedOffset(tz_sign * (tz_hour * 60 + tz_min))</span>
+<span class="gi">+        </span>
+<span class="gi">+        dt = datetime(year, month, day, hour, minute, second, tzinfo=tz)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if normalise and dt.tzinfo is not None:</span>
+<span class="gi">+        return datetime_to_native(dt)</span>
+<span class="gi">+    return dt</span>
+
+<span class="w"> </span>def datetime_to_INTERNALDATE(dt: datetime) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Convert a datetime instance to a IMAP INTERNALDATE string.
+<span class="gu">@@ -21,9 +75,17 @@ def datetime_to_INTERNALDATE(dt: datetime) -&gt; str:</span>
+<span class="w"> </span>    If timezone information is missing the current system
+<span class="w"> </span>    timezone is used.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if dt.tzinfo is None:</span>
+<span class="gi">+        dt = dt.replace(tzinfo=FixedOffset.for_system())</span>
+<span class="gi">+    </span>
+<span class="gi">+    sign = &#39;+&#39; if dt.utcoffset().total_seconds() &gt;= 0 else &#39;-&#39;</span>
+<span class="gi">+    offset_mins = abs(int(dt.utcoffset().total_seconds() / 60))</span>
+<span class="gi">+    offset_hrs = offset_mins // 60</span>
+<span class="gi">+    offset_mins = offset_mins % 60</span>
+<span class="gi">+    </span>
+<span class="gi">+    return f&quot;{dt.day:02d}-{_SHORT_MONTHS[dt.month]}-{dt.year:04d} {dt.hour:02d}:{dt.minute:02d}:{dt.second:02d} {sign}{offset_hrs:02d}{offset_mins:02d}&quot;</span>
+<span class="w"> </span>_rfc822_dotted_time = re.compile(&#39;\\w+, ?\\d{1,2} \\w+ \\d\\d(\\d\\d)? \\d\\d?\\.\\d\\d?\\.\\d\\d?.*&#39;)
+
+<span class="w"> </span>def format_criteria_date(dt: datetime) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Format a date or datetime instance for use in IMAP search criteria.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    return f&quot;{dt.day:02d}-{_SHORT_MONTHS[dt.month]}-{dt.year:04d}&quot;.encode(&#39;ascii&#39;)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/imapclient/imapclient.py b/imapclient/imapclient.py</span>
+<span class="gh">index 43c0b10..d23be18 100644</span>
+<span class="gd">--- a/imapclient/imapclient.py</span>
+<span class="gi">+++ b/imapclient/imapclient.py</span>
+<span class="gu">@@ -106,7 +106,15 @@ class Quota:</span>
+
+<span class="w"> </span>def require_capability(capability):
+<span class="w"> </span>    &quot;&quot;&quot;Decorator raising CapabilityError when a capability is not available.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def actual_decorator(func):</span>
+<span class="gi">+        def wrapper(client, *args, **kwargs):</span>
+<span class="gi">+            if not client.has_capability(capability):</span>
+<span class="gi">+                raise exceptions.CapabilityError(</span>
+<span class="gi">+                    f&quot;Server does not support {capability} capability&quot;</span>
+<span class="gi">+                )</span>
+<span class="gi">+            return func(client, *args, **kwargs)</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+    return actual_decorator</span>
+
+<span class="w"> </span>class IMAPClient:
+<span class="w"> </span>    &quot;&quot;&quot;A connection to the IMAP server specified by *host* is made when
+<span class="gu">@@ -223,7 +231,7 @@ class IMAPClient:</span>
+<span class="w"> </span>           This includes reading from and writing to the socket,
+<span class="w"> </span>           as they are likely to break internal bookkeeping of messages.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._imap.sock</span>
+
+<span class="w"> </span>    @require_capability(&#39;STARTTLS&#39;)
+<span class="w"> </span>    def starttls(self, ssl_context=None):
+<span class="gu">@@ -243,13 +251,34 @@ class IMAPClient:</span>
+<span class="w"> </span>        Raises :py:exc:`AbortError` if the server does not support STARTTLS
+<span class="w"> </span>        or an SSL connection is already established.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.ssl or self._starttls_done:</span>
+<span class="gi">+            raise self.AbortError(&#39;TLS session already established&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if ssl_context is None:</span>
+<span class="gi">+            ssl_context = tls.create_default_context()</span>
+<span class="gi">+</span>
+<span class="gi">+        typ, data = self._imap._simple_command(&#39;STARTTLS&#39;)</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(&#39;STARTTLS failed: %s&#39; % data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._starttls_done = True</span>
+<span class="gi">+        self._imap.sock = ssl_context.wrap_socket(self._imap.sock,</span>
+<span class="gi">+                                                server_hostname=self.host)</span>
+
+<span class="w"> </span>    def login(self, username: str, password: str):
+<span class="w"> </span>        &quot;&quot;&quot;Login using *username* and *password*, returning the
+<span class="w"> </span>        server response.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.login(username, password)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._cached_capabilities = None</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def oauth2_login(self, user: str, access_token: str, mech: str=&#39;XOAUTH2&#39;, vendor: Optional[str]=None):
+<span class="w"> </span>        &quot;&quot;&quot;Authenticate using the OAUTH2 or XOAUTH2 methods.
+<span class="gu">@@ -257,7 +286,21 @@ class IMAPClient:</span>
+<span class="w"> </span>        Gmail and Yahoo both support the &#39;XOAUTH2&#39; mechanism, but Yahoo requires
+<span class="w"> </span>        the &#39;vendor&#39; portion in the payload.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        auth_string = f&#39;user={user}\1auth=Bearer {access_token}\1&#39;</span>
+<span class="gi">+        if vendor:</span>
+<span class="gi">+            auth_string += f&#39;vendor={vendor}\1&#39;</span>
+<span class="gi">+        auth_string += &#39;\1&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.authenticate(mech, lambda _: auth_string.encode())</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._cached_capabilities = None</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def oauthbearer_login(self, identity, access_token):
+<span class="w"> </span>        &quot;&quot;&quot;Authenticate using the OAUTHBEARER method.
+<span class="gu">@@ -265,11 +308,35 @@ class IMAPClient:</span>
+<span class="w"> </span>        This is supported by Gmail and is meant to supersede the non-standard
+<span class="w"> </span>        &#39;OAUTH2&#39; and &#39;XOAUTH2&#39; mechanisms.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        auth_string = f&#39;n,a={identity},\1auth=Bearer {access_token}\1\1&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.authenticate(&#39;OAUTHBEARER&#39;, lambda _: auth_string.encode())</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._cached_capabilities = None</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def plain_login(self, identity, password, authorization_identity=None):
+<span class="w"> </span>        &quot;&quot;&quot;Authenticate using the PLAIN method (requires server support).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if authorization_identity is None:</span>
+<span class="gi">+            authorization_identity = &#39;&#39;</span>
+<span class="gi">+        auth_string = f&#39;{authorization_identity}\0{identity}\0{password}&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.authenticate(&#39;PLAIN&#39;, lambda _: auth_string.encode())</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._cached_capabilities = None</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def sasl_login(self, mech_name, mech_callable):
+<span class="w"> </span>        &quot;&quot;&quot;Authenticate using a provided SASL mechanism (requires server support).
+<span class="gu">@@ -320,11 +387,35 @@ class IMAPClient:</span>
+
+<span class="w"> </span>            imap.sasl_login(&quot;SCRAM-SHA-256&quot;, scram_mech)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        def encode_response(response):</span>
+<span class="gi">+            if isinstance(response, str):</span>
+<span class="gi">+                return response.encode()</span>
+<span class="gi">+            return response</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.authenticate(mech_name, lambda x: encode_response(mech_callable(x)))</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._cached_capabilities = None</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def logout(self):
+<span class="w"> </span>        &quot;&quot;&quot;Logout, returning the server response.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.logout()</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        self.shutdown()</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;BYE&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def shutdown(self) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Close the connection to the IMAP server (without logging out)
+<span class="gu">@@ -332,7 +423,18 @@ class IMAPClient:</span>
+<span class="w"> </span>        In most cases, :py:meth:`.logout` should be used instead of
+<span class="w"> </span>        this. The logout method also shutdown down the connection.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._imap.sock is not None:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                self._imap.sock.shutdown(socket.SHUT_RDWR)</span>
+<span class="gi">+            except Exception:</span>
+<span class="gi">+                pass</span>
+<span class="gi">+            finally:</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    self._imap.sock.close()</span>
+<span class="gi">+                except Exception:</span>
+<span class="gi">+                    pass</span>
+<span class="gi">+                self._imap.sock = None</span>
+<span class="gi">+                self._cached_capabilities = None</span>
+
+<span class="w"> </span>    @require_capability(&#39;ENABLE&#39;)
+<span class="w"> </span>    def enable(self, *capabilities):
+<span class="gu">@@ -351,7 +453,25 @@ class IMAPClient:</span>
+
+<span class="w"> </span>        See :rfc:`5161` for more details.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not capabilities:</span>
+<span class="gi">+            raise self.Error(&#39;No arguments for ENABLE command&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap._simple_command(&#39;ENABLE&#39;, *capabilities)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(data) != 1:</span>
+<span class="gi">+            raise self.Error(&#39;Invalid ENABLE response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        response = data[0].decode(&#39;ascii&#39;)</span>
+<span class="gi">+        if not response.startswith(&#39;* ENABLED &#39;):</span>
+<span class="gi">+            raise self.Error(&#39;Invalid ENABLE response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return response[10:].split()</span>
+
+<span class="w"> </span>    @require_capability(&#39;ID&#39;)
+<span class="w"> </span>    def id_(self, parameters=None):
+<span class="gu">@@ -361,7 +481,42 @@ class IMAPClient:</span>
+<span class="w"> </span>        *parameters* should be specified as a dictionary of field/value pairs,
+<span class="w"> </span>        for example: ``{&quot;name&quot;: &quot;IMAPClient&quot;, &quot;version&quot;: &quot;0.12&quot;}``
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if parameters is None:</span>
+<span class="gi">+            args = [&#39;NIL&#39;]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            if not isinstance(parameters, dict):</span>
+<span class="gi">+                raise TypeError(&#39;parameters must be a dict or None&#39;)</span>
+<span class="gi">+            args = []</span>
+<span class="gi">+            for key, value in parameters.items():</span>
+<span class="gi">+                args.extend([to_bytes(key), to_bytes(value)])</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap._simple_command(&#39;ID&#39;, &#39;(&#39; + &#39; &#39;.join(args) + &#39;)&#39;)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(data) != 1:</span>
+<span class="gi">+            raise self.Error(&#39;Invalid ID response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        response = data[0].decode(&#39;ascii&#39;)</span>
+<span class="gi">+        if not response.startswith(&#39;* ID &#39;):</span>
+<span class="gi">+            raise self.Error(&#39;Invalid ID response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        response = response[5:]</span>
+<span class="gi">+        if response == &#39;NIL&#39;:</span>
+<span class="gi">+            return {}</span>
+<span class="gi">+</span>
+<span class="gi">+        if not (response.startswith(&#39;(&#39;) and response.endswith(&#39;)&#39;)):</span>
+<span class="gi">+            raise self.Error(&#39;Invalid ID response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        response = response[1:-1].split()</span>
+<span class="gi">+        if len(response) % 2 != 0:</span>
+<span class="gi">+            raise self.Error(&#39;Invalid ID response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return dict(zip(response[::2], response[1::2]))</span>
+
+<span class="w"> </span>    def capabilities(self):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the server capability list.
+<span class="gu">@@ -375,11 +530,29 @@ class IMAPClient:</span>
+<span class="w"> </span>        If the session is not yet authenticated, the capabilities
+<span class="w"> </span>        requested at connection time will be returned.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._cached_capabilities is None:</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                typ, data = self._imap.capability()</span>
+<span class="gi">+            except imaplib.IMAP4.error as e:</span>
+<span class="gi">+                raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+            if typ != &#39;OK&#39;:</span>
+<span class="gi">+                raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+            if len(data) != 1:</span>
+<span class="gi">+                raise self.Error(&#39;Invalid CAPABILITY response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+            response = data[0].decode(&#39;ascii&#39;)</span>
+<span class="gi">+            if not response.startswith(&#39;* CAPABILITY &#39;):</span>
+<span class="gi">+                raise self.Error(&#39;Invalid CAPABILITY response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+            self._cached_capabilities = response[13:].split()</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._cached_capabilities</span>
+
+<span class="w"> </span>    def has_capability(self, capability):
+<span class="w"> </span>        &quot;&quot;&quot;Return ``True`` if the IMAP server has the given *capability*.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return capability.upper() in self.capabilities()</span>
+
+<span class="w"> </span>    @require_capability(&#39;NAMESPACE&#39;)
+<span class="w"> </span>    def namespace(self):
+<span class="gu">@@ -395,7 +568,63 @@ class IMAPClient:</span>
+
+<span class="w"> </span>        See :rfc:`2342` for more details.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.namespace()</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(data) != 1:</span>
+<span class="gi">+            raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        response = data[0].decode(&#39;ascii&#39;)</span>
+<span class="gi">+        if not response.startswith(&#39;* NAMESPACE &#39;):</span>
+<span class="gi">+            raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        response = response[12:]</span>
+<span class="gi">+        if not (response.startswith(&#39;(&#39;) and response.endswith(&#39;)&#39;)):</span>
+<span class="gi">+            raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        def parse_namespace(ns_str):</span>
+<span class="gi">+            if ns_str == &#39;NIL&#39;:</span>
+<span class="gi">+                return None</span>
+<span class="gi">+            if not (ns_str.startswith(&#39;(&#39;) and ns_str.endswith(&#39;)&#39;)):</span>
+<span class="gi">+                raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+            ns_str = ns_str[1:-1]</span>
+<span class="gi">+            namespaces = []</span>
+<span class="gi">+            while ns_str:</span>
+<span class="gi">+                if not (ns_str.startswith(&#39;(&#39;) and &#39;)&#39; in ns_str):</span>
+<span class="gi">+                    raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+                ns_end = ns_str.index(&#39;)&#39;)</span>
+<span class="gi">+                ns_part = ns_str[1:ns_end]</span>
+<span class="gi">+                parts = ns_part.split()</span>
+<span class="gi">+                if len(parts) != 2:</span>
+<span class="gi">+                    raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+                prefix = parts[0].strip(&#39;&quot;&#39;)</span>
+<span class="gi">+                separator = parts[1].strip(&#39;&quot;&#39;)</span>
+<span class="gi">+                namespaces.append((prefix, separator))</span>
+<span class="gi">+                ns_str = ns_str[ns_end + 1:].lstrip()</span>
+<span class="gi">+            return namespaces</span>
+<span class="gi">+</span>
+<span class="gi">+        response = response[1:-1]</span>
+<span class="gi">+        parts = []</span>
+<span class="gi">+        while response:</span>
+<span class="gi">+            if response.startswith(&#39;NIL&#39;):</span>
+<span class="gi">+                parts.append(None)</span>
+<span class="gi">+                response = response[3:].lstrip()</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                if not (response.startswith(&#39;(&#39;) and &#39;)&#39; in response):</span>
+<span class="gi">+                    raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+                end = response.index(&#39;)&#39;)</span>
+<span class="gi">+                parts.append(parse_namespace(response[:end + 1]))</span>
+<span class="gi">+                response = response[end + 1:].lstrip()</span>
+<span class="gi">+</span>
+<span class="gi">+        if len(parts) != 3:</span>
+<span class="gi">+            raise self.Error(&#39;Invalid NAMESPACE response&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return Namespace(*parts)</span>
+
+<span class="w"> </span>    def list_folders(self, directory=&#39;&#39;, pattern=&#39;*&#39;):
+<span class="w"> </span>        &quot;&quot;&quot;Get a listing of folders on the server as a list of
+<span class="gu">@@ -418,7 +647,28 @@ class IMAPClient:</span>
+<span class="w"> </span>        decoded from modified UTF-7, except if folder_decode is not
+<span class="w"> </span>        set.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            directory = encode_utf7(directory)</span>
+<span class="gi">+            pattern = encode_utf7(pattern)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.list(directory, pattern)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        ret = []</span>
+<span class="gi">+        for response in data:</span>
+<span class="gi">+            if not response:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            flags, delimiter, name = self._parse_list_response(response)</span>
+<span class="gi">+            if self.folder_encode:</span>
+<span class="gi">+                name = decode_utf7(name)</span>
+<span class="gi">+            ret.append((flags, delimiter, name))</span>
+<span class="gi">+</span>
+<span class="gi">+        return ret</span>
+
+<span class="w"> </span>    @require_capability(&#39;XLIST&#39;)
+<span class="w"> </span>    def xlist_folders(self, directory=&#39;&#39;, pattern=&#39;*&#39;):
+<span class="gu">@@ -450,7 +700,28 @@ class IMAPClient:</span>
+<span class="w"> </span>        The *directory* and *pattern* arguments are as per
+<span class="w"> </span>        list_folders().
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            directory = encode_utf7(directory)</span>
+<span class="gi">+            pattern = encode_utf7(pattern)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.xlist(directory, pattern)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        ret = []</span>
+<span class="gi">+        for response in data:</span>
+<span class="gi">+            if not response:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            flags, delimiter, name = self._parse_list_response(response)</span>
+<span class="gi">+            if self.folder_encode:</span>
+<span class="gi">+                name = decode_utf7(name)</span>
+<span class="gi">+            ret.append((flags, delimiter, name))</span>
+<span class="gi">+</span>
+<span class="gi">+        return ret</span>
+
+<span class="w"> </span>    def list_sub_folders(self, directory=&#39;&#39;, pattern=&#39;*&#39;):
+<span class="w"> </span>        &quot;&quot;&quot;Return a list of subscribed folders on the server as
+<span class="gu">@@ -459,7 +730,28 @@ class IMAPClient:</span>
+<span class="w"> </span>        The default behaviour will list all subscribed folders. The
+<span class="w"> </span>        *directory* and *pattern* arguments are as per list_folders().
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            directory = encode_utf7(directory)</span>
+<span class="gi">+            pattern = encode_utf7(pattern)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.lsub(directory, pattern)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        ret = []</span>
+<span class="gi">+        for response in data:</span>
+<span class="gi">+            if not response:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            flags, delimiter, name = self._parse_list_response(response)</span>
+<span class="gi">+            if self.folder_encode:</span>
+<span class="gi">+                name = decode_utf7(name)</span>
+<span class="gi">+            ret.append((flags, delimiter, name))</span>
+<span class="gi">+</span>
+<span class="gi">+        return ret</span>
+
+<span class="w"> </span>    def find_special_folder(self, folder_flag):
+<span class="w"> </span>        &quot;&quot;&quot;Try to locate a special folder, like the Sent or Trash folder.
+<span class="gu">@@ -473,7 +765,30 @@ class IMAPClient:</span>
+
+<span class="w"> </span>        Returns the name of the folder if found, or None otherwise.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.has_capability(&#39;XLIST&#39;):</span>
+<span class="gi">+            folders = self.xlist_folders()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            folders = self.list_folders()</span>
+<span class="gi">+</span>
+<span class="gi">+        # First try to find a folder with the matching flag</span>
+<span class="gi">+        for flags, delimiter, name in folders:</span>
+<span class="gi">+            if folder_flag in flags:</span>
+<span class="gi">+                return name</span>
+<span class="gi">+</span>
+<span class="gi">+        # No folder with the matching flag found, try popular namespaces</span>
+<span class="gi">+        if folder_flag in _POPULAR_SPECIAL_FOLDERS:</span>
+<span class="gi">+            # Get all folder names in a set for faster lookup</span>
+<span class="gi">+            folder_names = {name.lower() for _, _, name in folders}</span>
+<span class="gi">+</span>
+<span class="gi">+            # Try to find a folder with a popular name</span>
+<span class="gi">+            for folder_name in _POPULAR_SPECIAL_FOLDERS[folder_flag]:</span>
+<span class="gi">+                # Try with different namespace prefixes</span>
+<span class="gi">+                for prefix, suffix in _POPULAR_PERSONAL_NAMESPACES:</span>
+<span class="gi">+                    test_name = prefix + folder_name + suffix</span>
+<span class="gi">+                    if test_name.lower() in folder_names:</span>
+<span class="gi">+                        return test_name</span>
+<span class="gi">+</span>
+<span class="gi">+        return None</span>
+
+<span class="w"> </span>    def select_folder(self, folder, readonly=False):
+<span class="w"> </span>        &quot;&quot;&quot;Set the current folder on the server.
+<span class="gu">@@ -493,7 +808,41 @@ class IMAPClient:</span>
+<span class="w"> </span>             b&#39;UIDNEXT&#39;: 11,
+<span class="w"> </span>             b&#39;UIDVALIDITY&#39;: 1239278212}
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            folder = encode_utf7(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.select(folder, readonly)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        result = {}</span>
+<span class="gi">+        for response in data:</span>
+<span class="gi">+            if not response:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            match = _RE_SELECT_RESPONSE.match(response)</span>
+<span class="gi">+            if match:</span>
+<span class="gi">+                key = match.group(&#39;key&#39;)</span>
+<span class="gi">+                if key == b&#39;READ-WRITE&#39;:</span>
+<span class="gi">+                    result[key] = True</span>
+<span class="gi">+                elif key == b&#39;READ-ONLY&#39;:</span>
+<span class="gi">+                    result[b&#39;READ-WRITE&#39;] = False</span>
+<span class="gi">+                elif match.group(&#39;data&#39;):</span>
+<span class="gi">+                    result[key] = self._parse_response(match.group(&#39;data&#39;))</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                key, value = response.split(None, 1)</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    result[key] = int(value)</span>
+<span class="gi">+                except (ValueError, TypeError):</span>
+<span class="gi">+                    result[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+        if b&#39;READ-WRITE&#39; not in result:</span>
+<span class="gi">+            result[b&#39;READ-WRITE&#39;] = not readonly</span>
+<span class="gi">+</span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    @require_capability(&#39;UNSELECT&#39;)
+<span class="w"> </span>    def unselect_folder(self):
+<span class="gu">@@ -504,7 +853,15 @@ class IMAPClient:</span>
+
+<span class="w"> </span>        Returns the UNSELECT response string returned by the server.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap._simple_command(&#39;UNSELECT&#39;)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def noop(self):
+<span class="w"> </span>        &quot;&quot;&quot;Execute the NOOP command.
+<span class="gu">@@ -522,7 +879,15 @@ class IMAPClient:</span>
+<span class="w"> </span>              (6, b&#39;FETCH&#39;, (b&#39;FLAGS&#39;, (b&#39;sne&#39;,)))])
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.noop()</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;), self._consume_responses()</span>
+
+<span class="w"> </span>    @require_capability(&#39;IDLE&#39;)
+<span class="w"> </span>    def idle(self):
+<span class="gu">@@ -540,7 +905,18 @@ class IMAPClient:</span>
+
+<span class="w"> </span>        See :rfc:`2177` for more information about the IDLE extension.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._idle_tag is not None:</span>
+<span class="gi">+            raise self.Error(&#39;Already in IDLE mode&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            tag = self._imap._command(&#39;IDLE&#39;)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        self._idle_tag = tag</span>
+<span class="gi">+        resp = self._imap._get_response()</span>
+<span class="gi">+        if resp is not None:</span>
+<span class="gi">+            raise self.Error(&#39;Unexpected IDLE response: %s&#39; % resp)</span>
+
+<span class="w"> </span>    def _poll_socket(self, sock, timeout=None):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -548,7 +924,15 @@ class IMAPClient:</span>
+<span class="w"> </span>        This implementation is more scalable because it ALLOWS your process
+<span class="w"> </span>        to have more than 1024 file descriptors.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not POLL_SUPPORT:</span>
+<span class="gi">+            return self._select_poll_socket(sock, timeout)</span>
+<span class="gi">+</span>
+<span class="gi">+        poller = select.poll()</span>
+<span class="gi">+        poller.register(sock, select.POLLIN)</span>
+<span class="gi">+</span>
+<span class="gi">+        timeout_ms = None if timeout is None else int(timeout * 1000)</span>
+<span class="gi">+        ready = poller.poll(timeout_ms)</span>
+<span class="gi">+        return bool(ready)</span>
+
+<span class="w"> </span>    def _select_poll_socket(self, sock, timeout=None):
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -557,7 +941,8 @@ class IMAPClient:</span>
+<span class="w"> </span>        has more than 1024 file descriptors.
+<span class="w"> </span>        We still need this for Windows and some other niche systems.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        r, _, _ = select.select([sock], [], [], timeout)</span>
+<span class="gi">+        return bool(r)</span>
+
+<span class="w"> </span>    @require_capability(&#39;IDLE&#39;)
+<span class="w"> </span>    def idle_check(self, timeout=None):
+<span class="gu">@@ -578,7 +963,17 @@ class IMAPClient:</span>
+<span class="w"> </span>             (1, b&#39;EXISTS&#39;),
+<span class="w"> </span>             (1, b&#39;FETCH&#39;, (b&#39;FLAGS&#39;, (b&#39;\\NotJunk&#39;,)))]
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._idle_tag is None:</span>
+<span class="gi">+            raise self.Error(&#39;Server not in IDLE mode&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        sock = self.socket()</span>
+<span class="gi">+        if sock is None:</span>
+<span class="gi">+            raise self.Error(&#39;Socket is closed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not self._poll_socket(sock, timeout):</span>
+<span class="gi">+            return []</span>
+<span class="gi">+</span>
+<span class="gi">+        return self._consume_responses()</span>
+
+<span class="w"> </span>    @require_capability(&#39;IDLE&#39;)
+<span class="w"> </span>    def idle_done(self):
+<span class="gu">@@ -595,7 +990,21 @@ class IMAPClient:</span>
+<span class="w"> </span>        any). These are returned in parsed form as per
+<span class="w"> </span>        ``idle_check()``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self._idle_tag is None:</span>
+<span class="gi">+            raise self.Error(&#39;Server not in IDLE mode&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        self._imap.send(b&#39;DONE\r\n&#39;)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap._command_complete(self._idle_tag)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            self._idle_tag = None</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;), self._consume_responses()</span>
+
+<span class="w"> </span>    def folder_status(self, folder, what=None):
+<span class="w"> </span>        &quot;&quot;&quot;Return the status of *folder*.
+<span class="gu">@@ -607,37 +1016,127 @@ class IMAPClient:</span>
+<span class="w"> </span>        Returns a dictionary of the status items for the folder with
+<span class="w"> </span>        keys matching *what*.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if what is None:</span>
+<span class="gi">+            what = (&#39;MESSAGES&#39;, &#39;RECENT&#39;, &#39;UIDNEXT&#39;, &#39;UIDVALIDITY&#39;, &#39;UNSEEN&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            folder = encode_utf7(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.status(folder, &#39;(&#39; + &#39; &#39;.join(what) + &#39;)&#39;)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        response = data[0].decode(&#39;ascii&#39;)</span>
+<span class="gi">+        if not response.startswith(&#39;* STATUS &#39;):</span>
+<span class="gi">+            raise self.Error(&#39;Invalid STATUS response: %s&#39; % response)</span>
+<span class="gi">+</span>
+<span class="gi">+        match = _RE_SELECT_RESPONSE.match(response[9:])</span>
+<span class="gi">+        if not match:</span>
+<span class="gi">+            raise self.Error(&#39;Invalid STATUS response: %s&#39; % response)</span>
+<span class="gi">+</span>
+<span class="gi">+        result = {}</span>
+<span class="gi">+        for key, value in self._parse_response(match.group(&#39;data&#39;)):</span>
+<span class="gi">+            result[key] = value</span>
+<span class="gi">+</span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def close_folder(self):
+<span class="w"> </span>        &quot;&quot;&quot;Close the currently selected folder, returning the server
+<span class="w"> </span>        response string.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.close()</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def create_folder(self, folder):
+<span class="w"> </span>        &quot;&quot;&quot;Create *folder* on the server returning the server response string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            folder = encode_utf7(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.create(folder)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def rename_folder(self, old_name, new_name):
+<span class="w"> </span>        &quot;&quot;&quot;Change the name of a folder on the server.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            old_name = encode_utf7(old_name)</span>
+<span class="gi">+            new_name = encode_utf7(new_name)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.rename(old_name, new_name)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def delete_folder(self, folder):
+<span class="w"> </span>        &quot;&quot;&quot;Delete *folder* on the server returning the server response string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            folder = encode_utf7(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.delete(folder)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def folder_exists(self, folder):
+<span class="w"> </span>        &quot;&quot;&quot;Return ``True`` if *folder* exists on the server.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return folder in [name for _, _, name in self.list_folders()]</span>
+
+<span class="w"> </span>    def subscribe_folder(self, folder):
+<span class="w"> </span>        &quot;&quot;&quot;Subscribe to *folder*, returning the server response string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            folder = encode_utf7(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.subscribe(folder)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def unsubscribe_folder(self, folder):
+<span class="w"> </span>        &quot;&quot;&quot;Unsubscribe to *folder*, returning the server response string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.folder_encode:</span>
+<span class="gi">+            folder = encode_utf7(folder)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.unsubscribe(folder)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        return data[0].decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>    def search(self, criteria=&#39;ALL&#39;, charset=None):
+<span class="w"> </span>        &quot;&quot;&quot;Return a list of messages ids from the currently selected
+<span class="gu">@@ -699,7 +1198,34 @@ class IMAPClient:</span>
+<span class="w"> </span>        in the search).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not criteria:</span>
+<span class="gi">+            raise self.Error(&#39;No search criteria specified&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(criteria, (str, bytes)):</span>
+<span class="gi">+            criteria = [criteria]</span>
+<span class="gi">+</span>
+<span class="gi">+        criteria = _normalise_search_criteria(criteria, charset)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.search(charset or &#39;US-ASCII&#39;, *criteria)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        if not data[0]:</span>
+<span class="gi">+            return []</span>
+<span class="gi">+</span>
+<span class="gi">+        message_ids = [int(i) for i in data[0].split()]</span>
+<span class="gi">+</span>
+<span class="gi">+        # Check for MODSEQ in response</span>
+<span class="gi">+        for response in self._consume_responses():</span>
+<span class="gi">+            if len(response) == 2 and response[0].upper() == b&#39;MODSEQ&#39;:</span>
+<span class="gi">+                message_ids.modseq = response[1]</span>
+<span class="gi">+                break</span>
+<span class="gi">+</span>
+<span class="gi">+        return message_ids</span>
+
+<span class="w"> </span>    @require_capability(&#39;X-GM-EXT-1&#39;)
+<span class="w"> </span>    def gmail_search(self, query, charset=&#39;UTF-8&#39;):
+<span class="gu">@@ -716,7 +1242,11 @@ class IMAPClient:</span>
+<span class="w"> </span>        See https://developers.google.com/gmail/imap_extensions#extension_of_the_search_command_x-gm-raw
+<span class="w"> </span>        for more info.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not query:</span>
+<span class="gi">+            raise self.Error(&#39;No search query specified&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        criteria = [&#39;X-GM-RAW&#39;, query]</span>
+<span class="gi">+        return self.search(criteria, charset)</span>
+
+<span class="w"> </span>    @require_capability(&#39;SORT&#39;)
+<span class="w"> </span>    def sort(self, sort_criteria, criteria=&#39;ALL&#39;, charset=&#39;UTF-8&#39;):
+<span class="gu">@@ -741,7 +1271,34 @@ class IMAPClient:</span>
+<span class="w"> </span>        Note that SORT is an extension to the IMAP4 standard so it may
+<span class="w"> </span>        not be supported by all IMAP servers.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not sort_criteria:</span>
+<span class="gi">+            raise self.Error(&#39;No sort criteria specified&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(sort_criteria, (str, bytes)):</span>
+<span class="gi">+            sort_criteria = [sort_criteria]</span>
+<span class="gi">+</span>
+<span class="gi">+        sort_criteria = [to_bytes(c) for c in sort_criteria]</span>
+<span class="gi">+</span>
+<span class="gi">+        if not criteria:</span>
+<span class="gi">+            raise self.Error(&#39;No search criteria specified&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(criteria, (str, bytes)):</span>
+<span class="gi">+            criteria = [criteria]</span>
+<span class="gi">+</span>
+<span class="gi">+        criteria = _normalise_search_criteria(criteria, charset)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.sort(sort_criteria, charset or &#39;US-ASCII&#39;, *criteria)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        if not data[0]:</span>
+<span class="gi">+            return []</span>
+<span class="gi">+</span>
+<span class="gi">+        return [int(i) for i in data[0].split()]</span>
+
+<span class="w"> </span>    def thread(self, algorithm=&#39;REFERENCES&#39;, criteria=&#39;ALL&#39;, charset=&#39;UTF-8&#39;):
+<span class="w"> </span>        &quot;&quot;&quot;Return a list of messages threads from the currently
+<span class="gu">@@ -760,7 +1317,26 @@ class IMAPClient:</span>
+
+<span class="w"> </span>        See :rfc:`5256` for more details.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not criteria:</span>
+<span class="gi">+            raise self.Error(&#39;No search criteria specified&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(criteria, (str, bytes)):</span>
+<span class="gi">+            criteria = [criteria]</span>
+<span class="gi">+</span>
+<span class="gi">+        criteria = _normalise_search_criteria(criteria, charset)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            typ, data = self._imap.thread(algorithm.upper(), charset or &#39;US-ASCII&#39;, *criteria)</span>
+<span class="gi">+        except imaplib.IMAP4.error as e:</span>
+<span class="gi">+            raise self.Error(str(e))</span>
+<span class="gi">+</span>
+<span class="gi">+        if typ != &#39;OK&#39;:</span>
+<span class="gi">+            raise self.Error(data[0].decode(&#39;ascii&#39;))</span>
+<span class="gi">+</span>
+<span class="gi">+        if not data[0]:</span>
+<span class="gi">+            return []</span>
+<span class="gi">+</span>
+<span class="gi">+        return parse_message_list(data[0])</span>
+
+<span class="w"> </span>    def get_flags(self, messages):
+<span class="w"> </span>        &quot;&quot;&quot;Return the flags set for each message in *messages* from
+<span class="gu">@@ -769,7 +1345,8 @@ class IMAPClient:</span>
+<span class="w"> </span>        The return value is a dictionary structured like this: ``{
+<span class="w"> </span>        msgid1: (flag1, flag2, ... ), }``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        response = self.fetch(messages, [&#39;FLAGS&#39;])</span>
+<span class="gi">+        return {msg_id: flags for msg_id, flags in response.items()}</span>
+
+<span class="w"> </span>    def add_flags(self, messages, flags, silent=False):
+<span class="w"> </span>        &quot;&quot;&quot;Add *flags* to *messages* in the currently selected folder.
+<span class="gh">diff --git a/imapclient/util.py b/imapclient/util.py</span>
+<span class="gh">index 7413bc3..caf6d53 100644</span>
+<span class="gd">--- a/imapclient/util.py</span>
+<span class="gi">+++ b/imapclient/util.py</span>
+<span class="gu">@@ -1,6 +1,29 @@</span>
+<span class="w"> </span>import logging
+<span class="gd">-from typing import Iterator, Optional, Tuple, Union</span>
+<span class="gi">+from typing import Iterator, Optional, Tuple, Union, List, Any</span>
+<span class="w"> </span>from . import exceptions
+<span class="w"> </span>logger = logging.getLogger(__name__)
+<span class="w"> </span>_TupleAtomPart = Union[None, int, bytes]
+<span class="gd">-_TupleAtom = Tuple[Union[_TupleAtomPart, &#39;_TupleAtom&#39;], ...]</span>
+\ No newline at end of file
+<span class="gi">+_TupleAtom = Tuple[Union[_TupleAtomPart, &#39;_TupleAtom&#39;], ...]</span>
+<span class="gi">+</span>
+<span class="gi">+def assert_imap_protocol(condition: bool, message: Optional[bytes] = None) -&gt; None:</span>
+<span class="gi">+    if not condition:</span>
+<span class="gi">+        raise exceptions.ProtocolError(message)</span>
+<span class="gi">+</span>
+<span class="gi">+def to_unicode(s: Union[str, bytes]) -&gt; str:</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a bytes object to a unicode string.&quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(s, bytes):</span>
+<span class="gi">+        return s.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+    return s</span>
+<span class="gi">+</span>
+<span class="gi">+def to_bytes(s: Union[str, bytes, int]) -&gt; bytes:</span>
+<span class="gi">+    &quot;&quot;&quot;Convert a string, number or bytes to bytes.&quot;&quot;&quot;</span>
+<span class="gi">+    if isinstance(s, bytes):</span>
+<span class="gi">+        return s</span>
+<span class="gi">+    if isinstance(s, int):</span>
+<span class="gi">+        return str(s).encode(&#39;ascii&#39;)</span>
+<span class="gi">+    return s.encode(&#39;utf-8&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+def chunk(lst: List[Any], size: int) -&gt; Iterator[List[Any]]:</span>
+<span class="gi">+    &quot;&quot;&quot;Split a list into chunks of a given size.&quot;&quot;&quot;</span>
+<span class="gi">+    for i in range(0, len(lst), size):</span>
+<span class="gi">+        yield lst[i:i + size]</span>
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

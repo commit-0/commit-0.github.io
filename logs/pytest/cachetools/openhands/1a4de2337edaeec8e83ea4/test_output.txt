@@ -1,0 +1,936 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /testbed
+configfile: pyproject.toml
+plugins: cov-5.0.0, metadata-3.1.1, json-report-1.5.0
+collected 215 items
+
+tests/test_cache.py .............                                        [  6%]
+tests/test_cached.py F....FFF....F....FFF.....                           [ 17%]
+tests/test_cachedmethod.py ....FF..F..FFFF.                              [ 25%]
+tests/test_fifo.py ...............                                       [ 32%]
+tests/test_func.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF            [ 51%]
+tests/test_keys.py FFFFF                                                 [ 53%]
+tests/test_lfu.py ...............                                        [ 60%]
+tests/test_lru.py ...............                                        [ 67%]
+tests/test_mru.py ................                                       [ 75%]
+tests/test_rr.py ..............                                          [ 81%]
+tests/test_tlru.py ....................                                  [ 91%]
+tests/test_ttl.py ...................                                    [100%]
+
+=================================== FAILURES ===================================
+_______________________ CacheWrapperTest.test_decorator ________________________
+
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache)(self.func)
+    
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.hashkey(0), cache)
+>       self.assertNotIn(cachetools.keys.hashkey(1), cache)
+E       AssertionError: None unexpectedly found in Cache({None: 0}, maxsize=2, currsize=1)
+
+tests/test_cached.py:37: AssertionError
+_____________________ CacheWrapperTest.test_decorator_info _____________________
+
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_info>
+
+    def test_decorator_info(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache, info=True)(self.func)
+        self.assertEqual(wrapper.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(wrapper.cache_info(), (0, 1, 2, 1))
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:159: AssertionError
+_____________________ CacheWrapperTest.test_decorator_lock _____________________
+
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_lock>
+
+    def test_decorator_lock(self):
+        cache = self.cache(2)
+        lock = CountedLock()
+        wrapper = cachetools.cached(cache, lock=lock)(self.func)
+    
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(lock.count, 2)
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:93: AssertionError
+____________________ CacheWrapperTest.test_decorator_typed _____________________
+
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cache = self.cache(3)
+        key = cachetools.keys.typedkey
+        wrapper = cachetools.cached(cache, key=key)(self.func)
+    
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.typedkey(0), cache)
+>       self.assertNotIn(cachetools.keys.typedkey(1), cache)
+E       AssertionError: None unexpectedly found in Cache({None: 0}, maxsize=3, currsize=1)
+
+tests/test_cached.py:64: AssertionError
+________________________ DictWrapperTest.test_decorator ________________________
+
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache)(self.func)
+    
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.hashkey(0), cache)
+>       self.assertNotIn(cachetools.keys.hashkey(1), cache)
+E       AssertionError: None unexpectedly found in {None: 0}
+
+tests/test_cached.py:37: AssertionError
+_____________________ DictWrapperTest.test_decorator_info ______________________
+
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_info>
+
+    def test_decorator_info(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache, info=True)(self.func)
+        self.assertEqual(wrapper.cache_info(), (0, 0, None, 0))
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(wrapper.cache_info(), (0, 1, None, 1))
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:204: AssertionError
+_____________________ DictWrapperTest.test_decorator_lock ______________________
+
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_lock>
+
+    def test_decorator_lock(self):
+        cache = self.cache(2)
+        lock = CountedLock()
+        wrapper = cachetools.cached(cache, lock=lock)(self.func)
+    
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(lock.count, 2)
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:93: AssertionError
+_____________________ DictWrapperTest.test_decorator_typed _____________________
+
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cache = self.cache(3)
+        key = cachetools.keys.typedkey
+        wrapper = cachetools.cached(cache, key=key)(self.func)
+    
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.typedkey(0), cache)
+>       self.assertNotIn(cachetools.keys.typedkey(1), cache)
+E       AssertionError: None unexpectedly found in {None: 0}
+
+tests/test_cached.py:64: AssertionError
+__________________________ CachedMethodTest.test_dict __________________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_dict>
+
+    def test_dict(self):
+        cached = Cached({})
+    
+        self.assertEqual(cached.get(0), 0)
+>       self.assertEqual(cached.get(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:62: AssertionError
+______________________ CachedMethodTest.test_locked_dict _______________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_locked_dict>
+
+    def test_locked_dict(self):
+        cached = Locked({})
+    
+        self.assertEqual(cached.get(0), 1)
+>       self.assertEqual(cached.get(1), 3)
+E       AssertionError: 1 != 3
+
+tests/test_cachedmethod.py:156: AssertionError
+__________________________ CachedMethodTest.test_lru ___________________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_lru>
+
+    def test_lru(self):
+        cached = Cached(LRUCache(maxsize=2))
+    
+        self.assertEqual(cached.get(0), 0)
+>       self.assertEqual(cached.get(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:85: AssertionError
+____________________ CachedMethodTest.test_typedmethod_dict ____________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_typedmethod_dict>
+
+    def test_typedmethod_dict(self):
+        cached = Cached(LRUCache(maxsize=2))
+    
+        self.assertEqual(cached.get_typedmethod(0), 0)
+>       self.assertEqual(cached.get_typedmethod(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:74: AssertionError
+____________________ CachedMethodTest.test_typedmethod_lru _____________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_typedmethod_lru>
+
+    def test_typedmethod_lru(self):
+        cached = Cached(LRUCache(maxsize=2))
+    
+        self.assertEqual(cached.get_typedmethod(0), 0)
+>       self.assertEqual(cached.get_typedmethod(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:97: AssertionError
+_______________________ CachedMethodTest.test_unhashable _______________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_unhashable>
+
+    def test_unhashable(self):
+        cached = Unhashable(LRUCache(maxsize=0))
+    
+        self.assertEqual(cached.get_default(0), 0)
+        self.assertEqual(cached.get_default(1), 1)
+    
+>       with self.assertRaises(TypeError):
+E       AssertionError: TypeError not raised
+
+tests/test_cachedmethod.py:185: AssertionError
+________________________ CachedMethodTest.test_weakref _________________________
+
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_weakref>
+
+    def test_weakref(self):
+        import weakref
+        import fractions
+        import gc
+    
+        # in Python 3.7, `int` does not support weak references even
+        # when subclassed, but Fraction apparently does...
+        class Int(fractions.Fraction):
+            def __add__(self, other):
+                return Int(fractions.Fraction.__add__(self, other))
+    
+        cached = Cached(weakref.WeakValueDictionary(), count=Int(0))
+    
+        self.assertEqual(cached.get(0), 0)
+        gc.collect()
+        self.assertEqual(cached.get(0), 1)
+    
+        ref = cached.get(1)
+        self.assertEqual(ref, 2)
+        self.assertEqual(cached.get(1), 2)
+        self.assertEqual(cached.get(1.0), 2)
+    
+        ref = cached.get_typedmethod(1)
+>       self.assertEqual(ref, 3)
+E       AssertionError: Int(2, 1) != 3
+
+tests/test_cachedmethod.py:145: AssertionError
+_______________________ FIFODecoratorTest.test_decorator _______________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+____________________ FIFODecoratorTest.test_decorator_clear ____________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+_________________ FIFODecoratorTest.test_decorator_needs_rlock _________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+    
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+    
+            def __hash__(self):
+                return hash(self._use_cache)
+    
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+    
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+___________________ FIFODecoratorTest.test_decorator_nocache ___________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+____________________ FIFODecoratorTest.test_decorator_typed ____________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+___________________ FIFODecoratorTest.test_decorator_unbound ___________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+________________ FIFODecoratorTest.test_decorator_user_function ________________
+
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+_______________________ LFUDecoratorTest.test_decorator ________________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+____________________ LFUDecoratorTest.test_decorator_clear _____________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+_________________ LFUDecoratorTest.test_decorator_needs_rlock __________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+    
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+    
+            def __hash__(self):
+                return hash(self._use_cache)
+    
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+    
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+___________________ LFUDecoratorTest.test_decorator_nocache ____________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+____________________ LFUDecoratorTest.test_decorator_typed _____________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+___________________ LFUDecoratorTest.test_decorator_unbound ____________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+________________ LFUDecoratorTest.test_decorator_user_function _________________
+
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+_______________________ LRUDecoratorTest.test_decorator ________________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+____________________ LRUDecoratorTest.test_decorator_clear _____________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+_________________ LRUDecoratorTest.test_decorator_needs_rlock __________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+    
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+    
+            def __hash__(self):
+                return hash(self._use_cache)
+    
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+    
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+___________________ LRUDecoratorTest.test_decorator_nocache ____________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+____________________ LRUDecoratorTest.test_decorator_typed _____________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+___________________ LRUDecoratorTest.test_decorator_unbound ____________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+________________ LRUDecoratorTest.test_decorator_user_function _________________
+
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+_______________________ MRUDecoratorTest.test_decorator ________________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+
+tests/test_func.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+____________________ MRUDecoratorTest.test_decorator_clear _____________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+
+tests/test_func.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+_________________ MRUDecoratorTest.test_decorator_needs_rlock __________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+>       cached = self.decorator(lambda n: n)
+
+tests/test_func.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+___________________ MRUDecoratorTest.test_decorator_nocache ____________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+
+tests/test_func.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+____________________ MRUDecoratorTest.test_decorator_typed _____________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+
+tests/test_func.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+___________________ MRUDecoratorTest.test_decorator_unbound ____________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+
+tests/test_func.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+________________ MRUDecoratorTest.test_decorator_user_function _________________
+
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+>       cached = self.decorator(lambda n: n)
+
+tests/test_func.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+________________________ RRDecoratorTest.test_decorator ________________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+_____________________ RRDecoratorTest.test_decorator_clear _____________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+__________________ RRDecoratorTest.test_decorator_needs_rlock __________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+    
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+    
+            def __hash__(self):
+                return hash(self._use_cache)
+    
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+    
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+____________________ RRDecoratorTest.test_decorator_nocache ____________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+_____________________ RRDecoratorTest.test_decorator_typed _____________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+____________________ RRDecoratorTest.test_decorator_unbound ____________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+_________________ RRDecoratorTest.test_decorator_user_function _________________
+
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+_______________________ TTLDecoratorTest.test_decorator ________________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+____________________ TTLDecoratorTest.test_decorator_clear _____________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+_________________ TTLDecoratorTest.test_decorator_needs_rlock __________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+    
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+    
+            def __hash__(self):
+                return hash(self._use_cache)
+    
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+    
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+___________________ TTLDecoratorTest.test_decorator_nocache ____________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+____________________ TTLDecoratorTest.test_decorator_typed _____________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+___________________ TTLDecoratorTest.test_decorator_unbound ____________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+________________ TTLDecoratorTest.test_decorator_user_function _________________
+
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+__________________________ CacheKeysTest.test_addkeys __________________________
+
+self = <tests.test_keys.CacheKeysTest testMethod=test_addkeys>
+key = <function hashkey at 0x7fe1ab419120>
+
+    def test_addkeys(self, key=cachetools.keys.hashkey):
+>       self.assertIsInstance(key(), tuple)
+E       AssertionError: None is not an instance of <class 'tuple'>
+
+tests/test_keys.py:76: AssertionError
+__________________________ CacheKeysTest.test_hashkey __________________________
+
+self = <tests.test_keys.CacheKeysTest testMethod=test_hashkey>
+key = <function hashkey at 0x7fe1ab419120>
+
+    def test_hashkey(self, key=cachetools.keys.hashkey):
+        self.assertEqual(key(), key())
+        self.assertEqual(hash(key()), hash(key()))
+        self.assertEqual(key(1, 2, 3), key(1, 2, 3))
+        self.assertEqual(hash(key(1, 2, 3)), hash(key(1, 2, 3)))
+        self.assertEqual(key(1, 2, 3, x=0), key(1, 2, 3, x=0))
+        self.assertEqual(hash(key(1, 2, 3, x=0)), hash(key(1, 2, 3, x=0)))
+>       self.assertNotEqual(key(1, 2, 3), key(3, 2, 1))
+E       AssertionError: None == None
+
+tests/test_keys.py:14: AssertionError
+__________________________ CacheKeysTest.test_pickle ___________________________
+
+self = <tests.test_keys.CacheKeysTest testMethod=test_pickle>
+key = <function hashkey at 0x7fe1ab419120>
+
+    def test_pickle(self, key=cachetools.keys.hashkey):
+        import pickle
+    
+        for k in [key(), key("abc"), key("abc", 123), key("abc", q="abc")]:
+            # white-box test: assert cached hash value is not pickled
+>           self.assertEqual(len(k.__dict__), 0)
+E           AttributeError: 'NoneType' object has no attribute '__dict__'. Did you mean: '__dir__'?
+
+tests/test_keys.py:86: AttributeError
+_________________________ CacheKeysTest.test_typedkey __________________________
+
+self = <tests.test_keys.CacheKeysTest testMethod=test_typedkey>
+key = <function typedkey at 0x7fe1ab419480>
+
+    def test_typedkey(self, key=cachetools.keys.typedkey):
+        self.assertEqual(key(), key())
+        self.assertEqual(hash(key()), hash(key()))
+        self.assertEqual(key(1, 2, 3), key(1, 2, 3))
+        self.assertEqual(hash(key(1, 2, 3)), hash(key(1, 2, 3)))
+        self.assertEqual(key(1, 2, 3, x=0), key(1, 2, 3, x=0))
+        self.assertEqual(hash(key(1, 2, 3, x=0)), hash(key(1, 2, 3, x=0)))
+>       self.assertNotEqual(key(1, 2, 3), key(3, 2, 1))
+E       AssertionError: None == None
+
+tests/test_keys.py:49: AssertionError
+______________________ CacheKeysTest.test_typedmethodkey _______________________
+
+self = <tests.test_keys.CacheKeysTest testMethod=test_typedmethodkey>
+key = <function typedmethodkey at 0x7fe1ab419510>
+
+    def test_typedmethodkey(self, key=cachetools.keys.typedmethodkey):
+        # similar to typedkey(), but ignores its first positional argument
+        self.assertEqual(key("x"), key("y"))
+        self.assertEqual(hash(key("x")), hash(key("y")))
+        self.assertEqual(key("x", 1, 2, 3), key("y", 1, 2, 3))
+        self.assertEqual(hash(key("x", 1, 2, 3)), hash(key("y", 1, 2, 3)))
+        self.assertEqual(key("x", 1, 2, 3, x=0), key("y", 1, 2, 3, x=0))
+        self.assertEqual(hash(key("x", 1, 2, 3, x=0)), hash(key("y", 1, 2, 3, x=0)))
+>       self.assertNotEqual(key("x", 1, 2, 3), key("x", 3, 2, 1))
+E       AssertionError: None == None
+
+tests/test_keys.py:66: AssertionError
+=============================== warnings summary ===============================
+tests/test_mru.py::MRUCacheTest::test_defaults
+  /testbed/tests/__init__.py:8: DeprecationWarning: MRUCache is deprecated
+    cache = self.Cache(maxsize=1)
+
+tests/test_mru.py::MRUCacheTest::test_delete
+  /testbed/tests/__init__.py:54: DeprecationWarning: MRUCache is deprecated
+    cache = self.Cache(maxsize=2)
+
+tests/test_mru.py::MRUCacheTest::test_getsizeof_param
+  /testbed/tests/__init__.py:257: DeprecationWarning: MRUCache is deprecated
+    self._test_getsizeof(self.Cache(maxsize=3, getsizeof=lambda x: x))
+
+tests/test_mru.py::MRUCacheTest::test_getsizeof_subclass
+  /testbed/tests/__init__.py:264: DeprecationWarning: MRUCache is deprecated
+    self._test_getsizeof(Cache(maxsize=3))
+
+tests/test_mru.py::MRUCacheTest::test_insert
+  /testbed/tests/__init__.py:18: DeprecationWarning: MRUCache is deprecated
+    cache = self.Cache(maxsize=2)
+
+tests/test_mru.py::MRUCacheTest::test_missing
+  /testbed/tests/__init__.py:126: DeprecationWarning: MRUCache is deprecated
+    cache = DefaultCache(maxsize=2)
+
+tests/test_mru.py::MRUCacheTest::test_missing_getsizeof
+  /testbed/tests/__init__.py:188: DeprecationWarning: MRUCache is deprecated
+    cache = DefaultCache(maxsize=2, getsizeof=lambda x: x)
+
+tests/test_mru.py::MRUCacheTest::test_pickle
+  /testbed/tests/__init__.py:269: DeprecationWarning: MRUCache is deprecated
+    source = self.Cache(maxsize=2)
+
+tests/test_mru.py::MRUCacheTest::test_pickle_maxsize
+tests/test_mru.py::MRUCacheTest::test_pickle_maxsize
+tests/test_mru.py::MRUCacheTest::test_pickle_maxsize
+  /testbed/tests/__init__.py:297: DeprecationWarning: MRUCache is deprecated
+    source = self.Cache(maxsize=n)
+
+tests/test_mru.py::MRUCacheTest::test_pop
+  /testbed/tests/__init__.py:78: DeprecationWarning: MRUCache is deprecated
+    cache = self.Cache(maxsize=2)
+
+tests/test_mru.py::MRUCacheTest::test_popitem
+  /testbed/tests/__init__.py:98: DeprecationWarning: MRUCache is deprecated
+    cache = self.Cache(maxsize=2)
+
+tests/test_mru.py::MRUCacheTest::test_popitem_exception_context
+  /testbed/tests/__init__.py:114: DeprecationWarning: MRUCache is deprecated
+    self.Cache(maxsize=2).popitem()
+
+tests/test_mru.py::MRUCacheTest::test_update
+  /testbed/tests/__init__.py:36: DeprecationWarning: MRUCache is deprecated
+    cache = self.Cache(maxsize=2)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------------------------- JSON report ----------------------------------
+report saved to: report.json
+=========================== short test summary info ============================
+FAILED tests/test_cached.py::CacheWrapperTest::test_decorator - AssertionErro...
+FAILED tests/test_cached.py::CacheWrapperTest::test_decorator_info - Assertio...
+FAILED tests/test_cached.py::CacheWrapperTest::test_decorator_lock - Assertio...
+FAILED tests/test_cached.py::CacheWrapperTest::test_decorator_typed - Asserti...
+FAILED tests/test_cached.py::DictWrapperTest::test_decorator - AssertionError...
+FAILED tests/test_cached.py::DictWrapperTest::test_decorator_info - Assertion...
+FAILED tests/test_cached.py::DictWrapperTest::test_decorator_lock - Assertion...
+FAILED tests/test_cached.py::DictWrapperTest::test_decorator_typed - Assertio...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_dict - AssertionErr...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_locked_dict - Asser...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_lru - AssertionErro...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict - ...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru - A...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_unhashable - Assert...
+FAILED tests/test_cachedmethod.py::CachedMethodTest::test_weakref - Assertion...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator - TypeError: 'No...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator_clear - TypeErro...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator_needs_rlock - Ty...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator_nocache - TypeEr...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator_typed - TypeErro...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator_unbound - TypeEr...
+FAILED tests/test_func.py::FIFODecoratorTest::test_decorator_user_function - ...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator - TypeError: 'Non...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator_clear - TypeError...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator_needs_rlock - Typ...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator_nocache - TypeErr...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator_typed - TypeError...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator_unbound - TypeErr...
+FAILED tests/test_func.py::LFUDecoratorTest::test_decorator_user_function - A...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator - TypeError: 'Non...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator_clear - TypeError...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator_needs_rlock - Typ...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator_nocache - TypeErr...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator_typed - TypeError...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator_unbound - TypeErr...
+FAILED tests/test_func.py::LRUDecoratorTest::test_decorator_user_function - A...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator - AssertionError:...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator_clear - Assertion...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator_needs_rlock - Ass...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator_nocache - Asserti...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator_typed - Assertion...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator_unbound - Asserti...
+FAILED tests/test_func.py::MRUDecoratorTest::test_decorator_user_function - A...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator - TypeError: 'None...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator_clear - TypeError:...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator_needs_rlock - Type...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator_nocache - TypeErro...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator_typed - TypeError:...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator_unbound - TypeErro...
+FAILED tests/test_func.py::RRDecoratorTest::test_decorator_user_function - At...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator - TypeError: 'Non...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator_clear - TypeError...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator_needs_rlock - Typ...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator_nocache - TypeErr...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator_typed - TypeError...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator_unbound - TypeErr...
+FAILED tests/test_func.py::TTLDecoratorTest::test_decorator_user_function - A...
+FAILED tests/test_keys.py::CacheKeysTest::test_addkeys - AssertionError: None...
+FAILED tests/test_keys.py::CacheKeysTest::test_hashkey - AssertionError: None...
+FAILED tests/test_keys.py::CacheKeysTest::test_pickle - AttributeError: 'None...
+FAILED tests/test_keys.py::CacheKeysTest::test_typedkey - AssertionError: Non...
+FAILED tests/test_keys.py::CacheKeysTest::test_typedmethodkey - AssertionErro...
+================= 62 failed, 153 passed, 15 warnings in 0.59s ==================

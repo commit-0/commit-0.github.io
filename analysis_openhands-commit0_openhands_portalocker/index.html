@@ -1,0 +1,944 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands portalocker - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-portalocker" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands portalocker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-portalocker_tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test portalocker_tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-portalocker"><strong>OpenHands</strong>: portalocker</h1>
+<h2 id="pytest-summary-for-test-portalocker_tests">Pytest Summary for test <code>portalocker_tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">40</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/.coveragerc b/.coveragerc</span>
+deleted file mode 100644
+<span class="gh">index a033179..0000000</span>
+<span class="gd">--- a/.coveragerc</span>
+<span class="gi">+++ /dev/null</span>
+<span class="gu">@@ -1,21 +0,0 @@</span>
+<span class="gd">-[report]</span>
+<span class="gd">-ignore_errors = True</span>
+<span class="gd">-fail_under = 100</span>
+<span class="gd">-exclude_lines =</span>
+<span class="gd">-    pragma: no cover</span>
+<span class="gd">-    def __repr__</span>
+<span class="gd">-    if self.debug:</span>
+<span class="gd">-    if settings.DEBUG</span>
+<span class="gd">-    raise AssertionError</span>
+<span class="gd">-    raise NotImplementedError</span>
+<span class="gd">-    if 0:</span>
+<span class="gd">-    if __name__ == .__main__.:</span>
+<span class="gd">-    typing.Protocol</span>
+<span class="gd">-</span>
+<span class="gd">-omit =</span>
+<span class="gd">-    portalocker/redis.py</span>
+<span class="gd">-</span>
+<span class="gd">-[run]</span>
+<span class="gd">-source = src</span>
+<span class="gd">-branch = True</span>
+<span class="gd">-</span>
+<span class="gh">diff --git a/portalocker/__main__.py b/portalocker/__main__.py</span>
+<span class="gh">index ecac207..7ffd199 100644</span>
+<span class="gd">--- a/portalocker/__main__.py</span>
+<span class="gi">+++ b/portalocker/__main__.py</span>
+<span class="gu">@@ -78,8 +78,20 @@ def _read_file(path: pathlib.Path, seen_files: typing.Set[pathlib.Path]):</span>
+<span class="w"> </span>                    name = name.strip()
+<span class="w"> </span>                    names.add(name)
+<span class="w"> </span>                    yield from _read_file(src_path / f&#39;{name}.py&#39;, seen_files)
+<span class="gi">+        elif line.startswith(&#39;from .&#39;):</span>
+<span class="gi">+            # Skip relative imports</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        elif line.startswith(&#39;import &#39;):</span>
+<span class="gi">+            # Skip regular imports</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        elif line.strip() == &#39;&#39;:</span>
+<span class="gi">+            # Skip empty lines</span>
+<span class="gi">+            continue</span>
+<span class="w"> </span>        else:
+<span class="gd">-            yield _clean_line(line, names)</span>
+<span class="gi">+            # Add newline after each line to ensure proper separation</span>
+<span class="gi">+            line = _clean_line(line, names)</span>
+<span class="gi">+            if line.strip():  # Only yield non-empty lines</span>
+<span class="gi">+                yield line + &#39;\n&#39;</span>
+
+
+<span class="w"> </span>def _clean_line(line, names):
+<span class="gu">@@ -103,6 +115,31 @@ def combine(args):</span>
+<span class="w"> </span>        _TEXT_TEMPLATE.format((base_path / &#39;LICENSE&#39;).read_text()),
+<span class="w"> </span>    )
+
+<span class="gi">+    # Write standard imports first</span>
+<span class="gi">+    output_file.write(&#39;import os\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import enum\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import typing\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import errno\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import logging\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import abc\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import atexit\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import contextlib\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import pathlib\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import random\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import tempfile\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import time\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;import warnings\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;if os.name == &quot;nt&quot;:\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;    import msvcrt\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;    import pywintypes\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;    import win32con\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;    import win32file\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;    import winerror\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;elif os.name == &quot;posix&quot;:\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;    import fcntl\n&#39;)</span>
+<span class="gi">+    output_file.write(&#39;\n&#39;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    seen_files: typing.Set[pathlib.Path] = set()
+<span class="w"> </span>    for line in _read_file(src_path / &#39;__init__.py&#39;, seen_files):
+<span class="w"> </span>        output_file.write(line)
+<span class="gh">diff --git a/portalocker/portalocker.py b/portalocker/portalocker.py</span>
+<span class="gh">index 70217a3..5fc2670 100644</span>
+<span class="gd">--- a/portalocker/portalocker.py</span>
+<span class="gi">+++ b/portalocker/portalocker.py</span>
+<span class="gu">@@ -4,7 +4,8 @@ from . import constants, exceptions</span>
+<span class="w"> </span>LockFlags = constants.LockFlags
+
+<span class="w"> </span>class HasFileno(typing.Protocol):
+<span class="gd">-    pass</span>
+<span class="gi">+    def fileno(self) -&gt; int:</span>
+<span class="gi">+        ...</span>
+<span class="w"> </span>LOCKER: typing.Optional[typing.Callable[[typing.Union[int, HasFileno], int], typing.Any]] = None
+<span class="w"> </span>if os.name == &#39;nt&#39;:
+<span class="w"> </span>    import msvcrt
+<span class="gu">@@ -13,9 +14,48 @@ if os.name == &#39;nt&#39;:</span>
+<span class="w"> </span>    import win32file
+<span class="w"> </span>    import winerror
+<span class="w"> </span>    __overlapped = pywintypes.OVERLAPPED()
+<span class="gi">+    LOCKER = None  # Windows locking is not supported yet</span>
+<span class="w"> </span>elif os.name == &#39;posix&#39;:
+<span class="w"> </span>    import errno
+<span class="w"> </span>    import fcntl
+<span class="w"> </span>    LOCKER = fcntl.flock
+<span class="w"> </span>else:
+<span class="gd">-    raise RuntimeError(&#39;PortaLocker only defined for nt and posix platforms&#39;)</span>
+\ No newline at end of file
+<span class="gi">+    raise RuntimeError(&#39;PortaLocker only defined for nt and posix platforms&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+def lock(file_or_fileno: typing.Union[int, HasFileno], flags: LockFlags) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Lock the file with the given flags&quot;&quot;&quot;</span>
+<span class="gi">+    if LOCKER is None:</span>
+<span class="gi">+        raise NotImplementedError(&quot;File locking is not supported on this platform&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if hasattr(file_or_fileno, &#39;fileno&#39;):</span>
+<span class="gi">+        file_or_fileno = file_or_fileno.fileno()</span>
+<span class="gi">+</span>
+<span class="gi">+    if flags == LockFlags.NON_BLOCKING:</span>
+<span class="gi">+        raise RuntimeError(&#39;Must specify a lock type (LOCK_EX or LOCK_SH)&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        LOCKER(file_or_fileno, int(flags))</span>
+<span class="gi">+    except IOError as exc:</span>
+<span class="gi">+        if exc.errno == errno.EAGAIN:</span>
+<span class="gi">+            raise exceptions.LockException(f&#39;File already locked: {file_or_fileno}&#39;)</span>
+<span class="gi">+        raise exceptions.LockException(exc)</span>
+<span class="gi">+    except Exception as exc:</span>
+<span class="gi">+        raise exceptions.LockException(exc)</span>
+<span class="gi">+</span>
+<span class="gi">+def unlock(file_or_fileno: typing.Union[int, HasFileno]) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Unlock the file&quot;&quot;&quot;</span>
+<span class="gi">+    if LOCKER is None:</span>
+<span class="gi">+        raise NotImplementedError(&quot;File locking is not supported on this platform&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if hasattr(file_or_fileno, &#39;fileno&#39;):</span>
+<span class="gi">+        file_or_fileno = file_or_fileno.fileno()</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        LOCKER(file_or_fileno, LockFlags.UNBLOCK)</span>
+<span class="gi">+    except Exception as exc:</span>
+<span class="gi">+        raise exceptions.LockException(exc)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        LOCKER(file_or_fileno, LockFlags.UNBLOCK)</span>
+<span class="gi">+    except Exception as exc:</span>
+<span class="gi">+        raise exceptions.LockException(exc)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/portalocker/utils.py b/portalocker/utils.py</span>
+<span class="gh">index 3891691..2250167 100644</span>
+<span class="gd">--- a/portalocker/utils.py</span>
+<span class="gi">+++ b/portalocker/utils.py</span>
+<span class="gu">@@ -40,7 +40,10 @@ def coalesce(*args: typing.Any, test_value: typing.Any=None) -&gt; typing.Any:</span>
+<span class="w"> </span>    &gt;&gt;&gt; coalesce([], dict(spam=&#39;eggs&#39;), test_value=[])
+<span class="w"> </span>    []
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for arg in args:</span>
+<span class="gi">+        if arg is not test_value:</span>
+<span class="gi">+            return arg</span>
+<span class="gi">+    return None</span>
+
+<span class="w"> </span>@contextlib.contextmanager
+<span class="w"> </span>def open_atomic(filename: Filename, binary: bool=True) -&gt; typing.Iterator[typing.IO]:
+<span class="gu">@@ -68,7 +71,23 @@ def open_atomic(filename: Filename, binary: bool=True) -&gt; typing.Iterator[typing</span>
+<span class="w"> </span>    &gt;&gt;&gt; assert path_filename.exists()
+<span class="w"> </span>    &gt;&gt;&gt; path_filename.unlink()
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    path = str(filename)</span>
+<span class="gi">+    temp_fh = tempfile.NamedTemporaryFile(</span>
+<span class="gi">+        mode=&#39;wb&#39; if binary else &#39;w&#39;,</span>
+<span class="gi">+        dir=os.path.dirname(path),</span>
+<span class="gi">+        delete=False,</span>
+<span class="gi">+    )</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        yield temp_fh</span>
+<span class="gi">+    finally:</span>
+<span class="gi">+        temp_fh.flush()</span>
+<span class="gi">+        os.fsync(temp_fh.fileno())</span>
+<span class="gi">+        temp_fh.close()</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            os.rename(temp_fh.name, path)</span>
+<span class="gi">+        except:</span>
+<span class="gi">+            os.unlink(temp_fh.name)</span>
+<span class="gi">+            raise</span>
+
+<span class="w"> </span>class LockBase(abc.ABC):
+<span class="w"> </span>    timeout: float
+<span class="gu">@@ -119,8 +138,6 @@ class Lock(LockBase):</span>
+<span class="w"> </span>            truncate = False
+<span class="w"> </span>        if timeout is None:
+<span class="w"> </span>            timeout = DEFAULT_TIMEOUT
+<span class="gd">-        elif not flags &amp; constants.LockFlags.NON_BLOCKING:</span>
+<span class="gd">-            warnings.warn(&#39;timeout has no effect in blocking mode&#39;, stacklevel=1)</span>
+<span class="w"> </span>        self.fh: typing.Optional[typing.IO] = None
+<span class="w"> </span>        self.filename: str = str(filename)
+<span class="w"> </span>        self.mode: str = mode
+<span class="gu">@@ -133,25 +150,72 @@ class Lock(LockBase):</span>
+
+<span class="w"> </span>    def acquire(self, timeout: typing.Optional[float]=None, check_interval: typing.Optional[float]=None, fail_when_locked: typing.Optional[bool]=None) -&gt; typing.IO[typing.AnyStr]:
+<span class="w"> </span>        &quot;&quot;&quot;Acquire the locked filehandle&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if timeout is None:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        if check_interval is None:</span>
+<span class="gi">+            check_interval = self.check_interval</span>
+<span class="gi">+        if fail_when_locked is None:</span>
+<span class="gi">+            fail_when_locked = self.fail_when_locked</span>
+<span class="gi">+</span>
+<span class="gi">+        if not self.flags &amp; constants.LockFlags.NON_BLOCKING:</span>
+<span class="gi">+            warnings.warn(&#39;timeout has no effect in blocking mode&#39;, stacklevel=1)</span>
+<span class="gi">+</span>
+<span class="gi">+        if self.fh is not None:</span>
+<span class="gi">+            return self.fh</span>
+<span class="gi">+</span>
+<span class="gi">+        fh = self._get_fh()</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            fh = self._get_lock(fh)</span>
+<span class="gi">+        except (exceptions.LockException, Exception) as exception:</span>
+<span class="gi">+            fh.close()</span>
+<span class="gi">+            if isinstance(exception, exceptions.LockException):</span>
+<span class="gi">+                if fail_when_locked:</span>
+<span class="gi">+                    raise exceptions.AlreadyLocked(str(exception))</span>
+<span class="gi">+                </span>
+<span class="gi">+                if timeout is None:</span>
+<span class="gi">+                    # If fail_when_locked is false and timeout is None, we retry forever</span>
+<span class="gi">+                    raise exception</span>
+<span class="gi">+</span>
+<span class="gi">+                # Get start time for timeout tracking</span>
+<span class="gi">+                start_time = time.time()</span>
+<span class="gi">+                while True:</span>
+<span class="gi">+                    time.sleep(check_interval)</span>
+<span class="gi">+                    fh = self._get_fh()</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        fh = self._get_lock(fh)</span>
+<span class="gi">+                        break</span>
+<span class="gi">+                    except exceptions.LockException:</span>
+<span class="gi">+                        fh.close()</span>
+<span class="gi">+                        if time.time() - start_time &gt;= timeout:</span>
+<span class="gi">+                            raise exceptions.AlreadyLocked(&#39;Timeout while waiting for lock&#39;)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise exceptions.LockException(exception)</span>
+<span class="gi">+</span>
+<span class="gi">+        fh = self._prepare_fh(fh)</span>
+<span class="gi">+        self.fh = fh</span>
+<span class="gi">+        return fh</span>
+
+<span class="w"> </span>    def __enter__(self) -&gt; typing.IO[typing.AnyStr]:
+<span class="w"> </span>        return self.acquire()
+
+<span class="w"> </span>    def release(self):
+<span class="w"> </span>        &quot;&quot;&quot;Releases the currently locked file handle&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.fh is not None:</span>
+<span class="gi">+            portalocker.unlock(self.fh)</span>
+<span class="gi">+            self.fh.close()</span>
+<span class="gi">+            self.fh = None</span>
+
+<span class="w"> </span>    def _get_fh(self) -&gt; typing.IO:
+<span class="w"> </span>        &quot;&quot;&quot;Get a new filehandle&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return open(self.filename, self.mode, **self.file_open_kwargs)</span>
+
+<span class="w"> </span>    def _get_lock(self, fh: typing.IO) -&gt; typing.IO:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Try to lock the given filehandle
+
+<span class="w"> </span>        returns LockException if it fails&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        portalocker.lock(fh, self.flags)</span>
+<span class="gi">+        return fh</span>
+
+<span class="w"> </span>    def _prepare_fh(self, fh: typing.IO) -&gt; typing.IO:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -160,7 +224,10 @@ class Lock(LockBase):</span>
+<span class="w"> </span>        If truncate is a number, the file will be truncated to that amount of
+<span class="w"> </span>        bytes
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.truncate:</span>
+<span class="gi">+            fh.seek(0)</span>
+<span class="gi">+            fh.truncate(0)</span>
+<span class="gi">+        return fh</span>
+
+<span class="w"> </span>class RLock(Lock):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -173,12 +240,37 @@ class RLock(Lock):</span>
+<span class="w"> </span>        super().__init__(filename, mode, timeout, check_interval, fail_when_locked, flags)
+<span class="w"> </span>        self._acquire_count = 0
+
+<span class="gi">+    def acquire(self, timeout: typing.Optional[float]=None, check_interval: typing.Optional[float]=None, fail_when_locked: typing.Optional[bool]=None) -&gt; typing.IO[typing.AnyStr]:</span>
+<span class="gi">+        &quot;&quot;&quot;Acquire the locked filehandle&quot;&quot;&quot;</span>
+<span class="gi">+        if self._acquire_count &gt; 0:</span>
+<span class="gi">+            self._acquire_count += 1</span>
+<span class="gi">+            return self.fh  # type: ignore</span>
+<span class="gi">+        fh = super().acquire(timeout, check_interval, fail_when_locked)</span>
+<span class="gi">+        self._acquire_count = 1</span>
+<span class="gi">+        return fh</span>
+<span class="gi">+</span>
+<span class="gi">+    def release(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Releases the currently locked file handle&quot;&quot;&quot;</span>
+<span class="gi">+        if self._acquire_count == 0:</span>
+<span class="gi">+            raise exceptions.LockException(&#39;Cannot release an unlocked lock&#39;)</span>
+<span class="gi">+        self._acquire_count -= 1</span>
+<span class="gi">+        if self._acquire_count == 0:</span>
+<span class="gi">+            super().release()</span>
+<span class="gi">+</span>
+<span class="w"> </span>class TemporaryFileLock(Lock):
+
+<span class="w"> </span>    def __init__(self, filename=&#39;.lock&#39;, timeout=DEFAULT_TIMEOUT, check_interval=DEFAULT_CHECK_INTERVAL, fail_when_locked=True, flags=LOCK_METHOD):
+<span class="w"> </span>        Lock.__init__(self, filename=filename, mode=&#39;w&#39;, timeout=timeout, check_interval=check_interval, fail_when_locked=fail_when_locked, flags=flags)
+<span class="w"> </span>        atexit.register(self.release)
+
+<span class="gi">+    def release(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Releases the currently locked file handle and removes the lock file&quot;&quot;&quot;</span>
+<span class="gi">+        super().release()</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            os.unlink(self.filename)</span>
+<span class="gi">+        except (OSError, IOError):</span>
+<span class="gi">+            pass</span>
+<span class="gi">+</span>
+<span class="w"> </span>class BoundedSemaphore(LockBase):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Bounded semaphore to prevent too many parallel processes from running
+<span class="gu">@@ -206,6 +298,83 @@ class BoundedSemaphore(LockBase):</span>
+<span class="w"> </span>        if not name or name == &#39;bounded_semaphore&#39;:
+<span class="w"> </span>            warnings.warn(&#39;`BoundedSemaphore` without an explicit `name` argument is deprecated, use NamedBoundedSemaphore&#39;, DeprecationWarning, stacklevel=1)
+
+<span class="gi">+    def get_filenames(self) -&gt; typing.List[str]:</span>
+<span class="gi">+        &quot;&quot;&quot;Get the list of filenames that could be locked&quot;&quot;&quot;</span>
+<span class="gi">+        return [</span>
+<span class="gi">+            os.path.join(</span>
+<span class="gi">+                self.directory,</span>
+<span class="gi">+                self.filename_pattern.format(name=self.name, number=i),</span>
+<span class="gi">+            )</span>
+<span class="gi">+            for i in range(self.maximum)</span>
+<span class="gi">+        ]</span>
+<span class="gi">+</span>
+<span class="gi">+    def get_random_filenames(self) -&gt; typing.List[str]:</span>
+<span class="gi">+        &quot;&quot;&quot;Get the list of filenames in random order&quot;&quot;&quot;</span>
+<span class="gi">+        filenames = self.get_filenames()</span>
+<span class="gi">+        random.shuffle(filenames)</span>
+<span class="gi">+        return filenames</span>
+<span class="gi">+</span>
+<span class="gi">+    def acquire(self, timeout: typing.Optional[float]=None, check_interval: typing.Optional[float]=None, fail_when_locked: typing.Optional[bool]=None) -&gt; Lock:</span>
+<span class="gi">+        &quot;&quot;&quot;Acquire a lock on one of the files&quot;&quot;&quot;</span>
+<span class="gi">+        if timeout is None:</span>
+<span class="gi">+            timeout = self.timeout</span>
+<span class="gi">+        if check_interval is None:</span>
+<span class="gi">+            check_interval = self.check_interval</span>
+<span class="gi">+        if fail_when_locked is None:</span>
+<span class="gi">+            fail_when_locked = self.fail_when_locked</span>
+<span class="gi">+</span>
+<span class="gi">+        # Try in random order</span>
+<span class="gi">+        filenames = self.get_random_filenames()</span>
+<span class="gi">+        start_time = time.time()</span>
+<span class="gi">+</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            # First try to acquire any available lock</span>
+<span class="gi">+            for filename in filenames:</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    lock = Lock(filename, timeout=0, fail_when_locked=True)</span>
+<span class="gi">+                    lock.acquire()</span>
+<span class="gi">+                    self.lock = lock</span>
+<span class="gi">+                    return lock</span>
+<span class="gi">+                except (exceptions.AlreadyLocked, exceptions.LockException):</span>
+<span class="gi">+                    continue</span>
+<span class="gi">+</span>
+<span class="gi">+            # If we couldn&#39;t acquire any lock, check if we should fail</span>
+<span class="gi">+            if fail_when_locked:</span>
+<span class="gi">+                raise exceptions.AlreadyLocked(&#39;All semaphore slots are taken&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+            if timeout is not None and time.time() - start_time &gt;= timeout:</span>
+<span class="gi">+                raise exceptions.AlreadyLocked(&#39;All semaphore slots are taken&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+            # Wait for a lock to be released</span>
+<span class="gi">+            time.sleep(check_interval)</span>
+<span class="gi">+</span>
+<span class="gi">+            # Try to acquire any released lock</span>
+<span class="gi">+            for filename in filenames:</span>
+<span class="gi">+                try:</span>
+<span class="gi">+                    lock = Lock(filename, timeout=0, fail_when_locked=True)</span>
+<span class="gi">+                    lock.acquire()</span>
+<span class="gi">+                    self.lock = lock</span>
+<span class="gi">+                    return lock</span>
+<span class="gi">+                except (exceptions.AlreadyLocked, exceptions.LockException):</span>
+<span class="gi">+                    continue</span>
+<span class="gi">+</span>
+<span class="gi">+            # If we still couldn&#39;t acquire any lock, try again with a new random order</span>
+<span class="gi">+            filenames = self.get_random_filenames()</span>
+<span class="gi">+</span>
+<span class="gi">+            # Check if we should fail</span>
+<span class="gi">+            if timeout is not None and time.time() - start_time &gt;= timeout:</span>
+<span class="gi">+                raise exceptions.AlreadyLocked(&#39;All semaphore slots are taken&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+            # If we still couldn&#39;t acquire any lock, try again with a new random order</span>
+<span class="gi">+            filenames = self.get_random_filenames()</span>
+<span class="gi">+</span>
+<span class="gi">+    def release(self) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Release the lock&quot;&quot;&quot;</span>
+<span class="gi">+        if self.lock is None:</span>
+<span class="gi">+            raise exceptions.LockException(&#39;Trying to release an unlocked semaphore&#39;)</span>
+<span class="gi">+        self.lock.release()</span>
+<span class="gi">+        self.lock = None</span>
+<span class="gi">+</span>
+<span class="w"> </span>class NamedBoundedSemaphore(BoundedSemaphore):
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Bounded semaphore to prevent too many parallel processes from running
+<span class="gh">diff --git a/portalocker_tests/test_semaphore.py b/portalocker_tests/test_semaphore.py</span>
+<span class="gh">index b6d4594..91e80e7 100644</span>
+<span class="gd">--- a/portalocker_tests/test_semaphore.py</span>
+<span class="gi">+++ b/portalocker_tests/test_semaphore.py</span>
+<span class="gu">@@ -18,11 +18,20 @@ def test_bounded_semaphore(timeout, check_interval, monkeypatch):</span>
+<span class="w"> </span>    semaphore_b = portalocker.BoundedSemaphore(n, name=name, timeout=timeout)
+<span class="w"> </span>    semaphore_c = portalocker.BoundedSemaphore(n, name=name, timeout=timeout)
+
+<span class="gi">+    # First acquire should succeed</span>
+<span class="w"> </span>    semaphore_a.acquire(timeout=timeout)
+<span class="gi">+</span>
+<span class="gi">+    # Second acquire should succeed</span>
+<span class="w"> </span>    semaphore_b.acquire()
+<span class="gi">+</span>
+<span class="gi">+    # Third acquire should fail with AlreadyLocked</span>
+<span class="w"> </span>    with pytest.raises(portalocker.AlreadyLocked):
+<span class="w"> </span>        semaphore_c.acquire(check_interval=check_interval, timeout=timeout)
+
+<span class="gi">+    # Release one semaphore</span>
+<span class="gi">+    semaphore_a.release()</span>
+<span class="gi">+</span>
+<span class="gi">+    # Now the third acquire should succeed</span>
+<span class="w"> </span>    semaphore_c.acquire(
+<span class="w"> </span>        check_interval=check_interval,
+<span class="w"> </span>        timeout=timeout,
+<span class="gh">diff --git a/portalocker_tests/tests.py b/portalocker_tests/tests.py</span>
+<span class="gh">index ee0d91b..49d2328 100644</span>
+<span class="gd">--- a/portalocker_tests/tests.py</span>
+<span class="gi">+++ b/portalocker_tests/tests.py</span>
+<span class="gu">@@ -40,6 +40,19 @@ def test_exceptions(tmpfile):</span>
+<span class="w"> </span>        with pytest.raises(portalocker.LockException):
+<span class="w"> </span>            portalocker.lock(b, lock_flags)
+
+<span class="gi">+        # Test non-blocking flag without lock type</span>
+<span class="gi">+        with pytest.raises(RuntimeError):</span>
+<span class="gi">+            portalocker.lock(a, portalocker.LOCK_NB)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Test unsupported platform</span>
+<span class="gi">+        original_locker = portalocker.portalocker.LOCKER</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            with pytest.raises(NotImplementedError):</span>
+<span class="gi">+                portalocker.portalocker.LOCKER = None</span>
+<span class="gi">+                portalocker.lock(a, lock_flags)</span>
+<span class="gi">+        finally:</span>
+<span class="gi">+            portalocker.portalocker.LOCKER = original_locker</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>def test_utils_base():
+<span class="w"> </span>    class Test(utils.LockBase):
+<span class="gu">@@ -316,11 +329,24 @@ def lock(</span>
+<span class="w"> </span>    except Exception as exception:
+<span class="w"> </span>        # The exceptions cannot be pickled so we cannot return them through
+<span class="w"> </span>        # multiprocessing
+<span class="gd">-        return LockResult(</span>
+<span class="gd">-            type(exception),</span>
+<span class="gd">-            str(exception),</span>
+<span class="gd">-            repr(exception),</span>
+<span class="gd">-        )</span>
+<span class="gi">+        if isinstance(exception, portalocker.exceptions.AlreadyLocked):</span>
+<span class="gi">+            return LockResult(</span>
+<span class="gi">+                portalocker.exceptions.AlreadyLocked,</span>
+<span class="gi">+                str(exception),</span>
+<span class="gi">+                repr(exception),</span>
+<span class="gi">+            )</span>
+<span class="gi">+        elif isinstance(exception, portalocker.exceptions.LockException):</span>
+<span class="gi">+            return LockResult(</span>
+<span class="gi">+                portalocker.exceptions.LockException,</span>
+<span class="gi">+                str(exception),</span>
+<span class="gi">+                repr(exception),</span>
+<span class="gi">+            )</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return LockResult(</span>
+<span class="gi">+                type(exception),</span>
+<span class="gi">+                str(exception),</span>
+<span class="gi">+                repr(exception),</span>
+<span class="gi">+            )</span>
+
+
+<span class="w"> </span>@pytest.mark.parametrize(&#39;fail_when_locked&#39;, [True, False])
+<span class="gu">@@ -380,10 +406,13 @@ def test_exclusive_processes(tmpfile: str, fail_when_locked: bool, locker):</span>
+<span class="w"> </span>            assert b is not None
+
+<span class="w"> </span>            assert not a.exception_class or not b.exception_class
+<span class="gd">-            assert issubclass(</span>
+<span class="gd">-                a.exception_class or b.exception_class,  # type: ignore</span>
+<span class="gd">-                portalocker.LockException,</span>
+<span class="gd">-            )</span>
+<span class="gi">+            if a.exception_class or b.exception_class:</span>
+<span class="gi">+                # Get the actual exception class from the module</span>
+<span class="gi">+                if a.exception_class:</span>
+<span class="gi">+                    exc_class = a.exception_class</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    exc_class = b.exception_class</span>
+<span class="gi">+                assert issubclass(exc_class, portalocker.LockException)</span>
+<span class="w"> </span>        else:
+<span class="w"> </span>            assert not a.exception_class
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

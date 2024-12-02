@@ -1,0 +1,10 @@
+ImportError while loading conftest '/testbed/tests/conftest.py'.
+tests/conftest.py:5: in <module>
+    from jinja2 import loaders
+src/jinja2/__init__.py:9: in <module>
+    from .environment import Environment as Environment
+src/jinja2/environment.py:14: in <module>
+    from . import nodes
+src/jinja2/nodes.py:770: in <module>
+    NodeType.__new__ = staticmethod(_failing_new)
+E   NameError: name '_failing_new' is not defined

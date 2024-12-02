@@ -1,0 +1,868 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /testbed
+configfile: tox.ini
+plugins: cov-5.0.0, json-report-1.5.0, metadata-3.1.1
+collected 39 items
+
+tests/test_core.py [32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                     [ 43%][0m
+tests/test_emojis.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                            [ 64%][0m
+tests/test_table_integrity.py [33ms[0m[31m                                          [ 66%][0m
+tests/test_ucslevel.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                     [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m______________________________ test_empty_string _______________________________[0m
+
+    def test_empty_string():
+        """
+        Test empty string is OK.
+    
+        https://github.com/jquast/wcwidth/issues/24
+        """
+        phrase = ""
+        expect_length_each = 0
+        expect_length_phrase = 0
+    
+        # exercise,
+        length_each = wcwidth.wcwidth(phrase)
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert None == 0[0m
+
+[1m[31mtests/test_core.py[0m:48: AssertionError
+[31m[1m________________________________ test_hello_jp _________________________________[0m
+
+    def test_hello_jp():
+        u"""
+        Width of Japanese phrase: コンニチハ, セカイ!
+    
+        Given a phrase of 5 and 3 Katakana ideographs, joined with
+        3 English-ASCII punctuation characters, totaling 11, this
+        phrase consumes 19 cells of a terminal emulator.
+        """
+        # given,
+        phrase = u'コンニチハ, セカイ!'
+        expect_length_each = (2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 1)
+        expect_length_phrase = sum(expect_length_each)
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, ...ne, None, ...) == (2, 2, 2, 2, 2, 1, ...)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:90: AssertionError
+[31m[1m_____________________________ test_wcswidth_substr _____________________________[0m
+
+    def test_wcswidth_substr():
+        """
+        Test wcswidth() optional 2nd parameter, ``n``.
+    
+        ``n`` determines at which position of the string
+        to stop counting length.
+        """
+        # given,
+        phrase = u'コンニチハ, セカイ!'
+        end = 7
+        expect_length_each = (2, 2, 2, 2, 2, 1, 1,)
+        expect_length_phrase = sum(expect_length_each)
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))[:end]
+        length_phrase = wcwidth.wcswidth(phrase, end)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, ...ne, None, ...) == (2, 2, 2, 2, 2, 1, ...)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:112: AssertionError
+[31m[1m______________________________ test_null_width_0 _______________________________[0m
+
+    def test_null_width_0():
+        """NULL (0) reports width 0."""
+        # given,
+        phrase = u'abc\x00def'
+        expect_length_each = (1, 1, 1, 0, 1, 1, 1)
+        expect_length_phrase = sum(expect_length_each)
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase, len(phrase))
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, ...ne, None, ...) == (1, 1, 1, 0, 1, 1, ...)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:128: AssertionError
+[31m[1m_______________________ test_control_c0_width_negative_1 _______________________[0m
+
+    def test_control_c0_width_negative_1():
+        """How the API reacts to CSI (Control sequence initiate).
+    
+        An example of bad fortune, this terminal sequence is a width of 0
+        on all terminals, but wcwidth doesn't parse Control-Sequence-Inducer
+        (CSI) sequences.
+    
+        Also the "legacy" posix functions wcwidth and wcswidth return -1 for
+        any string containing the C1 control character \x1b (ESC).
+        """
+        # given,
+        phrase = u'\x1b[0m'
+        expect_length_each = (-1, 1, 1, 1)
+        expect_length_phrase = -1
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify, though this is actually *0* width for a terminal emulator
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None) == (-1, 1, 1, 1)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != -1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:152: AssertionError
+[31m[1m_____________________________ test_combining_width _____________________________[0m
+
+    def test_combining_width():
+        """Simple test combining reports total width of 4."""
+        # given,
+        phrase = u'--\u05bf--'
+        expect_length_each = (1, 1, 0, 1, 1)
+        expect_length_phrase = 4
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None, None) == (1, 1, 0, 1, 1)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:168: AssertionError
+[31m[1m_____________________________ test_combining_cafe ______________________________[0m
+
+    def test_combining_cafe():
+        u"""Phrase cafe + COMBINING ACUTE ACCENT is café of length 4."""
+        phrase = u"cafe\u0301"
+        expect_length_each = (1, 1, 1, 1, 0)
+        expect_length_phrase = 4
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None, None) == (1, 1, 1, 1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:183: AssertionError
+[31m[1m___________________________ test_combining_enclosing ___________________________[0m
+
+    def test_combining_enclosing():
+        u"""CYRILLIC CAPITAL LETTER A + COMBINING CYRILLIC HUNDRED THOUSANDS SIGN is of length 1."""
+        phrase = u"\u0410\u0488"
+        expect_length_each = (1, 0)
+        expect_length_phrase = 1
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None) == (1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:198: AssertionError
+[31m[1m_____________________________ test_balinese_script _____________________________[0m
+
+    def test_balinese_script():
+        u"""
+        Balinese kapal (ship) is length 3.
+    
+        This may be an example that is not yet correctly rendered by any terminal so
+        far, like devanagari.
+        """
+        phrase = (u"\u1B13"    # Category 'Lo', EAW 'N' -- BALINESE LETTER KA
+                  u"\u1B28"    # Category 'Lo', EAW 'N' -- BALINESE LETTER PA KAPAL
+                  u"\u1B2E"    # Category 'Lo', EAW 'N' -- BALINESE LETTER LA
+                  u"\u1B44")   # Category 'Mc', EAW 'N' -- BALINESE ADEG ADEG
+        expect_length_each = (1, 1, 1, 0)
+        expect_length_phrase = 3
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None) == (1, 1, 1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:221: AssertionError
+[31m[1m_________________________________ test_kr_jamo _________________________________[0m
+
+    def test_kr_jamo():
+        """
+        Test basic combining of HANGUL CHOSEONG and JUNGSEONG
+    
+        Example and from Raymond Chen's blog post,
+        https://devblogs.microsoft.com/oldnewthing/20201009-00/?p=104351
+        """
+        # This is an example where both characters are "wide" when displayed alone.
+        #
+        # But JUNGSEONG (vowel) is designed for combination with a CHOSEONG (consonant).
+        #
+        # This wcwidth library understands their width only when combination,
+        # and not by independent display, like other zero-width characters that may
+        # only combine with an appropriate preceding character.
+        phrase = (
+            u"\u1100"  # ᄀ HANGUL CHOSEONG KIYEOK (consonant)
+            u"\u1161"  # ᅡ HANGUL JUNGSEONG A (vowel)
+        )
+        expect_length_each = (2, 0)
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None) == (2, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:251: AssertionError
+[31m[1m_____________________________ test_kr_jamo_filler ______________________________[0m
+
+    def test_kr_jamo_filler():
+        u"""
+        Jamo filler is 0 width.
+    
+        Example from https://www.unicode.org/L2/L2006/06310-hangul-decompose9.pdf
+        """
+        phrase = (
+            u"\u1100"  # HANGUL CHOSEONG KIYEOK (consonant)
+            u"\u1160"  # HANGUL JUNGSEONG FILLER (vowel)
+        )
+        expect_length_each = (2, 0)
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None) == (2, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:273: AssertionError
+[31m[1m____________________________ test_devanagari_script ____________________________[0m
+
+    def test_devanagari_script():
+        """
+        Attempt to test the measurement width of Devanagari script.
+    
+        I believe this 'phrase' should be length 3.
+    
+        This is a difficult problem, and this library does not yet get it right,
+        because we interpret the unicode data files programmatically, but they do
+        not correctly describe how their terminal width is measured.
+    
+        There are very few Terminals that do!
+    
+        As of 2023,
+    
+        - iTerm2: correct length but individual characters are out of order and
+                  horizaontally misplaced as to be unreadable in its language when
+                  using 'Noto Sans' font.
+        - mlterm: mixed results, it offers several options in the configuration
+                  dialog, "Xft", "Cario", and "Variable Column Width" have some
+                  effect, but with neither 'Noto Sans' or 'unifont', it is not
+                  recognizable as the Devanagari script it is meant to display.
+    
+        Previous testing with Devanagari documented at address https://benizi.com/vim/devanagari/
+    
+        See also, https://askubuntu.com/questions/8437/is-there-a-good-mono-spaced-font-for-devanagari-script-in-the-terminal
+        """
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        # please note that document correctly points out that the final width cannot be determined
+        # as a sum of each individual width, as this library currently performs with exception of
+        # ZWJ, but I think it incorrectly gestures what a stateless call to wcwidth.wcwidth of
+        # each codepoint *should* return.
+        phrase = (u"\u0915"    # Akhand, Category 'Lo', East Asian Width property 'N' -- DEVANAGARI LETTER KA
+                  u"\u094D"    # Joiner, Category 'Mn', East Asian Width property 'N' -- DEVANAGARI SIGN VIRAMA
+                  u"\u0937"    # Fused, Category 'Lo', East Asian Width property 'N' -- DEVANAGARI LETTER SSA
+                  u"\u093F")   # MatraL, Category 'Mc', East Asian Width property 'N' -- DEVANAGARI VOWEL SIGN I
+        # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (2, 0, 0, 1)
+        expect_length_each = (1, 0, 1, 0)
+        # I believe the final width *should* be 3.
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None) == (1, 0, 1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:322: AssertionError
+[31m[1m______________________________ test_tamil_script _______________________________[0m
+
+    def test_tamil_script():
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        phrase = (u"\u0b95"    # Akhand, Category 'Lo', East Asian Width property 'N' -- TAMIL LETTER KA
+                  u"\u0bcd"    # Joiner, Category 'Mn', East Asian Width property 'N' -- TAMIL SIGN VIRAMA
+                  u"\u0bb7"    # Fused, Category 'Lo', East Asian Width property 'N' -- TAMIL LETTER SSA
+                  u"\u0bcc")   # MatraLR, Category 'Mc', East Asian Width property 'N' -- TAMIL VOWEL SIGN AU
+        # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (3, 0, 0, 4)
+        expect_length_each = (1, 0, 1, 0)
+    
+        # I believe the final width should be about 5 or 6.
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None) == (1, 0, 1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:343: AssertionError
+[31m[1m_____________________________ test_kannada_script ______________________________[0m
+
+    def test_kannada_script():
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        # |ರ್ಝೈ|
+        # |123|
+        phrase = (u"\u0cb0"    # Repha, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER RA
+                  u"\u0ccd"    # Joiner, Category 'Mn', East Asian Width property 'N' -- KANNADA SIGN VIRAMA
+                  u"\u0c9d"    # Base, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER JHA
+                  u"\u0cc8")   # MatraUR, Category 'Mc', East Asian Width property 'N' -- KANNADA VOWEL SIGN AI
+        # 23107-terminal-suppt.pdf suggests should be (2, 0, 3, 1)
+        expect_length_each = (1, 0, 1, 0)
+        # I believe the correct final width *should* be 3 or 4.
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None) == (1, 0, 1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:365: AssertionError
+[31m[1m____________________________ test_kannada_script_2 _____________________________[0m
+
+    def test_kannada_script_2():
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        # |ರ಼್ಚ|
+        # |12|
+        phrase = (u"\u0cb0"    # Base, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER RA
+                  u"\u0cbc"    # Nukta, Category 'Mn', East Asian Width property 'N' -- KANNADA SIGN NUKTA
+                  u"\u0ccd"    # Joiner, Category 'Lo', East Asian Width property 'N' -- KANNADA SIGN VIRAMA
+                  u"\u0c9a")   # Subjoin, Category 'Mc', East Asian Width property 'N' -- KANNADA LETTER CA
+        # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (2, 0, 0, 1)
+        expect_length_each = (1, 0, 0, 1)
+        # I believe the final width is correct, but maybe for the wrong reasons!
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None) == (1, 0, 0, 1)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_core.py[0m:387: AssertionError
+[31m[1m___________________________ test_zero_wide_conflict ____________________________[0m
+
+    def test_zero_wide_conflict():
+        # Test characters considered both "wide" and "zero" width
+        # -  (0x03000, 0x0303e,),  # Ideographic Space       ..Ideographic Variation In
+        # +  (0x03000, 0x03029,),  # Ideographic Space       ..Hangzhou Numeral Nine
+>       assert wcwidth.wcwidth(unichr(0x03029), unicode_version='4.1.0') == 2
+[1m[31mE       AssertionError: assert None == 2[0m
+[1m[31mE        +  where None = <functools._lru_cache_wrapper object at 0x7fb1de3dc3b0>('〩', unicode_version='4.1.0')[0m
+[1m[31mE        +    where <functools._lru_cache_wrapper object at 0x7fb1de3dc3b0> = wcwidth.wcwidth[0m
+[1m[31mE        +    and   '〩' = unichr(12329)[0m
+
+[1m[31mtests/test_core.py[0m:395: AssertionError
+[31m[1m_________________________ test_unfinished_zwj_sequence _________________________[0m
+
+    @pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_unfinished_zwj_sequence():
+        u"""
+        Ensure index-out-of-bounds does not occur for zero-width joiner without any following character
+        """
+        phrase = (u"\U0001f469"   # Base, Category So, East Asian Width property 'W' -- WOMAN
+                  u"\U0001f3fb"   # Modifier, Category Sk, East Asian Width property 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d")      # Joiner, Category Cf, East Asian Width property 'N'  -- ZERO WIDTH JOINER
+        expect_length_each = (2, 0, 0)
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None) == (2, 0, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:71: AssertionError
+[31m[1m______________________ test_non_recommended_zwj_sequence _______________________[0m
+
+    @pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_non_recommended_zwj_sequence():
+        """
+        Verify ZWJ is measured as though successful with characters that cannot be joined, wcwidth does not verify
+        """
+        phrase = (u"\U0001f469"   # Base, Category So, East Asian Width property 'W' -- WOMAN
+                  u"\U0001f3fb"   # Modifier, Category Sk, East Asian Width property 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d")      # Joiner, Category Cf, East Asian Width property 'N'  -- ZERO WIDTH JOINER
+        expect_length_each = (2, 0, 0)
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None) == (2, 0, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:91: AssertionError
+[31m[1m_______________________ test_another_emoji_zwj_sequence ________________________[0m
+
+    @pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_another_emoji_zwj_sequence():
+        phrase = (
+            u"\u26F9"        # PERSON WITH BALL
+            u"\U0001F3FB"    # EMOJI MODIFIER FITZPATRICK TYPE-1-2
+            u"\u200D"        # ZERO WIDTH JOINER
+            u"\u2640"        # FEMALE SIGN
+            u"\uFE0F")       # VARIATION SELECTOR-16
+        expect_length_each = (1, 0, 0, 1, 0)
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, None, None, None) == (1, 0, 0, 1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:111: AssertionError
+[31m[1m________________________ test_longer_emoji_zwj_sequence ________________________[0m
+
+    @pytest.mark.skipif(NARROW_ONLY, reason="Test cannot verify on python 'narrow' builds")
+    def test_longer_emoji_zwj_sequence():
+        """
+        A much longer emoji ZWJ sequence of 10 total codepoints is just 2 cells!
+    
+        Also test the same sequence in duplicate, verifying multiple VS-16 sequences
+        in a single function call.
+        """
+        # 'Category Code', 'East Asian Width property' -- 'description'
+        phrase = (u"\U0001F9D1"   # 'So', 'W' -- ADULT
+                  u"\U0001F3FB"   # 'Sk', 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-1-2
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\u2764"       # 'So', 'N' -- HEAVY BLACK HEART
+                  u"\uFE0F"       # 'Mn', 'A' -- VARIATION SELECTOR-16
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\U0001F48B"   # 'So', 'W' -- KISS MARK
+                  u"\u200d"       # 'Cf', 'N' -- ZERO WIDTH JOINER
+                  u"\U0001F9D1"   # 'So', 'W' -- ADULT
+                  u"\U0001F3FD"   # 'Sk', 'W' -- EMOJI MODIFIER FITZPATRICK TYPE-4
+        ) * 2
+        # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+        expect_length_each = (2, 0, 0, 1, 0, 0, 2, 0, 2, 0) * 2
+        expect_length_phrase = 4
+    
+        # exercise,
+        length_each = tuple(map(wcwidth.wcwidth, phrase))
+        length_phrase = wcwidth.wcswidth(phrase)
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None, ...ne, None, ...) == (2, 0, 0, 1, 0, 0, ...)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 2[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:144: AssertionError
+[31m[1m_____________________ test_recommended_emoji_zwj_sequences _____________________[0m
+
+    @pytest.mark.skipif(NARROW_ONLY, reason="Some sequences in text file are not compatible with 'narrow' builds")
+    def test_recommended_emoji_zwj_sequences():
+        """
+        Test wcswidth of all of the unicode.org-published emoji-zwj-sequences.txt
+        """
+        # given,
+        lines, sequences = read_sequences_from_file('emoji-zwj-sequences.txt')
+    
+        errors = []
+        # Exercise, track by zipping with original text file line, a debugging aide
+        num = 0
+        for sequence, line in zip(sequences, lines):
+            num += 1
+            measured_width = wcwidth.wcswidth(sequence)
+            if measured_width != 2:
+                errors.append({
+                    'expected_width': 2,
+                    'line': line,
+                    'measured_width': measured_width,
+                    'sequence': sequence,
+                })
+    
+        # verify
+>       assert errors == []
+[1m[31mE       AssertionError: assert [{'expected_w...u200d👦'}, ...] == [][0m
+[1m[31mE         [0m
+[1m[31mE         Left contains 1468 more items, first extra item: {'expected_width': 2, 'line': '1F468 200D 2764 FE0F 200D 1F468             ; RGI_Emoji_ZWJ_Sequence  ; couple with hea...                              # E2.0   [1] (👨\u200d❤️\u200d👨)', 'measured_width': None, 'sequence': '👨\u200d❤️\u200d👨'}[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:181: AssertionError
+[31m[1m___________________ test_recommended_variation_16_sequences ____________________[0m
+
+    def test_recommended_variation_16_sequences():
+        """
+        Test wcswidth of all of the unicode.org-published emoji-variation-sequences.txt
+        """
+        # given,
+        lines, sequences = read_sequences_from_file('emoji-variation-sequences.txt')
+    
+        errors = []
+        num = 0
+        for sequence, line in zip(sequences, lines):
+            num += 1
+            if '\ufe0f' not in sequence:
+                # filter for only \uFE0F (VS-16)
+                continue
+            measured_width = wcwidth.wcswidth(sequence)
+            if measured_width != 2:
+                errors.append({
+                    'expected_width': 2,
+                    'line': line,
+                    'measured_width': wcwidth.wcswidth(sequence),
+                    'sequence': sequence,
+                })
+    
+        # verify
+>       assert errors == []
+[1m[31mE       AssertionError: assert [{'expected_w...': '3️'}, ...] == [][0m
+[1m[31mE         [0m
+[1m[31mE         Left contains 371 more items, first extra item: {'expected_width': 2, 'line': '0023 FE0F  ; emoji style; # (1.1) NUMBER SIGN', 'measured_width': None, 'sequence': '#️'}[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:209: AssertionError
+[31m[1m_____________________________ test_unicode_9_vs16 ______________________________[0m
+
+    def test_unicode_9_vs16():
+        """Verify effect of VS-16 on unicode_version 9.0 and later"""
+        phrase = (u"\u2640"        # FEMALE SIGN
+                  u"\uFE0F")       # VARIATION SELECTOR-16
+    
+        expect_length_each = (1, 0)
+        expect_length_phrase = 2
+    
+        # exercise,
+        length_each = tuple(wcwidth.wcwidth(w_char, unicode_version='9.0') for w_char in phrase)
+        length_phrase = wcwidth.wcswidth(phrase, unicode_version='9.0')
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None) == (1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:226: AssertionError
+[31m[1m_____________________________ test_unicode_8_vs16 ______________________________[0m
+
+    def test_unicode_8_vs16():
+        """Verify that VS-16 has no effect on unicode_version 8.0 and earler"""
+        phrase = (u"\u2640"        # FEMALE SIGN
+                  u"\uFE0F")       # VARIATION SELECTOR-16
+    
+        expect_length_each = (1, 0)
+        expect_length_phrase = 1
+    
+        # exercise,
+        length_each = tuple(wcwidth.wcwidth(w_char, unicode_version='8.0') for w_char in phrase)
+        length_phrase = wcwidth.wcswidth(phrase, unicode_version='8.0')
+    
+        # verify.
+>       assert length_each == expect_length_each
+[1m[31mE       assert (None, None) == (1, 0)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: None != 1[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_emojis.py[0m:242: AssertionError
+[31m[1m_________________________________ test_latest __________________________________[0m
+
+    def test_latest():
+        """wcwidth._wcmatch_version('latest') returns tail item."""
+        # given,
+>       expected = wcwidth.list_versions()[-1]
+[1m[31mE       TypeError: 'NoneType' object is not subscriptable[0m
+
+[1m[31mtests/test_ucslevel.py[0m:16: TypeError
+[31m[1m______________________________ test_exact_410_str ______________________________[0m
+
+    def test_exact_410_str():
+        """wcwidth._wcmatch_version('4.1.0') returns equal value (str)."""
+        # given,
+        given = expected = '4.1.0'
+    
+        # exercise,
+        result = wcwidth._wcmatch_version(given)
+    
+        # verify.
+>       assert result == expected
+[1m[31mE       AssertionError: assert None == '4.1.0'[0m
+
+[1m[31mtests/test_ucslevel.py[0m:34: AssertionError
+[31m[1m____________________________ test_exact_410_unicode ____________________________[0m
+
+    def test_exact_410_unicode():
+        """wcwidth._wcmatch_version(u'4.1.0') returns equal value (unicode)."""
+        # given,
+        given = expected = u'4.1.0'
+    
+        # exercise,
+        result = wcwidth._wcmatch_version(given)
+    
+        # verify.
+>       assert result == expected
+[1m[31mE       AssertionError: assert None == '4.1.0'[0m
+
+[1m[31mtests/test_ucslevel.py[0m:46: AssertionError
+[31m[1m_____________________________ test_nearest_505_str _____________________________[0m
+
+    def test_nearest_505_str():
+        """wcwidth._wcmatch_version('5.0.5') returns nearest '5.0.0'. (str)"""
+        # given
+        given, expected = '5.0.5', '5.0.0'
+    
+        # exercise
+        result = wcwidth._wcmatch_version(given)
+    
+        # verify.
+>       assert result == expected
+[1m[31mE       AssertionError: assert None == '5.0.0'[0m
+
+[1m[31mtests/test_ucslevel.py[0m:58: AssertionError
+[31m[1m___________________________ test_nearest_505_unicode ___________________________[0m
+
+    def test_nearest_505_unicode():
+        """wcwidth._wcmatch_version(u'5.0.5') returns nearest u'5.0.0'. (unicode)"""
+        # given
+        given, expected = u'5.0.5', u'5.0.0'
+    
+        # exercise
+        result = wcwidth._wcmatch_version(given)
+    
+        # verify.
+>       assert result == expected
+[1m[31mE       AssertionError: assert None == '5.0.0'[0m
+
+[1m[31mtests/test_ucslevel.py[0m:70: AssertionError
+[31m[1m__________________________ test_nearest_lowint40_str ___________________________[0m
+
+    def test_nearest_lowint40_str():
+        """wcwidth._wcmatch_version('4.0') returns nearest '4.1.0'."""
+        # given
+        given, expected = '4.0', '4.1.0'
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+    
+        # exercise
+>       with pytest.warns(UserWarning):
+[1m[31mE       Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.[0m
+[1m[31mE        Emitted warnings: [].[0m
+
+[1m[31mtests/test_ucslevel.py[0m:81: Failed
+[31m[1m________________________ test_nearest_lowint40_unicode _________________________[0m
+
+    def test_nearest_lowint40_unicode():
+        """wcwidth._wcmatch_version(u'4.0') returns nearest u'4.1.0'."""
+        # given
+        given, expected = u'4.0', u'4.1.0'
+        warnings.resetwarnings()
+        wcwidth._wcmatch_version.cache_clear()
+    
+        # exercise
+>       with pytest.warns(UserWarning):
+[1m[31mE       Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.[0m
+[1m[31mE        Emitted warnings: [].[0m
+
+[1m[31mtests/test_ucslevel.py[0m:97: Failed
+[31m[1m_____________________________ test_nearest_800_str _____________________________[0m
+
+    def test_nearest_800_str():
+        """wcwidth._wcmatch_version('8') returns nearest '8.0.0'."""
+        # given
+        given, expected = '8', '8.0.0'
+    
+        # exercise
+        result = wcwidth._wcmatch_version(given)
+    
+        # verify.
+>       assert result == expected
+[1m[31mE       AssertionError: assert None == '8.0.0'[0m
+
+[1m[31mtests/test_ucslevel.py[0m:114: AssertionError
+[31m[1m___________________________ test_nearest_800_unicode ___________________________[0m
+
+    def test_nearest_800_unicode():
+        """wcwidth._wcmatch_version(u'8') returns nearest u'8.0.0'."""
+        # given
+        given, expected = u'8', u'8.0.0'
+    
+        # exercise
+        result = wcwidth._wcmatch_version(given)
+    
+        # verify.
+>       assert result == expected
+[1m[31mE       AssertionError: assert None == '8.0.0'[0m
+
+[1m[31mtests/test_ucslevel.py[0m:126: AssertionError
+[31m[1m_____________________________ test_nearest_999_str _____________________________[0m
+
+    def test_nearest_999_str():
+        """wcwidth._wcmatch_version('999.0') returns nearest (latest)."""
+        # given
+>       given, expected = '999.0', wcwidth.list_versions()[-1]
+[1m[31mE       TypeError: 'NoneType' object is not subscriptable[0m
+
+[1m[31mtests/test_ucslevel.py[0m:132: TypeError
+[31m[1m___________________________ test_nearest_999_unicode ___________________________[0m
+
+    def test_nearest_999_unicode():
+        """wcwidth._wcmatch_version(u'999.0') returns nearest (latest)."""
+        # given
+>       given, expected = u'999.0', wcwidth.list_versions()[-1]
+[1m[31mE       TypeError: 'NoneType' object is not subscriptable[0m
+
+[1m[31mtests/test_ucslevel.py[0m:144: TypeError
+[31m[1m_____________________________ test_nonint_unicode ______________________________[0m
+
+    def test_nonint_unicode():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (unicode)."""
+        # given
+>       given, expected = u'x.y.z', wcwidth.list_versions()[-1]
+[1m[31mE       TypeError: 'NoneType' object is not subscriptable[0m
+
+[1m[31mtests/test_ucslevel.py[0m:156: TypeError
+[31m[1m_______________________________ test_nonint_str ________________________________[0m
+
+    def test_nonint_str():
+        """wcwidth._wcmatch_version(u'x.y.z') returns latest (str)."""
+        # given
+>       given, expected = 'x.y.z', wcwidth.list_versions()[-1]
+[1m[31mE       TypeError: 'NoneType' object is not subscriptable[0m
+
+[1m[31mtests/test_ucslevel.py[0m:172: TypeError
+--------------------------------- JSON report ----------------------------------
+report saved to: report.json
+
+---------- coverage: platform linux, python 3.10.12-final-0 ----------
+Coverage HTML written to dir htmlcov
+
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_core.py::[1mtest_empty_string[0m - assert None == 0
+[31mFAILED[0m tests/test_core.py::[1mtest_hello_jp[0m - assert (None, None, ...ne, None, ...) == (2, 2, 2, 2, 2, 1, ...)
+[31mFAILED[0m tests/test_core.py::[1mtest_wcswidth_substr[0m - assert (None, None, ...ne, None, ...) == (2, 2, 2, 2, 2, 1, ...)
+[31mFAILED[0m tests/test_core.py::[1mtest_null_width_0[0m - assert (None, None, ...ne, None, ...) == (1, 1, 1, 0, 1, 1, ...)
+[31mFAILED[0m tests/test_core.py::[1mtest_control_c0_width_negative_1[0m - assert (None, None, None, None) == (-1, 1, 1, 1)
+[31mFAILED[0m tests/test_core.py::[1mtest_combining_width[0m - assert (None, None, None, None, None) == (1, 1, 0, 1, 1)
+[31mFAILED[0m tests/test_core.py::[1mtest_combining_cafe[0m - assert (None, None, None, None, None) == (1, 1, 1, 1, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_combining_enclosing[0m - assert (None, None) == (1, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_balinese_script[0m - assert (None, None, None, None) == (1, 1, 1, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_kr_jamo[0m - assert (None, None) == (2, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_kr_jamo_filler[0m - assert (None, None) == (2, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_devanagari_script[0m - assert (None, None, None, None) == (1, 0, 1, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_tamil_script[0m - assert (None, None, None, None) == (1, 0, 1, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_kannada_script[0m - assert (None, None, None, None) == (1, 0, 1, 0)
+[31mFAILED[0m tests/test_core.py::[1mtest_kannada_script_2[0m - assert (None, None, None, None) == (1, 0, 0, 1)
+[31mFAILED[0m tests/test_core.py::[1mtest_zero_wide_conflict[0m - AssertionError: assert None == 2
+[31mFAILED[0m tests/test_emojis.py::[1mtest_unfinished_zwj_sequence[0m - assert (None, None, None) == (2, 0, 0)
+[31mFAILED[0m tests/test_emojis.py::[1mtest_non_recommended_zwj_sequence[0m - assert (None, None, None) == (2, 0, 0)
+[31mFAILED[0m tests/test_emojis.py::[1mtest_another_emoji_zwj_sequence[0m - assert (None, None, None, None, None) == (1, 0, 0, 1, 0)
+[31mFAILED[0m tests/test_emojis.py::[1mtest_longer_emoji_zwj_sequence[0m - assert (None, None, ...ne, None, ...) == (2, 0, 0, 1, 0, 0, ...)
+[31mFAILED[0m tests/test_emojis.py::[1mtest_recommended_emoji_zwj_sequences[0m - AssertionError: assert [{'expected_w...u200d👦'}, ...] == []
+[31mFAILED[0m tests/test_emojis.py::[1mtest_recommended_variation_16_sequences[0m - AssertionError: assert [{'expected_w...': '3️'}, ...] == []
+[31mFAILED[0m tests/test_emojis.py::[1mtest_unicode_9_vs16[0m - assert (None, None) == (1, 0)
+[31mFAILED[0m tests/test_emojis.py::[1mtest_unicode_8_vs16[0m - assert (None, None) == (1, 0)
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_latest[0m - TypeError: 'NoneType' object is not subscriptable
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_exact_410_str[0m - AssertionError: assert None == '4.1.0'
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_exact_410_unicode[0m - AssertionError: assert None == '4.1.0'
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_505_str[0m - AssertionError: assert None == '5.0.0'
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_505_unicode[0m - AssertionError: assert None == '5.0.0'
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_lowint40_str[0m - Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emi...
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_lowint40_unicode[0m - Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emi...
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_800_str[0m - AssertionError: assert None == '8.0.0'
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_800_unicode[0m - AssertionError: assert None == '8.0.0'
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_999_str[0m - TypeError: 'NoneType' object is not subscriptable
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nearest_999_unicode[0m - TypeError: 'NoneType' object is not subscriptable
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nonint_unicode[0m - TypeError: 'NoneType' object is not subscriptable
+[31mFAILED[0m tests/test_ucslevel.py::[1mtest_nonint_str[0m - TypeError: 'NoneType' object is not subscriptable
+[31m=================== [31m[1m37 failed[0m, [32m1 passed[0m, [33m1 skipped[0m[31m in 0.93s[0m[31m ====================[0m

@@ -1,0 +1,2819 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands tornado - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-tornado" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands tornado
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autoreload_testpyautoreloadtesttest_reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      autoreload_test.py::AutoreloadTest::test_reload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoreload_testpyautoreloadtesttest_reload_wrapper_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      autoreload_test.py::AutoreloadTest::test_reload_wrapper_args
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoreload_testpyautoreloadtesttest_reload_wrapper_preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      autoreload_test.py::AutoreloadTest::test_reload_wrapper_preservation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoreload_testpyautoreloadtesttest_reload_wrapper_until_success" class="md-nav__link">
+    <span class="md-ellipsis">
+      autoreload_test.py::AutoreloadTest::test_reload_wrapper_until_success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape_testpyescapetestcasetest_linkify" class="md-nav__link">
+    <span class="md-ellipsis">
+      escape_test.py::EscapeTestCase::test_linkify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape_testpyescapetestcasetest_recursive_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      escape_test.py::EscapeTestCase::test_recursive_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape_testpyescapetestcasetest_url_escape_unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      escape_test.py::EscapeTestCase::test_url_escape_unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_testpyimporttesttest_import_everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      import_test.py::ImportTest::test_import_everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_testpyimporttesttest_lazy_import" class="md-nav__link">
+    <span class="md-ellipsis">
+      import_test.py::ImportTest::test_lazy_import
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpytranslationloadertesttest_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::TranslationLoaderTest::test_csv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpytranslationloadertesttest_csv_bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::TranslationLoaderTest::test_csv_bom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpytranslationloadertesttest_gettext" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::TranslationLoaderTest::test_gettext
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpyenglishtesttest_format_date" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::EnglishTest::test_format_date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpyenglishtesttest_format_day" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::EnglishTest::test_format_day
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpyenglishtesttest_friendly_number" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::EnglishTest::test_friendly_number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale_testpyenglishtesttest_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      locale_test.py::EnglishTest::test_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpylogformattertesttest_basic_logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LogFormatterTest::test_basic_logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpylogformattertesttest_bytes_exception_logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LogFormatterTest::test_bytes_exception_logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpylogformattertesttest_bytes_logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LogFormatterTest::test_bytes_logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpylogformattertesttest_unicode_logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LogFormatterTest::test_unicode_logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpylogformattertesttest_utf8_logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LogFormatterTest::test_utf8_logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyenableprettyloggingtesttest_log_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::EnablePrettyLoggingTest::test_log_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyenableprettyloggingtesttest_log_file_with_timed_rotating" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::EnablePrettyLoggingTest::test_log_file_with_timed_rotating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyenableprettyloggingtesttest_wrong_rotate_mode_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::EnablePrettyLoggingTest::test_wrong_rotate_mode_value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyloggingoptiontesttest_disable_code_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LoggingOptionTest::test_disable_code_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyloggingoptiontesttest_disable_code_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LoggingOptionTest::test_disable_code_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyloggingoptiontesttest_disable_command_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LoggingOptionTest::test_disable_command_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyloggingoptiontesttest_disable_command_line_case_insensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LoggingOptionTest::test_disable_command_line_case_insensitive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyloggingoptiontesttest_disable_override" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LoggingOptionTest::test_disable_override
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_testpyloggingoptiontesttest_tornado_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_test.py::LoggingOptionTest::test_tornado_default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_config_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_config_args
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_config_class" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_config_class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_config_class_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_config_class_args
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_config_inner_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_config_inner_level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_config_multi_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_config_multi_level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_config_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_config_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyconfigurabletesttest_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ConfigurableTest::test_default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyargreplacertesttest_keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ArgReplacerTest::test_keyword
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyargreplacertesttest_omitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ArgReplacerTest::test_omitted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util_testpyargreplacertesttest_position" class="md-nav__link">
+    <span class="md-ellipsis">
+      util_test.py::ArgReplacerTest::test_position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-tornado"><strong>OpenHands</strong>: tornado</h1>
+<h2 id="pytest-summary-for-test-test">Pytest Summary for test <code>test</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">21</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">62</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">62</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="autoreload_testpyautoreloadtesttest_reload">autoreload_test.py::AutoreloadTest::test_reload</h3>
+<details><summary> <pre>autoreload_test.py::AutoreloadTest::test_reload</pre></summary><pre>
+self = <tornado.test.autoreload_test.AutoreloadTest testMethod=test_reload>
+
+        def test_reload(self):
+            main = """\
+    import sys
+
+    # In module mode, the path is set to the parent directory and we can import testapp.
+    try:
+        import testapp
+    except ImportError:
+        print("import testapp failed")
+    else:
+        print("import testapp succeeded")
+
+    spec = getattr(sys.modules[__name__], '__spec__', None)
+    print(f"Starting {__name__=}, __spec__.name={getattr(spec, 'name', None)}")
+    exec(open("run_twice_magic.py").read())
+    """
+
+            # Create temporary test application
+            self.write_files(
+                {
+                    "testapp": {
+                        "__init__.py": "",
+                        "__main__.py": main,
+                    },
+                }
+            )
+
+            # The autoreload wrapper should support all the same modes as the python interpreter.
+            # The wrapper itself should have no effect on this test so we try all modes with and
+            # without it.
+            for wrapper in [False, True]:
+                with self.subTest(wrapper=wrapper):
+                    with self.subTest(mode="module"):
+                        if wrapper:
+                            base_args = [sys.executable, "-m", "tornado.autoreload"]
+                        else:
+                            base_args = [sys.executable]
+                        # In module mode, the path is set to the parent directory and we can import
+                        # testapp. Also, the __spec__.name is set to the fully qualified module name.
+>                       out = self.run_subprocess(base_args + ["-m", "testapp"])
+
+tornado/test/autoreload_test.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/autoreload_test.py:100: in run_subprocess
+    self.assertEqual(p.returncode, 0)
+E   AssertionError: 1 != 0
+</pre>
+</details>
+<h3 id="autoreload_testpyautoreloadtesttest_reload_wrapper_args">autoreload_test.py::AutoreloadTest::test_reload_wrapper_args</h3>
+<details><summary> <pre>autoreload_test.py::AutoreloadTest::test_reload_wrapper_args</pre></summary><pre>
+self = <tornado.test.autoreload_test.AutoreloadTest testMethod=test_reload_wrapper_args>
+
+        def test_reload_wrapper_args(self):
+            main = """\
+    import os
+    import sys
+
+    print(os.path.basename(sys.argv[0]))
+    print(f'argv={sys.argv[1:]}')
+    exec(open("run_twice_magic.py").read())
+    """
+            # Create temporary test application
+            self.write_files({"main.py": main})
+
+            # Make sure the tornado module under test is available to the test
+            # application
+            out = self.run_subprocess(
+                [
+                    sys.executable,
+                    "-m",
+                    "tornado.autoreload",
+                    "main.py",
+                    "arg1",
+                    "--arg2",
+                    "-m",
+                    "arg3",
+                ],
+            )
+
+>           self.assertEqual(out, "main.py\nargv=['arg1', '--arg2', '-m', 'arg3']\n" * 2)
+E           AssertionError: '' != "main.py\nargv=['arg1', '--arg2', '-m', '[52 chars]']\n"
+E           + main.py
+E           + argv=['arg1', '--arg2', '-m', 'arg3']
+E           + main.py
+E           + argv=['arg1', '--arg2', '-m', 'arg3']
+
+tornado/test/autoreload_test.py:242: AssertionError
+</pre>
+</details>
+<h3 id="autoreload_testpyautoreloadtesttest_reload_wrapper_preservation">autoreload_test.py::AutoreloadTest::test_reload_wrapper_preservation</h3>
+<details><summary> <pre>autoreload_test.py::AutoreloadTest::test_reload_wrapper_preservation</pre></summary><pre>
+self = <tornado.test.autoreload_test.AutoreloadTest testMethod=test_reload_wrapper_preservation>
+
+        def test_reload_wrapper_preservation(self):
+            # This test verifies that when `python -m tornado.autoreload`
+            # is used on an application that also has an internal
+            # autoreload, the reload wrapper is preserved on restart.
+            main = """\
+    import sys
+
+    # This import will fail if path is not set up correctly
+    import testapp
+
+    if 'tornado.autoreload' not in sys.modules:
+        raise Exception('started without autoreload wrapper')
+
+    print('Starting')
+    exec(open("run_twice_magic.py").read())
+    """
+
+            self.write_files(
+                {
+                    "testapp": {
+                        "__init__.py": "",
+                        "__main__.py": main,
+                    },
+                }
+            )
+
+            out = self.run_subprocess(
+                [sys.executable, "-m", "tornado.autoreload", "-m", "testapp"]
+            )
+>           self.assertEqual(out, "Starting\n" * 2)
+E           AssertionError: '' != 'Starting\nStarting\n'
+E           + Starting
+E           + Starting
+
+tornado/test/autoreload_test.py:213: AssertionError
+</pre>
+</details>
+<h3 id="autoreload_testpyautoreloadtesttest_reload_wrapper_until_success">autoreload_test.py::AutoreloadTest::test_reload_wrapper_until_success</h3>
+<details><summary> <pre>autoreload_test.py::AutoreloadTest::test_reload_wrapper_until_success</pre></summary><pre>
+self = <tornado.test.autoreload_test.AutoreloadTest testMethod=test_reload_wrapper_until_success>
+
+        def test_reload_wrapper_until_success(self):
+            main = """\
+    import os
+    import sys
+
+    if "TESTAPP_STARTED" in os.environ:
+        print("exiting cleanly")
+        sys.exit(0)
+    else:
+        print("reloading")
+        exec(open("run_twice_magic.py").read())
+    """
+
+            # Create temporary test application
+            self.write_files({"main.py": main})
+
+            out = self.run_subprocess(
+                [sys.executable, "-m", "tornado.autoreload", "--until-success", "main.py"]
+            )
+
+>           self.assertEqual(out, "reloading\nexiting cleanly\n")
+E           AssertionError: '' != 'reloading\nexiting cleanly\n'
+E           + reloading
+E           + exiting cleanly
+
+tornado/test/autoreload_test.py:264: AssertionError
+</pre>
+</details>
+<h3 id="escape_testpyescapetestcasetest_linkify">escape_test.py::EscapeTestCase::test_linkify</h3>
+<details><summary> <pre>escape_test.py::EscapeTestCase::test_linkify</pre></summary><pre>
+self = <tornado.test.escape_test.EscapeTestCase testMethod=test_linkify>
+
+    def test_linkify(self):
+        for text, kwargs, html in linkify_tests:
+            linked = tornado.escape.linkify(text, **kwargs)
+>           self.assertEqual(linked, html)
+E           AssertionError: 'A <a[101 chars]at/exceedsthelenglimit.html">http://reallylong.com/link</a>' != 'A <a[101 chars]at/exceedsthelenglimit.html">http://reallylong.com/link...</a>'
+E           - A <a href="http://reallylong.com/link/that/exceedsthelenglimit.html" title="http://reallylong.com/link/that/exceedsthelenglimit.html">http://reallylong.com/link</a>
+E           + A <a href="http://reallylong.com/link/that/exceedsthelenglimit.html" title="http://reallylong.com/link/that/exceedsthelenglimit.html">http://reallylong.com/link...</a>
+E           ?                                                                                                                                                                 +++
+
+tornado/test/escape_test.py:218: AssertionError
+</pre>
+</details>
+<h3 id="escape_testpyescapetestcasetest_recursive_unicode">escape_test.py::EscapeTestCase::test_recursive_unicode</h3>
+<details><summary> <pre>escape_test.py::EscapeTestCase::test_recursive_unicode</pre></summary><pre>
+self = <tornado.test.escape_test.EscapeTestCase testMethod=test_recursive_unicode>
+
+    def test_recursive_unicode(self):
+        tests = {
+            "dict": {b"foo": b"bar"},
+            "list": [b"foo", b"bar"],
+            "tuple": (b"foo", b"bar"),
+            "bytes": b"foo",
+        }
+        self.assertEqual(recursive_unicode(tests["dict"]), {"foo": "bar"})
+        self.assertEqual(recursive_unicode(tests["list"]), ["foo", "bar"])
+>       self.assertEqual(recursive_unicode(tests["tuple"]), ("foo", "bar"))
+E       AssertionError: ['foo', 'bar'] != ('foo', 'bar')
+
+tornado/test/escape_test.py:323: AssertionError
+</pre>
+</details>
+<h3 id="escape_testpyescapetestcasetest_url_escape_unicode">escape_test.py::EscapeTestCase::test_url_escape_unicode</h3>
+<details><summary> <pre>escape_test.py::EscapeTestCase::test_url_escape_unicode</pre></summary><pre>
+self = <tornado.test.escape_test.EscapeTestCase testMethod=test_url_escape_unicode>
+
+    def test_url_escape_unicode(self):
+        tests = [
+            # byte strings are passed through as-is
+            ("\u00e9".encode("utf8"), "%C3%A9"),
+            ("\u00e9".encode("latin1"), "%E9"),
+            # unicode strings become utf8
+            ("\u00e9", "%C3%A9"),
+        ]  # type: List[Tuple[Union[str, bytes], str]]
+        for unescaped, escaped in tests:
+>           self.assertEqual(url_escape(unescaped), escaped)
+
+tornado/test/escape_test.py:256: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = b'\xe9', plus = True
+
+    def url_escape(value: Union[str, bytes], plus: bool=True) -> str:
+        """Returns a URL-encoded version of the given value.
+
+        Equivalent to either `urllib.parse.quote_plus` or `urllib.parse.quote` depending on the ``plus``
+        argument.
+
+        If ``plus`` is true (the default), spaces will be represented as ``+`` and slashes will be
+        represented as ``%2F``.  This is appropriate for query strings. If ``plus`` is false, spaces
+        will be represented as ``%20`` and slashes are left as-is. This is appropriate for the path
+        component of a URL. Note that the default of ``plus=True`` is effectively the
+        reverse of Python's urllib module.
+
+        .. versionadded:: 3.1
+            The ``plus`` argument
+        """
+        quote = urllib.parse.quote_plus if plus else urllib.parse.quote
+        if isinstance(value, bytes):
+>           value = value.decode('utf-8')
+E           UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 0: unexpected end of data
+
+tornado/escape.py:111: UnicodeDecodeError
+</pre>
+</details>
+<h3 id="import_testpyimporttesttest_import_everything">import_test.py::ImportTest::test_import_everything</h3>
+<details><summary> <pre>import_test.py::ImportTest::test_import_everything</pre></summary><pre>
+self = <tornado.test.import_test.ImportTest testMethod=test_import_everything>
+
+    def test_import_everything(self):
+        # Test that all Tornado modules can be imported without side effects,
+        # specifically without initializing the default asyncio event loop.
+        # Since we can't tell which modules may have already beein imported
+        # in our process, do it in a subprocess for a clean slate.
+        proc = subprocess.Popen([sys.executable], stdin=subprocess.PIPE)
+        proc.communicate(_import_everything)
+>       self.assertEqual(proc.returncode, 0)
+E       AssertionError: 1 != 0
+
+tornado/test/import_test.py:50: AssertionError
+</pre>
+</details>
+<h3 id="import_testpyimporttesttest_lazy_import">import_test.py::ImportTest::test_lazy_import</h3>
+<details><summary> <pre>import_test.py::ImportTest::test_lazy_import</pre></summary><pre>
+self = <tornado.test.import_test.ImportTest testMethod=test_lazy_import>
+
+    def test_lazy_import(self):
+        # Test that submodules can be referenced lazily after "import tornado"
+        proc = subprocess.Popen([sys.executable], stdin=subprocess.PIPE)
+        proc.communicate(_import_lazy)
+>       self.assertEqual(proc.returncode, 0)
+E       AssertionError: 1 != 0
+
+tornado/test/import_test.py:56: AssertionError
+</pre>
+</details>
+<h3 id="locale_testpytranslationloadertesttest_csv">locale_test.py::TranslationLoaderTest::test_csv</h3>
+<details><summary> <pre>locale_test.py::TranslationLoaderTest::test_csv</pre></summary><pre>
+self = <tornado.test.locale_test.TranslationLoaderTest testMethod=test_csv>
+
+    def test_csv(self):
+        tornado.locale.load_translations(
+            os.path.join(os.path.dirname(__file__), "csv_translations")
+        )
+        locale = tornado.locale.get("fr_FR")
+>       self.assertTrue(isinstance(locale, tornado.locale.CSVLocale))
+E       AssertionError: False is not true
+
+tornado/test/locale_test.py:35: AssertionError
+</pre>
+</details>
+<h3 id="locale_testpytranslationloadertesttest_csv_bom">locale_test.py::TranslationLoaderTest::test_csv_bom</h3>
+<details><summary> <pre>locale_test.py::TranslationLoaderTest::test_csv_bom</pre></summary><pre>
+self = <tornado.test.locale_test.TranslationLoaderTest testMethod=test_csv_bom>
+
+    def test_csv_bom(self):
+        with open(
+            os.path.join(os.path.dirname(__file__), "csv_translations", "fr_FR.csv"),
+            "rb",
+        ) as f:
+            char_data = to_unicode(f.read())
+        # Re-encode our input data (which is utf-8 without BOM) in
+        # encodings that use the BOM and ensure that we can still load
+        # it. Note that utf-16-le and utf-16-be do not write a BOM,
+        # so we only test whichver variant is native to our platform.
+        for encoding in ["utf-8-sig", "utf-16"]:
+            tmpdir = tempfile.mkdtemp()
+            try:
+                with open(os.path.join(tmpdir, "fr_FR.csv"), "wb") as f:
+                    f.write(char_data.encode(encoding))
+                tornado.locale.load_translations(tmpdir)
+                locale = tornado.locale.get("fr_FR")
+>               self.assertIsInstance(locale, tornado.locale.CSVLocale)
+E               AssertionError: None is not an instance of <class 'tornado.locale.CSVLocale'>
+
+tornado/test/locale_test.py:55: AssertionError
+</pre>
+</details>
+<h3 id="locale_testpytranslationloadertesttest_gettext">locale_test.py::TranslationLoaderTest::test_gettext</h3>
+<details><summary> <pre>locale_test.py::TranslationLoaderTest::test_gettext</pre></summary><pre>
+self = <tornado.test.locale_test.TranslationLoaderTest testMethod=test_gettext>
+
+    def test_gettext(self):
+        tornado.locale.load_gettext_translations(
+            os.path.join(os.path.dirname(__file__), "gettext_translations"),
+            "tornado_test",
+        )
+        locale = tornado.locale.get("fr_FR")
+>       self.assertTrue(isinstance(locale, tornado.locale.GettextLocale))
+E       AssertionError: False is not true
+
+tornado/test/locale_test.py:66: AssertionError
+</pre>
+</details>
+<h3 id="locale_testpyenglishtesttest_format_date">locale_test.py::EnglishTest::test_format_date</h3>
+<details><summary> <pre>locale_test.py::EnglishTest::test_format_date</pre></summary><pre>
+self = <tornado.test.locale_test.EnglishTest testMethod=test_format_date>
+
+    def test_format_date(self):
+        locale = tornado.locale.get("en_US")
+        date = datetime.datetime(2013, 4, 28, 18, 35)
+        self.assertEqual(
+>           locale.format_date(date, full_format=True), "April 28, 2013 at 6:35 pm"
+        )
+E       AttributeError: 'NoneType' object has no attribute 'format_date'
+
+tornado/test/locale_test.py:91: AttributeError
+</pre>
+</details>
+<h3 id="locale_testpyenglishtesttest_format_day">locale_test.py::EnglishTest::test_format_day</h3>
+<details><summary> <pre>locale_test.py::EnglishTest::test_format_day</pre></summary><pre>
+self = <tornado.test.locale_test.EnglishTest testMethod=test_format_day>
+
+    def test_format_day(self):
+        locale = tornado.locale.get("en_US")
+        date = datetime.datetime(2013, 4, 28, 18, 35)
+>       self.assertEqual(locale.format_day(date=date, dow=True), "Sunday, April 28")
+E       AttributeError: 'NoneType' object has no attribute 'format_day'
+
+tornado/test/locale_test.py:158: AttributeError
+</pre>
+</details>
+<h3 id="locale_testpyenglishtesttest_friendly_number">locale_test.py::EnglishTest::test_friendly_number</h3>
+<details><summary> <pre>locale_test.py::EnglishTest::test_friendly_number</pre></summary><pre>
+self = <tornado.test.locale_test.EnglishTest testMethod=test_friendly_number>
+
+    def test_friendly_number(self):
+        locale = tornado.locale.get("en_US")
+>       self.assertEqual(locale.friendly_number(1000000), "1,000,000")
+E       AttributeError: 'NoneType' object has no attribute 'friendly_number'
+
+tornado/test/locale_test.py:146: AttributeError
+</pre>
+</details>
+<h3 id="locale_testpyenglishtesttest_list">locale_test.py::EnglishTest::test_list</h3>
+<details><summary> <pre>locale_test.py::EnglishTest::test_list</pre></summary><pre>
+self = <tornado.test.locale_test.EnglishTest testMethod=test_list>
+
+    def test_list(self):
+        locale = tornado.locale.get("en_US")
+>       self.assertEqual(locale.list([]), "")
+E       AttributeError: 'NoneType' object has no attribute 'list'
+
+tornado/test/locale_test.py:150: AttributeError
+</pre>
+</details>
+<h3 id="log_testpylogformattertesttest_basic_logging">log_test.py::LogFormatterTest::test_basic_logging</h3>
+<details><summary> <pre>log_test.py::LogFormatterTest::test_basic_logging</pre></summary><pre>
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_basic_logging>
+
+    def test_basic_logging(self):
+        self.logger.error("foo")
+>       self.assertEqual(self.get_output(), b"foo")
+
+tornado/test/log_test.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_basic_logging>
+
+    def get_output(self):
+        with open(self.filename, "rb") as f:
+            line = f.read().strip()
+            m = LogFormatterTest.LINE_RE.match(line)
+            if m:
+                return m.group(1)
+            else:
+>               raise Exception("output didn't match regex: %r" % line)
+E               Exception: output didn't match regex: b'foo'
+
+tornado/test/log_test.py:78: Exception
+</pre>
+</details>
+<h3 id="log_testpylogformattertesttest_bytes_exception_logging">log_test.py::LogFormatterTest::test_bytes_exception_logging</h3>
+<details><summary> <pre>log_test.py::LogFormatterTest::test_bytes_exception_logging</pre></summary><pre>
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_bytes_exception_logging>
+
+    def test_bytes_exception_logging(self):
+        try:
+            raise Exception(b"\xe9")
+        except Exception:
+            self.logger.exception("caught exception")
+        # This will be "Exception: \xe9" on python 2 or
+        # "Exception: b'\xe9'" on python 3.
+>       output = self.get_output()
+
+tornado/test/log_test.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_bytes_exception_logging>
+
+    def get_output(self):
+        with open(self.filename, "rb") as f:
+            line = f.read().strip()
+            m = LogFormatterTest.LINE_RE.match(line)
+            if m:
+                return m.group(1)
+            else:
+>               raise Exception("output didn't match regex: %r" % line)
+E               Exception: output didn't match regex: b'caught exception\nTraceback (most recent call last):\n  File "/testbed/tornado/test/log_test.py", line 105, in test_bytes_exception_logging\n    raise Exception(b"\\xe9")\nException: b\'\\xe9\''
+
+tornado/test/log_test.py:78: Exception
+</pre>
+</details>
+<h3 id="log_testpylogformattertesttest_bytes_logging">log_test.py::LogFormatterTest::test_bytes_logging</h3>
+<details><summary> <pre>log_test.py::LogFormatterTest::test_bytes_logging</pre></summary><pre>
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_bytes_logging>
+
+    def test_bytes_logging(self):
+        with ignore_bytes_warning():
+            # This will be "\xe9" on python 2 or "b'\xe9'" on python 3
+            self.logger.error(b"\xe9")
+>           self.assertEqual(self.get_output(), utf8(repr(b"\xe9")))
+
+tornado/test/log_test.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_bytes_logging>
+
+    def get_output(self):
+        with open(self.filename, "rb") as f:
+            line = f.read().strip()
+            m = LogFormatterTest.LINE_RE.match(line)
+            if m:
+                return m.group(1)
+            else:
+>               raise Exception("output didn't match regex: %r" % line)
+E               Exception: output didn't match regex: b"b'\\xe9'"
+
+tornado/test/log_test.py:78: Exception
+</pre>
+</details>
+<h3 id="log_testpylogformattertesttest_unicode_logging">log_test.py::LogFormatterTest::test_unicode_logging</h3>
+<details><summary> <pre>log_test.py::LogFormatterTest::test_unicode_logging</pre></summary><pre>
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_unicode_logging>
+
+    def test_unicode_logging(self):
+        self.logger.error("\u00e9")
+>       self.assertEqual(self.get_output(), utf8("\u00e9"))
+
+tornado/test/log_test.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_unicode_logging>
+
+    def get_output(self):
+        with open(self.filename, "rb") as f:
+            line = f.read().strip()
+            m = LogFormatterTest.LINE_RE.match(line)
+            if m:
+                return m.group(1)
+            else:
+>               raise Exception("output didn't match regex: %r" % line)
+E               Exception: output didn't match regex: b'\xc3\xa9'
+
+tornado/test/log_test.py:78: Exception
+</pre>
+</details>
+<h3 id="log_testpylogformattertesttest_utf8_logging">log_test.py::LogFormatterTest::test_utf8_logging</h3>
+<details><summary> <pre>log_test.py::LogFormatterTest::test_utf8_logging</pre></summary><pre>
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_utf8_logging>
+
+    def test_utf8_logging(self):
+        with ignore_bytes_warning():
+            self.logger.error("\u00e9".encode("utf8"))
+        if issubclass(bytes, basestring_type):
+            # on python 2, utf8 byte strings (and by extension ascii byte
+            # strings) are passed through as-is.
+            self.assertEqual(self.get_output(), utf8("\u00e9"))
+        else:
+            # on python 3, byte strings always get repr'd even if
+            # they're ascii-only, so this degenerates into another
+            # copy of test_bytes_logging.
+>           self.assertEqual(self.get_output(), utf8(repr(utf8("\u00e9"))))
+
+tornado/test/log_test.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.test.log_test.LogFormatterTest testMethod=test_utf8_logging>
+
+    def get_output(self):
+        with open(self.filename, "rb") as f:
+            line = f.read().strip()
+            m = LogFormatterTest.LINE_RE.match(line)
+            if m:
+                return m.group(1)
+            else:
+>               raise Exception("output didn't match regex: %r" % line)
+E               Exception: output didn't match regex: b"b'\\xc3\\xa9'"
+
+tornado/test/log_test.py:78: Exception
+</pre>
+</details>
+<h3 id="log_testpyenableprettyloggingtesttest_log_file">log_test.py::EnablePrettyLoggingTest::test_log_file</h3>
+<details><summary> <pre>log_test.py::EnablePrettyLoggingTest::test_log_file</pre></summary><pre>
+self = <tornado.test.log_test.EnablePrettyLoggingTest testMethod=test_log_file>
+
+    def test_log_file(self):
+        tmpdir = tempfile.mkdtemp()
+        try:
+>           self.options.log_file_prefix = tmpdir + "/test_log"
+
+tornado/test/log_test.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.options.OptionParser object at 0x7f5fffd66da0>
+name = 'log_file_prefix', value = '/tmp/tmpy7v1kp8y/test_log'
+
+    def __setattr__(self, name: str, value: Any) -> None:
+        name = self._normalize_name(name)
+        if isinstance(self._options.get(name), _Option):
+            return self._options[name].set(value)
+>       raise AttributeError('Unrecognized option %r' % name)
+E       AttributeError: Unrecognized option 'log_file_prefix'
+
+tornado/options.py:131: AttributeError
+</pre>
+</details>
+<h3 id="log_testpyenableprettyloggingtesttest_log_file_with_timed_rotating">log_test.py::EnablePrettyLoggingTest::test_log_file_with_timed_rotating</h3>
+<details><summary> <pre>log_test.py::EnablePrettyLoggingTest::test_log_file_with_timed_rotating</pre></summary><pre>
+self = <tornado.test.log_test.EnablePrettyLoggingTest testMethod=test_log_file_with_timed_rotating>
+
+    def test_log_file_with_timed_rotating(self):
+        tmpdir = tempfile.mkdtemp()
+        try:
+>           self.options.log_file_prefix = tmpdir + "/test_log"
+
+tornado/test/log_test.py:151: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.options.OptionParser object at 0x7f5ffec4b0d0>
+name = 'log_file_prefix', value = '/tmp/tmp65gxdh_r/test_log'
+
+    def __setattr__(self, name: str, value: Any) -> None:
+        name = self._normalize_name(name)
+        if isinstance(self._options.get(name), _Option):
+            return self._options[name].set(value)
+>       raise AttributeError('Unrecognized option %r' % name)
+E       AttributeError: Unrecognized option 'log_file_prefix'
+
+tornado/options.py:131: AttributeError
+</pre>
+</details>
+<h3 id="log_testpyenableprettyloggingtesttest_wrong_rotate_mode_value">log_test.py::EnablePrettyLoggingTest::test_wrong_rotate_mode_value</h3>
+<details><summary> <pre>log_test.py::EnablePrettyLoggingTest::test_wrong_rotate_mode_value</pre></summary><pre>
+self = <tornado.test.log_test.EnablePrettyLoggingTest testMethod=test_wrong_rotate_mode_value>
+
+    def test_wrong_rotate_mode_value(self):
+        try:
+>           self.options.log_file_prefix = "some_path"
+
+tornado/test/log_test.py:170: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.options.OptionParser object at 0x7f5fffb96fe0>
+name = 'log_file_prefix', value = 'some_path'
+
+    def __setattr__(self, name: str, value: Any) -> None:
+        name = self._normalize_name(name)
+        if isinstance(self._options.get(name), _Option):
+            return self._options[name].set(value)
+>       raise AttributeError('Unrecognized option %r' % name)
+E       AttributeError: Unrecognized option 'log_file_prefix'
+
+tornado/options.py:131: AttributeError
+</pre>
+</details>
+<h3 id="log_testpyloggingoptiontesttest_disable_code_none">log_test.py::LoggingOptionTest::test_disable_code_none</h3>
+<details><summary> <pre>log_test.py::LoggingOptionTest::test_disable_code_none</pre></summary><pre>
+self = <tornado.test.log_test.LoggingOptionTest testMethod=test_disable_code_none>
+
+    def test_disable_code_none(self):
+        self.assertFalse(
+>           self.logs_present("options.logging = None; parse_command_line()")
+        )
+
+tornado/test/log_test.py:224: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/log_test.py:202: in logs_present
+    self.assertEqual(proc.returncode, 0, "process failed: %r" % stdout)
+E   AssertionError: 1 != 0 : process failed: b'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "/testbed/tornado/options.py", line 131, in __setattr__\n    raise AttributeError(\'Unrecognized option %r\' % name)\nAttributeError: Unrecognized option \'logging\'\n'
+</pre>
+</details>
+<h3 id="log_testpyloggingoptiontesttest_disable_code_string">log_test.py::LoggingOptionTest::test_disable_code_string</h3>
+<details><summary> <pre>log_test.py::LoggingOptionTest::test_disable_code_string</pre></summary><pre>
+self = <tornado.test.log_test.LoggingOptionTest testMethod=test_disable_code_string>
+
+    def test_disable_code_string(self):
+        self.assertFalse(
+>           self.logs_present('options.logging = "none"; parse_command_line()')
+        )
+
+tornado/test/log_test.py:219: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/log_test.py:202: in logs_present
+    self.assertEqual(proc.returncode, 0, "process failed: %r" % stdout)
+E   AssertionError: 1 != 0 : process failed: b'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "/testbed/tornado/options.py", line 131, in __setattr__\n    raise AttributeError(\'Unrecognized option %r\' % name)\nAttributeError: Unrecognized option \'logging\'\n'
+</pre>
+</details>
+<h3 id="log_testpyloggingoptiontesttest_disable_command_line">log_test.py::LoggingOptionTest::test_disable_command_line</h3>
+<details><summary> <pre>log_test.py::LoggingOptionTest::test_disable_command_line</pre></summary><pre>
+self = <tornado.test.log_test.LoggingOptionTest testMethod=test_disable_command_line>
+
+    def test_disable_command_line(self):
+>       self.assertFalse(self.logs_present("parse_command_line()", ["--logging=none"]))
+
+tornado/test/log_test.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/log_test.py:202: in logs_present
+    self.assertEqual(proc.returncode, 0, "process failed: %r" % stdout)
+E   AssertionError: 1 != 0 : process failed: b'Usage: -c [OPTIONS]\n\nOptions:\n\n\n/testbed/tornado/options.py options:\n\n  --help                           show this help information\n\nTraceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "/testbed/tornado/options.py", line 473, in parse_command_line\n    return options.parse_command_line(args, final=final)\n  File "/testbed/tornado/options.py", line 289, in parse_command_line\n    raise Error(\'Unrecognized command line option: %r\' % name)\ntornado.options.Error: Unrecognized command line option: \'logging\'\n'
+</pre>
+</details>
+<h3 id="log_testpyloggingoptiontesttest_disable_command_line_case_insensitive">log_test.py::LoggingOptionTest::test_disable_command_line_case_insensitive</h3>
+<details><summary> <pre>log_test.py::LoggingOptionTest::test_disable_command_line_case_insensitive</pre></summary><pre>
+self = <tornado.test.log_test.LoggingOptionTest testMethod=test_disable_command_line_case_insensitive>
+
+    def test_disable_command_line_case_insensitive(self):
+>       self.assertFalse(self.logs_present("parse_command_line()", ["--logging=None"]))
+
+tornado/test/log_test.py:215: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/log_test.py:202: in logs_present
+    self.assertEqual(proc.returncode, 0, "process failed: %r" % stdout)
+E   AssertionError: 1 != 0 : process failed: b'Usage: -c [OPTIONS]\n\nOptions:\n\n\n/testbed/tornado/options.py options:\n\n  --help                           show this help information\n\nTraceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "/testbed/tornado/options.py", line 473, in parse_command_line\n    return options.parse_command_line(args, final=final)\n  File "/testbed/tornado/options.py", line 289, in parse_command_line\n    raise Error(\'Unrecognized command line option: %r\' % name)\ntornado.options.Error: Unrecognized command line option: \'logging\'\n'
+</pre>
+</details>
+<h3 id="log_testpyloggingoptiontesttest_disable_override">log_test.py::LoggingOptionTest::test_disable_override</h3>
+<details><summary> <pre>log_test.py::LoggingOptionTest::test_disable_override</pre></summary><pre>
+self = <tornado.test.log_test.LoggingOptionTest testMethod=test_disable_override>
+
+    def test_disable_override(self):
+        # command line trumps code defaults
+        self.assertTrue(
+>           self.logs_present(
+                "options.logging = None; parse_command_line()", ["--logging=info"]
+            )
+        )
+
+tornado/test/log_test.py:230: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/log_test.py:202: in logs_present
+    self.assertEqual(proc.returncode, 0, "process failed: %r" % stdout)
+E   AssertionError: 1 != 0 : process failed: b'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "/testbed/tornado/options.py", line 131, in __setattr__\n    raise AttributeError(\'Unrecognized option %r\' % name)\nAttributeError: Unrecognized option \'logging\'\n'
+</pre>
+</details>
+<h3 id="log_testpyloggingoptiontesttest_tornado_default">log_test.py::LoggingOptionTest::test_tornado_default</h3>
+<details><summary> <pre>log_test.py::LoggingOptionTest::test_tornado_default</pre></summary><pre>
+self = <tornado.test.log_test.LoggingOptionTest testMethod=test_tornado_default>
+
+    def test_tornado_default(self):
+>       self.assertTrue(self.logs_present("parse_command_line()"))
+
+tornado/test/log_test.py:209: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tornado/test/log_test.py:202: in logs_present
+    self.assertEqual(proc.returncode, 0, "process failed: %r" % stdout)
+E   AssertionError: 1 != 0 : process failed: b'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "/testbed/tornado/options.py", line 473, in parse_command_line\n    return options.parse_command_line(args, final=final)\n  File "/testbed/tornado/options.py", line 299, in parse_command_line\n    self.run_parse_callbacks()\n  File "/testbed/tornado/options.py", line 125, in __getattr__\n    raise AttributeError(\'Unrecognized option %r\' % name)\nAttributeError: Unrecognized option \'run_parse_callbacks\'. Did you mean: \'_parse_callbacks\'?\n'
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_config_args">util_test.py::ConfigurableTest::test_config_args</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_config_args</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_config_args>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_config_class">util_test.py::ConfigurableTest::test_config_class</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_config_class</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_config_class>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_config_class_args">util_test.py::ConfigurableTest::test_config_class_args</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_config_class_args</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_config_class_args>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_config_inner_level">util_test.py::ConfigurableTest::test_config_inner_level</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_config_inner_level</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_config_inner_level>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_config_multi_level">util_test.py::ConfigurableTest::test_config_multi_level</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_config_multi_level</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_config_multi_level>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_config_str">util_test.py::ConfigurableTest::test_config_str</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_config_str</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_config_str>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyconfigurabletesttest_default">util_test.py::ConfigurableTest::test_default</h3>
+<details><summary> <pre>util_test.py::ConfigurableTest::test_default</pre></summary><pre>
+self = <tornado.test.util_test.ConfigurableTest testMethod=test_default>
+
+    def setUp(self):
+>       self.saved = TestConfigurable._save_configuration()
+E       AttributeError: type object 'TestConfigurable' has no attribute '_save_configuration'
+
+tornado/test/util_test.py:93: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyargreplacertesttest_keyword">util_test.py::ArgReplacerTest::test_keyword</h3>
+<details><summary> <pre>util_test.py::ArgReplacerTest::test_keyword</pre></summary><pre>
+self = <tornado.test.util_test.ArgReplacerTest testMethod=test_keyword>
+
+    def setUp(self):
+        def function(x, y, callback=None, z=None):
+            pass
+
+>       self.replacer = ArgReplacer(function, "callback")
+
+tornado/test/util_test.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.util.ArgReplacer object at 0x7f5ffebd2ef0>
+func = <function ArgReplacerTest.setUp.<locals>.function at 0x7f5ffe793250>
+name = 'callback'
+
+    def __init__(self, func: Callable, name: str) -> None:
+        self.name = name
+        try:
+>           self.arg_pos = self._getargnames(func).index(name)
+E           AttributeError: 'ArgReplacer' object has no attribute '_getargnames'
+
+tornado/util.py:257: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyargreplacertesttest_omitted">util_test.py::ArgReplacerTest::test_omitted</h3>
+<details><summary> <pre>util_test.py::ArgReplacerTest::test_omitted</pre></summary><pre>
+self = <tornado.test.util_test.ArgReplacerTest testMethod=test_omitted>
+
+    def setUp(self):
+        def function(x, y, callback=None, z=None):
+            pass
+
+>       self.replacer = ArgReplacer(function, "callback")
+
+tornado/test/util_test.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.util.ArgReplacer object at 0x7f5ffeb774c0>
+func = <function ArgReplacerTest.setUp.<locals>.function at 0x7f5ffe91f370>
+name = 'callback'
+
+    def __init__(self, func: Callable, name: str) -> None:
+        self.name = name
+        try:
+>           self.arg_pos = self._getargnames(func).index(name)
+E           AttributeError: 'ArgReplacer' object has no attribute '_getargnames'
+
+tornado/util.py:257: AttributeError
+</pre>
+</details>
+<h3 id="util_testpyargreplacertesttest_position">util_test.py::ArgReplacerTest::test_position</h3>
+<details><summary> <pre>util_test.py::ArgReplacerTest::test_position</pre></summary><pre>
+self = <tornado.test.util_test.ArgReplacerTest testMethod=test_position>
+
+    def setUp(self):
+        def function(x, y, callback=None, z=None):
+            pass
+
+>       self.replacer = ArgReplacer(function, "callback")
+
+tornado/test/util_test.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tornado.util.ArgReplacer object at 0x7f5ffff30130>
+func = <function ArgReplacerTest.setUp.<locals>.function at 0x7f5ffe91d900>
+name = 'callback'
+
+    def __init__(self, func: Callable, name: str) -> None:
+        self.name = name
+        try:
+>           self.arg_pos = self._getargnames(func).index(name)
+E           AttributeError: 'ArgReplacer' object has no attribute '_getargnames'
+
+tornado/util.py:257: AttributeError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/tornado/concurrent.py b/tornado/concurrent.py</span>
+<span class="gh">index b7e8218a..12c7c9f3 100644</span>
+<span class="gd">--- a/tornado/concurrent.py</span>
+<span class="gi">+++ b/tornado/concurrent.py</span>
+<span class="gu">@@ -26,7 +26,19 @@ Future = asyncio.Future</span>
+<span class="w"> </span>FUTURES = (futures.Future, Future)
+
+<span class="w"> </span>class DummyExecutor(futures.Executor):
+<span class="gd">-    if sys.version_info &gt;= (3, 9):</span>
+<span class="gi">+    def submit(self, fn, *args, **kwargs):</span>
+<span class="gi">+        future = Future()</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            result = fn(*args, **kwargs)</span>
+<span class="gi">+        except Exception as e:</span>
+<span class="gi">+            future.set_exception(e)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            future.set_result(result)</span>
+<span class="gi">+        return future</span>
+<span class="gi">+</span>
+<span class="gi">+    def shutdown(self, wait=True):</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="w"> </span>dummy_executor = DummyExecutor()
+
+<span class="w"> </span>def run_on_executor(*args: Any, **kwargs: Any) -&gt; Callable:
+<span class="gu">@@ -69,9 +81,30 @@ def run_on_executor(*args: Any, **kwargs: Any) -&gt; Callable:</span>
+
+<span class="w"> </span>       The ``callback`` argument was removed.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def run_on_executor_decorator(fn: Callable) -&gt; Callable:</span>
+<span class="gi">+        executor = kwargs.get(&quot;executor&quot;, &quot;executor&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        @functools.wraps(fn)</span>
+<span class="gi">+        async def wrapper(self, *args, **kwargs):</span>
+<span class="gi">+            executor_obj = getattr(self, executor, dummy_executor)</span>
+<span class="gi">+            future = executor_obj.submit(fn, self, *args, **kwargs)</span>
+<span class="gi">+            return await asyncio.wrap_future(future)</span>
+<span class="gi">+</span>
+<span class="gi">+        return wrapper</span>
+<span class="gi">+</span>
+<span class="gi">+    if len(args) == 1 and len(kwargs) == 0 and callable(args[0]):</span>
+<span class="gi">+        return run_on_executor_decorator(args[0])</span>
+<span class="gi">+    return run_on_executor_decorator</span>
+<span class="w"> </span>_NO_RESULT = object()
+
+<span class="gi">+def is_future(x: Any) -&gt; bool:</span>
+<span class="gi">+    &quot;&quot;&quot;Returns True if ``x`` is a `.Future`.</span>
+<span class="gi">+</span>
+<span class="gi">+    This should work both for Tornado/asyncio `Future` objects and</span>
+<span class="gi">+    `concurrent.futures.Future`.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    return isinstance(x, FUTURES)</span>
+<span class="gi">+</span>
+<span class="w"> </span>def chain_future(a: &#39;Future[_T]&#39;, b: &#39;Future[_T]&#39;) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Chain two futures together so that when one completes, so does the other.
+
+<span class="gu">@@ -84,7 +117,17 @@ def chain_future(a: &#39;Future[_T]&#39;, b: &#39;Future[_T]&#39;) -&gt; None:</span>
+<span class="w"> </span>       `concurrent.futures.Future`.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def copy(future: &#39;Future[_T]&#39;) -&gt; None:</span>
+<span class="gi">+        if b.done():</span>
+<span class="gi">+            return</span>
+<span class="gi">+        if future.cancelled():</span>
+<span class="gi">+            b.cancel()</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            exc = future.exception()</span>
+<span class="gi">+            if exc is not None:</span>
+<span class="gi">+                b.set_exception(exc)</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                b.set_result(future.result())</span>
+
+<span class="w"> </span>def future_set_result_unless_cancelled(future: &#39;Union[futures.Future[_T], Future[_T]]&#39;, value: _T) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Set the given ``value`` as the `Future`&#39;s result, if not cancelled.
+<span class="gu">@@ -94,7 +137,8 @@ def future_set_result_unless_cancelled(future: &#39;Union[futures.Future[_T], Future</span>
+
+<span class="w"> </span>    .. versionadded:: 5.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not future.cancelled():</span>
+<span class="gi">+        future.set_result(value)</span>
+
+<span class="w"> </span>def future_set_exception_unless_cancelled(future: &#39;Union[futures.Future[_T], Future[_T]]&#39;, exc: BaseException) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Set the given ``exc`` as the `Future`&#39;s exception.
+<span class="gu">@@ -110,7 +154,10 @@ def future_set_exception_unless_cancelled(future: &#39;Union[futures.Future[_T], Fut</span>
+<span class="w"> </span>    .. versionadded:: 6.0
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if future.cancelled():</span>
+<span class="gi">+        app_log.error(&quot;Exception after Future was cancelled&quot;, exc_info=exc)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        future.set_exception(exc)</span>
+
+<span class="w"> </span>def future_set_exc_info(future: &#39;Union[futures.Future[_T], Future[_T]]&#39;, exc_info: Tuple[Optional[type], Optional[BaseException], Optional[types.TracebackType]]) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Set the given ``exc_info`` as the `Future`&#39;s exception.
+<span class="gu">@@ -126,7 +173,8 @@ def future_set_exc_info(future: &#39;Union[futures.Future[_T], Future[_T]]&#39;, exc_inf</span>
+<span class="w"> </span>       (previously ``asyncio.InvalidStateError`` would be raised)
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if exc_info[1] is not None:</span>
+<span class="gi">+        future_set_exception_unless_cancelled(future, exc_info[1])</span>
+
+<span class="w"> </span>def future_add_done_callback(future: &#39;Union[futures.Future[_T], Future[_T]]&#39;, callback: Callable[..., None]) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Arrange to call ``callback`` when ``future`` is complete.
+<span class="gu">@@ -139,4 +187,7 @@ def future_add_done_callback(future: &#39;Union[futures.Future[_T], Future[_T]]&#39;, ca</span>
+
+<span class="w"> </span>    .. versionadded:: 5.0
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if future.done():</span>
+<span class="gi">+        callback(future)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        future.add_done_callback(callback)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/tornado/escape.py b/tornado/escape.py</span>
+<span class="gh">index ed651e23..5a17fc13 100644</span>
+<span class="gd">--- a/tornado/escape.py</span>
+<span class="gi">+++ b/tornado/escape.py</span>
+<span class="gu">@@ -37,7 +37,11 @@ def xhtml_escape(value: Union[str, bytes]) -&gt; str:</span>
+<span class="w"> </span>       except that single quotes are now escaped as ``&amp;#x27;`` instead of
+<span class="w"> </span>       ``&amp;#39;`` and performance may be different.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if value is None:</span>
+<span class="gi">+        return &#39;&#39;</span>
+<span class="gi">+    if isinstance(value, bytes):</span>
+<span class="gi">+        value = value.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+    return html.escape(value)</span>
+
+<span class="w"> </span>def xhtml_unescape(value: Union[str, bytes]) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Un-escapes an XML-escaped string.
+<span class="gu">@@ -54,7 +58,11 @@ def xhtml_unescape(value: Union[str, bytes]) -&gt; str:</span>
+<span class="w"> </span>       Some invalid inputs such as surrogates now raise an error, and numeric
+<span class="w"> </span>       references to certain ISO-8859-1 characters are now handled correctly.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if value is None:</span>
+<span class="gi">+        return &#39;&#39;</span>
+<span class="gi">+    if isinstance(value, bytes):</span>
+<span class="gi">+        value = value.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+    return html.unescape(value)</span>
+
+<span class="w"> </span>def json_encode(value: Any) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;JSON-encodes the given Python object.
+<span class="gu">@@ -63,18 +71,25 @@ def json_encode(value: Any) -&gt; str:</span>
+<span class="w"> </span>    will never contain the character sequence ``&lt;/`` which can be problematic
+<span class="w"> </span>    when JSON is embedded in an HTML ``&lt;script&gt;`` tag.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # JSON permits but does not require forward slashes to be escaped.</span>
+<span class="gi">+    # This is useful when json data is emitted in a &lt;script&gt; tag</span>
+<span class="gi">+    # in HTML, as it prevents &lt;/script&gt; from prematurely terminating</span>
+<span class="gi">+    # the javascript.  Some json libraries do this escaping by default,</span>
+<span class="gi">+    # but json.dumps does not, so we do it here.</span>
+<span class="gi">+    return json.dumps(value).replace(&quot;&lt;/&quot;, &quot;&lt;\\/&quot;)</span>
+
+<span class="w"> </span>def json_decode(value: Union[str, bytes]) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;Returns Python objects for the given JSON string.
+
+<span class="w"> </span>    Supports both `str` and `bytes` inputs. Equvalent to `json.loads`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(value, bytes):</span>
+<span class="gi">+        value = value.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+    return json.loads(value)</span>
+
+<span class="w"> </span>def squeeze(value: str) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Replace all sequences of whitespace chars with a single space.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return re.sub(r&quot;[\x00-\x20]+&quot;, &quot; &quot;, value).strip()</span>
+
+<span class="w"> </span>def url_escape(value: Union[str, bytes], plus: bool=True) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Returns a URL-encoded version of the given value.
+<span class="gu">@@ -91,7 +106,10 @@ def url_escape(value: Union[str, bytes], plus: bool=True) -&gt; str:</span>
+<span class="w"> </span>    .. versionadded:: 3.1
+<span class="w"> </span>        The ``plus`` argument
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    quote = urllib.parse.quote_plus if plus else urllib.parse.quote</span>
+<span class="gi">+    if isinstance(value, bytes):</span>
+<span class="gi">+        value = value.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+    return quote(value)</span>
+
+<span class="w"> </span>def url_unescape(value: Union[str, bytes], encoding: Optional[str]=&#39;utf-8&#39;, plus: bool=True) -&gt; Union[str, bytes]:
+<span class="w"> </span>    &quot;&quot;&quot;Decodes the given value from a URL.
+<span class="gu">@@ -111,7 +129,16 @@ def url_unescape(value: Union[str, bytes], encoding: Optional[str]=&#39;utf-8&#39;, plus</span>
+<span class="w"> </span>    .. versionadded:: 3.1
+<span class="w"> </span>       The ``plus`` argument
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if encoding is None:</span>
+<span class="gi">+        if plus:</span>
+<span class="gi">+            # unquote_to_bytes doesn&#39;t have a _plus variant</span>
+<span class="gi">+            value = to_unicode(value).replace(&#39;+&#39;, &#39; &#39;).encode(&#39;utf-8&#39;)</span>
+<span class="gi">+        return urllib.parse.unquote_to_bytes(value)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        if plus:</span>
+<span class="gi">+            return urllib.parse.unquote_plus(to_unicode(value), encoding=encoding)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return urllib.parse.unquote(to_unicode(value), encoding=encoding)</span>
+
+<span class="w"> </span>def parse_qs_bytes(qs: Union[str, bytes], keep_blank_values: bool=False, strict_parsing: bool=False) -&gt; Dict[str, List[bytes]]:
+<span class="w"> </span>    &quot;&quot;&quot;Parses a query string like urlparse.parse_qs,
+<span class="gu">@@ -121,7 +148,11 @@ def parse_qs_bytes(qs: Union[str, bytes], keep_blank_values: bool=False, strict_</span>
+<span class="w"> </span>    because it&#39;s too painful to keep them as byte strings in
+<span class="w"> </span>    python3 and in practice they&#39;re nearly always ascii anyway.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = {}</span>
+<span class="gi">+    for key, value in urllib.parse.parse_qs(</span>
+<span class="gi">+        to_unicode(qs), keep_blank_values, strict_parsing).items():</span>
+<span class="gi">+        result[key] = [utf8(v) for v in value]</span>
+<span class="gi">+    return result</span>
+<span class="w"> </span>_UTF8_TYPES = (bytes, type(None))
+
+<span class="w"> </span>def utf8(value: Union[None, str, bytes]) -&gt; Optional[bytes]:
+<span class="gu">@@ -130,7 +161,9 @@ def utf8(value: Union[None, str, bytes]) -&gt; Optional[bytes]:</span>
+<span class="w"> </span>    If the argument is already a byte string or None, it is returned unchanged.
+<span class="w"> </span>    Otherwise it must be a unicode string and is encoded as utf8.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if value is None or isinstance(value, bytes):</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    return value.encode(&#39;utf-8&#39;)</span>
+<span class="w"> </span>_TO_UNICODE_TYPES = (unicode_type, type(None))
+
+<span class="w"> </span>def to_unicode(value: Union[None, str, bytes]) -&gt; Optional[str]:
+<span class="gu">@@ -139,7 +172,9 @@ def to_unicode(value: Union[None, str, bytes]) -&gt; Optional[str]:</span>
+<span class="w"> </span>    If the argument is already a unicode string or None, it is returned
+<span class="w"> </span>    unchanged.  Otherwise it must be a byte string and is decoded as utf8.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if value is None or isinstance(value, unicode_type):</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    return value.decode(&#39;utf-8&#39;)</span>
+<span class="w"> </span>_unicode = to_unicode
+<span class="w"> </span>native_str = to_unicode
+<span class="w"> </span>to_basestring = to_unicode
+<span class="gu">@@ -149,8 +184,14 @@ def recursive_unicode(obj: Any) -&gt; Any:</span>
+
+<span class="w"> </span>    Supports lists, tuples, and dictionaries.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gd">-_URL_RE = re.compile(to_unicode(&#39;\\b((?:([\\w-]+):(/{1,3})|www[.])(?:(?:(?:[^\\s&amp;()]|&amp;amp;|&amp;quot;)*(?:[^!&quot;#$%&amp;\&#39;()*+,.:;&lt;=&gt;?@\\[\\]^`{|}~\\s]))|(?:\\((?:[^\\s&amp;()]|&amp;amp;|&amp;quot;)*\\)))+)&#39;))</span>
+<span class="gi">+    if isinstance(obj, dict):</span>
+<span class="gi">+        return dict((recursive_unicode(k), recursive_unicode(v)) for (k, v) in obj.items())</span>
+<span class="gi">+    elif isinstance(obj, (list, tuple)):</span>
+<span class="gi">+        return [recursive_unicode(i) for i in obj]</span>
+<span class="gi">+    elif isinstance(obj, bytes):</span>
+<span class="gi">+        return to_unicode(obj)</span>
+<span class="gi">+    return obj</span>
+<span class="gi">+_URL_RE = re.compile(r&#39;\b((?:([\w-]+):(/{1,3})|www[.])(?:(?:(?:[^\s&amp;()]|&amp;amp;|&amp;quot;)*(?:[^!&quot;#$%&amp;\&#39;()*+,.:;&lt;=&gt;?@\[\]^`{|}~\s]))|(?:\((?:[^\s&amp;()]|&amp;amp;|&amp;quot;)*\)))+)&#39;)</span>
+
+<span class="w"> </span>def linkify(text: Union[str, bytes], shorten: bool=False, extra_params: Union[str, Callable[[str], str]]=&#39;&#39;, require_protocol: bool=False, permitted_protocols: List[str]=[&#39;http&#39;, &#39;https&#39;]) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Converts plain text into HTML with links.
+<span class="gu">@@ -182,4 +223,59 @@ def linkify(text: Union[str, bytes], shorten: bool=False, extra_params: Union[st</span>
+<span class="w"> </span>      &quot;mailto&quot;])``. It is very unsafe to include protocols such as
+<span class="w"> </span>      ``javascript``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if isinstance(text, bytes):</span>
+<span class="gi">+        text = text.decode(&#39;utf-8&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if not text:</span>
+<span class="gi">+        return text</span>
+<span class="gi">+</span>
+<span class="gi">+    def make_link(m: &#39;re.Match[str]&#39;) -&gt; str:</span>
+<span class="gi">+        url = m.group(1)</span>
+<span class="gi">+        proto = m.group(2)</span>
+<span class="gi">+        if require_protocol and not proto:</span>
+<span class="gi">+            return url  # not protocol, no linkify</span>
+<span class="gi">+</span>
+<span class="gi">+        if proto and proto not in permitted_protocols:</span>
+<span class="gi">+            return url  # bad protocol, no linkify</span>
+<span class="gi">+</span>
+<span class="gi">+        href = m.group(1)</span>
+<span class="gi">+        if not proto:</span>
+<span class="gi">+            href = &#39;http://&#39; + href   # no proto specified, use http</span>
+<span class="gi">+</span>
+<span class="gi">+        if callable(extra_params):</span>
+<span class="gi">+            params = &quot; &quot; + extra_params(href)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            params = &quot; &quot; + extra_params if extra_params else &quot;&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+        # clip long urls. max_len is just an approximation</span>
+<span class="gi">+        max_len = 30</span>
+<span class="gi">+        if shorten and len(url) &gt; max_len:</span>
+<span class="gi">+            before_clip = url</span>
+<span class="gi">+            if proto:</span>
+<span class="gi">+                proto_len = len(proto) + 1 + len(m.group(3) or &quot;&quot;)  # +1 for :</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                proto_len = 0</span>
+<span class="gi">+</span>
+<span class="gi">+            parts = url[proto_len:].split(&quot;/&quot;)</span>
+<span class="gi">+            if len(parts) &gt; 1:</span>
+<span class="gi">+                # Grab the whole host part plus the first bit of the path</span>
+<span class="gi">+                # The path is usually not that interesting once shortened</span>
+<span class="gi">+                # (no more slug, etc), so it really just provides a little</span>
+<span class="gi">+                # extra indication of shortening.</span>
+<span class="gi">+                url = url[:proto_len] + parts[0] + &quot;/&quot; + \</span>
+<span class="gi">+                    parts[1][:8].split(&#39;?&#39;)[0].split(&#39;.&#39;)[0]</span>
+<span class="gi">+</span>
+<span class="gi">+            if len(url) &gt; max_len * 1.5:  # still too long</span>
+<span class="gi">+                url = url[:max_len]</span>
+<span class="gi">+</span>
+<span class="gi">+            if url != before_clip:</span>
+<span class="gi">+                # Full url is visible on mouse-over.</span>
+<span class="gi">+                params += &#39; title=&quot;%s&quot;&#39; % href</span>
+<span class="gi">+</span>
+<span class="gi">+        return &#39;&lt;a href=&quot;%s&quot;%s&gt;%s&lt;/a&gt;&#39; % (href, params, url)</span>
+<span class="gi">+</span>
+<span class="gi">+    # First HTML-escape so that our strings are all safe.</span>
+<span class="gi">+    # The regex is modified to avoid character entities other than &amp;amp; so</span>
+<span class="gi">+    # that we won&#39;t pick up &amp;quot;, etc.</span>
+<span class="gi">+    text = _unicode(xhtml_escape(text))</span>
+<span class="gi">+    return _URL_RE.sub(make_link, text)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/tornado/httpclient.py b/tornado/httpclient.py</span>
+<span class="gh">index 7175d225..48a063e8 100644</span>
+<span class="gd">--- a/tornado/httpclient.py</span>
+<span class="gi">+++ b/tornado/httpclient.py</span>
+<span class="gu">@@ -210,6 +210,26 @@ class AsyncHTTPClient(Configurable):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gi">+def main() -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;A simple HTTP client command-line interface.</span>
+<span class="gi">+</span>
+<span class="gi">+    Usage: python -m tornado.httpclient [OPTIONS] URL</span>
+<span class="gi">+</span>
+<span class="gi">+    Options:</span>
+<span class="gi">+        -h, --help       Show this help information</span>
+<span class="gi">+        -v, --verbose    Show response headers</span>
+<span class="gi">+        -q, --quiet      Don&#39;t show response body</span>
+<span class="gi">+        -O, --output-file=FILE  Save response body to file</span>
+<span class="gi">+        -H, --header=KEY:VALUE  Add header to request</span>
+<span class="gi">+        -m, --method=METHOD  HTTP method (default GET)</span>
+<span class="gi">+        -b, --body=BODY  Request body (implies POST if no -m is given)</span>
+<span class="gi">+        -c, --ca-certs=FILE  SSL certificate authority file</span>
+<span class="gi">+        -k, --insecure   Don&#39;t validate SSL certificates</span>
+<span class="gi">+        -p, --proxy=HOST:PORT  Use HTTP proxy</span>
+<span class="gi">+        -n, --no-verify-ssl  Don&#39;t validate SSL certificates</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    pass</span>
+<span class="gi">+</span>
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def configure(cls, impl: &#39;Union[None, str, Type[Configurable]]&#39;, **kwargs: Any) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Configures the `AsyncHTTPClient` subclass to use.
+<span class="gh">diff --git a/tornado/options.py b/tornado/options.py</span>
+<span class="gh">index 427d1002..1702dc8f 100644</span>
+<span class="gd">--- a/tornado/options.py</span>
+<span class="gi">+++ b/tornado/options.py</span>
+<span class="gu">@@ -105,11 +105,19 @@ class OptionParser(object):</span>
+<span class="w"> </span>    which reference a global instance.
+<span class="w"> </span>    &quot;&quot;&quot;
+
+<span class="gi">+    def _help_callback(self, value: bool) -&gt; None:</span>
+<span class="gi">+        if value:</span>
+<span class="gi">+            self.print_help()</span>
+<span class="gi">+            sys.exit(0)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __init__(self) -&gt; None:
+<span class="w"> </span>        self.__dict__[&#39;_options&#39;] = {}
+<span class="w"> </span>        self.__dict__[&#39;_parse_callbacks&#39;] = []
+<span class="w"> </span>        self.define(&#39;help&#39;, type=bool, help=&#39;show this help information&#39;, callback=self._help_callback)
+
+<span class="gi">+    def _normalize_name(self, name: str) -&gt; str:</span>
+<span class="gi">+        return name.replace(&#39;-&#39;, &#39;_&#39;)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    def __getattr__(self, name: str) -&gt; Any:
+<span class="w"> </span>        name = self._normalize_name(name)
+<span class="w"> </span>        if isinstance(self._options.get(name), _Option):
+<span class="gu">@@ -140,14 +148,18 @@ class OptionParser(object):</span>
+
+<span class="w"> </span>        .. versionadded:: 3.1
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return [(name, self[name]) for name in self]</span>
+
+<span class="w"> </span>    def groups(self) -&gt; Set[str]:
+<span class="w"> </span>        &quot;&quot;&quot;The set of option-groups created by ``define``.
+
+<span class="w"> </span>        .. versionadded:: 3.1
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        groups = set()</span>
+<span class="gi">+        for option in self._options.values():</span>
+<span class="gi">+            if option.group_name:</span>
+<span class="gi">+                groups.add(option.group_name)</span>
+<span class="gi">+        return groups</span>
+
+<span class="w"> </span>    def group_dict(self, group: str) -&gt; Dict[str, Any]:
+<span class="w"> </span>        &quot;&quot;&quot;The names and values of options in a group.
+<span class="gu">@@ -166,14 +178,18 @@ class OptionParser(object):</span>
+
+<span class="w"> </span>        .. versionadded:: 3.1
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        result = {}</span>
+<span class="gi">+        for option in self._options.values():</span>
+<span class="gi">+            if option.group_name == group:</span>
+<span class="gi">+                result[option.name] = self[option.name]</span>
+<span class="gi">+        return result</span>
+
+<span class="w"> </span>    def as_dict(self) -&gt; Dict[str, Any]:
+<span class="w"> </span>        &quot;&quot;&quot;The names and values of all options.
+
+<span class="w"> </span>        .. versionadded:: 3.1
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return dict(self.items())</span>
+
+<span class="w"> </span>    def define(self, name: str, default: Any=None, type: Optional[type]=None, help: Optional[str]=None, metavar: Optional[str]=None, multiple: bool=False, group: Optional[str]=None, callback: Optional[Callable[[Any], None]]=None) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Defines a new command line option.
+<span class="gu">@@ -210,7 +226,25 @@ class OptionParser(object):</span>
+<span class="w"> </span>        by later flags.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        normalized = self._normalize_name(name)</span>
+<span class="gi">+        if normalized in self._options:</span>
+<span class="gi">+            raise Error(&quot;Option %r already defined in %s&quot;, normalized,</span>
+<span class="gi">+                      self._options[normalized].file_name)</span>
+<span class="gi">+        frame = sys._getframe(0)</span>
+<span class="gi">+        options_file = frame.f_code.co_filename</span>
+<span class="gi">+</span>
+<span class="gi">+        if type is None:</span>
+<span class="gi">+            if default is not None:</span>
+<span class="gi">+                type = default.__class__</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                type = str</span>
+<span class="gi">+        if group is None:</span>
+<span class="gi">+            group = options_file</span>
+<span class="gi">+</span>
+<span class="gi">+        self._options[normalized] = _Option(name, default=default,</span>
+<span class="gi">+                                          type=type, help=help, metavar=metavar,</span>
+<span class="gi">+                                          multiple=multiple, file_name=options_file,</span>
+<span class="gi">+                                          group_name=group, callback=callback)</span>
+
+<span class="w"> </span>    def parse_command_line(self, args: Optional[List[str]]=None, final: bool=True) -&gt; List[str]:
+<span class="w"> </span>        &quot;&quot;&quot;Parses all options given on the command line (defaults to
+<span class="gu">@@ -234,7 +268,37 @@ class OptionParser(object):</span>
+<span class="w"> </span>        from multiple sources.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if args is None:</span>
+<span class="gi">+            args = sys.argv</span>
+<span class="gi">+        remaining = []</span>
+<span class="gi">+        for i in range(1, len(args)):</span>
+<span class="gi">+            # Skip any arguments that don&#39;t start with &quot;-&quot;</span>
+<span class="gi">+            if not args[i].startswith(&quot;-&quot;):</span>
+<span class="gi">+                remaining.append(args[i])</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if args[i].startswith(&quot;--&quot;):</span>
+<span class="gi">+                # Strip the leading &quot;--&quot;</span>
+<span class="gi">+                name = args[i][2:]</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                # Strip the leading &quot;-&quot;</span>
+<span class="gi">+                name = args[i][1:]</span>
+<span class="gi">+            name, equals, value = name.partition(&quot;=&quot;)</span>
+<span class="gi">+            name = self._normalize_name(name)</span>
+<span class="gi">+            if name not in self._options:</span>
+<span class="gi">+                self.print_help()</span>
+<span class="gi">+                raise Error(&#39;Unrecognized command line option: %r&#39; % name)</span>
+<span class="gi">+            option = self._options[name]</span>
+<span class="gi">+            if not equals:</span>
+<span class="gi">+                if option.type == bool:</span>
+<span class="gi">+                    value = &quot;true&quot;</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    raise Error(&#39;Option %r requires a value&#39; % name)</span>
+<span class="gi">+            option.parse(value)</span>
+<span class="gi">+</span>
+<span class="gi">+        if final:</span>
+<span class="gi">+            self.run_parse_callbacks()</span>
+<span class="gi">+</span>
+<span class="gi">+        return remaining</span>
+
+<span class="w"> </span>    def parse_config_file(self, path: str, final: bool=True) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Parses and loads the config file at the given path.
+<span class="gu">@@ -282,15 +346,45 @@ class OptionParser(object):</span>
+<span class="w"> </span>           Added the ability to set options via strings in config files.
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        config = {&#39;__file__&#39;: os.path.abspath(path)}</span>
+<span class="gi">+        with open(path, &#39;rb&#39;) as f:</span>
+<span class="gi">+            exec_in(native_str(f.read()), config, config)</span>
+<span class="gi">+        for name in config:</span>
+<span class="gi">+            if name in self._options:</span>
+<span class="gi">+                self._options[name].set(config[name])</span>
+
+<span class="w"> </span>    def print_help(self, file: Optional[TextIO]=None) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Prints all the command line options to stderr (or another file).&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if file is None:</span>
+<span class="gi">+            file = sys.stderr</span>
+<span class="gi">+        print(&quot;Usage: %s [OPTIONS]&quot; % sys.argv[0], file=file)</span>
+<span class="gi">+        print(&quot;\nOptions:\n&quot;, file=file)</span>
+<span class="gi">+        by_group = {}</span>
+<span class="gi">+        for option in self._options.values():</span>
+<span class="gi">+            by_group.setdefault(option.group_name, []).append(option)</span>
+<span class="gi">+</span>
+<span class="gi">+        for filename, o in sorted(by_group.items()):</span>
+<span class="gi">+            if filename:</span>
+<span class="gi">+                print(&quot;\n%s options:\n&quot; % os.path.normpath(filename), file=file)</span>
+<span class="gi">+            o.sort(key=lambda option: option.name)</span>
+<span class="gi">+            for option in o:</span>
+<span class="gi">+                prefix = option.name</span>
+<span class="gi">+                if option.metavar:</span>
+<span class="gi">+                    prefix += &quot;=&quot; + option.metavar</span>
+<span class="gi">+                description = option.help or &quot;&quot;</span>
+<span class="gi">+                if option.default is not None and option.default != &quot;&quot;:</span>
+<span class="gi">+                    description += &quot; (default %s)&quot; % option.default</span>
+<span class="gi">+                lines = textwrap.wrap(description, 79 - 35)</span>
+<span class="gi">+                if len(prefix) &gt; 30 or len(lines) == 0:</span>
+<span class="gi">+                    lines.insert(0, &quot;&quot;)</span>
+<span class="gi">+                print(&quot;  --%-30s %s&quot; % (prefix, lines[0]), file=file)</span>
+<span class="gi">+                for line in lines[1:]:</span>
+<span class="gi">+                    print(&quot;%-34s %s&quot; % (&quot; &quot;, line), file=file)</span>
+<span class="gi">+        print(file=file)</span>
+
+<span class="w"> </span>    def add_parse_callback(self, callback: Callable[[], None]) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Adds a parse callback, to be invoked when option parsing is done.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._parse_callbacks.append(callback)</span>
+
+<span class="w"> </span>    def mockable(self) -&gt; &#39;_Mockable&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Returns a wrapper around self that is compatible with
+<span class="gu">@@ -307,7 +401,7 @@ class OptionParser(object):</span>
+<span class="w"> </span>            with mock.patch.object(options.mockable(), &#39;name&#39;, value):
+<span class="w"> </span>                assert options.name == value
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return _Mockable(self)</span>
+
+<span class="w"> </span>class _Mockable(object):
+<span class="w"> </span>    &quot;&quot;&quot;`mock.patch` compatible wrapper for `OptionParser`.
+<span class="gu">@@ -367,33 +461,35 @@ def define(name: str, default: Any=None, type: Optional[type]=None, help: Option</span>
+
+<span class="w"> </span>    See `OptionParser.define`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return options.define(name, default=default, type=type, help=help,</span>
+<span class="gi">+                        metavar=metavar, multiple=multiple, group=group,</span>
+<span class="gi">+                        callback=callback)</span>
+
+<span class="w"> </span>def parse_command_line(args: Optional[List[str]]=None, final: bool=True) -&gt; List[str]:
+<span class="w"> </span>    &quot;&quot;&quot;Parses global options from the command line.
+
+<span class="w"> </span>    See `OptionParser.parse_command_line`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return options.parse_command_line(args, final=final)</span>
+
+<span class="w"> </span>def parse_config_file(path: str, final: bool=True) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Parses global options from a config file.
+
+<span class="w"> </span>    See `OptionParser.parse_config_file`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return options.parse_config_file(path, final=final)</span>
+
+<span class="w"> </span>def print_help(file: Optional[TextIO]=None) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Prints all the command line options to stderr (or another file).
+
+<span class="w"> </span>    See `OptionParser.print_help`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return options.print_help(file)</span>
+
+<span class="w"> </span>def add_parse_callback(callback: Callable[[], None]) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Adds a parse callback, to be invoked when option parsing is done.
+
+<span class="w"> </span>    See `OptionParser.add_parse_callback`
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return options.add_parse_callback(callback)</span>
+<span class="w"> </span>define_logging_options(options)
+\ No newline at end of file
+<span class="gh">diff --git a/tornado/platform/asyncio.py b/tornado/platform/asyncio.py</span>
+<span class="gh">index 6b47bdfd..6935b38e 100644</span>
+<span class="gd">--- a/tornado/platform/asyncio.py</span>
+<span class="gi">+++ b/tornado/platform/asyncio.py</span>
+<span class="gu">@@ -41,10 +41,28 @@ class _HasFileno(Protocol):</span>
+<span class="w"> </span>_FileDescriptorLike = Union[int, _HasFileno]
+<span class="w"> </span>_T = TypeVar(&#39;_T&#39;)
+<span class="w"> </span>_selector_loops: Set[&#39;SelectorThread&#39;] = set()
+<span class="gi">+</span>
+<span class="gi">+def _atexit_callback() -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Cleanup the selector threads at shutdown.&quot;&quot;&quot;</span>
+<span class="gi">+    while _selector_loops:</span>
+<span class="gi">+        loop = _selector_loops.pop()</span>
+<span class="gi">+        loop.close()</span>
+<span class="gi">+</span>
+<span class="w"> </span>atexit.register(_atexit_callback)
+
+<span class="w"> </span>class BaseAsyncIOLoop(IOLoop):
+<span class="gd">-    pass</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def configurable_base(cls):</span>
+<span class="gi">+        return IOLoop</span>
+<span class="gi">+</span>
+<span class="gi">+    def initialize(self, make_current=True):</span>
+<span class="gi">+        super().initialize(make_current=make_current)</span>
+<span class="gi">+        self.asyncio_loop = None</span>
+<span class="gi">+</span>
+<span class="gi">+    def close(self, all_fds=False):</span>
+<span class="gi">+        if self.asyncio_loop is not None:</span>
+<span class="gi">+            self.asyncio_loop.close()</span>
+<span class="gi">+        super().close(all_fds=all_fds)</span>
+
+<span class="w"> </span>class AsyncIOMainLoop(BaseAsyncIOLoop):
+<span class="w"> </span>    &quot;&quot;&quot;``AsyncIOMainLoop`` creates an `.IOLoop` that corresponds to the
+<span class="gu">@@ -60,6 +78,9 @@ class AsyncIOMainLoop(BaseAsyncIOLoop):</span>
+
+<span class="w"> </span>       Closing an `AsyncIOMainLoop` now closes the underlying asyncio loop.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gi">+    def initialize(self, **kwargs):</span>
+<span class="gi">+        super().initialize(**kwargs)</span>
+<span class="gi">+        self.asyncio_loop = asyncio.get_event_loop()</span>
+
+<span class="w"> </span>class AsyncIOLoop(BaseAsyncIOLoop):
+<span class="w"> </span>    &quot;&quot;&quot;``AsyncIOLoop`` is an `.IOLoop` that runs on an ``asyncio`` event loop.
+<span class="gh">diff --git a/tornado/template.py b/tornado/template.py</span>
+<span class="gh">index 61d611e9..9e953d50 100644</span>
+<span class="gd">--- a/tornado/template.py</span>
+<span class="gi">+++ b/tornado/template.py</span>
+<span class="gu">@@ -442,6 +442,172 @@ class _CodeWriter(object):</span>
+<span class="w"> </span>        self.include_stack = []
+<span class="w"> </span>        self._indent = 0
+
+<span class="gi">+def _parse(reader: _TemplateReader, template: Template) -&gt; _ChunkList:</span>
+<span class="gi">+    &quot;&quot;&quot;Parses a template file and returns a _ChunkList.&quot;&quot;&quot;</span>
+<span class="gi">+    body = _ChunkList([])</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        # Find next template directive</span>
+<span class="gi">+        curly = 0</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            curly = reader.find(&quot;{&quot;, curly)</span>
+<span class="gi">+            if curly == -1 or curly + 1 == len(reader):</span>
+<span class="gi">+                # EOF</span>
+<span class="gi">+                if body.chunks:</span>
+<span class="gi">+                    body.chunks.extend([_Text(reader[reader.pos:], reader.line, reader.whitespace)])</span>
+<span class="gi">+                return body</span>
+<span class="gi">+            # Look ahead to see if this is a special sequence</span>
+<span class="gi">+            if reader[curly + 1] == &quot;{&quot;:</span>
+<span class="gi">+                # Double-curly-braces is an escaped curly</span>
+<span class="gi">+                if curly + 2 &lt; len(reader) and reader[curly + 2] == &quot;!&quot;:</span>
+<span class="gi">+                    # Special case: convert {{! to just {{</span>
+<span class="gi">+                    reader.consume(curly + 2)</span>
+<span class="gi">+                    body.chunks.append(_Text(&quot;{{&quot;, reader.line, reader.whitespace))</span>
+<span class="gi">+                    break</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    # This is a template expression</span>
+<span class="gi">+                    reader.consume(curly)</span>
+<span class="gi">+                    body.chunks.append(_Expression(reader.read_until(&quot;}}&quot;), reader.line))</span>
+<span class="gi">+                    break</span>
+<span class="gi">+            elif reader[curly + 1] == &quot;%&quot;:</span>
+<span class="gi">+                # Template directive</span>
+<span class="gi">+                reader.consume(curly)</span>
+<span class="gi">+                if reader.current_char == &quot;!&quot;:</span>
+<span class="gi">+                    # Special case: {% ! %} is a comment</span>
+<span class="gi">+                    reader.consume(1)</span>
+<span class="gi">+                    reader.read_until(&quot;%}&quot;)</span>
+<span class="gi">+                    break</span>
+<span class="gi">+                else:</span>
+<span class="gi">+                    # Parse the directive</span>
+<span class="gi">+                    directive = reader.read_until(&quot;%}&quot;)</span>
+<span class="gi">+                    if not directive:</span>
+<span class="gi">+                        raise ParseError(&quot;Empty directive&quot;, reader.name, reader.line)</span>
+<span class="gi">+                    args = directive.strip().split(None, 1)</span>
+<span class="gi">+                    if not args:</span>
+<span class="gi">+                        raise ParseError(&quot;Empty directive&quot;, reader.name, reader.line)</span>
+<span class="gi">+                    cmd = args[0]</span>
+<span class="gi">+                    if cmd == &quot;apply&quot;:</span>
+<span class="gi">+                        # apply creates a nested function so we can apply</span>
+<span class="gi">+                        # an arbitrary function to the output of a block</span>
+<span class="gi">+                        # {% apply f %} content {% end %}</span>
+<span class="gi">+                        #   -&gt; f(content)</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;apply requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_ApplyBlock(args[1], reader.line, _parse(reader, template)))</span>
+<span class="gi">+                    elif cmd == &quot;autoescape&quot;:</span>
+<span class="gi">+                        # autoescape changes the default escaping behavior in a</span>
+<span class="gi">+                        # template.  It can take a function name or None.</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;autoescape requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        str_arg = args[1].strip()</span>
+<span class="gi">+                        if str_arg == &quot;None&quot;:</span>
+<span class="gi">+                            str_arg = None</span>
+<span class="gi">+                        template.autoescape = str_arg</span>
+<span class="gi">+                    elif cmd == &quot;block&quot;:</span>
+<span class="gi">+                        # {% block foo %} content {% end %}</span>
+<span class="gi">+                        #   -&gt; named render blocks</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;block requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        block_name = args[1].strip()</span>
+<span class="gi">+                        block_body = _parse(reader, template)</span>
+<span class="gi">+                        body.chunks.append(_NamedBlock(block_name, block_body, template, reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;comment&quot;:</span>
+<span class="gi">+                        # {% comment %} blah {% end %}</span>
+<span class="gi">+                        #   -&gt; ignore everything inside</span>
+<span class="gi">+                        reader.read_until(&quot;%}&quot;)</span>
+<span class="gi">+                        continue</span>
+<span class="gi">+                    elif cmd == &quot;extends&quot;:</span>
+<span class="gi">+                        # {% extends filename %}</span>
+<span class="gi">+                        #   -&gt; inherits from a base template</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;extends requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_ExtendsBlock(args[1].strip()))</span>
+<span class="gi">+                    elif cmd == &quot;for&quot;:</span>
+<span class="gi">+                        # {% for var in expr %} content {% end %}</span>
+<span class="gi">+                        #   -&gt; for var in expr: content</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;for requires an expression&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_ControlBlock(args[1], reader.line, _parse(reader, template)))</span>
+<span class="gi">+                    elif cmd == &quot;from&quot;:</span>
+<span class="gi">+                        # {% from module import name [as name] %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;from requires a module and name&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_Statement(args[1], reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;if&quot;:</span>
+<span class="gi">+                        # {% if expr %} content {% end %}</span>
+<span class="gi">+                        #   -&gt; if expr: content</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;if requires an expression&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_ControlBlock(args[1], reader.line, _parse(reader, template)))</span>
+<span class="gi">+                    elif cmd == &quot;import&quot;:</span>
+<span class="gi">+                        # {% import module %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;import requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_Statement(args[1], reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;include&quot;:</span>
+<span class="gi">+                        # {% include filename %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;include requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_IncludeBlock(args[1].strip(), reader, reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;module&quot;:</span>
+<span class="gi">+                        # {% module expr %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;module requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_Module(args[1], reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;raw&quot;:</span>
+<span class="gi">+                        # {% raw expr %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;raw requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_Expression(args[1], reader.line, raw=True))</span>
+<span class="gi">+                    elif cmd == &quot;set&quot;:</span>
+<span class="gi">+                        # {% set x = y %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;set requires an expression&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_Statement(args[1], reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;try&quot;:</span>
+<span class="gi">+                        # {% try %} content {% except %} content {% end %}</span>
+<span class="gi">+                        body.chunks.append(_ControlBlock(args[0], reader.line, _parse(reader, template)))</span>
+<span class="gi">+                    elif cmd == &quot;while&quot;:</span>
+<span class="gi">+                        # {% while expr %} content {% end %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;while requires an expression&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_ControlBlock(args[1], reader.line, _parse(reader, template)))</span>
+<span class="gi">+                    elif cmd == &quot;whitespace&quot;:</span>
+<span class="gi">+                        # {% whitespace mode %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;whitespace requires one argument&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        reader.whitespace = args[1].strip()</span>
+<span class="gi">+                    elif cmd == &quot;end&quot;:</span>
+<span class="gi">+                        # {% end %} or variants like {% end if %}</span>
+<span class="gi">+                        return body</span>
+<span class="gi">+                    elif cmd == &quot;else&quot;:</span>
+<span class="gi">+                        # {% else %} or {% else if expr %}</span>
+<span class="gi">+                        body.chunks.append(_IntermediateControlBlock(directive, reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;elif&quot;:</span>
+<span class="gi">+                        # {% elif expr %}</span>
+<span class="gi">+                        if len(args) != 2:</span>
+<span class="gi">+                            raise ParseError(&quot;elif requires an expression&quot;, reader.name, reader.line)</span>
+<span class="gi">+                        body.chunks.append(_IntermediateControlBlock(directive, reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;except&quot;:</span>
+<span class="gi">+                        # {% except %} or {% except ExceptionName %}</span>
+<span class="gi">+                        body.chunks.append(_IntermediateControlBlock(directive, reader.line))</span>
+<span class="gi">+                    elif cmd == &quot;finally&quot;:</span>
+<span class="gi">+                        # {% finally %}</span>
+<span class="gi">+                        body.chunks.append(_IntermediateControlBlock(directive, reader.line))</span>
+<span class="gi">+                    elif cmd in (&quot;break&quot;, &quot;continue&quot;):</span>
+<span class="gi">+                        # {% break %}, {% continue %}</span>
+<span class="gi">+                        body.chunks.append(_Statement(cmd, reader.line))</span>
+<span class="gi">+                    else:</span>
+<span class="gi">+                        raise ParseError(&quot;unknown directive %r&quot; % cmd, reader.name, reader.line)</span>
+<span class="gi">+                    break</span>
+<span class="gi">+            elif reader[curly + 1] == &quot;#&quot;:</span>
+<span class="gi">+                # Template comment</span>
+<span class="gi">+                reader.consume(curly + 1)</span>
+<span class="gi">+                reader.read_until(&quot;#}&quot;)</span>
+<span class="gi">+                break</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                # Not a special sequence</span>
+<span class="gi">+                curly += 1</span>
+<span class="gi">+</span>
+<span class="w"> </span>class _TemplateReader(object):
+
+<span class="w"> </span>    def __init__(self, name: str, text: str, whitespace: str) -&gt; None:
+<span class="gh">diff --git a/tornado/util.py b/tornado/util.py</span>
+<span class="gh">index c4f68e3f..e0960417 100644</span>
+<span class="gd">--- a/tornado/util.py</span>
+<span class="gi">+++ b/tornado/util.py</span>
+<span class="gu">@@ -15,6 +15,7 @@ import atexit</span>
+<span class="w"> </span>from inspect import getfullargspec
+<span class="w"> </span>import os
+<span class="w"> </span>import re
+<span class="gi">+import types</span>
+<span class="w"> </span>import typing
+<span class="w"> </span>import zlib
+<span class="w"> </span>from typing import Any, Optional, Dict, Mapping, List, Tuple, Match, Callable, Type, Sequence
+<span class="gu">@@ -65,12 +66,12 @@ class GzipDecompressor(object):</span>
+<span class="w"> </span>        in ``unconsumed_tail``; you must retrieve this value and pass
+<span class="w"> </span>        it back to a future call to `decompress` if it is not empty.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.decompressobj.decompress(value, max_length)</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def unconsumed_tail(self) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Returns the unconsumed portion left over&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.decompressobj.unconsumed_tail</span>
+
+<span class="w"> </span>    def flush(self) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Return any remaining buffered data not yet returned by decompress.
+<span class="gu">@@ -78,7 +79,7 @@ class GzipDecompressor(object):</span>
+<span class="w"> </span>        Also checks for errors such as truncated input.
+<span class="w"> </span>        No other methods may be called on this object after `flush`.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.decompressobj.flush()</span>
+
+<span class="w"> </span>def import_object(name: str) -&gt; Any:
+<span class="w"> </span>    &quot;&quot;&quot;Imports an object by name.
+<span class="gu">@@ -98,7 +99,15 @@ def import_object(name: str) -&gt; Any:</span>
+<span class="w"> </span>        ...
+<span class="w"> </span>    ImportError: No module named missing_module
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if name.count(&#39;.&#39;) == 0:</span>
+<span class="gi">+        return __import__(name)</span>
+<span class="gi">+    </span>
+<span class="gi">+    parts = name.split(&#39;.&#39;)</span>
+<span class="gi">+    obj = __import__(&#39;.&#39;.join(parts[:-1]), None, None, [parts[-1]], 0)</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return getattr(obj, parts[-1])</span>
+<span class="gi">+    except AttributeError:</span>
+<span class="gi">+        raise ImportError(&quot;No module named %s&quot; % parts[-1])</span>
+
+<span class="w"> </span>def errno_from_exception(e: BaseException) -&gt; Optional[int]:
+<span class="w"> </span>    &quot;&quot;&quot;Provides the errno from an Exception object.
+<span class="gu">@@ -109,7 +118,12 @@ def errno_from_exception(e: BaseException) -&gt; Optional[int]:</span>
+<span class="w"> </span>    abstracts all that behavior to give you a safe way to get the
+<span class="w"> </span>    errno.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if hasattr(e, &#39;errno&#39;):</span>
+<span class="gi">+        return e.errno</span>
+<span class="gi">+    elif isinstance(getattr(e, &#39;args&#39;, None), tuple) and len(e.args) &gt; 0:</span>
+<span class="gi">+        if isinstance(e.args[0], int):</span>
+<span class="gi">+            return e.args[0]</span>
+<span class="gi">+    return None</span>
+<span class="w"> </span>_alphanum = frozenset(&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#39;)
+<span class="w"> </span>_re_unescape_pattern = re.compile(&#39;\\\\(.)&#39;, re.DOTALL)
+
+<span class="gu">@@ -122,7 +136,12 @@ def re_unescape(s: str) -&gt; str:</span>
+
+<span class="w"> </span>    .. versionadded:: 4.4
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    def replace(match: Match) -&gt; str:</span>
+<span class="gi">+        group = match.group(1)</span>
+<span class="gi">+        if group[0] not in _alphanum:</span>
+<span class="gi">+            return group</span>
+<span class="gi">+        raise ValueError(&quot;Cannot unescape &#39;\\\\%s&#39;&quot; % group)</span>
+<span class="gi">+    return _re_unescape_pattern.sub(replace, s)</span>
+
+<span class="w"> </span>class Configurable(object):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for configurable interfaces.
+<span class="gu">@@ -178,14 +197,21 @@ class Configurable(object):</span>
+<span class="w"> </span>        parameter).
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        raise NotImplementedError()</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def configurable_default(cls):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the implementation class to be used if none is configured.&quot;&quot;&quot;
+<span class="gi">+        raise NotImplementedError()</span>
+<span class="gi">+    def initialize(self, *args: Any, **kwargs: Any) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Initialize a `Configurable` subclass instance.</span>
+<span class="gi">+</span>
+<span class="gi">+        Configurable classes should use `initialize` instead of ``__init__``.</span>
+<span class="gi">+</span>
+<span class="gi">+        .. versionchanged:: 4.2</span>
+<span class="gi">+           Now accepts positional arguments in addition to keyword arguments.</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="w"> </span>        pass
+<span class="gd">-    initialize = _initialize</span>
+<span class="gd">-    &#39;Initialize a `Configurable` subclass instance.\n\n    Configurable classes should use `initialize` instead of ``__init__``.\n\n    .. versionchanged:: 4.2\n       Now accepts positional arguments in addition to keyword arguments.\n    &#39;</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def configure(cls, impl, **kwargs):
+<span class="gu">@@ -195,12 +221,27 @@ class Configurable(object):</span>
+<span class="w"> </span>        to the constructor.  This can be used to set global defaults for
+<span class="w"> </span>        some parameters.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        base = cls.configurable_base()</span>
+<span class="gi">+        if isinstance(impl, str):</span>
+<span class="gi">+            impl = import_object(impl)</span>
+<span class="gi">+        if impl is not None and not issubclass(impl, cls):</span>
+<span class="gi">+            raise ValueError(&quot;Invalid subclass of %s&quot; % cls)</span>
+<span class="gi">+        base.__impl_class = impl</span>
+<span class="gi">+        base.__impl_kwargs = kwargs</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def configured_class(cls):
+<span class="w"> </span>        &quot;&quot;&quot;Returns the currently configured class.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        base = cls.configurable_base()</span>
+<span class="gi">+        if cls is not base:</span>
+<span class="gi">+            return cls</span>
+<span class="gi">+        impl = getattr(base, &#39;_Configurable__impl_class&#39;, None)</span>
+<span class="gi">+        if impl is None:</span>
+<span class="gi">+            impl = base.configurable_default()</span>
+<span class="gi">+            if impl is None:</span>
+<span class="gi">+                raise ValueError(&quot;No implementation specified for %s&quot; % cls)</span>
+<span class="gi">+            base.configure(impl)</span>
+<span class="gi">+        return impl</span>
+
+<span class="w"> </span>class ArgReplacer(object):
+<span class="w"> </span>    &quot;&quot;&quot;Replaces one value in an ``args, kwargs`` pair.
+<span class="gu">@@ -222,7 +263,9 @@ class ArgReplacer(object):</span>
+
+<span class="w"> </span>        Returns ``default`` if the argument is not present.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if self.arg_pos is not None and len(args) &gt; self.arg_pos:</span>
+<span class="gi">+            return args[self.arg_pos]</span>
+<span class="gi">+        return kwargs.get(self.name, default)</span>
+
+<span class="w"> </span>    def replace(self, new_value: Any, args: Sequence[Any], kwargs: Dict[str, Any]) -&gt; Tuple[Any, Sequence[Any], Dict[str, Any]]:
+<span class="w"> </span>        &quot;&quot;&quot;Replace the named argument in ``args, kwargs`` with ``new_value``.
+<span class="gu">@@ -234,11 +277,38 @@ class ArgReplacer(object):</span>
+<span class="w"> </span>        If the named argument was not found, ``new_value`` will be added
+<span class="w"> </span>        to ``kwargs`` and None will be returned as ``old_value``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        old_value = self.get_old_value(args, kwargs)</span>
+<span class="gi">+        if args is None:</span>
+<span class="gi">+            args = []</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            args = list(args)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self.arg_pos is not None and len(args) &gt; self.arg_pos:</span>
+<span class="gi">+            args[self.arg_pos] = new_value</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            kwargs[self.name] = new_value</span>
+<span class="gi">+        return old_value, args, kwargs</span>
+
+<span class="w"> </span>def timedelta_to_seconds(td):
+<span class="w"> </span>    &quot;&quot;&quot;Equivalent to ``td.total_seconds()`` (introduced in Python 2.7).&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return td.total_seconds()</span>
+<span class="gi">+</span>
+<span class="gi">+def exec_in(code: str, glob: Dict[str, Any], loc: Dict[str, Any]=None) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Execute code in a given context.&quot;&quot;&quot;</span>
+<span class="gi">+    if loc is None:</span>
+<span class="gi">+        loc = glob</span>
+<span class="gi">+    exec(code, glob, loc)</span>
+<span class="gi">+</span>
+<span class="gi">+def raise_exc_info(exc_info: Tuple[Optional[type], Optional[BaseException], Optional[types.TracebackType]]) -&gt; None:</span>
+<span class="gi">+    &quot;&quot;&quot;Re-raise an exception from an exc_info tuple.</span>
+<span class="gi">+</span>
+<span class="gi">+    The argument is a ``(type, value, traceback)`` tuple as returned by</span>
+<span class="gi">+    `sys.exc_info`.&quot;&quot;&quot;</span>
+<span class="gi">+    if exc_info[1] is not None:</span>
+<span class="gi">+        if exc_info[2] is not None:</span>
+<span class="gi">+            raise exc_info[1].with_traceback(exc_info[2])</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise exc_info[1]</span>
+
+<span class="w"> </span>def _websocket_mask_python(mask: bytes, data: bytes) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Websocket masking function.
+<span class="gu">@@ -249,7 +319,11 @@ def _websocket_mask_python(mask: bytes, data: bytes) -&gt; bytes:</span>
+
+<span class="w"> </span>    This pure-python implementation may be replaced by an optimized version when available.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    mask_arr = array.array(&quot;B&quot;, mask)</span>
+<span class="gi">+    unmasked_arr = array.array(&quot;B&quot;, data)</span>
+<span class="gi">+    for i in range(len(data)):</span>
+<span class="gi">+        unmasked_arr[i] = unmasked_arr[i] ^ mask_arr[i % 4]</span>
+<span class="gi">+    return unmasked_arr.tobytes()</span>
+<span class="w"> </span>if os.environ.get(&#39;TORNADO_NO_EXTENSION&#39;) or os.environ.get(&#39;TORNADO_EXTENSION&#39;) == &#39;0&#39;:
+<span class="w"> </span>    _websocket_mask = _websocket_mask_python
+<span class="w"> </span>else:
+<span class="gh">diff --git a/tornado/web.py b/tornado/web.py</span>
+<span class="gh">index 7619ad4d..030e0ddc 100644</span>
+<span class="gd">--- a/tornado/web.py</span>
+<span class="gi">+++ b/tornado/web.py</span>
+<span class="gu">@@ -102,6 +102,114 @@ class _ArgDefaultMarker:</span>
+<span class="w"> </span>    pass
+<span class="w"> </span>_ARG_DEFAULT = _ArgDefaultMarker()
+
+<span class="gi">+def _unimplemented_method(*args: Any, **kwargs: Any) -&gt; None:</span>
+<span class="gi">+    raise HTTPError(405)</span>
+<span class="gi">+</span>
+<span class="gi">+def _create_signature_v1(secret: Union[str, bytes], *parts: Union[str, bytes]) -&gt; bytes:</span>
+<span class="gi">+    hash = hmac.new(utf8(secret), digestmod=hashlib.sha1)</span>
+<span class="gi">+    for part in parts:</span>
+<span class="gi">+        hash.update(utf8(part))</span>
+<span class="gi">+    return utf8(hash.hexdigest())</span>
+<span class="gi">+</span>
+<span class="gi">+def get_signature_key_version(value: Union[None, str, bytes]) -&gt; Optional[int]:</span>
+<span class="gi">+    &quot;&quot;&quot;Extract the signature key version from the given signed value.</span>
+<span class="gi">+</span>
+<span class="gi">+    Returns None if the version cannot be determined.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if value is None:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    value = utf8(value)</span>
+<span class="gi">+    parts = value.split(b&quot;|&quot;)</span>
+<span class="gi">+    if len(parts) &lt; 3:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    if len(parts) &gt; 3:</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return int(parts[3])</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+    return None</span>
+<span class="gi">+</span>
+<span class="gi">+def decode_signed_value(secret: _CookieSecretTypes, name: str, value: Union[None, str, bytes], max_age_days: Optional[float]=31, min_version: Optional[int]=None, clock: Callable[[], float]=None) -&gt; Optional[bytes]:</span>
+<span class="gi">+    &quot;&quot;&quot;Decode a signed value.</span>
+<span class="gi">+</span>
+<span class="gi">+    Returns the decoded value if the signature is valid and the value is not</span>
+<span class="gi">+    expired, or None otherwise.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if min_version is None:</span>
+<span class="gi">+        min_version = DEFAULT_SIGNED_VALUE_MIN_VERSION</span>
+<span class="gi">+    if clock is None:</span>
+<span class="gi">+        clock = time.time</span>
+<span class="gi">+    if value is None:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    value = utf8(value)</span>
+<span class="gi">+    parts = value.split(b&quot;|&quot;)</span>
+<span class="gi">+    if len(parts) &lt; 3:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    signature = parts[-1]</span>
+<span class="gi">+    if not isinstance(secret, dict):</span>
+<span class="gi">+        expected_sig = _create_signature_v1(secret, name, parts[0], parts[1])</span>
+<span class="gi">+        if not hmac.compare_digest(utf8(expected_sig), utf8(signature)):</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        timestamp = int(parts[1])</span>
+<span class="gi">+        if timestamp &lt; int(clock()) - max_age_days * 86400:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return base64.b64decode(parts[0])</span>
+<span class="gi">+        except Exception:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        version = 2</span>
+<span class="gi">+        if len(parts) &lt; 4:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        key_version = int(parts[-1])</span>
+<span class="gi">+        if key_version not in secret:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        expected_sig = _create_signature_v1(secret[key_version], name, parts[0], parts[1])</span>
+<span class="gi">+        if not hmac.compare_digest(utf8(expected_sig), utf8(signature)):</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        timestamp = int(parts[1])</span>
+<span class="gi">+        if timestamp &lt; int(clock()) - max_age_days * 86400:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return base64.b64decode(parts[0])</span>
+<span class="gi">+        except Exception:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+</span>
+<span class="gi">+def create_signed_value(secret: _CookieSecretTypes, name: str, value: Union[str, bytes], version: Optional[int]=None, clock: Callable[[], float]=None, key_version: Optional[int]=None) -&gt; bytes:</span>
+<span class="gi">+    &quot;&quot;&quot;Signs and timestamps a string so it cannot be forged.</span>
+<span class="gi">+</span>
+<span class="gi">+    Stores signatures in the format: value|timestamp|signature[|key_version].</span>
+<span class="gi">+    Parts are joined with pipes, and may not contain pipes themselves.</span>
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gi">+    if version is None:</span>
+<span class="gi">+        version = DEFAULT_SIGNED_VALUE_VERSION</span>
+<span class="gi">+    if clock is None:</span>
+<span class="gi">+        clock = time.time</span>
+<span class="gi">+</span>
+<span class="gi">+    timestamp = utf8(str(int(clock())))</span>
+<span class="gi">+    value = base64.b64encode(utf8(value))</span>
+<span class="gi">+</span>
+<span class="gi">+    if version == 1:</span>
+<span class="gi">+        if isinstance(secret, dict):</span>
+<span class="gi">+            raise ValueError(&quot;secret_dict cannot be used with version 1&quot;)</span>
+<span class="gi">+        signature = _create_signature_v1(secret, name, value, timestamp)</span>
+<span class="gi">+        value = b&quot;|&quot;.join([value, timestamp, signature])</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    elif version == 2:</span>
+<span class="gi">+        # Version 2 adds key versioning, but is otherwise the same.</span>
+<span class="gi">+        if isinstance(secret, dict):</span>
+<span class="gi">+            if key_version is None:</span>
+<span class="gi">+                key_version = max(secret.keys())</span>
+<span class="gi">+            assert key_version in secret</span>
+<span class="gi">+            secret = secret[key_version]</span>
+<span class="gi">+        signature = _create_signature_v1(secret, name, value, timestamp)</span>
+<span class="gi">+        value = b&quot;|&quot;.join([value, timestamp, signature])</span>
+<span class="gi">+        if key_version is not None:</span>
+<span class="gi">+            value = b&quot;|&quot;.join([value, utf8(str(key_version))])</span>
+<span class="gi">+        return value</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise ValueError(&quot;Unsupported version %d&quot; % version)</span>
+<span class="gi">+</span>
+<span class="w"> </span>class RequestHandler(object):
+<span class="w"> </span>    &quot;&quot;&quot;Base class for HTTP request handlers.
+
+<span class="gu">@@ -137,6 +245,28 @@ class RequestHandler(object):</span>
+<span class="w"> </span>        assert self.request.connection is not None
+<span class="w"> </span>        self.request.connection.set_close_callback(self.on_connection_close)
+<span class="w"> </span>        self.initialize(**kwargs)
+<span class="gi">+</span>
+<span class="gi">+    def _initialize(self) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Hook for subclass initialization.</span>
+<span class="gi">+</span>
+<span class="gi">+        A dictionary passed as the third argument of a ``URLSpec`` will be</span>
+<span class="gi">+        supplied as keyword arguments to initialize().</span>
+<span class="gi">+</span>
+<span class="gi">+        Example::</span>
+<span class="gi">+</span>
+<span class="gi">+            class ProfileHandler(RequestHandler):</span>
+<span class="gi">+                def initialize(self, database):</span>
+<span class="gi">+                    self.database = database</span>
+<span class="gi">+</span>
+<span class="gi">+                def get(self, username):</span>
+<span class="gi">+                    ...</span>
+<span class="gi">+</span>
+<span class="gi">+            app = Application([</span>
+<span class="gi">+                (r&#39;/user/(.*)&#39;, ProfileHandler, dict(database=database)),</span>
+<span class="gi">+                ])</span>
+<span class="gi">+        &quot;&quot;&quot;</span>
+<span class="gi">+        pass</span>
+<span class="gi">+</span>
+<span class="w"> </span>    initialize = _initialize
+<span class="w"> </span>    &quot;Hook for subclass initialization. Called for each request.\n\n    A dictionary passed as the third argument of a ``URLSpec`` will be\n    supplied as keyword arguments to ``initialize()``.\n\n    Example::\n\n        class ProfileHandler(RequestHandler):\n            def initialize(self, database):\n                self.database = database\n\n            def get(self, username):\n                ...\n\n        app = Application([\n            (r&#39;/user/(.*)&#39;, ProfileHandler, dict(database=database)),\n            ])\n    &quot;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

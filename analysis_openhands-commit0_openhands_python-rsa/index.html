@@ -1,0 +1,3521 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis openhands commit0 openhands python rsa - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openhands-python-rsa" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis openhands commit0 openhands python rsa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_no_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_no_args
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_priv_out_der" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_priv_out_der
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_priv_out_pem" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_priv_out_pem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_priv_stdout" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_priv_stdout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_pub_out_pem" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_pub_out_pem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_empty_decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_empty_decrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_empty_encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_empty_encrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_encrypt_decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_encrypt_decrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_encrypt_decrypt_unhappy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_encrypt_decrypt_unhappy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_empty_sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_empty_sign
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_empty_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_empty_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_sign_verify_unhappy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_sign_verify_unhappy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyprivatepublictesttest_private_to_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::PrivatePublicTest::test_private_to_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypyblindingtesttest_blinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::BlindingTest::test_blinding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypykeygentesttest_custom_exponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::KeyGenTest::test_custom_exponent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypykeygentesttest_custom_getprime_func" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::KeyGenTest::test_custom_getprime_func
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_load_malformed_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_load_malformed_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_load_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_load_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_load_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_load_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_save_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_save_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_save_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_save_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_load_from_disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_load_from_disk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_load_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_load_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_load_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_load_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_save_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_save_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_save_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_save_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_mypypymypyrunnertesttest_run_mypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_mypy.py::MypyRunnerTest::test_run_mypy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_parallelpyparalleltesttest_parallel_primegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_parallel.py::ParallelTest::test_parallel_primegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_bytes_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_bytes_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_bytes_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_bytes_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_unicode_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_unicode_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_unicode_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_unicode_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteoutputtest_bytes_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteOutput::test_bytes_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteoutputtest_bytes_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteOutput::test_bytes_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteinputtest_bytes_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteInput::test_bytes_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteinputtest_bytes_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteInput::test_bytes_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pybinarytesttest_decoding_failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::BinaryTest::test_decoding_failure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pybinarytesttest_enc_dec" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::BinaryTest::test_enc_dec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pyextrazeroestesttest_append_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::ExtraZeroesTest::test_append_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pyextrazeroestesttest_prepend_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::ExtraZeroesTest::test_prepend_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pyextrazeroestesttest_unmodified" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::ExtraZeroesTest::test_unmodified
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_alter_message" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_alter_message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_apppend_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_apppend_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_find_signature_hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_find_signature_hash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_hash_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_hash_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_multiple_signings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_multiple_signings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_prepend_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_prepend_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_sign_different_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_sign_different_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_sign_verify_sha3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_sign_verify_sha3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_split_hash_sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_split_hash_sign
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pypaddingsizetesttest_too_little_padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::PaddingSizeTest::test_too_little_padding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1_v2pymgftesttest_invalid_hasher" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1_v2.py::MGFTest::test_invalid_hasher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1_v2pymgftesttest_invalid_length" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1_v2.py::MGFTest::test_invalid_length
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1_v2pymgftesttest_oaep_int_db_mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1_v2.py::MGFTest::test_oaep_int_db_mask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_primepyprimetesttest_miller_rabin_primality_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_prime.py::PrimeTest::test_miller_rabin_primality_testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_stringspystringtesttest_enc_dec" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_strings.py::StringTest::test_enc_dec
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_openhands-commit0_openhands">back to OpenHands summary</a></p>
+<h1 id="openhands-python-rsa"><strong>OpenHands</strong>: python-rsa</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">error</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">29</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">44</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">87</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">87</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_clipykeygentesttest_keygen_no_args">test_cli.py::KeygenTest::test_keygen_no_args</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_no_args</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_priv_out_der">test_cli.py::KeygenTest::test_keygen_priv_out_der</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_priv_out_der</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_priv_out_pem">test_cli.py::KeygenTest::test_keygen_priv_out_pem</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_priv_out_pem</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_priv_stdout">test_cli.py::KeygenTest::test_keygen_priv_stdout</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_priv_stdout</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_pub_out_pem">test_cli.py::KeygenTest::test_keygen_pub_out_pem</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_pub_out_pem</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_empty_decrypt">test_cli.py::EncryptDecryptTest::test_empty_decrypt</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_empty_decrypt</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_empty_encrypt">test_cli.py::EncryptDecryptTest::test_empty_encrypt</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_empty_encrypt</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_encrypt_decrypt">test_cli.py::EncryptDecryptTest::test_encrypt_decrypt</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_encrypt_decrypt</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_encrypt_decrypt_unhappy">test_cli.py::EncryptDecryptTest::test_encrypt_decrypt_unhappy</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_encrypt_decrypt_unhappy</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_empty_sign">test_cli.py::SignVerifyTest::test_empty_sign</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_empty_sign</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_empty_verify">test_cli.py::SignVerifyTest::test_empty_verify</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_empty_verify</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_sign_verify">test_cli.py::SignVerifyTest::test_sign_verify</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_sign_verify</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_sign_verify_unhappy">test_cli.py::SignVerifyTest::test_sign_verify_unhappy</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_sign_verify_unhappy</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_clipyprivatepublictesttest_private_to_public">test_cli.py::PrivatePublicTest::test_private_to_public</h3>
+<details><summary> <pre>test_cli.py::PrivatePublicTest::test_private_to_public</pre></summary><pre>
+cls = <class 'tests.test_cli.PrivatePublicTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+        cls.pub_key, cls.priv_key = rsa.newkeys(512)
+        cls.pub_fname = "%s.pub" % cls.__name__
+        cls.priv_fname = "%s.key" % cls.__name__
+
+        with open(cls.pub_fname, "wb") as outfile:
+>           outfile.write(cls.pub_key.save_pkcs1())
+E           TypeError: a bytes-like object is required, not 'NoneType'
+
+tests/test_cli.py:90: TypeError
+</pre>
+</details>
+<h3 id="test_keypyblindingtesttest_blinding">test_key.py::BlindingTest::test_blinding</h3>
+<details><summary> <pre>test_key.py::BlindingTest::test_blinding</pre></summary><pre>
+self = <tests.test_key.BlindingTest testMethod=test_blinding>
+
+    def test_blinding(self):
+        """Test blinding and unblinding.
+
+        This is basically the doctest of the PrivateKey.blind method, but then
+        implemented as unittest to allow running on different Python versions.
+        """
+
+        pk = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+        message = 12345
+        encrypted = rsa.core.encrypt_int(message, pk.e, pk.n)
+
+        blinded_1, unblind_1 = pk.blind(encrypted)  # blind before decrypting
+        decrypted = rsa.core.decrypt_int(blinded_1, pk.d, pk.n)
+        unblinded_1 = pk.unblind(decrypted, unblind_1)
+
+        self.assertEqual(unblinded_1, message)
+
+        # Re-blinding should use a different blinding factor.
+        blinded_2, unblind_2 = pk.blind(encrypted)  # blind before decrypting
+>       self.assertNotEqual(blinded_1, blinded_2)
+E       AssertionError: 179750770 == 179750770
+
+tests/test_key.py:32: AssertionError
+</pre>
+</details>
+<h3 id="test_keypykeygentesttest_custom_exponent">test_key.py::KeyGenTest::test_custom_exponent</h3>
+<details><summary> <pre>test_key.py::KeyGenTest::test_custom_exponent</pre></summary><pre>
+p = 241, q = 199, exponent = 3
+
+    def calculate_keys_custom_exponent(p: int, q: int, exponent: int) -> typing.Tuple[int, int]:
+        """Calculates an encryption and a decryption key given p, q and an exponent,
+        and returns them as a tuple (e, d)
+
+        :param p: the first large prime
+        :param q: the second large prime
+        :param exponent: the exponent for the key; only change this if you know
+            what you're doing, as the exponent influences how difficult your
+            private key can be cracked. A very common choice for e is 65537.
+        :type exponent: int
+
+        """
+        phi_n = (p - 1) * (q - 1)
+
+        try:
+>           d = rsa.common.inverse(exponent, phi_n)
+
+rsa/key.py:513: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = 3, n = 47520
+
+    def inverse(x: int, n: int) -> int:
+        """Returns the inverse of x % n under multiplication, a.k.a x^-1 (mod n)
+
+        >>> inverse(7, 4)
+        3
+        >>> (inverse(143, 4) * 143) % 4
+        1
+        """
+        gcd, a, _ = extended_gcd(x, n)
+        if gcd != 1:
+>           raise NotRelativePrimeError(x, n, gcd)
+E           rsa.common.NotRelativePrimeError: 3 and 47520 are not relatively prime, divider=3
+
+rsa/common.py:123: NotRelativePrimeError
+
+During handling of the above exception, another exception occurred:
+
+self = <tests.test_key.KeyGenTest testMethod=test_custom_exponent>
+
+    def test_custom_exponent(self):
+>       pub, priv = rsa.key.newkeys(16, exponent=3)
+
+tests/test_key.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/key.py:598: in newkeys
+    p, q, e, d = gen_keys(nbits, prime_func, accurate=accurate, exponent=exponent)
+rsa/key.py:554: in gen_keys
+    e, d = calculate_keys_custom_exponent(p, q, exponent)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+p = 241, q = 199, exponent = 3
+
+    def calculate_keys_custom_exponent(p: int, q: int, exponent: int) -> typing.Tuple[int, int]:
+        """Calculates an encryption and a decryption key given p, q and an exponent,
+        and returns them as a tuple (e, d)
+
+        :param p: the first large prime
+        :param q: the second large prime
+        :param exponent: the exponent for the key; only change this if you know
+            what you're doing, as the exponent influences how difficult your
+            private key can be cracked. A very common choice for e is 65537.
+        :type exponent: int
+
+        """
+        phi_n = (p - 1) * (q - 1)
+
+        try:
+            d = rsa.common.inverse(exponent, phi_n)
+        except rsa.common.NotRelativePrimeError as ex:
+>           raise ValueError("e and phi_n are not relatively prime", ex)
+E           ValueError: ('e and phi_n are not relatively prime', NotRelativePrimeError('3 and 47520 are not relatively prime, divider=3'))
+
+rsa/key.py:515: ValueError
+</pre>
+</details>
+<h3 id="test_keypykeygentesttest_custom_getprime_func">test_key.py::KeyGenTest::test_custom_getprime_func</h3>
+<details><summary> <pre>test_key.py::KeyGenTest::test_custom_getprime_func</pre></summary><pre>
+self = <tests.test_key.KeyGenTest testMethod=test_custom_getprime_func>
+
+    def test_custom_getprime_func(self):
+        # List of primes to test with, in order [p, q, p, q, ....]
+        # By starting with two of the same primes, we test that this is
+        # properly rejected.
+        primes = [64123, 64123, 64123, 50957, 39317, 33107]
+
+        def getprime(_):
+            return primes.pop(0)
+
+        # This exponent will cause two other primes to be generated.
+        exponent = 136407
+
+>       (p, q, e, d) = rsa.key.gen_keys(
+            64, accurate=False, getprime_func=getprime, exponent=exponent
+        )
+
+tests/test_key.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/key.py:551: in gen_keys
+    p, q = find_p_q(bits_per_prime, getprime_func, accurate)
+rsa/key.py:478: in find_p_q
+    p = getprime_func(nbits)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_ = 32
+
+    def getprime(_):
+>       return primes.pop(0)
+E       IndexError: pop from empty list
+
+tests/test_key.py:67: IndexError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_load_malformed_private_key">test_load_save_keys.py::DerTest::test_load_malformed_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_load_malformed_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_load_malformed_private_key>
+der_decode = <MagicMock name='decode' id='139853361656752'>
+
+    @mock.patch("pyasn1.codec.der.decoder.decode")
+    def test_load_malformed_private_key(self, der_decode):
+        """Test loading malformed private DER keys."""
+
+        # Decode returns an invalid exp2 value.
+        der_decode.return_value = (
+            [0, 3727264081, 65537, 3349121513, 65063, 57287, 55063, 0, 50797],
+            0,
+        )
+
+        with warnings.catch_warnings(record=True) as w:
+            # Always print warnings
+            warnings.simplefilter("always")
+
+            # Load 3 keys
+            for _ in range(3):
+                key = rsa.key.PrivateKey.load_pkcs1(PRIVATE_DER, "DER")
+
+            # Check that 3 warnings were generated.
+>           self.assertEqual(3, len(w))
+E           AssertionError: 3 != 0
+
+tests/test_load_save_keys.py:122: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_load_private_key">test_load_save_keys.py::DerTest::test_load_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_load_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_load_private_key>
+
+    def test_load_private_key(self):
+        """Test loading private DER keys."""
+
+        key = rsa.key.PrivateKey.load_pkcs1(PRIVATE_DER, "DER")
+        expected = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PrivateKey(3727264081, 65537, 3349121513, 65063, 57287) != None
+
+tests/test_load_save_keys.py:98: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_load_public_key">test_load_save_keys.py::DerTest::test_load_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_load_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_load_public_key>
+
+    def test_load_public_key(self):
+        """Test loading public DER keys."""
+
+        key = rsa.key.PublicKey.load_pkcs1(PUBLIC_DER, "DER")
+        expected = rsa.key.PublicKey(3727264081, 65537)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PublicKey(3727264081, 65537) != None
+
+tests/test_load_save_keys.py:148: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_save_private_key">test_load_save_keys.py::DerTest::test_save_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_save_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_save_private_key>
+
+    def test_save_private_key(self):
+        """Test saving private DER keys."""
+
+        key = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+        der = key.save_pkcs1("DER")
+
+>       self.assertIsInstance(der, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:139: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_save_public_key">test_load_save_keys.py::DerTest::test_save_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_save_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_save_public_key>
+
+    def test_save_public_key(self):
+        """Test saving public DER keys."""
+
+        key = rsa.key.PublicKey(3727264081, 65537)
+        der = key.save_pkcs1("DER")
+
+>       self.assertIsInstance(der, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:156: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_load_from_disk">test_load_save_keys.py::PemTest::test_load_from_disk</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_load_from_disk</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_load_from_disk>
+
+    def test_load_from_disk(self):
+        """Test loading a PEM file from disk."""
+
+        fname = os.path.join(os.path.dirname(__file__), "private.pem")
+        with open(fname, mode="rb") as privatefile:
+            keydata = privatefile.read()
+        privkey = rsa.key.PrivateKey.load_pkcs1(keydata)
+
+>       self.assertEqual(15945948582725241569, privkey.p)
+E       AttributeError: 'NoneType' object has no attribute 'p'
+
+tests/test_load_save_keys.py:208: AttributeError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_load_private_key">test_load_save_keys.py::PemTest::test_load_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_load_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_load_private_key>
+
+    def test_load_private_key(self):
+        """Test loading private PEM files."""
+
+        key = rsa.key.PrivateKey.load_pkcs1(PRIVATE_PEM, "PEM")
+        expected = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PrivateKey(3727264081, 65537, 3349121513, 65063, 57287) != None
+
+tests/test_load_save_keys.py:169: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_load_public_key">test_load_save_keys.py::PemTest::test_load_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_load_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_load_public_key>
+
+    def test_load_public_key(self):
+        """Test loading public PEM files."""
+
+        key = rsa.key.PublicKey.load_pkcs1(PUBLIC_PEM, "PEM")
+        expected = rsa.key.PublicKey(3727264081, 65537)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PublicKey(3727264081, 65537) != None
+
+tests/test_load_save_keys.py:189: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_save_private_key">test_load_save_keys.py::PemTest::test_save_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_save_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_save_private_key>
+
+    def test_save_private_key(self):
+        """Test saving private PEM files."""
+
+        key = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+        pem = key.save_pkcs1("PEM")
+
+>       self.assertIsInstance(pem, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:180: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_save_public_key">test_load_save_keys.py::PemTest::test_save_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_save_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_save_public_key>
+
+    def test_save_public_key(self):
+        """Test saving public PEM files."""
+
+        key = rsa.key.PublicKey(3727264081, 65537)
+        pem = key.save_pkcs1("PEM")
+
+>       self.assertIsInstance(pem, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:197: AssertionError
+</pre>
+</details>
+<h3 id="test_mypypymypyrunnertesttest_run_mypy">test_mypy.py::MypyRunnerTest::test_run_mypy</h3>
+<details><summary> <pre>test_mypy.py::MypyRunnerTest::test_run_mypy</pre></summary><pre>
+self = <tests.test_mypy.MypyRunnerTest testMethod=test_run_mypy>
+
+    def test_run_mypy(self):
+        proj_root = pathlib.Path(__file__).parent.parent
+        args = [
+            "--incremental",
+            "--ignore-missing-imports",
+            f"--python-version={sys.version_info.major}.{sys.version_info.minor}",
+        ] + [str(proj_root / dirname) for dirname in test_modules]
+
+        result = mypy.api.run(args)
+
+        stdout, stderr, status = result
+
+        messages = []
+        if stderr:
+            messages.append(stderr)
+        if stdout:
+            messages.append(stdout)
+        if status:
+            messages.append("Mypy failed with status %d" % status)
+        if messages and not all("Success" in message for message in messages):
+>           self.fail("\n".join(["Mypy errors:"] + messages))
+E           AssertionError: Mypy errors:
+E           setup.cfg: [mypy]: python_version: Python 3.7 is not supported (must be 3.8 or higher)
+E           
+E           rsa/pem.py:33: error: If x = b'abc' then "%s" % x produces "b'abc'", not "abc". If this is desired behavior use "%r" % x. Otherwise, decode the bytes  [str-bytes-safe]
+E           rsa/pem.py:56: error: If x = b'abc' then "%s" % x produces "b'abc'", not "abc". If this is desired behavior use "%r" % x. Otherwise, decode the bytes  [str-bytes-safe]
+E           rsa/pem.py:59: error: If x = b'abc' then "%s" % x produces "b'abc'", not "abc". If this is desired behavior use "%r" % x. Otherwise, decode the bytes  [str-bytes-safe]
+E           rsa/parallel.py:15: error: Missing return statement  [empty-body]
+E           rsa/key.py:41: error: Missing return statement  [empty-body]
+E           rsa/key.py:54: error: Missing return statement  [empty-body]
+E           rsa/key.py:66: error: Missing return statement  [empty-body]
+E           rsa/key.py:74: error: Missing return statement  [empty-body]
+E           rsa/key.py:83: error: Missing return statement  [empty-body]
+E           rsa/key.py:98: error: Missing return statement  [empty-body]
+E           rsa/key.py:102: error: Missing return statement  [empty-body]
+E           rsa/key.py:247: error: Missing return statement  [empty-body]
+E           rsa/key.py:256: error: Missing return statement  [empty-body]
+E           rsa/key.py:268: error: Missing return statement  [empty-body]
+E           rsa/key.py:277: error: Missing return statement  [empty-body]
+E           rsa/key.py:294: error: Missing return statement  [empty-body]
+E           rsa/key.py:375: error: Name "core" is not defined  [name-defined]
+E           rsa/key.py:388: error: Name "core" is not defined  [name-defined]
+E           rsa/key.py:392: error: Missing return statement  [empty-body]
+E           rsa/key.py:414: error: Missing return statement  [empty-body]
+E           rsa/key.py:423: error: Missing return statement  [empty-body]
+E           rsa/key.py:436: error: Missing return statement  [empty-body]
+E           rsa/key.py:595: error: Incompatible types in assignment (expression has type "Callable[[int, int], int]", variable has type "Callable[[int], int]")  [assignment]
+E           rsa/pkcs1_v2.py:8: error: Missing return statement  [empty-body]
+E           rsa/cli.py:58: error: Missing return statement  [empty-body]
+E           rsa/cli.py:58: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:65: error: Missing return statement  [empty-body]
+E           rsa/cli.py:65: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:69: error: Missing return statement  [empty-body]
+E           rsa/cli.py:69: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:85: error: Missing return statement  [empty-body]
+E           rsa/cli.py:85: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:96: error: Incompatible types in assignment (expression has type "type[PrivateKey]", base class "CryptoOperation" defined the type as "type[PublicKey]")  [assignment]
+E           rsa/cli.py:98: error: Missing return statement  [empty-body]
+E           rsa/cli.py:98: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:110: error: Incompatible types in assignment (expression has type "type[PrivateKey]", base class "CryptoOperation" defined the type as "type[PublicKey]")  [assignment]
+E           rsa/cli.py:114: error: Missing return statement  [empty-body]
+E           rsa/cli.py:114: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           Found 32 errors in 5 files (checked 28 source files)
+E           
+E           Mypy failed with status 1
+
+tests/test_mypy.py:31: AssertionError
+</pre>
+</details>
+<h3 id="test_parallelpyparalleltesttest_parallel_primegen">test_parallel.py::ParallelTest::test_parallel_primegen</h3>
+<details><summary> <pre>test_parallel.py::ParallelTest::test_parallel_primegen</pre></summary><pre>
+self = <tests.test_parallel.ParallelTest testMethod=test_parallel_primegen>
+
+    def test_parallel_primegen(self):
+        p = rsa.parallel.getprime(1024, 3)
+
+>       self.assertFalse(rsa.prime.is_prime(p - 1))
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+
+tests/test_parallel.py:16: TypeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_bytes_private">test_pem.py::TestBytesAndStrings::test_bytes_private</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_bytes_private</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_bytes_private>
+
+    def test_bytes_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem.encode("ascii"))
+>       self.assertEqual(prime1, key.p)
+E       AttributeError: 'NoneType' object has no attribute 'p'
+
+tests/test_pem.py:71: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_bytes_public">test_pem.py::TestBytesAndStrings::test_bytes_public</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_bytes_public</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_bytes_public>
+
+    def test_bytes_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem.encode("ascii"))
+>       self.assertEqual(prime1 * prime2, key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pem.py:63: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_unicode_private">test_pem.py::TestBytesAndStrings::test_unicode_private</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_unicode_private</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_unicode_private>
+
+    def test_unicode_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem)
+>       self.assertEqual(prime1 * prime2, key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pem.py:67: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_unicode_public">test_pem.py::TestBytesAndStrings::test_unicode_public</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_unicode_public</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_unicode_public>
+
+    def test_unicode_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem)
+>       self.assertEqual(prime1 * prime2, key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pem.py:59: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteoutputtest_bytes_private">test_pem.py::TestByteOutput::test_bytes_private</h3>
+<details><summary> <pre>test_pem.py::TestByteOutput::test_bytes_private</pre></summary><pre>
+self = <tests.test_pem.TestByteOutput testMethod=test_bytes_private>
+
+    def test_bytes_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem)
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:85: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteoutputtest_bytes_public">test_pem.py::TestByteOutput::test_bytes_public</h3>
+<details><summary> <pre>test_pem.py::TestByteOutput::test_bytes_public</pre></summary><pre>
+self = <tests.test_pem.TestByteOutput testMethod=test_bytes_public>
+
+    def test_bytes_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem)
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:80: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteinputtest_bytes_private">test_pem.py::TestByteInput::test_bytes_private</h3>
+<details><summary> <pre>test_pem.py::TestByteInput::test_bytes_private</pre></summary><pre>
+self = <tests.test_pem.TestByteInput testMethod=test_bytes_private>
+
+    def test_bytes_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem.encode("ascii"))
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:99: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteinputtest_bytes_public">test_pem.py::TestByteInput::test_bytes_public</h3>
+<details><summary> <pre>test_pem.py::TestByteInput::test_bytes_public</pre></summary><pre>
+self = <tests.test_pem.TestByteInput testMethod=test_bytes_public>
+
+    def test_bytes_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem.encode("ascii"))
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:94: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1pybinarytesttest_decoding_failure">test_pkcs1.py::BinaryTest::test_decoding_failure</h3>
+<details><summary> <pre>test_pkcs1.py::BinaryTest::test_decoding_failure</pre></summary><pre>
+self = <tests.test_pkcs1.BinaryTest testMethod=test_decoding_failure>
+
+    def test_decoding_failure(self):
+        message = struct.pack(">IIII", 0, 0, 0, 1)
+        encrypted = pkcs1.encrypt(message, self.pub)
+
+        # Alter the encrypted stream
+        a = encrypted[5]
+        self.assertIsInstance(a, int)
+
+        altered_a = (a + 1) % 256
+        encrypted = encrypted[:5] + bytes([altered_a]) + encrypted[6:]
+
+>       self.assertRaises(pkcs1.DecryptionError, pkcs1.decrypt, encrypted, self.priv)
+
+tests/test_pkcs1.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:196: in decrypt
+    decrypted = priv_key.blinded_decrypt(encrypted)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def blinded_decrypt(self, encrypted: int) -> int:
+        """Decrypts the message using blinding to prevent side-channel attacks.
+
+        :param encrypted: the encrypted message
+        :type encrypted: int
+
+        :returns: the decrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(encrypted)
+>       decrypted = core.decrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:375: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pybinarytesttest_enc_dec">test_pkcs1.py::BinaryTest::test_enc_dec</h3>
+<details><summary> <pre>test_pkcs1.py::BinaryTest::test_enc_dec</pre></summary><pre>
+self = <tests.test_pkcs1.BinaryTest testMethod=test_enc_dec>
+
+    def test_enc_dec(self):
+        message = struct.pack(">IIII", 0, 0, 0, 1)
+        print("\n\tMessage:   %r" % message)
+
+        encrypted = pkcs1.encrypt(message, self.pub)
+        print("\tEncrypted: %r" % encrypted)
+
+>       decrypted = pkcs1.decrypt(encrypted, self.priv)
+
+tests/test_pkcs1.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:196: in decrypt
+    decrypted = priv_key.blinded_decrypt(encrypted)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(95614720695042764324427531959883658352389409168200043743716125771242804589173, 65537, 658712580585193220508...732761663741411725876717561437874473, 322908099193905263849242787816761600303, 296105055691484639329146938269366267291)
+encrypted = 836805949104183130...6056738828867516451
+
+    def blinded_decrypt(self, encrypted: int) -> int:
+        """Decrypts the message using blinding to prevent side-channel attacks.
+
+        :param encrypted: the encrypted message
+        :type encrypted: int
+
+        :returns: the decrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(encrypted)
+>       decrypted = core.decrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:375: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pyextrazeroestesttest_append_zeroes">test_pkcs1.py::ExtraZeroesTest::test_append_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::ExtraZeroesTest::test_append_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.ExtraZeroesTest testMethod=test_append_zeroes>
+
+    def test_append_zeroes(self):
+        cyphertext = self.cyphertext + bytes.fromhex("0000")
+        with self.assertRaises(rsa.DecryptionError):
+>           rsa.decrypt(cyphertext, self.private_key)
+
+tests/test_pkcs1.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def decrypt(crypto: bytes, priv_key: key.PrivateKey) -> bytes:
+        """Decrypts the given message using PKCS#1 v1.5
+
+        The decryption is considered 'failed' when the resulting cleartext doesn't
+        start with the bytes 00 02, or when the 00 byte between the padding and
+        the message cannot be found.
+
+        :param crypto: the crypto text as returned by :py:func:`rsa.encrypt`
+        :param priv_key: the :py:class:`rsa.PrivateKey` to decrypt with.
+        :raise DecryptionError: when the decryption fails. No details are given as
+            to why the code thinks the decryption fails, as this would leak
+            information about the private key.
+
+
+        >>> import rsa
+        >>> (pub_key, priv_key) = rsa.newkeys(256)
+
+        It works with strings:
+
+        >>> crypto = encrypt(b'hello', pub_key)
+        >>> decrypt(crypto, priv_key)
+        b'hello'
+
+        And with binary data:
+
+        >>> crypto = encrypt(b'\\x00\\x00\\x00\\x00\\x01', pub_key)
+        >>> decrypt(crypto, priv_key)
+        b'\\x00\\x00\\x00\\x00\\x01'
+
+        Altering the encrypted information will *likely* cause a
+        :py:class:`rsa.pkcs1.DecryptionError`. If you want to be *sure*, use
+        :py:func:`rsa.sign`.
+
+
+        .. warning::
+
+            Never display the stack trace of a
+            :py:class:`rsa.pkcs1.DecryptionError` exception. It shows where in the
+            code the exception occurred, and thus leaks information about the key.
+            It's only a tiny bit of information, but every bit makes cracking the
+            keys easier.
+
+        >>> crypto = encrypt(b'hello', pub_key)
+        >>> crypto = crypto[0:5] + b'X' + crypto[6:] # change a byte
+        >>> decrypt(crypto, priv_key)
+        Traceback (most recent call last):
+        ...
+        rsa.pkcs1.DecryptionError: Decryption failed
+
+        """
+>       blocksize = common.byte_size(priv_key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+rsa/pkcs1.py:194: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1pyextrazeroestesttest_prepend_zeroes">test_pkcs1.py::ExtraZeroesTest::test_prepend_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::ExtraZeroesTest::test_prepend_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.ExtraZeroesTest testMethod=test_prepend_zeroes>
+
+    def test_prepend_zeroes(self):
+        cyphertext = bytes.fromhex("0000") + self.cyphertext
+        with self.assertRaises(rsa.DecryptionError):
+>           rsa.decrypt(cyphertext, self.private_key)
+
+tests/test_pkcs1.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def decrypt(crypto: bytes, priv_key: key.PrivateKey) -> bytes:
+        """Decrypts the given message using PKCS#1 v1.5
+
+        The decryption is considered 'failed' when the resulting cleartext doesn't
+        start with the bytes 00 02, or when the 00 byte between the padding and
+        the message cannot be found.
+
+        :param crypto: the crypto text as returned by :py:func:`rsa.encrypt`
+        :param priv_key: the :py:class:`rsa.PrivateKey` to decrypt with.
+        :raise DecryptionError: when the decryption fails. No details are given as
+            to why the code thinks the decryption fails, as this would leak
+            information about the private key.
+
+
+        >>> import rsa
+        >>> (pub_key, priv_key) = rsa.newkeys(256)
+
+        It works with strings:
+
+        >>> crypto = encrypt(b'hello', pub_key)
+        >>> decrypt(crypto, priv_key)
+        b'hello'
+
+        And with binary data:
+
+        >>> crypto = encrypt(b'\\x00\\x00\\x00\\x00\\x01', pub_key)
+        >>> decrypt(crypto, priv_key)
+        b'\\x00\\x00\\x00\\x00\\x01'
+
+        Altering the encrypted information will *likely* cause a
+        :py:class:`rsa.pkcs1.DecryptionError`. If you want to be *sure*, use
+        :py:func:`rsa.sign`.
+
+
+        .. warning::
+
+            Never display the stack trace of a
+            :py:class:`rsa.pkcs1.DecryptionError` exception. It shows where in the
+            code the exception occurred, and thus leaks information about the key.
+            It's only a tiny bit of information, but every bit makes cracking the
+            keys easier.
+
+        >>> crypto = encrypt(b'hello', pub_key)
+        >>> crypto = crypto[0:5] + b'X' + crypto[6:] # change a byte
+        >>> decrypt(crypto, priv_key)
+        Traceback (most recent call last):
+        ...
+        rsa.pkcs1.DecryptionError: Decryption failed
+
+        """
+>       blocksize = common.byte_size(priv_key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+rsa/pkcs1.py:194: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1pyextrazeroestesttest_unmodified">test_pkcs1.py::ExtraZeroesTest::test_unmodified</h3>
+<details><summary> <pre>test_pkcs1.py::ExtraZeroesTest::test_unmodified</pre></summary><pre>
+self = <tests.test_pkcs1.ExtraZeroesTest testMethod=test_unmodified>
+
+    def test_unmodified(self):
+>       message = rsa.decrypt(self.cyphertext, self.private_key)
+
+tests/test_pkcs1.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+crypto = b'E\x01\xb4\xd6i\xe0\x1b\x9e\xf2\xdc\x80\n\xa1\xb0mI\x19oZ\t\xfe\x8f\xbc\xd072<`\xea\xf0\'\xbf\xb9\x842\xbeNJ&\xc5g\xf...x86\x1e\x81\x02\x1be\n\x1d\xe5\x10\x02\xc3\x15\xf1\xe7\xc1-\xeb\xe4\xdc\xeb\xf7\x90\xca\xaaT\xa2\xf2k\x14\x9c\xf9\xe7}'
+priv_key = None
+
+    def decrypt(crypto: bytes, priv_key: key.PrivateKey) -> bytes:
+        """Decrypts the given message using PKCS#1 v1.5
+
+        The decryption is considered 'failed' when the resulting cleartext doesn't
+        start with the bytes 00 02, or when the 00 byte between the padding and
+        the message cannot be found.
+
+        :param crypto: the crypto text as returned by :py:func:`rsa.encrypt`
+        :param priv_key: the :py:class:`rsa.PrivateKey` to decrypt with.
+        :raise DecryptionError: when the decryption fails. No details are given as
+            to why the code thinks the decryption fails, as this would leak
+            information about the private key.
+
+
+        >>> import rsa
+        >>> (pub_key, priv_key) = rsa.newkeys(256)
+
+        It works with strings:
+
+        >>> crypto = encrypt(b'hello', pub_key)
+        >>> decrypt(crypto, priv_key)
+        b'hello'
+
+        And with binary data:
+
+        >>> crypto = encrypt(b'\\x00\\x00\\x00\\x00\\x01', pub_key)
+        >>> decrypt(crypto, priv_key)
+        b'\\x00\\x00\\x00\\x00\\x01'
+
+        Altering the encrypted information will *likely* cause a
+        :py:class:`rsa.pkcs1.DecryptionError`. If you want to be *sure*, use
+        :py:func:`rsa.sign`.
+
+
+        .. warning::
+
+            Never display the stack trace of a
+            :py:class:`rsa.pkcs1.DecryptionError` exception. It shows where in the
+            code the exception occurred, and thus leaks information about the key.
+            It's only a tiny bit of information, but every bit makes cracking the
+            keys easier.
+
+        >>> crypto = encrypt(b'hello', pub_key)
+        >>> crypto = crypto[0:5] + b'X' + crypto[6:] # change a byte
+        >>> decrypt(crypto, priv_key)
+        Traceback (most recent call last):
+        ...
+        rsa.pkcs1.DecryptionError: Decryption failed
+
+        """
+>       blocksize = common.byte_size(priv_key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+rsa/pkcs1.py:194: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_alter_message">test_pkcs1.py::SignatureTest::test_alter_message</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_alter_message</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_alter_message>
+
+    def test_alter_message(self):
+        """Altering the message should let the verification fail."""
+
+>       signature = pkcs1.sign(b"je moeder", self.priv, "SHA-256")
+
+tests/test_pkcs1.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(12982770477732206231002065472644628732355165926074488211477571291118499825488635362931509618974219355121679...43281742064090705882928042129412760323, 112871977475489262537336750872172921003829494611758584825372855732961618385741)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_apppend_zeroes">test_pkcs1.py::SignatureTest::test_apppend_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_apppend_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_apppend_zeroes>
+
+    def test_apppend_zeroes(self):
+        """Apppending the signature with zeroes should be detected."""
+
+        message = b"je moeder"
+>       signature = pkcs1.sign(message, self.priv, "SHA-256")
+
+tests/test_pkcs1.py:180: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(69053056860840701657005268949532753375582488726430047412717988854773107682431009095996011955376408565163068...792070978038295005517486012832303832449, 71618209829853038536082281327901022242997997287918307202354740774340698639123)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_find_signature_hash">test_pkcs1.py::SignatureTest::test_find_signature_hash</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_find_signature_hash</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_find_signature_hash>
+
+    def test_find_signature_hash(self):
+        """Test happy flow of sign and find_signature_hash"""
+
+        message = b"je moeder"
+>       signature = pkcs1.sign(message, self.priv, "SHA-256")
+
+tests/test_pkcs1.py:116: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(73668105939698565717130057463911336069997927141990904100106727281840882635120378680395728172928117231374214...003566069958816649877345091643144822571, 74489001441796341172787301664724673881934341018560627749381364895683701845831)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_hash_sign_verify">test_pkcs1.py::SignatureTest::test_hash_sign_verify</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_hash_sign_verify</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_hash_sign_verify>
+
+    def test_hash_sign_verify(self):
+        """Test happy flow of hash, sign, and verify"""
+
+        message = b"je moeder"
+        msg_hash = pkcs1.compute_hash(message, "SHA-224")
+>       signature = pkcs1.sign_hash(msg_hash, self.priv, "SHA-224")
+
+tests/test_pkcs1.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(10191165817517998816421103470165366841864312679595289237071024126622889650629139578253770265256848291240143...118953045129160050954393415190143236967, 92163270658656317716018450096305425072747381421774495955195233596668343628737)
+message = 409173825987017733...4743180718120711231
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_multiple_signings">test_pkcs1.py::SignatureTest::test_multiple_signings</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_multiple_signings</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_multiple_signings>
+
+    def test_multiple_signings(self):
+        """Signing the same message twice should return the same signatures."""
+
+        message = struct.pack(">IIII", 0, 0, 0, 1)
+>       signature1 = pkcs1.sign(message, self.priv, "SHA-1")
+
+tests/test_pkcs1.py:141: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(10747271424381222220765106125214290348353074725562107531952458608769650986530759582057213542081004063693193...252788395643746079665670704277818850423, 93006824697380217678374301436209044688627043787374058089919936286322174125727)
+message = 409173825987017733...9656193183751328884
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_prepend_zeroes">test_pkcs1.py::SignatureTest::test_prepend_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_prepend_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_prepend_zeroes>
+
+    def test_prepend_zeroes(self):
+        """Prepending the signature with zeroes should be detected."""
+
+        message = b"je moeder"
+>       signature = pkcs1.sign(message, self.priv, "SHA-256")
+
+tests/test_pkcs1.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(88912840433250517262724650859124454694236109736127789150734610904619999757479024839991186507201581713487051...772925379299992249527352523496249329879, 82418757054176614484704104321547814990347680164618615039222476824876656554909)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_sign_different_key">test_pkcs1.py::SignatureTest::test_sign_different_key</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_sign_different_key</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_sign_different_key>
+
+    def test_sign_different_key(self):
+        """Signing with another key should let the verification fail."""
+
+        (otherpub, _) = rsa.newkeys(512)
+
+        message = b"je moeder"
+>       signature = pkcs1.sign(message, self.priv, "SHA-256")
+
+tests/test_pkcs1.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(11010156951753028146951272511504599382722513352748163457818184490794840695189648816560295411591799294419814...30548431737087657367791140209263066433, 103848699458135744899137814569259843949465161457614752187476400989542058526579)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_sign_verify">test_pkcs1.py::SignatureTest::test_sign_verify</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_sign_verify</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_sign_verify>
+
+    def test_sign_verify(self):
+        """Test happy flow of sign and verify"""
+
+        message = b"je moeder"
+>       signature = pkcs1.sign(message, self.priv, "SHA-256")
+
+tests/test_pkcs1.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(71351459838344004218830923561339435966780306809395333420975156488891876277266597795877370889220223812541915...946707088114522457785567944113611872341, 79809983599713256253062862891990367028474247091133287133398805798894309518143)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_sign_verify_sha3">test_pkcs1.py::SignatureTest::test_sign_verify_sha3</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_sign_verify_sha3</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_sign_verify_sha3>
+
+    @unittest.skipIf(sys.version_info < (3, 6), "SHA3 requires Python 3.6+")
+    def test_sign_verify_sha3(self):
+        """Test happy flow of sign and verify with SHA3-256"""
+
+        message = b"je moeder"
+>       signature = pkcs1.sign(message, self.priv, "SHA3-256")
+
+tests/test_pkcs1.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:282: in sign
+    return sign_hash(hasher.digest(), priv_key, hash_method)
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(69737252947676194748517631426714582022156145151810356465027077430558159859113784530928019737364289156147029...078228792979507203575692296413728845121, 77556222637620107926454494045523472235503694526581262112491081851016131159907)
+message = 409173825987017733...6161036184995569769
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_split_hash_sign">test_pkcs1.py::SignatureTest::test_split_hash_sign</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_split_hash_sign</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_split_hash_sign>
+
+    def test_split_hash_sign(self):
+        """Hashing and then signing should match with directly signing the message."""
+
+        message = b"je moeder"
+        msg_hash = pkcs1.compute_hash(message, "SHA-256")
+>       signature1 = pkcs1.sign_hash(msg_hash, self.priv, "SHA-256")
+
+tests/test_pkcs1.py:151: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:243: in sign_hash
+    encrypted = priv_key.blinded_encrypt(payload)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(78422484899469105162369493802767799804724930916688815210646725354538257676415209517342169001543332315941778...795466580967815887920274906984932775759, 84634047710423740384130299839741213212556643265546611595857042922496199179071)
+message = 409173825987017733...9681456309543691530
+
+    def blinded_encrypt(self, message: int) -> int:
+        """Encrypts the message using blinding to prevent side-channel attacks.
+
+        :param message: the message to encrypt
+        :type message: int
+
+        :returns: the encrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(message)
+>       encrypted = core.encrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:388: NameError
+</pre>
+</details>
+<h3 id="test_pkcs1pypaddingsizetesttest_too_little_padding">test_pkcs1.py::PaddingSizeTest::test_too_little_padding</h3>
+<details><summary> <pre>test_pkcs1.py::PaddingSizeTest::test_too_little_padding</pre></summary><pre>
+self = <tests.test_pkcs1.PaddingSizeTest testMethod=test_too_little_padding>
+
+        def test_too_little_padding(self):
+            """Padding less than 8 bytes should be rejected."""
+
+            # Construct key that will be small enough to need only 7 bytes of padding.
+            # This key is 168 bit long, and was generated with rsa.newkeys(nbits=168).
+            self.private_key = rsa.PrivateKey.load_pkcs1(
+                b"""
+    -----BEGIN RSA PRIVATE KEY-----
+    MHkCAQACFgCIGbbNSkIRLtprxka9NgOf5UxgxCMCAwEAAQIVQqymO0gHubdEVS68
+    CdCiWmOJxVfRAgwBQM+e1JJwMKmxSF0CCmya6CFxO8Evdn8CDACMM3AlVC4FhlN8
+    3QIKC9cjoam/swMirwIMAR7Br9tdouoH7jAE
+    -----END RSA PRIVATE KEY-----
+            """
+            )
+>           self.public_key = rsa.PublicKey(n=self.private_key.n, e=self.private_key.e)
+E           AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pkcs1.py:201: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1_v2pymgftesttest_invalid_hasher">test_pkcs1_v2.py::MGFTest::test_invalid_hasher</h3>
+<details><summary> <pre>test_pkcs1_v2.py::MGFTest::test_invalid_hasher</pre></summary><pre>
+self = <tests.test_pkcs1_v2.MGFTest testMethod=test_invalid_hasher>
+
+    def test_invalid_hasher(self):
+        """Tests an invalid hasher generates an exception"""
+>       with self.assertRaises(ValueError):
+E       AssertionError: ValueError not raised
+
+tests/test_pkcs1_v2.py:74: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1_v2pymgftesttest_invalid_length">test_pkcs1_v2.py::MGFTest::test_invalid_length</h3>
+<details><summary> <pre>test_pkcs1_v2.py::MGFTest::test_invalid_length</pre></summary><pre>
+self = <tests.test_pkcs1_v2.MGFTest testMethod=test_invalid_length>
+
+    def test_invalid_length(self):
+>       with self.assertRaises(OverflowError):
+E       AssertionError: OverflowError not raised
+
+tests/test_pkcs1_v2.py:78: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1_v2pymgftesttest_oaep_int_db_mask">test_pkcs1_v2.py::MGFTest::test_oaep_int_db_mask</h3>
+<details><summary> <pre>test_pkcs1_v2.py::MGFTest::test_oaep_int_db_mask</pre></summary><pre>
+self = <tests.test_pkcs1_v2.MGFTest testMethod=test_oaep_int_db_mask>
+
+    def test_oaep_int_db_mask(self):
+        seed = (
+            b"\xaa\xfd\x12\xf6\x59\xca\xe6\x34\x89\xb4\x79\xe5\x07\x6d\xde\xc2" b"\xf0\x6c\xb5\x8f"
+        )
+        db = (
+            b"\xda\x39\xa3\xee\x5e\x6b\x4b\x0d\x32\x55\xbf\xef\x95\x60\x18\x90"
+            b"\xaf\xd8\x07\x09\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xd4\x36\xe9\x95\x69"
+            b"\xfd\x32\xa7\xc8\xa0\x5b\xbc\x90\xd3\x2c\x49"
+        )
+        masked_db = (
+            b"\xdc\xd8\x7d\x5c\x68\xf1\xee\xa8\xf5\x52\x67\xc3\x1b\x2e\x8b\xb4"
+            b"\x25\x1f\x84\xd7\xe0\xb2\xc0\x46\x26\xf5\xaf\xf9\x3e\xdc\xfb\x25"
+            b"\xc9\xc2\xb3\xff\x8a\xe1\x0e\x83\x9a\x2d\xdb\x4c\xdc\xfe\x4f\xf4"
+            b"\x77\x28\xb4\xa1\xb7\xc1\x36\x2b\xaa\xd2\x9a\xb4\x8d\x28\x69\xd5"
+            b"\x02\x41\x21\x43\x58\x11\x59\x1b\xe3\x92\xf9\x82\xfb\x3e\x87\xd0"
+            b"\x95\xae\xb4\x04\x48\xdb\x97\x2f\x3a\xc1\x4f\x7b\xc2\x75\x19\x52"
+            b"\x81\xce\x32\xd2\xf1\xb7\x6d\x4d\x35\x3e\x2d"
+        )
+
+        # dbMask = MGF(seed, length(DB))
+        db_mask = pkcs1_v2.mgf1(seed, length=len(db))
+        expected_db_mask = (
+            b"\x06\xe1\xde\xb2\x36\x9a\xa5\xa5\xc7\x07\xd8\x2c\x8e\x4e\x93\x24"
+            b"\x8a\xc7\x83\xde\xe0\xb2\xc0\x46\x26\xf5\xaf\xf9\x3e\xdc\xfb\x25"
+            b"\xc9\xc2\xb3\xff\x8a\xe1\x0e\x83\x9a\x2d\xdb\x4c\xdc\xfe\x4f\xf4"
+            b"\x77\x28\xb4\xa1\xb7\xc1\x36\x2b\xaa\xd2\x9a\xb4\x8d\x28\x69\xd5"
+            b"\x02\x41\x21\x43\x58\x11\x59\x1b\xe3\x92\xf9\x82\xfb\x3e\x87\xd0"
+            b"\x95\xae\xb4\x04\x48\xdb\x97\x2f\x3a\xc1\x4e\xaf\xf4\x9c\x8c\x3b"
+            b"\x7c\xfc\x95\x1a\x51\xec\xd1\xdd\xe6\x12\x64"
+        )
+
+>       self.assertEqual(db_mask, expected_db_mask)
+E       AssertionError: None != b'\x06\xe1\xde\xb26\x9a\xa5\xa5\xc7\x07\x[292 chars]x12d'
+
+tests/test_pkcs1_v2.py:62: AssertionError
+</pre>
+</details>
+<h3 id="test_primepyprimetesttest_miller_rabin_primality_testing">test_prime.py::PrimeTest::test_miller_rabin_primality_testing</h3>
+<details><summary> <pre>test_prime.py::PrimeTest::test_miller_rabin_primality_testing</pre></summary><pre>
+self = <tests.test_prime.PrimeTest testMethod=test_miller_rabin_primality_testing>
+
+    def test_miller_rabin_primality_testing(self):
+        """Uses monkeypatching to ensure certain random numbers.
+
+        This allows us to predict/control the code path.
+        """
+
+        randints = []
+
+        def fake_randint(maxvalue):
+            return randints.pop(0)
+
+        orig_randint = rsa.randnum.randint
+        rsa.randnum.randint = fake_randint
+        try:
+            # 'n is composite'
+            randints.append(2630484832)  # causes the 'n is composite' case with n=3784949785
+>           self.assertEqual(False, rsa.prime.miller_rabin_primality_testing(2787998641, 7))
+
+tests/test_prime.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/prime.py:74: in miller_rabin_primality_testing
+    a = rsa.randnum.randint(n - 2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+maxvalue = 2787998639
+
+    def fake_randint(maxvalue):
+>       return randints.pop(0)
+E       IndexError: pop from empty list
+
+tests/test_prime.py:54: IndexError
+</pre>
+</details>
+<h3 id="test_stringspystringtesttest_enc_dec">test_strings.py::StringTest::test_enc_dec</h3>
+<details><summary> <pre>test_strings.py::StringTest::test_enc_dec</pre></summary><pre>
+self = <tests.test_strings.StringTest testMethod=test_enc_dec>
+
+    def test_enc_dec(self):
+        message = unicode_string.encode("utf-8")
+        print("\n\tMessage:   %r" % message)
+
+        encrypted = rsa.encrypt(message, self.pub)
+        print("\tEncrypted: %r" % encrypted)
+
+>       decrypted = rsa.decrypt(encrypted, self.priv)
+
+tests/test_strings.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rsa/pkcs1.py:196: in decrypt
+    decrypted = priv_key.blinded_decrypt(encrypted)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PrivateKey(20766974548921856241411339435616572405041482269057613764614839697998178621450548526140313641466095125857871...4773649727991992191001035218882070906647880475693047505233, 4350334802980478104235794525867776264731199692791408949683)
+encrypted = 106404939315780522...3989547512628923930
+
+    def blinded_decrypt(self, encrypted: int) -> int:
+        """Decrypts the message using blinding to prevent side-channel attacks.
+
+        :param encrypted: the encrypted message
+        :type encrypted: int
+
+        :returns: the decrypted message
+        :rtype: int
+        """
+        blinded, blindfac_inverse = self.blind(encrypted)
+>       decrypted = core.decrypt_int(blinded, self.d, self.n)
+E       NameError: name 'core' is not defined
+
+rsa/key.py:375: NameError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/EncryptDecryptTest.pub b/EncryptDecryptTest.pub</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/KeygenTest.pub b/KeygenTest.pub</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/PrivatePublicTest.pub b/PrivatePublicTest.pub</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/SignVerifyTest.pub b/SignVerifyTest.pub</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/rsa/common.py b/rsa/common.py</span>
+<span class="gh">index 3a3066b..bfd01de 100644</span>
+<span class="gd">--- a/rsa/common.py</span>
+<span class="gi">+++ b/rsa/common.py</span>
+<span class="gu">@@ -30,7 +30,11 @@ def bit_size(num: int) -&gt; int:</span>
+<span class="w"> </span>    :returns:
+<span class="w"> </span>        Returns the number of bits in the integer.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(num, int):</span>
+<span class="gi">+        raise TypeError(&quot;Number must be an integer&quot;)</span>
+<span class="gi">+    if num == 0:</span>
+<span class="gi">+        return 0</span>
+<span class="gi">+    return abs(num).bit_length()</span>
+
+<span class="w"> </span>def byte_size(number: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -52,7 +56,13 @@ def byte_size(number: int) -&gt; int:</span>
+<span class="w"> </span>    :returns:
+<span class="w"> </span>        The number of bytes required to hold a specific long number.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(number, int):</span>
+<span class="gi">+        raise TypeError(&quot;Number must be an integer&quot;)</span>
+<span class="gi">+    if number &lt; 0:</span>
+<span class="gi">+        raise ValueError(&quot;Number must be an unsigned integer&quot;)</span>
+<span class="gi">+    if number == 0:</span>
+<span class="gi">+        return 1</span>
+<span class="gi">+    return ceil_div(bit_size(number), 8)</span>
+
+<span class="w"> </span>def ceil_div(num: int, div: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -72,11 +82,33 @@ def ceil_div(num: int, div: int) -&gt; int:</span>
+
+<span class="w"> </span>    :return: Rounded up result of the division between the parameters.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    quanta, mod = divmod(num, div)</span>
+<span class="gi">+    if mod:</span>
+<span class="gi">+        quanta += 1</span>
+<span class="gi">+    return quanta</span>
+
+<span class="w"> </span>def extended_gcd(a: int, b: int) -&gt; typing.Tuple[int, int, int]:
+<span class="w"> </span>    &quot;&quot;&quot;Returns a tuple (r, i, j) such that r = gcd(a, b) = ia + jb&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # r = gcd(a,b) i = multiplicitive inverse of a mod b</span>
+<span class="gi">+    #      or      j = multiplicitive inverse of b mod a</span>
+<span class="gi">+    # Neg return values for i or j are made positive mod b or a respectively</span>
+<span class="gi">+    # Iterative Version</span>
+<span class="gi">+    x = 0</span>
+<span class="gi">+    y = 1</span>
+<span class="gi">+    lx = 1</span>
+<span class="gi">+    ly = 0</span>
+<span class="gi">+    oa = a  # Remember original a/b to remove</span>
+<span class="gi">+    ob = b  # negative values from return results</span>
+<span class="gi">+    while b != 0:</span>
+<span class="gi">+        q = a // b</span>
+<span class="gi">+        (a, b) = (b, a % b)</span>
+<span class="gi">+        (x, lx) = ((lx - (q * x)), x)</span>
+<span class="gi">+        (y, ly) = ((ly - (q * y)), y)</span>
+<span class="gi">+    if lx &lt; 0:</span>
+<span class="gi">+        lx += ob  # If neg wrap modulo original b</span>
+<span class="gi">+    if ly &lt; 0:</span>
+<span class="gi">+        ly += oa  # If neg wrap modulo original a</span>
+<span class="gi">+    return a, lx, ly  # Return only positive values</span>
+
+<span class="w"> </span>def inverse(x: int, n: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Returns the inverse of x % n under multiplication, a.k.a x^-1 (mod n)
+<span class="gu">@@ -86,7 +118,10 @@ def inverse(x: int, n: int) -&gt; int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; (inverse(143, 4) * 143) % 4
+<span class="w"> </span>    1
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    gcd, a, _ = extended_gcd(x, n)</span>
+<span class="gi">+    if gcd != 1:</span>
+<span class="gi">+        raise NotRelativePrimeError(x, n, gcd)</span>
+<span class="gi">+    return a % n</span>
+
+<span class="w"> </span>def crt(a_values: typing.Iterable[int], modulo_values: typing.Iterable[int]) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Chinese Remainder Theorem.
+<span class="gu">@@ -107,7 +142,26 @@ def crt(a_values: typing.Iterable[int], modulo_values: typing.Iterable[int]) -&gt;</span>
+<span class="w"> </span>    &gt;&gt;&gt; crt([2, 3, 0], [7, 11, 15])
+<span class="w"> </span>    135
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    a_values = list(a_values)</span>
+<span class="gi">+    modulo_values = list(modulo_values)</span>
+<span class="gi">+    </span>
+<span class="gi">+    if len(a_values) != len(modulo_values):</span>
+<span class="gi">+        raise ValueError(&quot;Number of a values must match number of modulo values&quot;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Calculate product of all moduli</span>
+<span class="gi">+    prod = 1</span>
+<span class="gi">+    for modulus in modulo_values:</span>
+<span class="gi">+        prod *= modulus</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Calculate sum of a[i] * b[i] * r[i] where:</span>
+<span class="gi">+    # b[i] = prod / m[i]</span>
+<span class="gi">+    # r[i] = multiplicative inverse of b[i] mod m[i]</span>
+<span class="gi">+    total = 0</span>
+<span class="gi">+    for i, (a_i, m_i) in enumerate(zip(a_values, modulo_values)):</span>
+<span class="gi">+        p = prod // m_i</span>
+<span class="gi">+        total += a_i * p * inverse(p, m_i)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return total % prod</span>
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="w"> </span>    import doctest
+<span class="w"> </span>    doctest.testmod()
+\ No newline at end of file
+<span class="gh">diff --git a/rsa/core.py b/rsa/core.py</span>
+<span class="gh">index da6bc40..9496220 100644</span>
+<span class="gd">--- a/rsa/core.py</span>
+<span class="gi">+++ b/rsa/core.py</span>
+<span class="gu">@@ -6,8 +6,8 @@ mathematically on integers.</span>
+
+<span class="w"> </span>def encrypt_int(message: int, ekey: int, n: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Encrypts a message using encryption key &#39;ekey&#39;, working modulo n&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return pow(message, ekey, n)</span>
+
+<span class="w"> </span>def decrypt_int(cyphertext: int, dkey: int, n: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Decrypts a cypher text using the decryption key &#39;dkey&#39;, working modulo n&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    return pow(cyphertext, dkey, n)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/rsa/key.py b/rsa/key.py</span>
+<span class="gh">index 5af0506..27cf041 100644</span>
+<span class="gd">--- a/rsa/key.py</span>
+<span class="gi">+++ b/rsa/key.py</span>
+<span class="gu">@@ -120,7 +120,12 @@ class AbstractKey:</span>
+
+<span class="w"> </span>        See https://en.wikipedia.org/wiki/Blinding_%28cryptography%29
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        with self.mutex:</span>
+<span class="gi">+            if self.blindfac &lt; 0:</span>
+<span class="gi">+                self.blindfac, self.blindfac_inverse = self._update_blinding_factor()</span>
+<span class="gi">+</span>
+<span class="gi">+            blinded = (message * pow(self.blindfac, self.e, self.n)) % self.n</span>
+<span class="gi">+            return blinded, self.blindfac_inverse</span>
+
+<span class="w"> </span>    def unblind(self, blinded: int, blindfac_inverse: int) -&gt; int:
+<span class="w"> </span>        &quot;&quot;&quot;Performs blinding on the message using random number &#39;blindfac_inverse&#39;.
+<span class="gu">@@ -133,7 +138,7 @@ class AbstractKey:</span>
+
+<span class="w"> </span>        See https://en.wikipedia.org/wiki/Blinding_%28cryptography%29
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return (blindfac_inverse * blinded) % self.n</span>
+
+<span class="w"> </span>    def _update_blinding_factor(self) -&gt; typing.Tuple[int, int]:
+<span class="w"> </span>        &quot;&quot;&quot;Update blinding factors.
+<span class="gu">@@ -146,7 +151,13 @@ class AbstractKey:</span>
+
+<span class="w"> </span>        :return: the new blinding factor and its inverse.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        # Generate a random number between 2 and n-1</span>
+<span class="gi">+        blindfac = rsa.randnum.randint(self.n - 2)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Calculate its inverse</span>
+<span class="gi">+        blindfac_inverse = rsa.common.inverse(blindfac, self.n)</span>
+<span class="gi">+</span>
+<span class="gi">+        return blindfac, blindfac_inverse</span>
+
+<span class="w"> </span>class PublicKey(AbstractKey):
+<span class="w"> </span>    &quot;&quot;&quot;Represents a public RSA key.
+<span class="gu">@@ -221,7 +232,17 @@ class PublicKey(AbstractKey):</span>
+<span class="w"> </span>        PublicKey(2367317549, 65537)
+
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        from pyasn1.codec.der import decoder</span>
+<span class="gi">+        from rsa.asn1 import AsnPubKey</span>
+<span class="gi">+</span>
+<span class="gi">+        # Decode the DER file</span>
+<span class="gi">+        (priv, _) = decoder.decode(keyfile, asn1Spec=AsnPubKey())</span>
+<span class="gi">+</span>
+<span class="gi">+        # Get the numbers</span>
+<span class="gi">+        n = int(priv[&#39;modulus&#39;])</span>
+<span class="gi">+        e = int(priv[&#39;publicExponent&#39;])</span>
+<span class="gi">+</span>
+<span class="gi">+        return cls(n, e)</span>
+
+<span class="w"> </span>    def _save_pkcs1_der(self) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Saves the public key in PKCS#1 DER format.
+<span class="gu">@@ -350,7 +371,9 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>        :returns: the decrypted message
+<span class="w"> </span>        :rtype: int
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        blinded, blindfac_inverse = self.blind(encrypted)</span>
+<span class="gi">+        decrypted = core.decrypt_int(blinded, self.d, self.n)</span>
+<span class="gi">+        return self.unblind(decrypted, blindfac_inverse)</span>
+
+<span class="w"> </span>    def blinded_encrypt(self, message: int) -&gt; int:
+<span class="w"> </span>        &quot;&quot;&quot;Encrypts the message using blinding to prevent side-channel attacks.
+<span class="gu">@@ -361,7 +384,9 @@ class PrivateKey(AbstractKey):</span>
+<span class="w"> </span>        :returns: the encrypted message
+<span class="w"> </span>        :rtype: int
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        blinded, blindfac_inverse = self.blind(message)</span>
+<span class="gi">+        encrypted = core.encrypt_int(blinded, self.d, self.n)</span>
+<span class="gi">+        return self.unblind(encrypted, blindfac_inverse)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def _load_pkcs1_der(cls, keyfile: bytes) -&gt; &#39;PrivateKey&#39;:
+<span class="gu">@@ -446,7 +471,29 @@ def find_p_q(nbits: int, getprime_func: typing.Callable[[int], int]=rsa.prime.ge</span>
+<span class="w"> </span>    True
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    total_bits = nbits * 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # Make sure we have two different primes</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        p = getprime_func(nbits)</span>
+<span class="gi">+        q = getprime_func(nbits)</span>
+<span class="gi">+        if p == q:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Make sure we have the right number of bits</span>
+<span class="gi">+        if accurate:</span>
+<span class="gi">+            if rsa.common.bit_size(p * q) != total_bits:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            # As long as we&#39;re within 16 bits of the desired size, we&#39;re good</span>
+<span class="gi">+            found_size = rsa.common.bit_size(p * q)</span>
+<span class="gi">+            if found_size &gt; total_bits or found_size &lt; (total_bits - 16):</span>
+<span class="gi">+                continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Return the largest first</span>
+<span class="gi">+        if p &gt; q:</span>
+<span class="gi">+            return p, q</span>
+<span class="gi">+        return q, p</span>
+
+<span class="w"> </span>def calculate_keys_custom_exponent(p: int, q: int, exponent: int) -&gt; typing.Tuple[int, int]:
+<span class="w"> </span>    &quot;&quot;&quot;Calculates an encryption and a decryption key given p, q and an exponent,
+<span class="gu">@@ -460,7 +507,17 @@ def calculate_keys_custom_exponent(p: int, q: int, exponent: int) -&gt; typing.Tupl</span>
+<span class="w"> </span>    :type exponent: int
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    phi_n = (p - 1) * (q - 1)</span>
+<span class="gi">+</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        d = rsa.common.inverse(exponent, phi_n)</span>
+<span class="gi">+    except rsa.common.NotRelativePrimeError as ex:</span>
+<span class="gi">+        raise ValueError(&quot;e and phi_n are not relatively prime&quot;, ex)</span>
+<span class="gi">+</span>
+<span class="gi">+    if (exponent * d) % phi_n != 1:</span>
+<span class="gi">+        raise ValueError(&quot;e and d are not multiplicative inverses&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return exponent, d</span>
+
+<span class="w"> </span>def calculate_keys(p: int, q: int) -&gt; typing.Tuple[int, int]:
+<span class="w"> </span>    &quot;&quot;&quot;Calculates an encryption and a decryption key given p and q, and
+<span class="gu">@@ -471,7 +528,7 @@ def calculate_keys(p: int, q: int) -&gt; typing.Tuple[int, int]:</span>
+
+<span class="w"> </span>    :return: tuple (e, d) with the encryption and decryption exponents.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return calculate_keys_custom_exponent(p, q, DEFAULT_EXPONENT)</span>
+
+<span class="w"> </span>def gen_keys(nbits: int, getprime_func: typing.Callable[[int], int], accurate: bool=True, exponent: int=DEFAULT_EXPONENT) -&gt; typing.Tuple[int, int, int, int]:
+<span class="w"> </span>    &quot;&quot;&quot;Generate RSA keys of nbits bits. Returns (p, q, e, d).
+<span class="gu">@@ -487,7 +544,16 @@ def gen_keys(nbits: int, getprime_func: typing.Callable[[int], int], accurate: b</span>
+<span class="w"> </span>        private key can be cracked. A very common choice for e is 65537.
+<span class="w"> </span>    :type exponent: int
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Size of each prime number</span>
+<span class="gi">+    bits_per_prime = nbits // 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get p and q</span>
+<span class="gi">+    p, q = find_p_q(bits_per_prime, getprime_func, accurate)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get encryption and decryption exponents</span>
+<span class="gi">+    e, d = calculate_keys_custom_exponent(p, q, exponent)</span>
+<span class="gi">+</span>
+<span class="gi">+    return p, q, e, d</span>
+
+<span class="w"> </span>def newkeys(nbits: int, accurate: bool=True, poolsize: int=1, exponent: int=DEFAULT_EXPONENT) -&gt; typing.Tuple[PublicKey, PrivateKey]:
+<span class="w"> </span>    &quot;&quot;&quot;Generates public and private keys, and returns them as (pub, priv).
+<span class="gu">@@ -498,11 +564,12 @@ def newkeys(nbits: int, accurate: bool=True, poolsize: int=1, exponent: int=DEFA</span>
+
+<span class="w"> </span>    :param nbits: the number of bits required to store ``n = p*q``.
+<span class="w"> </span>    :param accurate: when True, ``n`` will have exactly the number of bits you
+<span class="gd">-        asked for. However, this makes key generation much slower. When False,</span>
+<span class="gd">-        `n`` may have slightly less bits.</span>
+<span class="gi">+        asked for. However, this can be a problem when using the RSA algorithm as</span>
+<span class="gi">+        part of a protocol where others are expecting a certain minimum number of</span>
+<span class="gi">+        bits. In that case, use accurate=False.</span>
+<span class="w"> </span>    :param poolsize: the number of processes to use to generate the prime
+<span class="gd">-        numbers. If set to a number &gt; 1, a parallel algorithm will be used.</span>
+<span class="gd">-        This requires Python 2.6 or newer.</span>
+<span class="gi">+        numbers. If set to a number &gt; 1, then that many processes will be</span>
+<span class="gi">+        created to generate the prime numbers in parallel.</span>
+<span class="w"> </span>    :param exponent: the exponent for the key; only change this if you know
+<span class="w"> </span>        what you&#39;re doing, as the exponent influences how difficult your
+<span class="w"> </span>        private key can be cracked. A very common choice for e is 65537.
+<span class="gu">@@ -514,18 +581,29 @@ def newkeys(nbits: int, accurate: bool=True, poolsize: int=1, exponent: int=DEFA</span>
+<span class="w"> </span>    Python 2.6 or newer.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gd">-__all__ = [&#39;PublicKey&#39;, &#39;PrivateKey&#39;, &#39;newkeys&#39;]</span>
+<span class="gi">+    if nbits &lt; 16:</span>
+<span class="gi">+        raise ValueError(&#39;Key too small&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if poolsize &lt; 1:</span>
+<span class="gi">+        raise ValueError(&#39;Pool size (%i) should be &gt;= 1&#39; % poolsize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # If poolsize is 1, don&#39;t use multiprocessing</span>
+<span class="gi">+    if poolsize == 1:</span>
+<span class="gi">+        prime_func = rsa.prime.getprime</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        from rsa import parallel</span>
+<span class="gi">+        prime_func = parallel.getprime</span>
+<span class="gi">+</span>
+<span class="gi">+    # Generate the key components</span>
+<span class="gi">+    p, q, e, d = gen_keys(nbits, prime_func, accurate=accurate, exponent=exponent)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create the key objects</span>
+<span class="gi">+    n = p * q</span>
+<span class="gi">+</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        PublicKey(n, e),</span>
+<span class="gi">+        PrivateKey(n, e, d, p, q)</span>
+<span class="gi">+    )</span>
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="w"> </span>    import doctest
+<span class="gd">-    try:</span>
+<span class="gd">-        for count in range(100):</span>
+<span class="gd">-            failures, tests = doctest.testmod()</span>
+<span class="gd">-            if failures:</span>
+<span class="gd">-                break</span>
+<span class="gd">-            if count % 10 == 0 and count or count == 1:</span>
+<span class="gd">-                print(&#39;%i times&#39; % count)</span>
+<span class="gd">-    except KeyboardInterrupt:</span>
+<span class="gd">-        print(&#39;Aborted&#39;)</span>
+<span class="gd">-    else:</span>
+<span class="gd">-        print(&#39;Doctests done&#39;)</span>
+\ No newline at end of file
+<span class="gi">+    doctest.testmod()</span>
+\ No newline at end of file
+<span class="gh">diff --git a/rsa/pem.py b/rsa/pem.py</span>
+<span class="gh">index 732a4e2..a54015c 100644</span>
+<span class="gd">--- a/rsa/pem.py</span>
+<span class="gi">+++ b/rsa/pem.py</span>
+<span class="gu">@@ -7,11 +7,56 @@ def _markers(pem_marker: FlexiText) -&gt; typing.Tuple[bytes, bytes]:</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Returns the start and end PEM markers, as bytes.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(pem_marker, str):</span>
+<span class="gi">+        pem_marker = pem_marker.encode(&#39;ascii&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return (</span>
+<span class="gi">+        b&#39;-----BEGIN &#39; + pem_marker + b&#39;-----&#39;,</span>
+<span class="gi">+        b&#39;-----END &#39; + pem_marker + b&#39;-----&#39;</span>
+<span class="gi">+    )</span>
+
+<span class="w"> </span>def _pem_lines(contents: bytes, pem_start: bytes, pem_end: bytes) -&gt; typing.Iterator[bytes]:
+<span class="w"> </span>    &quot;&quot;&quot;Generator over PEM lines between pem_start and pem_end.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    in_pem_part = False</span>
+<span class="gi">+    seen_pem_start = False</span>
+<span class="gi">+</span>
+<span class="gi">+    for line in contents.splitlines():</span>
+<span class="gi">+        line = line.strip()</span>
+<span class="gi">+</span>
+<span class="gi">+        # Skip empty lines</span>
+<span class="gi">+        if not line:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle start marker</span>
+<span class="gi">+        if line == pem_start:</span>
+<span class="gi">+            if in_pem_part:</span>
+<span class="gi">+                raise ValueError(&#39;Seen start marker &quot;%s&quot; twice&#39; % pem_start)</span>
+<span class="gi">+</span>
+<span class="gi">+            in_pem_part = True</span>
+<span class="gi">+            seen_pem_start = True</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Skip stuff before first marker</span>
+<span class="gi">+        if not in_pem_part:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Handle end marker</span>
+<span class="gi">+        if line == pem_end:</span>
+<span class="gi">+            in_pem_part = False</span>
+<span class="gi">+            break</span>
+<span class="gi">+</span>
+<span class="gi">+        # Skip stuff after end marker</span>
+<span class="gi">+        if not in_pem_part:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        # Load the base64 data</span>
+<span class="gi">+        yield line</span>
+<span class="gi">+</span>
+<span class="gi">+    if not seen_pem_start:</span>
+<span class="gi">+        raise ValueError(&#39;No PEM start marker &quot;%s&quot; found&#39; % pem_start)</span>
+<span class="gi">+</span>
+<span class="gi">+    if in_pem_part:</span>
+<span class="gi">+        raise ValueError(&#39;No PEM end marker &quot;%s&quot; found&#39; % pem_end)</span>
+
+<span class="w"> </span>def load_pem(contents: FlexiText, pem_marker: FlexiText) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Loads a PEM file.
+<span class="gu">@@ -27,7 +72,19 @@ def load_pem(contents: FlexiText, pem_marker: FlexiText) -&gt; bytes:</span>
+<span class="w"> </span>        marker cannot be found.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Convert strings to bytes</span>
+<span class="gi">+    if isinstance(contents, str):</span>
+<span class="gi">+        contents = contents.encode(&#39;ascii&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the start and end markers</span>
+<span class="gi">+    pem_start, pem_end = _markers(pem_marker)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get all lines between the markers</span>
+<span class="gi">+    pem_lines = [line for line in _pem_lines(contents, pem_start, pem_end)]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Base64-decode the contents</span>
+<span class="gi">+    pem = b&#39;&#39;.join(pem_lines)</span>
+<span class="gi">+    return base64.standard_b64decode(pem)</span>
+
+<span class="w"> </span>def save_pem(contents: bytes, pem_marker: FlexiText) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Saves a PEM file.
+<span class="gu">@@ -40,4 +97,17 @@ def save_pem(contents: bytes, pem_marker: FlexiText) -&gt; bytes:</span>
+<span class="w"> </span>    :return: the base64-encoded content between the start and end markers, as bytes.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    # Get the start and end markers</span>
+<span class="gi">+    pem_start, pem_end = _markers(pem_marker)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Base64-encode the contents</span>
+<span class="gi">+    b64 = base64.standard_b64encode(contents).replace(b&#39;\n&#39;, b&#39;&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Split into lines of 64 characters each</span>
+<span class="gi">+    chunks = [b64[i:i + 64] for i in range(0, len(b64), 64)]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Create output</span>
+<span class="gi">+    lines = [pem_start, b&#39;&#39;] + chunks + [b&#39;&#39;, pem_end]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Combine all lines</span>
+<span class="gi">+    return b&#39;\n&#39;.join(lines)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/rsa/pkcs1.py b/rsa/pkcs1.py</span>
+<span class="gh">index c7529c4..d9187f8 100644</span>
+<span class="gd">--- a/rsa/pkcs1.py</span>
+<span class="gi">+++ b/rsa/pkcs1.py</span>
+<span class="gu">@@ -51,7 +51,33 @@ def _pad_for_encryption(message: bytes, target_length: int) -&gt; bytes:</span>
+<span class="w"> </span>    b&#39;\\x00hello&#39;
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    max_msglength = target_length - 11</span>
+<span class="gi">+    msglength = len(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    if msglength &gt; max_msglength:</span>
+<span class="gi">+        raise OverflowError(&#39;%i bytes needed for message, but there is only&#39;</span>
+<span class="gi">+                          &#39; space for %i&#39; % (msglength, max_msglength))</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get random padding</span>
+<span class="gi">+    padding_length = target_length - msglength - 3</span>
+<span class="gi">+    padding = b&#39;&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+    # We remove 0-bytes, so we&#39;ll end up with less padding than we&#39;ve asked for,</span>
+<span class="gi">+    # so keep adding data until we&#39;re at the correct length.</span>
+<span class="gi">+    while len(padding) &lt; padding_length:</span>
+<span class="gi">+        needed_bytes = padding_length - len(padding)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Get some random bytes</span>
+<span class="gi">+        new_padding = os.urandom(needed_bytes + 5)</span>
+<span class="gi">+</span>
+<span class="gi">+        # Remove the 0-bytes, and add them to our padding</span>
+<span class="gi">+        new_padding = bytes(b for b in new_padding if b != 0)</span>
+<span class="gi">+        padding = padding + new_padding[:needed_bytes]</span>
+<span class="gi">+</span>
+<span class="gi">+    return b&#39;&#39;.join([b&#39;\x00\x02&#39;,</span>
+<span class="gi">+                    padding,</span>
+<span class="gi">+                    b&#39;\x00&#39;,</span>
+<span class="gi">+                    message])</span>
+
+<span class="w"> </span>def _pad_for_signing(message: bytes, target_length: int) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Pads the message for signing, returning the padded message.
+<span class="gu">@@ -71,7 +97,19 @@ def _pad_for_signing(message: bytes, target_length: int) -&gt; bytes:</span>
+<span class="w"> </span>    b&#39;\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xff&#39;
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    max_msglength = target_length - 11</span>
+<span class="gi">+    msglength = len(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    if msglength &gt; max_msglength:</span>
+<span class="gi">+        raise OverflowError(&#39;%i bytes needed for message, but there is only&#39;</span>
+<span class="gi">+                          &#39; space for %i&#39; % (msglength, max_msglength))</span>
+<span class="gi">+</span>
+<span class="gi">+    padding_length = target_length - msglength - 3</span>
+<span class="gi">+</span>
+<span class="gi">+    return b&#39;&#39;.join([b&#39;\x00\x01&#39;,</span>
+<span class="gi">+                    padding_length * b&#39;\xff&#39;,</span>
+<span class="gi">+                    b&#39;\x00&#39;,</span>
+<span class="gi">+                    message])</span>
+
+<span class="w"> </span>def encrypt(message: bytes, pub_key: key.PublicKey) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Encrypts the given message using PKCS#1 v1.5
+<span class="gu">@@ -94,7 +132,14 @@ def encrypt(message: bytes, pub_key: key.PublicKey) -&gt; bytes:</span>
+<span class="w"> </span>    True
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    keylength = common.byte_size(pub_key.n)</span>
+<span class="gi">+    padded = _pad_for_encryption(message, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    payload = transform.bytes2int(padded)</span>
+<span class="gi">+    encrypted = core.encrypt_int(payload, pub_key.e, pub_key.n)</span>
+<span class="gi">+    block = transform.int2bytes(encrypted, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    return block</span>
+
+<span class="w"> </span>def decrypt(crypto: bytes, priv_key: key.PrivateKey) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Decrypts the given message using PKCS#1 v1.5
+<span class="gu">@@ -146,7 +191,25 @@ def decrypt(crypto: bytes, priv_key: key.PrivateKey) -&gt; bytes:</span>
+<span class="w"> </span>    rsa.pkcs1.DecryptionError: Decryption failed
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    blocksize = common.byte_size(priv_key.n)</span>
+<span class="gi">+    encrypted = transform.bytes2int(crypto)</span>
+<span class="gi">+    decrypted = priv_key.blinded_decrypt(encrypted)</span>
+<span class="gi">+    cleartext = transform.int2bytes(decrypted, blocksize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Check for proper padding</span>
+<span class="gi">+    if len(cleartext) != blocksize:</span>
+<span class="gi">+        raise DecryptionError(&#39;Decryption failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if cleartext[0:2] != b&#39;\x00\x02&#39;:</span>
+<span class="gi">+        raise DecryptionError(&#39;Decryption failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find the 00 separator between the padding and the message</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        sep_idx = cleartext.index(b&#39;\x00&#39;, 2)</span>
+<span class="gi">+    except ValueError:</span>
+<span class="gi">+        raise DecryptionError(&#39;Decryption failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return cleartext[sep_idx + 1:]</span>
+
+<span class="w"> </span>def sign_hash(hash_value: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Signs a precomputed hash with the private key.
+<span class="gu">@@ -163,7 +226,24 @@ def sign_hash(hash_value: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt;</span>
+<span class="w"> </span>        requested hash.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Get the ASN1 code for this hash method</span>
+<span class="gi">+    if hash_method not in HASH_ASN1:</span>
+<span class="gi">+        raise ValueError(&#39;Invalid hash method: %s&#39; % hash_method)</span>
+<span class="gi">+    asn1code = HASH_ASN1[hash_method]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Combine the ASN1 code for the hash method with the actual hash</span>
+<span class="gi">+    asn1_hash = asn1code + hash_value</span>
+<span class="gi">+</span>
+<span class="gi">+    # Pad the hash to match the key size</span>
+<span class="gi">+    keylength = common.byte_size(priv_key.n)</span>
+<span class="gi">+    padded = _pad_for_signing(asn1_hash, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Sign the message</span>
+<span class="gi">+    payload = transform.bytes2int(padded)</span>
+<span class="gi">+    encrypted = priv_key.blinded_encrypt(payload)</span>
+<span class="gi">+    block = transform.int2bytes(encrypted, keylength)</span>
+<span class="gi">+</span>
+<span class="gi">+    return block</span>
+
+<span class="w"> </span>def sign(message: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Signs the message with the private key.
+<span class="gu">@@ -182,7 +262,24 @@ def sign(message: bytes, priv_key: key.PrivateKey, hash_method: str) -&gt; bytes:</span>
+<span class="w"> </span>        requested hash.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Get the hash method</span>
+<span class="gi">+    if hash_method not in HASH_METHODS:</span>
+<span class="gi">+        raise ValueError(&#39;Invalid hash method: %s&#39; % hash_method)</span>
+<span class="gi">+    method = HASH_METHODS[hash_method]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Calculate the hash</span>
+<span class="gi">+    hasher = method()</span>
+<span class="gi">+    if hasattr(message, &#39;read&#39;):</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            chunk = message.read(1024)</span>
+<span class="gi">+            if not chunk:</span>
+<span class="gi">+                break</span>
+<span class="gi">+            hasher.update(chunk)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        hasher.update(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Sign the hash</span>
+<span class="gi">+    return sign_hash(hasher.digest(), priv_key, hash_method)</span>
+
+<span class="w"> </span>def verify(message: bytes, signature: bytes, pub_key: key.PublicKey) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Verifies that the signature matches the message.
+<span class="gu">@@ -198,7 +295,52 @@ def verify(message: bytes, signature: bytes, pub_key: key.PublicKey) -&gt; str:</span>
+<span class="w"> </span>    :returns: the name of the used hash.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Get the hash method</span>
+<span class="gi">+    hash_method = find_signature_hash(signature, pub_key)</span>
+<span class="gi">+    method = HASH_METHODS[hash_method]</span>
+<span class="gi">+</span>
+<span class="gi">+    # Calculate the hash</span>
+<span class="gi">+    hasher = method()</span>
+<span class="gi">+    if hasattr(message, &#39;read&#39;):</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            chunk = message.read(1024)</span>
+<span class="gi">+            if not chunk:</span>
+<span class="gi">+                break</span>
+<span class="gi">+            hasher.update(chunk)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        hasher.update(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Verify the hash</span>
+<span class="gi">+    message_hash = hasher.digest()</span>
+<span class="gi">+    blocksize = common.byte_size(pub_key.n)</span>
+<span class="gi">+    encrypted = transform.bytes2int(signature)</span>
+<span class="gi">+    decrypted = core.decrypt_int(encrypted, pub_key.e, pub_key.n)</span>
+<span class="gi">+    clearsig = transform.int2bytes(decrypted, blocksize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the hash method</span>
+<span class="gi">+    if len(clearsig) != blocksize:</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if clearsig[0:2] != b&#39;\x00\x01&#39;:</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find the 00 separator between the padding and the message</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        sep_idx = clearsig.index(b&#39;\x00&#39;, 2)</span>
+<span class="gi">+    except ValueError:</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the hash and the hash method from the signature</span>
+<span class="gi">+    clearsig = clearsig[sep_idx + 1:]</span>
+<span class="gi">+    if not clearsig.startswith(HASH_ASN1[hash_method]):</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the actual hash</span>
+<span class="gi">+    signed_hash = clearsig[len(HASH_ASN1[hash_method]):]</span>
+<span class="gi">+    if not compare_digest(signed_hash, message_hash):</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return hash_method</span>
+
+<span class="w"> </span>def find_signature_hash(signature: bytes, pub_key: key.PublicKey) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Returns the hash name detected from the signature.
+<span class="gu">@@ -210,7 +352,31 @@ def find_signature_hash(signature: bytes, pub_key: key.PublicKey) -&gt; str:</span>
+<span class="w"> </span>    :param pub_key: the :py:class:`rsa.PublicKey` of the person signing the message.
+<span class="w"> </span>    :returns: the name of the used hash.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    blocksize = common.byte_size(pub_key.n)</span>
+<span class="gi">+    encrypted = transform.bytes2int(signature)</span>
+<span class="gi">+    decrypted = core.decrypt_int(encrypted, pub_key.e, pub_key.n)</span>
+<span class="gi">+    clearsig = transform.int2bytes(decrypted, blocksize)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the hash method</span>
+<span class="gi">+    if len(clearsig) != blocksize:</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    if clearsig[0:2] != b&#39;\x00\x01&#39;:</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Find the 00 separator between the padding and the message</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        sep_idx = clearsig.index(b&#39;\x00&#39;, 2)</span>
+<span class="gi">+    except ValueError:</span>
+<span class="gi">+        raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the hash method from the signature</span>
+<span class="gi">+    asn1_hash = clearsig[sep_idx + 1:]</span>
+<span class="gi">+    for (hash_method, asn1code) in HASH_ASN1.items():</span>
+<span class="gi">+        if asn1_hash.startswith(asn1code):</span>
+<span class="gi">+            return hash_method</span>
+<span class="gi">+</span>
+<span class="gi">+    raise VerificationError(&#39;Verification failed&#39;)</span>
+
+<span class="w"> </span>def yield_fixedblocks(infile: typing.BinaryIO, blocksize: int) -&gt; typing.Iterator[bytes]:
+<span class="w"> </span>    &quot;&quot;&quot;Generator, yields each block of ``blocksize`` bytes in the input file.
+<span class="gu">@@ -219,7 +385,11 @@ def yield_fixedblocks(infile: typing.BinaryIO, blocksize: int) -&gt; typing.Iterato</span>
+<span class="w"> </span>    :param blocksize: block size in bytes.
+<span class="w"> </span>    :returns: a generator that yields the contents of each block
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        block = infile.read(blocksize)</span>
+<span class="gi">+        if not block:</span>
+<span class="gi">+            break</span>
+<span class="gi">+        yield block</span>
+
+<span class="w"> </span>def compute_hash(message: typing.Union[bytes, typing.BinaryIO], method_name: str) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Returns the message digest.
+<span class="gu">@@ -231,7 +401,22 @@ def compute_hash(message: typing.Union[bytes, typing.BinaryIO], method_name: str</span>
+<span class="w"> </span>        :py:const:`rsa.pkcs1.HASH_METHODS`.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if method_name not in HASH_METHODS:</span>
+<span class="gi">+        raise ValueError(&#39;Invalid hash method: %s&#39; % method_name)</span>
+<span class="gi">+</span>
+<span class="gi">+    method = HASH_METHODS[method_name]</span>
+<span class="gi">+    hasher = method()</span>
+<span class="gi">+</span>
+<span class="gi">+    if hasattr(message, &#39;read&#39;):</span>
+<span class="gi">+        while True:</span>
+<span class="gi">+            chunk = message.read(1024)</span>
+<span class="gi">+            if not chunk:</span>
+<span class="gi">+                break</span>
+<span class="gi">+            hasher.update(chunk)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        hasher.update(message)</span>
+<span class="gi">+</span>
+<span class="gi">+    return hasher.digest()</span>
+
+<span class="w"> </span>def _find_method_hash(clearsig: bytes) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Finds the hash method.
+<span class="gu">@@ -240,7 +425,11 @@ def _find_method_hash(clearsig: bytes) -&gt; str:</span>
+<span class="w"> </span>    :return: the used hash method.
+<span class="w"> </span>    :raise VerificationFailed: when the hash method cannot be found
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for (hash_method, asn1code) in HASH_ASN1.items():</span>
+<span class="gi">+        if clearsig.startswith(asn1code):</span>
+<span class="gi">+            return hash_method</span>
+<span class="gi">+</span>
+<span class="gi">+    raise VerificationError(&#39;Verification failed&#39;)</span>
+<span class="w"> </span>__all__ = [&#39;encrypt&#39;, &#39;decrypt&#39;, &#39;sign&#39;, &#39;verify&#39;, &#39;DecryptionError&#39;, &#39;VerificationError&#39;, &#39;CryptoError&#39;]
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="w"> </span>    print(&#39;Running doctests 1000x or until failure&#39;)
+<span class="gh">diff --git a/rsa/prime.py b/rsa/prime.py</span>
+<span class="gh">index 7c4ea38..485b9b0 100644</span>
+<span class="gd">--- a/rsa/prime.py</span>
+<span class="gi">+++ b/rsa/prime.py</span>
+<span class="gu">@@ -13,7 +13,9 @@ def gcd(p: int, q: int) -&gt; int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; gcd(48, 180)
+<span class="w"> </span>    12
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    while q != 0:</span>
+<span class="gi">+        p, q = q, p % q</span>
+<span class="gi">+    return p</span>
+
+<span class="w"> </span>def get_primality_testing_rounds(number: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Returns minimum number of rounds for Miller-Rabing primality testing,
+<span class="gu">@@ -27,7 +29,18 @@ def get_primality_testing_rounds(number: int) -&gt; int:</span>
+<span class="w"> </span>      * p, q bitsize: 1536; rounds: 3
+<span class="w"> </span>    See: http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Calculate bit size of the number</span>
+<span class="gi">+    bit_size = rsa.common.bit_size(number)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Return number of rounds based on bit size</span>
+<span class="gi">+    if bit_size &gt;= 1536:</span>
+<span class="gi">+        return 3</span>
+<span class="gi">+    if bit_size &gt;= 1024:</span>
+<span class="gi">+        return 4</span>
+<span class="gi">+    if bit_size &gt;= 512:</span>
+<span class="gi">+        return 7</span>
+<span class="gi">+    # For smaller bit sizes, use more rounds for better security</span>
+<span class="gi">+    return 10</span>
+
+<span class="w"> </span>def miller_rabin_primality_testing(n: int, k: int) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Calculates whether n is composite (which is always correct) or prime
+<span class="gu">@@ -44,7 +57,32 @@ def miller_rabin_primality_testing(n: int, k: int) -&gt; bool:</span>
+<span class="w"> </span>    :return: False if the number is composite, True if it&#39;s probably prime.
+<span class="w"> </span>    :rtype: bool
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if n == 2 or n == 3:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    if n &lt; 2 or n % 2 == 0:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    # Write n-1 as d * 2^r by factoring powers of 2 from n-1</span>
+<span class="gi">+    r = 0</span>
+<span class="gi">+    d = n - 1</span>
+<span class="gi">+    while d % 2 == 0:</span>
+<span class="gi">+        r += 1</span>
+<span class="gi">+        d //= 2</span>
+<span class="gi">+</span>
+<span class="gi">+    # Test k witnesses</span>
+<span class="gi">+    for _ in range(k):</span>
+<span class="gi">+        a = rsa.randnum.randint(n - 2)</span>
+<span class="gi">+        x = pow(a, d, n)</span>
+<span class="gi">+        if x == 1 or x == n - 1:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+        </span>
+<span class="gi">+        for _ in range(r - 1):</span>
+<span class="gi">+            x = pow(x, 2, n)</span>
+<span class="gi">+            if x == n - 1:</span>
+<span class="gi">+                break</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+    return True</span>
+
+<span class="w"> </span>def is_prime(number: int) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Returns True if the number is prime, and False otherwise.
+<span class="gu">@@ -56,7 +94,17 @@ def is_prime(number: int) -&gt; bool:</span>
+<span class="w"> </span>    &gt;&gt;&gt; is_prime(41)
+<span class="w"> </span>    True
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Handle small numbers</span>
+<span class="gi">+    if number &lt; 2:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    if number == 2:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+    if number % 2 == 0:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get number of rounds for Miller-Rabin testing</span>
+<span class="gi">+    rounds = get_primality_testing_rounds(number)</span>
+<span class="gi">+    return miller_rabin_primality_testing(number, rounds)</span>
+
+<span class="w"> </span>def getprime(nbits: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Returns a prime number that can be stored in &#39;nbits&#39; bits.
+<span class="gu">@@ -73,7 +121,14 @@ def getprime(nbits: int) -&gt; int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; common.bit_size(p) == 128
+<span class="w"> </span>    True
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    # Keep generating random numbers until we find a prime</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        # Generate a random number with nbits bits</span>
+<span class="gi">+        integer = rsa.randnum.read_random_odd_int(nbits)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Test for primality</span>
+<span class="gi">+        if is_prime(integer):</span>
+<span class="gi">+            return integer</span>
+
+<span class="w"> </span>def are_relatively_prime(a: int, b: int) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Returns True if a and b are relatively prime, and False if they
+<span class="gu">@@ -84,7 +139,7 @@ def are_relatively_prime(a: int, b: int) -&gt; bool:</span>
+<span class="w"> </span>    &gt;&gt;&gt; are_relatively_prime(2, 4)
+<span class="w"> </span>    False
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return gcd(a, b) == 1</span>
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="w"> </span>    print(&#39;Running doctests 1000x or until failure&#39;)
+<span class="w"> </span>    import doctest
+<span class="gh">diff --git a/rsa/randnum.py b/rsa/randnum.py</span>
+<span class="gh">index 595dbf4..60f044d 100644</span>
+<span class="gd">--- a/rsa/randnum.py</span>
+<span class="gi">+++ b/rsa/randnum.py</span>
+<span class="gu">@@ -9,11 +9,22 @@ def read_random_bits(nbits: int) -&gt; bytes:</span>
+<span class="w"> </span>    If nbits isn&#39;t a whole number of bytes, an extra byte will be appended with
+<span class="w"> </span>    only the lower bits set.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    nbytes, rbits = divmod(nbits, 8)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the random bytes</span>
+<span class="gi">+    randomdata = os.urandom(nbytes)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Add the remaining random bits</span>
+<span class="gi">+    if rbits &gt; 0:</span>
+<span class="gi">+        randomvalue = ord(os.urandom(1))</span>
+<span class="gi">+        randomvalue &gt;&gt;= (8 - rbits)</span>
+<span class="gi">+        randomdata = bytes([randomvalue]) + randomdata</span>
+<span class="gi">+</span>
+<span class="gi">+    return randomdata</span>
+
+<span class="w"> </span>def read_random_int(nbits: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Reads a random integer of approximately nbits bits.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return transform.bytes2int(read_random_bits(nbits))</span>
+
+<span class="w"> </span>def read_random_odd_int(nbits: int) -&gt; int:
+<span class="w"> </span>    &quot;&quot;&quot;Reads a random odd integer of approximately nbits bits.
+<span class="gu">@@ -21,13 +32,28 @@ def read_random_odd_int(nbits: int) -&gt; int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; read_random_odd_int(512) &amp; 1
+<span class="w"> </span>    1
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    value = read_random_int(nbits)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Make sure it&#39;s odd</span>
+<span class="gi">+    return value | 1</span>
+
+<span class="gd">-def randint(maxvalue: int) -&gt; int:</span>
+<span class="gd">-    &quot;&quot;&quot;Returns a random integer x with 1 &lt;= x &lt;= maxvalue</span>
+<span class="gi">+def randint(maxvalue: int, minvalue: int=1) -&gt; int:</span>
+<span class="gi">+    &quot;&quot;&quot;Returns a random integer x with minvalue &lt;= x &lt;= maxvalue</span>
+
+<span class="w"> </span>    May take a very long time in specific situations. If maxvalue needs N bits
+<span class="w"> </span>    to store, the closer maxvalue is to (2 ** N) - 1, the faster this function
+<span class="w"> </span>    is.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    if minvalue &gt; maxvalue:</span>
+<span class="gi">+        raise ValueError(&quot;minvalue must be &lt;= maxvalue&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Get the number of bits needed to store maxvalue</span>
+<span class="gi">+    bits_needed = common.bit_size(maxvalue)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Keep trying until we find a value</span>
+<span class="gi">+    while True:</span>
+<span class="gi">+        value = read_random_int(bits_needed)</span>
+<span class="gi">+        if minvalue &lt;= value &lt;= maxvalue:</span>
+<span class="gi">+            break</span>
+<span class="gi">+</span>
+<span class="gi">+    return value</span>
+\ No newline at end of file
+<span class="gh">diff --git a/rsa/transform.py b/rsa/transform.py</span>
+<span class="gh">index c4e6a91..1f0d4f4 100644</span>
+<span class="gd">--- a/rsa/transform.py</span>
+<span class="gi">+++ b/rsa/transform.py</span>
+<span class="gu">@@ -15,7 +15,7 @@ def bytes2int(raw_bytes: bytes) -&gt; int:</span>
+<span class="w"> </span>    8405007
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return int.from_bytes(raw_bytes, byteorder=&#39;big&#39;)</span>
+
+<span class="w"> </span>def int2bytes(number: int, fill_size: int=0) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -37,7 +37,21 @@ def int2bytes(number: int, fill_size: int=0) -&gt; bytes:</span>
+<span class="w"> </span>        argument to this function to be set to ``False`` otherwise, no
+<span class="w"> </span>        error will be raised.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not isinstance(number, int):</span>
+<span class="gi">+        raise TypeError(&quot;Number must be an integer&quot;)</span>
+<span class="gi">+    if number &lt; 0:</span>
+<span class="gi">+        raise ValueError(&quot;Number must be an unsigned integer&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    # Calculate the number of bytes needed to represent the integer</span>
+<span class="gi">+    bytes_needed = max(1, math.ceil(number.bit_length() / 8))</span>
+<span class="gi">+</span>
+<span class="gi">+    # If fill_size is given, check if the number fits</span>
+<span class="gi">+    if fill_size &gt; 0:</span>
+<span class="gi">+        if bytes_needed &gt; fill_size:</span>
+<span class="gi">+            raise OverflowError(&quot;Number is too large for the given fill_size&quot;)</span>
+<span class="gi">+        bytes_needed = fill_size</span>
+<span class="gi">+</span>
+<span class="gi">+    return number.to_bytes(bytes_needed, byteorder=&#39;big&#39;)</span>
+<span class="w"> </span>if __name__ == &#39;__main__&#39;:
+<span class="w"> </span>    import doctest
+<span class="w"> </span>    doctest.testmod()
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
