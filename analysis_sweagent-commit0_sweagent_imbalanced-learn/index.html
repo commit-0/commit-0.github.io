@@ -1,0 +1,540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent imbalanced learn - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-imbalanced-learn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent imbalanced learn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-imbalanced-learn"><strong>SWE-Agent</strong>: imbalanced-learn</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/imblearn/over_sampling/_smote/base.py b/imblearn/over_sampling/_smote/base.py</span>
+<span class="gh">index 8101f52..291c058 100644</span>
+<span class="gd">--- a/imblearn/over_sampling/_smote/base.py</span>
+<span class="gi">+++ b/imblearn/over_sampling/_smote/base.py</span>
+<span class="gu">@@ -39,8 +39,8 @@ class BaseSMOTE(BaseOverSampler):</span>
+<span class="w"> </span>        &quot;&quot;&quot;Check the NN estimators shared across the different SMOTE
+<span class="w"> </span>        algorithms.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gi">+        self.nn_ = check_neighbors_object(&#39;k_neighbors&#39;, self.k_neighbors, additional_neighbor=1)</span>
+<span class="gi">+        self.nn_.set_params(**{&#39;n_jobs&#39;: self.n_jobs})</span>
+<span class="w"> </span>    def _make_samples(self, X, y_dtype, y_type, nn_data, nn_num, n_samples, step_size=1.0, y=None):
+<span class="w"> </span>        &quot;&quot;&quot;A support function that returns artificial samples constructed along
+<span class="w"> </span>        the line connecting nearest neighbours.
+<span class="gu">@@ -82,7 +82,15 @@ class BaseSMOTE(BaseOverSampler):</span>
+<span class="w"> </span>        y_new : ndarray of shape (n_samples_new,)
+<span class="w"> </span>            Target values for synthetic samples.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        random_state = check_random_state(self.random_state)</span>
+<span class="gi">+        samples_indices = random_state.randint(low=0, high=nn_num.size, size=n_samples)</span>
+<span class="gi">+        steps = step_size * random_state.uniform(size=n_samples)</span>
+<span class="gi">+        rows = np.floor_divide(samples_indices, nn_num.shape[1])</span>
+<span class="gi">+        cols = np.mod(samples_indices, nn_num.shape[1])</span>
+<span class="gi">+</span>
+<span class="gi">+        X_new, y_new = self._generate_samples(X, nn_data, nn_num, rows, cols, steps, y_type, y)</span>
+<span class="gi">+</span>
+<span class="gi">+        return X_new, y_new</span>
+
+<span class="w"> </span>    def _generate_samples(self, X, nn_data, nn_num, rows, cols, steps, y_type=None, y=None):
+<span class="w"> </span>        &quot;&quot;&quot;Generate a synthetic sample.
+<span class="gu">@@ -131,8 +139,23 @@ class BaseSMOTE(BaseOverSampler):</span>
+<span class="w"> </span>        -------
+<span class="w"> </span>        X_new : {ndarray, sparse matrix} of shape (n_samples, n_features)
+<span class="w"> </span>            Synthetically generated samples.
+<span class="gi">+</span>
+<span class="gi">+        y_new : ndarray of shape (n_samples,)</span>
+<span class="gi">+            Target values for synthetic samples.</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        n_samples, n_features = X.shape</span>
+<span class="gi">+        X_new = np.zeros((steps.shape[0], n_features))</span>
+<span class="gi">+        </span>
+<span class="gi">+        if sparse.issparse(X):</span>
+<span class="gi">+            for i, (row, col, step) in enumerate(zip(rows, cols, steps)):</span>
+<span class="gi">+                X_new[i] = X[row].toarray() + step * (nn_data[nn_num[row, col]].toarray() - X[row].toarray())</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            for i, (row, col, step) in enumerate(zip(rows, cols, steps)):</span>
+<span class="gi">+                X_new[i] = X[row] + step * (nn_data[nn_num[row, col]] - X[row])</span>
+<span class="gi">+        </span>
+<span class="gi">+        y_new = np.full(steps.shape[0], fill_value=y_type)</span>
+<span class="gi">+        </span>
+<span class="gi">+        return X_new, y_new</span>
+
+<span class="w"> </span>    def _in_danger_noise(self, nn_estimator, samples, target_class, y, kind=&#39;danger&#39;):
+<span class="w"> </span>        &quot;&quot;&quot;Estimate if a set of sample are in danger or noise.
+<span class="gu">@@ -166,7 +189,17 @@ class BaseSMOTE(BaseOverSampler):</span>
+<span class="w"> </span>        output : ndarray of shape (n_samples,)
+<span class="w"> </span>            A boolean array where True refer to samples in danger or noise.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        x = nn_estimator.kneighbors(samples, return_distance=False)[:, 1:]</span>
+<span class="gi">+        nn_label = (y[x] != target_class).astype(int).sum(axis=1)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if kind == &#39;danger&#39;:</span>
+<span class="gi">+            # Samples are in danger if some but not all neighbors are of a different class</span>
+<span class="gi">+            return (nn_label &gt; 0) &amp; (nn_label &lt; x.shape[1])</span>
+<span class="gi">+        elif kind == &#39;noise&#39;:</span>
+<span class="gi">+            # Samples are noise if all neighbors are of a different class</span>
+<span class="gi">+            return nn_label == x.shape[1]</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            raise ValueError(&quot;&#39;kind&#39; should be either &#39;danger&#39; or &#39;noise&#39;.&quot;)</span>
+
+<span class="w"> </span>@Substitution(sampling_strategy=BaseOverSampler._sampling_strategy_docstring, n_jobs=_n_jobs_docstring, random_state=_random_state_docstring)
+<span class="w"> </span>class SMOTE(BaseSMOTE):
+<span class="gu">@@ -581,4 +614,4 @@ class SMOTEN(SMOTE):</span>
+
+<span class="w"> </span>    def _validate_estimator(self):
+<span class="w"> </span>        &quot;&quot;&quot;Force to use precomputed distance matrix.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+\ No newline at end of file
+<span class="gi">+        pass</span>
+<span class="gh">diff --git a/imblearn/over_sampling/_smote/tests/test_smote.py b/imblearn/over_sampling/_smote/tests/test_smote.py</span>
+<span class="gh">index 18feb55..a507341 100644</span>
+<span class="gd">--- a/imblearn/over_sampling/_smote/tests/test_smote.py</span>
+<span class="gi">+++ b/imblearn/over_sampling/_smote/tests/test_smote.py</span>
+<span class="gu">@@ -6,4 +6,44 @@ from imblearn.over_sampling import SMOTE</span>
+<span class="w"> </span>RND_SEED = 0
+<span class="w"> </span>X = np.array([[0.11622591, -0.0317206], [0.77481731, 0.60935141], [1.25192108, -0.22367336], [0.53366841, -0.30312976], [1.52091956, -0.49283504], [-0.28162401, -2.10400981], [0.83680821, 1.72827342], [0.3084254, 0.33299982], [0.70472253, -0.73309052], [0.28893132, -0.38761769], [1.15514042, 0.0129463], [0.88407872, 0.35454207], [1.31301027, -0.92648734], [-1.11515198, -0.93689695], [-0.18410027, -0.45194484], [0.9281014, 0.53085498], [-0.14374509, 0.27370049], [-0.41635887, -0.38299653], [0.08711622, 0.93259929], [1.70580611, -0.11219234]])
+<span class="w"> </span>Y = np.array([0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0])
+<span class="gd">-R_TOL = 0.0001</span>
+\ No newline at end of file
+<span class="gi">+R_TOL = 0.0001</span>
+<span class="gi">+</span>
+<span class="gi">+def test_generate_samples():</span>
+<span class="gi">+    smote = SMOTE(random_state=RND_SEED)</span>
+<span class="gi">+    smote._validate_estimator()</span>
+<span class="gi">+    X_new, y_new = smote._generate_samples(X, X, np.arange(len(X)), np.array([0, 1]), np.array([0.5, 0.5]), y_type=0)</span>
+<span class="gi">+    </span>
+<span class="gi">+    assert X_new.shape[0] == 2</span>
+<span class="gi">+    assert y_new.shape[0] == 2</span>
+<span class="gi">+    assert np.all(y_new == 0)</span>
+<span class="gi">+</span>
+<span class="gi">+def test_in_danger_noise():</span>
+<span class="gi">+    smote = SMOTE(random_state=RND_SEED)</span>
+<span class="gi">+    nn_estimator = NearestNeighbors(n_neighbors=6)</span>
+<span class="gi">+    nn_estimator.fit(X)</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Test &#39;danger&#39; classification</span>
+<span class="gi">+    danger_samples = smote._in_danger_noise(nn_estimator, X[Y==0], 0, Y, kind=&#39;danger&#39;)</span>
+<span class="gi">+    assert isinstance(danger_samples, np.ndarray)</span>
+<span class="gi">+    assert danger_samples.dtype == bool</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Test &#39;noise&#39; classification</span>
+<span class="gi">+    noise_samples = smote._in_danger_noise(nn_estimator, X[Y==0], 0, Y, kind=&#39;noise&#39;)</span>
+<span class="gi">+    assert isinstance(noise_samples, np.ndarray)</span>
+<span class="gi">+    assert noise_samples.dtype == bool</span>
+<span class="gi">+    </span>
+<span class="gi">+    # Test invalid &#39;kind&#39; parameter</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        smote._in_danger_noise(nn_estimator, X[Y==0], 0, Y, kind=&#39;invalid&#39;)</span>
+<span class="gi">+    except ValueError:</span>
+<span class="gi">+        pass</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        assert False, &quot;ValueError not raised for invalid &#39;kind&#39; parameter&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+def test_smote_fit_resample():</span>
+<span class="gi">+    smote = SMOTE(random_state=RND_SEED)</span>
+<span class="gi">+    X_resampled, y_resampled = smote.fit_resample(X, Y)</span>
+<span class="gi">+    </span>
+<span class="gi">+    assert X_resampled.shape[0] &gt; X.shape[0]</span>
+<span class="gi">+    assert y_resampled.shape[0] &gt; Y.shape[0]</span>
+<span class="gi">+    assert np.sum(y_resampled == 0) == np.sum(y_resampled == 1)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

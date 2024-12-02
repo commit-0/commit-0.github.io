@@ -1,0 +1,3956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent dulwich - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-dulwich" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent dulwich
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_filepyfancyrenameteststest_dest_exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::FancyRenameTests::test_dest_exists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepyfancyrenameteststest_no_dest_exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::FancyRenameTests::test_no_dest_exists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_abort" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_abort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_abort_close" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_abort_close
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_abort_close_removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_abort_close_removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_default_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_default_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_invalid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_invalid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_open_twice" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_open_twice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_readonly" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_readonly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_filepygitfileteststest_write" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_file.py::GitFileTests::test_write
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_hookspyshellhookteststest_hook_commit_msg" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_hooks.py::ShellHookTests::test_hook_commit_msg
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_hookspyshellhookteststest_hook_post_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_hooks.py::ShellHookTests::test_hook_post_commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_hookspyshellhookteststest_hook_pre_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_hooks.py::ShellHookTests::test_hook_pre_commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lfspylfsteststest_create" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lfs.py::LFSTests::test_create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lfspylfsteststest_missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lfs.py::LFSTests::test_missing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_add__null_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_add__null_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_after_cleanup_larger_than_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_after_cleanup_larger_than_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_after_cleanup_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_after_cleanup_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_by_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_by_usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_cache_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_cleanup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_cleanup_2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_cleanup_on_replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_cleanup_on_replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_cleanup_shrinks_to_after_clean_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_cleanup_shrinks_to_after_clean_count
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_get" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_get
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_len" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_len
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_map_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_map_None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_missing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_overflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_preserve_last_access_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_preserve_last_access_order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_resize_larger" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_resize_larger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrucachetest_resize_smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUCache::test_resize_smaller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_add__null_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_add__null_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_add_tracks_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_add_tracks_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_adding_clears_cache_based_on_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_adding_clears_cache_based_on_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_adding_clears_to_after_cleanup_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_adding_clears_to_after_cleanup_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_basic_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_basic_init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_custom_sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_custom_sizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_no_add_over_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_no_add_over_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_no_add_over_size_cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_no_add_over_size_cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_remove_tracks_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_remove_tracks_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_resize_larger" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_resize_larger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_lru_cachepytestlrusizecachetest_resize_smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_lru_cache.py::TestLRUSizeCache::test_resize_smaller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_mailmappyreadmailmapteststest_read" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_mailmap.py::ReadMailmapTests::test_read
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_mailmappymailmapteststest_lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_mailmap.py::MailmapTests::test_lookup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_eof" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_eof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_read_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_read_cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_read_cmd_noend0" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_read_cmd_noend0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_read_pkt_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_read_pkt_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_read_pkt_line_wrong_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_read_pkt_line_wrong_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_read_pkt_seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_read_pkt_seq
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_send_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_send_cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_unread_pkt_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_unread_pkt_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_write_pkt_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_write_pkt_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_write_pkt_line_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_write_pkt_line_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyprotocolteststest_write_sideband" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ProtocolTests::test_write_sideband
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_eof" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_eof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_mixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_mixed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_cmd_noend0" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_cmd_noend0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_pkt_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_pkt_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_pkt_line_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_pkt_line_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_pkt_line_wrong_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_pkt_line_wrong_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_pkt_seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_pkt_seq
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_read_recv" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_read_recv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_recv" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_recv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_recv_read" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_recv_read
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_send_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_send_cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_unread_pkt_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_unread_pkt_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_write_pkt_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_write_pkt_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_write_pkt_line_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_write_pkt_line_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpyreceivableprotocolteststest_write_sideband" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::ReceivableProtocolTests::test_write_sideband
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpycapabilitiestestcasetest_ack_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::CapabilitiesTestCase::test_ack_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpycapabilitiestestcasetest_caps" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::CapabilitiesTestCase::test_caps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpycapabilitiestestcasetest_caps_want_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::CapabilitiesTestCase::test_caps_want_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpycapabilitiestestcasetest_plain" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::CapabilitiesTestCase::test_plain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpycapabilitiestestcasetest_plain_want_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::CapabilitiesTestCase::test_plain_want_line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpybufferedpktlinewriterteststest_write" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::BufferedPktLineWriterTests::test_write
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpybufferedpktlinewriterteststest_write_across_boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::BufferedPktLineWriterTests::test_write_across_boundary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpybufferedpktlinewriterteststest_write_multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::BufferedPktLineWriterTests::test_write_multiple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpybufferedpktlinewriterteststest_write_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::BufferedPktLineWriterTests::test_write_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpybufferedpktlinewriterteststest_write_to_boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::BufferedPktLineWriterTests::test_write_to_boundary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpypktlineparserteststest_multiple_packets" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::PktLineParserTests::test_multiple_packets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpypktlineparserteststest_none" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::PktLineParserTests::test_none
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_protocolpypktlineparserteststest_small_fragments" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_protocol.py::PktLineParserTests::test_small_fragments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-dulwich"><strong>SWE-Agent</strong>: dulwich</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">88</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">94</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">94</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_filepyfancyrenameteststest_dest_exists">test_file.py::FancyRenameTests::test_dest_exists</h3>
+<details><summary> <pre>test_file.py::FancyRenameTests::test_dest_exists</pre></summary><pre>
+self = <tests.test_file.FancyRenameTests testMethod=test_dest_exists>
+
+    def test_dest_exists(self):
+        self.create(self.bar, b"bar contents")
+        _fancy_rename(self.foo, self.bar)
+>       self.assertFalse(os.path.exists(self.foo))
+E       AssertionError: True is not false
+
+tests/test_file.py:64: AssertionError
+</pre>
+</details>
+<h3 id="test_filepyfancyrenameteststest_no_dest_exists">test_file.py::FancyRenameTests::test_no_dest_exists</h3>
+<details><summary> <pre>test_file.py::FancyRenameTests::test_no_dest_exists</pre></summary><pre>
+self = <tests.test_file.FancyRenameTests testMethod=test_no_dest_exists>
+
+    def test_no_dest_exists(self):
+        self.assertFalse(os.path.exists(self.bar))
+        _fancy_rename(self.foo, self.bar)
+>       self.assertFalse(os.path.exists(self.foo))
+E       AssertionError: True is not false
+
+tests/test_file.py:55: AssertionError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_abort">test_file.py::GitFileTests::test_abort</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_abort</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_abort>
+
+    def test_abort(self):
+        foo = self.path("foo")
+        foo_lock = f"{foo}.lock"
+
+        orig_f = open(foo, "rb")
+        self.assertEqual(orig_f.read(), b"foo contents")
+        orig_f.close()
+
+        f = GitFile(foo, "wb")
+>       f.write(b"new contents")
+E       AttributeError: 'NoneType' object has no attribute 'write'
+
+tests/test_file.py:177: AttributeError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_abort_close">test_file.py::GitFileTests::test_abort_close</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_abort_close</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_abort_close>
+
+    def test_abort_close(self):
+        foo = self.path("foo")
+        f = GitFile(foo, "wb")
+>       f.abort()
+E       AttributeError: 'NoneType' object has no attribute 'abort'
+
+tests/test_file.py:189: AttributeError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_abort_close_removed">test_file.py::GitFileTests::test_abort_close_removed</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_abort_close_removed</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_abort_close_removed>
+
+    def test_abort_close_removed(self):
+        foo = self.path("foo")
+        f = GitFile(foo, "wb")
+
+>       f._file.close()
+E       AttributeError: 'NoneType' object has no attribute '_file'
+
+tests/test_file.py:206: AttributeError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_default_mode">test_file.py::GitFileTests::test_default_mode</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_default_mode</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_default_mode>
+
+    def test_default_mode(self):
+        f = GitFile(self.path("foo"))
+>       self.assertEqual(b"foo contents", f.read())
+E       AttributeError: 'NoneType' object has no attribute 'read'
+
+tests/test_file.py:122: AttributeError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_invalid">test_file.py::GitFileTests::test_invalid</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_invalid</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_invalid>
+
+    def test_invalid(self):
+        foo = self.path("foo")
+>       self.assertRaises(IOError, GitFile, foo, mode="r")
+E       AssertionError: OSError not raised by GitFile
+
+tests/test_file.py:105: AssertionError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_open_twice">test_file.py::GitFileTests::test_open_twice</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_open_twice</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_open_twice>
+
+    def test_open_twice(self):
+        foo = self.path("foo")
+        f1 = GitFile(foo, "wb")
+>       f1.write(b"new")
+E       AttributeError: 'NoneType' object has no attribute 'write'
+
+tests/test_file.py:152: AttributeError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_readonly">test_file.py::GitFileTests::test_readonly</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_readonly</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_readonly>
+
+    def test_readonly(self):
+        f = GitFile(self.path("foo"), "rb")
+>       self.assertIsInstance(f, io.IOBase)
+E       AssertionError: None is not an instance of <class 'io.IOBase'>
+
+tests/test_file.py:113: AssertionError
+</pre>
+</details>
+<h3 id="test_filepygitfileteststest_write">test_file.py::GitFileTests::test_write</h3>
+<details><summary> <pre>test_file.py::GitFileTests::test_write</pre></summary><pre>
+self = <tests.test_file.GitFileTests testMethod=test_write>
+
+    def test_write(self):
+        foo = self.path("foo")
+        foo_lock = f"{foo}.lock"
+
+        orig_f = open(foo, "rb")
+        self.assertEqual(orig_f.read(), b"foo contents")
+        orig_f.close()
+
+        self.assertFalse(os.path.exists(foo_lock))
+        f = GitFile(foo, "wb")
+>       self.assertFalse(f.closed)
+E       AttributeError: 'NoneType' object has no attribute 'closed'
+
+tests/test_file.py:135: AttributeError
+</pre>
+</details>
+<h3 id="test_hookspyshellhookteststest_hook_commit_msg">test_hooks.py::ShellHookTests::test_hook_commit_msg</h3>
+<details><summary> <pre>test_hooks.py::ShellHookTests::test_hook_commit_msg</pre></summary><pre>
+self = <tests.test_hooks.ShellHookTests testMethod=test_hook_commit_msg>
+
+        def test_hook_commit_msg(self):
+            repo_dir = os.path.join(tempfile.mkdtemp())
+            os.mkdir(os.path.join(repo_dir, "hooks"))
+            self.addCleanup(shutil.rmtree, repo_dir)
+
+            commit_msg_fail = """#!/bin/sh
+    exit 1
+    """
+
+            commit_msg_success = """#!/bin/sh
+    exit 0
+    """
+
+            commit_msg_cwd = (
+                """#!/bin/sh
+    if [ "$(pwd)" = '"""
+                + repo_dir
+                + "' ]; then exit 0; else exit 1; fi\n"
+            )
+
+            commit_msg = os.path.join(repo_dir, "hooks", "commit-msg")
+            hook = CommitMsgShellHook(repo_dir)
+
+            with open(commit_msg, "w") as f:
+                f.write(commit_msg_fail)
+            os.chmod(commit_msg, stat.S_IREAD | stat.S_IWRITE | stat.S_IEXEC)
+
+>           self.assertRaises(errors.HookError, hook.execute, b"failed commit")
+E           AssertionError: HookError not raised by execute
+
+tests/test_hooks.py:119: AssertionError
+</pre>
+</details>
+<h3 id="test_hookspyshellhookteststest_hook_post_commit">test_hooks.py::ShellHookTests::test_hook_post_commit</h3>
+<details><summary> <pre>test_hooks.py::ShellHookTests::test_hook_post_commit</pre></summary><pre>
+self = <tests.test_hooks.ShellHookTests testMethod=test_hook_post_commit>
+
+        def test_hook_post_commit(self):
+            (fd, path) = tempfile.mkstemp()
+            os.close(fd)
+
+            repo_dir = os.path.join(tempfile.mkdtemp())
+            os.mkdir(os.path.join(repo_dir, "hooks"))
+            self.addCleanup(shutil.rmtree, repo_dir)
+
+            post_commit_success = (
+                """#!/bin/sh
+    rm """
+                + path
+                + "\n"
+            )
+
+            post_commit_fail = """#!/bin/sh
+    exit 1
+    """
+
+            post_commit_cwd = (
+                """#!/bin/sh
+    if [ "$(pwd)" = '"""
+                + repo_dir
+                + "' ]; then exit 0; else exit 1; fi\n"
+            )
+
+            post_commit = os.path.join(repo_dir, "hooks", "post-commit")
+            hook = PostCommitShellHook(repo_dir)
+
+            with open(post_commit, "w") as f:
+                f.write(post_commit_fail)
+            os.chmod(post_commit, stat.S_IREAD | stat.S_IWRITE | stat.S_IEXEC)
+
+>           self.assertRaises(errors.HookError, hook.execute)
+E           AssertionError: HookError not raised by execute
+
+tests/test_hooks.py:169: AssertionError
+</pre>
+</details>
+<h3 id="test_hookspyshellhookteststest_hook_pre_commit">test_hooks.py::ShellHookTests::test_hook_pre_commit</h3>
+<details><summary> <pre>test_hooks.py::ShellHookTests::test_hook_pre_commit</pre></summary><pre>
+self = <tests.test_hooks.ShellHookTests testMethod=test_hook_pre_commit>
+
+        def test_hook_pre_commit(self):
+            repo_dir = os.path.join(tempfile.mkdtemp())
+            os.mkdir(os.path.join(repo_dir, "hooks"))
+            self.addCleanup(shutil.rmtree, repo_dir)
+
+            pre_commit_fail = """#!/bin/sh
+    exit 1
+    """
+
+            pre_commit_success = """#!/bin/sh
+    exit 0
+    """
+            pre_commit_cwd = (
+                """#!/bin/sh
+    if [ "$(pwd)" != '"""
+                + repo_dir
+                + """' ]; then
+        echo "Expected path '"""
+                + repo_dir
+                + """', got '$(pwd)'"
+        exit 1
+    fi
+
+    exit 0
+    """
+            )
+
+            pre_commit = os.path.join(repo_dir, "hooks", "pre-commit")
+            hook = PreCommitShellHook(repo_dir, repo_dir)
+
+            with open(pre_commit, "w") as f:
+                f.write(pre_commit_fail)
+            os.chmod(pre_commit, stat.S_IREAD | stat.S_IWRITE | stat.S_IEXEC)
+
+>           self.assertRaises(errors.HookError, hook.execute)
+E           AssertionError: HookError not raised by execute
+
+tests/test_hooks.py:75: AssertionError
+</pre>
+</details>
+<h3 id="test_lfspylfsteststest_create">test_lfs.py::LFSTests::test_create</h3>
+<details><summary> <pre>test_lfs.py::LFSTests::test_create</pre></summary><pre>
+self = <tests.test_lfs.LFSTests testMethod=test_create>
+
+    def setUp(self):
+        super().setUp()
+        self.test_dir = tempfile.mkdtemp()
+        self.addCleanup(shutil.rmtree, self.test_dir)
+>       self.lfs = LFSStore.create(self.test_dir)
+E       AttributeError: type object 'LFSStore' has no attribute 'create'
+
+tests/test_lfs.py:36: AttributeError
+</pre>
+</details>
+<h3 id="test_lfspylfsteststest_missing">test_lfs.py::LFSTests::test_missing</h3>
+<details><summary> <pre>test_lfs.py::LFSTests::test_missing</pre></summary><pre>
+self = <tests.test_lfs.LFSTests testMethod=test_missing>
+
+    def setUp(self):
+        super().setUp()
+        self.test_dir = tempfile.mkdtemp()
+        self.addCleanup(shutil.rmtree, self.test_dir)
+>       self.lfs = LFSStore.create(self.test_dir)
+E       AttributeError: type object 'LFSStore' has no attribute 'create'
+
+tests/test_lfs.py:36: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_add__null_key">test_lru_cache.py::TestLRUCache::test_add__null_key</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_add__null_key</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_add__null_key>
+
+    def test_add__null_key(self):
+>       cache = lru_cache.LRUCache(max_cache=10)
+
+tests/test_lru_cache.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd402950280>, max_cache = 10
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_after_cleanup_larger_than_max">test_lru_cache.py::TestLRUCache::test_after_cleanup_larger_than_max</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_after_cleanup_larger_than_max</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_after_cleanup_larger_than_max>
+
+    def test_after_cleanup_larger_than_max(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=10)
+
+tests/test_lru_cache.py:186: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd40297dcc0>, max_cache = 5
+after_cleanup_count = 10
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_after_cleanup_none">test_lru_cache.py::TestLRUCache::test_after_cleanup_none</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_after_cleanup_none</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_after_cleanup_none>
+
+    def test_after_cleanup_none(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=None)
+
+tests/test_lru_cache.py:190: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd4009f6560>, max_cache = 5
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_by_usage">test_lru_cache.py::TestLRUCache::test_by_usage</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_by_usage</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_by_usage>
+
+    def test_by_usage(self):
+        """Accessing entries bumps them up in priority."""
+>       cache = lru_cache.LRUCache(max_cache=2)
+
+tests/test_lru_cache.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd4014034f0>, max_cache = 2
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_cache_size">test_lru_cache.py::TestLRUCache::test_cache_size</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_cache_size</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_cache_size>
+
+    def test_cache_size(self):
+>       cache = lru_cache.LRUCache(max_cache=10)
+
+tests/test_lru_cache.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd4017e80d0>, max_cache = 10
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_cleanup">test_lru_cache.py::TestLRUCache::test_cleanup</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_cleanup</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_cleanup>
+
+    def test_cleanup(self):
+        """Test that we can use a cleanup function."""
+        cleanup_called = []
+
+        def cleanup_func(key, val):
+            cleanup_called.append((key, val))
+
+>       cache = lru_cache.LRUCache(max_cache=2, after_cleanup_count=2)
+
+tests/test_lru_cache.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd400d6ce20>, max_cache = 2
+after_cleanup_count = 2
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_cleanup_2">test_lru_cache.py::TestLRUCache::test_cleanup_2</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_cleanup_2</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_cleanup_2>
+
+    def test_cleanup_2(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=2)
+
+tests/test_lru_cache.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd400d3ffa0>, max_cache = 5
+after_cleanup_count = 2
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_cleanup_on_replace">test_lru_cache.py::TestLRUCache::test_cleanup_on_replace</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_cleanup_on_replace</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_cleanup_on_replace>
+
+    def test_cleanup_on_replace(self):
+        """Replacing an object should cleanup the old value."""
+        cleanup_called = []
+
+        def cleanup_func(key, val):
+            cleanup_called.append((key, val))
+
+>       cache = lru_cache.LRUCache(max_cache=2)
+
+tests/test_lru_cache.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd40297fb20>, max_cache = 2
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_cleanup_shrinks_to_after_clean_count">test_lru_cache.py::TestLRUCache::test_cleanup_shrinks_to_after_clean_count</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_cleanup_shrinks_to_after_clean_count</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_cleanup_shrinks_to_after_clean_count>
+
+    def test_cleanup_shrinks_to_after_clean_count(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=3)
+
+tests/test_lru_cache.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd400f08610>, max_cache = 5
+after_cleanup_count = 3
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_get">test_lru_cache.py::TestLRUCache::test_get</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_get</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_get>
+
+    def test_get(self):
+>       cache = lru_cache.LRUCache(max_cache=5)
+
+tests/test_lru_cache.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd4017ea470>, max_cache = 5
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_keys">test_lru_cache.py::TestLRUCache::test_keys</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_keys</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_keys>
+
+    def test_keys(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=5)
+
+tests/test_lru_cache.py:242: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd4013b0940>, max_cache = 5
+after_cleanup_count = 5
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_len">test_lru_cache.py::TestLRUCache::test_len</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_len</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_len>
+
+    def test_len(self):
+>       cache = lru_cache.LRUCache(max_cache=10, after_cleanup_count=10)
+
+tests/test_lru_cache.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd40297e1d0>, max_cache = 10
+after_cleanup_count = 10
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_map_none">test_lru_cache.py::TestLRUCache::test_map_None</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_map_None</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_map_None>
+
+    def test_map_None(self):
+        # Make sure that we can properly map None as a key.
+>       cache = lru_cache.LRUCache(max_cache=10)
+
+tests/test_lru_cache.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd400d6e920>, max_cache = 10
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_missing">test_lru_cache.py::TestLRUCache::test_missing</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_missing</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_missing>
+
+    def test_missing(self):
+>       cache = lru_cache.LRUCache(max_cache=10)
+
+tests/test_lru_cache.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd400a588b0>, max_cache = 10
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_overflow">test_lru_cache.py::TestLRUCache::test_overflow</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_overflow</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_overflow>
+
+    def test_overflow(self):
+        """Adding extra entries will pop out old ones."""
+>       cache = lru_cache.LRUCache(max_cache=1, after_cleanup_count=1)
+
+tests/test_lru_cache.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd400a0cb80>, max_cache = 1
+after_cleanup_count = 1
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_preserve_last_access_order">test_lru_cache.py::TestLRUCache::test_preserve_last_access_order</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_preserve_last_access_order</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_preserve_last_access_order>
+
+    def test_preserve_last_access_order(self):
+>       cache = lru_cache.LRUCache(max_cache=5)
+
+tests/test_lru_cache.py:210: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd401800a90>, max_cache = 5
+after_cleanup_count = None
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_resize_larger">test_lru_cache.py::TestLRUCache::test_resize_larger</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_resize_larger</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_resize_larger>
+
+    def test_resize_larger(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=4)
+
+tests/test_lru_cache.py:273: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd4017ff130>, max_cache = 5
+after_cleanup_count = 4
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrucachetest_resize_smaller">test_lru_cache.py::TestLRUCache::test_resize_smaller</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUCache::test_resize_smaller</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUCache testMethod=test_resize_smaller>
+
+    def test_resize_smaller(self):
+>       cache = lru_cache.LRUCache(max_cache=5, after_cleanup_count=4)
+
+tests/test_lru_cache.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUCache object at 0x7fd40150b1f0>, max_cache = 5
+after_cleanup_count = 4
+
+    def __init__(self, max_cache: int=100, after_cleanup_count: Optional[int]=None) -> None:
+        self._cache: Dict[K, _LRUNode[K, V]] = {}
+        self._most_recently_used = None
+        self._least_recently_used = None
+>       self._update_max_cache(max_cache, after_cleanup_count)
+E       AttributeError: 'LRUCache' object has no attribute '_update_max_cache'
+
+dulwich/lru_cache.py:38: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_add__null_key">test_lru_cache.py::TestLRUSizeCache::test_add__null_key</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_add__null_key</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_add__null_key>
+
+    def test_add__null_key(self):
+>       cache = lru_cache.LRUSizeCache()
+
+tests/test_lru_cache.py:301: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd401669120>
+max_size = 1048576, after_cleanup_size = None, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_add_tracks_size">test_lru_cache.py::TestLRUSizeCache::test_add_tracks_size</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_add_tracks_size</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_add_tracks_size>
+
+    def test_add_tracks_size(self):
+>       cache = lru_cache.LRUSizeCache()
+
+tests/test_lru_cache.py:305: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd40137bb20>
+max_size = 1048576, after_cleanup_size = None, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_adding_clears_cache_based_on_size">test_lru_cache.py::TestLRUSizeCache::test_adding_clears_cache_based_on_size</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_adding_clears_cache_based_on_size</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_adding_clears_cache_based_on_size>
+
+    def test_adding_clears_cache_based_on_size(self):
+        """The cache is cleared in LRU order until small enough."""
+>       cache = lru_cache.LRUSizeCache(max_size=20)
+
+tests/test_lru_cache.py:359: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd400a5be20>, max_size = 20
+after_cleanup_size = None, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_adding_clears_to_after_cleanup_size">test_lru_cache.py::TestLRUSizeCache::test_adding_clears_to_after_cleanup_size</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_adding_clears_to_after_cleanup_size</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_adding_clears_to_after_cleanup_size>
+
+    def test_adding_clears_to_after_cleanup_size(self):
+>       cache = lru_cache.LRUSizeCache(max_size=20, after_cleanup_size=10)
+
+tests/test_lru_cache.py:371: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd40143f370>, max_size = 20
+after_cleanup_size = 10, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_basic_init">test_lru_cache.py::TestLRUSizeCache::test_basic_init</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_basic_init</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_basic_init>
+
+    def test_basic_init(self):
+>       cache = lru_cache.LRUSizeCache()
+
+tests/test_lru_cache.py:295: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd4009f4880>
+max_size = 1048576, after_cleanup_size = None, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_cleanup">test_lru_cache.py::TestLRUSizeCache::test_cleanup</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_cleanup</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_cleanup>
+
+    def test_cleanup(self):
+>       cache = lru_cache.LRUSizeCache(max_size=20, after_cleanup_size=10)
+
+tests/test_lru_cache.py:401: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd402950280>, max_size = 20
+after_cleanup_size = 10, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_custom_sizes">test_lru_cache.py::TestLRUSizeCache::test_custom_sizes</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_custom_sizes</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_custom_sizes>
+
+    def test_custom_sizes(self):
+        def size_of_list(lst):
+            return sum(len(x) for x in lst)
+
+>       cache = lru_cache.LRUSizeCache(
+            max_size=20, after_cleanup_size=10, compute_size=size_of_list
+        )
+
+tests/test_lru_cache.py:386: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd400a29900>, max_size = 20
+after_cleanup_size = 10
+compute_size = <function TestLRUSizeCache.test_custom_sizes.<locals>.size_of_list at 0x7fd400f16830>
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_keys">test_lru_cache.py::TestLRUSizeCache::test_keys</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_keys</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_keys>
+
+    def test_keys(self):
+>       cache = lru_cache.LRUSizeCache(max_size=10)
+
+tests/test_lru_cache.py:414: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd400a591e0>, max_size = 10
+after_cleanup_size = None, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_no_add_over_size">test_lru_cache.py::TestLRUSizeCache::test_no_add_over_size</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_no_add_over_size</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_no_add_over_size>
+
+    def test_no_add_over_size(self):
+        """Adding a large value may not be cached at all."""
+>       cache = lru_cache.LRUSizeCache(max_size=10, after_cleanup_size=5)
+
+tests/test_lru_cache.py:321: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd4018016f0>, max_size = 10
+after_cleanup_size = 5, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_no_add_over_size_cleanup">test_lru_cache.py::TestLRUSizeCache::test_no_add_over_size_cleanup</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_no_add_over_size_cleanup</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_no_add_over_size_cleanup>
+
+    def test_no_add_over_size_cleanup(self):
+        """If a large value is not cached, we will call cleanup right away."""
+        cleanup_calls = []
+
+        def cleanup(key, value):
+            cleanup_calls.append((key, value))
+
+>       cache = lru_cache.LRUSizeCache(max_size=10, after_cleanup_size=5)
+
+tests/test_lru_cache.py:347: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd400f58a60>, max_size = 10
+after_cleanup_size = 5, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_remove_tracks_size">test_lru_cache.py::TestLRUSizeCache::test_remove_tracks_size</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_remove_tracks_size</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_remove_tracks_size>
+
+    def test_remove_tracks_size(self):
+>       cache = lru_cache.LRUSizeCache()
+
+tests/test_lru_cache.py:311: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd400f09870>
+max_size = 1048576, after_cleanup_size = None, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_resize_larger">test_lru_cache.py::TestLRUSizeCache::test_resize_larger</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_resize_larger</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_resize_larger>
+
+    def test_resize_larger(self):
+>       cache = lru_cache.LRUSizeCache(max_size=10, after_cleanup_size=9)
+
+tests/test_lru_cache.py:439: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd40297fac0>, max_size = 10
+after_cleanup_size = 9, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_lru_cachepytestlrusizecachetest_resize_smaller">test_lru_cache.py::TestLRUSizeCache::test_resize_smaller</h3>
+<details><summary> <pre>test_lru_cache.py::TestLRUSizeCache::test_resize_smaller</pre></summary><pre>
+self = <tests.test_lru_cache.TestLRUSizeCache testMethod=test_resize_smaller>
+
+    def test_resize_smaller(self):
+>       cache = lru_cache.LRUSizeCache(max_size=10, after_cleanup_size=9)
+
+tests/test_lru_cache.py:422: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.lru_cache.LRUSizeCache object at 0x7fd401613c70>, max_size = 10
+after_cleanup_size = 9, compute_size = None
+
+    def __init__(self, max_size: int=1024 * 1024, after_cleanup_size: Optional[int]=None, compute_size: Optional[Callable[[V], int]]=None) -> None:
+        """Create a new LRUSizeCache.
+
+        Args:
+          max_size: The max number of bytes to store before we start
+            clearing out entries.
+          after_cleanup_size: After cleaning up, shrink everything to this
+            size.
+          compute_size: A function to compute the size of the values. We
+            use a function here, so that you can pass 'len' if you are just
+            using simple strings, or a more complex function if you are using
+            something like a list of strings, or even a custom object.
+            The function should take the form "compute_size(value) => integer".
+            If not supplied, it defaults to 'len()'
+        """
+        self._value_size = 0
+        if compute_size is None:
+            self._compute_size = len
+        else:
+            self._compute_size = compute_size
+>       self._update_max_size(max_size, after_cleanup_size=after_cleanup_size)
+E       AttributeError: 'LRUSizeCache' object has no attribute '_update_max_size'
+
+dulwich/lru_cache.py:168: AttributeError
+</pre>
+</details>
+<h3 id="test_mailmappyreadmailmapteststest_read">test_mailmap.py::ReadMailmapTests::test_read</h3>
+<details><summary> <pre>test_mailmap.py::ReadMailmapTests::test_read</pre></summary><pre>
+self = <tests.test_mailmap.ReadMailmapTests testMethod=test_read>
+
+        def test_read(self):
+            b = BytesIO(
+                b"""\
+    Jane Doe         <jane@desktop.(none)>
+    Joe R. Developer <joe@example.com>
+    # A comment
+    <cto@company.xx>                       <cto@coompany.xx> # Comment
+    Some Dude <some@dude.xx>         nick1 <bugs@company.xx>
+    Other Author <other@author.xx>   nick2 <bugs@company.xx>
+    Other Author <other@author.xx>         <nick2@company.xx>
+    Santa Claus <santa.claus@northpole.xx> <me@company.xx>
+    """
+            )
+            self.assertEqual(
+                [
+                    ((b"Jane Doe", b"jane@desktop.(none)"), None),
+                    ((b"Joe R. Developer", b"joe@example.com"), None),
+                    ((None, b"cto@company.xx"), (None, b"cto@coompany.xx")),
+                    (
+                        (b"Some Dude", b"some@dude.xx"),
+                        (b"nick1", b"bugs@company.xx"),
+                    ),
+                    (
+                        (b"Other Author", b"other@author.xx"),
+                        (b"nick2", b"bugs@company.xx"),
+                    ),
+                    (
+                        (b"Other Author", b"other@author.xx"),
+                        (None, b"nick2@company.xx"),
+                    ),
+                    (
+                        (b"Santa Claus", b"santa.claus@northpole.xx"),
+                        (None, b"me@company.xx"),
+                    ),
+                ],
+>               list(read_mailmap(b)),
+            )
+E           TypeError: 'NoneType' object is not iterable
+
+tests/test_mailmap.py:65: TypeError
+</pre>
+</details>
+<h3 id="test_mailmappymailmapteststest_lookup">test_mailmap.py::MailmapTests::test_lookup</h3>
+<details><summary> <pre>test_mailmap.py::MailmapTests::test_lookup</pre></summary><pre>
+self = <tests.test_mailmap.MailmapTests testMethod=test_lookup>
+
+    def test_lookup(self):
+        m = Mailmap()
+        m.add_entry((b"Jane Doe", b"jane@desktop.(none)"), (None, None))
+        m.add_entry((b"Joe R. Developer", b"joe@example.com"), None)
+        m.add_entry((None, b"cto@company.xx"), (None, b"cto@coompany.xx"))
+        m.add_entry((b"Some Dude", b"some@dude.xx"), (b"nick1", b"bugs@company.xx"))
+        m.add_entry(
+            (b"Other Author", b"other@author.xx"),
+            (b"nick2", b"bugs@company.xx"),
+        )
+        m.add_entry((b"Other Author", b"other@author.xx"), (None, b"nick2@company.xx"))
+        m.add_entry(
+            (b"Santa Claus", b"santa.claus@northpole.xx"),
+            (None, b"me@company.xx"),
+        )
+>       self.assertEqual(
+            b"Jane Doe <jane@desktop.(none)>",
+            m.lookup(b"Jane Doe <jane@desktop.(none)>"),
+        )
+E       AssertionError: b'Jane Doe <jane@desktop.(none)>' != None
+
+tests/test_mailmap.py:85: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_eof">test_protocol.py::ProtocolTests::test_eof</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_eof</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_eof>
+
+    def test_eof(self):
+        self.rin.write(b"0000")
+        self.rin.seek(0)
+        self.assertFalse(self.proto.eof())
+        self.assertEqual(None, self.proto.read_pkt_line())
+>       self.assertTrue(self.proto.eof())
+E       AssertionError: None is not true
+
+tests/test_protocol.py:62: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_read_cmd">test_protocol.py::ProtocolTests::test_read_cmd</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_read_cmd</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_read_cmd>
+
+    def test_read_cmd(self):
+        self.rin.write(b"0012cmd arg1\x00arg2\x00")
+        self.rin.seek(0)
+>       self.assertEqual((b"cmd", [b"arg1", b"arg2"]), self.proto.read_cmd())
+E       AssertionError: (b'cmd', [b'arg1', b'arg2']) != None
+
+tests/test_protocol.py:101: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_read_cmd_noend0">test_protocol.py::ProtocolTests::test_read_cmd_noend0</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_read_cmd_noend0</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_read_cmd_noend0>
+
+    def test_read_cmd_noend0(self):
+        self.rin.write(b"0011cmd arg1\x00arg2")
+        self.rin.seek(0)
+>       self.assertRaises(AssertionError, self.proto.read_cmd)
+E       AssertionError: AssertionError not raised by read_cmd
+
+tests/test_protocol.py:106: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_read_pkt_line">test_protocol.py::ProtocolTests::test_read_pkt_line</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_read_pkt_line</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_read_pkt_line>
+
+    def test_read_pkt_line(self):
+        self.rin.write(b"0008cmd ")
+        self.rin.seek(0)
+>       self.assertEqual(b"cmd ", self.proto.read_pkt_line())
+E       AssertionError: b'cmd ' != None
+
+tests/test_protocol.py:55: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_read_pkt_line_wrong_size">test_protocol.py::ProtocolTests::test_read_pkt_line_wrong_size</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_read_pkt_line_wrong_size</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_read_pkt_line_wrong_size>
+
+    def test_read_pkt_line_wrong_size(self):
+        self.rin.write(b"0100too short")
+        self.rin.seek(0)
+>       self.assertRaises(GitProtocolError, self.proto.read_pkt_line)
+E       AssertionError: GitProtocolError not raised by read_pkt_line
+
+tests/test_protocol.py:88: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_read_pkt_seq">test_protocol.py::ProtocolTests::test_read_pkt_seq</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_read_pkt_seq</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_read_pkt_seq>
+
+    def test_read_pkt_seq(self):
+        self.rin.write(b"0008cmd 0005l0000")
+        self.rin.seek(0)
+>       self.assertEqual([b"cmd ", b"l"], list(self.proto.read_pkt_seq()))
+E       TypeError: 'NoneType' object is not iterable
+
+tests/test_protocol.py:78: TypeError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_send_cmd">test_protocol.py::ProtocolTests::test_send_cmd</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_send_cmd</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_send_cmd>
+
+    def test_send_cmd(self):
+        self.proto.send_cmd(b"fetch", b"a", b"b")
+>       self.assertEqual(self.rout.getvalue(), b"000efetch a\x00b\x00")
+E       AssertionError: b'' != b'000efetch a\x00b\x00'
+
+tests/test_protocol.py:96: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_unread_pkt_line">test_protocol.py::ProtocolTests::test_unread_pkt_line</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_unread_pkt_line</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_unread_pkt_line>
+
+    def test_unread_pkt_line(self):
+        self.rin.write(b"0007foo0000")
+        self.rin.seek(0)
+>       self.assertEqual(b"foo", self.proto.read_pkt_line())
+E       AssertionError: b'foo' != None
+
+tests/test_protocol.py:68: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_write_pkt_line">test_protocol.py::ProtocolTests::test_write_pkt_line</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_write_pkt_line</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_write_pkt_line>
+
+    def test_write_pkt_line(self):
+        self.proto.write_pkt_line(b"bla")
+>       self.assertEqual(self.rout.getvalue(), b"0007bla")
+E       AssertionError: b'' != b'0007bla'
+
+tests/test_protocol.py:50: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_write_pkt_line_none">test_protocol.py::ProtocolTests::test_write_pkt_line_none</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_write_pkt_line_none</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_write_pkt_line_none>
+
+    def test_write_pkt_line_none(self):
+        self.proto.write_pkt_line(None)
+>       self.assertEqual(self.rout.getvalue(), b"0000")
+E       AssertionError: b'' != b'0000'
+
+tests/test_protocol.py:46: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyprotocolteststest_write_sideband">test_protocol.py::ProtocolTests::test_write_sideband</h3>
+<details><summary> <pre>test_protocol.py::ProtocolTests::test_write_sideband</pre></summary><pre>
+self = <tests.test_protocol.ProtocolTests testMethod=test_write_sideband>
+
+    def test_write_sideband(self):
+        self.proto.write_sideband(3, b"bloe")
+>       self.assertEqual(self.rout.getvalue(), b"0009\x03bloe")
+E       AssertionError: b'' != b'0009\x03bloe'
+
+tests/test_protocol.py:92: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_eof">test_protocol.py::ReceivableProtocolTests::test_eof</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_eof</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_eof>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4017ebdf0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400abc7c0>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400abc630>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_mixed">test_protocol.py::ReceivableProtocolTests::test_mixed</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_mixed</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_mixed>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4013908e0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400c85620>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400c87510>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_cmd">test_protocol.py::ReceivableProtocolTests::test_read_cmd</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_cmd</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_cmd>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4017e8dc0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400d20c20>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400d23970>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_cmd_noend0">test_protocol.py::ReceivableProtocolTests::test_read_cmd_noend0</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_cmd_noend0</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_cmd_noend0>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd401390be0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400abc630>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400abc7c0>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_pkt_line">test_protocol.py::ReceivableProtocolTests::test_read_pkt_line</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_pkt_line</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_pkt_line>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4017fd810>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400d206d0>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400d21760>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_pkt_line_none">test_protocol.py::ReceivableProtocolTests::test_read_pkt_line_none</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_pkt_line_none</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_pkt_line_none>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd401391060>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400c84b30>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400c84d60>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_pkt_line_wrong_size">test_protocol.py::ReceivableProtocolTests::test_read_pkt_line_wrong_size</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_pkt_line_wrong_size</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_pkt_line_wrong_size>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4009e1a50>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd4014cfe70>>
+write = <built-in method write of _io.BytesIO object at 0x7fd4014cc810>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_pkt_seq">test_protocol.py::ReceivableProtocolTests::test_read_pkt_seq</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_pkt_seq</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_pkt_seq>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4013b34c0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd40087c400>>
+write = <built-in method write of _io.BytesIO object at 0x7fd40087d1c0>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_read_recv">test_protocol.py::ReceivableProtocolTests::test_read_recv</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_read_recv</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_read_recv>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4009e3c40>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400c8ad90>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400c880e0>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_recv">test_protocol.py::ReceivableProtocolTests::test_recv</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_recv</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_recv>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd401432aa0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd40087d300>>
+write = <built-in method write of _io.BytesIO object at 0x7fd40087c0e0>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_recv_read">test_protocol.py::ReceivableProtocolTests::test_recv_read</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_recv_read</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_recv_read>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4009e28c0>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400ca6c00>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400ca5e90>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_send_cmd">test_protocol.py::ReceivableProtocolTests::test_send_cmd</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_send_cmd</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_send_cmd>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd401757250>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400f6a930>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400f68770>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_unread_pkt_line">test_protocol.py::ReceivableProtocolTests::test_unread_pkt_line</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_unread_pkt_line</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_unread_pkt_line>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd4009e3910>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400aa7650>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400aa73d0>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_write_pkt_line">test_protocol.py::ReceivableProtocolTests::test_write_pkt_line</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_write_pkt_line</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_write_pkt_line>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd401508d30>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd40155d8a0>>
+write = <built-in method write of _io.BytesIO object at 0x7fd40155da80>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_write_pkt_line_none">test_protocol.py::ReceivableProtocolTests::test_write_pkt_line_none</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_write_pkt_line_none</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_write_pkt_line_none>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd400a29540>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400ca5bc0>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400ca7330>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpyreceivableprotocolteststest_write_sideband">test_protocol.py::ReceivableProtocolTests::test_write_sideband</h3>
+<details><summary> <pre>test_protocol.py::ReceivableProtocolTests::test_write_sideband</pre></summary><pre>
+self = <tests.test_protocol.ReceivableProtocolTests testMethod=test_write_sideband>
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.rout = BytesIO()
+        self.rin = ReceivableBytesIO()
+>       self.proto = ReceivableProtocol(self.rin.recv, self.rout.write)
+
+tests/test_protocol.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dulwich.protocol.ReceivableProtocol object at 0x7fd40150a920>
+recv = <bound method ReceivableBytesIO.recv of <tests.test_protocol.ReceivableBytesIO object at 0x7fd400b9eac0>>
+write = <built-in method write of _io.BytesIO object at 0x7fd400b9e930>
+close = None, report_activity = None, rbufsize = 8192
+
+    def __init__(self, recv, write, close=None, report_activity=None, rbufsize=_RBUFSIZE) -> None:
+>       super().__init__(self.read, write, close=close, report_activity=report_activity)
+E       AttributeError: 'ReceivableProtocol' object has no attribute 'read'
+
+dulwich/protocol.py:182: AttributeError
+</pre>
+</details>
+<h3 id="test_protocolpycapabilitiestestcasetest_ack_type">test_protocol.py::CapabilitiesTestCase::test_ack_type</h3>
+<details><summary> <pre>test_protocol.py::CapabilitiesTestCase::test_ack_type</pre></summary><pre>
+self = <tests.test_protocol.CapabilitiesTestCase testMethod=test_ack_type>
+
+    def test_ack_type(self):
+>       self.assertEqual(SINGLE_ACK, ack_type([b"foo", b"bar"]))
+E       AssertionError: 0 != None
+
+tests/test_protocol.py:232: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpycapabilitiestestcasetest_caps">test_protocol.py::CapabilitiesTestCase::test_caps</h3>
+<details><summary> <pre>test_protocol.py::CapabilitiesTestCase::test_caps</pre></summary><pre>
+self = <tests.test_protocol.CapabilitiesTestCase testMethod=test_caps>
+
+    def test_caps(self):
+>       self.assertEqual((b"bla", [b"la"]), extract_capabilities(b"bla\0la"))
+E       AssertionError: (b'bla', [b'la']) != None
+
+tests/test_protocol.py:210: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpycapabilitiestestcasetest_caps_want_line">test_protocol.py::CapabilitiesTestCase::test_caps_want_line</h3>
+<details><summary> <pre>test_protocol.py::CapabilitiesTestCase::test_caps_want_line</pre></summary><pre>
+self = <tests.test_protocol.CapabilitiesTestCase testMethod=test_caps_want_line>
+
+    def test_caps_want_line(self):
+>       self.assertEqual(
+            (b"want bla", [b"la"]),
+            extract_want_line_capabilities(b"want bla la"),
+        )
+E       AssertionError: (b'want bla', [b'la']) != None
+
+tests/test_protocol.py:218: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpycapabilitiestestcasetest_plain">test_protocol.py::CapabilitiesTestCase::test_plain</h3>
+<details><summary> <pre>test_protocol.py::CapabilitiesTestCase::test_plain</pre></summary><pre>
+self = <tests.test_protocol.CapabilitiesTestCase testMethod=test_plain>
+
+    def test_plain(self):
+>       self.assertEqual((b"bla", []), extract_capabilities(b"bla"))
+E       AssertionError: (b'bla', []) != None
+
+tests/test_protocol.py:207: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpycapabilitiestestcasetest_plain_want_line">test_protocol.py::CapabilitiesTestCase::test_plain_want_line</h3>
+<details><summary> <pre>test_protocol.py::CapabilitiesTestCase::test_plain_want_line</pre></summary><pre>
+self = <tests.test_protocol.CapabilitiesTestCase testMethod=test_plain_want_line>
+
+    def test_plain_want_line(self):
+>       self.assertEqual((b"want bla", []), extract_want_line_capabilities(b"want bla"))
+E       AssertionError: (b'want bla', []) != None
+
+tests/test_protocol.py:215: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpybufferedpktlinewriterteststest_write">test_protocol.py::BufferedPktLineWriterTests::test_write</h3>
+<details><summary> <pre>test_protocol.py::BufferedPktLineWriterTests::test_write</pre></summary><pre>
+self = <tests.test_protocol.BufferedPktLineWriterTests testMethod=test_write>
+
+    def test_write(self):
+        self._writer.write(b"foo")
+        self.assertOutputEquals(b"")
+        self._writer.flush()
+>       self.assertOutputEquals(b"0007foo")
+
+tests/test_protocol.py:262: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_protocol.py:252: in assertOutputEquals
+    self.assertEqual(expected, self._output.getvalue())
+E   AssertionError: b'0007foo' != b''
+</pre>
+</details>
+<h3 id="test_protocolpybufferedpktlinewriterteststest_write_across_boundary">test_protocol.py::BufferedPktLineWriterTests::test_write_across_boundary</h3>
+<details><summary> <pre>test_protocol.py::BufferedPktLineWriterTests::test_write_across_boundary</pre></summary><pre>
+self = <tests.test_protocol.BufferedPktLineWriterTests testMethod=test_write_across_boundary>
+
+    def test_write_across_boundary(self):
+        self._writer.write(b"foo")
+        self._writer.write(b"barbaz")
+>       self.assertOutputEquals(b"0007foo000abarba")
+
+tests/test_protocol.py:284: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_protocol.py:252: in assertOutputEquals
+    self.assertEqual(expected, self._output.getvalue())
+E   AssertionError: b'0007foo000abarba' != b''
+</pre>
+</details>
+<h3 id="test_protocolpybufferedpktlinewriterteststest_write_multiple">test_protocol.py::BufferedPktLineWriterTests::test_write_multiple</h3>
+<details><summary> <pre>test_protocol.py::BufferedPktLineWriterTests::test_write_multiple</pre></summary><pre>
+self = <tests.test_protocol.BufferedPktLineWriterTests testMethod=test_write_multiple>
+
+    def test_write_multiple(self):
+        self._writer.write(b"foo")
+        self._writer.write(b"bar")
+        self.assertOutputEquals(b"")
+        self._writer.flush()
+>       self.assertOutputEquals(b"0007foo0007bar")
+
+tests/test_protocol.py:279: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_protocol.py:252: in assertOutputEquals
+    self.assertEqual(expected, self._output.getvalue())
+E   AssertionError: b'0007foo0007bar' != b''
+</pre>
+</details>
+<h3 id="test_protocolpybufferedpktlinewriterteststest_write_none">test_protocol.py::BufferedPktLineWriterTests::test_write_none</h3>
+<details><summary> <pre>test_protocol.py::BufferedPktLineWriterTests::test_write_none</pre></summary><pre>
+self = <tests.test_protocol.BufferedPktLineWriterTests testMethod=test_write_none>
+
+    def test_write_none(self):
+        self._writer.write(None)
+        self.assertOutputEquals(b"")
+        self._writer.flush()
+>       self.assertOutputEquals(b"0000")
+
+tests/test_protocol.py:268: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_protocol.py:252: in assertOutputEquals
+    self.assertEqual(expected, self._output.getvalue())
+E   AssertionError: b'0000' != b''
+</pre>
+</details>
+<h3 id="test_protocolpybufferedpktlinewriterteststest_write_to_boundary">test_protocol.py::BufferedPktLineWriterTests::test_write_to_boundary</h3>
+<details><summary> <pre>test_protocol.py::BufferedPktLineWriterTests::test_write_to_boundary</pre></summary><pre>
+self = <tests.test_protocol.BufferedPktLineWriterTests testMethod=test_write_to_boundary>
+
+    def test_write_to_boundary(self):
+        self._writer.write(b"foo")
+        self._writer.write(b"barba")
+>       self.assertOutputEquals(b"0007foo0009barba")
+
+tests/test_protocol.py:292: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_protocol.py:252: in assertOutputEquals
+    self.assertEqual(expected, self._output.getvalue())
+E   AssertionError: b'0007foo0009barba' != b''
+</pre>
+</details>
+<h3 id="test_protocolpypktlineparserteststest_multiple_packets">test_protocol.py::PktLineParserTests::test_multiple_packets</h3>
+<details><summary> <pre>test_protocol.py::PktLineParserTests::test_multiple_packets</pre></summary><pre>
+self = <tests.test_protocol.PktLineParserTests testMethod=test_multiple_packets>
+
+    def test_multiple_packets(self):
+        pktlines = []
+        parser = PktLineParser(pktlines.append)
+        parser.parse(b"0005z0006aba")
+>       self.assertEqual(pktlines, [b"z", b"ab"])
+E       AssertionError: Lists differ: [] != [b'z', b'ab']
+E       
+E       Second list contains 2 additional elements.
+E       First extra element 0:
+E       b'z'
+E       
+E       - []
+E       + [b'z', b'ab']
+
+tests/test_protocol.py:320: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpypktlineparserteststest_none">test_protocol.py::PktLineParserTests::test_none</h3>
+<details><summary> <pre>test_protocol.py::PktLineParserTests::test_none</pre></summary><pre>
+self = <tests.test_protocol.PktLineParserTests testMethod=test_none>
+
+    def test_none(self):
+        pktlines = []
+        parser = PktLineParser(pktlines.append)
+        parser.parse(b"0000")
+>       self.assertEqual(pktlines, [None])
+E       AssertionError: Lists differ: [] != [None]
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 0:
+E       None
+E       
+E       - []
+E       + [None]
+
+tests/test_protocol.py:304: AssertionError
+</pre>
+</details>
+<h3 id="test_protocolpypktlineparserteststest_small_fragments">test_protocol.py::PktLineParserTests::test_small_fragments</h3>
+<details><summary> <pre>test_protocol.py::PktLineParserTests::test_small_fragments</pre></summary><pre>
+self = <tests.test_protocol.PktLineParserTests testMethod=test_small_fragments>
+
+    def test_small_fragments(self):
+        pktlines = []
+        parser = PktLineParser(pktlines.append)
+        parser.parse(b"00")
+        parser.parse(b"05")
+        parser.parse(b"z0000")
+>       self.assertEqual(pktlines, [b"z", None])
+E       AssertionError: Lists differ: [] != [b'z', None]
+E       
+E       Second list contains 2 additional elements.
+E       First extra element 0:
+E       b'z'
+E       
+E       - []
+E       + [b'z', None]
+
+tests/test_protocol.py:313: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/dulwich/objects.py b/dulwich/objects.py</span>
+<span class="gh">index 2f7197ce..4a03ebf8 100644</span>
+<span class="gd">--- a/dulwich/objects.py</span>
+<span class="gi">+++ b/dulwich/objects.py</span>
+<span class="gu">@@ -56,7 +56,7 @@ def hex_to_filename(path, hex):</span>
+
+<span class="w"> </span>def filename_to_hex(filename):
+<span class="w"> </span>    &quot;&quot;&quot;Takes an object filename and returns its corresponding hex sha.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return os.path.basename(os.path.dirname(filename)) + os.path.basename(filename)</span>
+
+<span class="w"> </span>def object_header(num_type: int, length: int) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Return an object header for the given numeric type and text length.&quot;&quot;&quot;
+<span class="gu">@@ -85,7 +85,8 @@ def check_hexsha(hex, error_msg):</span>
+<span class="w"> </span>    Raises:
+<span class="w"> </span>      ObjectFormatException: Raised when the string is not valid
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if len(hex) != 40 or not all(c in &#39;0123456789abcdefABCDEF&#39; for c in hex):</span>
+<span class="gi">+        raise ObjectFormatException(error_msg)</span>
+
+<span class="w"> </span>def check_identity(identity: bytes, error_msg: str) -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Check if the specified identity is valid.
+<span class="gu">@@ -96,7 +97,8 @@ def check_identity(identity: bytes, error_msg: str) -&gt; None:</span>
+<span class="w"> </span>      identity: Identity string
+<span class="w"> </span>      error_msg: Error message to use in exception
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if b&#39;&lt;&#39; not in identity or b&#39;&gt;&#39; not in identity or b&#39;@&#39; not in identity:</span>
+<span class="gi">+        raise ObjectFormatException(error_msg)</span>
+
+<span class="w"> </span>def check_time(time_seconds):
+<span class="w"> </span>    &quot;&quot;&quot;Check if the specified time is not prone to overflow error.
+<span class="gu">@@ -107,11 +109,12 @@ def check_time(time_seconds):</span>
+<span class="w"> </span>      time_seconds: time in seconds
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if time_seconds &lt; 0 or time_seconds &gt; MAX_TIME:</span>
+<span class="gi">+        raise ObjectFormatException(f&quot;Invalid time {time_seconds}&quot;)</span>
+
+<span class="w"> </span>def git_line(*items):
+<span class="w"> </span>    &quot;&quot;&quot;Formats items into a space separated line.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return b&#39; &#39;.join(i.encode(&#39;utf-8&#39;) if isinstance(i, str) else i for i in items)</span>
+
+<span class="w"> </span>class FixedSha:
+<span class="w"> </span>    &quot;&quot;&quot;SHA object that behaves like hashlib&#39;s but is given a fixed value.&quot;&quot;&quot;
+<span class="gu">@@ -127,11 +130,11 @@ class FixedSha:</span>
+
+<span class="w"> </span>    def digest(self) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Return the raw SHA digest.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._sha</span>
+
+<span class="w"> </span>    def hexdigest(self) -&gt; str:
+<span class="w"> </span>        &quot;&quot;&quot;Return the hex SHA digest.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._hexsha.decode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>class ShaFile:
+<span class="w"> </span>    &quot;&quot;&quot;A git SHA file.&quot;&quot;&quot;
+<span class="gu">@@ -142,84 +145,77 @@ class ShaFile:</span>
+<span class="w"> </span>    _chunked_text: Optional[List[bytes]]
+<span class="w"> </span>    _sha: Union[FixedSha, None, &#39;HASH&#39;]
+
+<span class="gi">+    @staticmethod</span>
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def _parse_legacy_object_header(magic, f: BinaryIO) -&gt; &#39;ShaFile&#39;:
+<span class="w"> </span>        &quot;&quot;&quot;Parse a legacy object, creating it but not reading the file.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        word = magic + f.read(4)</span>
+<span class="gi">+        type_name = word.split(b&#39; &#39;)[0]</span>
+<span class="gi">+        obj_class = object_class(type_name)</span>
+<span class="gi">+        if not obj_class:</span>
+<span class="gi">+            raise ObjectFormatException(f&quot;Not a known type: {type_name!r}&quot;)</span>
+<span class="gi">+        return obj_class()</span>
+
+<span class="w"> </span>    def _parse_legacy_object(self, map) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Parse a legacy object, setting the raw string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        text = zlib.decompress(map)</span>
+<span class="gi">+        header_end = text.index(b&#39;\0&#39;)</span>
+<span class="gi">+        self.set_raw_string(text[header_end+1:])</span>
+
+<span class="w"> </span>    def as_legacy_object_chunks(self, compression_level: int=-1) -&gt; Iterator[bytes]:
+<span class="w"> </span>        &quot;&quot;&quot;Return chunks representing the object in the experimental format.
+
+<span class="w"> </span>        Returns: List of strings
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        data = self.as_raw_string()</span>
+<span class="gi">+        header = object_header(self.type_num, len(data))</span>
+<span class="gi">+        yield zlib.compress(header + data, compression_level)</span>
+
+<span class="w"> </span>    def as_legacy_object(self, compression_level: int=-1) -&gt; bytes:
+<span class="w"> </span>        &quot;&quot;&quot;Return string representing the object in the experimental format.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+    def as_legacy_object(self, compression_level: int=-1) -&gt; bytes:</span>
+<span class="gi">+        &quot;&quot;&quot;Return string representing the object in the experimental format.&quot;&quot;&quot;</span>
+<span class="gi">+        return b&#39;&#39;.join(self.as_legacy_object_chunks(compression_level))</span>
+
+<span class="w"> </span>    def as_raw_chunks(self) -&gt; List[bytes]:
+<span class="gd">-        &quot;&quot;&quot;Return chunks with serialization of the object.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns: List of strings, not necessarily one per line</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Return chunks with serialization of the object.&quot;&quot;&quot;</span>
+<span class="gi">+        if self._chunked_text is None:</span>
+<span class="gi">+            self._chunked_text = self._serialize()</span>
+<span class="gi">+        return self._chunked_text</span>
+
+<span class="w"> </span>    def as_raw_string(self) -&gt; bytes:
+<span class="gd">-        &quot;&quot;&quot;Return raw string with serialization of the object.</span>
+<span class="gd">-</span>
+<span class="gd">-        Returns: String object</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    def __bytes__(self) -&gt; bytes:</span>
+<span class="gd">-        &quot;&quot;&quot;Return raw string serialization of this object.&quot;&quot;&quot;</span>
+<span class="gd">-        return self.as_raw_string()</span>
+<span class="gd">-</span>
+<span class="gd">-    def __hash__(self):</span>
+<span class="gd">-        &quot;&quot;&quot;Return unique hash for this object.&quot;&quot;&quot;</span>
+<span class="gd">-        return hash(self.id)</span>
+<span class="gd">-</span>
+<span class="gd">-    def as_pretty_string(self) -&gt; str:</span>
+<span class="gd">-        &quot;&quot;&quot;Return a string representing this object, fit for display.&quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Return raw string with serialization of the object.&quot;&quot;&quot;</span>
+<span class="gi">+        return b&#39;&#39;.join(self.as_raw_chunks())</span>
+
+<span class="w"> </span>    def set_raw_string(self, text: bytes, sha: Optional[ObjectID]=None) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Set the contents of this object from a serialized string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._chunked_text = [text]</span>
+<span class="gi">+        self._sha = sha</span>
+<span class="gi">+        self._needs_serialization = False</span>
+
+<span class="w"> </span>    def set_raw_chunks(self, chunks: List[bytes], sha: Optional[ObjectID]=None) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Set the contents of this object from a list of chunks.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    @staticmethod</span>
+<span class="gd">-    def _parse_object_header(magic, f):</span>
+<span class="gd">-        &quot;&quot;&quot;Parse a new style object, creating it but not reading the file.&quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    def _parse_object(self, map) -&gt; None:</span>
+<span class="gd">-        &quot;&quot;&quot;Parse a new style object, setting self._text.&quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    def __init__(self) -&gt; None:</span>
+<span class="gd">-        &quot;&quot;&quot;Don&#39;t call this directly.&quot;&quot;&quot;</span>
+<span class="gd">-        self._sha = None</span>
+<span class="gd">-        self._chunked_text = []</span>
+<span class="gd">-        self._needs_serialization = True</span>
+<span class="gi">+        self._chunked_text = chunks</span>
+<span class="gi">+        self._sha = sha</span>
+<span class="gi">+        self._needs_serialization = False</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def from_path(cls, path):
+<span class="w"> </span>        &quot;&quot;&quot;Open a SHA file from disk.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        with open(path, &#39;rb&#39;) as f:</span>
+<span class="gi">+            return cls.from_file(f)</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def from_file(cls, f):
+<span class="w"> </span>        &quot;&quot;&quot;Get the contents of a SHA file on disk.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        obj = cls()</span>
+<span class="gi">+        obj._parse_legacy_object(f.read())</span>
+<span class="gi">+        return obj</span>
+<span class="gi">+</span>
+<span class="gi">+    @classmethod</span>
+<span class="gi">+    def from_string(cls, string):</span>
+<span class="gi">+        &quot;&quot;&quot;Create a ShaFile from a string.&quot;&quot;&quot;</span>
+<span class="gi">+        return cls.from_raw_string(cls.type_num, string)</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def from_raw_string(type_num, string, sha=None):
+<span class="gu">@@ -230,7 +226,9 @@ class ShaFile:</span>
+<span class="w"> </span>          string: The raw uncompressed contents.
+<span class="w"> </span>          sha: Optional known sha for the object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        obj = object_class(type_num)()</span>
+<span class="gi">+        obj.set_raw_string(string, sha)</span>
+<span class="gi">+        return obj</span>
+
+<span class="w"> </span>    @staticmethod
+<span class="w"> </span>    def from_raw_chunks(type_num: int, chunks: List[bytes], sha: Optional[ObjectID]=None):
+<span class="gu">@@ -241,7 +239,9 @@ class ShaFile:</span>
+<span class="w"> </span>          chunks: An iterable of the raw uncompressed contents.
+<span class="w"> </span>          sha: Optional known sha for the object
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        obj = object_class(type_num)()</span>
+<span class="gi">+        obj.set_raw_chunks(chunks, sha)</span>
+<span class="gi">+        return obj</span>
+
+<span class="w"> </span>    @classmethod
+<span class="w"> </span>    def from_string(cls, string):
+<span class="gu">@@ -258,7 +258,8 @@ class ShaFile:</span>
+<span class="w"> </span>          ObjectFormatException: with the given error_msg if member is
+<span class="w"> </span>            missing or is None
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if getattr(self, member, None) is None:</span>
+<span class="gi">+            raise ObjectFormatException(error_msg)</span>
+
+<span class="w"> </span>    def check(self) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;Check this object for internal consistency.
+<span class="gu">@@ -268,24 +269,28 @@ class ShaFile:</span>
+<span class="w"> </span>          ChecksumMismatch: if the object was created with a SHA that does
+<span class="w"> </span>            not match its contents
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gi">+        # Subclasses should override this method</span>
+<span class="w"> </span>    def raw_length(self) -&gt; int:
+<span class="w"> </span>        &quot;&quot;&quot;Returns the length of the raw string of this object.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return len(self.as_raw_string())</span>
+
+<span class="w"> </span>    def sha(self):
+<span class="w"> </span>        &quot;&quot;&quot;The SHA1 object that is the name of this object.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return sha1(self.as_raw_string())</span>
+
+<span class="w"> </span>    def copy(self):
+<span class="w"> </span>        &quot;&quot;&quot;Create a new copy of this SHA1 object from its raw string.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return type(self).from_raw_string(self.type_num, self.as_raw_string())</span>
+
+<span class="w"> </span>    @property
+<span class="w"> </span>    def id(self):
+<span class="w"> </span>        &quot;&quot;&quot;The hex SHA of this object.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.sha().hexdigest()</span>
+<span class="gi">+</span>
+<span class="gi">+    @property</span>
+<span class="gi">+    def id(self):</span>
+<span class="gi">+        &quot;&quot;&quot;The hex SHA of this object.&quot;&quot;&quot;</span>
+<span class="gi">+        return self.sha().hexdigest()</span>
+
+<span class="w"> </span>    def __repr__(self) -&gt; str:
+<span class="w"> </span>        return f&#39;&lt;{self.__class__.__name__} {self.id}&gt;&#39;
+<span class="gu">@@ -330,7 +335,7 @@ class Blob(ShaFile):</span>
+<span class="w"> </span>        Raises:
+<span class="w"> </span>          ObjectFormatException: if the object is malformed in some way
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        super().check()</span>
+
+<span class="w"> </span>    def splitlines(self) -&gt; List[bytes]:
+<span class="w"> </span>        &quot;&quot;&quot;Return list of lines in this blob.
+<span class="gu">@@ -371,18 +376,46 @@ class Tag(ShaFile):</span>
+<span class="w"> </span>        Raises:
+<span class="w"> </span>          ObjectFormatException: if the object is malformed in some way
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        super().check()</span>
+<span class="gi">+        if not self._name:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Tag name not set&quot;)</span>
+<span class="gi">+        if not self._object_sha:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Tagged object SHA not set&quot;)</span>
+<span class="gi">+        if not self._object_class:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Tagged object type not set&quot;)</span>
+<span class="gi">+        if not self._tagger:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Tagger not set&quot;)</span>
+<span class="gi">+        if self._tag_time is None:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Tag time not set&quot;)</span>
+<span class="gi">+        if not self._message:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Tag message not set&quot;)</span>
+
+<span class="w"> </span>    def _deserialize(self, chunks):
+<span class="w"> </span>        &quot;&quot;&quot;Grab the metadata attached to the tag.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        for field, value in _parse_message(chunks):</span>
+<span class="gi">+            if field == b&#39;object&#39;:</span>
+<span class="gi">+                self._object_sha = value</span>
+<span class="gi">+            elif field == b&#39;type&#39;:</span>
+<span class="gi">+                self._object_class = object_class(value)</span>
+<span class="gi">+            elif field == b&#39;tag&#39;:</span>
+<span class="gi">+                self._name = value</span>
+<span class="gi">+            elif field == b&#39;tagger&#39;:</span>
+<span class="gi">+                self._tagger = value</span>
+<span class="gi">+                tagger_info = parse_time_entry(value)</span>
+<span class="gi">+                self._tag_time = tagger_info[0]</span>
+<span class="gi">+                self._tag_timezone = tagger_info[1]</span>
+<span class="gi">+                self._tag_timezone_neg_utc = tagger_info[2]</span>
+<span class="gi">+            elif field is None:</span>
+<span class="gi">+                self._message = value</span>
+<span class="gi">+            elif field == b&#39;-----BEGIN PGP SIGNATURE-----&#39;:</span>
+<span class="gi">+                self._signature = value</span>
+
+<span class="w"> </span>    def _get_object(self):
+<span class="w"> </span>        &quot;&quot;&quot;Get the object pointed to by this tag.
+
+<span class="w"> </span>        Returns: tuple of (object class, sha).
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return (self._object_class, self._object_sha)</span>
+<span class="w"> </span>    object = property(_get_object, _set_object)
+<span class="w"> </span>    name = serializable_property(&#39;name&#39;, &#39;The name of this tag&#39;)
+<span class="w"> </span>    tagger = serializable_property(&#39;tagger&#39;, &#39;Returns the name of the person who created this tag&#39;)
+<span class="gu">@@ -405,14 +438,34 @@ class Tag(ShaFile):</span>
+<span class="w"> </span>          gpg.errors.MissingSignatures: if tag was not signed by a key
+<span class="w"> </span>            specified in keyids
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            import gpg</span>
+<span class="gi">+        except ImportError:</span>
+<span class="gi">+            raise ImportError(&quot;python-gpg is required for signature verification&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if not self._signature:</span>
+<span class="gi">+            raise gpg.errors.MissingSignatures(&quot;Tag is not signed&quot;)</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Reconstruct the tag content without the signature</span>
+<span class="gi">+        content = self._serialize_text()</span>
+<span class="gi">+        </span>
+<span class="gi">+        # Verify the signature</span>
+<span class="gi">+        with gpg.Context() as c:</span>
+<span class="gi">+            _, result = c.verify(content, self._signature)</span>
+<span class="gi">+            if not result:</span>
+<span class="gi">+                raise gpg.errors.BadSignatures(&quot;Invalid signature&quot;)</span>
+<span class="gi">+            </span>
+<span class="gi">+            if keyids:</span>
+<span class="gi">+                trusted_sigs = [sig for sig in result.signatures if sig.fpr in keyids]</span>
+<span class="gi">+                if not trusted_sigs:</span>
+<span class="gi">+                    raise gpg.errors.MissingSignatures(&quot;No trusted signatures found&quot;)</span>
+
+<span class="w"> </span>class TreeEntry(namedtuple(&#39;TreeEntry&#39;, [&#39;path&#39;, &#39;mode&#39;, &#39;sha&#39;])):
+<span class="w"> </span>    &quot;&quot;&quot;Named tuple encapsulating a single tree entry.&quot;&quot;&quot;
+
+<span class="w"> </span>    def in_path(self, path: bytes):
+<span class="w"> </span>        &quot;&quot;&quot;Return a copy of this entry with the given path prepended.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return TreeEntry(path=path + b&#39;/&#39; + self.path, mode=self.mode, sha=self.sha)</span>
+
+<span class="w"> </span>def parse_tree(text, strict=False):
+<span class="w"> </span>    &quot;&quot;&quot;Parse a tree text.
+<span class="gu">@@ -424,7 +477,17 @@ def parse_tree(text, strict=False):</span>
+<span class="w"> </span>    Raises:
+<span class="w"> </span>      ObjectFormatException: if the object was malformed in some way
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    pos = 0</span>
+<span class="gi">+    while pos &lt; len(text):</span>
+<span class="gi">+        mode_end = text.index(b&#39; &#39;, pos)</span>
+<span class="gi">+        mode = int(text[pos:mode_end], 8)</span>
+<span class="gi">+        name_end = text.index(b&#39;\0&#39;, mode_end)</span>
+<span class="gi">+        name = text[mode_end+1:name_end]</span>
+<span class="gi">+        sha = text[name_end+1:name_end+21]</span>
+<span class="gi">+        if len(sha) != 20:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;SHA has invalid length&quot;)</span>
+<span class="gi">+        yield (name, mode, sha)</span>
+<span class="gi">+        pos = name_end + 21</span>
+
+<span class="w"> </span>def serialize_tree(items):
+<span class="w"> </span>    &quot;&quot;&quot;Serialize the items in a tree to a text.
+<span class="gu">@@ -433,7 +496,8 @@ def serialize_tree(items):</span>
+<span class="w"> </span>      items: Sorted iterable over (name, mode, sha) tuples
+<span class="w"> </span>    Returns: Serialized tree text as chunks
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    for name, mode, sha in items:</span>
+<span class="gi">+        yield (&quot;%04o %s\0&quot; % (mode, name)).encode(&#39;ascii&#39;) + sha</span>
+
+<span class="w"> </span>def sorted_tree_items(entries, name_order: bool):
+<span class="w"> </span>    &quot;&quot;&quot;Iterate over a tree entries dictionary.
+<span class="gu">@@ -445,7 +509,10 @@ def sorted_tree_items(entries, name_order: bool):</span>
+<span class="w"> </span>      entries: Dictionary mapping names to (mode, sha) tuples
+<span class="w"> </span>    Returns: Iterator over (name, mode, hexsha)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    key_func = key_entry_name_order if name_order else key_entry</span>
+<span class="gi">+    for name, entry in sorted(entries.items(), key=lambda x: key_func((x[0], x[1]))):</span>
+<span class="gi">+        mode, sha = entry</span>
+<span class="gi">+        yield name, mode, sha.hex()</span>
+
+<span class="w"> </span>def key_entry(entry) -&gt; bytes:
+<span class="w"> </span>    &quot;&quot;&quot;Sort key for tree entry.
+<span class="gu">@@ -453,11 +520,14 @@ def key_entry(entry) -&gt; bytes:</span>
+<span class="w"> </span>    Args:
+<span class="w"> </span>      entry: (name, value) tuple
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    name, value = entry</span>
+<span class="gi">+    if stat.S_ISDIR(value[0]):</span>
+<span class="gi">+        name += b&#39;/&#39;</span>
+<span class="gi">+    return name</span>
+
+<span class="w"> </span>def key_entry_name_order(entry):
+<span class="w"> </span>    &quot;&quot;&quot;Sort key for tree entry in name order.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return entry[0]</span>
+
+<span class="w"> </span>def pretty_format_tree_entry(name, mode, hexsha, encoding=&#39;utf-8&#39;) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Pretty format tree entry.
+<span class="gu">@@ -468,7 +538,18 @@ def pretty_format_tree_entry(name, mode, hexsha, encoding=&#39;utf-8&#39;) -&gt; str:</span>
+<span class="w"> </span>      hexsha: Hexsha of the referenced object
+<span class="w"> </span>    Returns: string describing the tree entry
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    mode_str = &quot;%06o&quot; % mode</span>
+<span class="gi">+    if mode &amp; stat.S_IFDIR:</span>
+<span class="gi">+        type_str = &quot;tree&quot;</span>
+<span class="gi">+    elif stat.S_ISLNK(mode):</span>
+<span class="gi">+        type_str = &quot;symlink&quot;</span>
+<span class="gi">+    elif stat.S_ISREG(mode):</span>
+<span class="gi">+        type_str = &quot;blob&quot;</span>
+<span class="gi">+    elif S_ISGITLINK(mode):</span>
+<span class="gi">+        type_str = &quot;commit&quot;</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        type_str = &quot;unknown&quot;</span>
+<span class="gi">+    return &quot;%s %s %s\t%s&quot; % (mode_str, type_str, hexsha, name.decode(encoding))</span>
+
+<span class="w"> </span>class SubmoduleEncountered(Exception):
+<span class="w"> </span>    &quot;&quot;&quot;A submodule was encountered while resolving a path.&quot;&quot;&quot;
+<span class="gu">@@ -525,36 +606,42 @@ class Tree(ShaFile):</span>
+<span class="w"> </span>          name: The name of the entry, as a string.
+<span class="w"> </span>          hexsha: The hex SHA of the entry as a string.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    def iteritems(self, name_order=False):</span>
+<span class="gd">-        &quot;&quot;&quot;Iterate over entries.</span>
+<span class="gi">+    def add(self, name: bytes, mode: int, hexsha: Union[bytes, str]) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Add an entry to the tree.</span>
+
+<span class="w"> </span>        Args:
+<span class="gd">-          name_order: If True, iterate in name order instead of tree</span>
+<span class="gd">-            order.</span>
+<span class="gd">-        Returns: Iterator over (name, mode, sha) tuples</span>
+<span class="gi">+          name: The name of the entry (string)</span>
+<span class="gi">+          mode: The mode of the entry (int)</span>
+<span class="gi">+          hexsha: The hex SHA of the entry (string)</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        self._entries[name] = (mode, hexsha)</span>
+<span class="gi">+        self._needs_serialization = True</span>
+<span class="gi">+</span>
+<span class="gi">+    def __contains__(self, name: bytes) -&gt; bool:</span>
+<span class="gi">+        return name in self._entries</span>
+
+<span class="gd">-    def items(self):</span>
+<span class="gd">-        &quot;&quot;&quot;Return the sorted entries in this tree.</span>
+<span class="gi">+    def __getitem__(self, name: bytes) -&gt; Tuple[int, Union[bytes, str]]:</span>
+<span class="gi">+        return self._entries[name]</span>
+
+<span class="gd">-        Returns: List with (name, mode, sha) tuples</span>
+<span class="gi">+    def __setitem__(self, name: bytes, value: Tuple[int, Union[bytes, str]]) -&gt; None:</span>
+<span class="gi">+        &quot;&quot;&quot;Set an entry in the tree.</span>
+<span class="gi">+</span>
+<span class="gi">+        Args:</span>
+<span class="gi">+          name: The name of the entry (string)</span>
+<span class="gi">+          value: A tuple of (mode, hexsha)</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        mode, hexsha = value</span>
+<span class="gi">+        self.add(name, mode, hexsha)</span>
+
+<span class="gd">-    def _deserialize(self, chunks):</span>
+<span class="gd">-        &quot;&quot;&quot;Grab the entries in the tree.&quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+    def __delitem__(self, name: bytes) -&gt; None:</span>
+<span class="gi">+        del self._entries[name]</span>
+<span class="gi">+        self._needs_serialization = True</span>
+
+<span class="gd">-    def check(self):</span>
+<span class="gd">-        &quot;&quot;&quot;Check this object for internal consistency.</span>
+<span class="gi">+    def __len__(self) -&gt; int:</span>
+<span class="gi">+        return len(self._entries)</span>
+
+<span class="gd">-        Raises:</span>
+<span class="gd">-          ObjectFormatException: if the object is malformed in some way</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+    def __iter__(self) -&gt; Iterator[bytes]:</span>
+<span class="gi">+        return iter(self._entries)</span>
+
+<span class="w"> </span>    def lookup_path(self, lookup_obj, path):
+<span class="w"> </span>        &quot;&quot;&quot;Look up an object in a Git tree.
+<span class="gu">@@ -564,7 +651,23 @@ class Tree(ShaFile):</span>
+<span class="w"> </span>          path: Path to lookup
+<span class="w"> </span>        Returns: A tuple of (mode, SHA) of the resulting path.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        import stat</span>
+<span class="gi">+        parts = path.split(b&#39;/&#39;)</span>
+<span class="gi">+        sha = self.id</span>
+<span class="gi">+        mode = None</span>
+<span class="gi">+        for p in parts:</span>
+<span class="gi">+            if not p:</span>
+<span class="gi">+                continue</span>
+<span class="gi">+            if mode is not None and stat.S_ISDIR(mode):</span>
+<span class="gi">+                tree = lookup_obj(sha)</span>
+<span class="gi">+                if not isinstance(tree, Tree):</span>
+<span class="gi">+                    raise NotTreeError(sha)</span>
+<span class="gi">+                if p not in tree:</span>
+<span class="gi">+                    raise KeyError(p)</span>
+<span class="gi">+                mode, sha = tree[p]</span>
+<span class="gi">+            else:</span>
+<span class="gi">+                raise KeyError(p)</span>
+<span class="gi">+        return mode, sha</span>
+
+<span class="w"> </span>def parse_timezone(text):
+<span class="w"> </span>    &quot;&quot;&quot;Parse a timezone text fragment (e.g. &#39;+0100&#39;).
+<span class="gu">@@ -585,7 +688,13 @@ def format_timezone(offset, unnecessary_negative_timezone=False):</span>
+<span class="w"> </span>      unnecessary_negative_timezone: Whether to use a minus sign for
+<span class="w"> </span>        UTC or positive timezones (-0000 and --700 rather than +0000 / +0700).
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if offset % 60 != 0:</span>
+<span class="gi">+        raise ValueError(&quot;Unable to handle non-minute offset&quot;)</span>
+<span class="gi">+    sign = &#39;+&#39;</span>
+<span class="gi">+    offset_abs = abs(offset)</span>
+<span class="gi">+    if offset &lt; 0 or unnecessary_negative_timezone:</span>
+<span class="gi">+        sign = &#39;-&#39;</span>
+<span class="gi">+    return f&quot;{sign}{offset_abs // 3600:02d}{(offset_abs // 60) % 60:02d}&quot;.encode(&#39;ascii&#39;)</span>
+
+<span class="w"> </span>def parse_time_entry(value):
+<span class="w"> </span>    &quot;&quot;&quot;Parse event.
+<span class="gu">@@ -601,7 +710,8 @@ def parse_time_entry(value):</span>
+
+<span class="w"> </span>def format_time_entry(person, time, timezone_info):
+<span class="w"> </span>    &quot;&quot;&quot;Format an event.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    timezone_offset, timezone_neg_utc = timezone_info</span>
+<span class="gi">+    return b&#39;%s %d %s&#39; % (person, time, format_timezone(timezone_offset, timezone_neg_utc))</span>
+
+<span class="w"> </span>def parse_commit(chunks):
+<span class="w"> </span>    &quot;&quot;&quot;Parse a commit object from chunks.
+<span class="gu">@@ -611,7 +721,37 @@ def parse_commit(chunks):</span>
+<span class="w"> </span>    Returns: Tuple of (tree, parents, author_info, commit_info,
+<span class="w"> </span>        encoding, mergetag, gpgsig, message, extra)
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    tree = None</span>
+<span class="gi">+    parents = []</span>
+<span class="gi">+    author_info = None</span>
+<span class="gi">+    commit_info = None</span>
+<span class="gi">+    encoding = None</span>
+<span class="gi">+    mergetag = []</span>
+<span class="gi">+    gpgsig = None</span>
+<span class="gi">+    extra = []</span>
+<span class="gi">+    message = None</span>
+<span class="gi">+</span>
+<span class="gi">+    for field, value in _parse_message(chunks):</span>
+<span class="gi">+        if field == b&#39;tree&#39;:</span>
+<span class="gi">+            tree = value</span>
+<span class="gi">+        elif field == b&#39;parent&#39;:</span>
+<span class="gi">+            parents.append(value)</span>
+<span class="gi">+        elif field == b&#39;author&#39;:</span>
+<span class="gi">+            author_info = parse_time_entry(value)</span>
+<span class="gi">+        elif field == b&#39;committer&#39;:</span>
+<span class="gi">+            commit_info = parse_time_entry(value)</span>
+<span class="gi">+        elif field == b&#39;encoding&#39;:</span>
+<span class="gi">+            encoding = value</span>
+<span class="gi">+        elif field == b&#39;mergetag&#39;:</span>
+<span class="gi">+            mergetag.append(value)</span>
+<span class="gi">+        elif field == b&#39;gpgsig&#39;:</span>
+<span class="gi">+            gpgsig = value</span>
+<span class="gi">+        elif field is None:</span>
+<span class="gi">+            message = value</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            extra.append((field, value))</span>
+<span class="gi">+</span>
+<span class="gi">+    return (tree, parents, author_info, commit_info, encoding, mergetag, gpgsig, message, extra)</span>
+
+<span class="w"> </span>class Commit(ShaFile):
+<span class="w"> </span>    &quot;&quot;&quot;A git commit object.&quot;&quot;&quot;
+<span class="gu">@@ -635,37 +775,40 @@ class Commit(ShaFile):</span>
+<span class="w"> </span>        Raises:
+<span class="w"> </span>          ObjectFormatException: if the object is malformed in some way
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-</span>
+<span class="gd">-    def verify(self, keyids: Optional[Iterable[str]]=None):</span>
+<span class="gd">-        &quot;&quot;&quot;Verify GPG signature for this commit (if it is signed).</span>
+<span class="gd">-</span>
+<span class="gd">-        Args:</span>
+<span class="gd">-          keyids: Optional iterable of trusted keyids for this commit.</span>
+<span class="gd">-            If this commit is not signed by any key in keyids verification will</span>
+<span class="gd">-            fail. If not specified, this function only verifies that the commit</span>
+<span class="gd">-            has a valid signature.</span>
+<span class="gi">+    def _deserialize(self, chunks):</span>
+<span class="gi">+        &quot;&quot;&quot;Deserialize the data in the commit object.&quot;&quot;&quot;</span>
+<span class="gi">+        (self._tree, self._parents, author_info, commit_info, self._encoding,</span>
+<span class="gi">+         self._mergetag, self._gpgsig, self._message, self._extra) = parse_commit(chunks)</span>
+<span class="gi">+        self._author, self._author_time, (self._author_timezone,</span>
+<span class="gi">+                                          self._author_timezone_neg_utc) = author_info</span>
+<span class="gi">+        self._committer, self._commit_time, (self._commit_timezone,</span>
+<span class="gi">+                                             self._commit_timezone_neg_utc) = commit_info</span>
+
+<span class="gd">-        Raises:</span>
+<span class="gd">-          gpg.errors.BadSignatures: if GPG signature verification fails</span>
+<span class="gd">-          gpg.errors.MissingSignatures: if commit was not signed by a key</span>
+<span class="gd">-            specified in keyids</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gd">-    tree = serializable_property(&#39;tree&#39;, &#39;Tree that is the state of this commit&#39;)</span>
+<span class="gi">+    def check(self):</span>
+<span class="gi">+        &quot;&quot;&quot;Check this object for internal consistency.&quot;&quot;&quot;</span>
+<span class="gi">+        super().check()</span>
+<span class="gi">+        if not self._tree:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Missing tree&quot;)</span>
+<span class="gi">+        if not self._author:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Missing author&quot;)</span>
+<span class="gi">+        if not self._committer:</span>
+<span class="gi">+            raise ObjectFormatException(&quot;Missing committer&quot;)</span>
+<span class="gi">+        for parent in self._parents:</span>
+<span class="gi">+            check_hexsha(parent, &quot;Invalid parent sha&quot;)</span>
+<span class="gi">+        check_hexsha(self._tree, &quot;Invalid tree sha&quot;)</span>
+
+<span class="w"> </span>    def _get_parents(self):
+<span class="w"> </span>        &quot;&quot;&quot;Return a list of parents of this commit.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._parents</span>
+
+<span class="w"> </span>    def _set_parents(self, value):
+<span class="w"> </span>        &quot;&quot;&quot;Set a list of parents of this commit.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gd">-    parents = property(_get_parents, _set_parents, doc=&#39;Parents of this commit, by their SHA1.&#39;)</span>
+<span class="gi">+        self._parents = value</span>
+<span class="gi">+        self._needs_serialization = True</span>
+
+<span class="w"> </span>    def _get_extra(self):
+<span class="w"> </span>        &quot;&quot;&quot;Return extra settings of this commit.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self._extra</span>
+<span class="w"> </span>    extra = property(_get_extra, doc=&#39;Extra header fields not understood (presumably added in a newer version of git). Kept verbatim so the object can be correctly reserialized. For private commit metadata, use pseudo-headers in Commit.message, rather than this field.&#39;)
+<span class="w"> </span>    author = serializable_property(&#39;author&#39;, &#39;The name of the author of the commit&#39;)
+<span class="w"> </span>    committer = serializable_property(&#39;committer&#39;, &#39;The name of the committer of the commit&#39;)
+<span class="gu">@@ -687,4 +830,4 @@ _sorted_tree_items_py = sorted_tree_items</span>
+<span class="w"> </span>try:
+<span class="w"> </span>    from dulwich._objects import parse_tree, sorted_tree_items
+<span class="w"> </span>except ImportError:
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    pass</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

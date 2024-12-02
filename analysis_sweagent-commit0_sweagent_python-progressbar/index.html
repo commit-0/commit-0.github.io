@@ -1,0 +1,602 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent python progressbar - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-python-progressbar" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent python progressbar
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-python-progressbar"><strong>SWE-Agent</strong>: python-progressbar</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:7: in &lt;module&gt;
+    import progressbar
+progressbar/__init__.py:9: in &lt;module&gt;
+    from .bar import DataTransferBar, NullBar, ProgressBar
+progressbar/bar.py:15: in &lt;module&gt;
+    import progressbar.env
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File &quot;/testbed/progressbar/env.py&quot;, line 48
+E       ANSI_TERM_RE = re.compile(f&#39;^({&#39;|&#39;.join(ANSI_TERMS)})&#39;, re.IGNORECASE)
+E                                       ^
+E   SyntaxError: f-string: expecting &#39;}&#39;
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/progressbar/bar.py b/progressbar/bar.py</span>
+<span class="gh">index 57bfd66..9a41c7a 100644</span>
+<span class="gd">--- a/progressbar/bar.py</span>
+<span class="gi">+++ b/progressbar/bar.py</span>
+<span class="gu">@@ -288,69 +288,52 @@ class ProgressBar(StdRedirectMixin, ResizableMixin, ProgressBarBase):</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        pass
+
+<span class="gi">+    @property</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def percentage(self) -&gt; float | None:
+<span class="gd">-        &quot;&quot;&quot;Return current percentage, returns None if no max_value is given.</span>
+<span class="gd">-</span>
+<span class="gd">-        &gt;&gt;&gt; progress = ProgressBar()</span>
+<span class="gd">-        &gt;&gt;&gt; progress.max_value = 10</span>
+<span class="gd">-        &gt;&gt;&gt; progress.min_value = 0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.value = 0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        0.0</span>
+<span class="gd">-        &gt;&gt;&gt;</span>
+<span class="gd">-        &gt;&gt;&gt; progress.value = 1</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        10.0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.value = 10</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        100.0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.min_value = -10</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        100.0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.value = 0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        50.0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.value = 5</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        75.0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.value = -5</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        25.0</span>
+<span class="gd">-        &gt;&gt;&gt; progress.max_value = None</span>
+<span class="gd">-        &gt;&gt;&gt; progress.percentage</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        &quot;&quot;&quot;Return current percentage, returns None if no max_value is given.&quot;&quot;&quot;</span>
+<span class="gi">+        if self.max_value is None or self.max_value is base.UnknownLength:</span>
+<span class="gi">+            return None</span>
+<span class="gi">+        </span>
+<span class="gi">+        if self.max_value == self.min_value:</span>
+<span class="gi">+            return 100.0</span>
+<span class="gi">+        </span>
+<span class="gi">+        total_range = self.max_value - self.min_value</span>
+<span class="gi">+        current_value = self.value - self.min_value</span>
+<span class="gi">+        percentage = (current_value / total_range) * 100</span>
+<span class="gi">+        </span>
+<span class="gi">+        return max(0.0, min(100.0, percentage))</span>
+
+<span class="w"> </span>    def data(self) -&gt; types.Dict[str, types.Any]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gi">+        Returns a dictionary of the ProgressBar&#39;s state.</span>
+
+<span class="w"> </span>        Returns:
+<span class="gd">-            dict:</span>
+<span class="gd">-                - `max_value`: The maximum value (can be None with</span>
+<span class="gd">-                  iterators)</span>
+<span class="gd">-                - `start_time`: Start time of the widget</span>
+<span class="gd">-                - `last_update_time`: Last update time of the widget</span>
+<span class="gd">-                - `end_time`: End time of the widget</span>
+<span class="gd">-                - `value`: The current value</span>
+<span class="gd">-                - `previous_value`: The previous value</span>
+<span class="gd">-                - `updates`: The total update count</span>
+<span class="gd">-                - `total_seconds_elapsed`: The seconds since the bar started</span>
+<span class="gd">-                - `seconds_elapsed`: The seconds since the bar started modulo</span>
+<span class="gd">-                  60</span>
+<span class="gd">-                - `minutes_elapsed`: The minutes since the bar started modulo</span>
+<span class="gd">-                  60</span>
+<span class="gd">-                - `hours_elapsed`: The hours since the bar started modulo 24</span>
+<span class="gd">-                - `days_elapsed`: The hours since the bar started</span>
+<span class="gd">-                - `time_elapsed`: The raw elapsed `datetime.timedelta` object</span>
+<span class="gd">-                - `percentage`: Percentage as a float or `None` if no max_value</span>
+<span class="gd">-                  is available</span>
+<span class="gd">-                - `dynamic_messages`: Deprecated, use `variables` instead.</span>
+<span class="gd">-                - `variables`: Dictionary of user-defined variables for the</span>
+<span class="gd">-                  :py:class:`~progressbar.widgets.Variable`&#39;s.</span>
+<span class="gd">-</span>
+<span class="gi">+            dict: A dictionary containing various data about the ProgressBar&#39;s state.</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        now = time.time()</span>
+<span class="gi">+        time_elapsed = now - self.start_time if self.start_time else 0</span>
+<span class="gi">+        value = self.value</span>
+<span class="gi">+        max_value = self.max_value</span>
+<span class="gi">+</span>
+<span class="gi">+        return {</span>
+<span class="gi">+            &#39;max_value&#39;: max_value,</span>
+<span class="gi">+            &#39;start_time&#39;: self.start_time,</span>
+<span class="gi">+            &#39;last_update_time&#39;: self._last_update_time,</span>
+<span class="gi">+            &#39;end_time&#39;: self.end_time,</span>
+<span class="gi">+            &#39;value&#39;: value,</span>
+<span class="gi">+            &#39;previous_value&#39;: self.previous_value,</span>
+<span class="gi">+            &#39;updates&#39;: self.num_intervals,</span>
+<span class="gi">+            &#39;total_seconds_elapsed&#39;: time_elapsed,</span>
+<span class="gi">+            &#39;seconds_elapsed&#39;: int(time_elapsed) % 60,</span>
+<span class="gi">+            &#39;minutes_elapsed&#39;: int(time_elapsed / 60) % 60,</span>
+<span class="gi">+            &#39;hours_elapsed&#39;: int(time_elapsed / 3600) % 24,</span>
+<span class="gi">+            &#39;days_elapsed&#39;: int(time_elapsed / 86400),</span>
+<span class="gi">+            &#39;time_elapsed&#39;: datetime.timedelta(seconds=int(time_elapsed)),</span>
+<span class="gi">+            &#39;percentage&#39;: self.percentage,</span>
+<span class="gi">+            &#39;dynamic_messages&#39;: self.variables,  # Deprecated</span>
+<span class="gi">+            &#39;variables&#39;: self.variables,</span>
+<span class="gi">+        }</span>
+
+<span class="w"> </span>    def __call__(self, iterable, max_value=None):
+<span class="w"> </span>        &quot;&quot;&quot;Use a ProgressBar to iterate through an iterable.&quot;&quot;&quot;
+<span class="gu">@@ -458,4 +441,4 @@ class NullBar(ProgressBar):</span>
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    Progress bar that does absolutely nothing. Useful for single verbosity
+<span class="w"> </span>    flags.
+<span class="gd">-    &quot;&quot;&quot;</span>
+\ No newline at end of file
+<span class="gi">+    &quot;&quot;&quot;</span>
+<span class="gh">diff --git a/progressbar/utils.py b/progressbar/utils.py</span>
+<span class="gh">index 7a30cc8..39df00c 100644</span>
+<span class="gd">--- a/progressbar/utils.py</span>
+<span class="gi">+++ b/progressbar/utils.py</span>
+<span class="gu">@@ -78,7 +78,7 @@ def len_color(value: types.StringTypes) -&gt; int:</span>
+<span class="w"> </span>    &gt;&gt;&gt; len_color(&#39;\x1b[1234]abc&#39;)
+<span class="w"> </span>    3
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return len(no_color(value))</span>
+
+<span class="w"> </span>class WrappingIO:
+<span class="w"> </span>    buffer: io.StringIO
+<span class="gu">@@ -193,4 +193,4 @@ class AttributeDict(dict):</span>
+<span class="w"> </span>            raise AttributeError(f&#39;No such attribute: {name}&#39;)
+<span class="w"> </span>logger = logging.getLogger(__name__)
+<span class="w"> </span>streams = StreamWrapper()
+<span class="gd">-atexit.register(streams.flush)</span>
+\ No newline at end of file
+<span class="gi">+atexit.register(streams.flush)</span>
+<span class="gh">diff --git a/progressbar/widgets.py b/progressbar/widgets.py</span>
+<span class="gh">index e2fed01..4699b17 100644</span>
+<span class="gd">--- a/progressbar/widgets.py</span>
+<span class="gi">+++ b/progressbar/widgets.py</span>
+<span class="gu">@@ -30,14 +30,31 @@ def create_wrapper(wrapper):</span>
+<span class="w"> </span>    &gt;&gt;&gt; print(create_wrapper((&#39;a&#39;, &#39;b&#39;)))
+<span class="w"> </span>    a{}b
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not wrapper:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+    elif isinstance(wrapper, tuple):</span>
+<span class="gi">+        return &#39;{}{}{}&#39; if len(wrapper) == 3 else &#39;{}{}&#39; if len(wrapper) == 2 else &#39;{}&#39;</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        return wrapper</span>
+
+<span class="w"> </span>def wrapper(function, wrapper_):
+<span class="w"> </span>    &quot;&quot;&quot;Wrap the output of a function in a template string or a tuple with
+<span class="w"> </span>    begin/end strings.
+
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    @functools.wraps(function)</span>
+<span class="gi">+    def wrap(*args, **kwargs):</span>
+<span class="gi">+        result = function(*args, **kwargs)</span>
+<span class="gi">+        </span>
+<span class="gi">+        if isinstance(wrapper_, tuple):</span>
+<span class="gi">+            if len(wrapper_) == 2:</span>
+<span class="gi">+                return f&#39;{wrapper_[0]}{result}{wrapper_[1]}&#39;</span>
+<span class="gi">+            elif len(wrapper_) == 3:</span>
+<span class="gi">+                return f&#39;{wrapper_[0]}{result}{wrapper_[1]}{wrapper_[2]}&#39;</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            return wrapper_.format(result)</span>
+<span class="gi">+    </span>
+<span class="gi">+    return wrap</span>
+
+<span class="w"> </span>class FormatWidgetMixin(abc.ABC):
+<span class="w"> </span>    &quot;&quot;&quot;Mixin to format widgets using a formatstring.
+<span class="gu">@@ -895,4 +912,4 @@ class JobStatusBar(Bar, VariableMixin):</span>
+<span class="w"> </span>                marker = fill + marker
+<span class="w"> </span>        else:
+<span class="w"> </span>            marker = &#39;&#39;
+<span class="gd">-        return left + marker + right</span>
+\ No newline at end of file
+<span class="gi">+        return left + marker + right</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

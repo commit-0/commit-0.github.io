@@ -1,0 +1,813 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent jinja - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-jinja" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent jinja
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-jinja"><strong>SWE-Agent</strong>: jinja</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:5: in &lt;module&gt;
+    from jinja2 import loaders
+src/jinja2/__init__.py:9: in &lt;module&gt;
+    from .environment import Environment as Environment
+src/jinja2/environment.py:14: in &lt;module&gt;
+    from . import nodes
+E     File &quot;/testbed/src/jinja2/nodes.py&quot;, line 80
+E       raise TypeError(f&#39;{type(self).__name__!r} takes 0 or {len(self.fields)} argument{(&#39;s&#39; if len(self.fields) != 1 else &#39;&#39;)}&#39;)
+E                                                                                          ^
+E   SyntaxError: f-string: unmatched &#39;(&#39;
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/jinja2/filters.py b/src/jinja2/filters.py</span>
+<span class="gh">index b697d34..bac541b 100644</span>
+<span class="gd">--- a/src/jinja2/filters.py</span>
+<span class="gi">+++ b/src/jinja2/filters.py</span>
+<span class="gu">@@ -66,7 +66,7 @@ def make_multi_attrgetter(environment: &#39;Environment&#39;, attribute: t.Optional[t.Un</span>
+
+<span class="w"> </span>def do_forceescape(value: &#39;t.Union[str, HasHTML]&#39;) -&gt; Markup:
+<span class="w"> </span>    &quot;&quot;&quot;Enforce HTML escaping.  This will probably double escape variables.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return escape(str(value))</span>
+
+<span class="w"> </span>def do_urlencode(value: t.Union[str, t.Mapping[str, t.Any], t.Iterable[t.Tuple[str, t.Any]]]) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Quote data for use in a URL path or query using UTF-8.
+<span class="gu">@@ -84,7 +84,16 @@ def do_urlencode(value: t.Union[str, t.Mapping[str, t.Any], t.Iterable[t.Tuple[s</span>
+
+<span class="w"> </span>    .. versionadded:: 2.7
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from urllib.parse import quote, urlencode</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(value, str):</span>
+<span class="gi">+        return quote(value, safe=&#39;/&#39;)</span>
+<span class="gi">+    elif isinstance(value, t.Mapping):</span>
+<span class="gi">+        return urlencode(value)</span>
+<span class="gi">+    elif isinstance(value, t.Iterable):</span>
+<span class="gi">+        return urlencode(list(value))</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(&quot;Expected string, mapping, or iterable.&quot;)</span>
+
+<span class="w"> </span>@pass_eval_context
+<span class="w"> </span>def do_replace(eval_ctx: &#39;EvalContext&#39;, s: str, old: str, new: str, count: t.Optional[int]=None) -&gt; str:
+<span class="gu">@@ -110,7 +119,7 @@ def do_upper(s: str) -&gt; str:</span>
+
+<span class="w"> </span>def do_lower(s: str) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Convert a value to lowercase.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return s.lower()</span>
+
+<span class="w"> </span>def do_items(value: t.Union[t.Mapping[K, V], Undefined]) -&gt; t.Iterator[t.Tuple[K, V]]:
+<span class="w"> </span>    &quot;&quot;&quot;Return an iterator over the ``(key, value)`` items of a mapping.
+<span class="gu">@@ -174,7 +183,17 @@ def do_xmlattr(eval_ctx: &#39;EvalContext&#39;, d: t.Mapping[str, t.Any], autospace: boo</span>
+<span class="w"> </span>    .. versionchanged:: 3.1.3
+<span class="w"> </span>        Keys with spaces are not allowed.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = []</span>
+<span class="gi">+    for key, value in d.items():</span>
+<span class="gi">+        if _attr_key_re.search(key):</span>
+<span class="gi">+            raise ValueError(f&quot;unsafe attribute name: {key!r}&quot;)</span>
+<span class="gi">+        if value is not None and not isinstance(value, Undefined):</span>
+<span class="gi">+            result.append(f&#39;{key}=&quot;{escape(value)}&quot;&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    rv = &#39; &#39;.join(result)</span>
+<span class="gi">+    if autospace and rv:</span>
+<span class="gi">+        rv = &#39; &#39; + rv</span>
+<span class="gi">+    return rv</span>
+
+<span class="w"> </span>def do_capitalize(s: str) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Capitalize a value. The first character will be uppercase, all others
+<span class="gu">@@ -207,7 +226,20 @@ def do_dictsort(value: t.Mapping[K, V], case_sensitive: bool=False, by: &#39;te.Lite</span>
+<span class="w"> </span>        {% for key, value in mydict|dictsort(false, &#39;value&#39;) %}
+<span class="w"> </span>            sort the dict by value, case insensitive
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if by == &#39;key&#39;:</span>
+<span class="gi">+        pos = 0</span>
+<span class="gi">+    elif by == &#39;value&#39;:</span>
+<span class="gi">+        pos = 1</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise ValueError(&#39;Can only sort by either &quot;key&quot; or &quot;value&quot;&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    def sort_func(item):</span>
+<span class="gi">+        value = item[pos]</span>
+<span class="gi">+        if not case_sensitive and isinstance(value, str):</span>
+<span class="gi">+            value = value.lower()</span>
+<span class="gi">+        return value</span>
+<span class="gi">+</span>
+<span class="gi">+    return sorted(value.items(), key=sort_func, reverse=reverse)</span>
+
+<span class="w"> </span>@pass_environment
+<span class="w"> </span>def do_sort(environment: &#39;Environment&#39;, value: &#39;t.Iterable[V]&#39;, reverse: bool=False, case_sensitive: bool=False, attribute: t.Optional[t.Union[str, int]]=None) -&gt; &#39;t.List[V]&#39;:
+<span class="gu">@@ -244,7 +276,31 @@ def do_sort(environment: &#39;Environment&#39;, value: &#39;t.Iterable[V]&#39;, reverse: bool=Fa</span>
+
+<span class="w"> </span>        {% for user in users|sort(attribute=&quot;age,name&quot;) %}
+<span class="w"> </span>            ...
+<span class="gd">-        {% endfor %}</span>
+<span class="gi">+    if not case_sensitive and isinstance(value[0], str):</span>
+<span class="gi">+        def prepare(val):</span>
+<span class="gi">+            if isinstance(val, str):</span>
+<span class="gi">+                return val.lower()</span>
+<span class="gi">+            return val</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        prepare = lambda val: val</span>
+<span class="gi">+</span>
+<span class="gi">+    if attribute is None:</span>
+<span class="gi">+        key_func = prepare</span>
+<span class="gi">+    elif isinstance(attribute, str):</span>
+<span class="gi">+        if &#39;.&#39; in attribute:</span>
+<span class="gi">+            def key_func(val):</span>
+<span class="gi">+                for attr in attribute.split(&#39;.&#39;):</span>
+<span class="gi">+                    val = environment.getattr(val, attr)</span>
+<span class="gi">+                return prepare(val)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            key_func = lambda val: prepare(environment.getattr(val, attribute))</span>
+<span class="gi">+    elif isinstance(attribute, (list, tuple)):</span>
+<span class="gi">+        def key_func(val):</span>
+<span class="gi">+            return tuple(prepare(environment.getattr(val, attr)) for attr in attribute)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise TypeError(&#39;attribute must be a string or a list of strings&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    return sorted(value, key=key_func, reverse=reverse)</span>
+
+<span class="w"> </span>    .. versionchanged:: 2.11.0
+<span class="w"> </span>        The ``attribute`` parameter can be a comma separated list of
+<span class="gu">@@ -270,7 +326,19 @@ def do_unique(environment: &#39;Environment&#39;, value: &#39;t.Iterable[V]&#39;, case_sensitive</span>
+<span class="w"> </span>    :param case_sensitive: Treat upper and lower case strings as distinct.
+<span class="w"> </span>    :param attribute: Filter objects with unique values for this attribute.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    getter = make_attrgetter(environment, attribute)</span>
+<span class="gi">+    seen = set()</span>
+<span class="gi">+</span>
+<span class="gi">+    def _unique(item):</span>
+<span class="gi">+        key = getter(item)</span>
+<span class="gi">+        if not case_sensitive and isinstance(key, str):</span>
+<span class="gi">+            key = key.lower()</span>
+<span class="gi">+        if key not in seen:</span>
+<span class="gi">+            seen.add(key)</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        return False</span>
+<span class="gi">+</span>
+<span class="gi">+    return (item for item in value if _unique(item))</span>
+
+<span class="w"> </span>@pass_environment
+<span class="w"> </span>def do_min(environment: &#39;Environment&#39;, value: &#39;t.Iterable[V]&#39;, case_sensitive: bool=False, attribute: t.Optional[t.Union[str, int]]=None) -&gt; &#39;t.Union[V, Undefined]&#39;:
+<span class="gu">@@ -294,7 +362,18 @@ def do_max(environment: &#39;Environment&#39;, value: &#39;t.Iterable[V]&#39;, case_sensitive: b</span>
+
+<span class="w"> </span>        {{ [1, 2, 3]|max }}
+<span class="w"> </span>            -&gt; 3
+<span class="gd">-</span>
+<span class="gi">+    if not value:</span>
+<span class="gi">+        return Undefined(name=&#39;max&#39;)</span>
+<span class="gi">+    </span>
+<span class="gi">+    key = make_attrgetter(environment, attribute)</span>
+<span class="gi">+    </span>
+<span class="gi">+    def prepare(val):</span>
+<span class="gi">+        val = key(val)</span>
+<span class="gi">+        if not case_sensitive and isinstance(val, str):</span>
+<span class="gi">+            val = val.lower()</span>
+<span class="gi">+        return val</span>
+<span class="gi">+    </span>
+<span class="gi">+    return max(value, key=prepare)</span>
+<span class="w"> </span>    :param case_sensitive: Treat upper and lower case strings as distinct.
+<span class="w"> </span>    :param attribute: Get the object with the max value of this attribute.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -323,7 +402,9 @@ def do_default(value: V, default_value: V=&#39;&#39;, boolean: bool=False) -&gt; V:</span>
+<span class="w"> </span>       on nested elements and attributes that may contain undefined values
+<span class="w"> </span>       in the chain without getting an :exc:`~jinja2.UndefinedError`.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(value, Undefined) or (boolean and not value):</span>
+<span class="gi">+        return default_value</span>
+<span class="gi">+    return value</span>
+
+<span class="w"> </span>@pass_eval_context
+<span class="w"> </span>def sync_do_join(eval_ctx: &#39;EvalContext&#39;, value: t.Iterable[t.Any], d: str=&#39;&#39;, attribute: t.Optional[t.Union[str, int]]=None) -&gt; str:
+<span class="gu">@@ -370,12 +451,17 @@ def do_last(environment: &#39;Environment&#39;, seq: &#39;t.Reversible[V]&#39;) -&gt; &#39;t.Union[V, U</span>
+
+<span class="w"> </span>        {{ data | selectattr(&#39;name&#39;, &#39;==&#39;, &#39;Jinja&#39;) | list | last }}
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        return next(reversed(seq))</span>
+<span class="gi">+    except StopIteration:</span>
+<span class="gi">+        return Undefined(name=&#39;last&#39;)</span>
+
+<span class="w"> </span>@pass_context
+<span class="w"> </span>def do_random(context: &#39;Context&#39;, seq: &#39;t.Sequence[V]&#39;) -&gt; &#39;t.Union[V, Undefined]&#39;:
+<span class="w"> </span>    &quot;&quot;&quot;Return a random item from the sequence.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if seq:</span>
+<span class="gi">+        return random.choice(seq)</span>
+<span class="gi">+    return Undefined(name=&#39;random&#39;)</span>
+
+<span class="w"> </span>def do_filesizeformat(value: t.Union[str, float, int], binary: bool=False) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Format the value like a &#39;human-readable&#39; file size (i.e. 13 kB,
+<span class="gu">@@ -383,11 +469,33 @@ def do_filesizeformat(value: t.Union[str, float, int], binary: bool=False) -&gt; st</span>
+<span class="w"> </span>    Giga, etc.), if the second parameter is set to `True` the binary
+<span class="w"> </span>    prefixes are used (Mebi, Gibi).
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    bytes = float(value)</span>
+<span class="gi">+    base = 1024 if binary else 1000</span>
+<span class="gi">+    prefixes = [</span>
+<span class="gi">+        (binary and &quot;KiB&quot; or &quot;kB&quot;),</span>
+<span class="gi">+        (binary and &quot;MiB&quot; or &quot;MB&quot;),</span>
+<span class="gi">+        (binary and &quot;GiB&quot; or &quot;GB&quot;),</span>
+<span class="gi">+        (binary and &quot;TiB&quot; or &quot;TB&quot;),</span>
+<span class="gi">+        (binary and &quot;PiB&quot; or &quot;PB&quot;),</span>
+<span class="gi">+        (binary and &quot;EiB&quot; or &quot;EB&quot;),</span>
+<span class="gi">+        (binary and &quot;ZiB&quot; or &quot;ZB&quot;),</span>
+<span class="gi">+        (binary and &quot;YiB&quot; or &quot;YB&quot;)</span>
+<span class="gi">+    ]</span>
+<span class="gi">+    if bytes == 1:</span>
+<span class="gi">+        return &quot;1 Byte&quot;</span>
+<span class="gi">+    elif bytes &lt; base:</span>
+<span class="gi">+        return f&quot;{bytes:3.0f} Bytes&quot;</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        for i, prefix in enumerate(prefixes):</span>
+<span class="gi">+            unit = base ** (i + 2)</span>
+<span class="gi">+            if bytes &lt; unit:</span>
+<span class="gi">+                return f&quot;{base * bytes / unit:.1f} {prefix}&quot;</span>
+<span class="gi">+        return f&quot;{base * bytes / unit:.1f} {prefix}&quot;</span>
+
+<span class="w"> </span>def do_pprint(value: t.Any) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Pretty print a variable. Useful for debugging.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from pprint import pformat</span>
+<span class="gi">+    return pformat(value)</span>
+<span class="w"> </span>_uri_scheme_re = re.compile(&#39;^([\\w.+-]{2,}:(/){0,2})$&#39;)
+
+<span class="w"> </span>@pass_eval_context
+<span class="gu">@@ -429,7 +537,19 @@ def do_urlize(eval_ctx: &#39;EvalContext&#39;, value: str, trim_url_limit: t.Optional[in</span>
+<span class="w"> </span>    .. versionchanged:: 2.8
+<span class="w"> </span>       The ``target`` parameter was added.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    from markupsafe import escape</span>
+<span class="gi">+    from jinja2.utils import urlize</span>
+<span class="gi">+</span>
+<span class="gi">+    if extra_schemes is None:</span>
+<span class="gi">+        extra_schemes = eval_ctx.environment.policies[&quot;urlize.extra_schemes&quot;]</span>
+<span class="gi">+</span>
+<span class="gi">+    return urlize(</span>
+<span class="gi">+        value,</span>
+<span class="gi">+        trim_url_limit=trim_url_limit,</span>
+<span class="gi">+        rel=rel,</span>
+<span class="gi">+        target=target,</span>
+<span class="gi">+        extra_schemes=extra_schemes,</span>
+<span class="gi">+    )</span>
+
+<span class="w"> </span>def do_indent(s: str, width: t.Union[int, str]=4, first: bool=False, blank: bool=False) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Return a copy of the string with each line indented by 4 spaces. The
+<span class="gu">@@ -447,7 +567,23 @@ def do_indent(s: str, width: t.Union[int, str]=4, first: bool=False, blank: bool</span>
+
+<span class="w"> </span>        Rename the ``indentfirst`` argument to ``first``.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    indention = &#39; &#39; * width if isinstance(width, int) else width</span>
+<span class="gi">+</span>
+<span class="gi">+    newline = &#39;\n&#39;</span>
+<span class="gi">+    if isinstance(s, Markup):</span>
+<span class="gi">+        newline = Markup(newline)</span>
+<span class="gi">+        indention = Markup(indention)</span>
+<span class="gi">+</span>
+<span class="gi">+    result = []</span>
+<span class="gi">+    for idx, line in enumerate(s.splitlines(True)):</span>
+<span class="gi">+        if idx == 0 and not first:</span>
+<span class="gi">+            result.append(line)</span>
+<span class="gi">+        elif line.strip() or blank:</span>
+<span class="gi">+            result.append(indention + line)</span>
+<span class="gi">+        else:</span>
+<span class="gi">+            result.append(line)</span>
+<span class="gi">+</span>
+<span class="gi">+    return newline.join(result)</span>
+
+<span class="w"> </span>@pass_environment
+<span class="w"> </span>def do_truncate(env: &#39;Environment&#39;, s: str, length: int=255, killwords: bool=False, end: str=&#39;...&#39;, leeway: t.Optional[int]=None) -&gt; str:
+<span class="gu">@@ -474,7 +610,20 @@ def do_truncate(env: &#39;Environment&#39;, s: str, length: int=255, killwords: bool=Fal</span>
+<span class="w"> </span>    The default leeway on newer Jinja versions is 5 and was 0 before but
+<span class="w"> </span>    can be reconfigured globally.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if leeway is None:</span>
+<span class="gi">+        leeway = env.policies[&#39;truncate.leeway&#39;]</span>
+<span class="gi">+    </span>
+<span class="gi">+    assert length &gt;= len(end), &#39;expected length &gt;= len(end)&#39;</span>
+<span class="gi">+    assert leeway &gt;= 0, &#39;expected leeway &gt;= 0&#39;</span>
+<span class="gi">+    </span>
+<span class="gi">+    if len(s) &lt;= length + leeway:</span>
+<span class="gi">+        return s</span>
+<span class="gi">+    </span>
+<span class="gi">+    if killwords:</span>
+<span class="gi">+        return s[:length - len(end)] + end</span>
+<span class="gi">+    </span>
+<span class="gi">+    result = s[:length - len(end)].rsplit(&#39; &#39;, 1)[0]</span>
+<span class="gi">+    return result + end</span>
+
+<span class="w"> </span>@pass_environment
+<span class="w"> </span>def do_wordwrap(environment: &#39;Environment&#39;, s: str, width: int=79, break_long_words: bool=True, wrapstring: t.Optional[str]=None, break_on_hyphens: bool=True) -&gt; str:
+<span class="gu">@@ -511,7 +660,12 @@ def do_int(value: t.Any, default: int=0, base: int=10) -&gt; int:</span>
+<span class="w"> </span>    conversion doesn&#39;t work it will return ``0``. You can
+<span class="w"> </span>    override this default using the first parameter. You
+<span class="w"> </span>    can also override the default base (10) in the second
+<span class="gd">-    parameter, which handles input with prefixes such as</span>
+<span class="gi">+    try:</span>
+<span class="gi">+        if isinstance(value, str):</span>
+<span class="gi">+            return int(value, base)</span>
+<span class="gi">+        return int(value)</span>
+<span class="gi">+    except (ValueError, TypeError):</span>
+<span class="gi">+        return default</span>
+<span class="w"> </span>    0b, 0o and 0x for bases 2, 8 and 16 respectively.
+<span class="w"> </span>    The base is ignored for decimal numbers and non-string values.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -548,7 +702,7 @@ def do_format(value: str, *args: t.Any, **kwargs: t.Any) -&gt; str:</span>
+
+<span class="w"> </span>def do_trim(value: str, chars: t.Optional[str]=None) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Strip leading and trailing characters, by default whitespace.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return value.strip(chars)</span>
+
+<span class="w"> </span>def do_striptags(value: &#39;t.Union[str, HasHTML]&#39;) -&gt; str:
+<span class="w"> </span>    &quot;&quot;&quot;Strip SGML/XML tags and replace adjacent whitespace by one space.&quot;&quot;&quot;
+<span class="gu">@@ -574,7 +728,24 @@ def sync_do_slice(value: &#39;t.Collection[V]&#39;, slices: int, fill_with: &#39;t.Optional[</span>
+<span class="w"> </span>    If you pass it a second argument it&#39;s used to fill missing
+<span class="w"> </span>    values on the last iteration.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    seq = list(value)</span>
+<span class="gi">+    length = len(seq)</span>
+<span class="gi">+    items_per_slice = length // slices</span>
+<span class="gi">+    slices_with_extra = length % slices</span>
+<span class="gi">+    offset = 0</span>
+<span class="gi">+</span>
+<span class="gi">+    for slice_number in range(slices):</span>
+<span class="gi">+        start = offset + slice_number * items_per_slice</span>
+<span class="gi">+        if slice_number &lt; slices_with_extra:</span>
+<span class="gi">+            offset += 1</span>
+<span class="gi">+</span>
+<span class="gi">+        end = offset + (slice_number + 1) * items_per_slice</span>
+<span class="gi">+        tmp = seq[start:end]</span>
+<span class="gi">+</span>
+<span class="gi">+        if fill_with is not None and slice_number &gt;= slices_with_extra:</span>
+<span class="gi">+            tmp.append(fill_with)</span>
+<span class="gi">+</span>
+<span class="gi">+        yield tmp</span>
+
+<span class="w"> </span>def do_batch(value: &#39;t.Iterable[V]&#39;, linecount: int, fill_with: &#39;t.Optional[V]&#39;=None) -&gt; &#39;t.Iterator[t.List[V]]&#39;:
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gu">@@ -595,7 +766,17 @@ def do_batch(value: &#39;t.Iterable[V]&#39;, linecount: int, fill_with: &#39;t.Optional[V]&#39;=</span>
+<span class="w"> </span>        {%- endfor %}
+<span class="w"> </span>        &lt;/table&gt;
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    result = []</span>
+<span class="gi">+    tmp = []</span>
+<span class="gi">+    for item in value:</span>
+<span class="gi">+        if len(tmp) == linecount:</span>
+<span class="gi">+            yield tmp</span>
+<span class="gi">+            tmp = []</span>
+<span class="gi">+        tmp.append(item)</span>
+<span class="gi">+    if tmp:</span>
+<span class="gi">+        if fill_with is not None and len(tmp) &lt; linecount:</span>
+<span class="gi">+            tmp += [fill_with] * (linecount - len(tmp))</span>
+<span class="gi">+        yield tmp</span>
+
+<span class="w"> </span>def do_round(value: float, precision: int=0, method: &#39;te.Literal[&quot;common&quot;, &quot;ceil&quot;, &quot;floor&quot;]&#39;=&#39;common&#39;) -&gt; float:
+<span class="w"> </span>    &quot;&quot;&quot;Round the number to a given precision. The first
+<span class="gu">@@ -607,7 +788,14 @@ def do_round(value: float, precision: int=0, method: &#39;te.Literal[&quot;common&quot;, &quot;ceil</span>
+<span class="w"> </span>    - ``&#39;floor&#39;`` always rounds down
+
+<span class="w"> </span>    If you don&#39;t specify a method ``&#39;common&#39;`` is used.
+<span class="gd">-</span>
+<span class="gi">+    if method == &#39;common&#39;:</span>
+<span class="gi">+        return round(value, precision)</span>
+<span class="gi">+    elif method == &#39;ceil&#39;:</span>
+<span class="gi">+        return math.ceil(value * (10 ** precision)) / (10 ** precision)</span>
+<span class="gi">+    elif method == &#39;floor&#39;:</span>
+<span class="gi">+        return math.floor(value * (10 ** precision)) / (10 ** precision)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise FilterArgumentError(&#39;method must be common, ceil or floor&#39;)</span>
+<span class="w"> </span>    .. sourcecode:: jinja
+
+<span class="w"> </span>        {{ 42.55|round }}
+<span class="gu">@@ -623,7 +811,14 @@ def do_round(value: float, precision: int=0, method: &#39;te.Literal[&quot;common&quot;, &quot;ceil</span>
+<span class="w"> </span>        {{ 42.55|round|int }}
+<span class="w"> </span>            -&gt; 43
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if method == &#39;common&#39;:</span>
+<span class="gi">+        return round(value, precision)</span>
+<span class="gi">+    elif method == &#39;ceil&#39;:</span>
+<span class="gi">+        return math.ceil(value * (10 ** precision)) / (10 ** precision)</span>
+<span class="gi">+    elif method == &#39;floor&#39;:</span>
+<span class="gi">+        return math.floor(value * (10 ** precision)) / (10 ** precision)</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        raise FilterArgumentError(&#39;method must be common, ceil or floor&#39;)</span>
+
+<span class="w"> </span>class _GroupTuple(t.NamedTuple):
+<span class="w"> </span>    grouper: t.Any
+<span class="gu">@@ -909,4 +1104,4 @@ def do_tojson(eval_ctx: &#39;EvalContext&#39;, value: t.Any, indent: t.Optional[int]=Non</span>
+<span class="w"> </span>    .. versionadded:: 2.9
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    pass
+<span class="gd">-FILTERS = {&#39;abs&#39;: abs, &#39;attr&#39;: do_attr, &#39;batch&#39;: do_batch, &#39;capitalize&#39;: do_capitalize, &#39;center&#39;: do_center, &#39;count&#39;: len, &#39;d&#39;: do_default, &#39;default&#39;: do_default, &#39;dictsort&#39;: do_dictsort, &#39;e&#39;: escape, &#39;escape&#39;: escape, &#39;filesizeformat&#39;: do_filesizeformat, &#39;first&#39;: do_first, &#39;float&#39;: do_float, &#39;forceescape&#39;: do_forceescape, &#39;format&#39;: do_format, &#39;groupby&#39;: do_groupby, &#39;indent&#39;: do_indent, &#39;int&#39;: do_int, &#39;join&#39;: do_join, &#39;last&#39;: do_last, &#39;length&#39;: len, &#39;list&#39;: do_list, &#39;lower&#39;: do_lower, &#39;items&#39;: do_items, &#39;map&#39;: do_map, &#39;min&#39;: do_min, &#39;max&#39;: do_max, &#39;pprint&#39;: do_pprint, &#39;random&#39;: do_random, &#39;reject&#39;: do_reject, &#39;rejectattr&#39;: do_rejectattr, &#39;replace&#39;: do_replace, &#39;reverse&#39;: do_reverse, &#39;round&#39;: do_round, &#39;safe&#39;: do_mark_safe, &#39;select&#39;: do_select, &#39;selectattr&#39;: do_selectattr, &#39;slice&#39;: do_slice, &#39;sort&#39;: do_sort, &#39;string&#39;: soft_str, &#39;striptags&#39;: do_striptags, &#39;sum&#39;: do_sum, &#39;title&#39;: do_title, &#39;trim&#39;: do_trim, &#39;truncate&#39;: do_truncate, &#39;unique&#39;: do_unique, &#39;upper&#39;: do_upper, &#39;urlencode&#39;: do_urlencode, &#39;urlize&#39;: do_urlize, &#39;wordcount&#39;: do_wordcount, &#39;wordwrap&#39;: do_wordwrap, &#39;xmlattr&#39;: do_xmlattr, &#39;tojson&#39;: do_tojson}</span>
+\ No newline at end of file
+<span class="gi">+FILTERS = {&#39;abs&#39;: abs, &#39;attr&#39;: do_attr, &#39;batch&#39;: do_batch, &#39;capitalize&#39;: do_capitalize, &#39;center&#39;: do_center, &#39;count&#39;: len, &#39;d&#39;: do_default, &#39;default&#39;: do_default, &#39;dictsort&#39;: do_dictsort, &#39;e&#39;: escape, &#39;escape&#39;: escape, &#39;filesizeformat&#39;: do_filesizeformat, &#39;first&#39;: do_first, &#39;float&#39;: do_float, &#39;forceescape&#39;: do_forceescape, &#39;format&#39;: do_format, &#39;groupby&#39;: do_groupby, &#39;indent&#39;: do_indent, &#39;int&#39;: do_int, &#39;join&#39;: do_join, &#39;last&#39;: do_last, &#39;length&#39;: len, &#39;list&#39;: do_list, &#39;lower&#39;: do_lower, &#39;items&#39;: do_items, &#39;map&#39;: do_map, &#39;min&#39;: do_min, &#39;max&#39;: do_max, &#39;pprint&#39;: do_pprint, &#39;random&#39;: do_random, &#39;reject&#39;: do_reject, &#39;rejectattr&#39;: do_rejectattr, &#39;replace&#39;: do_replace, &#39;reverse&#39;: do_reverse, &#39;round&#39;: do_round, &#39;safe&#39;: do_mark_safe, &#39;select&#39;: do_select, &#39;selectattr&#39;: do_selectattr, &#39;slice&#39;: do_slice, &#39;sort&#39;: do_sort, &#39;string&#39;: soft_str, &#39;striptags&#39;: do_striptags, &#39;sum&#39;: do_sum, &#39;title&#39;: do_title, &#39;trim&#39;: do_trim, &#39;truncate&#39;: do_truncate, &#39;unique&#39;: do_unique, &#39;upper&#39;: do_upper, &#39;urlencode&#39;: do_urlencode, &#39;urlize&#39;: do_urlize, &#39;wordcount&#39;: do_wordcount, &#39;wordwrap&#39;: do_wordwrap, &#39;xmlattr&#39;: do_xmlattr, &#39;tojson&#39;: do_tojson}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

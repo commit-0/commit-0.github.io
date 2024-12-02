@@ -1,0 +1,536 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent pyjwt - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-pyjwt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent pyjwt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-pyjwt"><strong>SWE-Agent</strong>: pyjwt</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>Pytest collection failure.
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/jwt/api_jws.py b/jwt/api_jws.py</span>
+<span class="gh">index 9a20466..1a7235b 100644</span>
+<span class="gd">--- a/jwt/api_jws.py</span>
+<span class="gi">+++ b/jwt/api_jws.py</span>
+<span class="gu">@@ -27,20 +27,26 @@ class PyJWS:</span>
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Registers a new Algorithm for use when creating and verifying tokens.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if alg_id in self._algorithms:</span>
+<span class="gi">+            warnings.warn(f&quot;Algorithm &#39;{alg_id}&#39; already exists. It will be overwritten.&quot;, UserWarning)</span>
+<span class="gi">+        self._algorithms[alg_id] = alg_obj</span>
+<span class="gi">+        self._valid_algs.add(alg_id)</span>
+
+<span class="w"> </span>    def unregister_algorithm(self, alg_id: str) -&gt; None:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Unregisters an Algorithm for use when creating and verifying tokens
+<span class="w"> </span>        Throws KeyError if algorithm is not registered.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if alg_id not in self._algorithms:</span>
+<span class="gi">+            raise KeyError(f&quot;Algorithm &#39;{alg_id}&#39; is not registered.&quot;)</span>
+<span class="gi">+        del self._algorithms[alg_id]</span>
+<span class="gi">+        self._valid_algs.remove(alg_id)</span>
+
+<span class="w"> </span>    def get_algorithms(self) -&gt; list[str]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="w"> </span>        Returns a list of supported values for the &#39;alg&#39; parameter.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return list(self._valid_algs)</span>
+
+<span class="w"> </span>    def get_algorithm_by_name(self, alg_name: str) -&gt; Algorithm:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -50,7 +56,10 @@ class PyJWS:</span>
+
+<span class="w"> </span>        &gt;&gt;&gt; jws_obj.get_algorithm_by_name(&quot;RS256&quot;)
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            return self._algorithms[alg_name]</span>
+<span class="gi">+        except KeyError:</span>
+<span class="gi">+            raise InvalidAlgorithmError(f&quot;Algorithm &#39;{alg_name}&#39; could not be found&quot;)</span>
+
+<span class="w"> </span>    def get_unverified_header(self, jwt: str | bytes) -&gt; dict[str, Any]:
+<span class="w"> </span>        &quot;&quot;&quot;Returns back the JWT header parameters as a dict()
+<span class="gu">@@ -58,7 +67,75 @@ class PyJWS:</span>
+<span class="w"> </span>        Note: The signature is not verified so the header parameters
+<span class="w"> </span>        should not be fully trusted until signature verification is complete
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if isinstance(jwt, str):</span>
+<span class="gi">+            jwt = jwt.encode(&#39;utf-8&#39;)</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            header_segment = jwt.split(b&#39;.&#39;)[0]</span>
+<span class="gi">+            header_data = base64url_decode(header_segment)</span>
+<span class="gi">+            return json.loads(header_data)</span>
+<span class="gi">+        except (ValueError, TypeError, binascii.Error) as e:</span>
+<span class="gi">+            raise DecodeError(f&quot;Invalid header padding: {e}&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def encode(self, payload: dict[str, Any], key: str, algorithm: str = &#39;HS256&#39;, headers: dict[str, Any] | None = None, json_encoder: type[json.JSONEncoder] | None = None) -&gt; str:</span>
+<span class="gi">+        segments = []</span>
+<span class="gi">+        if headers is None:</span>
+<span class="gi">+            headers = {}</span>
+<span class="gi">+        headers[&#39;typ&#39;] = self.header_typ</span>
+<span class="gi">+        headers[&#39;alg&#39;] = algorithm</span>
+<span class="gi">+</span>
+<span class="gi">+        json_header = json.dumps(headers, separators=(&#39;,&#39;, &#39;:&#39;), cls=json_encoder).encode()</span>
+<span class="gi">+        segments.append(base64url_encode(json_header))</span>
+<span class="gi">+</span>
+<span class="gi">+        json_payload = json.dumps(payload, separators=(&#39;,&#39;, &#39;:&#39;), cls=json_encoder).encode()</span>
+<span class="gi">+        segments.append(base64url_encode(json_payload))</span>
+<span class="gi">+</span>
+<span class="gi">+        signing_input = b&#39;.&#39;.join(segments)</span>
+<span class="gi">+        alg_obj = self.get_algorithm_by_name(algorithm)</span>
+<span class="gi">+        signature = alg_obj.sign(signing_input, key)</span>
+<span class="gi">+        segments.append(base64url_encode(signature))</span>
+<span class="gi">+</span>
+<span class="gi">+        return b&#39;.&#39;.join(segments).decode(&#39;utf-8&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+    def decode_complete(self, jwt: str | bytes, key: str | None = None, algorithms: list[str] | None = None, options: dict[str, Any] | None = None, **kwargs: Any) -&gt; dict[str, Any]:</span>
+<span class="gi">+        if isinstance(jwt, str):</span>
+<span class="gi">+            jwt = jwt.encode(&#39;utf-8&#39;)</span>
+<span class="gi">+</span>
+<span class="gi">+        try:</span>
+<span class="gi">+            header_segment, payload_segment, crypto_segment = jwt.split(b&#39;.&#39;)</span>
+<span class="gi">+        except ValueError:</span>
+<span class="gi">+            raise DecodeError(&quot;Not enough segments&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        header_data = base64url_decode(header_segment)</span>
+<span class="gi">+        header = json.loads(header_data)</span>
+<span class="gi">+</span>
+<span class="gi">+        payload_data = base64url_decode(payload_segment)</span>
+<span class="gi">+        payload = json.loads(payload_data)</span>
+<span class="gi">+</span>
+<span class="gi">+        if algorithms is None:</span>
+<span class="gi">+            algorithms = self.get_algorithms()</span>
+<span class="gi">+</span>
+<span class="gi">+        if options is None:</span>
+<span class="gi">+            options = {}</span>
+<span class="gi">+        merged_options = {**self.options, **options}</span>
+<span class="gi">+</span>
+<span class="gi">+        if key is None and merged_options.get(&#39;verify_signature&#39;):</span>
+<span class="gi">+            raise DecodeError(&quot;Signature verification required but no key was provided.&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        if merged_options.get(&#39;verify_signature&#39;):</span>
+<span class="gi">+            alg_obj = self.get_algorithm_by_name(header[&#39;alg&#39;])</span>
+<span class="gi">+            if header[&#39;alg&#39;] not in algorithms:</span>
+<span class="gi">+                raise InvalidAlgorithmError(f&quot;The specified algorithm &#39;{header[&#39;alg&#39;]}&#39; is not allowed.&quot;)</span>
+<span class="gi">+            try:</span>
+<span class="gi">+                alg_obj.verify(f&quot;{header_segment.decode(&#39;utf-8&#39;)}.{payload_segment.decode(&#39;utf-8&#39;)}&quot;.encode(), base64url_decode(crypto_segment), key)</span>
+<span class="gi">+            except InvalidSignatureError:</span>
+<span class="gi">+                raise InvalidSignatureError(&quot;Signature verification failed&quot;)</span>
+<span class="gi">+</span>
+<span class="gi">+        return {&#39;header&#39;: header, &#39;payload&#39;: payload}</span>
+<span class="gi">+</span>
+<span class="gi">+    def decode(self, jwt: str | bytes, key: str | None = None, algorithms: list[str] | None = None, options: dict[str, Any] | None = None, **kwargs: Any) -&gt; dict[str, Any]:</span>
+<span class="gi">+        decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)</span>
+<span class="gi">+        return decoded[&#39;payload&#39;]</span>
+<span class="gi">+</span>
+<span class="w"> </span>_jws_global_obj = PyJWS()
+<span class="w"> </span>encode = _jws_global_obj.encode
+<span class="w"> </span>decode_complete = _jws_global_obj.decode_complete
+<span class="gu">@@ -66,4 +143,4 @@ decode = _jws_global_obj.decode</span>
+<span class="w"> </span>register_algorithm = _jws_global_obj.register_algorithm
+<span class="w"> </span>unregister_algorithm = _jws_global_obj.unregister_algorithm
+<span class="w"> </span>get_algorithm_by_name = _jws_global_obj.get_algorithm_by_name
+<span class="gd">-get_unverified_header = _jws_global_obj.get_unverified_header</span>
+\ No newline at end of file
+<span class="gi">+get_unverified_header = _jws_global_obj.get_unverified_header</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

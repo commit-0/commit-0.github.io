@@ -1,0 +1,4610 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent dnspython - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-dnspython" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent dnspython
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_addresspyipv4teststest_invalid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_address.py::IPv4Tests::test_invalid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_addresspyipv4teststest_valid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_address.py::IPv4Tests::test_valid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_addresspyipv6teststest_invalid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_address.py::IPv6Tests::test_invalid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_addresspyipv6teststest_valid" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_address.py::IPv6Tests::test_valid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_entropypyentropytestcasetest_functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_entropy.py::EntropyTestCase::test_functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_entropypyentropytestcasetest_pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_entropy.py::EntropyTestCase::test_pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_entropypyentropytestcasetest_pool_random" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_entropy.py::EntropyTestCase::test_pool_random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_entropypyentropytestcasetest_pool_random_between" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_entropy.py::EntropyTestCase::test_pool_random_between
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_entropypyentropyforcepooltestcasetest_functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_entropy.py::EntropyForcePoolTestCase::test_functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspyexceptiontestcasetest_formatted_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::ExceptionTestCase::test_formatted_error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspyexceptiontestcasetest_kwargs_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::ExceptionTestCase::test_kwargs_only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspyexceptiontestcasetest_kwargs_unsupported" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::ExceptionTestCase::test_kwargs_unsupported
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_flags1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_flags1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_flags2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_flags2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode6" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode7" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode8" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode_badsig" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode_badsig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_rcode_badvers" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_rcode_badvers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_flagspyflagstestcasetest_unknown_rcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_flags.py::FlagsTestCase::test_unknown_rcode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfailfromtext1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFailFromText1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfailfromtext2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFailFromText2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfailfromtext3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFailFromText3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfailfromtext4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFailFromText4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfromtext1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFromText1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfromtext2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFromText2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfromtext3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFromText3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfromtext4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFromText4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfromtext5" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFromText5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_grangepygrangetestcasetestfromtext6" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_grange.py::GRangeTestCase::testFromText6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton5" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton6" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton7" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton8" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_aton9" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_aton9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_aton1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_aton2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_aton3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_aton4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_ntoa1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_ntoa2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_ntoa3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_v4_aton" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_v4_aton
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bad_v6_aton" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bad_v6_aton
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_bogus_family" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_bogus_family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_do_not_ignore_scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_do_not_ignore_scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_good_v4_aton" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_good_v4_aton
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_inet_canonicalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_inet_canonicalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ipv4_canonicalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ipv4_canonicalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ipv6_canonicalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ipv6_canonicalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_is_mapped" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_is_mapped
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_is_multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_is_multicast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_is_multicast_bad_input" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_is_multicast_bad_input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_isaddress" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_isaddress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_low_level_address_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_low_level_address_tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_multiple_scopes_bad" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_multiple_scopes_bad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa10" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa11" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa12" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa13" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa14" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa15" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa5" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa6" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa7" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa8" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ntoa9" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_ptontop" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_ptontop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ntoaatonpyntoaatontestcasetest_rfc5952_section_4_2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ntoaaton.py::NtoAAtoNTestCase::test_rfc5952_section_4_2_2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext_bounds1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_bounds1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext_bounds2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_bounds2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext_unknown" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_unknown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_meta1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_meta1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext_bounds1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext_bounds1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext_bounds2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext_bounds2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type0_totext" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type0_totext
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext_bounds1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_bounds1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext_bounds2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_bounds2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext_unknown" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_unknown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_meta1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_meta1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_meta2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_meta2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_singleton1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_singleton1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext_bounds1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext_bounds1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext_bounds2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext_bounds2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestbaddisjoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testBadDisjoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestbadsubsetsuperset" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testBadSubsetSuperset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestbadupdates" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testBadUpdates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestcopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testCopy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdelitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDelitem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdelslice" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDelslice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdifference1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDifference1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdifference2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDifference2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdifference3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDifference3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdifference4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDifference4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdisjoint1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDisjoint1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdisjoint2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDisjoint2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestdisjoint3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testDisjoint3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestgetitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testGetitem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestgetslice" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testGetslice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestintersection1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testIntersection1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestintersection2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testIntersection2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestintersection3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testIntersection3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestintersection4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testIntersection4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestlen2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testLen2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestlen3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testLen3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestpop" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testPop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestremovenonexistent" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testRemoveNonexistent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsubset1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSubset1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsubset2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSubset2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsubset3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSubset3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsubset4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSubset4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsubset5" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSubset5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsuperset1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSuperset1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsuperset2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSuperset2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsuperset3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSuperset3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsuperset4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSuperset4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsuperset5" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSuperset5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsymmetricdifference1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSymmetricDifference1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsymmetricdifference2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSymmetricDifference2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsymmetricdifference3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSymmetricDifference3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestsymmetricdifference4" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testSymmetricDifference4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestunion1" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testUnion1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestunion2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testUnion2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestunion3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testUnion3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_setpysettestcasetestunionplussyntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_set.py::SetTestCase::testUnionPlusSyntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_bind_style_bad_unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_bind_style_bad_unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_bind_style_leading_unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_bind_style_leading_unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_bind_style_no_unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_bind_style_no_unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_bind_style_ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_bind_style_ok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_bind_style_ok2" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_bind_style_ok2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_bind_style_unit_without_digits" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_bind_style_unit_without_digits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_ttlpyttltestcasetest_empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_ttl.py::TTLTestCase::test_empty
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-dnspython"><strong>SWE-Agent</strong>: dnspython</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">152</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">27</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">179</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">179</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_addresspyipv4teststest_invalid">test_address.py::IPv4Tests::test_invalid</h3>
+<details><summary> <pre>test_address.py::IPv4Tests::test_invalid</pre></summary><pre>
+self = <tests.test_address.IPv4Tests testMethod=test_invalid>
+
+    def test_invalid(self):
+        invalid = (
+            "",
+            ".",
+            "..",
+            "400.2.3.4",
+            "260.2.3.4",
+            "256.2.3.4",
+            "1.256.3.4",
+            "1.2.256.4",
+            "1.2.3.256",
+            "300.2.3.4",
+            "1.300.3.4",
+            "1.2.300.4",
+            "1.2.3.300",
+            "900.2.3.4",
+            "1.900.3.4",
+            "1.2.900.4",
+            "1.2.3.900",
+            "300.300.300.300",
+            "3000.30.30.30",
+            "255Z255X255Y255",
+            "192x168.1.26",
+            "2.3.4",
+            "257.1.2.3",
+            "00.00.00.00",
+            "000.000.000.000",
+            "256.256.256.256",
+            "255255.255.255",
+            "255.255255.255",
+            "255.255.255255",
+            "1...",
+            "1.2..",
+            "1.2.3.",
+            ".2..",
+            ".2.3.",
+            ".2.3.4",
+            "..3.",
+            "..3.4",
+            "...4",
+            ".1.2.3.4",
+            "1.2.3.4.",
+            " 1.2.3.4",
+            "1.2.3.4 ",
+            " 1.2.3.4 ",
+            "::",
+        )
+        for s in invalid:
+>           with self.assertRaises(
+                dns.exception.SyntaxError, msg=f'invalid IPv4 address: "{s}"'
+            ):
+E           AssertionError: SyntaxError not raised : invalid IPv4 address: ""
+
+tests/test_address.py:77: AssertionError
+</pre>
+</details>
+<h3 id="test_addresspyipv4teststest_valid">test_address.py::IPv4Tests::test_valid</h3>
+<details><summary> <pre>test_address.py::IPv4Tests::test_valid</pre></summary><pre>
+self = <tests.test_address.IPv4Tests testMethod=test_valid>
+
+    def test_valid(self):
+        valid = (
+            "1.2.3.4",
+            "11.22.33.44",
+            "254.7.237.98",
+            "192.168.1.26",
+            "192.168.1.1",
+            "13.1.68.3",
+            "129.144.52.38",
+            "254.157.241.86",
+            "12.34.56.78",
+            "192.0.2.128",
+        )
+        for s in valid:
+>           self.assertEqual(dns.ipv4.inet_aton(s), socket.inet_pton(socket.AF_INET, s))
+E           AssertionError: None != b'\x01\x02\x03\x04'
+
+tests/test_address.py:27: AssertionError
+</pre>
+</details>
+<h3 id="test_addresspyipv6teststest_invalid">test_address.py::IPv6Tests::test_invalid</h3>
+<details><summary> <pre>test_address.py::IPv6Tests::test_invalid</pre></summary><pre>
+self = <tests.test_address.IPv6Tests testMethod=test_invalid>
+
+    def test_invalid(self):
+        invalid = (
+            "",
+            ":",
+            ":::",
+            "2001:DB8:0:0:8:800:200C:417A:221",
+            "FF01::101::2",
+            "02001:0000:1234:0000:0000:C1C0:ABCD:0876",
+            "2001:0000:1234:0000:00001:C1C0:ABCD:0876",
+            " 2001:0000:1234:0000:0000:C1C0:ABCD:0876",
+            "2001:0000:1234:0000:0000:C1C0:ABCD:0876 ",
+            " 2001:0000:1234:0000:0000:C1C0:ABCD:0876  ",
+            "2001:0000:1234:0000:0000:C1C0:ABCD:0876  0",
+            "2001:0000:1234: 0000:0000:C1C0:ABCD:0876",
+            "3ffe:0b00:0000:0001:0000:0000:000a",
+            "FF02:0000:0000:0000:0000:0000:0000:0000:0001",
+            "3ffe:b00::1::a",
+            "::1111:2222:3333:4444:5555:6666::",
+            "1:2:3::4:5::7:8",
+            "12345::6:7:8",
+            "1::5:400.2.3.4",
+            "1::5:260.2.3.4",
+            "1::5:256.2.3.4",
+            "1::5:1.256.3.4",
+            "1::5:1.2.256.4",
+            "1::5:1.2.3.256",
+            "1::5:300.2.3.4",
+            "1::5:1.300.3.4",
+            "1::5:1.2.300.4",
+            "1::5:1.2.3.300",
+            "1::5:900.2.3.4",
+            "1::5:1.900.3.4",
+            "1::5:1.2.900.4",
+            "1::5:1.2.3.900",
+            "1::5:300.300.300.300",
+            "1::5:3000.30.30.30",
+            "1::400.2.3.4",
+            "1::260.2.3.4",
+            "1::256.2.3.4",
+            "1::1.256.3.4",
+            "1::1.2.256.4",
+            "1::1.2.3.256",
+            "1::300.2.3.4",
+            "1::1.300.3.4",
+            "1::1.2.300.4",
+            "1::1.2.3.300",
+            "1::900.2.3.4",
+            "1::1.900.3.4",
+            "1::1.2.900.4",
+            "1::1.2.3.900",
+            "1::300.300.300.300",
+            "1::3000.30.30.30",
+            "::400.2.3.4",
+            "::260.2.3.4",
+            "::256.2.3.4",
+            "::1.256.3.4",
+            "::1.2.256.4",
+            "::1.2.3.256",
+            "::300.2.3.4",
+            "::1.300.3.4",
+            "::1.2.300.4",
+            "::1.2.3.300",
+            "::900.2.3.4",
+            "::1.900.3.4",
+            "::1.2.900.4",
+            "::1.2.3.900",
+            "::300.300.300.300",
+            "::3000.30.30.30",
+            "::1.2.3.4.",
+            "2001:1:1:1:1:1:255Z255X255Y255",
+            "::ffff:192x168.1.26",
+            "::ffff:2.3.4",
+            "::ffff:257.1.2.3",
+            "1.2.3.4",
+            "1.2.3.4:1111:2222:3333:4444::5555",
+            "1.2.3.4:1111:2222:3333::5555",
+            "1.2.3.4:1111:2222::5555",
+            "1.2.3.4:1111::5555",
+            "1.2.3.4::5555",
+            "1.2.3.4::",
+            "fe80:0000:0000:0000:0204:61ff:254.157.241.086",
+            "XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:1.2.3.4",
+            "1111:2222:3333:4444:5555:6666:00.00.00.00",
+            "1111:2222:3333:4444:5555:6666:000.000.000.000",
+            "1111:2222:3333:4444:5555:6666:256.256.256.256",
+            "1111:2222:3333:4444::5555:",
+            "1111:2222:3333::5555:",
+            "1111:2222::5555:",
+            "1111::5555:",
+            "::5555:",
+            "1111:",
+            ":1111:2222:3333:4444::5555",
+            ":1111:2222:3333::5555",
+            ":1111:2222::5555",
+            ":1111::5555",
+            ":::5555",
+            "123",
+            "ldkfj",
+            "2001::FFD3::57ab",
+            "2001:db8:85a3::8a2e:37023:7334",
+            "2001:db8:85a3::8a2e:370k:7334",
+            "1:2:3:4:5:6:7:8:9",
+            "1::2::3",
+            "1:::3:4:5",
+            "1:2:3::4:5:6:7:8:9",
+            "XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX",
+            "1111:2222:3333:4444:5555:6666:7777:8888:9999",
+            "1111:2222:3333:4444:5555:6666:7777:8888::",
+            "::2222:3333:4444:5555:6666:7777:8888:9999",
+            "1111:2222:3333:4444:5555:6666:7777",
+            "1111:2222:3333:4444:5555:6666",
+            "1111:2222:3333:4444:5555",
+            "1111:2222:3333:4444",
+            "1111:2222:3333",
+            "1111:2222",
+            "1111",
+            "11112222:3333:4444:5555:6666:7777:8888",
+            "1111:22223333:4444:5555:6666:7777:8888",
+            "1111:2222:33334444:5555:6666:7777:8888",
+            "1111:2222:3333:44445555:6666:7777:8888",
+            "1111:2222:3333:4444:55556666:7777:8888",
+            "1111:2222:3333:4444:5555:66667777:8888",
+            "1111:2222:3333:4444:5555:6666:77778888",
+            "1111:2222:3333:4444:5555:6666:7777:8888:",
+            "1111:2222:3333:4444:5555:6666:7777:",
+            "1111:2222:3333:4444:5555:6666:",
+            "1111:2222:3333:4444:5555:",
+            "1111:2222:3333:4444:",
+            "1111:2222:3333:",
+            "1111:2222:",
+            ":8888",
+            ":7777:8888",
+            ":6666:7777:8888",
+            ":5555:6666:7777:8888",
+            ":4444:5555:6666:7777:8888",
+            ":3333:4444:5555:6666:7777:8888",
+            ":2222:3333:4444:5555:6666:7777:8888",
+            ":1111:2222:3333:4444:5555:6666:7777:8888",
+            ":::2222:3333:4444:5555:6666:7777:8888",
+            "1111:::3333:4444:5555:6666:7777:8888",
+            "1111:2222:::4444:5555:6666:7777:8888",
+            "1111:2222:3333:::5555:6666:7777:8888",
+            "1111:2222:3333:4444:::6666:7777:8888",
+            "1111:2222:3333:4444:5555:::7777:8888",
+            "1111:2222:3333:4444:5555:6666:::8888",
+            "::2222::4444:5555:6666:7777:8888",
+            "::2222:3333::5555:6666:7777:8888",
+            "::2222:3333:4444::6666:7777:8888",
+            "::2222:3333:4444:5555::7777:8888",
+            "::2222:3333:4444:5555:7777::8888",
+            "::2222:3333:4444:5555:7777:8888::",
+            "1111::3333::5555:6666:7777:8888",
+            "1111::3333:4444::6666:7777:8888",
+            "1111::3333:4444:5555::7777:8888",
+            "1111::3333:4444:5555:6666::8888",
+            "1111::3333:4444:5555:6666:7777::",
+            "1111:2222::4444::6666:7777:8888",
+            "1111:2222::4444:5555::7777:8888",
+            "1111:2222::4444:5555:6666::8888",
+            "1111:2222::4444:5555:6666:7777::",
+            "1111:2222:3333::5555::7777:8888",
+            "1111:2222:3333::5555:6666::8888",
+            "1111:2222:3333::5555:6666:7777::",
+            "1111:2222:3333:4444::6666::8888",
+            "1111:2222:3333:4444::6666:7777::",
+            "1111:2222:3333:4444:5555::7777::",
+            "1111:2222:3333:4444:5555:6666:7777:8888:1.2.3.4",
+            "1111:2222:3333:4444:5555:6666:7777:1.2.3.4",
+            "1111:2222:3333:4444:5555:6666::1.2.3.4",
+            "::2222:3333:4444:5555:6666:7777:1.2.3.4",
+            "1111:2222:3333:4444:5555:6666:1.2.3.4.5",
+            "1111:2222:3333:4444:5555:1.2.3.4",
+            "1111:2222:3333:4444:1.2.3.4",
+            "1111:2222:3333:1.2.3.4",
+            "1111:2222:1.2.3.4",
+            "1111:1.2.3.4",
+            "11112222:3333:4444:5555:6666:1.2.3.4",
+            "1111:22223333:4444:5555:6666:1.2.3.4",
+            "1111:2222:33334444:5555:6666:1.2.3.4",
+            "1111:2222:3333:44445555:6666:1.2.3.4",
+            "1111:2222:3333:4444:55556666:1.2.3.4",
+            "1111:2222:3333:4444:5555:66661.2.3.4",
+            "1111:2222:3333:4444:5555:6666:255255.255.255",
+            "1111:2222:3333:4444:5555:6666:255.255255.255",
+            "1111:2222:3333:4444:5555:6666:255.255.255255",
+            ":1.2.3.4",
+            ":6666:1.2.3.4",
+            ":5555:6666:1.2.3.4",
+            ":4444:5555:6666:1.2.3.4",
+            ":3333:4444:5555:6666:1.2.3.4",
+            ":2222:3333:4444:5555:6666:1.2.3.4",
+            ":1111:2222:3333:4444:5555:6666:1.2.3.4",
+            ":::2222:3333:4444:5555:6666:1.2.3.4",
+            "1111:::3333:4444:5555:6666:1.2.3.4",
+            "1111:2222:::4444:5555:6666:1.2.3.4",
+            "1111:2222:3333:::5555:6666:1.2.3.4",
+            "1111:2222:3333:4444:::6666:1.2.3.4",
+            "1111:2222:3333:4444:5555:::1.2.3.4",
+            "::2222::4444:5555:6666:1.2.3.4",
+            "::2222:3333::5555:6666:1.2.3.4",
+            "::2222:3333:4444::6666:1.2.3.4",
+            "::2222:3333:4444:5555::1.2.3.4",
+            "1111::3333::5555:6666:1.2.3.4",
+            "1111::3333:4444::6666:1.2.3.4",
+            "1111::3333:4444:5555::1.2.3.4",
+            "1111:2222::4444::6666:1.2.3.4",
+            "1111:2222::4444:5555::1.2.3.4",
+            "1111:2222:3333::5555::1.2.3.4",
+            "::.",
+            "::..",
+            "::...",
+            "::1...",
+            "::1.2..",
+            "::1.2.3.",
+            "::.2..",
+            "::.2.3.",
+            "::.2.3.4",
+            "::..3.",
+            "::..3.4",
+            "::...4",
+            ":1111:2222:3333:4444:5555:6666:7777::",
+            ":1111:2222:3333:4444:5555:6666::",
+            ":1111:2222:3333:4444:5555::",
+            ":1111:2222:3333:4444::",
+            ":1111:2222:3333::",
+            ":1111:2222::",
+            ":1111::",
+            ":1111:2222:3333:4444:5555:6666::8888",
+            ":1111:2222:3333:4444:5555::8888",
+            ":1111:2222:3333:4444::8888",
+            ":1111:2222:3333::8888",
+            ":1111:2222::8888",
+            ":1111::8888",
+            ":::8888",
+            ":1111:2222:3333:4444:5555::7777:8888",
+            ":1111:2222:3333:4444::7777:8888",
+            ":1111:2222:3333::7777:8888",
+            ":1111:2222::7777:8888",
+            ":1111::7777:8888",
+            ":::7777:8888",
+            ":1111:2222:3333:4444::6666:7777:8888",
+            ":1111:2222:3333::6666:7777:8888",
+            ":1111:2222::6666:7777:8888",
+            ":1111::6666:7777:8888",
+            ":::6666:7777:8888",
+            ":1111:2222:3333::5555:6666:7777:8888",
+            ":1111:2222::5555:6666:7777:8888",
+            ":1111::5555:6666:7777:8888",
+            ":::5555:6666:7777:8888",
+            ":1111:2222::4444:5555:6666:7777:8888",
+            ":1111::4444:5555:6666:7777:8888",
+            ":::4444:5555:6666:7777:8888",
+            ":1111::3333:4444:5555:6666:7777:8888",
+            ":::3333:4444:5555:6666:7777:8888",
+            ":1111:2222:3333:4444:5555::1.2.3.4",
+            ":1111:2222:3333:4444::1.2.3.4",
+            ":1111:2222:3333::1.2.3.4",
+            ":1111:2222::1.2.3.4",
+            ":1111::1.2.3.4",
+            ":::1.2.3.4",
+            ":1111:2222:3333:4444::6666:1.2.3.4",
+            ":1111:2222:3333::6666:1.2.3.4",
+            ":1111:2222::6666:1.2.3.4",
+            ":1111::6666:1.2.3.4",
+            ":::6666:1.2.3.4",
+            ":1111:2222:3333::5555:6666:1.2.3.4",
+            ":1111:2222::5555:6666:1.2.3.4",
+            ":1111::5555:6666:1.2.3.4",
+            ":::5555:6666:1.2.3.4",
+            ":1111:2222::4444:5555:6666:1.2.3.4",
+            ":1111::4444:5555:6666:1.2.3.4",
+            ":::4444:5555:6666:1.2.3.4",
+            ":1111::3333:4444:5555:6666:1.2.3.4",
+            "1111:2222:3333:4444:5555:6666:7777:::",
+            "1111:2222:3333:4444:5555:6666:::",
+            "1111:2222:3333:4444:5555:::",
+            "1111:2222:3333:4444:::",
+            "1111:2222:3333:::",
+            "1111:2222:::",
+            "1111:::",
+            "1111:2222:3333:4444:5555:6666::8888:",
+            "1111:2222:3333:4444:5555::8888:",
+            "1111:2222:3333:4444::8888:",
+            "1111:2222:3333::8888:",
+            "1111:2222::8888:",
+            "1111::8888:",
+            "::8888:",
+            "1111:2222:3333:4444:5555::7777:8888:",
+            "1111:2222:3333:4444::7777:8888:",
+            "1111:2222:3333::7777:8888:",
+            "1111:2222::7777:8888:",
+            "1111::7777:8888:",
+            "::7777:8888:",
+            "1111:2222:3333:4444::6666:7777:8888:",
+            "1111:2222:3333::6666:7777:8888:",
+            "1111:2222::6666:7777:8888:",
+            "1111::6666:7777:8888:",
+            "::6666:7777:8888:",
+            "1111:2222:3333::5555:6666:7777:8888:",
+            "1111:2222::5555:6666:7777:8888:",
+            "1111::5555:6666:7777:8888:",
+            "::5555:6666:7777:8888:",
+            "1111:2222::4444:5555:6666:7777:8888:",
+            "1111::4444:5555:6666:7777:8888:",
+            "::4444:5555:6666:7777:8888:",
+            "1111::3333:4444:5555:6666:7777:8888:",
+            "::3333:4444:5555:6666:7777:8888:",
+            "::2222:3333:4444:5555:6666:7777:8888:",
+            "':10.0.0.1",
+        )
+        for s in invalid:
+>           with self.assertRaises(
+                dns.exception.SyntaxError, msg=f'invalid IPv6 address: "{s}"'
+            ):
+E           AssertionError: SyntaxError not raised : invalid IPv6 address: ""
+
+tests/test_address.py:582: AssertionError
+</pre>
+</details>
+<h3 id="test_addresspyipv6teststest_valid">test_address.py::IPv6Tests::test_valid</h3>
+<details><summary> <pre>test_address.py::IPv6Tests::test_valid</pre></summary><pre>
+self = <tests.test_address.IPv6Tests testMethod=test_valid>
+
+    def test_valid(self):
+        valid = (
+            "::1",
+            "::",
+            "0:0:0:0:0:0:0:1",
+            "0:0:0:0:0:0:0:0",
+            "2001:DB8:0:0:8:800:200C:417A",
+            "FF01:0:0:0:0:0:0:101",
+            "2001:DB8::8:800:200C:417A",
+            "FF01::101",
+            "fe80::217:f2ff:fe07:ed62",
+            "2001:0000:1234:0000:0000:C1C0:ABCD:0876",
+            "3ffe:0b00:0000:0000:0001:0000:0000:000a",
+            "FF02:0000:0000:0000:0000:0000:0000:0001",
+            "0000:0000:0000:0000:0000:0000:0000:0001",
+            "0000:0000:0000:0000:0000:0000:0000:0000",
+            "2::10",
+            "ff02::1",
+            "fe80::",
+            "2002::",
+            "2001:db8::",
+            "2001:0db8:1234::",
+            "::ffff:0:0",
+            "1:2:3:4:5:6:7:8",
+            "1:2:3:4:5:6::8",
+            "1:2:3:4:5::8",
+            "1:2:3:4::8",
+            "1:2:3::8",
+            "1:2::8",
+            "1::8",
+            "1::2:3:4:5:6:7",
+            "1::2:3:4:5:6",
+            "1::2:3:4:5",
+            "1::2:3:4",
+            "1::2:3",
+            "::2:3:4:5:6:7:8",
+            "::2:3:4:5:6:7",
+            "::2:3:4:5:6",
+            "::2:3:4:5",
+            "::2:3:4",
+            "::2:3",
+            "::8",
+            "1:2:3:4:5:6::",
+            "1:2:3:4:5::",
+            "1:2:3:4::",
+            "1:2:3::",
+            "1:2::",
+            "1::",
+            "1:2:3:4:5::7:8",
+            "1:2:3:4::7:8",
+            "1:2:3::7:8",
+            "1:2::7:8",
+            "1::7:8",
+            "1:2:3:4:5:6:1.2.3.4",
+            "1:2:3:4:5::1.2.3.4",
+            "1:2:3:4::1.2.3.4",
+            "1:2:3::1.2.3.4",
+            "1:2::1.2.3.4",
+            "1::1.2.3.4",
+            "1:2:3:4::5:1.2.3.4",
+            "1:2:3::5:1.2.3.4",
+            "1:2:3::5:1.2.3.4",
+            "1:2::5:1.2.3.4",
+            "1::5:1.2.3.4",
+            "1::5:11.22.33.44",
+            "fe80::217:f2ff:254.7.237.98",
+            "::ffff:192.168.1.26",
+            "::ffff:192.168.1.1",
+            "0:0:0:0:0:0:13.1.68.3",
+            "0:0:0:0:0:FFFF:129.144.52.38",
+            "::13.1.68.3",
+            "::FFFF:129.144.52.38",
+            "fe80:0:0:0:204:61ff:254.157.241.86",
+            "fe80::204:61ff:254.157.241.86",
+            "::ffff:12.34.56.78",
+            "::ffff:192.0.2.128",
+            "fe80:0000:0000:0000:0204:61ff:fe9d:f156",
+            "fe80:0:0:0:204:61ff:fe9d:f156",
+            "fe80::204:61ff:fe9d:f156",
+            "fe80::1",
+            "::ffff:c000:280",
+            "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+            "2001:db8:85a3:0:0:8a2e:370:7334",
+            "2001:db8:85a3::8a2e:370:7334",
+            "2001:0db8:0000:0000:0000:0000:1428:57ab",
+            "2001:0db8:0000:0000:0000::1428:57ab",
+            "2001:0db8:0:0:0:0:1428:57ab",
+            "2001:0db8:0:0::1428:57ab",
+            "2001:0db8::1428:57ab",
+            "2001:db8::1428:57ab",
+            "::ffff:0c22:384e",
+            "2001:0db8:1234:0000:0000:0000:0000:0000",
+            "2001:0db8:1234:ffff:ffff:ffff:ffff:ffff",
+            "2001:db8:a::123",
+            "1111:2222:3333:4444:5555:6666:7777:8888",
+            "1111:2222:3333:4444:5555:6666:7777::",
+            "1111:2222:3333:4444:5555:6666::",
+            "1111:2222:3333:4444:5555::",
+            "1111:2222:3333:4444::",
+            "1111:2222:3333::",
+            "1111:2222::",
+            "1111::",
+            "1111:2222:3333:4444:5555:6666::8888",
+            "1111:2222:3333:4444:5555::8888",
+            "1111:2222:3333:4444::8888",
+            "1111:2222:3333::8888",
+            "1111:2222::8888",
+            "1111::8888",
+            "::8888",
+            "1111:2222:3333:4444:5555::7777:8888",
+            "1111:2222:3333:4444::7777:8888",
+            "1111:2222:3333::7777:8888",
+            "1111:2222::7777:8888",
+            "1111::7777:8888",
+            "::7777:8888",
+            "1111:2222:3333:4444::6666:7777:8888",
+            "1111:2222:3333::6666:7777:8888",
+            "1111:2222::6666:7777:8888",
+            "1111::6666:7777:8888",
+            "::6666:7777:8888",
+            "1111:2222:3333::5555:6666:7777:8888",
+            "1111:2222::5555:6666:7777:8888",
+            "1111::5555:6666:7777:8888",
+            "::5555:6666:7777:8888",
+            "1111:2222::4444:5555:6666:7777:8888",
+            "1111::4444:5555:6666:7777:8888",
+            "::4444:5555:6666:7777:8888",
+            "1111::3333:4444:5555:6666:7777:8888",
+            "::3333:4444:5555:6666:7777:8888",
+            "::2222:3333:4444:5555:6666:7777:8888",
+            "1111:2222:3333:4444:5555:6666:123.123.123.123",
+            "1111:2222:3333:4444:5555::123.123.123.123",
+            "1111:2222:3333:4444::123.123.123.123",
+            "1111:2222:3333::123.123.123.123",
+            "1111:2222::123.123.123.123",
+            "1111::123.123.123.123",
+            "::123.123.123.123",
+            "1111:2222:3333:4444::6666:123.123.123.123",
+            "1111:2222:3333::6666:123.123.123.123",
+            "1111:2222::6666:123.123.123.123",
+            "1111::6666:123.123.123.123",
+            "::6666:123.123.123.123",
+            "1111:2222:3333::5555:6666:123.123.123.123",
+            "1111:2222::5555:6666:123.123.123.123",
+            "1111::5555:6666:123.123.123.123",
+            "::5555:6666:123.123.123.123",
+            "1111:2222::4444:5555:6666:123.123.123.123",
+            "1111::4444:5555:6666:123.123.123.123",
+            "::4444:5555:6666:123.123.123.123",
+            "1111::3333:4444:5555:6666:123.123.123.123",
+            "::2222:3333:4444:5555:6666:123.123.123.123",
+            "::0:0:0:0:0:0:0",
+            "::0:0:0:0:0:0",
+            "::0:0:0:0:0",
+            "::0:0:0:0",
+            "::0:0:0",
+            "::0:0",
+            "::0",
+            "0:0:0:0:0:0:0::",
+            "0:0:0:0:0:0::",
+            "0:0:0:0:0::",
+            "0:0:0:0::",
+            "0:0:0::",
+            "0:0::",
+            "0::",
+            "0:a:b:c:d:e:f::",
+            "::0:a:b:c:d:e:f",
+            "a:b:c:d:e:f:0::",
+        )
+
+        win32_invalid = {
+            "::2:3:4:5:6:7:8",
+            "::2222:3333:4444:5555:6666:7777:8888",
+            "::2222:3333:4444:5555:6666:123.123.123.123",
+            "::0:0:0:0:0:0:0",
+            "::0:a:b:c:d:e:f",
+        }
+
+        for s in valid:
+            if sys.platform == "win32" and s in win32_invalid:
+                # socket.inet_pton() on win32 rejects some valid (as
+                # far as we can tell) IPv6 addresses.  Skip them.
+                continue
+>           self.assertEqual(
+                dns.ipv6.inet_aton(s), socket.inet_pton(socket.AF_INET6, s)
+            )
+E           AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01'
+
+tests/test_address.py:267: AssertionError
+</pre>
+</details>
+<h3 id="test_entropypyentropytestcasetest_functions">test_entropy.py::EntropyTestCase::test_functions</h3>
+<details><summary> <pre>test_entropy.py::EntropyTestCase::test_functions</pre></summary><pre>
+self = <tests.test_entropy.EntropyTestCase testMethod=test_functions>
+
+    def test_functions(self):
+>       v = dns.entropy.random_16()
+E       AttributeError: module 'dns.entropy' has no attribute 'random_16'. Did you mean: 'random'?
+
+tests/test_entropy.py:41: AttributeError
+</pre>
+</details>
+<h3 id="test_entropypyentropytestcasetest_pool">test_entropy.py::EntropyTestCase::test_pool</h3>
+<details><summary> <pre>test_entropy.py::EntropyTestCase::test_pool</pre></summary><pre>
+self = <tests.test_entropy.EntropyTestCase testMethod=test_pool>
+
+    def test_pool(self):
+>       pool = dns.entropy.EntropyPool(b"seed-value")
+
+tests/test_entropy.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dns.entropy.EntropyPool object at 0x7f4e7a711850>, seed = b'seed-value'
+
+    def __init__(self, seed: Optional[bytes]=None):
+        self.pool_index = 0
+        self.digest: Optional[bytearray] = None
+        self.next_byte = 0
+        self.lock = threading.Lock()
+        self.hash = hashlib.sha1()
+        self.hash_len = 20
+        self.pool = bytearray(b'\x00' * self.hash_len)
+        if seed is not None:
+>           self._stir(seed)
+E           AttributeError: 'EntropyPool' object has no attribute '_stir'
+
+dns/entropy.py:19: AttributeError
+</pre>
+</details>
+<h3 id="test_entropypyentropytestcasetest_pool_random">test_entropy.py::EntropyTestCase::test_pool_random</h3>
+<details><summary> <pre>test_entropy.py::EntropyTestCase::test_pool_random</pre></summary><pre>
+self = <tests.test_entropy.EntropyTestCase testMethod=test_pool_random>
+
+    def test_pool_random(self):
+        pool = dns.entropy.EntropyPool()
+>       values = {pool.random_32() for n in range(12)}
+E       AttributeError: 'EntropyPool' object has no attribute 'random_32'
+
+tests/test_entropy.py:22: AttributeError
+</pre>
+</details>
+<h3 id="test_entropypyentropytestcasetest_pool_random_between">test_entropy.py::EntropyTestCase::test_pool_random_between</h3>
+<details><summary> <pre>test_entropy.py::EntropyTestCase::test_pool_random_between</pre></summary><pre>
+self = <tests.test_entropy.EntropyTestCase testMethod=test_pool_random_between>
+
+    def test_pool_random_between(self):
+        pool = dns.entropy.EntropyPool()
+
+        def bad():
+            pool.random_between(0, 4294967296)
+
+>       self.assertRaises(ValueError, bad)
+
+tests/test_entropy.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def bad():
+>       pool.random_between(0, 4294967296)
+E       AttributeError: 'EntropyPool' object has no attribute 'random_between'
+
+tests/test_entropy.py:30: AttributeError
+</pre>
+</details>
+<h3 id="test_entropypyentropyforcepooltestcasetest_functions">test_entropy.py::EntropyForcePoolTestCase::test_functions</h3>
+<details><summary> <pre>test_entropy.py::EntropyForcePoolTestCase::test_functions</pre></summary><pre>
+self = <tests.test_entropy.EntropyForcePoolTestCase testMethod=test_functions>
+
+    def test_functions(self):
+>       v = dns.entropy.random_16()
+E       AttributeError: module 'dns.entropy' has no attribute 'random_16'. Did you mean: 'random'?
+
+tests/test_entropy.py:56: AttributeError
+</pre>
+</details>
+<h3 id="test_exceptionspyexceptiontestcasetest_formatted_error">test_exceptions.py::ExceptionTestCase::test_formatted_error</h3>
+<details><summary> <pre>test_exceptions.py::ExceptionTestCase::test_formatted_error</pre></summary><pre>
+self = <tests.test_exceptions.ExceptionTestCase testMethod=test_formatted_error>
+
+    def test_formatted_error(self):
+        """Exceptions with explicit format has to respect it."""
+        params = {"parameter": "value"}
+        try:
+>           raise FormatedError(**params)
+
+tests/test_exceptions.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = FormatedError(), args = (), kwargs = {'parameter': 'value'}
+
+    def __init__(self, *args, **kwargs):
+        self._check_params(*args, **kwargs)
+        if kwargs:
+>           self.kwargs = self._check_kwargs(**kwargs)
+E           AttributeError: 'FormatedError' object has no attribute '_check_kwargs'. Did you mean: '_check_params'?
+
+dns/exception.py:37: AttributeError
+</pre>
+</details>
+<h3 id="test_exceptionspyexceptiontestcasetest_kwargs_only">test_exceptions.py::ExceptionTestCase::test_kwargs_only</h3>
+<details><summary> <pre>test_exceptions.py::ExceptionTestCase::test_kwargs_only</pre></summary><pre>
+self = <tests.test_exceptions.ExceptionTestCase testMethod=test_kwargs_only>
+
+    def test_kwargs_only(self):
+        """Kwargs cannot be combined with args."""
+        with self.assertRaises(AssertionError):
+>           raise FormatedError(1, a=2)
+
+tests/test_exceptions.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def __init__(self, *args, **kwargs):
+        self._check_params(*args, **kwargs)
+        if kwargs:
+>           self.kwargs = self._check_kwargs(**kwargs)
+E           AttributeError: 'FormatedError' object has no attribute '_check_kwargs'. Did you mean: '_check_params'?
+
+dns/exception.py:37: AttributeError
+</pre>
+</details>
+<h3 id="test_exceptionspyexceptiontestcasetest_kwargs_unsupported">test_exceptions.py::ExceptionTestCase::test_kwargs_unsupported</h3>
+<details><summary> <pre>test_exceptions.py::ExceptionTestCase::test_kwargs_unsupported</pre></summary><pre>
+self = <tests.test_exceptions.ExceptionTestCase testMethod=test_kwargs_unsupported>
+
+    def test_kwargs_unsupported(self):
+        """Only supported kwargs are accepted."""
+        with self.assertRaises(AssertionError):
+>           raise FormatedError(unsupported=2)
+
+tests/test_exceptions.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def __init__(self, *args, **kwargs):
+        self._check_params(*args, **kwargs)
+        if kwargs:
+>           self.kwargs = self._check_kwargs(**kwargs)
+E           AttributeError: 'FormatedError' object has no attribute '_check_kwargs'. Did you mean: '_check_params'?
+
+dns/exception.py:37: AttributeError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_flags1">test_flags.py::FlagsTestCase::test_flags1</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_flags1</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_flags1>
+
+    def test_flags1(self):
+>       self.assertEqual(
+            dns.flags.from_text("RA RD AA QR"),
+            dns.flags.QR | dns.flags.AA | dns.flags.RD | dns.flags.RA,
+        )
+E       AssertionError: None != <Flag.QR|AA|RD|RA: 34176>
+
+tests/test_flags.py:51: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_flags2">test_flags.py::FlagsTestCase::test_flags2</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_flags2</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_flags2>
+
+    def test_flags2(self):
+        flags = dns.flags.QR | dns.flags.AA | dns.flags.RD | dns.flags.RA
+>       self.assertEqual(dns.flags.to_text(flags), "QR AA RD RA")
+E       AssertionError: None != 'QR AA RD RA'
+
+tests/test_flags.py:58: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode1">test_flags.py::FlagsTestCase::test_rcode1</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode1</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode1>
+
+    def test_rcode1(self):
+>       self.assertEqual(dns.rcode.from_text("FORMERR"), dns.rcode.FORMERR)
+E       AssertionError: None != <Rcode.FORMERR: 1>
+
+tests/test_flags.py:27: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode2">test_flags.py::FlagsTestCase::test_rcode2</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode2</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode2>
+
+    def test_rcode2(self):
+>       self.assertEqual(dns.rcode.to_text(dns.rcode.FORMERR), "FORMERR")
+E       AssertionError: None != 'FORMERR'
+
+tests/test_flags.py:30: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode3">test_flags.py::FlagsTestCase::test_rcode3</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode3</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode3>
+
+    def test_rcode3(self):
+>       self.assertEqual(dns.rcode.to_flags(dns.rcode.FORMERR), (1, 0))
+E       AssertionError: None != (1, 0)
+
+tests/test_flags.py:33: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode4">test_flags.py::FlagsTestCase::test_rcode4</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode4</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode4>
+
+    def test_rcode4(self):
+>       self.assertEqual(dns.rcode.to_flags(dns.rcode.BADVERS), (0, 0x01000000))
+E       AssertionError: None != (0, 16777216)
+
+tests/test_flags.py:36: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode6">test_flags.py::FlagsTestCase::test_rcode6</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode6</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode6>
+
+    def test_rcode6(self):
+>       self.assertEqual(dns.rcode.from_flags(0, 0x01000000), dns.rcode.BADVERS)
+E       AssertionError: None != <Rcode.BADVERS: 16>
+
+tests/test_flags.py:39: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode7">test_flags.py::FlagsTestCase::test_rcode7</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode7</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode7>
+
+    def test_rcode7(self):
+>       self.assertEqual(dns.rcode.from_flags(5, 0), dns.rcode.REFUSED)
+E       AssertionError: None != <Rcode.REFUSED: 5>
+
+tests/test_flags.py:42: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode8">test_flags.py::FlagsTestCase::test_rcode8</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode8</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode8>
+
+    def test_rcode8(self):
+        def bad():
+            dns.rcode.to_flags(4096)
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_flags.py:48: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode_badsig">test_flags.py::FlagsTestCase::test_rcode_badsig</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode_badsig</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode_badsig>
+
+    def test_rcode_badsig(self):
+        rcode = dns.rcode.BADSIG
+        self.assertEqual(rcode.value, 16)
+        # Yes, we mean BADVERS on the next line.  BADSIG and BADVERS have
+        # the same code.
+        self.assertEqual(rcode.name, "BADVERS")
+>       self.assertEqual(dns.rcode.to_text(rcode), "BADVERS")
+E       AssertionError: None != 'BADVERS'
+
+tests/test_flags.py:72: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_rcode_badvers">test_flags.py::FlagsTestCase::test_rcode_badvers</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_rcode_badvers</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_rcode_badvers>
+
+    def test_rcode_badvers(self):
+        rcode = dns.rcode.BADVERS
+        self.assertEqual(rcode.value, 16)
+        self.assertEqual(rcode.name, "BADVERS")
+>       self.assertEqual(dns.rcode.to_text(rcode), "BADVERS")
+E       AssertionError: None != 'BADVERS'
+
+tests/test_flags.py:64: AssertionError
+</pre>
+</details>
+<h3 id="test_flagspyflagstestcasetest_unknown_rcode">test_flags.py::FlagsTestCase::test_unknown_rcode</h3>
+<details><summary> <pre>test_flags.py::FlagsTestCase::test_unknown_rcode</pre></summary><pre>
+self = <tests.test_flags.FlagsTestCase testMethod=test_unknown_rcode>
+
+    def test_unknown_rcode(self):
+>       with self.assertRaises(dns.rcode.UnknownRcode):
+E       AssertionError: UnknownRcode not raised
+
+tests/test_flags.py:77: AssertionError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfailfromtext1">test_grange.py::GRangeTestCase::testFailFromText1</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFailFromText1</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFailFromText1>
+
+    def testFailFromText1(self):
+        with self.assertRaises(dns.exception.SyntaxError):
+            start = 2
+            stop = 1
+            step = 1
+            dns.grange.from_text("%d-%d/%d" % (start, stop, step))
+>           self.assertTrue(False)
+E           AssertionError: False is not true
+
+tests/test_grange.py:72: AssertionError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfailfromtext2">test_grange.py::GRangeTestCase::testFailFromText2</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFailFromText2</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFailFromText2>
+
+    def testFailFromText2(self):
+>       with self.assertRaises(dns.exception.SyntaxError):
+E       AssertionError: SyntaxError not raised
+
+tests/test_grange.py:75: AssertionError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfailfromtext3">test_grange.py::GRangeTestCase::testFailFromText3</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFailFromText3</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFailFromText3>
+
+    def testFailFromText3(self):
+>       with self.assertRaises(dns.exception.SyntaxError):
+E       AssertionError: SyntaxError not raised
+
+tests/test_grange.py:82: AssertionError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfailfromtext4">test_grange.py::GRangeTestCase::testFailFromText4</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFailFromText4</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFailFromText4>
+
+    def testFailFromText4(self):
+>       with self.assertRaises(dns.exception.SyntaxError):
+E       AssertionError: SyntaxError not raised
+
+tests/test_grange.py:89: AssertionError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfromtext1">test_grange.py::GRangeTestCase::testFromText1</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFromText1</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFromText1>
+
+    def testFromText1(self):
+>       start, stop, step = dns.grange.from_text("1-1")
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_grange.py:31: TypeError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfromtext2">test_grange.py::GRangeTestCase::testFromText2</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFromText2</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFromText2>
+
+    def testFromText2(self):
+>       start, stop, step = dns.grange.from_text("1-4")
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_grange.py:37: TypeError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfromtext3">test_grange.py::GRangeTestCase::testFromText3</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFromText3</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFromText3>
+
+    def testFromText3(self):
+>       start, stop, step = dns.grange.from_text("4-255")
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_grange.py:43: TypeError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfromtext4">test_grange.py::GRangeTestCase::testFromText4</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFromText4</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFromText4>
+
+    def testFromText4(self):
+>       start, stop, step = dns.grange.from_text("1-1/1")
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_grange.py:49: TypeError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfromtext5">test_grange.py::GRangeTestCase::testFromText5</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFromText5</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFromText5>
+
+    def testFromText5(self):
+>       start, stop, step = dns.grange.from_text("1-4/2")
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_grange.py:55: TypeError
+</pre>
+</details>
+<h3 id="test_grangepygrangetestcasetestfromtext6">test_grange.py::GRangeTestCase::testFromText6</h3>
+<details><summary> <pre>test_grange.py::GRangeTestCase::testFromText6</pre></summary><pre>
+self = <tests.test_grange.GRangeTestCase testMethod=testFromText6>
+
+    def testFromText6(self):
+>       start, stop, step = dns.grange.from_text("4-255/77")
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_grange.py:61: TypeError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton1">test_ntoaaton.py::NtoAAtoNTestCase::test_aton1</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton1</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton1>
+
+    def test_aton1(self):
+        a = aton6("::")
+>       self.assertEqual(a, b"\x00" * 16)
+E       AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
+tests/test_ntoaaton.py:70: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton2">test_ntoaaton.py::NtoAAtoNTestCase::test_aton2</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton2</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton2>
+
+    def test_aton2(self):
+        a = aton6("::1")
+>       self.assertEqual(a, b"\x00" * 15 + b"\x01")
+E       AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01'
+
+tests/test_ntoaaton.py:74: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton3">test_ntoaaton.py::NtoAAtoNTestCase::test_aton3</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton3</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton3>
+
+    def test_aton3(self):
+        a = aton6("::10.0.0.1")
+>       self.assertEqual(a, b"\x00" * 12 + b"\x0a\x00\x00\x01")
+E       AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x01'
+
+tests/test_ntoaaton.py:78: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton4">test_ntoaaton.py::NtoAAtoNTestCase::test_aton4</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton4</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton4>
+
+    def test_aton4(self):
+        a = aton6("abcd::dcba")
+>       self.assertEqual(a, b"\xab\xcd" + b"\x00" * 12 + b"\xdc\xba")
+E       AssertionError: None != b'\xab\xcd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xdc\xba'
+
+tests/test_ntoaaton.py:82: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton5">test_ntoaaton.py::NtoAAtoNTestCase::test_aton5</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton5</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton5>
+
+    def test_aton5(self):
+        a = aton6("1:2:3:4:5:6:7:8")
+>       self.assertEqual(a, binascii.unhexlify(b"00010002000300040005000600070008"))
+E       AssertionError: None != b'\x00\x01\x00\x02\x00\x03\x00\x04\x00\x05\x00\x06\x00\x07\x00\x08'
+
+tests/test_ntoaaton.py:86: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton6">test_ntoaaton.py::NtoAAtoNTestCase::test_aton6</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton6</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton6>
+
+    def test_aton6(self):
+        a = aton6("::")
+>       self.assertEqual(a, b"\x00" * 16)
+E       AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
+tests/test_ntoaaton.py:114: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton7">test_ntoaaton.py::NtoAAtoNTestCase::test_aton7</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton7</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton7>
+
+    def test_aton7(self):
+        a = aton6("::1")
+>       self.assertEqual(a, b"\x00" * 15 + b"\x01")
+E       AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01'
+
+tests/test_ntoaaton.py:118: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton8">test_ntoaaton.py::NtoAAtoNTestCase::test_aton8</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton8</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton8>
+
+    def test_aton8(self):
+        a = aton6("::10.0.0.1")
+>       self.assertEqual(a, b"\x00" * 12 + b"\x0a\x00\x00\x01")
+E       AssertionError: None != b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x01'
+
+tests/test_ntoaaton.py:122: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_aton9">test_ntoaaton.py::NtoAAtoNTestCase::test_aton9</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_aton9</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_aton9>
+
+    def test_aton9(self):
+        a = aton6("abcd::dcba")
+>       self.assertEqual(a, b"\xab\xcd" + b"\x00" * 12 + b"\xdc\xba")
+E       AssertionError: None != b'\xab\xcd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xdc\xba'
+
+tests/test_ntoaaton.py:126: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_aton1">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton1</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton1</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_aton1>
+
+    def test_bad_aton1(self):
+        def bad():
+            aton6("abcd:dcba")
+
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:92: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_aton2">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton2</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton2</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_aton2>
+
+    def test_bad_aton2(self):
+        def bad():
+            aton6("abcd::dcba::1")
+
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:98: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_aton3">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton3</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton3</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_aton3>
+
+    def test_bad_aton3(self):
+        def bad():
+            aton6("1:2:3:4:5:6:7:8:9")
+
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:104: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_aton4">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton4</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_aton4</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_aton4>
+
+    def test_bad_aton4(self):
+        def bad():
+            aton4("001.002.003.004")
+
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:110: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_ntoa1">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa1</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa1</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_ntoa1>
+
+    def test_bad_ntoa1(self):
+        def bad():
+            ntoa6(b"")
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_ntoaaton.py:208: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_ntoa2">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa2</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa2</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_ntoa2>
+
+    def test_bad_ntoa2(self):
+        def bad():
+            ntoa6(b"\x00" * 17)
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_ntoaaton.py:214: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_ntoa3">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa3</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_ntoa3</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_ntoa3>
+
+    def test_bad_ntoa3(self):
+        def bad():
+            ntoa4(b"\x00" * 5)
+
+        # Ideally we'd have been consistent and raised ValueError as
+        # we do for IPv6, but oh well!
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:222: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_v4_aton">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_v4_aton</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_v4_aton</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_v4_aton>
+
+    def test_bad_v4_aton(self):
+        def make_bad(a):
+            def bad():
+                return aton4(a)
+
+            return bad
+
+        for addr in v4_bad_addrs:
+>           self.assertRaises(dns.exception.SyntaxError, make_bad(addr))
+E           AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:244: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bad_v6_aton">test_ntoaaton.py::NtoAAtoNTestCase::test_bad_v6_aton</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bad_v6_aton</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bad_v6_aton>
+
+    def test_bad_v6_aton(self):
+        addrs = ["+::0", "0::0::", "::0::", "1:2:3:4:5:6:7:8:9", ":::::::"]
+        embedded = ["::" + x for x in v4_bad_addrs]
+        addrs.extend(embedded)
+
+        def make_bad(a):
+            def bad():
+                x = aton6(a)
+
+            return bad
+
+        for addr in addrs:
+>           self.assertRaises(dns.exception.SyntaxError, make_bad(addr))
+E           AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:258: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_bogus_family">test_ntoaaton.py::NtoAAtoNTestCase::test_bogus_family</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_bogus_family</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_bogus_family>
+
+    def test_bogus_family(self):
+>       self.assertRaises(
+            NotImplementedError, lambda: dns.inet.inet_pton(12345, "bogus")
+        )
+E       AssertionError: NotImplementedError not raised by <lambda>
+
+tests/test_ntoaaton.py:368: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_do_not_ignore_scope">test_ntoaaton.py::NtoAAtoNTestCase::test_do_not_ignore_scope</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_do_not_ignore_scope</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_do_not_ignore_scope>
+
+    def test_do_not_ignore_scope(self):
+        def bad():
+            t1 = "fe80::1%lo0"
+            aton6(t1)
+
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:304: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_good_v4_aton">test_ntoaaton.py::NtoAAtoNTestCase::test_good_v4_aton</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_good_v4_aton</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_good_v4_aton>
+
+    def test_good_v4_aton(self):
+        pairs = [
+            ("1.2.3.4", b"\x01\x02\x03\x04"),
+            ("255.255.255.255", b"\xff\xff\xff\xff"),
+            ("0.0.0.0", b"\x00\x00\x00\x00"),
+        ]
+        for t, b in pairs:
+            b1 = aton4(t)
+            t1 = ntoa4(b1)
+>           self.assertEqual(b1, b)
+E           AssertionError: None != b'\x01\x02\x03\x04'
+
+tests/test_ntoaaton.py:233: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_inet_canonicalize">test_ntoaaton.py::NtoAAtoNTestCase::test_inet_canonicalize</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_inet_canonicalize</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_inet_canonicalize>
+
+    def test_inet_canonicalize(self):
+        for address, expected in itertools.chain(
+            v4_canonicalize_addrs, v6_canonicalize_addrs
+        ):
+>           self.assertEqual(dns.inet.canonicalize(address), expected)
+E           AssertionError: None != '127.0.0.1'
+
+tests/test_ntoaaton.py:395: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ipv4_canonicalize">test_ntoaaton.py::NtoAAtoNTestCase::test_ipv4_canonicalize</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ipv4_canonicalize</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ipv4_canonicalize>
+
+    def test_ipv4_canonicalize(self):
+        for address, expected in v4_canonicalize_addrs:
+>           self.assertEqual(dns.ipv4.canonicalize(address), expected)
+E           AssertionError: None != '127.0.0.1'
+
+tests/test_ntoaaton.py:377: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ipv6_canonicalize">test_ntoaaton.py::NtoAAtoNTestCase::test_ipv6_canonicalize</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ipv6_canonicalize</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ipv6_canonicalize>
+
+    def test_ipv6_canonicalize(self):
+        for address, expected in v6_canonicalize_addrs:
+>           self.assertEqual(dns.ipv6.canonicalize(address), expected)
+E           AssertionError: None != '2001:503:83eb::30'
+
+tests/test_ntoaaton.py:385: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_is_mapped">test_ntoaaton.py::NtoAAtoNTestCase::test_is_mapped</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_is_mapped</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_is_mapped>
+
+    def test_is_mapped(self):
+        t1 = "2001:db8:0:1:1:1:1:1"
+        t2 = "::ffff:127.0.0.1"
+        t3 = "1::ffff:127.0.0.1"
+        self.assertFalse(dns.ipv6.is_mapped(aton6(t1)))
+>       self.assertTrue(dns.ipv6.is_mapped(aton6(t2)))
+E       AssertionError: None is not true
+
+tests/test_ntoaaton.py:271: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_is_multicast">test_ntoaaton.py::NtoAAtoNTestCase::test_is_multicast</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_is_multicast</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_is_multicast>
+
+    def test_is_multicast(self):
+        t1 = "223.0.0.1"
+        t2 = "240.0.0.1"
+        t3 = "224.0.0.1"
+        t4 = "239.0.0.1"
+        t5 = "fe00::1"
+        t6 = "ff00::1"
+        self.assertFalse(dns.inet.is_multicast(t1))
+        self.assertFalse(dns.inet.is_multicast(t2))
+>       self.assertTrue(dns.inet.is_multicast(t3))
+E       AssertionError: None is not true
+
+tests/test_ntoaaton.py:283: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_is_multicast_bad_input">test_ntoaaton.py::NtoAAtoNTestCase::test_is_multicast_bad_input</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_is_multicast_bad_input</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_is_multicast_bad_input>
+
+    def test_is_multicast_bad_input(self):
+        def bad():
+            dns.inet.is_multicast("hello world")
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_ntoaaton.py:292: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_isaddress">test_ntoaaton.py::NtoAAtoNTestCase::test_isaddress</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_isaddress</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_isaddress>
+
+    def test_isaddress(self):
+        for t, e in [
+            ("1.2.3.4", True),
+            ("2001:db8:0:1:1:1:1:1", True),
+            ("hello world", False),
+            ("http://www.dnspython.org", False),
+            ("1.2.3.4a", False),
+            ("2001:db8:0:1:1:1:1:q1", False),
+        ]:
+>           self.assertEqual(dns.inet.is_address(t), e)
+E           AssertionError: None != True
+
+tests/test_ntoaaton.py:329: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_low_level_address_tuple">test_ntoaaton.py::NtoAAtoNTestCase::test_low_level_address_tuple</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_low_level_address_tuple</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_low_level_address_tuple>
+
+    def test_low_level_address_tuple(self):
+        t = dns.inet.low_level_address_tuple(("1.2.3.4", 53))
+>       self.assertEqual(t, ("1.2.3.4", 53))
+E       AssertionError: None != ('1.2.3.4', 53)
+
+tests/test_ntoaaton.py:333: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_multiple_scopes_bad">test_ntoaaton.py::NtoAAtoNTestCase::test_multiple_scopes_bad</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_multiple_scopes_bad</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_multiple_scopes_bad>
+
+    def test_multiple_scopes_bad(self):
+        def bad():
+            t1 = "fe80::1%lo0%lo1"
+            aton6(t1, True)
+
+>       self.assertRaises(dns.exception.SyntaxError, bad)
+E       AssertionError: SyntaxError not raised by bad
+
+tests/test_ntoaaton.py:311: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa1">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa1</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa1</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa1>
+
+    def test_ntoa1(self):
+        b = binascii.unhexlify(b"00010002000300040005000600070008")
+        t = ntoa6(b)
+>       self.assertEqual(t, "1:2:3:4:5:6:7:8")
+E       AssertionError: None != '1:2:3:4:5:6:7:8'
+
+tests/test_ntoaaton.py:131: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa10">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa10</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa10</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa10>
+
+    def test_ntoa10(self):
+        b = binascii.unhexlify(b"0000000000000000000000010a000001")
+        t = ntoa6(b)
+>       self.assertEqual(t, "::1:a00:1")
+E       AssertionError: None != '::1:a00:1'
+
+tests/test_ntoaaton.py:176: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa11">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa11</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa11</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa11>
+
+    def test_ntoa11(self):
+        b = binascii.unhexlify(b"00000000000000000000ffff0a000001")
+        t = ntoa6(b)
+>       self.assertEqual(t, "::ffff:10.0.0.1")
+E       AssertionError: None != '::ffff:10.0.0.1'
+
+tests/test_ntoaaton.py:181: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa12">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa12</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa12</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa12>
+
+    def test_ntoa12(self):
+        b = binascii.unhexlify(b"000000000000000000000000ffffffff")
+        t = ntoa6(b)
+>       self.assertEqual(t, "::255.255.255.255")
+E       AssertionError: None != '::255.255.255.255'
+
+tests/test_ntoaaton.py:186: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa13">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa13</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa13</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa13>
+
+    def test_ntoa13(self):
+        b = binascii.unhexlify(b"00000000000000000000ffffffffffff")
+        t = ntoa6(b)
+>       self.assertEqual(t, "::ffff:255.255.255.255")
+E       AssertionError: None != '::ffff:255.255.255.255'
+
+tests/test_ntoaaton.py:191: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa14">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa14</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa14</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa14>
+
+    def test_ntoa14(self):
+        b = binascii.unhexlify(b"0000000000000000000000000001ffff")
+        t = ntoa6(b)
+>       self.assertEqual(t, "::0.1.255.255")
+E       AssertionError: None != '::0.1.255.255'
+
+tests/test_ntoaaton.py:196: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa15">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa15</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa15</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa15>
+
+    def test_ntoa15(self):
+        # This exercises the current_len > best_len branch in the <= case.
+        b = binascii.unhexlify(b"0000ffff00000000ffff00000000ffff")
+        t = ntoa6(b)
+>       self.assertEqual(t, "0:ffff::ffff:0:0:ffff")
+E       AssertionError: None != '0:ffff::ffff:0:0:ffff'
+
+tests/test_ntoaaton.py:202: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa2">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa2</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa2</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa2>
+
+    def test_ntoa2(self):
+        b = b"\x00" * 16
+        t = ntoa6(b)
+>       self.assertEqual(t, "::")
+E       AssertionError: None != '::'
+
+tests/test_ntoaaton.py:136: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa3">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa3</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa3</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa3>
+
+    def test_ntoa3(self):
+        b = b"\x00" * 15 + b"\x01"
+        t = ntoa6(b)
+>       self.assertEqual(t, "::1")
+E       AssertionError: None != '::1'
+
+tests/test_ntoaaton.py:141: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa4">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa4</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa4</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa4>
+
+    def test_ntoa4(self):
+        b = b"\x80" + b"\x00" * 15
+        t = ntoa6(b)
+>       self.assertEqual(t, "8000::")
+E       AssertionError: None != '8000::'
+
+tests/test_ntoaaton.py:146: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa5">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa5</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa5</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa5>
+
+    def test_ntoa5(self):
+        b = b"\x01\xcd" + b"\x00" * 12 + b"\x03\xef"
+        t = ntoa6(b)
+>       self.assertEqual(t, "1cd::3ef")
+E       AssertionError: None != '1cd::3ef'
+
+tests/test_ntoaaton.py:151: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa6">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa6</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa6</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa6>
+
+    def test_ntoa6(self):
+        b = binascii.unhexlify(b"ffff00000000ffff000000000000ffff")
+        t = ntoa6(b)
+>       self.assertEqual(t, "ffff:0:0:ffff::ffff")
+E       AssertionError: None != 'ffff:0:0:ffff::ffff'
+
+tests/test_ntoaaton.py:156: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa7">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa7</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa7</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa7>
+
+    def test_ntoa7(self):
+        b = binascii.unhexlify(b"00000000ffff000000000000ffffffff")
+        t = ntoa6(b)
+>       self.assertEqual(t, "0:0:ffff::ffff:ffff")
+E       AssertionError: None != '0:0:ffff::ffff:ffff'
+
+tests/test_ntoaaton.py:161: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa8">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa8</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa8</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa8>
+
+    def test_ntoa8(self):
+        b = binascii.unhexlify(b"ffff0000ffff00000000ffff00000000")
+        t = ntoa6(b)
+>       self.assertEqual(t, "ffff:0:ffff::ffff:0:0")
+E       AssertionError: None != 'ffff:0:ffff::ffff:0:0'
+
+tests/test_ntoaaton.py:166: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ntoa9">test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa9</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ntoa9</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ntoa9>
+
+    def test_ntoa9(self):
+        b = binascii.unhexlify(b"0000000000000000000000000a000001")
+        t = ntoa6(b)
+>       self.assertEqual(t, "::10.0.0.1")
+E       AssertionError: None != '::10.0.0.1'
+
+tests/test_ntoaaton.py:171: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_ptontop">test_ntoaaton.py::NtoAAtoNTestCase::test_ptontop</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_ptontop</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_ptontop>
+
+    def test_ptontop(self):
+        for af, a in [
+            (socket.AF_INET, "1.2.3.4"),
+            (socket.AF_INET6, "2001:db8:0:1:1:1:1:1"),
+        ]:
+>           self.assertEqual(dns.inet.inet_ntop(af, dns.inet.inet_pton(af, a)), a)
+E           AssertionError: None != '1.2.3.4'
+
+tests/test_ntoaaton.py:318: AssertionError
+</pre>
+</details>
+<h3 id="test_ntoaatonpyntoaatontestcasetest_rfc5952_section_4_2_2">test_ntoaaton.py::NtoAAtoNTestCase::test_rfc5952_section_4_2_2</h3>
+<details><summary> <pre>test_ntoaaton.py::NtoAAtoNTestCase::test_rfc5952_section_4_2_2</pre></summary><pre>
+self = <tests.test_ntoaaton.NtoAAtoNTestCase testMethod=test_rfc5952_section_4_2_2>
+
+    def test_rfc5952_section_4_2_2(self):
+        addr = "2001:db8:0:1:1:1:1:1"
+        b1 = aton6(addr)
+        t1 = ntoa6(b1)
+>       self.assertEqual(t1, addr)
+E       AssertionError: None != '2001:db8:0:1:1:1:1:1'
+
+tests/test_ntoaaton.py:264: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_bytext1>
+
+    def test_class_bytext1(self):
+>       self.assertEqual(dns.rdataclass.from_text("IN"), dns.rdataclass.IN)
+E       AssertionError: None != <RdataClass.IN: 1>
+
+tests/test_rdtypeandclass.py:34: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_bytext2>
+
+    def test_class_bytext2(self):
+>       self.assertEqual(dns.rdataclass.from_text("CLASS1"), dns.rdataclass.IN)
+E       AssertionError: None != <RdataClass.IN: 1>
+
+tests/test_rdtypeandclass.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext_bounds1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_bounds1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_bounds1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_bytext_bounds1>
+
+    def test_class_bytext_bounds1(self):
+>       self.assertEqual(dns.rdataclass.from_text("CLASS0"), 0)
+E       AssertionError: None != 0
+
+tests/test_rdtypeandclass.py:40: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext_bounds2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_bounds2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_bounds2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_bytext_bounds2>
+
+    def test_class_bytext_bounds2(self):
+        def bad():
+            dns.rdataclass.from_text("CLASS65536")
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_rdtypeandclass.py:47: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_bytext_unknown">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_unknown</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_bytext_unknown</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_bytext_unknown>
+
+    def test_class_bytext_unknown(self):
+        def bad():
+            dns.rdataclass.from_text("XXX")
+
+>       self.assertRaises(dns.rdataclass.UnknownRdataclass, bad)
+E       AssertionError: UnknownRdataclass not raised by bad
+
+tests/test_rdtypeandclass.py:53: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_meta1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_meta1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_meta1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_meta1>
+
+    def test_class_meta1(self):
+>       self.assertTrue(dns.rdataclass.is_metaclass(dns.rdataclass.ANY))
+E       AssertionError: None is not true
+
+tests/test_rdtypeandclass.py:28: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_totext1>
+
+    def test_class_totext1(self):
+>       self.assertEqual(dns.rdataclass.to_text(dns.rdataclass.IN), "IN")
+E       AssertionError: None != 'IN'
+
+tests/test_rdtypeandclass.py:56: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_totext2>
+
+    def test_class_totext2(self):
+>       self.assertEqual(dns.rdataclass.to_text(999), "CLASS999")
+E       AssertionError: None != 'CLASS999'
+
+tests/test_rdtypeandclass.py:59: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext_bounds1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext_bounds1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext_bounds1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_totext_bounds1>
+
+    def test_class_totext_bounds1(self):
+        def bad():
+            dns.rdataclass.to_text(-1)
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_rdtypeandclass.py:65: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_class_totext_bounds2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext_bounds2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_class_totext_bounds2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_class_totext_bounds2>
+
+    def test_class_totext_bounds2(self):
+        def bad():
+            dns.rdataclass.to_text(65536)
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_rdtypeandclass.py:71: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type0_totext">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type0_totext</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type0_totext</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type0_totext>
+
+    def test_type0_totext(self):
+>       self.assertEqual(dns.rdatatype.to_text(0), "TYPE0")
+E       AssertionError: None != 'TYPE0'
+
+tests/test_rdtypeandclass.py:131: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_bytext1>
+
+    def test_type_bytext1(self):
+>       self.assertEqual(dns.rdatatype.from_text("A"), dns.rdatatype.A)
+E       AssertionError: None != <RdataType.A: 1>
+
+tests/test_rdtypeandclass.py:91: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_bytext2>
+
+    def test_type_bytext2(self):
+>       self.assertEqual(dns.rdatatype.from_text("TYPE1"), dns.rdatatype.A)
+E       AssertionError: None != <RdataType.A: 1>
+
+tests/test_rdtypeandclass.py:94: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext_bounds1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_bounds1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_bounds1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_bytext_bounds1>
+
+    def test_type_bytext_bounds1(self):
+>       self.assertEqual(dns.rdatatype.from_text("TYPE0"), 0)
+E       AssertionError: None != 0
+
+tests/test_rdtypeandclass.py:97: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext_bounds2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_bounds2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_bounds2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_bytext_bounds2>
+
+    def test_type_bytext_bounds2(self):
+        def bad():
+            dns.rdatatype.from_text("TYPE65536")
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_rdtypeandclass.py:104: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_bytext_unknown">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_unknown</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_bytext_unknown</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_bytext_unknown>
+
+    def test_type_bytext_unknown(self):
+        def bad():
+            dns.rdatatype.from_text("XXX")
+
+>       self.assertRaises(dns.rdatatype.UnknownRdatatype, bad)
+E       AssertionError: UnknownRdatatype not raised by bad
+
+tests/test_rdtypeandclass.py:110: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_meta1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_meta1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_meta1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_meta1>
+
+    def test_type_meta1(self):
+>       self.assertTrue(dns.rdatatype.is_metatype(dns.rdatatype.ANY))
+E       AssertionError: None is not true
+
+tests/test_rdtypeandclass.py:76: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_meta2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_meta2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_meta2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_meta2>
+
+    def test_type_meta2(self):
+>       self.assertTrue(dns.rdatatype.is_metatype(dns.rdatatype.OPT))
+E       AssertionError: None is not true
+
+tests/test_rdtypeandclass.py:79: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_singleton1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_singleton1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_singleton1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_singleton1>
+
+    def test_type_singleton1(self):
+>       self.assertTrue(dns.rdatatype.is_singleton(dns.rdatatype.SOA))
+E       AssertionError: None is not true
+
+tests/test_rdtypeandclass.py:85: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_totext1>
+
+    def test_type_totext1(self):
+>       self.assertEqual(dns.rdatatype.to_text(dns.rdatatype.A), "A")
+E       AssertionError: None != 'A'
+
+tests/test_rdtypeandclass.py:113: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_totext2>
+
+    def test_type_totext2(self):
+>       self.assertEqual(dns.rdatatype.to_text(999), "TYPE999")
+E       AssertionError: None != 'TYPE999'
+
+tests/test_rdtypeandclass.py:116: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext_bounds1">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext_bounds1</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext_bounds1</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_totext_bounds1>
+
+    def test_type_totext_bounds1(self):
+        def bad():
+            dns.rdatatype.to_text(-1)
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_rdtypeandclass.py:122: AssertionError
+</pre>
+</details>
+<h3 id="test_rdtypeandclasspyrdtypeandclasstestcasetest_type_totext_bounds2">test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext_bounds2</h3>
+<details><summary> <pre>test_rdtypeandclass.py::RdTypeAndClassTestCase::test_type_totext_bounds2</pre></summary><pre>
+self = <tests.test_rdtypeandclass.RdTypeAndClassTestCase testMethod=test_type_totext_bounds2>
+
+    def test_type_totext_bounds2(self):
+        def bad():
+            dns.rdatatype.to_text(65536)
+
+>       self.assertRaises(ValueError, bad)
+E       AssertionError: ValueError not raised by bad
+
+tests/test_rdtypeandclass.py:128: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestbaddisjoint">test_set.py::SetTestCase::testBadDisjoint</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testBadDisjoint</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testBadDisjoint>
+
+    def testBadDisjoint(self):
+        s = S([1, 2, 3])
+>       self.assertRaises(ValueError, lambda: s.isdisjoint(123))
+
+tests/test_set.py:324: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   self.assertRaises(ValueError, lambda: s.isdisjoint(123))
+E   AttributeError: 'Set' object has no attribute 'isdisjoint'
+
+tests/test_set.py:324: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestbadsubsetsuperset">test_set.py::SetTestCase::testBadSubsetSuperset</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testBadSubsetSuperset</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testBadSubsetSuperset>
+
+    def testBadSubsetSuperset(self):
+        s = S([1, 2, 3])
+>       self.assertRaises(ValueError, lambda: s.issubset(123))
+E       AssertionError: ValueError not raised by <lambda>
+
+tests/test_set.py:319: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestbadupdates">test_set.py::SetTestCase::testBadUpdates</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testBadUpdates</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testBadUpdates>
+
+    def testBadUpdates(self):
+        s = S([1, 2, 3])
+>       self.assertRaises(ValueError, lambda: s.union_update(1))
+E       AssertionError: ValueError not raised by <lambda>
+
+tests/test_set.py:302: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestcopy">test_set.py::SetTestCase::testCopy</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testCopy</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testCopy>
+
+    def testCopy(self):
+        s1 = S([1, 2, 3])
+        s2 = s1.copy()
+        s1.remove(1)
+>       self.assertNotEqual(s1, s2)
+
+tests/test_set.py:294: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+dns/set.py:170: in __ne__
+    return not self.__eq__(other)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdelitem">test_set.py::SetTestCase::testDelitem</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDelitem</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDelitem>
+
+    def testDelitem(self):
+        s1 = S([1, 2, 3])
+>       del s1[0]
+
+tests/test_set.py:269: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+dns/set.py:189: in __delitem__
+    del self.items[self[i]]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), i = 0
+
+    def __getitem__(self, i):
+        if isinstance(i, slice):
+            return list(itertools.islice(self.items, i.start, i.stop, i.step))
+        else:
+>           return next(itertools.islice(self.items, i, i + 1))
+E           StopIteration
+
+dns/set.py:182: StopIteration
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdelslice">test_set.py::SetTestCase::testDelslice</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDelslice</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDelslice>
+
+    def testDelslice(self):
+        s1 = S([1, 2, 3])
+        del s1[0:2]
+>       self.assertEqual(list(s1), [3])
+E       AssertionError: Lists differ: [] != [3]
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 0:
+E       3
+E       
+E       - []
+E       + [3]
+E       ?  +
+
+tests/test_set.py:275: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdifference1">test_set.py::SetTestCase::testDifference1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDifference1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDifference1>
+
+    def testDifference1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([5, 4])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 - s2, e)
+
+tests/test_set.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdifference2">test_set.py::SetTestCase::testDifference2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDifference2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDifference2>
+
+    def testDifference2(self):
+        s1 = S([1, 2, 3])
+        s2 = S([])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 - s2, e)
+
+tests/test_set.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdifference3">test_set.py::SetTestCase::testDifference3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDifference3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDifference3>
+
+    def testDifference3(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 2])
+        e = S([1])
+>       self.assertEqual(s1 - s2, e)
+
+tests/test_set.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdifference4">test_set.py::SetTestCase::testDifference4</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDifference4</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDifference4>
+
+    def testDifference4(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 2, 1])
+        e = S([])
+>       self.assertEqual(s1 - s2, e)
+
+tests/test_set.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdisjoint1">test_set.py::SetTestCase::testDisjoint1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDisjoint1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDisjoint1>
+
+    def testDisjoint1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([4])
+>       self.assertTrue(s1.isdisjoint(s2))
+E       AttributeError: 'Set' object has no attribute 'isdisjoint'
+
+tests/test_set.py:210: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdisjoint2">test_set.py::SetTestCase::testDisjoint2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDisjoint2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDisjoint2>
+
+    def testDisjoint2(self):
+        s1 = S([1, 2, 3])
+        s2 = S([2, 4])
+>       self.assertTrue(not s1.isdisjoint(s2))
+E       AttributeError: 'Set' object has no attribute 'isdisjoint'
+
+tests/test_set.py:215: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestdisjoint3">test_set.py::SetTestCase::testDisjoint3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testDisjoint3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testDisjoint3>
+
+    def testDisjoint3(self):
+        s1 = S([1, 2, 3])
+        s2 = S([])
+>       self.assertTrue(s1.isdisjoint(s2))
+E       AttributeError: 'Set' object has no attribute 'isdisjoint'
+
+tests/test_set.py:220: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestgetitem">test_set.py::SetTestCase::testGetitem</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testGetitem</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testGetitem>
+
+    def testGetitem(self):
+        s1 = S([1, 2, 3])
+>       i0 = s1[0]
+
+tests/test_set.py:252: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), i = 0
+
+    def __getitem__(self, i):
+        if isinstance(i, slice):
+            return list(itertools.islice(self.items, i.start, i.stop, i.step))
+        else:
+>           return next(itertools.islice(self.items, i, i + 1))
+E           StopIteration
+
+dns/set.py:182: StopIteration
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestgetslice">test_set.py::SetTestCase::testGetslice</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testGetslice</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testGetslice>
+
+    def testGetslice(self):
+        s1 = S([1, 2, 3])
+        slice = s1[0:2]
+>       self.assertEqual(len(slice), 2)
+E       AssertionError: 0 != 2
+
+tests/test_set.py:261: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestintersection1">test_set.py::SetTestCase::testIntersection1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testIntersection1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testIntersection1>
+
+    def testIntersection1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([1, 2, 3])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 & s2, e)
+
+tests/test_set.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestintersection2">test_set.py::SetTestCase::testIntersection2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testIntersection2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testIntersection2>
+
+    def testIntersection2(self):
+        s1 = S([0, 1, 2, 3])
+        s2 = S([1, 2, 3, 4])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 & s2, e)
+
+tests/test_set.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestintersection3">test_set.py::SetTestCase::testIntersection3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testIntersection3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testIntersection3>
+
+    def testIntersection3(self):
+        s1 = S([1, 2, 3])
+        s2 = S([])
+        e = S([])
+>       self.assertEqual(s1 & s2, e)
+
+tests/test_set.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestintersection4">test_set.py::SetTestCase::testIntersection4</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testIntersection4</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testIntersection4>
+
+    def testIntersection4(self):
+        s1 = S([1, 2, 3])
+        s2 = S([5, 4])
+        e = S([])
+>       self.assertEqual(s1 & s2, e)
+
+tests/test_set.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestlen2">test_set.py::SetTestCase::testLen2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testLen2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testLen2>
+
+    def testLen2(self):
+        s1 = S([1, 2, 3])
+>       self.assertEqual(len(s1), 3)
+E       AssertionError: 0 != 3
+
+tests/test_set.py:34: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestlen3">test_set.py::SetTestCase::testLen3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testLen3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testLen3>
+
+    def testLen3(self):
+        s1 = S([1, 2, 3, 3, 3])
+>       self.assertEqual(len(s1), 3)
+E       AssertionError: 0 != 3
+
+tests/test_set.py:38: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestpop">test_set.py::SetTestCase::testPop</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testPop</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testPop>
+
+    def testPop(self):
+        original = S([1, 2, 3])
+        s1 = original.copy()
+>       item = s1.pop()
+E       AttributeError: 'NoneType' object has no attribute 'pop'
+
+tests/test_set.py:225: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestremovenonexistent">test_set.py::SetTestCase::testRemoveNonexistent</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testRemoveNonexistent</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testRemoveNonexistent>
+
+    def testRemoveNonexistent(self):
+        s1 = S([1, 2, 3])
+        s2 = S([1, 2, 3])
+>       with self.assertRaises(ValueError):
+E       AssertionError: ValueError not raised
+
+tests/test_set.py:280: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsubset1">test_set.py::SetTestCase::testSubset1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSubset1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSubset1>
+
+    def testSubset1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 2, 1])
+>       self.assertTrue(s1.issubset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:152: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsubset2">test_set.py::SetTestCase::testSubset2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSubset2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSubset2>
+
+    def testSubset2(self):
+        s1 = S([1, 2, 3])
+>       self.assertTrue(s1.issubset(s1))
+E       AssertionError: None is not true
+
+tests/test_set.py:156: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsubset3">test_set.py::SetTestCase::testSubset3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSubset3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSubset3>
+
+    def testSubset3(self):
+        s1 = S([])
+        s2 = S([1, 2, 3])
+>       self.assertTrue(s1.issubset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:161: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsubset4">test_set.py::SetTestCase::testSubset4</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSubset4</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSubset4>
+
+    def testSubset4(self):
+        s1 = S([1])
+        s2 = S([1, 2, 3])
+>       self.assertTrue(s1.issubset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:166: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsubset5">test_set.py::SetTestCase::testSubset5</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSubset5</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSubset5>
+
+    def testSubset5(self):
+        s1 = S([])
+        s2 = S([])
+>       self.assertTrue(s1.issubset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:171: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsuperset1">test_set.py::SetTestCase::testSuperset1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSuperset1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSuperset1>
+
+    def testSuperset1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 2, 1])
+>       self.assertTrue(s1.issuperset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:181: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsuperset2">test_set.py::SetTestCase::testSuperset2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSuperset2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSuperset2>
+
+    def testSuperset2(self):
+        s1 = S([1, 2, 3])
+>       self.assertTrue(s1.issuperset(s1))
+E       AssertionError: None is not true
+
+tests/test_set.py:185: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsuperset3">test_set.py::SetTestCase::testSuperset3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSuperset3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSuperset3>
+
+    def testSuperset3(self):
+        s1 = S([1, 2, 3])
+        s2 = S([])
+>       self.assertTrue(s1.issuperset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:190: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsuperset4">test_set.py::SetTestCase::testSuperset4</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSuperset4</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSuperset4>
+
+    def testSuperset4(self):
+        s1 = S([1, 2, 3])
+        s2 = S([1])
+>       self.assertTrue(s1.issuperset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:195: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsuperset5">test_set.py::SetTestCase::testSuperset5</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSuperset5</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSuperset5>
+
+    def testSuperset5(self):
+        s1 = S([])
+        s2 = S([])
+>       self.assertTrue(s1.issuperset(s2))
+E       AssertionError: None is not true
+
+tests/test_set.py:200: AssertionError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsymmetricdifference1">test_set.py::SetTestCase::testSymmetricDifference1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSymmetricDifference1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSymmetricDifference1>
+
+    def testSymmetricDifference1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([5, 4])
+        e = S([1, 2, 3, 4, 5])
+>       self.assertEqual(s1 ^ s2, e)
+
+tests/test_set.py:116: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsymmetricdifference2">test_set.py::SetTestCase::testSymmetricDifference2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSymmetricDifference2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSymmetricDifference2>
+
+    def testSymmetricDifference2(self):
+        s1 = S([1, 2, 3])
+        s2 = S([])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 ^ s2, e)
+
+tests/test_set.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsymmetricdifference3">test_set.py::SetTestCase::testSymmetricDifference3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSymmetricDifference3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSymmetricDifference3>
+
+    def testSymmetricDifference3(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 2])
+        e = S([1])
+>       self.assertEqual(s1 ^ s2, e)
+
+tests/test_set.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestsymmetricdifference4">test_set.py::SetTestCase::testSymmetricDifference4</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testSymmetricDifference4</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testSymmetricDifference4>
+
+    def testSymmetricDifference4(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 2, 1])
+        e = S([])
+>       self.assertEqual(s1 ^ s2, e)
+
+tests/test_set.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestunion1">test_set.py::SetTestCase::testUnion1</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testUnion1</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testUnion1>
+
+    def testUnion1(self):
+        s1 = S([1, 2, 3])
+        s2 = S([1, 2, 3])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 | s2, e)
+
+tests/test_set.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestunion2">test_set.py::SetTestCase::testUnion2</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testUnion2</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testUnion2>
+
+    def testUnion2(self):
+        s1 = S([1, 2, 3])
+        s2 = S([])
+        e = S([1, 2, 3])
+>       self.assertEqual(s1 | s2, e)
+
+tests/test_set.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestunion3">test_set.py::SetTestCase::testUnion3</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testUnion3</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testUnion3>
+
+    def testUnion3(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 4])
+        e = S([1, 2, 3, 4])
+>       self.assertEqual(s1 | s2, e)
+
+tests/test_set.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_setpysettestcasetestunionplussyntax">test_set.py::SetTestCase::testUnionPlusSyntax</h3>
+<details><summary> <pre>test_set.py::SetTestCase::testUnionPlusSyntax</pre></summary><pre>
+self = <tests.test_set.SetTestCase testMethod=testUnionPlusSyntax>
+
+    def testUnionPlusSyntax(self):
+        s1 = S([1, 2, 3])
+        s2 = S([3, 4])
+        e = S([1, 2, 3, 4])
+>       self.assertEqual(s1 + s2, e)
+
+tests/test_set.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = dns.set.Set([]), other = None
+
+    def __eq__(self, other):
+>       return self.items == other.items
+E       AttributeError: 'NoneType' object has no attribute 'items'
+
+dns/set.py:167: AttributeError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_bind_style_bad_unit">test_ttl.py::TTLTestCase::test_bind_style_bad_unit</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_bind_style_bad_unit</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_bind_style_bad_unit>
+
+    def test_bind_style_bad_unit(self):
+>       with self.assertRaises(dns.ttl.BadTTL):
+E       AssertionError: BadTTL not raised
+
+tests/test_ttl.py:19: AssertionError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_bind_style_leading_unit">test_ttl.py::TTLTestCase::test_bind_style_leading_unit</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_bind_style_leading_unit</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_bind_style_leading_unit>
+
+    def test_bind_style_leading_unit(self):
+>       with self.assertRaises(dns.ttl.BadTTL):
+E       AssertionError: BadTTL not raised
+
+tests/test_ttl.py:27: AssertionError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_bind_style_no_unit">test_ttl.py::TTLTestCase::test_bind_style_no_unit</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_bind_style_no_unit</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_bind_style_no_unit>
+
+    def test_bind_style_no_unit(self):
+>       with self.assertRaises(dns.ttl.BadTTL):
+E       AssertionError: BadTTL not raised
+
+tests/test_ttl.py:23: AssertionError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_bind_style_ok">test_ttl.py::TTLTestCase::test_bind_style_ok</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_bind_style_ok</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_bind_style_ok>
+
+    def test_bind_style_ok(self):
+        ttl = dns.ttl.from_text("2w1d1h1m1s")
+>       self.assertEqual(ttl, 2 * 604800 + 86400 + 3600 + 60 + 1)
+E       AssertionError: None != 1299661
+
+tests/test_ttl.py:11: AssertionError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_bind_style_ok2">test_ttl.py::TTLTestCase::test_bind_style_ok2</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_bind_style_ok2</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_bind_style_ok2>
+
+    def test_bind_style_ok2(self):
+        # no one should do this, but it is legal! :)
+        ttl = dns.ttl.from_text("1s2w1m1d1h")
+>       self.assertEqual(ttl, 2 * 604800 + 86400 + 3600 + 60 + 1)
+E       AssertionError: None != 1299661
+
+tests/test_ttl.py:16: AssertionError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_bind_style_unit_without_digits">test_ttl.py::TTLTestCase::test_bind_style_unit_without_digits</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_bind_style_unit_without_digits</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_bind_style_unit_without_digits>
+
+    def test_bind_style_unit_without_digits(self):
+>       with self.assertRaises(dns.ttl.BadTTL):
+E       AssertionError: BadTTL not raised
+
+tests/test_ttl.py:31: AssertionError
+</pre>
+</details>
+<h3 id="test_ttlpyttltestcasetest_empty">test_ttl.py::TTLTestCase::test_empty</h3>
+<details><summary> <pre>test_ttl.py::TTLTestCase::test_empty</pre></summary><pre>
+self = <tests.test_ttl.TTLTestCase testMethod=test_empty>
+
+    def test_empty(self):
+>       with self.assertRaises(dns.ttl.BadTTL):
+E       AssertionError: BadTTL not raised
+
+tests/test_ttl.py:35: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/dns/resolver.py b/dns/resolver.py</span>
+<span class="gh">index 1d1d63b..6efbd88 100644</span>
+<span class="gd">--- a/dns/resolver.py</span>
+<span class="gi">+++ b/dns/resolver.py</span>
+<span class="gu">@@ -50,7 +50,7 @@ class NXDOMAIN(dns.exception.DNSException):</span>
+<span class="w"> </span>    @property
+<span class="w"> </span>    def canonical_name(self):
+<span class="w"> </span>        &quot;&quot;&quot;Return the unresolved canonical name.&quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.qnames()[0] if self.qnames() else None</span>
+
+<span class="w"> </span>    def __add__(self, e_nx):
+<span class="w"> </span>        &quot;&quot;&quot;Augment by results from another NXDOMAIN exception.&quot;&quot;&quot;
+<span class="gu">@@ -69,7 +69,7 @@ class NXDOMAIN(dns.exception.DNSException):</span>
+
+<span class="w"> </span>        Returns a list of ``dns.name.Name``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.kwargs.get(&#39;qnames&#39;, [])</span>
+
+<span class="w"> </span>    def responses(self):
+<span class="w"> </span>        &quot;&quot;&quot;A map from queried names to their NXDOMAIN responses.
+<span class="gu">@@ -77,14 +77,14 @@ class NXDOMAIN(dns.exception.DNSException):</span>
+<span class="w"> </span>        Returns a dict mapping a ``dns.name.Name`` to a
+<span class="w"> </span>        ``dns.message.Message``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.kwargs.get(&#39;responses&#39;, {})</span>
+
+<span class="w"> </span>    def response(self, qname):
+<span class="w"> </span>        &quot;&quot;&quot;The response for query *qname*.
+
+<span class="w"> </span>        Returns a ``dns.message.Message``.
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.responses().get(qname)</span>
+
+<span class="w"> </span>class YXDOMAIN(dns.exception.DNSException):
+<span class="w"> </span>    &quot;&quot;&quot;The DNS query name is too long after DNAME substitution.&quot;&quot;&quot;
+<span class="gu">@@ -92,7 +92,7 @@ ErrorTuple = Tuple[Optional[str], bool, int, Union[Exception, str], Optional[dns</span>
+
+<span class="w"> </span>def _errors_to_text(errors: List[ErrorTuple]) -&gt; List[str]:
+<span class="w"> </span>    &quot;&quot;&quot;Turn a resolution errors trace into a list of text.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    return [f&quot;{nameserver}: {error}&quot; for nameserver, _, _, error, _ in errors if nameserver is not None]</span>
+
+<span class="w"> </span>class LifetimeTimeout(dns.exception.Timeout):
+<span class="w"> </span>    &quot;&quot;&quot;The resolution lifetime expired.&quot;&quot;&quot;
+<span class="gu">@@ -806,4 +806,4 @@ def override_system_resolver(resolver: Optional[Resolver]=None) -&gt; None:</span>
+
+<span class="w"> </span>def restore_system_resolver() -&gt; None:
+<span class="w"> </span>    &quot;&quot;&quot;Undo the effects of prior override_system_resolver().&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+\ No newline at end of file
+<span class="gi">+    pass</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2023 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent cachetools - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-cachetools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent cachetools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpycachewrappertesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::CacheWrapperTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpycachewrappertesttest_decorator_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::CacheWrapperTest::test_decorator_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpycachewrappertesttest_decorator_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::CacheWrapperTest::test_decorator_lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpycachewrappertesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::CacheWrapperTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpydictwrappertesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::DictWrapperTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpydictwrappertesttest_decorator_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::DictWrapperTest::test_decorator_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpydictwrappertesttest_decorator_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::DictWrapperTest::test_decorator_lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedpydictwrappertesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cached.py::DictWrapperTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_locked_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_locked_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_lru" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_lru
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_typedmethod_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_typedmethod_lru" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_unhashable" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_unhashable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_cachedmethodpycachedmethodtesttest_weakref" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cachedmethod.py::CachedMethodTest::test_weakref
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyfifodecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::FIFODecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylfudecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LFUDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpylrudecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::LRUDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpymrudecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::MRUDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyrrdecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::RRDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_needs_rlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_needs_rlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_nocache" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_nocache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_typed" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_typed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_unbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_unbound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_funcpyttldecoratortesttest_decorator_user_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_func.py::TTLDecoratorTest::test_decorator_user_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keyspycachekeystesttest_addkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_keys.py::CacheKeysTest::test_addkeys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keyspycachekeystesttest_hashkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_keys.py::CacheKeysTest::test_hashkey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keyspycachekeystesttest_pickle" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_keys.py::CacheKeysTest::test_pickle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keyspycachekeystesttest_typedkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_keys.py::CacheKeysTest::test_typedkey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keyspycachekeystesttest_typedmethodkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_keys.py::CacheKeysTest::test_typedmethodkey
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-cachetools"><strong>SWE-Agent</strong>: cachetools</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">153</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">62</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">215</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">215</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_cachedpycachewrappertesttest_decorator">test_cached.py::CacheWrapperTest::test_decorator</h3>
+<details><summary> <pre>test_cached.py::CacheWrapperTest::test_decorator</pre></summary><pre>
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.hashkey(0), cache)
+>       self.assertNotIn(cachetools.keys.hashkey(1), cache)
+E       AssertionError: None unexpectedly found in Cache({None: 0}, maxsize=2, currsize=1)
+
+tests/test_cached.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpycachewrappertesttest_decorator_info">test_cached.py::CacheWrapperTest::test_decorator_info</h3>
+<details><summary> <pre>test_cached.py::CacheWrapperTest::test_decorator_info</pre></summary><pre>
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_info>
+
+    def test_decorator_info(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache, info=True)(self.func)
+        self.assertEqual(wrapper.cache_info(), (0, 0, 2, 0))
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(wrapper.cache_info(), (0, 1, 2, 1))
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:159: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpycachewrappertesttest_decorator_lock">test_cached.py::CacheWrapperTest::test_decorator_lock</h3>
+<details><summary> <pre>test_cached.py::CacheWrapperTest::test_decorator_lock</pre></summary><pre>
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_lock>
+
+    def test_decorator_lock(self):
+        cache = self.cache(2)
+        lock = CountedLock()
+        wrapper = cachetools.cached(cache, lock=lock)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(lock.count, 2)
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:93: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpycachewrappertesttest_decorator_typed">test_cached.py::CacheWrapperTest::test_decorator_typed</h3>
+<details><summary> <pre>test_cached.py::CacheWrapperTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_cached.CacheWrapperTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cache = self.cache(3)
+        key = cachetools.keys.typedkey
+        wrapper = cachetools.cached(cache, key=key)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.typedkey(0), cache)
+>       self.assertNotIn(cachetools.keys.typedkey(1), cache)
+E       AssertionError: None unexpectedly found in Cache({None: 0}, maxsize=3, currsize=1)
+
+tests/test_cached.py:64: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpydictwrappertesttest_decorator">test_cached.py::DictWrapperTest::test_decorator</h3>
+<details><summary> <pre>test_cached.py::DictWrapperTest::test_decorator</pre></summary><pre>
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator>
+
+    def test_decorator(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.hashkey(0), cache)
+>       self.assertNotIn(cachetools.keys.hashkey(1), cache)
+E       AssertionError: None unexpectedly found in {None: 0}
+
+tests/test_cached.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpydictwrappertesttest_decorator_info">test_cached.py::DictWrapperTest::test_decorator_info</h3>
+<details><summary> <pre>test_cached.py::DictWrapperTest::test_decorator_info</pre></summary><pre>
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_info>
+
+    def test_decorator_info(self):
+        cache = self.cache(2)
+        wrapper = cachetools.cached(cache, info=True)(self.func)
+        self.assertEqual(wrapper.cache_info(), (0, 0, None, 0))
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(wrapper.cache_info(), (0, 1, None, 1))
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:204: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpydictwrappertesttest_decorator_lock">test_cached.py::DictWrapperTest::test_decorator_lock</h3>
+<details><summary> <pre>test_cached.py::DictWrapperTest::test_decorator_lock</pre></summary><pre>
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_lock>
+
+    def test_decorator_lock(self):
+        cache = self.cache(2)
+        lock = CountedLock()
+        wrapper = cachetools.cached(cache, lock=lock)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(lock.count, 2)
+>       self.assertEqual(wrapper(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cached.py:93: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedpydictwrappertesttest_decorator_typed">test_cached.py::DictWrapperTest::test_decorator_typed</h3>
+<details><summary> <pre>test_cached.py::DictWrapperTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_cached.DictWrapperTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+        cache = self.cache(3)
+        key = cachetools.keys.typedkey
+        wrapper = cachetools.cached(cache, key=key)(self.func)
+
+        self.assertEqual(len(cache), 0)
+        self.assertEqual(wrapper(0), 0)
+        self.assertEqual(len(cache), 1)
+        self.assertIn(cachetools.keys.typedkey(0), cache)
+>       self.assertNotIn(cachetools.keys.typedkey(1), cache)
+E       AssertionError: None unexpectedly found in {None: 0}
+
+tests/test_cached.py:64: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_dict">test_cachedmethod.py::CachedMethodTest::test_dict</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_dict</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_dict>
+
+    def test_dict(self):
+        cached = Cached({})
+
+        self.assertEqual(cached.get(0), 0)
+>       self.assertEqual(cached.get(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:62: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_locked_dict">test_cachedmethod.py::CachedMethodTest::test_locked_dict</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_locked_dict</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_locked_dict>
+
+    def test_locked_dict(self):
+        cached = Locked({})
+
+        self.assertEqual(cached.get(0), 1)
+>       self.assertEqual(cached.get(1), 3)
+E       AssertionError: 1 != 3
+
+tests/test_cachedmethod.py:156: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_lru">test_cachedmethod.py::CachedMethodTest::test_lru</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_lru</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_lru>
+
+    def test_lru(self):
+        cached = Cached(LRUCache(maxsize=2))
+
+        self.assertEqual(cached.get(0), 0)
+>       self.assertEqual(cached.get(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:85: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_typedmethod_dict">test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_typedmethod_dict>
+
+    def test_typedmethod_dict(self):
+        cached = Cached(LRUCache(maxsize=2))
+
+        self.assertEqual(cached.get_typedmethod(0), 0)
+>       self.assertEqual(cached.get_typedmethod(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:74: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_typedmethod_lru">test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_typedmethod_lru>
+
+    def test_typedmethod_lru(self):
+        cached = Cached(LRUCache(maxsize=2))
+
+        self.assertEqual(cached.get_typedmethod(0), 0)
+>       self.assertEqual(cached.get_typedmethod(1), 1)
+E       AssertionError: 0 != 1
+
+tests/test_cachedmethod.py:97: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_unhashable">test_cachedmethod.py::CachedMethodTest::test_unhashable</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_unhashable</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_unhashable>
+
+    def test_unhashable(self):
+        cached = Unhashable(LRUCache(maxsize=0))
+
+        self.assertEqual(cached.get_default(0), 0)
+        self.assertEqual(cached.get_default(1), 1)
+
+>       with self.assertRaises(TypeError):
+E       AssertionError: TypeError not raised
+
+tests/test_cachedmethod.py:185: AssertionError
+</pre>
+</details>
+<h3 id="test_cachedmethodpycachedmethodtesttest_weakref">test_cachedmethod.py::CachedMethodTest::test_weakref</h3>
+<details><summary> <pre>test_cachedmethod.py::CachedMethodTest::test_weakref</pre></summary><pre>
+self = <tests.test_cachedmethod.CachedMethodTest testMethod=test_weakref>
+
+    def test_weakref(self):
+        import weakref
+        import fractions
+        import gc
+
+        # in Python 3.7, `int` does not support weak references even
+        # when subclassed, but Fraction apparently does...
+        class Int(fractions.Fraction):
+            def __add__(self, other):
+                return Int(fractions.Fraction.__add__(self, other))
+
+        cached = Cached(weakref.WeakValueDictionary(), count=Int(0))
+
+        self.assertEqual(cached.get(0), 0)
+        gc.collect()
+        self.assertEqual(cached.get(0), 1)
+
+        ref = cached.get(1)
+        self.assertEqual(ref, 2)
+        self.assertEqual(cached.get(1), 2)
+        self.assertEqual(cached.get(1.0), 2)
+
+        ref = cached.get_typedmethod(1)
+>       self.assertEqual(ref, 3)
+E       AssertionError: Int(2, 1) != 3
+
+tests/test_cachedmethod.py:145: AssertionError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator">test_func.py::FIFODecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_clear">test_func.py::FIFODecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_needs_rlock">test_func.py::FIFODecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+
+            def __hash__(self):
+                return hash(self._use_cache)
+
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_nocache">test_func.py::FIFODecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_typed">test_func.py::FIFODecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_unbound">test_func.py::FIFODecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyfifodecoratortesttest_decorator_user_function">test_func.py::FIFODecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::FIFODecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.FIFODecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator">test_func.py::LFUDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_clear">test_func.py::LFUDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_needs_rlock">test_func.py::LFUDecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+
+            def __hash__(self):
+                return hash(self._use_cache)
+
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_nocache">test_func.py::LFUDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_typed">test_func.py::LFUDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_unbound">test_func.py::LFUDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylfudecoratortesttest_decorator_user_function">test_func.py::LFUDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::LFUDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.LFUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator">test_func.py::LRUDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_clear">test_func.py::LRUDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_needs_rlock">test_func.py::LRUDecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+
+            def __hash__(self):
+                return hash(self._use_cache)
+
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_nocache">test_func.py::LRUDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_typed">test_func.py::LRUDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_unbound">test_func.py::LRUDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+</pre>
+</details>
+<h3 id="test_funcpylrudecoratortesttest_decorator_user_function">test_func.py::LRUDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::LRUDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.LRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator">test_func.py::MRUDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+
+tests/test_func.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_clear">test_func.py::MRUDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+
+tests/test_func.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_needs_rlock">test_func.py::MRUDecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+>       cached = self.decorator(lambda n: n)
+
+tests/test_func.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_nocache">test_func.py::MRUDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+
+tests/test_func.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_typed">test_func.py::MRUDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+
+tests/test_func.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_unbound">test_func.py::MRUDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+
+tests/test_func.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpymrudecoratortesttest_decorator_user_function">test_func.py::MRUDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::MRUDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.MRUDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+>       cached = self.decorator(lambda n: n)
+
+tests/test_func.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_func.py:121: in decorator
+    self.assertNotEqual(len(w), 0)
+E   AssertionError: 0 == 0
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator">test_func.py::RRDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_clear">test_func.py::RRDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_needs_rlock">test_func.py::RRDecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+
+            def __hash__(self):
+                return hash(self._use_cache)
+
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_nocache">test_func.py::RRDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_typed">test_func.py::RRDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_unbound">test_func.py::RRDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyrrdecoratortesttest_decorator_user_function">test_func.py::RRDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::RRDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.RRDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator">test_func.py::TTLDecoratorTest::test_decorator</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator>
+
+    def test_decorator(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:11: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_clear">test_func.py::TTLDecoratorTest::test_decorator_clear</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_clear</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_clear>
+
+    def test_decorator_clear(self):
+>       cached = self.decorator(maxsize=2)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:22: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_needs_rlock">test_func.py::TTLDecoratorTest::test_decorator_needs_rlock</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_needs_rlock</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_needs_rlock>
+
+    def test_decorator_needs_rlock(self):
+        cached = self.decorator(lambda n: n)
+
+        class RecursiveEquals:
+            def __init__(self, use_cache):
+                self._use_cache = use_cache
+
+            def __hash__(self):
+                return hash(self._use_cache)
+
+            def __eq__(self, other):
+                if self._use_cache:
+                    # This call will happen while the cache-lock is held,
+                    # requiring a reentrant lock to avoid deadlock.
+                    cached(self)
+                return self._use_cache == other._use_cache
+
+        # Prime the cache.
+>       cached(RecursiveEquals(False))
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:96: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_nocache">test_func.py::TTLDecoratorTest::test_decorator_nocache</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_nocache</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_nocache>
+
+    def test_decorator_nocache(self):
+>       cached = self.decorator(maxsize=0)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:33: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_typed">test_func.py::TTLDecoratorTest::test_decorator_typed</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_typed</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_typed>
+
+    def test_decorator_typed(self):
+>       cached = self.decorator(maxsize=2, typed=True)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:55: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_unbound">test_func.py::TTLDecoratorTest::test_decorator_unbound</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_unbound</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_unbound>
+
+    def test_decorator_unbound(self):
+>       cached = self.decorator(maxsize=None)(lambda n: n)
+E       TypeError: 'NoneType' object is not callable
+
+tests/test_func.py:44: TypeError
+</pre>
+</details>
+<h3 id="test_funcpyttldecoratortesttest_decorator_user_function">test_func.py::TTLDecoratorTest::test_decorator_user_function</h3>
+<details><summary> <pre>test_func.py::TTLDecoratorTest::test_decorator_user_function</pre></summary><pre>
+self = <tests.test_func.TTLDecoratorTest testMethod=test_decorator_user_function>
+
+    def test_decorator_user_function(self):
+        cached = self.decorator(lambda n: n)
+>       self.assertEqual(cached.cache_parameters(), {"maxsize": 128, "typed": False})
+E       AttributeError: 'NoneType' object has no attribute 'cache_parameters'
+
+tests/test_func.py:69: AttributeError
+</pre>
+</details>
+<h3 id="test_keyspycachekeystesttest_addkeys">test_keys.py::CacheKeysTest::test_addkeys</h3>
+<details><summary> <pre>test_keys.py::CacheKeysTest::test_addkeys</pre></summary><pre>
+self = <tests.test_keys.CacheKeysTest testMethod=test_addkeys>
+key = <function hashkey at 0x7ecf682ccf70>
+
+    def test_addkeys(self, key=cachetools.keys.hashkey):
+>       self.assertIsInstance(key(), tuple)
+E       AssertionError: None is not an instance of <class 'tuple'>
+
+tests/test_keys.py:76: AssertionError
+</pre>
+</details>
+<h3 id="test_keyspycachekeystesttest_hashkey">test_keys.py::CacheKeysTest::test_hashkey</h3>
+<details><summary> <pre>test_keys.py::CacheKeysTest::test_hashkey</pre></summary><pre>
+self = <tests.test_keys.CacheKeysTest testMethod=test_hashkey>
+key = <function hashkey at 0x7ecf682ccf70>
+
+    def test_hashkey(self, key=cachetools.keys.hashkey):
+        self.assertEqual(key(), key())
+        self.assertEqual(hash(key()), hash(key()))
+        self.assertEqual(key(1, 2, 3), key(1, 2, 3))
+        self.assertEqual(hash(key(1, 2, 3)), hash(key(1, 2, 3)))
+        self.assertEqual(key(1, 2, 3, x=0), key(1, 2, 3, x=0))
+        self.assertEqual(hash(key(1, 2, 3, x=0)), hash(key(1, 2, 3, x=0)))
+>       self.assertNotEqual(key(1, 2, 3), key(3, 2, 1))
+E       AssertionError: None == None
+
+tests/test_keys.py:14: AssertionError
+</pre>
+</details>
+<h3 id="test_keyspycachekeystesttest_pickle">test_keys.py::CacheKeysTest::test_pickle</h3>
+<details><summary> <pre>test_keys.py::CacheKeysTest::test_pickle</pre></summary><pre>
+self = <tests.test_keys.CacheKeysTest testMethod=test_pickle>
+key = <function hashkey at 0x7ecf682ccf70>
+
+    def test_pickle(self, key=cachetools.keys.hashkey):
+        import pickle
+
+        for k in [key(), key("abc"), key("abc", 123), key("abc", q="abc")]:
+            # white-box test: assert cached hash value is not pickled
+>           self.assertEqual(len(k.__dict__), 0)
+E           AttributeError: 'NoneType' object has no attribute '__dict__'. Did you mean: '__dir__'?
+
+tests/test_keys.py:86: AttributeError
+</pre>
+</details>
+<h3 id="test_keyspycachekeystesttest_typedkey">test_keys.py::CacheKeysTest::test_typedkey</h3>
+<details><summary> <pre>test_keys.py::CacheKeysTest::test_typedkey</pre></summary><pre>
+self = <tests.test_keys.CacheKeysTest testMethod=test_typedkey>
+key = <function typedkey at 0x7ecf682cd2d0>
+
+    def test_typedkey(self, key=cachetools.keys.typedkey):
+        self.assertEqual(key(), key())
+        self.assertEqual(hash(key()), hash(key()))
+        self.assertEqual(key(1, 2, 3), key(1, 2, 3))
+        self.assertEqual(hash(key(1, 2, 3)), hash(key(1, 2, 3)))
+        self.assertEqual(key(1, 2, 3, x=0), key(1, 2, 3, x=0))
+        self.assertEqual(hash(key(1, 2, 3, x=0)), hash(key(1, 2, 3, x=0)))
+>       self.assertNotEqual(key(1, 2, 3), key(3, 2, 1))
+E       AssertionError: None == None
+
+tests/test_keys.py:49: AssertionError
+</pre>
+</details>
+<h3 id="test_keyspycachekeystesttest_typedmethodkey">test_keys.py::CacheKeysTest::test_typedmethodkey</h3>
+<details><summary> <pre>test_keys.py::CacheKeysTest::test_typedmethodkey</pre></summary><pre>
+self = <tests.test_keys.CacheKeysTest testMethod=test_typedmethodkey>
+key = <function typedmethodkey at 0x7ecf682cd360>
+
+    def test_typedmethodkey(self, key=cachetools.keys.typedmethodkey):
+        # similar to typedkey(), but ignores its first positional argument
+        self.assertEqual(key("x"), key("y"))
+        self.assertEqual(hash(key("x")), hash(key("y")))
+        self.assertEqual(key("x", 1, 2, 3), key("y", 1, 2, 3))
+        self.assertEqual(hash(key("x", 1, 2, 3)), hash(key("y", 1, 2, 3)))
+        self.assertEqual(key("x", 1, 2, 3, x=0), key("y", 1, 2, 3, x=0))
+        self.assertEqual(hash(key("x", 1, 2, 3, x=0)), hash(key("y", 1, 2, 3, x=0)))
+>       self.assertNotEqual(key("x", 1, 2, 3), key("x", 3, 2, 1))
+E       AssertionError: None == None
+
+tests/test_keys.py:66: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/cachetools/__init__.py b/src/cachetools/__init__.py</span>
+<span class="gh">index 2d2e2cf..9b9e7bf 100644</span>
+<span class="gd">--- a/src/cachetools/__init__.py</span>
+<span class="gi">+++ b/src/cachetools/__init__.py</span>
+<span class="gu">@@ -558,10 +558,9 @@ class TLRUCache(_TimedCache):</span>
+<span class="w"> </span>            cache_setitem(self, key, value)
+<span class="w"> </span>        # removing an existing item would break the heap structure, so
+<span class="w"> </span>        # only mark it as removed for now
+<span class="gd">-        try:</span>
+<span class="gd">-            self.__getitem(key).removed = True</span>
+<span class="gd">-        except KeyError:</span>
+<span class="gd">-            pass</span>
+<span class="gi">+        # No need to mark as removed if the key doesn&#39;t exist</span>
+<span class="gi">+        if key in self.__items:</span>
+<span class="gi">+            self.__items[key].removed = True</span>
+<span class="w"> </span>        self.__items[key] = item = TLRUCache._Item(key, expires)
+<span class="w"> </span>        heapq.heappush(self.__order, item)
+
+<span class="gu">@@ -691,7 +690,8 @@ def cached(cache, key=keys.hashkey, lock=None, info=False):</span>
+<span class="w"> </span>                    try:
+<span class="w"> </span>                        cache[k] = v
+<span class="w"> </span>                    except ValueError:
+<span class="gd">-                        pass  # value too large</span>
+<span class="gi">+                        # Value too large for cache, just return without caching</span>
+<span class="gi">+                        pass</span>
+<span class="w"> </span>                    return v
+
+<span class="w"> </span>                def cache_clear():
+<span class="gu">@@ -739,16 +739,15 @@ def cached(cache, key=keys.hashkey, lock=None, info=False):</span>
+<span class="w"> </span>                    return func(*args, **kwargs)
+
+<span class="w"> </span>                def cache_clear():
+<span class="gi">+                    # No cache to clear when cache is None</span>
+<span class="w"> </span>                    pass
+
+<span class="w"> </span>            elif lock is None:
+
+<span class="w"> </span>                def wrapper(*args, **kwargs):
+<span class="w"> </span>                    k = key(*args, **kwargs)
+<span class="gd">-                    try:</span>
+<span class="gi">+                    if k in cache:</span>
+<span class="w"> </span>                        return cache[k]
+<span class="gd">-                    except KeyError:</span>
+<span class="gd">-                        pass  # key not found</span>
+<span class="w"> </span>                    v = func(*args, **kwargs)
+<span class="w"> </span>                    try:
+<span class="w"> </span>                        cache[k] = v
+<span class="gu">@@ -767,14 +766,12 @@ def cached(cache, key=keys.hashkey, lock=None, info=False):</span>
+<span class="w"> </span>                        with lock:
+<span class="w"> </span>                            return cache[k]
+<span class="w"> </span>                    except KeyError:
+<span class="gd">-                        pass  # key not found</span>
+<span class="gd">-                    v = func(*args, **kwargs)</span>
+<span class="gd">-                    # in case of a race, prefer the item already in the cache</span>
+<span class="gd">-                    try:</span>
+<span class="gd">-                        with lock:</span>
+<span class="gd">-                            return cache.setdefault(k, v)</span>
+<span class="gd">-                    except ValueError:</span>
+<span class="gd">-                        return v  # value too large</span>
+<span class="gi">+                        v = func(*args, **kwargs)</span>
+<span class="gi">+                        try:</span>
+<span class="gi">+                            with lock:</span>
+<span class="gi">+                                return cache.setdefault(k, v)</span>
+<span class="gi">+                        except ValueError:</span>
+<span class="gi">+                            return v  # value too large</span>
+
+<span class="w"> </span>                def cache_clear():
+<span class="w"> </span>                    with lock:
+<span class="gu">@@ -807,10 +804,8 @@ def cachedmethod(cache, key=keys.methodkey, lock=None):</span>
+<span class="w"> </span>                if c is None:
+<span class="w"> </span>                    return method(self, *args, **kwargs)
+<span class="w"> </span>                k = key(self, *args, **kwargs)
+<span class="gd">-                try:</span>
+<span class="gi">+                if k in c:</span>
+<span class="w"> </span>                    return c[k]
+<span class="gd">-                except KeyError:</span>
+<span class="gd">-                    pass  # key not found</span>
+<span class="w"> </span>                v = method(self, *args, **kwargs)
+<span class="w"> </span>                try:
+<span class="w"> </span>                    c[k] = v
+<span class="gu">@@ -834,14 +829,12 @@ def cachedmethod(cache, key=keys.methodkey, lock=None):</span>
+<span class="w"> </span>                    with lock(self):
+<span class="w"> </span>                        return c[k]
+<span class="w"> </span>                except KeyError:
+<span class="gd">-                    pass  # key not found</span>
+<span class="gd">-                v = method(self, *args, **kwargs)</span>
+<span class="gd">-                # in case of a race, prefer the item already in the cache</span>
+<span class="gd">-                try:</span>
+<span class="gd">-                    with lock(self):</span>
+<span class="gd">-                        return c.setdefault(k, v)</span>
+<span class="gd">-                except ValueError:</span>
+<span class="gd">-                    return v  # value too large</span>
+<span class="gi">+                    v = method(self, *args, **kwargs)</span>
+<span class="gi">+                    try:</span>
+<span class="gi">+                        with lock(self):</span>
+<span class="gi">+                            return c.setdefault(k, v)</span>
+<span class="gi">+                    except ValueError:</span>
+<span class="gi">+                        return v  # value too large</span>
+
+<span class="w"> </span>            def clear(self):
+<span class="w"> </span>                c = cache(self)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2502 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent python rsa - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-python-rsa" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent python rsa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_no_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_no_args
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_priv_out_der" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_priv_out_der
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_priv_out_pem" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_priv_out_pem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_priv_stdout" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_priv_stdout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipykeygentesttest_keygen_pub_out_pem" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::KeygenTest::test_keygen_pub_out_pem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_empty_decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_empty_decrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_empty_encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_empty_encrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_encrypt_decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_encrypt_decrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyencryptdecrypttesttest_encrypt_decrypt_unhappy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::EncryptDecryptTest::test_encrypt_decrypt_unhappy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_empty_sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_empty_sign
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_empty_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_empty_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipysignverifytesttest_sign_verify_unhappy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::SignVerifyTest::test_sign_verify_unhappy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_clipyprivatepublictesttest_private_to_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cli.py::PrivatePublicTest::test_private_to_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbytesizetest_bad_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestByteSize::test_bad_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbytesizetest_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestByteSize::test_values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbytesizetest_zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestByteSize::test_zero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbitsizetest_bad_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestBitSize::test_bad_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbitsizetest_negative_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestBitSize::test_negative_values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbitsizetest_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestBitSize::test_values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestbitsizetest_zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestBitSize::test_zero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestinversetest_normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestInverse::test_normal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_commonpytestinversetest_not_relprime" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_common.py::TestInverse::test_not_relprime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_integerspyintegertesttest_enc_dec" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_integers.py::IntegerTest::test_enc_dec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_integerspyintegertesttest_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_integers.py::IntegerTest::test_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypyblindingtesttest_blinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::BlindingTest::test_blinding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypykeygentesttest_custom_exponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::KeyGenTest::test_custom_exponent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypykeygentesttest_custom_getprime_func" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::KeyGenTest::test_custom_getprime_func
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypykeygentesttest_default_exponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::KeyGenTest::test_default_exponent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypykeygentesttest_exponents_coefficient_calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::KeyGenTest::test_exponents_coefficient_calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_keypyhashtesttest_hash_possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_key.py::HashTest::test_hash_possible
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_load_malformed_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_load_malformed_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_load_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_load_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_load_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_load_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_save_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_save_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspydertesttest_save_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::DerTest::test_save_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_load_from_disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_load_from_disk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_load_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_load_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_load_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_load_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_save_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_save_private_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_load_save_keyspypemtesttest_save_public_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_load_save_keys.py::PemTest::test_save_public_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_mypypymypyrunnertesttest_run_mypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_mypy.py::MypyRunnerTest::test_run_mypy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_parallelpyparalleltesttest_parallel_primegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_parallel.py::ParallelTest::test_parallel_primegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestmarkerstest_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestMarkers::test_values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_bytes_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_bytes_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_bytes_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_bytes_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_unicode_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_unicode_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbytesandstringstest_unicode_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestBytesAndStrings::test_unicode_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteoutputtest_bytes_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteOutput::test_bytes_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteoutputtest_bytes_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteOutput::test_bytes_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteinputtest_bytes_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteInput::test_bytes_private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pempytestbyteinputtest_bytes_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pem.py::TestByteInput::test_bytes_public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pybinarytesttest_decoding_failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::BinaryTest::test_decoding_failure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pybinarytesttest_enc_dec" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::BinaryTest::test_enc_dec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pybinarytesttest_randomness" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::BinaryTest::test_randomness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pyextrazeroestesttest_append_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::ExtraZeroesTest::test_append_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pyextrazeroestesttest_prepend_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::ExtraZeroesTest::test_prepend_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pyextrazeroestesttest_unmodified" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::ExtraZeroesTest::test_unmodified
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_alter_message" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_alter_message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_apppend_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_apppend_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_find_signature_hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_find_signature_hash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_hash_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_hash_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_multiple_signings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_multiple_signings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_prepend_zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_prepend_zeroes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_sign_different_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_sign_different_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_sign_verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_sign_verify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_sign_verify_sha3" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_sign_verify_sha3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pysignaturetesttest_split_hash_sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::SignatureTest::test_split_hash_sign
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1pypaddingsizetesttest_too_little_padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1.py::PaddingSizeTest::test_too_little_padding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1_v2pymgftesttest_invalid_hasher" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1_v2.py::MGFTest::test_invalid_hasher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1_v2pymgftesttest_invalid_length" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1_v2.py::MGFTest::test_invalid_length
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_pkcs1_v2pymgftesttest_oaep_int_db_mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_pkcs1_v2.py::MGFTest::test_oaep_int_db_mask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_primepyprimetesttest_get_primality_testing_rounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_prime.py::PrimeTest::test_get_primality_testing_rounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_primepyprimetesttest_is_prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_prime.py::PrimeTest::test_is_prime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_primepyprimetesttest_mersenne_primes" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_prime.py::PrimeTest::test_mersenne_primes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_primepyprimetesttest_miller_rabin_primality_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_prime.py::PrimeTest::test_miller_rabin_primality_testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_stringspystringtesttest_enc_dec" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_strings.py::StringTest::test_enc_dec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_accuracy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_chunk_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_chunk_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_codec_identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_codec_identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_correctness_against_base_implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_correctness_against_base_implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_raises_overflowerror_when_chunk_size_is_insufficient" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_raises_OverflowError_when_chunk_size_is_insufficient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_raises_typeerror_when_not_integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_raises_TypeError_when_not_integer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_raises_valueerror_when_negative_integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_raises_ValueError_when_negative_integer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_transformpytest_int2bytestest_zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_transform.py::Test_int2bytes::test_zero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-python-rsa"><strong>SWE-Agent</strong>: python-rsa</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">error</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">71</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">87</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">87</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_clipykeygentesttest_keygen_no_args">test_cli.py::KeygenTest::test_keygen_no_args</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_no_args</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_priv_out_der">test_cli.py::KeygenTest::test_keygen_priv_out_der</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_priv_out_der</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_priv_out_pem">test_cli.py::KeygenTest::test_keygen_priv_out_pem</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_priv_out_pem</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_priv_stdout">test_cli.py::KeygenTest::test_keygen_priv_stdout</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_priv_stdout</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipykeygentesttest_keygen_pub_out_pem">test_cli.py::KeygenTest::test_keygen_pub_out_pem</h3>
+<details><summary> <pre>test_cli.py::KeygenTest::test_keygen_pub_out_pem</pre></summary><pre>
+cls = <class 'tests.test_cli.KeygenTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_empty_decrypt">test_cli.py::EncryptDecryptTest::test_empty_decrypt</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_empty_decrypt</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_empty_encrypt">test_cli.py::EncryptDecryptTest::test_empty_encrypt</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_empty_encrypt</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_encrypt_decrypt">test_cli.py::EncryptDecryptTest::test_encrypt_decrypt</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_encrypt_decrypt</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipyencryptdecrypttesttest_encrypt_decrypt_unhappy">test_cli.py::EncryptDecryptTest::test_encrypt_decrypt_unhappy</h3>
+<details><summary> <pre>test_cli.py::EncryptDecryptTest::test_encrypt_decrypt_unhappy</pre></summary><pre>
+cls = <class 'tests.test_cli.EncryptDecryptTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_empty_sign">test_cli.py::SignVerifyTest::test_empty_sign</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_empty_sign</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_empty_verify">test_cli.py::SignVerifyTest::test_empty_verify</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_empty_verify</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_sign_verify">test_cli.py::SignVerifyTest::test_sign_verify</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_sign_verify</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipysignverifytesttest_sign_verify_unhappy">test_cli.py::SignVerifyTest::test_sign_verify_unhappy</h3>
+<details><summary> <pre>test_cli.py::SignVerifyTest::test_sign_verify_unhappy</pre></summary><pre>
+cls = <class 'tests.test_cli.SignVerifyTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_clipyprivatepublictesttest_private_to_public">test_cli.py::PrivatePublicTest::test_private_to_public</h3>
+<details><summary> <pre>test_cli.py::PrivatePublicTest::test_private_to_public</pre></summary><pre>
+cls = <class 'tests.test_cli.PrivatePublicTest'>
+
+    @classmethod
+    def setUpClass(cls):
+        # Ensure there is a key to use
+>       cls.pub_key, cls.priv_key = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_cli.py:85: TypeError
+</pre>
+</details>
+<h3 id="test_commonpytestbytesizetest_bad_type">test_common.py::TestByteSize::test_bad_type</h3>
+<details><summary> <pre>test_common.py::TestByteSize::test_bad_type</pre></summary><pre>
+self = <tests.test_common.TestByteSize testMethod=test_bad_type>
+
+    def test_bad_type(self):
+>       self.assertRaises(TypeError, byte_size, [])
+E       AssertionError: TypeError not raised by byte_size
+
+tests/test_common.py:40: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestbytesizetest_values">test_common.py::TestByteSize::test_values</h3>
+<details><summary> <pre>test_common.py::TestByteSize::test_values</pre></summary><pre>
+self = <tests.test_common.TestByteSize testMethod=test_values>
+
+    def test_values(self):
+>       self.assertEqual(byte_size(1 << 1023), 128)
+E       AssertionError: None != 128
+
+tests/test_common.py:23: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestbytesizetest_zero">test_common.py::TestByteSize::test_zero</h3>
+<details><summary> <pre>test_common.py::TestByteSize::test_zero</pre></summary><pre>
+self = <tests.test_common.TestByteSize testMethod=test_zero>
+
+    def test_zero(self):
+>       self.assertEqual(byte_size(0), 1)
+E       AssertionError: None != 1
+
+tests/test_common.py:37: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestbitsizetest_bad_type">test_common.py::TestBitSize::test_bad_type</h3>
+<details><summary> <pre>test_common.py::TestBitSize::test_bad_type</pre></summary><pre>
+self = <tests.test_common.TestBitSize testMethod=test_bad_type>
+
+    def test_bad_type(self):
+>       self.assertRaises(TypeError, bit_size, [])
+E       AssertionError: TypeError not raised by bit_size
+
+tests/test_common.py:68: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestbitsizetest_negative_values">test_common.py::TestBitSize::test_negative_values</h3>
+<details><summary> <pre>test_common.py::TestBitSize::test_negative_values</pre></summary><pre>
+self = <tests.test_common.TestBitSize testMethod=test_negative_values>
+
+    def test_negative_values(self):
+>       self.assertEqual(bit_size(-1023), 10)
+E       AssertionError: None != 10
+
+tests/test_common.py:60: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestbitsizetest_values">test_common.py::TestBitSize::test_values</h3>
+<details><summary> <pre>test_common.py::TestBitSize::test_values</pre></summary><pre>
+self = <tests.test_common.TestBitSize testMethod=test_values>
+
+    def test_values(self):
+>       self.assertEqual(bit_size(1023), 10)
+E       AssertionError: None != 10
+
+tests/test_common.py:52: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestbitsizetest_zero">test_common.py::TestBitSize::test_zero</h3>
+<details><summary> <pre>test_common.py::TestBitSize::test_zero</pre></summary><pre>
+self = <tests.test_common.TestBitSize testMethod=test_zero>
+
+    def test_zero(self):
+>       self.assertEqual(bit_size(0), 0)
+E       AssertionError: None != 0
+
+tests/test_common.py:49: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestinversetest_normal">test_common.py::TestInverse::test_normal</h3>
+<details><summary> <pre>test_common.py::TestInverse::test_normal</pre></summary><pre>
+self = <tests.test_common.TestInverse testMethod=test_normal>
+
+    def test_normal(self):
+>       self.assertEqual(3, inverse(7, 4))
+E       AssertionError: 3 != None
+
+tests/test_common.py:78: AssertionError
+</pre>
+</details>
+<h3 id="test_commonpytestinversetest_not_relprime">test_common.py::TestInverse::test_not_relprime</h3>
+<details><summary> <pre>test_common.py::TestInverse::test_not_relprime</pre></summary><pre>
+self = <tests.test_common.TestInverse testMethod=test_not_relprime>
+
+    def test_not_relprime(self):
+>       self.assertRaises(ValueError, inverse, 4, 8)
+E       AssertionError: ValueError not raised by inverse
+
+tests/test_common.py:82: AssertionError
+</pre>
+</details>
+<h3 id="test_integerspyintegertesttest_enc_dec">test_integers.py::IntegerTest::test_enc_dec</h3>
+<details><summary> <pre>test_integers.py::IntegerTest::test_enc_dec</pre></summary><pre>
+self = <tests.test_integers.IntegerTest testMethod=test_enc_dec>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(64)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_integers.py:25: TypeError
+</pre>
+</details>
+<h3 id="test_integerspyintegertesttest_sign_verify">test_integers.py::IntegerTest::test_sign_verify</h3>
+<details><summary> <pre>test_integers.py::IntegerTest::test_sign_verify</pre></summary><pre>
+self = <tests.test_integers.IntegerTest testMethod=test_sign_verify>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(64)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_integers.py:25: TypeError
+</pre>
+</details>
+<h3 id="test_keypyblindingtesttest_blinding">test_key.py::BlindingTest::test_blinding</h3>
+<details><summary> <pre>test_key.py::BlindingTest::test_blinding</pre></summary><pre>
+self = <tests.test_key.BlindingTest testMethod=test_blinding>
+
+    def test_blinding(self):
+        """Test blinding and unblinding.
+
+        This is basically the doctest of the PrivateKey.blind method, but then
+        implemented as unittest to allow running on different Python versions.
+        """
+
+        pk = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+        message = 12345
+        encrypted = rsa.core.encrypt_int(message, pk.e, pk.n)
+
+>       blinded_1, unblind_1 = pk.blind(encrypted)  # blind before decrypting
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_key.py:24: TypeError
+</pre>
+</details>
+<h3 id="test_keypykeygentesttest_custom_exponent">test_key.py::KeyGenTest::test_custom_exponent</h3>
+<details><summary> <pre>test_key.py::KeyGenTest::test_custom_exponent</pre></summary><pre>
+self = <tests.test_key.KeyGenTest testMethod=test_custom_exponent>
+
+    def test_custom_exponent(self):
+>       pub, priv = rsa.key.newkeys(16, exponent=3)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_key.py:42: TypeError
+</pre>
+</details>
+<h3 id="test_keypykeygentesttest_custom_getprime_func">test_key.py::KeyGenTest::test_custom_getprime_func</h3>
+<details><summary> <pre>test_key.py::KeyGenTest::test_custom_getprime_func</pre></summary><pre>
+self = <tests.test_key.KeyGenTest testMethod=test_custom_getprime_func>
+
+    def test_custom_getprime_func(self):
+        # List of primes to test with, in order [p, q, p, q, ....]
+        # By starting with two of the same primes, we test that this is
+        # properly rejected.
+        primes = [64123, 64123, 64123, 50957, 39317, 33107]
+
+        def getprime(_):
+            return primes.pop(0)
+
+        # This exponent will cause two other primes to be generated.
+        exponent = 136407
+
+>       (p, q, e, d) = rsa.key.gen_keys(
+            64, accurate=False, getprime_func=getprime, exponent=exponent
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_key.py:72: TypeError
+</pre>
+</details>
+<h3 id="test_keypykeygentesttest_default_exponent">test_key.py::KeyGenTest::test_default_exponent</h3>
+<details><summary> <pre>test_key.py::KeyGenTest::test_default_exponent</pre></summary><pre>
+self = <tests.test_key.KeyGenTest testMethod=test_default_exponent>
+
+    def test_default_exponent(self):
+>       pub, priv = rsa.key.newkeys(16)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_key.py:48: TypeError
+</pre>
+</details>
+<h3 id="test_keypykeygentesttest_exponents_coefficient_calculation">test_key.py::KeyGenTest::test_exponents_coefficient_calculation</h3>
+<details><summary> <pre>test_key.py::KeyGenTest::test_exponents_coefficient_calculation</pre></summary><pre>
+self = <tests.test_key.KeyGenTest testMethod=test_exponents_coefficient_calculation>
+
+    def test_exponents_coefficient_calculation(self):
+        pk = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+        self.assertEqual(pk.exp1, 55063)
+        self.assertEqual(pk.exp2, 10095)
+>       self.assertEqual(pk.coef, 50797)
+E       AssertionError: None != 50797
+
+tests/test_key.py:58: AssertionError
+</pre>
+</details>
+<h3 id="test_keypyhashtesttest_hash_possible">test_key.py::HashTest::test_hash_possible</h3>
+<details><summary> <pre>test_key.py::HashTest::test_hash_possible</pre></summary><pre>
+self = <tests.test_key.HashTest testMethod=test_hash_possible>
+
+    def test_hash_possible(self):
+>       pub, priv = rsa.key.newkeys(16)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_key.py:83: TypeError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_load_malformed_private_key">test_load_save_keys.py::DerTest::test_load_malformed_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_load_malformed_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_load_malformed_private_key>
+der_decode = <MagicMock name='decode' id='140418097339984'>
+
+    @mock.patch("pyasn1.codec.der.decoder.decode")
+    def test_load_malformed_private_key(self, der_decode):
+        """Test loading malformed private DER keys."""
+
+        # Decode returns an invalid exp2 value.
+        der_decode.return_value = (
+            [0, 3727264081, 65537, 3349121513, 65063, 57287, 55063, 0, 50797],
+            0,
+        )
+
+        with warnings.catch_warnings(record=True) as w:
+            # Always print warnings
+            warnings.simplefilter("always")
+
+            # Load 3 keys
+            for _ in range(3):
+                key = rsa.key.PrivateKey.load_pkcs1(PRIVATE_DER, "DER")
+
+            # Check that 3 warnings were generated.
+>           self.assertEqual(3, len(w))
+E           AssertionError: 3 != 0
+
+tests/test_load_save_keys.py:122: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_load_private_key">test_load_save_keys.py::DerTest::test_load_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_load_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_load_private_key>
+
+    def test_load_private_key(self):
+        """Test loading private DER keys."""
+
+        key = rsa.key.PrivateKey.load_pkcs1(PRIVATE_DER, "DER")
+        expected = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PrivateKey(3727264081, 65537, 3349121513, 65063, 57287) != None
+
+tests/test_load_save_keys.py:98: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_load_public_key">test_load_save_keys.py::DerTest::test_load_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_load_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_load_public_key>
+
+    def test_load_public_key(self):
+        """Test loading public DER keys."""
+
+        key = rsa.key.PublicKey.load_pkcs1(PUBLIC_DER, "DER")
+        expected = rsa.key.PublicKey(3727264081, 65537)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PublicKey(3727264081, 65537) != None
+
+tests/test_load_save_keys.py:148: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_save_private_key">test_load_save_keys.py::DerTest::test_save_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_save_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_save_private_key>
+
+    def test_save_private_key(self):
+        """Test saving private DER keys."""
+
+        key = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+        der = key.save_pkcs1("DER")
+
+>       self.assertIsInstance(der, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:139: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspydertesttest_save_public_key">test_load_save_keys.py::DerTest::test_save_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::DerTest::test_save_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.DerTest testMethod=test_save_public_key>
+
+    def test_save_public_key(self):
+        """Test saving public DER keys."""
+
+        key = rsa.key.PublicKey(3727264081, 65537)
+        der = key.save_pkcs1("DER")
+
+>       self.assertIsInstance(der, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:156: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_load_from_disk">test_load_save_keys.py::PemTest::test_load_from_disk</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_load_from_disk</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_load_from_disk>
+
+    def test_load_from_disk(self):
+        """Test loading a PEM file from disk."""
+
+        fname = os.path.join(os.path.dirname(__file__), "private.pem")
+        with open(fname, mode="rb") as privatefile:
+            keydata = privatefile.read()
+        privkey = rsa.key.PrivateKey.load_pkcs1(keydata)
+
+>       self.assertEqual(15945948582725241569, privkey.p)
+E       AttributeError: 'NoneType' object has no attribute 'p'
+
+tests/test_load_save_keys.py:208: AttributeError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_load_private_key">test_load_save_keys.py::PemTest::test_load_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_load_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_load_private_key>
+
+    def test_load_private_key(self):
+        """Test loading private PEM files."""
+
+        key = rsa.key.PrivateKey.load_pkcs1(PRIVATE_PEM, "PEM")
+        expected = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PrivateKey(3727264081, 65537, 3349121513, 65063, 57287) != None
+
+tests/test_load_save_keys.py:169: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_load_public_key">test_load_save_keys.py::PemTest::test_load_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_load_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_load_public_key>
+
+    def test_load_public_key(self):
+        """Test loading public PEM files."""
+
+        key = rsa.key.PublicKey.load_pkcs1(PUBLIC_PEM, "PEM")
+        expected = rsa.key.PublicKey(3727264081, 65537)
+
+>       self.assertEqual(expected, key)
+E       AssertionError: PublicKey(3727264081, 65537) != None
+
+tests/test_load_save_keys.py:189: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_save_private_key">test_load_save_keys.py::PemTest::test_save_private_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_save_private_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_save_private_key>
+
+    def test_save_private_key(self):
+        """Test saving private PEM files."""
+
+        key = rsa.key.PrivateKey(3727264081, 65537, 3349121513, 65063, 57287)
+        pem = key.save_pkcs1("PEM")
+
+>       self.assertIsInstance(pem, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:180: AssertionError
+</pre>
+</details>
+<h3 id="test_load_save_keyspypemtesttest_save_public_key">test_load_save_keys.py::PemTest::test_save_public_key</h3>
+<details><summary> <pre>test_load_save_keys.py::PemTest::test_save_public_key</pre></summary><pre>
+self = <tests.test_load_save_keys.PemTest testMethod=test_save_public_key>
+
+    def test_save_public_key(self):
+        """Test saving public PEM files."""
+
+        key = rsa.key.PublicKey(3727264081, 65537)
+        pem = key.save_pkcs1("PEM")
+
+>       self.assertIsInstance(pem, bytes)
+E       AssertionError: None is not an instance of <class 'bytes'>
+
+tests/test_load_save_keys.py:197: AssertionError
+</pre>
+</details>
+<h3 id="test_mypypymypyrunnertesttest_run_mypy">test_mypy.py::MypyRunnerTest::test_run_mypy</h3>
+<details><summary> <pre>test_mypy.py::MypyRunnerTest::test_run_mypy</pre></summary><pre>
+self = <tests.test_mypy.MypyRunnerTest testMethod=test_run_mypy>
+
+    def test_run_mypy(self):
+        proj_root = pathlib.Path(__file__).parent.parent
+        args = [
+            "--incremental",
+            "--ignore-missing-imports",
+            f"--python-version={sys.version_info.major}.{sys.version_info.minor}",
+        ] + [str(proj_root / dirname) for dirname in test_modules]
+
+        result = mypy.api.run(args)
+
+        stdout, stderr, status = result
+
+        messages = []
+        if stderr:
+            messages.append(stderr)
+        if stdout:
+            messages.append(stdout)
+        if status:
+            messages.append("Mypy failed with status %d" % status)
+        if messages and not all("Success" in message for message in messages):
+>           self.fail("\n".join(["Mypy errors:"] + messages))
+E           AssertionError: Mypy errors:
+E           setup.cfg: [mypy]: python_version: Python 3.7 is not supported (must be 3.8 or higher)
+E           
+E           rsa/core.py:7: error: Missing return statement  [empty-body]
+E           rsa/core.py:11: error: Missing return statement  [empty-body]
+E           rsa/pem.py:6: error: Missing return statement  [empty-body]
+E           rsa/pem.py:12: error: Missing return statement  [empty-body]
+E           rsa/pem.py:16: error: Missing return statement  [empty-body]
+E           rsa/pem.py:32: error: Missing return statement  [empty-body]
+E           rsa/transform.py:7: error: Missing return statement  [empty-body]
+E           rsa/transform.py:20: error: Missing return statement  [empty-body]
+E           rsa/common.py:12: error: Missing return statement  [empty-body]
+E           rsa/common.py:35: error: Missing return statement  [empty-body]
+E           rsa/common.py:57: error: Missing return statement  [empty-body]
+E           rsa/common.py:77: error: Missing return statement  [empty-body]
+E           rsa/common.py:81: error: Missing return statement  [empty-body]
+E           rsa/common.py:91: error: Missing return statement  [empty-body]
+E           rsa/randnum.py:6: error: Missing return statement  [empty-body]
+E           rsa/randnum.py:14: error: Missing return statement  [empty-body]
+E           rsa/randnum.py:18: error: Missing return statement  [empty-body]
+E           rsa/randnum.py:26: error: Missing return statement  [empty-body]
+E           rsa/prime.py:10: error: Missing return statement  [empty-body]
+E           rsa/prime.py:18: error: Missing return statement  [empty-body]
+E           rsa/prime.py:32: error: Missing return statement  [empty-body]
+E           rsa/prime.py:49: error: Missing return statement  [empty-body]
+E           rsa/prime.py:61: error: Missing return statement  [empty-body]
+E           rsa/prime.py:78: error: Missing return statement  [empty-body]
+E           rsa/key.py:41: error: Missing return statement  [empty-body]
+E           rsa/key.py:54: error: Missing return statement  [empty-body]
+E           rsa/key.py:66: error: Missing return statement  [empty-body]
+E           rsa/key.py:74: error: Missing return statement  [empty-body]
+E           rsa/key.py:83: error: Missing return statement  [empty-body]
+E           rsa/key.py:98: error: Missing return statement  [empty-body]
+E           rsa/key.py:102: error: Missing return statement  [empty-body]
+E           rsa/key.py:112: error: Missing return statement  [empty-body]
+E           rsa/key.py:125: error: Missing return statement  [empty-body]
+E           rsa/key.py:138: error: Missing return statement  [empty-body]
+E           rsa/key.py:205: error: Missing return statement  [empty-body]
+E           rsa/key.py:226: error: Missing return statement  [empty-body]
+E           rsa/key.py:235: error: Missing return statement  [empty-body]
+E           rsa/key.py:247: error: Missing return statement  [empty-body]
+E           rsa/key.py:256: error: Missing return statement  [empty-body]
+E           rsa/key.py:273: error: Missing return statement  [empty-body]
+E           rsa/key.py:344: error: Missing return statement  [empty-body]
+E           rsa/key.py:355: error: Missing return statement  [empty-body]
+E           rsa/key.py:367: error: Missing return statement  [empty-body]
+E           rsa/key.py:389: error: Missing return statement  [empty-body]
+E           rsa/key.py:398: error: Missing return statement  [empty-body]
+E           rsa/key.py:411: error: Missing return statement  [empty-body]
+E           rsa/key.py:419: error: Missing return statement  [empty-body]
+E           rsa/key.py:451: error: Missing return statement  [empty-body]
+E           rsa/key.py:465: error: Missing return statement  [empty-body]
+E           rsa/key.py:476: error: Missing return statement  [empty-body]
+E           rsa/key.py:492: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:40: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:56: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:76: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:99: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:151: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:168: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:187: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:203: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:215: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:224: error: Missing return statement  [empty-body]
+E           rsa/pkcs1.py:236: error: Missing return statement  [empty-body]
+E           rsa/pkcs1_v2.py:8: error: Missing return statement  [empty-body]
+E           rsa/parallel.py:15: error: Missing return statement  [empty-body]
+E           rsa/cli.py:58: error: Missing return statement  [empty-body]
+E           rsa/cli.py:58: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:65: error: Missing return statement  [empty-body]
+E           rsa/cli.py:65: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:69: error: Missing return statement  [empty-body]
+E           rsa/cli.py:69: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:85: error: Missing return statement  [empty-body]
+E           rsa/cli.py:85: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:96: error: Incompatible types in assignment (expression has type "type[PrivateKey]", base class "CryptoOperation" defined the type as "type[PublicKey]")  [assignment]
+E           rsa/cli.py:98: error: Missing return statement  [empty-body]
+E           rsa/cli.py:98: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           rsa/cli.py:110: error: Incompatible types in assignment (expression has type "type[PrivateKey]", base class "CryptoOperation" defined the type as "type[PublicKey]")  [assignment]
+E           rsa/cli.py:114: error: Missing return statement  [empty-body]
+E           rsa/cli.py:114: note: If the method is meant to be abstract, use @abc.abstractmethod
+E           Found 72 errors in 11 files (checked 28 source files)
+E           
+E           Mypy failed with status 1
+
+tests/test_mypy.py:31: AssertionError
+</pre>
+</details>
+<h3 id="test_parallelpyparalleltesttest_parallel_primegen">test_parallel.py::ParallelTest::test_parallel_primegen</h3>
+<details><summary> <pre>test_parallel.py::ParallelTest::test_parallel_primegen</pre></summary><pre>
+self = <tests.test_parallel.ParallelTest testMethod=test_parallel_primegen>
+
+    def test_parallel_primegen(self):
+        p = rsa.parallel.getprime(1024, 3)
+
+>       self.assertFalse(rsa.prime.is_prime(p - 1))
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+
+tests/test_parallel.py:16: TypeError
+</pre>
+</details>
+<h3 id="test_pempytestmarkerstest_values">test_pem.py::TestMarkers::test_values</h3>
+<details><summary> <pre>test_pem.py::TestMarkers::test_values</pre></summary><pre>
+self = <tests.test_pem.TestMarkers testMethod=test_values>
+
+    def test_values(self):
+>       self.assertEqual(
+            _markers("RSA PRIVATE KEY"),
+            (b"-----BEGIN RSA PRIVATE KEY-----", b"-----END RSA PRIVATE KEY-----"),
+        )
+E       AssertionError: None != (b'-----BEGIN RSA PRIVATE KEY-----', b'-----END RSA PRIVATE KEY-----')
+
+tests/test_pem.py:48: AssertionError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_bytes_private">test_pem.py::TestBytesAndStrings::test_bytes_private</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_bytes_private</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_bytes_private>
+
+    def test_bytes_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem.encode("ascii"))
+>       self.assertEqual(prime1, key.p)
+E       AttributeError: 'NoneType' object has no attribute 'p'
+
+tests/test_pem.py:71: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_bytes_public">test_pem.py::TestBytesAndStrings::test_bytes_public</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_bytes_public</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_bytes_public>
+
+    def test_bytes_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem.encode("ascii"))
+>       self.assertEqual(prime1 * prime2, key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pem.py:63: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_unicode_private">test_pem.py::TestBytesAndStrings::test_unicode_private</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_unicode_private</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_unicode_private>
+
+    def test_unicode_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem)
+>       self.assertEqual(prime1 * prime2, key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pem.py:67: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbytesandstringstest_unicode_public">test_pem.py::TestBytesAndStrings::test_unicode_public</h3>
+<details><summary> <pre>test_pem.py::TestBytesAndStrings::test_unicode_public</pre></summary><pre>
+self = <tests.test_pem.TestBytesAndStrings testMethod=test_unicode_public>
+
+    def test_unicode_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem)
+>       self.assertEqual(prime1 * prime2, key.n)
+E       AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pem.py:59: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteoutputtest_bytes_private">test_pem.py::TestByteOutput::test_bytes_private</h3>
+<details><summary> <pre>test_pem.py::TestByteOutput::test_bytes_private</pre></summary><pre>
+self = <tests.test_pem.TestByteOutput testMethod=test_bytes_private>
+
+    def test_bytes_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem)
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:85: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteoutputtest_bytes_public">test_pem.py::TestByteOutput::test_bytes_public</h3>
+<details><summary> <pre>test_pem.py::TestByteOutput::test_bytes_public</pre></summary><pre>
+self = <tests.test_pem.TestByteOutput testMethod=test_bytes_public>
+
+    def test_bytes_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem)
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:80: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteinputtest_bytes_private">test_pem.py::TestByteInput::test_bytes_private</h3>
+<details><summary> <pre>test_pem.py::TestByteInput::test_bytes_private</pre></summary><pre>
+self = <tests.test_pem.TestByteInput testMethod=test_bytes_private>
+
+    def test_bytes_private(self):
+        key = rsa.key.PrivateKey.load_pkcs1(private_key_pem.encode("ascii"))
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:99: AttributeError
+</pre>
+</details>
+<h3 id="test_pempytestbyteinputtest_bytes_public">test_pem.py::TestByteInput::test_bytes_public</h3>
+<details><summary> <pre>test_pem.py::TestByteInput::test_bytes_public</pre></summary><pre>
+self = <tests.test_pem.TestByteInput testMethod=test_bytes_public>
+
+    def test_bytes_public(self):
+        key = rsa.key.PublicKey.load_pkcs1_openssl_pem(public_key_pem.encode("ascii"))
+>       self.assertIsInstance(key.save_pkcs1(format="DER"), bytes)
+E       AttributeError: 'NoneType' object has no attribute 'save_pkcs1'
+
+tests/test_pem.py:94: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1pybinarytesttest_decoding_failure">test_pkcs1.py::BinaryTest::test_decoding_failure</h3>
+<details><summary> <pre>test_pkcs1.py::BinaryTest::test_decoding_failure</pre></summary><pre>
+self = <tests.test_pkcs1.BinaryTest testMethod=test_decoding_failure>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(256)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:27: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pybinarytesttest_enc_dec">test_pkcs1.py::BinaryTest::test_enc_dec</h3>
+<details><summary> <pre>test_pkcs1.py::BinaryTest::test_enc_dec</pre></summary><pre>
+self = <tests.test_pkcs1.BinaryTest testMethod=test_enc_dec>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(256)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:27: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pybinarytesttest_randomness">test_pkcs1.py::BinaryTest::test_randomness</h3>
+<details><summary> <pre>test_pkcs1.py::BinaryTest::test_randomness</pre></summary><pre>
+self = <tests.test_pkcs1.BinaryTest testMethod=test_randomness>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(256)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:27: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pyextrazeroestesttest_append_zeroes">test_pkcs1.py::ExtraZeroesTest::test_append_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::ExtraZeroesTest::test_append_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.ExtraZeroesTest testMethod=test_append_zeroes>
+
+    def test_append_zeroes(self):
+        cyphertext = self.cyphertext + bytes.fromhex("0000")
+>       with self.assertRaises(rsa.DecryptionError):
+E       AssertionError: DecryptionError not raised
+
+tests/test_pkcs1.py:89: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1pyextrazeroestesttest_prepend_zeroes">test_pkcs1.py::ExtraZeroesTest::test_prepend_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::ExtraZeroesTest::test_prepend_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.ExtraZeroesTest testMethod=test_prepend_zeroes>
+
+    def test_prepend_zeroes(self):
+        cyphertext = bytes.fromhex("0000") + self.cyphertext
+>       with self.assertRaises(rsa.DecryptionError):
+E       AssertionError: DecryptionError not raised
+
+tests/test_pkcs1.py:84: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1pyextrazeroestesttest_unmodified">test_pkcs1.py::ExtraZeroesTest::test_unmodified</h3>
+<details><summary> <pre>test_pkcs1.py::ExtraZeroesTest::test_unmodified</pre></summary><pre>
+self = <tests.test_pkcs1.ExtraZeroesTest testMethod=test_unmodified>
+
+    def test_unmodified(self):
+        message = rsa.decrypt(self.cyphertext, self.private_key)
+>       self.assertEqual(message, self.plaintext)
+E       AssertionError: None != b'Test'
+
+tests/test_pkcs1.py:80: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_alter_message">test_pkcs1.py::SignatureTest::test_alter_message</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_alter_message</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_alter_message>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_apppend_zeroes">test_pkcs1.py::SignatureTest::test_apppend_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_apppend_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_apppend_zeroes>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_find_signature_hash">test_pkcs1.py::SignatureTest::test_find_signature_hash</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_find_signature_hash</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_find_signature_hash>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_hash_sign_verify">test_pkcs1.py::SignatureTest::test_hash_sign_verify</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_hash_sign_verify</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_hash_sign_verify>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_multiple_signings">test_pkcs1.py::SignatureTest::test_multiple_signings</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_multiple_signings</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_multiple_signings>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_prepend_zeroes">test_pkcs1.py::SignatureTest::test_prepend_zeroes</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_prepend_zeroes</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_prepend_zeroes>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_sign_different_key">test_pkcs1.py::SignatureTest::test_sign_different_key</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_sign_different_key</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_sign_different_key>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_sign_verify">test_pkcs1.py::SignatureTest::test_sign_verify</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_sign_verify</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_sign_verify>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_sign_verify_sha3">test_pkcs1.py::SignatureTest::test_sign_verify_sha3</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_sign_verify_sha3</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_sign_verify_sha3>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pysignaturetesttest_split_hash_sign">test_pkcs1.py::SignatureTest::test_split_hash_sign</h3>
+<details><summary> <pre>test_pkcs1.py::SignatureTest::test_split_hash_sign</pre></summary><pre>
+self = <tests.test_pkcs1.SignatureTest testMethod=test_split_hash_sign>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(512)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_pkcs1.py:95: TypeError
+</pre>
+</details>
+<h3 id="test_pkcs1pypaddingsizetesttest_too_little_padding">test_pkcs1.py::PaddingSizeTest::test_too_little_padding</h3>
+<details><summary> <pre>test_pkcs1.py::PaddingSizeTest::test_too_little_padding</pre></summary><pre>
+self = <tests.test_pkcs1.PaddingSizeTest testMethod=test_too_little_padding>
+
+        def test_too_little_padding(self):
+            """Padding less than 8 bytes should be rejected."""
+
+            # Construct key that will be small enough to need only 7 bytes of padding.
+            # This key is 168 bit long, and was generated with rsa.newkeys(nbits=168).
+            self.private_key = rsa.PrivateKey.load_pkcs1(
+                b"""
+    -----BEGIN RSA PRIVATE KEY-----
+    MHkCAQACFgCIGbbNSkIRLtprxka9NgOf5UxgxCMCAwEAAQIVQqymO0gHubdEVS68
+    CdCiWmOJxVfRAgwBQM+e1JJwMKmxSF0CCmya6CFxO8Evdn8CDACMM3AlVC4FhlN8
+    3QIKC9cjoam/swMirwIMAR7Br9tdouoH7jAE
+    -----END RSA PRIVATE KEY-----
+            """
+            )
+>           self.public_key = rsa.PublicKey(n=self.private_key.n, e=self.private_key.e)
+E           AttributeError: 'NoneType' object has no attribute 'n'
+
+tests/test_pkcs1.py:201: AttributeError
+</pre>
+</details>
+<h3 id="test_pkcs1_v2pymgftesttest_invalid_hasher">test_pkcs1_v2.py::MGFTest::test_invalid_hasher</h3>
+<details><summary> <pre>test_pkcs1_v2.py::MGFTest::test_invalid_hasher</pre></summary><pre>
+self = <tests.test_pkcs1_v2.MGFTest testMethod=test_invalid_hasher>
+
+    def test_invalid_hasher(self):
+        """Tests an invalid hasher generates an exception"""
+>       with self.assertRaises(ValueError):
+E       AssertionError: ValueError not raised
+
+tests/test_pkcs1_v2.py:74: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1_v2pymgftesttest_invalid_length">test_pkcs1_v2.py::MGFTest::test_invalid_length</h3>
+<details><summary> <pre>test_pkcs1_v2.py::MGFTest::test_invalid_length</pre></summary><pre>
+self = <tests.test_pkcs1_v2.MGFTest testMethod=test_invalid_length>
+
+    def test_invalid_length(self):
+>       with self.assertRaises(OverflowError):
+E       AssertionError: OverflowError not raised
+
+tests/test_pkcs1_v2.py:78: AssertionError
+</pre>
+</details>
+<h3 id="test_pkcs1_v2pymgftesttest_oaep_int_db_mask">test_pkcs1_v2.py::MGFTest::test_oaep_int_db_mask</h3>
+<details><summary> <pre>test_pkcs1_v2.py::MGFTest::test_oaep_int_db_mask</pre></summary><pre>
+self = <tests.test_pkcs1_v2.MGFTest testMethod=test_oaep_int_db_mask>
+
+    def test_oaep_int_db_mask(self):
+        seed = (
+            b"\xaa\xfd\x12\xf6\x59\xca\xe6\x34\x89\xb4\x79\xe5\x07\x6d\xde\xc2" b"\xf0\x6c\xb5\x8f"
+        )
+        db = (
+            b"\xda\x39\xa3\xee\x5e\x6b\x4b\x0d\x32\x55\xbf\xef\x95\x60\x18\x90"
+            b"\xaf\xd8\x07\x09\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+            b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xd4\x36\xe9\x95\x69"
+            b"\xfd\x32\xa7\xc8\xa0\x5b\xbc\x90\xd3\x2c\x49"
+        )
+        masked_db = (
+            b"\xdc\xd8\x7d\x5c\x68\xf1\xee\xa8\xf5\x52\x67\xc3\x1b\x2e\x8b\xb4"
+            b"\x25\x1f\x84\xd7\xe0\xb2\xc0\x46\x26\xf5\xaf\xf9\x3e\xdc\xfb\x25"
+            b"\xc9\xc2\xb3\xff\x8a\xe1\x0e\x83\x9a\x2d\xdb\x4c\xdc\xfe\x4f\xf4"
+            b"\x77\x28\xb4\xa1\xb7\xc1\x36\x2b\xaa\xd2\x9a\xb4\x8d\x28\x69\xd5"
+            b"\x02\x41\x21\x43\x58\x11\x59\x1b\xe3\x92\xf9\x82\xfb\x3e\x87\xd0"
+            b"\x95\xae\xb4\x04\x48\xdb\x97\x2f\x3a\xc1\x4f\x7b\xc2\x75\x19\x52"
+            b"\x81\xce\x32\xd2\xf1\xb7\x6d\x4d\x35\x3e\x2d"
+        )
+
+        # dbMask = MGF(seed, length(DB))
+        db_mask = pkcs1_v2.mgf1(seed, length=len(db))
+        expected_db_mask = (
+            b"\x06\xe1\xde\xb2\x36\x9a\xa5\xa5\xc7\x07\xd8\x2c\x8e\x4e\x93\x24"
+            b"\x8a\xc7\x83\xde\xe0\xb2\xc0\x46\x26\xf5\xaf\xf9\x3e\xdc\xfb\x25"
+            b"\xc9\xc2\xb3\xff\x8a\xe1\x0e\x83\x9a\x2d\xdb\x4c\xdc\xfe\x4f\xf4"
+            b"\x77\x28\xb4\xa1\xb7\xc1\x36\x2b\xaa\xd2\x9a\xb4\x8d\x28\x69\xd5"
+            b"\x02\x41\x21\x43\x58\x11\x59\x1b\xe3\x92\xf9\x82\xfb\x3e\x87\xd0"
+            b"\x95\xae\xb4\x04\x48\xdb\x97\x2f\x3a\xc1\x4e\xaf\xf4\x9c\x8c\x3b"
+            b"\x7c\xfc\x95\x1a\x51\xec\xd1\xdd\xe6\x12\x64"
+        )
+
+>       self.assertEqual(db_mask, expected_db_mask)
+E       AssertionError: None != b'\x06\xe1\xde\xb26\x9a\xa5\xa5\xc7\x07\x[292 chars]x12d'
+
+tests/test_pkcs1_v2.py:62: AssertionError
+</pre>
+</details>
+<h3 id="test_primepyprimetesttest_get_primality_testing_rounds">test_prime.py::PrimeTest::test_get_primality_testing_rounds</h3>
+<details><summary> <pre>test_prime.py::PrimeTest::test_get_primality_testing_rounds</pre></summary><pre>
+self = <tests.test_prime.PrimeTest testMethod=test_get_primality_testing_rounds>
+
+    def test_get_primality_testing_rounds(self):
+        """Test round calculation for primality testing."""
+
+>       self.assertEqual(rsa.prime.get_primality_testing_rounds(1 << 63), 10)
+E       AssertionError: None != 10
+
+tests/test_prime.py:124: AssertionError
+</pre>
+</details>
+<h3 id="test_primepyprimetesttest_is_prime">test_prime.py::PrimeTest::test_is_prime</h3>
+<details><summary> <pre>test_prime.py::PrimeTest::test_is_prime</pre></summary><pre>
+self = <tests.test_prime.PrimeTest testMethod=test_is_prime>
+
+    def test_is_prime(self):
+        """Test some common primes."""
+
+        # Test some trivial numbers
+        self.assertFalse(rsa.prime.is_prime(-1))
+        self.assertFalse(rsa.prime.is_prime(0))
+        self.assertFalse(rsa.prime.is_prime(1))
+>       self.assertTrue(rsa.prime.is_prime(2))
+E       AssertionError: None is not true
+
+tests/test_prime.py:31: AssertionError
+</pre>
+</details>
+<h3 id="test_primepyprimetesttest_mersenne_primes">test_prime.py::PrimeTest::test_mersenne_primes</h3>
+<details><summary> <pre>test_prime.py::PrimeTest::test_mersenne_primes</pre></summary><pre>
+self = <tests.test_prime.PrimeTest testMethod=test_mersenne_primes>
+
+    def test_mersenne_primes(self):
+        """Tests first known Mersenne primes.
+
+        Mersenne primes are prime numbers that can be written in the form
+        `Mn = 2**n - 1` for some integer `n`. For the list of known Mersenne
+        primes, see:
+        https://en.wikipedia.org/wiki/Mersenne_prime#List_of_known_Mersenne_primes
+        """
+
+        # List of known Mersenne exponents.
+        known_mersenne_exponents = [
+            2,
+            3,
+            5,
+            7,
+            13,
+            17,
+            19,
+            31,
+            61,
+            89,
+            107,
+            127,
+            521,
+            607,
+            1279,
+            2203,
+            2281,
+            4423,
+        ]
+
+        # Test Mersenne primes.
+        for exp in known_mersenne_exponents:
+>           self.assertTrue(rsa.prime.is_prime(2 ** exp - 1))
+E           AssertionError: None is not true
+
+tests/test_prime.py:119: AssertionError
+</pre>
+</details>
+<h3 id="test_primepyprimetesttest_miller_rabin_primality_testing">test_prime.py::PrimeTest::test_miller_rabin_primality_testing</h3>
+<details><summary> <pre>test_prime.py::PrimeTest::test_miller_rabin_primality_testing</pre></summary><pre>
+self = <tests.test_prime.PrimeTest testMethod=test_miller_rabin_primality_testing>
+
+    def test_miller_rabin_primality_testing(self):
+        """Uses monkeypatching to ensure certain random numbers.
+
+        This allows us to predict/control the code path.
+        """
+
+        randints = []
+
+        def fake_randint(maxvalue):
+            return randints.pop(0)
+
+        orig_randint = rsa.randnum.randint
+        rsa.randnum.randint = fake_randint
+        try:
+            # 'n is composite'
+            randints.append(2630484832)  # causes the 'n is composite' case with n=3784949785
+>           self.assertEqual(False, rsa.prime.miller_rabin_primality_testing(2787998641, 7))
+E           AssertionError: False != None
+
+tests/test_prime.py:61: AssertionError
+</pre>
+</details>
+<h3 id="test_stringspystringtesttest_enc_dec">test_strings.py::StringTest::test_enc_dec</h3>
+<details><summary> <pre>test_strings.py::StringTest::test_enc_dec</pre></summary><pre>
+self = <tests.test_strings.StringTest testMethod=test_enc_dec>
+
+    def setUp(self):
+>       (self.pub, self.priv) = rsa.newkeys(384)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+tests/test_strings.py:28: TypeError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_accuracy">test_transform.py::Test_int2bytes::test_accuracy</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_accuracy</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_accuracy>
+
+    def test_accuracy(self):
+>       self.assertEqual(int2bytes(123456789), b"\x07[\xcd\x15")
+E       AssertionError: None != b'\x07[\xcd\x15'
+
+tests/test_transform.py:21: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_chunk_size">test_transform.py::Test_int2bytes::test_chunk_size</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_chunk_size</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_chunk_size>
+
+    def test_chunk_size(self):
+>       self.assertEqual(int2bytes(123456789, 6), b"\x00\x00\x07[\xcd\x15")
+E       AssertionError: None != b'\x00\x00\x07[\xcd\x15'
+
+tests/test_transform.py:27: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_codec_identity">test_transform.py::Test_int2bytes::test_codec_identity</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_codec_identity</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_codec_identity>
+
+    def test_codec_identity(self):
+>       self.assertEqual(bytes2int(int2bytes(123456789, 128)), 123456789)
+E       AssertionError: None != 123456789
+
+tests/test_transform.py:24: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_correctness_against_base_implementation">test_transform.py::Test_int2bytes::test_correctness_against_base_implementation</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_correctness_against_base_implementation</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_correctness_against_base_implementation>
+
+    def test_correctness_against_base_implementation(self):
+        # Slow test.
+        values = [
+            1 << 512,
+            1 << 8192,
+            1 << 77,
+        ]
+        for value in values:
+>           self.assertEqual(bytes2int(int2bytes(value)), value, "Boom %d" % value)
+E           AssertionError: None != 13407807929942597099574024998205846127479[109 chars]84096 : Boom 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
+
+tests/test_transform.py:43: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_raises_overflowerror_when_chunk_size_is_insufficient">test_transform.py::Test_int2bytes::test_raises_OverflowError_when_chunk_size_is_insufficient</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_raises_OverflowError_when_chunk_size_is_insufficient</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_raises_OverflowError_when_chunk_size_is_insufficient>
+
+    def test_raises_OverflowError_when_chunk_size_is_insufficient(self):
+>       self.assertRaises(OverflowError, int2bytes, 123456789, 3)
+E       AssertionError: OverflowError not raised by int2bytes
+
+tests/test_transform.py:46: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_raises_typeerror_when_not_integer">test_transform.py::Test_int2bytes::test_raises_TypeError_when_not_integer</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_raises_TypeError_when_not_integer</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_raises_TypeError_when_not_integer>
+
+    def test_raises_TypeError_when_not_integer(self):
+>       self.assertRaises(TypeError, int2bytes, None)
+E       AssertionError: TypeError not raised by int2bytes
+
+tests/test_transform.py:53: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_raises_valueerror_when_negative_integer">test_transform.py::Test_int2bytes::test_raises_ValueError_when_negative_integer</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_raises_ValueError_when_negative_integer</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_raises_ValueError_when_negative_integer>
+
+    def test_raises_ValueError_when_negative_integer(self):
+>       self.assertRaises(ValueError, int2bytes, -1)
+E       AssertionError: ValueError not raised by int2bytes
+
+tests/test_transform.py:50: AssertionError
+</pre>
+</details>
+<h3 id="test_transformpytest_int2bytestest_zero">test_transform.py::Test_int2bytes::test_zero</h3>
+<details><summary> <pre>test_transform.py::Test_int2bytes::test_zero</pre></summary><pre>
+self = <tests.test_transform.Test_int2bytes testMethod=test_zero>
+
+    def test_zero(self):
+>       self.assertEqual(int2bytes(0, 4), b"\x00" * 4)
+E       AssertionError: None != b'\x00\x00\x00\x00'
+
+tests/test_transform.py:31: AssertionError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

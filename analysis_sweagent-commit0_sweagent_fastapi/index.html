@@ -1,0 +1,1908 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent fastapi - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-fastapi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent fastapi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial003_04pytest_invalid_response_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial003_04.py::test_invalid_response_model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial003_04_py310pytest_invalid_response_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial003_04_py310.py::test_invalid_response_model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_app02pytest_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_app02.py::test_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_app02pytest_override_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_app02.py::test_override_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_main_b_an_py310pytest_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_main_b_an_py310.py::test_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_main_b_an_py39pytest_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_main_b_an_py39.py::test_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_main_b_py310pytest_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_main_b_py310.py::test_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial003pytest_main" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial003.py::test_main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_items_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_items_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_items_with_q_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_items_with_q_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_items_with_params_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_items_with_params_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_users_with_q" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_users_with_q
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_override_in_users_with_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_override_in_users_with_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py310pytest_normal_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py310.py::test_normal_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_items_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_items_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_items_with_q_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_items_with_q_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_items_with_params_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_items_with_params_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_users_with_q" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_users_with_q
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_override_in_users_with_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_override_in_users_with_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_an_py39pytest_normal_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_an_py39.py::test_normal_app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_items_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_items_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_items_with_q_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_items_with_q_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_items_with_params_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_items_with_params_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_users_with_q" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_users_with_q
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_override_in_users_with_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_override_in_users_with_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tutorial001_py310pytest_normal_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_tutorial001_py310.py::test_normal_app
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-fastapi"><strong>SWE-Agent</strong>: fastapi</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">29</td>
+</tr>
+<tr>
+<td style="text-align: left;">skipped</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_tutorial003_04pytest_invalid_response_model">test_tutorial003_04.py::test_invalid_response_model</h3>
+<details><summary> <pre>test_tutorial003_04.py::test_invalid_response_model</pre></summary><pre>
+def test_invalid_response_model():
+        with pytest.raises(FastAPIError):
+>           from docs_src.response_model.tutorial003_04 import app
+
+tests/test_tutorial/test_response_model/test_tutorial003_04.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/response_model/tutorial003_04.py:3: in <module>
+    from fastapi import FastAPI, Response
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial003_04_py310pytest_invalid_response_model">test_tutorial003_04_py310.py::test_invalid_response_model</h3>
+<details><summary> <pre>test_tutorial003_04_py310.py::test_invalid_response_model</pre></summary><pre>
+@needs_py310
+    def test_invalid_response_model():
+        with pytest.raises(FastAPIError):
+>           from docs_src.response_model.tutorial003_04_py310 import app
+
+tests/test_tutorial/test_response_model/test_tutorial003_04_py310.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/response_model/tutorial003_04_py310.py:1: in <module>
+    from fastapi import FastAPI, Response
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_app02pytest_settings">test_app02.py::test_settings</h3>
+<details><summary> <pre>test_app02.py::test_settings</pre></summary><pre>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb969e9dd80>
+
+    @needs_pydanticv2
+    def test_settings(monkeypatch: MonkeyPatch):
+>       from docs_src.settings.app02 import main
+
+tests/test_tutorial/test_settings/test_app02.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/settings/app02/main.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_app02pytest_override_settings">test_app02.py::test_override_settings</h3>
+<details><summary> <pre>test_app02.py::test_override_settings</pre></summary><pre>
+@needs_pydanticv2
+    def test_override_settings():
+>       from docs_src.settings.app02 import test_main
+
+tests/test_tutorial/test_settings/test_app02.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/settings/app02/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_main_b_an_py310pytest_app">test_main_b_an_py310.py::test_app</h3>
+<details><summary> <pre>test_main_b_an_py310.py::test_app</pre></summary><pre>
+@needs_py310
+    def test_app():
+>       from docs_src.app_testing.app_b_an_py310 import test_main
+
+tests/test_tutorial/test_testing/test_main_b_an_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/app_testing/app_b_an_py310/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_main_b_an_py39pytest_app">test_main_b_an_py39.py::test_app</h3>
+<details><summary> <pre>test_main_b_an_py39.py::test_app</pre></summary><pre>
+@needs_py39
+    def test_app():
+>       from docs_src.app_testing.app_b_an_py39 import test_main
+
+tests/test_tutorial/test_testing/test_main_b_an_py39.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/app_testing/app_b_an_py39/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_main_b_py310pytest_app">test_main_b_py310.py::test_app</h3>
+<details><summary> <pre>test_main_b_py310.py::test_app</pre></summary><pre>
+@needs_py310
+    def test_app():
+>       from docs_src.app_testing.app_b_py310 import test_main
+
+tests/test_tutorial/test_testing/test_main_b_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+docs_src/app_testing/app_b_py310/test_main.py:1: in <module>
+    from fastapi.testclient import TestClient
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial003pytest_main">test_tutorial003.py::test_main</h3>
+<details><summary> <pre>test_tutorial003.py::test_main</pre></summary><pre>
+def test_main():
+        with pytest.warns(DeprecationWarning):
+>           from docs_src.app_testing.tutorial003 import test_read_items
+
+tests/test_tutorial/test_testing/test_tutorial003.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/app_testing/tutorial003.py:1: in <module>
+    from fastapi import FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+
+During handling of the above exception, another exception occurred:
+
+    def test_main():
+>       with pytest.warns(DeprecationWarning):
+E       Failed: DID NOT WARN. No warnings of type (<class 'DeprecationWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+tests/test_tutorial/test_testing/test_tutorial003.py:5: Failed
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_items_run">test_tutorial001_an_py310.py::test_override_in_items_run</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_items_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_run():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import test_override_in_items
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_items_with_q_run">test_tutorial001_an_py310.py::test_override_in_items_with_q_run</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_items_with_q_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_q_run():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import (
+            test_override_in_items_with_q,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_items_with_params_run">test_tutorial001_an_py310.py::test_override_in_items_with_params_run</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_items_with_params_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_params_run():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import (
+            test_override_in_items_with_params,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_users">test_tutorial001_an_py310.py::test_override_in_users</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_users</pre></summary><pre>
+@needs_py310
+    def test_override_in_users():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_users_with_q">test_tutorial001_an_py310.py::test_override_in_users_with_q</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_users_with_q</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_q():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_override_in_users_with_params">test_tutorial001_an_py310.py::test_override_in_users_with_params</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_override_in_users_with_params</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_params():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py310pytest_normal_app">test_tutorial001_an_py310.py::test_normal_app</h3>
+<details><summary> <pre>test_tutorial001_an_py310.py::test_normal_app</pre></summary><pre>
+@needs_py310
+    def test_normal_app():
+>       from docs_src.dependency_testing.tutorial001_an_py310 import app, client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py310.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py310.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_items_run">test_tutorial001_an_py39.py::test_override_in_items_run</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_items_run</pre></summary><pre>
+@needs_py39
+    def test_override_in_items_run():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import test_override_in_items
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_items_with_q_run">test_tutorial001_an_py39.py::test_override_in_items_with_q_run</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_items_with_q_run</pre></summary><pre>
+@needs_py39
+    def test_override_in_items_with_q_run():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import (
+            test_override_in_items_with_q,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_items_with_params_run">test_tutorial001_an_py39.py::test_override_in_items_with_params_run</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_items_with_params_run</pre></summary><pre>
+@needs_py39
+    def test_override_in_items_with_params_run():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import (
+            test_override_in_items_with_params,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_users">test_tutorial001_an_py39.py::test_override_in_users</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_users</pre></summary><pre>
+@needs_py39
+    def test_override_in_users():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_users_with_q">test_tutorial001_an_py39.py::test_override_in_users_with_q</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_users_with_q</pre></summary><pre>
+@needs_py39
+    def test_override_in_users_with_q():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_override_in_users_with_params">test_tutorial001_an_py39.py::test_override_in_users_with_params</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_override_in_users_with_params</pre></summary><pre>
+@needs_py39
+    def test_override_in_users_with_params():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_an_py39pytest_normal_app">test_tutorial001_an_py39.py::test_normal_app</h3>
+<details><summary> <pre>test_tutorial001_an_py39.py::test_normal_app</pre></summary><pre>
+@needs_py39
+    def test_normal_app():
+>       from docs_src.dependency_testing.tutorial001_an_py39 import app, client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_an_py39.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_an_py39.py:3: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_items_run">test_tutorial001_py310.py::test_override_in_items_run</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_items_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_run():
+>       from docs_src.dependency_testing.tutorial001_py310 import test_override_in_items
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_items_with_q_run">test_tutorial001_py310.py::test_override_in_items_with_q_run</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_items_with_q_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_q_run():
+>       from docs_src.dependency_testing.tutorial001_py310 import (
+            test_override_in_items_with_q,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_items_with_params_run">test_tutorial001_py310.py::test_override_in_items_with_params_run</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_items_with_params_run</pre></summary><pre>
+@needs_py310
+    def test_override_in_items_with_params_run():
+>       from docs_src.dependency_testing.tutorial001_py310 import (
+            test_override_in_items_with_params,
+        )
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_users">test_tutorial001_py310.py::test_override_in_users</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_users</pre></summary><pre>
+@needs_py310
+    def test_override_in_users():
+>       from docs_src.dependency_testing.tutorial001_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_users_with_q">test_tutorial001_py310.py::test_override_in_users_with_q</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_users_with_q</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_q():
+>       from docs_src.dependency_testing.tutorial001_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_override_in_users_with_params">test_tutorial001_py310.py::test_override_in_users_with_params</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_override_in_users_with_params</pre></summary><pre>
+@needs_py310
+    def test_override_in_users_with_params():
+>       from docs_src.dependency_testing.tutorial001_py310 import client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+<h3 id="test_tutorial001_py310pytest_normal_app">test_tutorial001_py310.py::test_normal_app</h3>
+<details><summary> <pre>test_tutorial001_py310.py::test_normal_app</pre></summary><pre>
+@needs_py310
+    def test_normal_app():
+>       from docs_src.dependency_testing.tutorial001_py310 import app, client
+
+tests/test_tutorial/test_testing_dependencies/test_tutorial001_py310.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+docs_src/dependency_testing/tutorial001_py310.py:1: in <module>
+    from fastapi import Depends, FastAPI
+fastapi/__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+fastapi/applications.py:3: in <module>
+    from fastapi import routing
+fastapi/routing.py:9: in <module>
+    from fastapi import params
+fastapi/params.py:4: in <module>
+    from fastapi.openapi.models import Example
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    from enum import Enum
+    from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Type, Union
+>   from fastapi._compat import PYDANTIC_V2, CoreSchema, GetJsonSchemaHandler, JsonSchemaValue, _model_rebuild, with_info_plain_validator_function
+E   ImportError: cannot import name '_model_rebuild' from 'fastapi._compat' (/testbed/fastapi/_compat.py)
+
+fastapi/openapi/models.py:3: ImportError
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/fastapi/applications.py b/fastapi/applications.py</span>
+<span class="gh">index 7abfd21f..6d55ee6d 100644</span>
+<span class="gd">--- a/fastapi/applications.py</span>
+<span class="gi">+++ b/fastapi/applications.py</span>
+<span class="gu">@@ -92,7 +92,22 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>        Read more in the
+<span class="w"> </span>        [FastAPI docs for OpenAPI](https://fastapi.tiangolo.com/how-to/extending-openapi/).
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        if not self.openapi_schema:</span>
+<span class="gi">+            self.openapi_schema = get_openapi(</span>
+<span class="gi">+                title=self.title,</span>
+<span class="gi">+                version=self.version,</span>
+<span class="gi">+                openapi_version=self.openapi_version,</span>
+<span class="gi">+                summary=self.summary,</span>
+<span class="gi">+                description=self.description,</span>
+<span class="gi">+                routes=self.routes,</span>
+<span class="gi">+                tags=self.openapi_tags,</span>
+<span class="gi">+                servers=self.servers,</span>
+<span class="gi">+                terms_of_service=self.terms_of_service,</span>
+<span class="gi">+                contact=self.contact,</span>
+<span class="gi">+                license_info=self.license_info,</span>
+<span class="gi">+                webhooks=self.webhooks.routes,</span>
+<span class="gi">+            )</span>
+<span class="gi">+        return self.openapi_schema</span>
+
+<span class="w"> </span>    async def __call__(self, scope: Scope, receive: Receive, send: Send) -&gt; None:
+<span class="w"> </span>        if self.root_path:
+<span class="gu">@@ -145,22 +160,31 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>        pass
+
+<span class="w"> </span>    def get(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        Add a *path operation* using an HTTP GET operation.</span>
+<span class="gd">-</span>
+<span class="gd">-        ## Example</span>
+<span class="gd">-</span>
+<span class="gd">-        ```python</span>
+<span class="gd">-        from fastapi import FastAPI</span>
+<span class="gd">-</span>
+<span class="gd">-        app = FastAPI()</span>
+<span class="gd">-</span>
+<span class="gd">-        @app.get(&quot;/items/&quot;)</span>
+<span class="gd">-        def read_items():</span>
+<span class="gd">-            return [{&quot;name&quot;: &quot;Empanada&quot;}, {&quot;name&quot;: &quot;Arepa&quot;}]</span>
+<span class="gd">-        ```</span>
+<span class="gd">-        &quot;&quot;&quot;</span>
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.get(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def put(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -183,7 +207,31 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>            return {&quot;message&quot;: &quot;Item replaced&quot;, &quot;id&quot;: item_id}
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.put(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def post(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -203,10 +251,34 @@ class FastAPI(Starlette):</span>
+
+<span class="w"> </span>        @app.post(&quot;/items/&quot;)
+<span class="w"> </span>        def create_item(item: Item):
+<span class="gd">-            return {&quot;message&quot;: &quot;Item created&quot;}</span>
+<span class="gi">+            return {&quot;message&quot;: &quot;Item created&quot;, &quot;item&quot;: item}</span>
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.post(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def delete(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -224,7 +296,31 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>            return {&quot;message&quot;: &quot;Item deleted&quot;}
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.delete(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def options(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -238,11 +334,35 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>        app = FastAPI()
+
+<span class="w"> </span>        @app.options(&quot;/items/&quot;)
+<span class="gd">-        def get_item_options():</span>
+<span class="gd">-            return {&quot;additions&quot;: [&quot;Aji&quot;, &quot;Guacamole&quot;]}</span>
+<span class="gi">+        def options_items():</span>
+<span class="gi">+            return {&quot;methods&quot;: [&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;]}</span>
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.options(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def head(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -256,11 +376,35 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>        app = FastAPI()
+
+<span class="w"> </span>        @app.head(&quot;/items/&quot;, status_code=204)
+<span class="gd">-        def get_items_headers(response: Response):</span>
+<span class="gd">-            response.headers[&quot;X-Cat-Dog&quot;] = &quot;Alone in the world&quot;</span>
+<span class="gi">+        def head_items():</span>
+<span class="gi">+            return Response(headers={&quot;X-Total-Count&quot;: &quot;100&quot;})</span>
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.head(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def patch(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -278,12 +422,36 @@ class FastAPI(Starlette):</span>
+
+<span class="w"> </span>        app = FastAPI()
+
+<span class="gd">-        @app.patch(&quot;/items/&quot;)</span>
+<span class="gd">-        def update_item(item: Item):</span>
+<span class="gd">-            return {&quot;message&quot;: &quot;Item updated in place&quot;}</span>
+<span class="gi">+        @app.patch(&quot;/items/{item_id}&quot;)</span>
+<span class="gi">+        def update_item(item_id: str, item: Item):</span>
+<span class="gi">+            return {&quot;item_id&quot;: item_id, &quot;item&quot;: item}</span>
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.patch(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    def trace(self, path: Annotated[str, Doc(&#39;\n                The URL path to be used for this *path operation*.\n\n                For example, in `http://example.com/items`, the path is `/items`.\n                &#39;)], *, response_model: Annotated[Any, Doc(&quot;\n                The type to use for the response.\n\n                It could be any valid Pydantic *field* type. So, it doesn&#39;t have to\n                be a Pydantic model, it could be other things, like a `list`, `dict`,\n                etc.\n\n                It will be used for:\n\n                * Documentation: the generated OpenAPI (and the UI at `/docs`) will\n                    show it as the response (JSON Schema).\n                * Serialization: you could return an arbitrary object and the\n                    `response_model` would be used to serialize that object into the\n                    corresponding JSON.\n                * Filtering: the JSON sent to the client will only contain the data\n                    (fields) defined in the `response_model`. If you returned an object\n                    that contains an attribute `password` but the `response_model` does\n                    not include that field, the JSON sent to the client would not have\n                    that `password`.\n                * Validation: whatever you return will be serialized with the\n                    `response_model`, converting any data as necessary to generate the\n                    corresponding JSON. But if the data in the object returned is not\n                    valid, that would mean a violation of the contract with the client,\n                    so it&#39;s an error from the API developer. So, FastAPI will raise an\n                    error and return a 500 error code (Internal Server Error).\n\n                Read more about it in the\n                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n                &quot;)]=Default(None), status_code: Annotated[Optional[int], Doc(&#39;\n                The default status code to be used for the response.\n\n                You could override the status code by returning a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).\n                &#39;)]=None, tags: Annotated[Optional[List[Union[str, Enum]]], Doc(&#39;\n                A list of tags to be applied to the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).\n                &#39;)]=None, dependencies: Annotated[Optional[Sequence[Depends]], Doc(&#39;\n                A list of dependencies (using `Depends()`) to be applied to the\n                *path operation*.\n\n                Read more about it in the\n                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).\n                &#39;)]=None, summary: Annotated[Optional[str], Doc(&#39;\n                A summary for the *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, description: Annotated[Optional[str], Doc(&#39;\n                A description for the *path operation*.\n\n                If not provided, it will be extracted automatically from the docstring\n                of the *path operation function*.\n\n                It can contain Markdown.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).\n                &#39;)]=None, response_description: Annotated[str, Doc(&#39;\n                The description for the default response.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=&#39;Successful Response&#39;, responses: Annotated[Optional[Dict[Union[int, str], Dict[str, Any]]], Doc(&#39;\n                Additional responses that could be returned by this *path operation*.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, deprecated: Annotated[Optional[bool], Doc(&#39;\n                Mark this *path operation* as deprecated.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n                &#39;)]=None, operation_id: Annotated[Optional[str], Doc(&#39;\n                Custom operation ID to be used by this *path operation*.\n\n                By default, it is generated automatically.\n\n                If you provide a custom operation ID, you need to make sure it is\n                unique for the whole API.\n\n                You can customize the\n                operation ID generation with the parameter\n                `generate_unique_id_function` in the `FastAPI` class.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=None, response_model_include: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to include only certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_exclude: Annotated[Optional[IncEx], Doc(&#39;\n                Configuration passed to Pydantic to exclude certain fields in the\n                response data.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=None, response_model_by_alias: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response model\n                should be serialized by alias when an alias is used.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).\n                &#39;)]=True, response_model_exclude_unset: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that were not set and\n                have their default values. This is different from\n                `response_model_exclude_defaults` in that if the fields are set,\n                they will be included in the response, even if the value is the same\n                as the default.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_defaults: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data\n                should have all the fields, including the ones that have the same value\n                as the default. This is different from `response_model_exclude_unset`\n                in that if the fields are set but contain the same default values,\n                they will be excluded from the response.\n\n                When `True`, default values are omitted from the response.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).\n                &#39;)]=False, response_model_exclude_none: Annotated[bool, Doc(&#39;\n                Configuration passed to Pydantic to define if the response data should\n                exclude fields set to `None`.\n\n                This is much simpler (less smart) than `response_model_exclude_unset`\n                and `response_model_exclude_defaults`. You probably want to use one of\n                those two instead of this one, as those allow returning `None` values\n                when it makes sense.\n\n                Read more about it in the\n                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).\n                &#39;)]=False, include_in_schema: Annotated[bool, Doc(&#39;\n                Include this *path operation* in the generated OpenAPI schema.\n\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-from-openapi).\n                &#39;)]=True, response_class: Annotated[Type[Response], Doc(&#39;\n                Response class to be used for this *path operation*.\n\n                This will not be used if you return a response directly.\n\n                Read more about it in the\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).\n                &#39;)]=Default(JSONResponse), name: Annotated[Optional[str], Doc(&#39;\n                Name for this *path operation*. Only used internally.\n                &#39;)]=None, callbacks: Annotated[Optional[List[BaseRoute]], Doc(&quot;\n                List of *path operations* that will be used as OpenAPI callbacks.\n\n                This is only for OpenAPI documentation, the callbacks won&#39;t be used\n                directly.\n\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\n\n                Read more about it in the\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\n                &quot;)]=None, openapi_extra: Annotated[Optional[Dict[str, Any]], Doc(&#39;\n                Extra metadata to be included in the OpenAPI schema for this *path\n                operation*.\n\n                Read more about it in the\n                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).\n                &#39;)]=None, generate_unique_id_function: Annotated[Callable[[routing.APIRoute], str], Doc(&#39;\n                Customize the function used to generate unique IDs for the *path\n                operations* shown in the generated OpenAPI.\n\n                This is particularly useful when automatically generating clients or\n                SDKs for your API.\n\n                Read more about it in the\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\n                &#39;)]=Default(generate_unique_id)) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gu">@@ -292,16 +460,41 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>        ## Example
+
+<span class="w"> </span>        ```python
+<span class="gd">-        from fastapi import FastAPI</span>
+<span class="gi">+        from fastapi import FastAPI, Request</span>
+
+<span class="w"> </span>        app = FastAPI()
+
+<span class="gd">-        @app.put(&quot;/items/{item_id}&quot;)</span>
+<span class="gd">-        def trace_item(item_id: str):</span>
+<span class="gd">-            return None</span>
+<span class="gi">+        @app.trace(&quot;/&quot;)</span>
+<span class="gi">+        async def trace(request: Request):</span>
+<span class="gi">+            headers = {k: v for k, v in request.headers.items()}</span>
+<span class="gi">+            return headers</span>
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+<span class="gi">+        return self.router.trace(</span>
+<span class="gi">+            path=path,</span>
+<span class="gi">+            response_model=response_model,</span>
+<span class="gi">+            status_code=status_code,</span>
+<span class="gi">+            tags=tags,</span>
+<span class="gi">+            dependencies=dependencies,</span>
+<span class="gi">+            summary=summary,</span>
+<span class="gi">+            description=description,</span>
+<span class="gi">+            response_description=response_description,</span>
+<span class="gi">+            responses=responses,</span>
+<span class="gi">+            deprecated=deprecated,</span>
+<span class="gi">+            operation_id=operation_id,</span>
+<span class="gi">+            response_model_include=response_model_include,</span>
+<span class="gi">+            response_model_exclude=response_model_exclude,</span>
+<span class="gi">+            response_model_by_alias=response_model_by_alias,</span>
+<span class="gi">+            response_model_exclude_unset=response_model_exclude_unset,</span>
+<span class="gi">+            response_model_exclude_defaults=response_model_exclude_defaults,</span>
+<span class="gi">+            response_model_exclude_none=response_model_exclude_none,</span>
+<span class="gi">+            include_in_schema=include_in_schema,</span>
+<span class="gi">+            response_class=response_class,</span>
+<span class="gi">+            name=name,</span>
+<span class="gi">+            callbacks=callbacks,</span>
+<span class="gi">+            openapi_extra=openapi_extra,</span>
+<span class="gi">+            generate_unique_id_function=generate_unique_id_function,</span>
+<span class="gi">+        )</span>
+
+<span class="w"> </span>    @deprecated(&#39;\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        &#39;)
+<span class="w"> </span>    def on_event(self, event_type: Annotated[str, Doc(&#39;\n                The type of event. `startup` or `shutdown`.\n                &#39;)]) -&gt; Callable[[DecoratedCallable], DecoratedCallable]:
+<span class="gu">@@ -373,4 +566,4 @@ class FastAPI(Starlette):</span>
+<span class="w"> </span>            )
+<span class="w"> </span>        ```
+<span class="w"> </span>        &quot;&quot;&quot;
+<span class="gd">-        pass</span>
+\ No newline at end of file
+<span class="gi">+        pass</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

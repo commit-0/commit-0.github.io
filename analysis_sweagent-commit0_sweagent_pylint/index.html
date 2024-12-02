@@ -1,0 +1,589 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent pylint - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-pylint" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent pylint
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failed-to-run-pytests-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to run pytests for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-pylint"><strong>SWE-Agent</strong>: pylint</h1>
+<h2 id="failed-to-run-pytests-for-test-tests">Failed to run pytests for test <code>tests</code></h2>
+<div class="highlight"><pre><span></span><code>ImportError while loading conftest &#39;/testbed/tests/conftest.py&#39;.
+tests/conftest.py:15: in &lt;module&gt;
+    from pylint import checkers
+pylint/checkers/__init__.py:47: in &lt;module&gt;
+    from pylint.checkers.base_checker import (
+pylint/checkers/base_checker.py:9: in &lt;module&gt;
+    from pylint.config.arguments_provider import _ArgumentsProvider
+pylint/config/arguments_provider.py:5: in &lt;module&gt;
+    from pylint.config.arguments_manager import _ArgumentsManager
+pylint/config/arguments_manager.py:11: in &lt;module&gt;
+    from pylint import utils
+pylint/utils/__init__.py:13: in &lt;module&gt;
+    from pylint.utils.utils import (
+E   ImportError: cannot import name &#39;decoding_stream&#39; from &#39;pylint.utils.utils&#39; (/testbed/pylint/utils/utils.py)
+</code></pre></div>
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/pylint/checkers/typecheck.py b/pylint/checkers/typecheck.py</span>
+<span class="gh">index e79f6ffe2..799e575a2 100644</span>
+<span class="gd">--- a/pylint/checkers/typecheck.py</span>
+<span class="gi">+++ b/pylint/checkers/typecheck.py</span>
+<span class="gu">@@ -46,7 +46,28 @@ def _is_owner_ignored(owner: SuccessfulInferenceResult, attrname: str | None, ig</span>
+<span class="w"> </span>    matches any name from the *ignored_classes* or if its qualified
+<span class="w"> </span>    name can be found in *ignored_classes*.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(owner, nodes.Module):</span>
+<span class="gi">+        owner_name = owner.name</span>
+<span class="gi">+        owner_module = owner</span>
+<span class="gi">+    else:</span>
+<span class="gi">+        owner_name = owner.name</span>
+<span class="gi">+        owner_module = owner.root()</span>
+<span class="gi">+</span>
+<span class="gi">+    if owner_module.name in ignored_modules:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    for ignore_pattern in ignored_modules:</span>
+<span class="gi">+        if re.match(ignore_pattern, owner_module.name):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+</span>
+<span class="gi">+    if owner_name in ignored_classes:</span>
+<span class="gi">+        return True</span>
+<span class="gi">+</span>
+<span class="gi">+    if isinstance(owner, (nodes.ClassDef, nodes.FunctionDef)):</span>
+<span class="gi">+        if owner.qname() in ignored_classes:</span>
+<span class="gi">+            return True</span>
+<span class="gi">+</span>
+<span class="gi">+    return False</span>
+
+<span class="w"> </span>def _similar_names(owner: SuccessfulInferenceResult, attrname: str | None, distance_threshold: int, max_choices: int) -&gt; list[str]:
+<span class="w"> </span>    &quot;&quot;&quot;Given an owner and a name, try to find similar names.
+<span class="gu">@@ -54,7 +75,18 @@ def _similar_names(owner: SuccessfulInferenceResult, attrname: str | None, dista</span>
+<span class="w"> </span>    The similar names are searched given a distance metric and only
+<span class="w"> </span>    a given number of choices will be returned.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if attrname is None:</span>
+<span class="gi">+        return []</span>
+<span class="gi">+</span>
+<span class="gi">+    names = []</span>
+<span class="gi">+    if isinstance(owner, nodes.Module):</span>
+<span class="gi">+        names = owner.keys()</span>
+<span class="gi">+    elif isinstance(owner, nodes.ClassDef):</span>
+<span class="gi">+        names = owner.instance_attrs.keys() | owner.locals.keys()</span>
+<span class="gi">+    </span>
+<span class="gi">+    import difflib</span>
+<span class="gi">+    similar_names = difflib.get_close_matches(attrname, names, n=max_choices, cutoff=1.0 - distance_threshold/10)</span>
+<span class="gi">+    return similar_names</span>
+<span class="w"> </span>MSGS: dict[str, MessageDefinitionTuple] = {&#39;E1101&#39;: (&#39;%s %r has no %r member%s&#39;, &#39;no-member&#39;, &#39;Used when a variable is accessed for a nonexistent member.&#39;, {&#39;old_names&#39;: [(&#39;E1103&#39;, &#39;maybe-no-member&#39;)]}), &#39;I1101&#39;: (&#39;%s %r has no %r member%s, but source is unavailable. Consider adding this module to extension-pkg-allow-list if you want to perform analysis based on run-time introspection of living objects.&#39;, &#39;c-extension-no-member&#39;, &#39;Used when a variable is accessed for non-existent member of C extension. Due to unavailability of source static analysis is impossible, but it may be performed by introspecting living objects in run-time.&#39;), &#39;E1102&#39;: (&#39;%s is not callable&#39;, &#39;not-callable&#39;, &#39;Used when an object being called has been inferred to a non callable object.&#39;), &#39;E1111&#39;: (&#39;Assigning result of a function call, where the function has no return&#39;, &#39;assignment-from-no-return&#39;, &quot;Used when an assignment is done on a function call but the inferred function doesn&#39;t return anything.&quot;), &#39;E1120&#39;: (&#39;No value for argument %s in %s call&#39;, &#39;no-value-for-parameter&#39;, &#39;Used when a function call passes too few arguments.&#39;), &#39;E1121&#39;: (&#39;Too many positional arguments for %s call&#39;, &#39;too-many-function-args&#39;, &#39;Used when a function call passes too many positional arguments.&#39;), &#39;E1123&#39;: (&#39;Unexpected keyword argument %r in %s call&#39;, &#39;unexpected-keyword-arg&#39;, &quot;Used when a function call passes a keyword argument that doesn&#39;t correspond to one of the function&#39;s parameter names.&quot;), &#39;E1124&#39;: (&#39;Argument %r passed by position and keyword in %s call&#39;, &#39;redundant-keyword-arg&#39;, &#39;Used when a function call would result in assigning multiple values to a function parameter, one value from a positional argument and one from a keyword argument.&#39;), &#39;E1125&#39;: (&#39;Missing mandatory keyword argument %r in %s call&#39;, &#39;missing-kwoa&#39;, &#39;Used when a function call does not pass a mandatory keyword-only argument.&#39;), &#39;E1126&#39;: (&#39;Sequence index is not an int, slice, or instance with __index__&#39;, &#39;invalid-sequence-index&#39;, &#39;Used when a sequence type is indexed with an invalid type. Valid types are ints, slices, and objects with an __index__ method.&#39;), &#39;E1127&#39;: (&#39;Slice index is not an int, None, or instance with __index__&#39;, &#39;invalid-slice-index&#39;, &#39;Used when a slice index is not an integer, None, or an object with an __index__ method.&#39;), &#39;E1128&#39;: (&#39;Assigning result of a function call, where the function returns None&#39;, &#39;assignment-from-none&#39;, &#39;Used when an assignment is done on a function call but the inferred function returns nothing but None.&#39;, {&#39;old_names&#39;: [(&#39;W1111&#39;, &#39;old-assignment-from-none&#39;)]}), &#39;E1129&#39;: (&quot;Context manager &#39;%s&#39; doesn&#39;t implement __enter__ and __exit__.&quot;, &#39;not-context-manager&#39;, &quot;Used when an instance in a with statement doesn&#39;t implement the context manager protocol(__enter__/__exit__).&quot;), &#39;E1130&#39;: (&#39;%s&#39;, &#39;invalid-unary-operand-type&#39;, &#39;Emitted when a unary operand is used on an object which does not support this type of operation.&#39;), &#39;E1131&#39;: (&#39;%s&#39;, &#39;unsupported-binary-operation&#39;, &#39;Emitted when a binary arithmetic operation between two operands is not supported.&#39;), &#39;E1132&#39;: (&#39;Got multiple values for keyword argument %r in function call&#39;, &#39;repeated-keyword&#39;, &#39;Emitted when a function call got multiple values for a keyword.&#39;), &#39;E1135&#39;: (&quot;Value &#39;%s&#39; doesn&#39;t support membership test&quot;, &#39;unsupported-membership-test&#39;, &quot;Emitted when an instance in membership test expression doesn&#39;t implement membership protocol (__contains__/__iter__/__getitem__).&quot;), &#39;E1136&#39;: (&quot;Value &#39;%s&#39; is unsubscriptable&quot;, &#39;unsubscriptable-object&#39;, &quot;Emitted when a subscripted value doesn&#39;t support subscription (i.e. doesn&#39;t define __getitem__ method or __class_getitem__ for a class).&quot;), &#39;E1137&#39;: (&#39;%r does not support item assignment&#39;, &#39;unsupported-assignment-operation&#39;, &quot;Emitted when an object does not support item assignment (i.e. doesn&#39;t define __setitem__ method).&quot;), &#39;E1138&#39;: (&#39;%r does not support item deletion&#39;, &#39;unsupported-delete-operation&#39;, &quot;Emitted when an object does not support item deletion (i.e. doesn&#39;t define __delitem__ method).&quot;), &#39;E1139&#39;: (&#39;Invalid metaclass %r used&#39;, &#39;invalid-metaclass&#39;, &#39;Emitted whenever we can detect that a class is using, as a metaclass, something which might be invalid for using as a metaclass.&#39;), &#39;E1141&#39;: (&#39;Unpacking a dictionary in iteration without calling .items()&#39;, &#39;dict-iter-missing-items&#39;, &#39;Emitted when trying to iterate through a dict without calling .items()&#39;), &#39;E1142&#39;: (&quot;&#39;await&#39; should be used within an async function&quot;, &#39;await-outside-async&#39;, &#39;Emitted when await is used outside an async function.&#39;), &#39;E1143&#39;: (&quot;&#39;%s&#39; is unhashable and can&#39;t be used as a %s in a %s&quot;, &#39;unhashable-member&#39;, &quot;Emitted when a dict key or set member is not hashable (i.e. doesn&#39;t define __hash__ method).&quot;, {&#39;old_names&#39;: [(&#39;E1140&#39;, &#39;unhashable-dict-key&#39;)]}), &#39;E1144&#39;: (&#39;Slice step cannot be 0&#39;, &#39;invalid-slice-step&#39;, &quot;Used when a slice step is 0 and the object doesn&#39;t implement a custom __getitem__ method.&quot;), &#39;W1113&#39;: (&#39;Keyword argument before variable positional arguments list in the definition of %s function&#39;, &#39;keyword-arg-before-vararg&#39;, &#39;When defining a keyword argument before variable positional arguments, one can end up in having multiple values passed for the aforementioned parameter in case the method is called with keyword arguments.&#39;), &#39;W1114&#39;: (&#39;Positional arguments appear to be out of order&#39;, &#39;arguments-out-of-order&#39;, &quot;Emitted  when the caller&#39;s argument names fully match the parameter names in the function signature but do not have the same order.&quot;), &#39;W1115&#39;: (&#39;Non-string value assigned to __name__&#39;, &#39;non-str-assignment-to-dunder-name&#39;, &#39;Emitted when a non-string value is assigned to __name__&#39;), &#39;W1116&#39;: (&#39;Second argument of isinstance is not a type&#39;, &#39;isinstance-second-argument-not-valid-type&#39;, &#39;Emitted when the second argument of an isinstance call is not a type.&#39;), &#39;W1117&#39;: (&#39;%r will be included in %r since a positional-only parameter with this name already exists&#39;, &#39;kwarg-superseded-by-positional-arg&#39;, &#39;Emitted when a function is called with a keyword argument that has the same name as a positional-only parameter and the function contains a keyword variadic parameter dict.&#39;)}
+<span class="w"> </span>SEQUENCE_TYPES = {&#39;str&#39;, &#39;unicode&#39;, &#39;list&#39;, &#39;tuple&#39;, &#39;bytearray&#39;, &#39;xrange&#39;, &#39;range&#39;, &#39;bytes&#39;, &#39;memoryview&#39;}
+
+<span class="gu">@@ -71,11 +103,43 @@ def _emit_no_member(node: nodes.Attribute | nodes.AssignAttr | nodes.DelAttr, ow</span>
+<span class="w"> </span>          AttributeError, Exception or bare except.
+<span class="w"> </span>        * The node is guarded behind and `IF` or `IFExp` node
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if isinstance(owner, astroid.FunctionDef) and owner.decorators:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(owner, astroid.Instance):</span>
+<span class="gi">+        if &#39;__getattr__&#39; in owner.locals or &#39;__getattribute__&#39; in owner.locals:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(owner, astroid.Module) and owner.name in node.root().file_ignored_lines:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(owner, astroid.ClassDef):</span>
+<span class="gi">+        metaclass = owner.metaclass()</span>
+<span class="gi">+        if metaclass and node.attrname in metaclass.locals:</span>
+<span class="gi">+            return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if utils.node_ignores_exception(node, AttributeError):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if isinstance(node.parent, (nodes.If, nodes.IfExp)):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if ignored_mixins and mixin_class_rgx.match(owner_name or &#39;&#39;):</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    if ignored_none and isinstance(owner, nodes.Const) and owner.value is None:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    return True</span>
+
+<span class="w"> </span>def _has_parent_of_type(node: nodes.Call, node_type: nodes.Keyword | nodes.Starred, statement: _base_nodes.Statement) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Check if the given node has a parent of the given type.&quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    parent = node.parent</span>
+<span class="gi">+    while parent and parent != statement:</span>
+<span class="gi">+        if isinstance(parent, node_type):</span>
+<span class="gi">+            return True</span>
+<span class="gi">+        parent = parent.parent</span>
+<span class="gi">+    return False</span>
+
+<span class="w"> </span>def _no_context_variadic(node: nodes.Call, variadic_name: str | None, variadic_type: nodes.Keyword | nodes.Starred, variadics: list[nodes.Keyword | nodes.Starred]) -&gt; bool:
+<span class="w"> </span>    &quot;&quot;&quot;Verify if the given call node has variadic nodes without context.
+<span class="gu">@@ -88,7 +152,15 @@ def _no_context_variadic(node: nodes.Call, variadic_name: str | None, variadic_t</span>
+<span class="w"> </span>    This can lead pylint to believe that a function call receives
+<span class="w"> </span>    too few arguments.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if not variadic_name:</span>
+<span class="gi">+        return False</span>
+<span class="gi">+    </span>
+<span class="gi">+    for variadic in variadics:</span>
+<span class="gi">+        if isinstance(variadic, variadic_type) and variadic.name == variadic_name:</span>
+<span class="gi">+            inferred = safe_infer(variadic.value)</span>
+<span class="gi">+            if isinstance(inferred, (astroid.Tuple, astroid.Dict)) and not inferred.elts:</span>
+<span class="gi">+                return True</span>
+<span class="gi">+    return False</span>
+
+<span class="w"> </span>def _infer_from_metaclass_constructor(cls: nodes.ClassDef, func: nodes.FunctionDef) -&gt; InferenceResult | None:
+<span class="w"> </span>    &quot;&quot;&quot;Try to infer what the given *func* constructor is building.
+<span class="gu">@@ -107,7 +179,23 @@ def _infer_from_metaclass_constructor(cls: nodes.ClassDef, func: nodes.FunctionD</span>
+<span class="w"> </span>        if we couldn&#39;t infer it.
+<span class="w"> </span>    :rtype: astroid.ClassDef
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="gd">-    pass</span>
+<span class="gi">+    if len(func.args.args) != 3:</span>
+<span class="gi">+        return None</span>
+<span class="gi">+</span>
+<span class="gi">+    for return_node in func.nodes_of_class(nodes.Return):</span>
+<span class="gi">+        if not return_node.value:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        inferred = safe_infer(return_node.value)</span>
+<span class="gi">+        if not inferred:</span>
+<span class="gi">+            continue</span>
+<span class="gi">+</span>
+<span class="gi">+        if isinstance(inferred, nodes.ClassDef):</span>
+<span class="gi">+            return inferred</span>
+<span class="gi">+        if isinstance(inferred, nodes.FunctionDef):</span>
+<span class="gi">+            return _infer_from_metaclass_constructor(cls, inferred)</span>
+<span class="gi">+</span>
+<span class="gi">+    return None</span>
+
+<span class="w"> </span>class TypeChecker(BaseChecker):
+<span class="w"> </span>    &quot;&quot;&quot;Try to find bugs in the code using type inference.&quot;&quot;&quot;
+<span class="gu">@@ -228,4 +316,4 @@ class IterableChecker(BaseChecker):</span>
+<span class="w"> </span>    Also checks for non-mappings in function call kwargs.
+<span class="w"> </span>    &quot;&quot;&quot;
+<span class="w"> </span>    name = &#39;typecheck&#39;
+<span class="gd">-    msgs = {&#39;E1133&#39;: (&#39;Non-iterable value %s is used in an iterating context&#39;, &#39;not-an-iterable&#39;, &#39;Used when a non-iterable value is used in place where iterable is expected&#39;), &#39;E1134&#39;: (&#39;Non-mapping value %s is used in a mapping context&#39;, &#39;not-a-mapping&#39;, &#39;Used when a non-mapping value is used in place where mapping is expected&#39;)}</span>
+\ No newline at end of file
+<span class="gi">+    msgs = {&#39;E1133&#39;: (&#39;Non-iterable value %s is used in an iterating context&#39;, &#39;not-an-iterable&#39;, &#39;Used when a non-iterable value is used in place where iterable is expected&#39;), &#39;E1134&#39;: (&#39;Non-mapping value %s is used in a mapping context&#39;, &#39;not-a-mapping&#39;, &#39;Used when a non-mapping value is used in place where mapping is expected&#39;)}</span>
+<span class="gh">diff --git a/pylint/utils/__init__.py b/pylint/utils/__init__.py</span>
+<span class="gh">index eecb3cbe3..07e98d856 100644</span>
+<span class="gd">--- a/pylint/utils/__init__.py</span>
+<span class="gi">+++ b/pylint/utils/__init__.py</span>
+<span class="gu">@@ -13,7 +13,6 @@ from pylint.utils.linterstats import LinterStats, ModuleStats, merge_stats</span>
+<span class="w"> </span>from pylint.utils.utils import (
+<span class="w"> </span>    HAS_ISORT_5,
+<span class="w"> </span>    IsortDriver,
+<span class="gd">-    _check_csv,</span>
+<span class="w"> </span>    _check_regexp_csv,
+<span class="w"> </span>    _splitstrip,
+<span class="w"> </span>    _unquote,
+<span class="gu">@@ -32,7 +31,7 @@ __all__ = [</span>
+<span class="w"> </span>    &quot;ASTWalker&quot;,
+<span class="w"> </span>    &quot;HAS_ISORT_5&quot;,
+<span class="w"> </span>    &quot;IsortDriver&quot;,
+<span class="gd">-    &quot;_check_csv&quot;,</span>
+<span class="gi">+    &quot;_check_regexp_csv&quot;,</span>
+<span class="w"> </span>    &quot;_check_regexp_csv&quot;,
+<span class="w"> </span>    &quot;_splitstrip&quot;,
+<span class="w"> </span>    &quot;_unquote&quot;,
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

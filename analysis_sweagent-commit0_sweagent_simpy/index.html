@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Analysis sweagent commit0 sweagent simpy - Commit-0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swe-agent-simpy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Commit-0" class="md-header__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Commit-0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis sweagent commit0 sweagent simpy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Commit-0" class="md-nav__button md-logo" aria-label="Commit-0" data-md-component="logo">
+      
+  <img src="../logo2.webp" alt="logo">
+
+    </a>
+    Commit-0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupdist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commit0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-summary-for-test-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest Summary for test tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-pytests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed pytests:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed pytests:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_conditionpytest_cond_with_uncaught_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_condition.py::test_cond_with_uncaught_error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_conditionpytest_all_of_empty_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_condition.py::test_all_of_empty_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_conditionpytest_any_of_empty_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_condition.py::test_any_of_empty_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_environmentpytest_event_queue_empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_environment.py::test_event_queue_empty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_environmentpytest_run_negative_until" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_environment.py::test_run_negative_until
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_environmentpytest_run_resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_environment.py::test_run_resume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_environmentpytest_run_until_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_environment.py::test_run_until_value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_environmentpytest_run_with_processed_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_environment.py::test_run_with_processed_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_environmentpytest_run_with_untriggered_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_environment.py::test_run_with_untriggered_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_eventpytest_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_event.py::test_names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_eventpytest_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_event.py::test_value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_eventpytest_unavailable_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_event.py::test_unavailable_value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_eventpytest_triggered" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_event.py::test_triggered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_eventpytest_condition_callback_removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_event.py::test_condition_callback_removal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_eventpytest_condition_nested_callback_removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_event.py::test_condition_nested_callback_removal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspytest_no_parent_process" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::test_no_parent_process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspytest_exception_chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::test_exception_chaining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspytest_invalid_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::test_invalid_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspytest_exception_handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::test_exception_handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspytest_callback_exception_handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::test_callback_exception_handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_exceptionspytest_process_exception_handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_exceptions.py::test_process_exception_handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_interruptspytest_concurrent_interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_interrupts.py::test_concurrent_interrupts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_interruptspytest_concurrent_interrupts_and_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_interrupts.py::test_concurrent_interrupts_and_events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_interruptspytest_immediate_interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_interrupts.py::test_immediate_interrupt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_processpytest_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_process.py::test_target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_processpytest_error_and_interrupted_join" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_process.py::test_error_and_interrupted_join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_resource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_resource_context_manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_resource_context_manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_resource_slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_resource_slots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_resource_cm_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_resource_cm_exception
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_get_users" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_get_users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_mixed_preemption" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_mixed_preemption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_nested_preemption" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_nested_preemption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_container" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_container_get_queued" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_container_get_queued
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_initial_container_capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_initial_container_capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_initial_store_capacitystore" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_initial_store_capacity[Store]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_initial_store_capacityfilterstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_initial_store_capacity[FilterStore]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_store_capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_store_capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_priority_store_item_priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_priority_store_item_priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_priority_store_stable_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_priority_store_stable_order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_filter_calls_best_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_filter_calls_best_case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_filter_calls_worst_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_filter_calls_worst_case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_immediate_put_request" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_immediate_put_request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_resourcespytest_immediate_get_request" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_resources.py::test_immediate_get_request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt01" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt[0.1]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt005" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt[0.05]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt015" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt[0.15]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt_multiple_call" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt_multiple_call
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt_slow_sim_default_behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt_slow_sim_default_behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt_slow_sim_no_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt_slow_sim_no_error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_rt_illegal_until" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_rt_illegal_until
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_rtpytest_run_with_untriggered_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_rt.py::test_run_with_untriggered_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_timeoutpytest_discrete_time_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_timeout.py::test_discrete_time_steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_timeoutpytest_negative_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_timeout.py::test_negative_timeout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_timeoutpytest_shared_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_timeout.py::test_shared_timeout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_utilpytest_start_delayed_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_util.py::test_start_delayed_error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="/analysis_sweagent-commit0_sweagent">back to SWE-Agent summary</a></p>
+<h1 id="swe-agent-simpy"><strong>SWE-Agent</strong>: simpy</h1>
+<h2 id="pytest-summary-for-test-tests">Pytest Summary for test <code>tests</code></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">status</th>
+<th style="text-align: center;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">passed</td>
+<td style="text-align: center;">83</td>
+</tr>
+<tr>
+<td style="text-align: left;">failed</td>
+<td style="text-align: center;">57</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: center;">140</td>
+</tr>
+<tr>
+<td style="text-align: left;">collected</td>
+<td style="text-align: center;">150</td>
+</tr>
+<tr>
+<td style="text-align: left;">deselected</td>
+<td style="text-align: center;">10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failed-pytests">Failed pytests:</h2>
+<h3 id="test_conditionpytest_cond_with_uncaught_error">test_condition.py::test_cond_with_uncaught_error</h3>
+<details><summary> <pre>test_condition.py::test_cond_with_uncaught_error</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c39c3520>
+
+    def test_cond_with_uncaught_error(env):
+        """Errors that happen after the condition has been triggered will not be
+        handled by the condition and cause the simulation to crash."""
+
+        def explode(env, delay):
+            yield env.timeout(delay)
+            raise ValueError(f'Onoes, failed after {delay}!')
+
+        def process(env):
+            yield env.timeout(1) | env.process(explode(env, 2))
+
+        env.process(process(env))
+>       with pytest.raises(ValueError, match='Onoes, failed after'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_condition.py:127: Failed
+</pre>
+</details>
+<h3 id="test_conditionpytest_all_of_empty_list">test_condition.py::test_all_of_empty_list</h3>
+<details><summary> <pre>test_condition.py::test_all_of_empty_list</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e5c60>
+
+    def test_all_of_empty_list(env):
+        """AllOf with an empty list should immediately be triggered."""
+        evt = env.all_of([])
+>       assert evt.triggered
+E       assert None
+E        +  where None = <None object at 0x7ef7c27e51b0>.triggered
+
+tests/test_condition.py:299: AssertionError
+</pre>
+</details>
+<h3 id="test_conditionpytest_any_of_empty_list">test_condition.py::test_any_of_empty_list</h3>
+<details><summary> <pre>test_condition.py::test_any_of_empty_list</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c2703d60>
+
+    def test_any_of_empty_list(env):
+        """AnyOf with an empty list should immediately be triggered."""
+        evt = env.any_of([])
+>       assert evt.triggered
+E       assert None
+E        +  where None = <None object at 0x7ef7c2703ee0>.triggered
+
+tests/test_condition.py:305: AssertionError
+</pre>
+</details>
+<h3 id="test_environmentpytest_event_queue_empty">test_environment.py::test_event_queue_empty</h3>
+<details><summary> <pre>test_environment.py::test_event_queue_empty</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e44f0>, log = []
+
+    def test_event_queue_empty(env, log):
+        """The simulation should stop if there are no more events, that means, no
+        more active process."""
+
+        def pem(env, log):
+            while env.now < 2:
+                log.append(env.now)
+                yield env.timeout(1)
+
+        env.process(pem(env, log))
+        env.run(10)
+
+>       assert log == [0, 1]
+E       assert [] == [0, 1]
+E         
+E         Right contains 2 more items, first extra item: 0
+E         Use -v to get more diff
+
+tests/test_environment.py:21: AssertionError
+</pre>
+</details>
+<h3 id="test_environmentpytest_run_negative_until">test_environment.py::test_run_negative_until</h3>
+<details><summary> <pre>test_environment.py::test_run_negative_until</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c39c3910>
+
+    def test_run_negative_until(env):
+        """Test passing a negative time to run."""
+>       with pytest.raises(
+            ValueError, match='must be greater than the current simulation time'
+        ):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_environment.py:26: Failed
+</pre>
+</details>
+<h3 id="test_environmentpytest_run_resume">test_environment.py::test_run_resume</h3>
+<details><summary> <pre>test_environment.py::test_run_resume</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e6c80>
+
+    def test_run_resume(env):
+        """Stopped simulation can be resumed."""
+        events = [env.timeout(t) for t in (5, 10, 15)]
+
+>       assert env.now == 0
+E       assert None == 0
+E        +  where None = <simpy.core.Environment object at 0x7ef7c27e6c80>.now
+
+tests/test_environment.py:36: AssertionError
+</pre>
+</details>
+<h3 id="test_environmentpytest_run_until_value">test_environment.py::test_run_until_value</h3>
+<details><summary> <pre>test_environment.py::test_run_until_value</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3631600>
+
+    def test_run_until_value(env):
+        """Anything that can be converted to a float is a valid until value."""
+        env.run(until='3.141592')
+>       assert env.now == 3.141592
+E       assert None == 3.141592
+E        +  where None = <simpy.core.Environment object at 0x7ef7c3631600>.now
+
+tests/test_environment.py:57: AssertionError
+</pre>
+</details>
+<h3 id="test_environmentpytest_run_with_processed_event">test_environment.py::test_run_with_processed_event</h3>
+<details><summary> <pre>test_environment.py::test_run_with_processed_event</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e5c30>
+
+    def test_run_with_processed_event(env):
+        """An already processed event may also be passed as until value."""
+        timeout = env.timeout(1, value='spam')
+>       assert env.run(until=timeout) == 'spam'
+E       AssertionError: assert None == 'spam'
+E        +  where None = run(until=<None object at 0x7ef7c27e58a0>)
+E        +    where run = <simpy.core.Environment object at 0x7ef7c27e5c30>.run
+
+tests/test_environment.py:63: AssertionError
+</pre>
+</details>
+<h3 id="test_environmentpytest_run_with_untriggered_event">test_environment.py::test_run_with_untriggered_event</h3>
+<details><summary> <pre>test_environment.py::test_run_with_untriggered_event</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3632230>
+
+    def test_run_with_untriggered_event(env):
+>       excinfo = pytest.raises(RuntimeError, env.run, until=env.event())
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+tests/test_environment.py:74: Failed
+</pre>
+</details>
+<h3 id="test_eventpytest_names">test_event.py::test_names</h3>
+<details><summary> <pre>test_event.py::test_names</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c30b9900>
+
+    def test_names(env):
+        def pem():
+            return
+            yield
+
+>       assert re.match(r'<Event\(\) object at 0x.*>', str(env.event()))
+E       AssertionError: assert None
+E        +  where None = <function match at 0x7ef7c3c10ee0>('<Event\\(\\) object at 0x.*>', '<None object at 0x7ef7c30bb460>')
+E        +    where <function match at 0x7ef7c3c10ee0> = re.match
+E        +    and   '<None object at 0x7ef7c30bb460>' = str(<None object at 0x7ef7c30bb460>)
+E        +      where <None object at 0x7ef7c30bb460> = Event()
+E        +        where Event = <simpy.core.Environment object at 0x7ef7c30b9900>.event
+
+tests/test_event.py:52: AssertionError
+</pre>
+</details>
+<h3 id="test_eventpytest_value">test_event.py::test_value</h3>
+<details><summary> <pre>test_event.py::test_value</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3c60190>
+
+    def test_value(env):
+        """After an event has been triggered, its value becomes accessible."""
+        event = env.timeout(0, 'I am the value')
+
+        env.run()
+
+>       assert event.value == 'I am the value'
+E       AssertionError: assert None == 'I am the value'
+E        +  where None = <None object at 0x7ef7c3c62fe0>.value
+
+tests/test_event.py:74: AssertionError
+</pre>
+</details>
+<h3 id="test_eventpytest_unavailable_value">test_event.py::test_unavailable_value</h3>
+<details><summary> <pre>test_event.py::test_unavailable_value</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c30bb820>
+
+    def test_unavailable_value(env):
+        """If an event has not yet been triggered, its value is not available and
+        trying to access it will result in a AttributeError."""
+        event = env.event()
+
+>       with pytest.raises(AttributeError, match='.* is not yet available$'):
+E       Failed: DID NOT RAISE <class 'AttributeError'>
+
+tests/test_event.py:82: Failed
+</pre>
+</details>
+<h3 id="test_eventpytest_triggered">test_event.py::test_triggered</h3>
+<details><summary> <pre>test_event.py::test_triggered</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3c624d0>
+
+    def test_triggered(env):
+        def pem(env, event):
+            value = yield event
+            return value
+
+        event = env.event()
+        event.succeed('i was already done')
+
+        result = env.run(env.process(pem(env, event)))
+
+>       assert result == 'i was already done'
+E       AssertionError: assert None == 'i was already done'
+
+tests/test_event.py:96: AssertionError
+</pre>
+</details>
+<h3 id="test_eventpytest_condition_callback_removal">test_event.py::test_condition_callback_removal</h3>
+<details><summary> <pre>test_event.py::test_condition_callback_removal</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c30ba8c0>
+
+    def test_condition_callback_removal(env):
+        """A condition will remove all outstanding callbacks from its events."""
+        a, b = env.event(), env.event()
+        a.succeed()
+        env.run(until=a | b)
+        # The condition has removed its callback from event b.
+>       assert not a.callbacks
+E       assert not [<bound method Condition._check of <None object at 0x7ef7c30bb4c0>>]
+E        +  where [<bound method Condition._check of <None object at 0x7ef7c30bb4c0>>] = <None object at 0x7ef7c30b90f0>.callbacks
+
+tests/test_event.py:118: AssertionError
+</pre>
+</details>
+<h3 id="test_eventpytest_condition_nested_callback_removal">test_event.py::test_condition_nested_callback_removal</h3>
+<details><summary> <pre>test_event.py::test_condition_nested_callback_removal</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3c60af0>
+
+    def test_condition_nested_callback_removal(env):
+        """A condition will remove all outstanding callbacks from its events (even
+        if nested)."""
+        a, b, c = env.event(), env.event(), env.event()
+        b_and_c = b & c
+        a_or_b_and_c = a | b_and_c
+        a.succeed()
+        env.run(until=a_or_b_and_c)
+        # Callbacks from nested conditions are also removed.
+>       assert not a.callbacks
+E       assert not [<bound method Condition._check of <None object at 0x7ef7c3c60e80>>]
+E        +  where [<bound method Condition._check of <None object at 0x7ef7c3c60e80>>] = <None object at 0x7ef7c3c61ba0>.callbacks
+
+tests/test_event.py:131: AssertionError
+</pre>
+</details>
+<h3 id="test_exceptionspytest_no_parent_process">test_exceptions.py::test_no_parent_process</h3>
+<details><summary> <pre>test_exceptions.py::test_no_parent_process</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c30bbf10>
+
+    def test_no_parent_process(env):
+        """Exceptions should be normally raised if there are no processes waiting
+        for the one that raises something.
+
+        """
+
+        def child(env):
+            raise ValueError('Onoes!')
+            yield env.timeout(1)
+
+        def parent(env):
+            try:
+                env.process(child(env))
+                yield env.timeout(1)
+            except Exception as err:
+                pytest.fail(f'There should be no error ({err}).')
+
+        env.process(parent(env))
+>       with pytest.raises(ValueError, match='Onoes!'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_exceptions.py:49: Failed
+</pre>
+</details>
+<h3 id="test_exceptionspytest_exception_chaining">test_exceptions.py::test_exception_chaining</h3>
+<details><summary> <pre>test_exceptions.py::test_exception_chaining</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c354e590>
+
+    def test_exception_chaining(env):
+        """Unhandled exceptions pass through the entire event stack. This must be
+        visible in the stacktrace of the exception.
+
+        """
+
+        def child(env):
+            yield env.timeout(1)
+            raise RuntimeError('foo')
+
+        def parent(env):
+            child_proc = env.process(child(env))
+            yield child_proc
+
+        def grandparent(env):
+            parent_proc = env.process(parent(env))
+            yield parent_proc
+
+        env.process(grandparent(env))
+        try:
+            env.run()
+>           pytest.fail('There should have been an exception')
+E           Failed: There should have been an exception
+
+tests/test_exceptions.py:93: Failed
+</pre>
+</details>
+<h3 id="test_exceptionspytest_invalid_event">test_exceptions.py::test_invalid_event</h3>
+<details><summary> <pre>test_exceptions.py::test_invalid_event</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c38ed8d0>
+
+    def test_invalid_event(env):
+        """Invalid yield values will cause the simulation to fail."""
+
+        def root(_):
+            yield None
+
+        env.process(root(env))
+>       with pytest.raises(RuntimeError, match='Invalid yield value "None"'):
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+tests/test_exceptions.py:150: Failed
+</pre>
+</details>
+<h3 id="test_exceptionspytest_exception_handling">test_exceptions.py::test_exception_handling</h3>
+<details><summary> <pre>test_exceptions.py::test_exception_handling</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c354c220>
+
+    def test_exception_handling(env):
+        """If failed events are not defused (which is the default) the simulation
+        crashes."""
+
+        event = env.event()
+        event.fail(RuntimeError())
+>       with pytest.raises(RuntimeError):
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+tests/test_exceptions.py:160: Failed
+</pre>
+</details>
+<h3 id="test_exceptionspytest_callback_exception_handling">test_exceptions.py::test_callback_exception_handling</h3>
+<details><summary> <pre>test_exceptions.py::test_callback_exception_handling</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c38ec820>
+
+    def test_callback_exception_handling(env):
+        """Callbacks of events may handle exception by setting the ``defused``
+        attribute of ``event`` to ``True``."""
+
+        def callback(event):
+            event.defused = True
+
+        event = env.event()
+        event.callbacks.append(callback)
+        event.fail(RuntimeError())
+        assert not event.defused, 'Event has been defused immediately'
+        env.run(until=1)
+>       assert event.defused, 'Event has not been defused'
+E       AssertionError: Event has not been defused
+E       assert None
+E        +  where None = <None object at 0x7ef7c38ec130>.defused
+
+tests/test_exceptions.py:176: AssertionError
+</pre>
+</details>
+<h3 id="test_exceptionspytest_process_exception_handling">test_exceptions.py::test_process_exception_handling</h3>
+<details><summary> <pre>test_exceptions.py::test_process_exception_handling</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c36a4dc0>
+
+    def test_process_exception_handling(env):
+        """Processes can't ignore failed events and auto-handle exceptions."""
+
+        def pem(_, event):
+            try:
+                yield event
+                pytest.fail('Hey, the event should fail!')
+            except RuntimeError:
+                pass
+
+        event = env.event()
+        env.process(pem(env, event))
+        event.fail(RuntimeError())
+
+        assert not event.defused, 'Event has been defused immediately'
+        env.run(until=1)
+>       assert event.defused, 'Event has not been defused'
+E       AssertionError: Event has not been defused
+E       assert None
+E        +  where None = <None object at 0x7ef7c3c61ba0>.defused
+
+tests/test_exceptions.py:195: AssertionError
+</pre>
+</details>
+<h3 id="test_interruptspytest_concurrent_interrupts">test_interrupts.py::test_concurrent_interrupts</h3>
+<details><summary> <pre>test_interrupts.py::test_concurrent_interrupts</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c31f7d30>, log = []
+
+    def test_concurrent_interrupts(env, log):
+        """Concurrent interrupts are scheduled in the order in which they
+        occurred.
+
+        """
+
+        def fox(env, log):
+            while True:
+                try:
+                    yield env.timeout(10)
+                except simpy.Interrupt as interrupt:
+                    log.append((env.now, interrupt.cause))
+
+        def farmer(env, name, fox):
+            fox.interrupt(name)
+            yield env.timeout(1)
+
+        fantastic_mr_fox = env.process(fox(env, log))
+        for name in ('boggis', 'bunce', 'beans'):
+            env.process(farmer(env, name, fantastic_mr_fox))
+
+        env.run(20)
+>       assert log == [(0, 'boggis'), (0, 'bunce'), (0, 'beans')]
+E       AssertionError: assert [] == [(0, 'boggis'... (0, 'beans')]
+E         
+E         Right contains 3 more items, first extra item: (0, 'boggis')
+E         Use -v to get more diff
+
+tests/test_interrupts.py:50: AssertionError
+</pre>
+</details>
+<h3 id="test_interruptspytest_concurrent_interrupts_and_events">test_interrupts.py::test_concurrent_interrupts_and_events</h3>
+<details><summary> <pre>test_interrupts.py::test_concurrent_interrupts_and_events</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c2700f70>, log = []
+
+    def test_concurrent_interrupts_and_events(env, log):
+        """Interrupts interrupt a process while waiting for an event. Even if the
+        event has happened concurrently with the interrupt."""
+
+        def fox(env, coup, log):
+            while True:
+                try:
+                    yield coup
+                    log.append(f'coup completed at {env.now}')
+                except simpy.Interrupt:
+                    log.append(f'coup interrupted at {env.now}')
+                else:
+                    return
+
+        def master_plan(env, fox, coup):
+            yield env.timeout(1)
+            # Succeed and interrupt concurrently.
+            coup.succeed()
+            fox.interrupt()
+
+        coup = env.event()
+        fantastic_mr_fox = env.process(fox(env, coup, log))
+        env.process(master_plan(env, fantastic_mr_fox, coup))
+
+        env.run(5)
+>       assert log == ['coup interrupted at 1', 'coup completed at 1']
+E       AssertionError: assert [] == ['coup interr...mpleted at 1']
+E         
+E         Right contains 2 more items, first extra item: 'coup interrupted at 1'
+E         Use -v to get more diff
+
+tests/test_interrupts.py:78: AssertionError
+</pre>
+</details>
+<h3 id="test_interruptspytest_immediate_interrupt">test_interrupts.py::test_immediate_interrupt</h3>
+<details><summary> <pre>test_interrupts.py::test_immediate_interrupt</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3c68940>, log = []
+
+    def test_immediate_interrupt(env, log):
+        """Processes are immediately interruptable."""
+
+        def child(env, log):
+            try:
+                yield env.event()
+            except simpy.Interrupt:
+                log.append(env.now)
+
+        def parent(env, log):
+            child_proc = env.process(child(env, log))
+            child_proc.interrupt()
+            return
+            yield
+
+        env.process(parent(env, log))
+        env.run()
+
+        # Confirm that child has been interrupted immediately at timestep 0.
+>       assert log == [0]
+E       assert [] == [0]
+E         
+E         Right contains one more item: 0
+E         Use -v to get more diff
+
+tests/test_interrupts.py:182: AssertionError
+</pre>
+</details>
+<h3 id="test_processpytest_target">test_process.py::test_target</h3>
+<details><summary> <pre>test_process.py::test_target</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c31f49d0>
+
+    def test_target(env):
+        def pem(env, event):
+            yield event
+
+        event = env.timeout(5)
+        proc = env.process(pem(env, event))
+
+        # Wait until "proc" is initialized and yielded the event
+>       while env.peek() < 5:
+E       TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+tests/test_process.py:47: TypeError
+</pre>
+</details>
+<h3 id="test_processpytest_error_and_interrupted_join">test_process.py::test_error_and_interrupted_join</h3>
+<details><summary> <pre>test_process.py::test_error_and_interrupted_join</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c32e71f0>
+
+    def test_error_and_interrupted_join(env):
+        def child_a(env, process):
+            process.interrupt()
+            return
+            yield  # Dummy yield
+
+        def child_b(env):
+            raise AttributeError('spam')
+            yield  # Dummy yield
+
+        def parent(env):
+            env.process(child_a(env, env.active_process))
+            b = env.process(child_b(env))
+
+            try:
+                yield b
+            # This interrupt unregisters me from b so I won't receive its
+            # AttributeError
+            except Interrupt:
+                pass
+
+            yield env.timeout(0)
+
+        env.process(parent(env))
+>       pytest.raises(AttributeError, env.run)
+E       Failed: DID NOT RAISE <class 'AttributeError'>
+
+tests/test_process.py:183: Failed
+</pre>
+</details>
+<h3 id="test_resourcespytest_resource">test_resources.py::test_resource</h3>
+<details><summary> <pre>test_resources.py::test_resource</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c31f67a0>, log = []
+
+    def test_resource(env, log):
+        """A *resource* is something with a limited numer of slots that need
+        to be requested before and released after the usage (e.g., gas pumps
+        at a gas station).
+
+        """
+
+        def pem(env, name, resource, log):
+            req = resource.request()
+            yield req
+            assert resource.count == 1
+
+            yield env.timeout(1)
+            resource.release(req)
+
+            log.append((name, env.now))
+
+        resource = simpy.Resource(env, capacity=1)
+>       assert resource.capacity == 1
+E       assert None == 1
+E        +  where None = <simpy.resources.resource.Resource object at 0x7ef7c31f60b0>.capacity
+
+tests/test_resources.py:34: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_resource_context_manager">test_resources.py::test_resource_context_manager</h3>
+<details><summary> <pre>test_resources.py::test_resource_context_manager</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c28f4190>, log = []
+
+    def test_resource_context_manager(env, log):
+        """The event that ``Resource.request()`` returns can be used as
+        Context Manager."""
+
+        def pem(env, name, resource, log):
+            with resource.request() as request:
+                yield request
+                yield env.timeout(1)
+
+            log.append((name, env.now))
+
+        resource = simpy.Resource(env, capacity=1)
+        env.process(pem(env, 'a', resource, log))
+        env.process(pem(env, 'b', resource, log))
+        env.run()
+
+>       assert log == [('a', 1), ('b', 2)]
+E       AssertionError: assert [] == [('a', 1), ('b', 2)]
+E         
+E         Right contains 2 more items, first extra item: ('a', 1)
+E         Use -v to get more diff
+
+tests/test_resources.py:64: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_resource_slots">test_resources.py::test_resource_slots</h3>
+<details><summary> <pre>test_resources.py::test_resource_slots</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c31f4340>, log = []
+
+    def test_resource_slots(env, log):
+        def pem(env, name, resource, log):
+            with resource.request() as req:
+                yield req
+                log.append((name, env.now))
+                yield env.timeout(1)
+
+        resource = simpy.Resource(env, capacity=3)
+        for i in range(9):
+            env.process(pem(env, str(i), resource, log))
+        env.run()
+
+>       assert log == [
+            ('0', 0),
+            ('1', 0),
+            ('2', 0),
+            ('3', 1),
+            ('4', 1),
+            ('5', 1),
+            ('6', 2),
+            ('7', 2),
+            ('8', 2),
+        ]
+E       AssertionError: assert [] == [('0', 0), ('...('5', 1), ...]
+E         
+E         Right contains 9 more items, first extra item: ('0', 0)
+E         Use -v to get more diff
+
+tests/test_resources.py:79: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_resource_cm_exception">test_resources.py::test_resource_cm_exception</h3>
+<details><summary> <pre>test_resources.py::test_resource_cm_exception</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c28f6ce0>, log = []
+
+    def test_resource_cm_exception(env, log):
+        """Resource with context manager receives an exception."""
+
+        def process(env, resource, log, raise_):
+            with resource.request() as req:
+                yield req
+                yield env.timeout(1)
+                log.append(env.now)
+                if raise_:
+                    with pytest.raises(ValueError, match='Foo'):
+                        raise ValueError('Foo')
+
+        resource = simpy.Resource(env, 1)
+        env.process(process(env, resource, log, True))
+        # The second process is used to check if it was able to access the
+        # resource:
+        env.process(process(env, resource, log, False))
+        env.run()
+
+>       assert log == [1, 2]
+E       assert [] == [1, 2]
+E         
+E         Right contains 2 more items, first extra item: 1
+E         Use -v to get more diff
+
+tests/test_resources.py:201: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_get_users">test_resources.py::test_get_users</h3>
+<details><summary> <pre>test_resources.py::test_get_users</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c2702140>
+
+    def test_get_users(env):
+        def process(env, resource):
+            with resource.request() as req:
+                yield req
+                yield env.timeout(1)
+
+        resource = simpy.Resource(env, 1)
+        procs = [env.process(process(env, resource)) for _ in range(3)]
+        env.run(until=1)
+>       assert [evt.proc for evt in resource.users] == procs[0:1]
+E       assert [] == [<None object...7ef7c2702980>]
+E         
+E         Right contains one more item: <None object at 0x7ef7c2702980>
+E         Use -v to get more diff
+
+tests/test_resources.py:261: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_mixed_preemption">test_resources.py::test_mixed_preemption</h3>
+<details><summary> <pre>test_resources.py::test_mixed_preemption</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c28f7400>, log = []
+
+    def test_mixed_preemption(env, log):
+        def p(id, env, res, delay, prio, preempt, log):
+            yield env.timeout(delay)
+            with res.request(priority=prio, preempt=preempt) as req:
+                try:
+                    yield req
+                    yield env.timeout(2)
+                    log.append((env.now, id))
+                except simpy.Interrupt as ir:
+                    assert ir is not None  # noqa: PT017
+                    assert isinstance(ir.cause, Preempted)  # noqa: PT017
+                    log.append((env.now, id, (ir.cause.by, ir.cause.usage_since)))
+
+        res = simpy.PreemptiveResource(env, 1)
+        # p0: First user:
+        env.process(p(0, env, res, delay=0, prio=2, preempt=True, log=log))
+        # p1: Waits (cannot preempt):
+        env.process(p(1, env, res, delay=0, prio=2, preempt=True, log=log))
+        # p2: Waits later, but has a higher prio:
+        env.process(p(2, env, res, delay=1, prio=1, preempt=False, log=log))
+        # p3: Preempt the above proc:
+        p3 = env.process(p(3, env, res, delay=3, prio=0, preempt=True, log=log))
+        # p4: Wait again:
+        env.process(p(4, env, res, delay=4, prio=3, preempt=True, log=log))
+
+        env.run()
+
+>       assert log == [
+            (2, 0),  # p0 done
+            (3, 2, (p3, 2)),  # p2 got it next, but got interrupted by p3
+            (5, 3),  # p3 done
+            (7, 1),  # p1 done (finally got the resource)
+            (9, 4),  # p4 done
+        ]
+E       assert [] == [(2, 0), (3, ...7, 1), (9, 4)]
+E         
+E         Right contains 5 more items, first extra item: (2, 0)
+E         Use -v to get more diff
+
+tests/test_resources.py:345: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_nested_preemption">test_resources.py::test_nested_preemption</h3>
+<details><summary> <pre>test_resources.py::test_nested_preemption</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c30b90c0>, log = []
+
+    def test_nested_preemption(env, log):
+        def process(id, env, res, delay, prio, preempt, log):
+            yield env.timeout(delay)
+            with res.request(priority=prio, preempt=preempt) as req:
+                try:
+                    yield req
+                    yield env.timeout(5)
+                    log.append((env.now, id))
+                except simpy.Interrupt as ir:
+                    assert isinstance(ir.cause, Preempted)  # noqa: PT017
+                    log.append((env.now, id, (ir.cause.by, ir.cause.usage_since)))
+
+        def process2(id, env, res0, res1, delay, prio, preempt, log):
+            yield env.timeout(delay)
+            with res0.request(priority=prio, preempt=preempt) as req0:
+                try:
+                    yield req0
+                    with res1.request(priority=prio, preempt=preempt) as req1:
+                        try:
+                            yield req1
+                            yield env.timeout(5)
+                            log.append((env.now, id))
+                        except simpy.Interrupt as ir:
+                            assert isinstance(ir.cause, Preempted)  # noqa: PT017
+                            log.append(
+                                (
+                                    env.now,
+                                    id,
+                                    (ir.cause.by, ir.cause.usage_since, ir.cause.resource),
+                                )
+                            )
+                except simpy.Interrupt as ir:
+                    assert isinstance(ir.cause, Preempted)  # noqa: PT017
+                    log.append(
+                        (
+                            env.now,
+                            id,
+                            (ir.cause.by, ir.cause.usage_since, ir.cause.resource),
+                        )
+                    )
+
+        res0 = simpy.PreemptiveResource(env, 1)
+        res1 = simpy.PreemptiveResource(env, 1)
+
+        env.process(process2(0, env, res0, res1, 0, -1, True, log))
+        p1 = env.process(process(1, env, res1, 1, -2, True, log))
+
+        env.process(process2(2, env, res0, res1, 20, -1, True, log))
+        p3 = env.process(process(3, env, res0, 21, -2, True, log))
+
+        env.process(process2(4, env, res0, res1, 21, -1, True, log))
+
+        env.run()
+
+>       assert log == [
+            (1, 0, (p1, 0, res1)),
+            (6, 1),
+            (21, 2, (p3, 20, res0)),
+            (26, 3),
+            (31, 4),
+        ]
+E       assert [] == [(1, 0, (<Non..., 3), (31, 4)]
+E         
+E         Right contains 5 more items, first extra item: (1, 0, (<None object at 0x7ef7c30b89a0>, 0, <simpy.resources.resource.PreemptiveResource object at 0x7ef7c30b8130>))
+E         Use -v to get more diff
+
+tests/test_resources.py:408: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_container">test_resources.py::test_container</h3>
+<details><summary> <pre>test_resources.py::test_container</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c28f4820>, log = []
+
+    def test_container(env, log):
+        """A *container* is a resource (of optionally limited capacity) where
+        you can put in our take-out a discrete or continuous amount of
+        things (e.g., a box of lump sugar or a can of milk).  The *put* and
+        *get* operations block if the buffer is to full or to empty. If they
+        return, the process knows that the *put* or *get* operation was
+        successful.
+
+        """
+
+        def putter(env, buf, log):
+            yield env.timeout(1)
+            while True:
+                yield buf.put(2)
+                log.append(('p', env.now))
+                yield env.timeout(1)
+
+        def getter(env, buf, log):
+            yield buf.get(1)
+            log.append(('g', env.now))
+
+            yield env.timeout(1)
+            yield buf.get(1)
+            log.append(('g', env.now))
+
+        buf = simpy.Container(env, init=0, capacity=2)
+        env.process(putter(env, buf, log))
+        env.process(getter(env, buf, log))
+        env.run(until=5)
+
+>       assert log == [('p', 1), ('g', 1), ('g', 2), ('p', 2)]
+E       AssertionError: assert [] == [('p', 1), ('... 2), ('p', 2)]
+E         
+E         Right contains 4 more items, first extra item: ('p', 1)
+E         Use -v to get more diff
+
+tests/test_resources.py:452: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_container_get_queued">test_resources.py::test_container_get_queued</h3>
+<details><summary> <pre>test_resources.py::test_container_get_queued</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c30b8eb0>
+
+    def test_container_get_queued(env):
+        def proc(env, wait, container, what):
+            yield env.timeout(wait)
+            with getattr(container, what)(1) as req:
+                yield req
+
+        container = simpy.Container(env, 1)
+        p0 = env.process(proc(env, 0, container, 'get'))
+        env.process(proc(env, 1, container, 'put'))
+        env.process(proc(env, 1, container, 'put'))
+        p3 = env.process(proc(env, 1, container, 'put'))
+
+        env.run(until=1)
+        assert [ev.proc for ev in container.put_queue] == []
+>       assert [ev.proc for ev in container.get_queue] == [p0]
+E       assert [] == [<None object...7ef7c30b88b0>]
+E         
+E         Right contains one more item: <None object at 0x7ef7c30b88b0>
+E         Use -v to get more diff
+
+tests/test_resources.py:469: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_initial_container_capacity">test_resources.py::test_initial_container_capacity</h3>
+<details><summary> <pre>test_resources.py::test_initial_container_capacity</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c28f74f0>
+
+    def test_initial_container_capacity(env):
+        container = simpy.Container(env)
+>       assert container.capacity == float('inf')
+E       AssertionError: assert None == inf
+E        +  where None = <simpy.resources.container.Container object at 0x7ef7c28f6860>.capacity
+E        +  and   inf = float('inf')
+
+tests/test_resources.py:478: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_initial_store_capacitystore">test_resources.py::test_initial_store_capacity[Store]</h3>
+<details><summary> <pre>test_resources.py::test_initial_store_capacity[Store]</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c292e1a0>
+store_type = <class 'simpy.resources.store.Store'>
+
+    @pytest.mark.parametrize(
+        'store_type',
+        [
+            simpy.Store,
+            simpy.FilterStore,
+        ],
+    )
+    def test_initial_store_capacity(env, store_type):
+        store = store_type(env)
+>       assert store.capacity == float('inf')
+E       AssertionError: assert None == inf
+E        +  where None = <simpy.resources.store.Store object at 0x7ef7c292e710>.capacity
+E        +  and   inf = float('inf')
+
+tests/test_resources.py:547: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_initial_store_capacityfilterstore">test_resources.py::test_initial_store_capacity[FilterStore]</h3>
+<details><summary> <pre>test_resources.py::test_initial_store_capacity[FilterStore]</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e0730>
+store_type = <class 'simpy.resources.store.FilterStore'>
+
+    @pytest.mark.parametrize(
+        'store_type',
+        [
+            simpy.Store,
+            simpy.FilterStore,
+        ],
+    )
+    def test_initial_store_capacity(env, store_type):
+        store = store_type(env)
+>       assert store.capacity == float('inf')
+E       AssertionError: assert None == inf
+E        +  where None = <simpy.resources.store.FilterStore object at 0x7ef7c27e1ea0>.capacity
+E        +  and   inf = float('inf')
+
+tests/test_resources.py:547: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_store_capacity">test_resources.py::test_store_capacity</h3>
+<details><summary> <pre>test_resources.py::test_store_capacity</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c292f4c0>
+
+    def test_store_capacity(env):
+        with pytest.raises(ValueError, match='"capacity" must be > 0'):
+            simpy.Store(env, 0)
+        with pytest.raises(ValueError, match='"capacity" must be > 0'):
+            simpy.Store(env, -1)
+
+        capacity = 2
+        store = simpy.Store(env, capacity)
+        env.process(store.put(i) for i in range(capacity + 1))
+        env.run()
+
+        # Ensure store is filled to capacity
+>       assert len(store.items) == capacity
+E       assert 0 == 2
+E        +  where 0 = len([])
+E        +    where [] = <simpy.resources.store.Store object at 0x7ef7c292d3c0>.items
+
+tests/test_resources.py:562: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_priority_store_item_priority">test_resources.py::test_priority_store_item_priority</h3>
+<details><summary> <pre>test_resources.py::test_priority_store_item_priority</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e3b50>
+
+    def test_priority_store_item_priority(env):
+        pstore = simpy.PriorityStore(env, 3)
+        log = []
+
+        def getter(wait):
+            yield env.timeout(wait)
+            item = yield pstore.get()
+            log.append(item)
+
+        # Do not specify priority; the items themselves will be compared to
+        # determine priority.
+        env.process(pstore.put(s) for s in 'bcadefg')
+        env.process(getter(1))
+        env.process(getter(2))
+        env.process(getter(3))
+        env.run()
+>       assert log == ['a', 'b', 'c']
+E       AssertionError: assert [] == ['a', 'b', 'c']
+E         
+E         Right contains 3 more items, first extra item: 'a'
+E         Use -v to get more diff
+
+tests/test_resources.py:593: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_priority_store_stable_order">test_resources.py::test_priority_store_stable_order</h3>
+<details><summary> <pre>test_resources.py::test_priority_store_stable_order</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c292d750>
+
+    def test_priority_store_stable_order(env):
+        pstore = simpy.PriorityStore(env, 3)
+        log = []
+
+        def getter(wait):
+            yield env.timeout(wait)
+            _, item = yield pstore.get()
+            log.append(item)
+
+        items = [object() for _ in range(3)]
+
+        # Unorderable items are inserted with same priority.
+        env.process(pstore.put(simpy.PriorityItem(0, item)) for item in items)
+        env.process(getter(1))
+        env.process(getter(2))
+        env.process(getter(3))
+        env.run()
+
+        # Since the priorities were the same for all items, ensure that items are
+        # retrieved in insertion order.
+>       assert log == items
+E       assert [] == [<object obje...7ef7c4123c70>]
+E         
+E         Right contains 3 more items, first extra item: <object object at 0x7ef7c41238c0>
+E         Use -v to get more diff
+
+tests/test_resources.py:616: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_filter_calls_best_case">test_resources.py::test_filter_calls_best_case</h3>
+<details><summary> <pre>test_resources.py::test_filter_calls_best_case</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e2b00>
+
+    def test_filter_calls_best_case(env):
+        """The filter function is called every item in the store until a match is
+        found. In the best case the first item already matches."""
+        log = []
+
+        def log_filter(item):
+            log.append(f'check {item}')
+            return True
+
+        store = simpy.FilterStore(env)
+        store.items = [1, 2, 3]
+
+        def getter(store):
+            log.append(f'get {yield store.get(log_filter)}')
+            log.append(f'get {yield store.get(log_filter)}')
+            log.append(f'get {yield store.get(log_filter)}')
+
+        env.process(getter(store))
+        env.run()
+
+>       assert log == ['check 1', 'get 1', 'check 2', 'get 2', 'check 3', 'get 3']
+E       AssertionError: assert [] == ['check 1', '...k 3', 'get 3']
+E         
+E         Right contains 6 more items, first extra item: 'check 1'
+E         Use -v to get more diff
+
+tests/test_resources.py:686: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_filter_calls_worst_case">test_resources.py::test_filter_calls_worst_case</h3>
+<details><summary> <pre>test_resources.py::test_filter_calls_worst_case</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c292dc90>
+
+    def test_filter_calls_worst_case(env):
+        """In the worst case the filter function is being called for items multiple
+        times."""
+
+        log = []
+        store = simpy.FilterStore(env)
+
+        def putter(store):
+            for i in range(4):
+                log.append(f'put {i}')
+                yield store.put(i)
+
+        def log_filter(item):
+            log.append(f'check {item}')
+            return item >= 3
+
+        def getter(store):
+            log.append(f'get {yield store.get(log_filter)}')
+
+        env.process(getter(store))
+        env.process(putter(store))
+        env.run()
+
+        # The filter function is repeatedly called for every item in the store
+        # until a match is found.
+        # fmt: off
+>       assert log == [
+            'put 0', 'check 0',
+            'put 1', 'check 0', 'check 1',
+            'put 2', 'check 0', 'check 1', 'check 2',
+            'put 3', 'check 0', 'check 1', 'check 2', 'check 3', 'get 3',
+        ]
+E       AssertionError: assert [] == ['put 0', 'ch... 'put 2', ...]
+E         
+E         Right contains 15 more items, first extra item: 'put 0'
+E         Use -v to get more diff
+
+tests/test_resources.py:715: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_immediate_put_request">test_resources.py::test_immediate_put_request</h3>
+<details><summary> <pre>test_resources.py::test_immediate_put_request</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c27e2440>
+
+    def test_immediate_put_request(env):
+        """Put requests that can be fulfilled immediately do not enter the put
+        queue."""
+        resource = simpy.Resource(env, capacity=1)
+        assert len(resource.users) == 0
+        assert len(resource.queue) == 0
+
+        # The resource is empty, the first request will succeed immediately without
+        # entering the queue.
+        request = resource.request()
+>       assert request.triggered
+E       assert None
+E        +  where None = <None object at 0x7ef7c27e37f0>.triggered
+
+tests/test_resources.py:734: AssertionError
+</pre>
+</details>
+<h3 id="test_resourcespytest_immediate_get_request">test_resources.py::test_immediate_get_request</h3>
+<details><summary> <pre>test_resources.py::test_immediate_get_request</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c292ca60>
+
+    def test_immediate_get_request(env):
+        """Get requests that can be fulfilled immediately do not enter the get
+        queue."""
+        container = simpy.Container(env)
+        # Put something in the container, this request is triggered immediately
+        # without entering the queue.
+        request = container.put(1)
+>       assert request.triggered
+E       assert None
+E        +  where None = <None object at 0x7ef7c292cf40>.triggered
+
+tests/test_resources.py:752: AssertionError
+</pre>
+</details>
+<h3 id="test_rtpytest_rt01">test_rt.py::test_rt[0.1]</h3>
+<details><summary> <pre>test_rt.py::test_rt[0.1]</pre></summary><pre>
+log = [], factor = 0.1
+
+    @pytest.mark.parametrize('factor', [0.1, 0.05, 0.15])
+    def test_rt(log, factor):
+        """Basic tests for run()."""
+        start = monotonic()
+        env = RealtimeEnvironment(factor=factor)
+        env.process(process(env, log, 0.01, 1))
+        env.process(process(env, log, 0.02, 1))
+
+        env.run(2)
+        duration = monotonic() - start
+
+>       assert check_duration(duration, 2 * factor)
+E       assert False
+E        +  where False = check_duration(1.58820000000226e-05, (2 * 0.1))
+
+tests/test_rt.py:35: AssertionError
+</pre>
+</details>
+<h3 id="test_rtpytest_rt005">test_rt.py::test_rt[0.05]</h3>
+<details><summary> <pre>test_rt.py::test_rt[0.05]</pre></summary><pre>
+log = [], factor = 0.05
+
+    @pytest.mark.parametrize('factor', [0.1, 0.05, 0.15])
+    def test_rt(log, factor):
+        """Basic tests for run()."""
+        start = monotonic()
+        env = RealtimeEnvironment(factor=factor)
+        env.process(process(env, log, 0.01, 1))
+        env.process(process(env, log, 0.02, 1))
+
+        env.run(2)
+        duration = monotonic() - start
+
+>       assert check_duration(duration, 2 * factor)
+E       assert False
+E        +  where False = check_duration(1.3072000000668993e-05, (2 * 0.05))
+
+tests/test_rt.py:35: AssertionError
+</pre>
+</details>
+<h3 id="test_rtpytest_rt015">test_rt.py::test_rt[0.15]</h3>
+<details><summary> <pre>test_rt.py::test_rt[0.15]</pre></summary><pre>
+log = [], factor = 0.15
+
+    @pytest.mark.parametrize('factor', [0.1, 0.05, 0.15])
+    def test_rt(log, factor):
+        """Basic tests for run()."""
+        start = monotonic()
+        env = RealtimeEnvironment(factor=factor)
+        env.process(process(env, log, 0.01, 1))
+        env.process(process(env, log, 0.02, 1))
+
+        env.run(2)
+        duration = monotonic() - start
+
+>       assert check_duration(duration, 2 * factor)
+E       assert False
+E        +  where False = check_duration(1.1543000000280301e-05, (2 * 0.15))
+
+tests/test_rt.py:35: AssertionError
+</pre>
+</details>
+<h3 id="test_rtpytest_rt_multiple_call">test_rt.py::test_rt_multiple_call</h3>
+<details><summary> <pre>test_rt.py::test_rt_multiple_call</pre></summary><pre>
+log = []
+
+    def test_rt_multiple_call(log):
+        """Test multiple calls to run()."""
+        start = monotonic()
+        env = RealtimeEnvironment(factor=0.05)
+
+        env.process(process(env, log, 0.01, 2))
+        env.process(process(env, log, 0.01, 3))
+
+        env.run(5)
+        duration = monotonic() - start
+
+        # assert almost_equal(duration, 0.2)
+>       assert check_duration(duration, 5 * 0.05)
+E       assert False
+E        +  where False = check_duration(1.1999999999900979e-05, (5 * 0.05))
+
+tests/test_rt.py:51: AssertionError
+</pre>
+</details>
+<h3 id="test_rtpytest_rt_slow_sim_default_behavior">test_rt.py::test_rt_slow_sim_default_behavior</h3>
+<details><summary> <pre>test_rt.py::test_rt_slow_sim_default_behavior</pre></summary><pre>
+log = []
+
+    def test_rt_slow_sim_default_behavior(log):
+        """By default, SimPy should raise an error if a simulation is too
+        slow for the selected real-time factor."""
+        env = RealtimeEnvironment(factor=0.05)
+        env.process(process(env, log, 0.1, 1))
+
+>       err = pytest.raises(RuntimeError, env.run, 3)
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+tests/test_rt.py:67: Failed
+</pre>
+</details>
+<h3 id="test_rtpytest_rt_slow_sim_no_error">test_rt.py::test_rt_slow_sim_no_error</h3>
+<details><summary> <pre>test_rt.py::test_rt_slow_sim_no_error</pre></summary><pre>
+log = []
+
+    def test_rt_slow_sim_no_error(log):
+        """Test ignoring slow simulations."""
+        start = monotonic()
+        env = RealtimeEnvironment(factor=0.05, strict=False)
+        env.process(process(env, log, 0.1, 1))
+
+        env.run(2)
+        duration = monotonic() - start
+
+>       assert check_duration(duration, 2 * 0.1)
+E       assert False
+E        +  where False = check_duration(9.179000000081317e-06, (2 * 0.1))
+
+tests/test_rt.py:81: AssertionError
+</pre>
+</details>
+<h3 id="test_rtpytest_rt_illegal_until">test_rt.py::test_rt_illegal_until</h3>
+<details><summary> <pre>test_rt.py::test_rt_illegal_until</pre></summary><pre>
+def test_rt_illegal_until():
+        """Test illegal value for *until*."""
+        env = RealtimeEnvironment()
+>       with pytest.raises(
+            ValueError,
+            match=r'until \(-1\) must be greater than the current simulation time',
+        ):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_rt.py:88: Failed
+</pre>
+</details>
+<h3 id="test_rtpytest_run_with_untriggered_event">test_rt.py::test_run_with_untriggered_event</h3>
+<details><summary> <pre>test_rt.py::test_run_with_untriggered_event</pre></summary><pre>
+env = <simpy.rt.RealtimeEnvironment object at 0x7ef7c30bb610>
+
+    def test_run_with_untriggered_event(env):
+        env = RealtimeEnvironment(factor=0.05)
+>       excinfo = pytest.raises(RuntimeError, env.run, until=env.event())
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+tests/test_rt.py:106: Failed
+</pre>
+</details>
+<h3 id="test_timeoutpytest_discrete_time_steps">test_timeout.py::test_discrete_time_steps</h3>
+<details><summary> <pre>test_timeout.py::test_discrete_time_steps</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c31f4ca0>, log = []
+
+    def test_discrete_time_steps(env, log):
+        """envple envulation with discrete time steps."""
+
+        def pem(env, log):
+            while True:
+                log.append(env.now)
+                yield env.timeout(delay=1)
+
+        env.process(pem(env, log))
+        env.run(until=3)
+
+>       assert log == [0, 1, 2]
+E       assert [] == [0, 1, 2]
+E         
+E         Right contains 3 more items, first extra item: 0
+E         Use -v to get more diff
+
+tests/test_timeout.py:20: AssertionError
+</pre>
+</details>
+<h3 id="test_timeoutpytest_negative_timeout">test_timeout.py::test_negative_timeout</h3>
+<details><summary> <pre>test_timeout.py::test_negative_timeout</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3a051e0>
+
+    def test_negative_timeout(env):
+        """Don't allow negative timeout times."""
+
+        def pem(env):
+            yield env.timeout(-1)
+
+        env.process(pem(env))
+>       with pytest.raises(ValueError, match='Negative delay'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_timeout.py:30: Failed
+</pre>
+</details>
+<h3 id="test_timeoutpytest_shared_timeout">test_timeout.py::test_shared_timeout</h3>
+<details><summary> <pre>test_timeout.py::test_shared_timeout</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c31f6170>, log = []
+
+    def test_shared_timeout(env, log):
+        def child(env, timeout, id, log):
+            yield timeout
+            log.append((id, env.now))
+
+        timeout = env.timeout(1)
+        for i in range(3):
+            env.process(child(env, timeout, i, log))
+
+        env.run()
+>       assert log == [(0, 1), (1, 1), (2, 1)]
+E       assert [] == [(0, 1), (1, 1), (2, 1)]
+E         
+E         Right contains 3 more items, first extra item: (0, 1)
+E         Use -v to get more diff
+
+tests/test_timeout.py:61: AssertionError
+</pre>
+</details>
+<h3 id="test_utilpytest_start_delayed_error">test_util.py::test_start_delayed_error</h3>
+<details><summary> <pre>test_util.py::test_start_delayed_error</pre></summary><pre>
+env = <simpy.core.Environment object at 0x7ef7c3a06ef0>
+
+    def test_start_delayed_error(env):
+        """Check if delayed() raises an error if you pass a negative dt."""
+
+        def pem(env):
+            yield env.timeout(1)
+
+>       with pytest.raises(ValueError, match='delay.*must be > 0'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_util.py:27: Failed
+</pre>
+</details>
+
+<h2 id="patch-diff">Patch diff</h2>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
