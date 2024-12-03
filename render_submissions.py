@@ -185,17 +185,18 @@ def render_mds(overwrite_previous, subfolder="docs"):
         "lite": 3628,
         "all": 140926,
     }  # hard-coded to skip running it later
-    for split in tqdm.tqdm(["lite", "all"]):
+    for split in ["lite", "all"]:
         num_repos = len(SPLIT[split])
         # total_num_tests = 0
         # for repo_name in SPLIT[split]:
         #     repo_tests = subprocess.run(['commit0', 'get-tests', repo_name], capture_output=True, text=True).stdout.strip()
         #     total_num_tests += len(repo_tests.splitlines())
-        leaderboard[split] = leaderboard_header.format(
+        leaderboard[split] = []
+        leaderboard[split].append((split_to_total_tests[split]+1, leaderboard_header.format(
             split=split,
             num_repos=num_repos,
             total_num_tests=split_to_total_tests[split],
-        )
+        )))
 
     for org_path in tqdm.tqdm(glob.glob(os.path.join(analysis_files_path, "*"))):
         org_name = os.path.basename(org_path)
@@ -322,7 +323,7 @@ def render_mds(overwrite_previous, subfolder="docs"):
                     wf.write(back_button + "\n" + submission_page)
             analysis_link = f"[Analysis](/{f'analysis_{org_name}_{branch_name}'})"
             github_link = f"[Github]({project_page_link})"
-            leaderboard[split] += (
+            leaderboard[split].append((cum_tests_passed,
                 f"\n|{display_name}|"
                 f"{repos_resolved}|"
                 f"{cum_tests_passed}|"
@@ -330,11 +331,15 @@ def render_mds(overwrite_previous, subfolder="docs"):
                 f"{submission_date}|"
                 f"{analysis_link}|"
                 f"{github_link}|"
-            )
+            ))
 
     leaderboard_filepath = os.path.join(subfolder, "analysis.md")
+    for split in ["lite", "all"]:
+        leaderboard[split] = sorted(leaderboard[split], key=lambda elt: -elt[0])
     with open(leaderboard_filepath, "w") as wf:
-        wf.write(leaderboard["lite"] + "\n\n" + leaderboard["all"])
+        lite_leaderboard_string = "".join(string for (_, string) in leaderboard["lite"])
+        all_leaderboard_string = "".join(string for (_, string) in leaderboard["all"])
+        wf.write(lite_leaderboard_string + "\n\n" + all_leaderboard_string)
 
 
 def get_args():
