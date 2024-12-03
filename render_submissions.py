@@ -164,7 +164,7 @@ def get_blank_repo_metrics(
 
 
 leaderboard_header = """\n\n## Leaderboard ({split})
-| Name | Repos Resolved (/{num_repos}) | Total Tests Passed (/{total_num_tests}) | Test Duration (s) | Date | Analysis | Github |
+| Name | Repos Resolved (/{num_repos}) | % Tests Passed (Total: {total_num_tests}) | Test Duration (s) | Date | Analysis | Github |
 |------|:-------------------------:|:--------------------:|:--------------------:|:----------:|----|----| """
 
 submission_table_header = """# Submission Name: **{display_name}** (split: {split})
@@ -334,7 +334,7 @@ def render_mds(overwrite_previous, subfolder="docs"):
             leaderboard[split].append((cum_tests_passed,
                 f"\n|{display_name}|"
                 f"{repos_resolved}|"
-                f"{cum_tests_passed}|"
+                f"{100.*cum_tests_passed/split_to_total_tests[split]:.2f}%|"
                 f"{total_duration:.2f}|"
                 f"{submission_date}|"
                 f"{analysis_link}|"
@@ -344,7 +344,7 @@ def render_mds(overwrite_previous, subfolder="docs"):
                 leaderboard["lite"].append((lite_cum_tests_passed,
                     f"\n|{display_name} (subset of `all`)|"
                     f"{lite_repos_resolved}|"
-                    f"{lite_cum_tests_passed}|"
+                    f"{100.*lite_cum_tests_passed/split_to_total_tests['lite']:.2f}%|"
                     f"{lite_total_duration:.2f}|"
                     f"{submission_date}|"
                     f"{analysis_link}|"
