@@ -302,7 +302,7 @@ def render_mds(overwrite_previous, subfolder="docs"):
                         cum_tests_passed += pytest_info["summary"]["passed"]
                         total_duration += pytest_info["duration"]
                         repos_resolved += int(resolved)
-                        if split == "all":
+                        if split == "all" and repo_name in SPLIT['lite']:
                             lite_cum_tests_passed += pytest_info["summary"]["passed"]
                             lite_total_duration += pytest_info["duration"]
                             lite_repos_resolved += int(resolved)
